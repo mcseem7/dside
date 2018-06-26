@@ -1,0 +1,44 @@
+.basic__header {
+    box-shadow: 2.5px 4.33px 5px rgba(246,248,251,0.75);
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.basic__header-content {
+    height: 70px;
+    max-width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto;
+    margin-top: 35px;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left__content-icons {
+    display: flex;
+    align-items: center;
+}
+
+.add__work_wrapper {
+    padding-left: 50px;
+}
+
+
+.social__icons {
+        display: flex;
+        align-items: center;
+}
+
+.social__icon-instagram {
+    padding-left: 50px;
+    cursor: pointer;
+}
+
+.social__icon-behance {
+    cursor: pointer;
+}
+
