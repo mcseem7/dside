@@ -6,6 +6,7 @@
 }
 
 
+
 .post__img {
     max-width: 100%;
     min-width: 100%;
@@ -14,6 +15,7 @@
 
 .content__posts {
     display: flex;
+    position: relative;
     flex-wrap: wrap;
 }
 
@@ -27,3 +29,15 @@
     position: relative;
 }
 
+
+.background__absolute {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.background__absolute img {
+    border-style: none;
+    max-width: 100%;
+    min-width: 100%;
+}

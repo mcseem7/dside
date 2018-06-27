@@ -8,7 +8,7 @@ import FiveImage from './images/thumbs-05.jpg'
 import SixImage from  './images/thumbs-06.jpg'
 import './index.css'
 import iconGrid from './images/icon__grid.png'
-
+import zindex from './images/Header_zIndex.png'
 export default class HeaderPost extends Component {
   constructor() {
     super()
@@ -21,6 +21,7 @@ export default class HeaderPost extends Component {
     return(
         <section className="portfolio__posts">
           <div className="relative__content">
+
              <div className="content__posts">
                      <PortfolioPost imgPost={ThirdImage} altImg={'3post'} />
                      <PortfolioPost imgPost={FourImage} altImg={'4post'} />
@@ -28,10 +29,12 @@ export default class HeaderPost extends Component {
                     <PortfolioPost imgPost={FirstImage} altImg={'1post'}/>
                     <PortfolioPost imgPost={SixImage} altImg={'6post'} />
                    <PortfolioPost imgPost={SecondImage} altImg={'2post'} />
-               </div>
-            {/*<div className="background__absolute">*/}
+               {/*<div className="background__absolute">*/}
+                 {/*<img src={zindex} alt=""/>*/}
+               {/*</div>*/}
+
               {/*<div>dsfsdfsdf</div>*/}
-            {/*</div>*/}
+            </div>
 
             <div className="block__load__more">
                 <div className="load__more">
