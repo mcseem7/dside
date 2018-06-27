@@ -11,7 +11,7 @@ export default class RootContent extends Component {
 
   render() {
     return(
-        <div className="complex__content">
+        <div className="main__content">
             <DynamicContent/>
         </div>
     )

@@ -1,0 +1,142 @@
+.title__drop h3 {
+    background-image: linear-gradient(to right, #da8c93 0%, #ae6058 100%);
+    background-clip: text;
+    color: #000000;
+    font-family: MontBold;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    cursor: pointer;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.question__form p {
+    color: #000000;
+    font-family: MontLight;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+footer {
+    background-color: #f6f6f6;
+    width: 100%;
+}
+
+
+.footer__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+.copyright p {
+    color: #000000;
+    font-family: MontLight;
+    font-size: 14px;
+}
+
+.copyright__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 35px;
+    margin-top: 70px;
+}
+
+.dside__send {
+    width: 316px;
+    height: 64px;
+    border: 2px solid red;
+    margin-top: 50px;
+    border-radius: 32px;
+    cursor: pointer;
+    border-image: url('rounded-rectangle-6.png') ;
+    outline:none;
+    background: none;
+    border-image-slice: 33;
+    border-image-width: 20;
+    border-image-outset: 1;
+    border-image-repeat: round;
+}
+
+.sending__form {
+    margin-top: 110px;
+}
+
+.dside__send p {
+    margin: 0;
+    background-image: linear-gradient(to right, #da8c93 0%, #ae6058 100%);
+    background-clip: text;
+    color: #000000;
+    font-family: MontLight;
+    font-size: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.button__content {
+    display: flex;
+    align-items: center;
+}
+
+.button__content img {
+    width: 13px;
+    height: 23px;
+    width: 13px;
+    height: 23px;
+    display: flex;
+    margin-left: 175px;
+}
+
+.button__content p {
+    padding-left: 20px;
+}
+
+#form__dside {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs__send {
+    display: flex;
+}
+
+.wrapper__name,
+.wrapper__phone {
+    width: 380px;
+    display: flex;
+}
+
+#phone {
+    outline: none;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    color: #000000;
+    flex:1;
+    font-family: MontLight;
+    font-size: 21px;
+    font-weight: 300;
+    border-bottom: 2px solid black;
+    background: none;
+}
+
+#name {
+    background: none;
+    outline: none;
+    border-bottom: 2px solid black;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    margin-right: 30px;
+    flex: 1;
+    color: #000000;
+    font-family: MontLight;
+    font-size: 21px;
+    font-weight: 300;
+}
+

@@ -1,0 +1,29 @@
+.portfolio__posts {
+    max-width: 1920px;
+    min-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.post__img {
+    max-width: 100%;
+    min-width: 100%;
+    height: auto;
+}
+
+.content__posts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portolio__post {
+    flex: 1 1 30%;
+    margin-bottom: -4px;
+}
+
+
+.relative__content {
+    position: relative;
+}
+

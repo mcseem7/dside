@@ -1,0 +1,13 @@
+@font-face{
+    font-family: 'MontBold';
+    src: url('./styles/fonts/Mont-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'MontLight';
+    src: url('./styles/fonts/Mont-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}

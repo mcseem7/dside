@@ -1,0 +1,35 @@
+.more__icon img {
+    max-width: 100%;
+    min-width: 100%;
+    height: auto;
+}
+
+.more__icon {
+    width: 20px;
+    margin-right: 12px;
+}
+
+.load {
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: 'MontBold';
+    display: table;
+    line-height: 10px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: rgb(0,0,0);
+    font-size: 18px;
+    font-weight: bold;
+    background-image: linear-gradient(90deg, #d99b91 0%, #ad6f59 100%);
+}
+
+.block__load__more {
+    padding-top: 41px;
+}
+
+.load__more {
+    display:  flex;
+    justify-content:  center;
+}

@@ -5,7 +5,7 @@ import registerServiceWorker from './registerServiceWorker';
 import styledNormalize from 'styled-normalize'
 import { injectGlobal } from 'styled-components'
 import baseStyles from './index'
-
+import './index.css'
 export default () => injectGlobal`
   ${styledNormalize}
 `

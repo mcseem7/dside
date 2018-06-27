@@ -1,0 +1,99 @@
+section {
+    background-color: #f6f6f6;
+    width: 100%;
+}
+
+.title__service h4 {
+    margin: 0;
+    background-image: linear-gradient(to right, #da8c93 0%, #ae6058 100%);
+    background-clip: text;
+    opacity: 0.21;
+    color: #000000;
+    font-family: MontBold;
+    font-size: 24px;
+    font-weight: 700;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+ul li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+.list li:first-child {
+    color: #000000;
+    font-family: MontBold;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 9.87px;
+    text-transform: uppercase;
+}
+
+.list li {
+    color: #000000;
+    font-family: MontLight;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.content__services {
+    max-width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto;
+    padding-top: 75px;
+    padding-bottom: 100px;
+}
+
+.services {
+    display: flex;
+}
+
+.title__service {
+    flex: 1;
+}
+
+.button__service {
+    background-image: linear-gradient(to right, #da8c93 0%, #ae6058 100%);
+    opacity: 0.3;
+}
+
+.more__about-service {
+    outline: none;
+    border: none;
+    margin-top: 40px;
+    background: none;
+    cursor: pointer;
+    font-size: 23px;
+    line-height: 6px;
+    color: rgb(12,16,16);
+    font-family: "MontBold";
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.more__about-service:after {
+    opacity: 0;
+}
+
+.more__about-service button {
+    position: relative;
+    margin-left: -7px;
+
+}
+
+.more__about-service:hover:after {
+    content: ' ';
+    background-image: linear-gradient(to right, #da8c93 0%, #ae6058 100%);
+    display: block;
+    transition: 0.3s;
+    opacity: 1;
+    height: 3px;
+    width: 170px;
+    position: absolute;
+    margin-top: 10px;
+}
