@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Layout from './components'
 import './App.css';
+import Footer from './components/Basic/Footer'
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
         <div className="container">
             <Layout/>
         </div>
+        <Footer/>
       </div>
     );
   }
