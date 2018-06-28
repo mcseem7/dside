@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
 import './index.css'
-import Adshara from './adshara.svg'
-import Citron from './citron.svg'
-import ColorFest from './colorfest.svg'
-import nau from './nau.svg'
-import NewChannel from './newchannel.svg'
-import NewDoc from './newdoc.svg'
-import Polismart from './polismart.svg'
+import Adshara from '../../../sources/images/works__logo/adshara.svg'
+import Citron from '../../../sources/images/works__logo/citron.svg'
+import ColorFest from '../../../sources/images/works__logo/colorfest.svg'
+import nau from '../../../sources/images/works__logo/nau.svg'
+import NewChannel from '../../../sources/images/works__logo/newchannel.svg'
+import NewDoc from '../../../sources/images/works__logo/newdoc.svg'
+import Polismart from '../../../sources/images/works__logo/polismart.svg'
 
 class Brand extends Component {
   constructor(props) {

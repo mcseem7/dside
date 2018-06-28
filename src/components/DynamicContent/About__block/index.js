@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Logotype from './Logo.svg'
+import Logotype from '../../sources/images/Logo.svg'
 import './index.css'
 
 export default class About extends Component {

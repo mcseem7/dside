@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
 import HeaderPost from './Header__Post'
 import About from './About__block'
-import Works from './Works__Company/index';
-import Services from './Services'
+import Works from './Main/Works__Company/index';
+import Services from './Main/Services'
+
 export default class DynamicContent extends Component {
   constructor() {
     super()
@@ -16,8 +17,8 @@ export default class DynamicContent extends Component {
         <div className="complex__content">
              <HeaderPost/>
               <About/>
-             <Works/>
-            <Services/>
+              <Works/>
+              <Services/>
         </div>
     )
   }

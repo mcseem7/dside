@@ -16,7 +16,7 @@ export default class Layout extends Component {
         <div className="wrapper___layout">
               <Header/>
              <RootContent/>
-          <Footer/>
+              <Footer/>
         </div>
     )
   }

@@ -51,7 +51,7 @@ footer {
     margin-top: 50px;
     border-radius: 32px;
     cursor: pointer;
-    border-image: url('rounded-rectangle-6.png') ;
+    border-image: url('../../sources/images/works__logo/rounded-rectangle-6.png') ;
     outline:none;
     background: none;
     border-image-slice: 33;

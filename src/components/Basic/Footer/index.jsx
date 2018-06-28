@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import Behance from '../Header/behance.png'
 import Instagram from '../Header/instagram.png'
 import './index.css'
-import arrow from './arrow.svg'
+import arrow from '../../sources/images/works__logo/arrow.svg'
 
 export default class Footer extends Component {
   constructor(props) {

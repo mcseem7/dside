@@ -45,11 +45,11 @@ export default class Header extends Component {
                     <div className="right__content-socials">
                      <div className="social__icons">
                         <div className="social__icon-behance">
-                          <a href="">        <img src={Behance} alt=""/></a>
+                          <a href="">       </a>
                         </div>
 
                        <div className="social__icon-instagram">
-                         <a href="">       <img src={Instagram} alt=""/></a>
+                         <a href="">  </a>
                        </div>
                      </div>
                   </div>
