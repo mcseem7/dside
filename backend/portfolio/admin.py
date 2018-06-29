@@ -26,13 +26,29 @@ class AttachmentForm(forms.ModelForm):
         exclude = ('id',)
 
 
+
+
+class CategoryTranslationInline(admin.StackedInline):
+    verbose_name_plural = "category translations"
+    verbose_name = "translation"
+    model = CategoryTranslation
+
+    extra = 1
+
+
+class PortfolioTranslationInline(admin.StackedInline):
+    verbose_name_plural = "portfolio translations"
+    verbose_name = "translation"
+    model = PortfolioTranslation
+
+    extra = 1
+
 class AttachmentInLine(admin.StackedInline):
     verbose_name_plural = "Images or Videos"
     verbose_name = "Attachment"
     model = Attachment
     max_num = 3
     extra = 1
-
 
 class Attachment2InLine(admin.StackedInline):
     verbose_name_plural = "Images or HTMLs"
@@ -43,20 +59,21 @@ class Attachment2InLine(admin.StackedInline):
     form = AttachmentForm
 
 
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('tag',)
+    inlines = (CategoryTranslationInline,)
+
+
 class PortfolioItemAdmin(admin.ModelAdmin):
-    list_display = ('name', 'category', 'watches', 'watching_time', 'date')
+    list_display = ('base_name', 'category', 'watches', 'watching_time', 'date')
     list_filter = ('date', 'category')
     search_fields = ('description', 'name', 'task', 'decision')
-    inlines = (AttachmentInLine, Attachment2InLine)
+    inlines = (AttachmentInLine, Attachment2InLine, PortfolioTranslationInline)
 
     form = PortfolioItemForm
     readonly_fields = ('watches',)
 
     filter_horizontal = ('similar_items',)
-
-
-class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name', 'tag')
 
 
 admin.site.register(PortfolioItem, PortfolioItemAdmin)
