@@ -3,7 +3,7 @@
 # dependencies
 /node_modules
 /dside-venv
-
+/venv
 
 # testing
 /coverage
