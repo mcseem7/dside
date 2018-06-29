@@ -19,7 +19,7 @@ class CategoryList(APIView):
         return Response(response)
 
 
-class PortfolioItemListCategory(APIView):
+class PortfolioItemList(APIView):
 
     def get(self, request, format=None, lang_code=None, category=None):
 
@@ -41,3 +41,5 @@ class PortfolioItemListCategory(APIView):
             except (CategoryTranslation.DoesNotExist, PortfolioTranslation.DoesNotExist):
                 continue
         return Response(response)
+
+
