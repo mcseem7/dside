@@ -1,6 +1,7 @@
 from django.db import models
 import django.utils.timezone
 
+
 class Category(models.Model):
     name = models.CharField(max_length=100)
     tag = models.CharField(max_length=50)
@@ -17,6 +18,7 @@ class Attachment(models.Model):
     def __str__(self):
         return "{} {}".format(self.kind, self.id)
 
+
 class Attachment2(models.Model):
     kind = models.CharField(verbose_name="type", choices=(("html", "HTML"), ("image", "Image")), max_length=10)
     html = models.TextField(blank=True)
@@ -25,6 +27,7 @@ class Attachment2(models.Model):
 
     def __str__(self):
         return "{} {}".format(self.kind, self.id)
+
 
 class PortfolioItem(models.Model):
     name = models.CharField(max_length=100)
@@ -39,8 +42,7 @@ class PortfolioItem(models.Model):
     task = models.TextField()
     decision = models.TextField()
 
-    similar_items = models.ManyToManyField('PortfolioItem', verbose_name="Similar portfolio items")
-
+    similar_items = models.ManyToManyField('PortfolioItem', verbose_name="Similar portfolio items", blank=True)
 
     def __str__(self):
         return self.name

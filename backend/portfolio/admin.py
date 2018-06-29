@@ -17,6 +17,13 @@ class PortfolioItemForm(forms.ModelForm):
         exclude = ('id',)
 
 
+class AttachmentForm(forms.ModelForm):
+    class Meta:
+        model = Attachment
+        widgets = {
+            'html': TrumbowygWidget(),
+        }
+        exclude = ('id',)
 
 
 class AttachmentInLine(admin.StackedInline):
@@ -24,6 +31,7 @@ class AttachmentInLine(admin.StackedInline):
     verbose_name = "Attachment"
     model = Attachment
     max_num = 3
+    extra = 1
 
 
 class Attachment2InLine(admin.StackedInline):
@@ -31,6 +39,8 @@ class Attachment2InLine(admin.StackedInline):
     verbose_name = "Attachment"
     model = Attachment2
     max_num = 3
+    extra = 1
+    form = AttachmentForm
 
 
 class PortfolioItemAdmin(admin.ModelAdmin):
