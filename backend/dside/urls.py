@@ -18,10 +18,12 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.documentation import include_docs_urls
 
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^docs/', include_docs_urls(title='DSide')),
     url(r'^trumbowyg/', include('trumbowyg.urls')),
-    url(r'^api/portfolio/', include('portfolio.urls'))
+    url(r'^api/(?P<lang_code>[^.]+)/portfolio/', include('portfolio.urls'))
 ]

@@ -4,8 +4,8 @@ from dside.lang_codes import LANGUAGES
 
 
 class Category(models.Model):
-    tag = models.CharField(max_length=50)
-
+    tag = models.CharField(max_length=50, unique=True)
+    color = models.CharField(max_length=10, verbose_name="HEX Color")
     class Meta:
         verbose_name_plural = "categories"
 

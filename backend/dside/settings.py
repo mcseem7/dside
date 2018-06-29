@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'home',
     'portfolio',
     'trumbowyg',
+    'drf_openapi',
 
 ]
 
