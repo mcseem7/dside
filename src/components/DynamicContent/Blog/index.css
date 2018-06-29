@@ -1,0 +1,131 @@
+.blog__content {
+    max-width: 1200px;
+    min-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+section.blog__container {
+    width: 100%;
+    background-color: #f2f0ef;
+}
+
+
+.description-item p {
+ width: 100%
+}
+
+.tag-item p {
+    color: #ffffff;
+    font-family: MontBold;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.title-item h4 {
+    color: #ffffff;
+    font-family: MontBold;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.description-item p {
+    color: #ffffff;
+    font-family: MontLight;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.watching__post,
+.time__post {
+    color: #ffffff;
+    font-family: MontBold;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.blog__item {
+    background: url('./background__blog.png') no-repeat;
+    background-size: cover;
+}
+
+.tag-item {
+    width: 12%;
+    height: 39px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to left, #f1af1f 0%, #f47b20 100%);
+}
+
+.blog__post-data {
+    display: flex;
+}
+
+.blog__item-content {
+    padding-top: 330px;
+    padding-left: 40px;
+}
+
+.blog__item {
+    margin-top: 25px;
+}
+
+.latest__post-title h4 {
+    color: #000000;
+    font-family: MontBold;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.latest__post-content {
+    display: flex;
+}
+
+.icon__cube img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.latest-posts__titles {
+    display: flex;
+    padding-left: 35px;
+    padding-right: 35px;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.latest-post__tag p {
+    margin: 0;
+}
+
+.latest-post__data {
+    display: flex;
+}
+
+.latest-post {
+    background-image: url('./latest.png');
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+    flex: 200px;
+    margin-left: 10px;
+}
+
+.latest-post__tag {
+    color: #ffffff;
+    font-family: MontBold;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.latest-post__description {
+    color: #ffffff;
+    font-family: MontBold;
+    font-size: 18px;
+    font-weight: 700;
+}

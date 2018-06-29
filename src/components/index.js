@@ -1,22 +1,18 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import RootContent from './RootContent'
 import Header from './Basic/Header'
 
-
 export default class Layout extends Component {
-  constructor() {
+  constructor () {
     super()
-
-
   }
 
-
-  render() {
-    return(
-        <div className="wrapper___layout">
-              <Header/>
-                <RootContent/>
-        </div>
+  render () {
+    return (
+      <div className="wrapper___layout">
+        <Header />
+        <RootContent />
+      </div>
     )
   }
 }

@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Layout from './components'
-import './App.css';
+import './App.css'
 import Footer from './components/Basic/Footer'
 
 class App extends Component {
-  render() {
+  render () {
     return (
       <div className="App">
         <div className="container">
-            <Layout/>
+          <Layout />
         </div>
-        <Footer/>
+        <Footer />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
