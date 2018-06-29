@@ -6,6 +6,9 @@ from dside.lang_codes import LANGUAGES
 class Category(models.Model):
     tag = models.CharField(max_length=50)
 
+    class Meta:
+        verbose_name_plural = "categories"
+
     def __str__(self):
         return self.tag
 
@@ -46,6 +49,7 @@ class PortfolioTranslation(models.Model):
 
 
 class PortfolioItem(models.Model):
+
     base_name = models.CharField(max_length=100, verbose_name="Technical name(only for panel)")
     date = models.DateTimeField(default=django.utils.timezone.now)
     font_file = models.FileField(blank=True)
@@ -58,6 +62,9 @@ class PortfolioItem(models.Model):
     days_developing = models.IntegerField(default=7)
 
     similar_items = models.ManyToManyField('PortfolioItem', verbose_name="Similar portfolio items", blank=True)
+
+    class Meta:
+        ordering = ("date",)
 
     def __str__(self):
         return self.base_name

@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^docs/', include_docs_urls(title='DSide')),
-    url(r'^trumbowyg/', include('trumbowyg.urls'))
+    url(r'^trumbowyg/', include('trumbowyg.urls')),
+    url(r'^api/portfolio/', include('portfolio.urls'))
 ]
