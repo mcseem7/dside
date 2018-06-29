@@ -26,8 +26,6 @@ class AttachmentForm(forms.ModelForm):
         exclude = ('id',)
 
 
-
-
 class CategoryTranslationInline(admin.StackedInline):
     verbose_name_plural = "category translations"
     verbose_name = "translation"
@@ -43,12 +41,14 @@ class PortfolioTranslationInline(admin.StackedInline):
 
     extra = 1
 
+
 class AttachmentInLine(admin.StackedInline):
     verbose_name_plural = "Images or Videos"
     verbose_name = "Attachment"
     model = Attachment
     max_num = 3
     extra = 1
+
 
 class Attachment2InLine(admin.StackedInline):
     verbose_name_plural = "Images or HTMLs"

@@ -48,6 +48,8 @@ class PortfolioTranslation(models.Model):
 class PortfolioItem(models.Model):
     base_name = models.CharField(max_length=100, verbose_name="Technical name(only for panel)")
     date = models.DateTimeField(default=django.utils.timezone.now)
+    font_file = models.FileField(blank=True)
+    font_family = models.CharField(max_length=100, blank=True)
     main_image = models.ImageField()
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
     logotype = models.ImageField
