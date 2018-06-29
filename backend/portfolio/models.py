@@ -1,5 +1,5 @@
 from django.db import models
-
+import django.utils.timezone
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
@@ -7,19 +7,21 @@ class Category(models.Model):
 
 
 class Attachment(models.Model):
-    kind = models.CharField(verbose_name="type", choices=(("Video", "video"), ("Image", "image")))
+    kind = models.CharField(verbose_name="type", choices=(("video", "Video"), ("image", "Image")), max_length=10)
     content = models.FileField()
     portfolio_item = models.ForeignKey('PortfolioItem', on_delete=models.CASCADE)
 
 
 class Attachment2(models.Model):
-    kind = models.CharField(verbose_name="type", choices=(("HTML", "html"), ("Image", "image")))
+    kind = models.CharField(verbose_name="type", choices=(("html", "HTML"), ("image", "Image")), max_length=10)
     html = models.TextField(blank=True)
     image = models.ImageField(blank=True)
     portfolio_item = models.ForeignKey('PortfolioItem', on_delete=models.CASCADE)
 
 
 class PortfolioItem(models.Model):
+    name = models.CharField(max_length=100)
+    date = models.DateTimeField(default=django.utils.timezone.now)
     main_image = models.ImageField()
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
     logotype = models.ImageField
@@ -30,4 +32,4 @@ class PortfolioItem(models.Model):
     task = models.TextField()
     decision = models.TextField()
 
-    simillar_items = models.ManyToManyField('PortfolioItem', limit_choices_to=6)
+    similar_items = models.ManyToManyField('PortfolioItem', verbose_name="Similar portfolio items")
