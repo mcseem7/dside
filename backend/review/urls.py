@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from review.views import ReviewList
+from review.views import ReviewList, ReviewDetails
 
 urlpatterns = [
     # url(r'^getAllCategories/$', CategoryList.as_view()),
@@ -11,6 +11,7 @@ urlpatterns = [
     # url(r'^getPortfolioItem/(?P<id>[^.]+)$', PortfolioDetails.as_view()),
 
     url(r'^getReviewList/$', ReviewList.as_view()),
+    url(r'^getReviewDetails/(?P<id>[^.]+)/$', ReviewDetails.as_view()),
 
 
 ]

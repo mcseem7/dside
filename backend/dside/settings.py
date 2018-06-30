@@ -110,6 +110,9 @@ AUTH_PASSWORD_VALIDATORS = [
 BOT_TOKEN = "612720277:AAEW2AnFKvj957i_6-lO4OsjJt9t7VlXWCo"
 CHAT_ID = -275224828
 
+GR_CAPTCHA_PUBLIC_KEY = '6LdzjGEUAAAAAEoMUOiBnROqE0FRL6kQIcVJl08O'
+GR_CAPTCHA_SECRET_KEY = '6LdzjGEUAAAAAPUDqEOjkyrF3TCNqrhOhnfyrphU'
+
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
@@ -128,3 +131,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/uploads/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
