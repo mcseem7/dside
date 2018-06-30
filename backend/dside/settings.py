@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'portfolio',
     'trumbowyg',
     'drf_openapi',
+    'review'
 
 ]
 
@@ -105,6 +106,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+BOT_TOKEN = "612720277:AAEW2AnFKvj957i_6-lO4OsjJt9t7VlXWCo"
+CHAT_ID = -275224828
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
