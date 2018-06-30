@@ -6,6 +6,7 @@ from dside.lang_codes import LANGUAGES
 class Category(models.Model):
     tag = models.CharField(max_length=50, unique=True)
     color = models.CharField(max_length=10, verbose_name="HEX Color")
+
     class Meta:
         verbose_name_plural = "categories"
 
@@ -49,14 +50,15 @@ class PortfolioTranslation(models.Model):
 
 
 class PortfolioItem(models.Model):
-
     base_name = models.CharField(max_length=100, verbose_name="Technical name(only for panel)")
     date = models.DateTimeField(default=django.utils.timezone.now)
+    thumbnail = models.ImageField()
     font_file = models.FileField(blank=True)
     font_family = models.CharField(max_length=100, blank=True)
+    headers_classes = models.CharField(max_length=120, blank=True)
     main_image = models.ImageField()
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
-    logotype = models.ImageField
+    logotype = models.ImageField()
     watches = models.IntegerField(default=0)
     watching_time = models.IntegerField()
     days_developing = models.IntegerField(default=7)
