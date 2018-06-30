@@ -25,7 +25,7 @@ SECRET_KEY = '3@t9mcc(i(g)b%2@2h0ai1g0cy4w6p4i7t_4a%3^z6=$k16z%y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dside.pl',]
 
 
 # Application definition
