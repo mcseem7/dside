@@ -25,6 +25,7 @@ class ReviewAdmin(admin.ModelAdmin):
 
 class RequestReviewAdmin(admin.ModelAdmin):
     list_display = ("name", "email", "title")
+    readonly_fields = ["name", "email", "text", "social_link", "title", "image"]
 
 
 admin.site.register(ReviewItem, ReviewAdmin)

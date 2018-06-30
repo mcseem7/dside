@@ -1,15 +1,12 @@
 import json
 
+import django.utils.timezone
 import requests
-from django.shortcuts import render
-
+from rest_framework import generics, mixins
 # Create your views here.
 from rest_framework.response import Response
 from rest_framework.status import HTTP_400_BAD_REQUEST
 from rest_framework.views import APIView
-
-from rest_framework import generics, mixins, status
-import django.utils.timezone
 
 from dside.settings import GR_CAPTCHA_SECRET_KEY, GR_CAPTCHA_URL
 from review.models import ReviewItem, Grader
