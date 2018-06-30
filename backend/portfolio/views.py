@@ -23,7 +23,7 @@ class CategoryList(APIView):
 
 class PortfolioItemList(APIView):
 
-    def get(self, request, format=None, lang_code=None, category=None):
+    def get(self, request, format=None, lang_code=None, category=None, home=None):
 
         response = []
 
@@ -31,6 +31,9 @@ class PortfolioItemList(APIView):
             category=category) if category else PortfolioItem.objects.filter()
 
         portfolio_items = portfolio_items.filter(date__lt=django.utils.timezone.now())
+
+        if not home is None:
+            portfolio_items = portfolio_items.filter(show_on_home=True)
         for x in portfolio_items:
             try:
                 translation = x.portfoliotranslation_set.get(lang_code=lang_code)
