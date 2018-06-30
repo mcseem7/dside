@@ -1,13 +1,19 @@
+import json
+
+import requests
 from django.shortcuts import render
 
 # Create your views here.
 from rest_framework.response import Response
+from rest_framework.status import HTTP_400_BAD_REQUEST
 from rest_framework.views import APIView
 
 from rest_framework import generics, mixins, status
 import django.utils.timezone
+
+from dside.settings import GR_CAPTCHA_SECRET_KEY, GR_CAPTCHA_URL
 from review.models import ReviewItem, Grader
-from review.serializers import ReviewItemSerializer, ReviewTextSerializer
+from review.serializers import ReviewItemSerializer, ReviewTextSerializer, ReviewRequestSerializer
 
 
 class ReviewList(APIView):
@@ -40,3 +46,19 @@ class ReviewDetails(APIView):
             return Response({})
 
         return Response(response)
+
+
+class ReviewRequestCreate(mixins.CreateModelMixin,
+                  generics.GenericAPIView):
+    serializer_class = ReviewRequestSerializer
+
+    def post(self, request, *args, **kwargs):
+        g_recaptcha_response = request.data['g-recaptcha-response']
+        r = requests.post(GR_CAPTCHA_URL, {
+            'secret': GR_CAPTCHA_SECRET_KEY,
+            'response': g_recaptcha_response
+        })
+        if not json.loads(r.content.decode())['success']:
+            return Response(status=HTTP_400_BAD_REQUEST)
+
+        return self.create(request, *args, **kwargs)

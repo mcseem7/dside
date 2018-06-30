@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import TemplateView
 from rest_framework.documentation import include_docs_urls
 
 
@@ -26,5 +27,7 @@ urlpatterns = [
     url(r'^docs/', include_docs_urls(title='DSide')),
     url(r'^trumbowyg/', include('trumbowyg.urls')),
     url(r'^api/(?P<lang_code>[^.]+)/portfolio/', include('portfolio.urls')),
-    url(r'^api/(?P<lang_code>[^.]+)/review/', include('review.urls'))
+    url(r'^api/(?P<lang_code>[^.]+)/review/', include('review.urls')),
+
+    url(r'^test', TemplateView.as_view(template_name='test.html'))
 ]

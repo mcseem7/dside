@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'portfolio',
     'trumbowyg',
     'drf_openapi',
+    'recaptcha',
     'review'
 
 ]
@@ -61,7 +62,7 @@ ROOT_URLCONF = 'dside.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -112,7 +113,7 @@ CHAT_ID = -275224828
 
 GR_CAPTCHA_PUBLIC_KEY = '6LdzjGEUAAAAAEoMUOiBnROqE0FRL6kQIcVJl08O'
 GR_CAPTCHA_SECRET_KEY = '6LdzjGEUAAAAAPUDqEOjkyrF3TCNqrhOhnfyrphU'
-
+GR_CAPTCHA_URL = "https://www.google.com/recaptcha/api/siteverify"
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
