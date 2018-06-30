@@ -62,7 +62,7 @@ class PortfolioItem(models.Model):
     main_image = models.ImageField()
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
     logotype = models.ImageField()
-    watches = models.IntegerField(default=0)
+    views = models.IntegerField(default=0)
     watching_time = models.IntegerField()
     days_developing = models.IntegerField(default=7)
     show_on_home = models.BooleanField(default=False)

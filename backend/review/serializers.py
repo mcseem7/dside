@@ -4,7 +4,7 @@ from rest_framework import serializers
 from review.models import ReviewItem, ReviewText, ReviewRequest
 
 
-class ReviewItemSerializer(serializers.ModelSerializer):
+class RE(serializers.ModelSerializer):
     class Meta:
         model = ReviewItem
         fields = '__all__'

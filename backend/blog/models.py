@@ -32,7 +32,7 @@ class BlogItem(models.Model):
     date = models.DateTimeField(default=django.utils.timezone.now)
     category = models.ForeignKey('BlogCategory', on_delete=models.CASCADE)
     watching_time = models.IntegerField()
-    watches = models.IntegerField(default=0)
+    views = models.IntegerField(default=0)
     main_image = models.ImageField()
     thumbnail = models.ImageField()
 

@@ -11,7 +11,7 @@ urlpatterns = [
     # url(r'^getPortfolioItem/(?P<id>[^.]+)$', PortfolioDetails.as_view()),
 
     url(r'^getReviewList/$', ReviewList.as_view()),
-    url(r'^ReviewRequestCreate/$', ReviewRequestCreate.as_view()),
+    url(r'^createReviewRequest/$', ReviewRequestCreate.as_view()),
     url(r'^getReviewDetails/(?P<id>[^.]+)/$', ReviewDetails.as_view()),
 
 

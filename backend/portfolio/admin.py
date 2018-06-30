@@ -65,13 +65,13 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class PortfolioItemAdmin(admin.ModelAdmin):
-    list_display = ('base_name', 'category', 'watches', 'watching_time', 'date', 'show_on_home')
+    list_display = ('base_name', 'category', 'views', 'watching_time', 'date', 'show_on_home')
     list_filter = ('date', 'category', 'show_on_home')
     search_fields = ('description', 'name', 'task', 'decision')
     inlines = (AttachmentInLine, Attachment2InLine, PortfolioTranslationInline)
 
 
-    readonly_fields = ('watches',)
+    readonly_fields = ('views',)
 
     filter_horizontal = ('similar_items',)
 

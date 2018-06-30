@@ -48,11 +48,11 @@ class PortfolioItemForm(forms.ModelForm):
 
 
 class BlogItemAdmin(admin.ModelAdmin):
-    list_display = ('base_name', 'category', 'watches', 'watching_time', 'date')
+    list_display = ('base_name', 'category', 'views', 'watching_time', 'date')
     list_filter = ('date', 'category')
     search_fields = ('description', 'name')
     inlines = (BlogTranslationInline,)
-    readonly_fields = ('watches',)
+    readonly_fields = ('views',)
 
 
 class TopicSuggestionAdmin(admin.ModelAdmin):

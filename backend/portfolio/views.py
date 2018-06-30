@@ -1,5 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
+
+from dside.functions import increment_view
 from portfolio.models import *
 import django.utils.timezone
 
@@ -46,7 +48,7 @@ class PortfolioItemList(APIView):
                         "color": x.category.color,
                         "tag": x.category.tag
                     },
-                    "watches": x.watches,
+                    "views": x.views,
                     "watching_time": x.watching_time,
                     "description": translation.description,
                     "days_developing": x.days_developing,
@@ -82,7 +84,7 @@ class PortfolioDetails(APIView):
                 "color": pi.category.color,
                 "tag": pi.category.tag
             },
-            "watches": pi.watches,
+            "views": pi.views,
             "watching_time": pi.watching_time,
             "description": translation.description,
             "font_file": None if not pi.font_file else pi.font_file.url,
@@ -98,5 +100,7 @@ class PortfolioDetails(APIView):
             } for x in pi.similar_items.all()],
 
         }
+
+        increment_view(request, instance=pi)
 
         return Response(response)

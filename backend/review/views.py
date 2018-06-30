@@ -8,9 +8,10 @@ from rest_framework.response import Response
 from rest_framework.status import HTTP_400_BAD_REQUEST
 from rest_framework.views import APIView
 
+from dside.functions import increment_view
 from dside.settings import GR_CAPTCHA_SECRET_KEY, GR_CAPTCHA_URL
 from review.models import ReviewItem, Grader
-from review.serializers import ReviewItemSerializer, ReviewTextSerializer, ReviewRequestSerializer
+from review.serializers import RE, ReviewTextSerializer, ReviewRequestSerializer
 
 
 class ReviewList(APIView):
@@ -20,7 +21,7 @@ class ReviewList(APIView):
         items = ReviewItem.objects.filter(date__lt=django.utils.timezone.now())
         for x in items:
             if x.reviewtext_set.filter(lang_code=lang_code).exists():
-                response.append(ReviewItemSerializer(x).data)
+                response.append(RE(x).data)
 
         return Response(response)
 
@@ -30,17 +31,19 @@ class ReviewDetails(APIView):
     def get(self, request, format=None, lang_code=None, id=None):
 
         try:
-            item = ReviewItem.objects.get(id=1)
+            item = ReviewItem.objects.get(id=id)
         except ReviewItem.DoesNotExist:
             return Response({})
 
-        response = ReviewItemSerializer(item).data
+        response = RE(item).data
         response["text_blocks"] = [ReviewTextSerializer(x).data for x in
                                    item.reviewtext_set.filter(lang_code=lang_code)]
         grader = Grader.objects.get(id=response["graded_by"])
         response["graded_by"] = {"name": grader.name, "avatar": grader.avatar.url}
         if not response["text_blocks"]:
             return Response({})
+
+        increment_view(request,item)
 
         return Response(response)
 
