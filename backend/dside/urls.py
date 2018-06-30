@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^docs/', include_docs_urls(title='DSide')),
     url(r'^trumbowyg/', include('trumbowyg.urls')),
-    url(r'^api/(?P<lang_code>[^.]+)/portfolio/', include('portfolio.urls'))
+    url(r'^api/(?P<lang_code>[^.]+)/portfolio/', include('portfolio.urls')),
+    url(r'^api/(?P<lang_code>[^.]+)/review/', include('review.urls'))
 ]
