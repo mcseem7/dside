@@ -55,6 +55,12 @@ class BlogItemAdmin(admin.ModelAdmin):
     readonly_fields = ('watches',)
 
 
+class TopicSuggestionAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email')
+    search_fields = ('text',)
+    readonly_fields = ('text', 'name', 'email')
+
 
 admin.site.register(BlogItem, BlogItemAdmin)
 admin.site.register(BlogCategory, BlogCategoryAdmin)
+admin.site.register(TopicSuggestion, TopicSuggestionAdmin)
