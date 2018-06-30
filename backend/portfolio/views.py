@@ -28,12 +28,13 @@ class PortfolioItemList(APIView):
         response = []
 
         portfolio_items = PortfolioItem.objects.filter(
-            category=category) if category else PortfolioItem.objects.filter()
+            category__tag=category) if category else PortfolioItem.objects.filter()
 
         portfolio_items = portfolio_items.filter(date__lt=django.utils.timezone.now())
 
-        if not home is None:
+        if home:
             portfolio_items = portfolio_items.filter(show_on_home=True)
+
         for x in portfolio_items:
             try:
                 translation = x.portfoliotranslation_set.get(lang_code=lang_code)
@@ -53,6 +54,11 @@ class PortfolioItemList(APIView):
             except (CategoryTranslation.DoesNotExist, PortfolioTranslation.DoesNotExist):
                 continue
         return Response(response)
+
+
+class PortfolioHomeItemList(PortfolioItemList):
+    def get(self, request, format=None, lang_code=None, category=None, home=None):
+        return super(PortfolioHomeItemList, self).get(request, format, lang_code, category, home=True)
 
 
 class PortfolioDetails(APIView):

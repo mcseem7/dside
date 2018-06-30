@@ -62,7 +62,7 @@ class PortfolioItem(models.Model):
     watches = models.IntegerField(default=0)
     watching_time = models.IntegerField()
     days_developing = models.IntegerField(default=7)
-    show_on_home = models.FloatField(default=False)
+    show_on_home = models.BooleanField(default=False)
 
     similar_items = models.ManyToManyField('PortfolioItem', verbose_name="Similar portfolio items", blank=True)
 
