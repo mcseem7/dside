@@ -50,9 +50,15 @@ class ReviewDetails(APIView):
 
 class ReviewRequestCreate(mixins.CreateModelMixin,
                   generics.GenericAPIView):
+    """
+    Adds new request for review
+    Protected with Google RECAPTCHA
+    """
+
     serializer_class = ReviewRequestSerializer
 
     def post(self, request, *args, **kwargs):
+
         g_recaptcha_response = request.data['g-recaptcha-response']
         r = requests.post(GR_CAPTCHA_URL, {
             'secret': GR_CAPTCHA_SECRET_KEY,
