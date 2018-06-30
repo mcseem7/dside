@@ -8,7 +8,7 @@ from portfolio.models import *
 
 class PortfolioItemForm(forms.ModelForm):
     class Meta:
-        model = PortfolioItem
+        model = PortfolioTranslation
         widgets = {
             'description': TrumbowygWidget(),
             'task': TrumbowygWidget(),
@@ -38,7 +38,7 @@ class PortfolioTranslationInline(admin.StackedInline):
     verbose_name_plural = "portfolio translations"
     verbose_name = "translation"
     model = PortfolioTranslation
-
+    form = PortfolioItemForm
     extra = 1
 
 
@@ -70,7 +70,7 @@ class PortfolioItemAdmin(admin.ModelAdmin):
     search_fields = ('description', 'name', 'task', 'decision')
     inlines = (AttachmentInLine, Attachment2InLine, PortfolioTranslationInline)
 
-    form = PortfolioItemForm
+
     readonly_fields = ('watches',)
 
     filter_horizontal = ('similar_items',)

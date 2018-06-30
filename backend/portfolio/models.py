@@ -48,6 +48,9 @@ class PortfolioTranslation(models.Model):
 
     portfolio_item = models.ForeignKey('PortfolioItem', on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.name
+
 
 class PortfolioItem(models.Model):
     base_name = models.CharField(max_length=100, verbose_name="Technical name(only for panel)")

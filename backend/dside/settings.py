@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'trumbowyg',
     'drf_openapi',
     'recaptcha',
-    'review'
+    'review',
+    'blog'
 
 ]
 
