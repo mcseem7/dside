@@ -30,6 +30,7 @@ urlpatterns = [
     url(r'^api/(?P<lang_code>[^.]+)/portfolio/', include('portfolio.urls')),
     url(r'^api/(?P<lang_code>[^.]+)/review/', include('review.urls')),
     url(r'^api/(?P<lang_code>[^.]+)/blog/', include('blog.urls')),
+    url(r'^api/(?P<lang_code>[^.]+)/home/', include('home.urls')),
 
     url(r'^test', TemplateView.as_view(template_name='test.html'))
 ] + static(MEDIA_URL, document_root=MEDIA_ROOT)
