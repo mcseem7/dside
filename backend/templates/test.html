@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<body>
+<form action="/api/en/review/createReviewRequest/" method="post" enctype="multipart/form-data">
+Name: <input type="text" name="name" value="Ivan Ivanov">
+Email: <input type="email" name="email" value="ivan.ivanov@gmail.com">
+Link: <input type="text" name="social_link" value="http://vk.com/id1">
+Text:
+    <textarea name="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</textarea>
+Title: <input type="text" name="title" value="What is Lorem Ipsum?">
+Image: <input type="file" name="image">
+{% csrf_token %}
+<div class="g-recaptcha" data-sitekey="6LdzjGEUAAAAAEoMUOiBnROqE0FRL6kQIcVJl08O"></div>
+<button type="submit">PUSH</button>
+</form>
+</body>
+</html>
