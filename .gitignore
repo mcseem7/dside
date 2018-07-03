@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /dside-venv
+/frontend/node_modules
 /venv
 
 # testing
