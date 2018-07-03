@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './index.css'
 import gridIcon from './grid-icon.svg'
 
+
 export default class Blog extends Component {
   constructor () {
     super()
@@ -35,13 +36,6 @@ export default class Blog extends Component {
             watching: '241',
             watchingTime: '5',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis itaque quae quibusdam, recusandae sint tenetur vero voluptates. Animi at ex fugiat illo magnam quas saepe. Et expedita molestias rerum.'
-          },
-          {
-            name: 'Создание бренда на етапе формирования перспектив',
-            tag: 'Branding',
-            watching: '241',
-            watchingTime: '5',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cum deleniti dolore magnam quibusdam ut. Consectetur doloremque ducimus ipsa quod sint? Aperiam architecto deserunt laborum laudantium nulla quia sit totam.'
           },
           {
             name: 'Разработка логотипа для формирования перспективы компании',
@@ -79,22 +73,15 @@ export default class Blog extends Component {
                 <div className="blog__post-data">
                   <div className="watching__post">
                     <div className="icon-watching">
-                      <div className="icon__blog"><img
-                        src=""
-                        alt=""
-                      />
+                      <div className="icon__blog">
                       </div>
-                      <p>{item.watching}</p>
+                      <p>{item.watching} </p>
                     </div>
                   </div>
                   <div className="time__post">
                     <div className="icon-timer">
-                      <div className="icon__blog"><img
-                        src=""
-                        alt=""
-                      />
-                      </div>
-                      <p>{item.watchingTime}</p>
+                      <div className="icon__blog"></div>
+                      <p>{item.watchingTime} <span>minutes</span></p>
 
                     </div>
                   </div>
@@ -123,7 +110,7 @@ export default class Blog extends Component {
                 <div className="latest-post__tag">
                   <p>{item.tag}</p>
                 </div>
-
+                      <div>
                 <div className="latest-post__description">
                   <p>{item.name}</p>
                 </div>
@@ -151,6 +138,7 @@ export default class Blog extends Component {
                     </div>
                   </div>
                 </div>
+                      </div>
 
               </div>))
               }
