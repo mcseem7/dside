@@ -82,3 +82,35 @@
 .project__names {
     margin-left: 20px;
 }
+
+.project__task_portfolio p {
+    color: #000000;
+    font-family: MontLight;
+    font-size: 18px;
+    font-weight: 300;
+    max-width: 797px;
+    min-width: 200px;
+}
+
+.name__task h4 {
+    color: #000000;
+    font-family: MontBold;
+    font-size: 18px;
+    margin: 18px 45px 0px 0px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.container__project-task {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #ffffff;
+    padding-top: 65px;
+    padding-bottom: 55px;
+}
+
+.content__project-portfolio {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}

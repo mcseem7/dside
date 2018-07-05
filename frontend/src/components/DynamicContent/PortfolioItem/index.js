@@ -86,6 +86,14 @@ export default class PortfolioItem extends Component {
         </div>
 
       <div className="content__project-portfolio">
+
+      <div className="container__project-task">
+
+        <div className="name__task">
+          <h4>Task</h4>
+        </div>
+
+
           <div className="project__task_portfolio">
             <p>Lorem ipsum dolor sit amet,
               consectetur adipisicing elit,
@@ -96,9 +104,12 @@ export default class PortfolioItem extends Component {
           </div>
 
 
+
+        </div>
+
       </div>
 
-      </div >
+      </div>
 
     )
   }
