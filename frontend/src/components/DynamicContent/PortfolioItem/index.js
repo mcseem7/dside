@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
 import './index.css'
+import Slider from "react-slick";
 import logoProject from './rounded-rectangle-10.png'
+import screenPortfolio from './layer-104.png'
+import screenCitron from './layer-105.png'
+import imgsl from './layer-106-copy.png'
+
+
+
 
 export default class PortfolioItem extends Component {
   constructor () {
@@ -9,6 +16,8 @@ export default class PortfolioItem extends Component {
     this.state = {
       items: []
     }
+    this.next = this.next.bind(this);
+    this.previous = this.previous.bind(this);
   }
 
   async componentDidMount () {
@@ -21,8 +30,27 @@ export default class PortfolioItem extends Component {
     }
   }
 
+  next = () => {
+    this.slider.slickNext();
+  }
+  previous = () => {
+    this.slider.slickPrev();
+  }
+
+
+
   render () {
-    console.log(this.state)
+    var settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      arrows:true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+
+    };
+
+
     return (
       <div className="container__portfolio-item">
 
@@ -106,6 +134,92 @@ export default class PortfolioItem extends Component {
 
 
         </div>
+
+        <div className="portfolio__screen">
+
+          <div className="portfolio__screen-wrapper">
+
+            <div className="portfolio__screen-item">
+              <img src={screenPortfolio} alt=""/>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div className="container__project-task">
+
+          <div className="name__task">
+            <h4>OUR Decision</h4>
+          </div>
+
+
+          <div className="project__task_portfolio">
+            <p>Lorem ipsum dolor sit amet,
+              consectetur adipisicing elit,
+              sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+
+
+
+        </div>
+
+        <div className="portfolio__screen">
+
+          <div className="portfolio__screen-wrapper">
+
+            <div className="portfolio__screen-item">
+              <img src={screenCitron} alt=""/>
+            </div>
+          </div>
+        </div>
+
+
+        <div className="portfolio__carousel">
+
+  <div className="portfolio__carousel-wrapper">
+          <div className="portfolio__carousel-title">
+            <h2>Other cases</h2>
+          </div>
+
+
+          <div className="container__slider-portfolio">
+
+            <div className="item-slide" onClick={this.previous}>>
+
+            </div>
+
+            <Slider  ref={c => (this.slider = c)}  {...settings}>
+
+                <div className="slider-item__portfolio">
+                  <div className="item_slider">
+                    <img src={imgsl} alt=""/>
+                  </div>
+                </div>
+
+              <div className="slider-item__portfolio">
+                <div className="item_slider">
+                  <img src={imgsl} alt=""/>
+                </div>
+              </div>
+
+              <div className="slider-item__portfolio">
+                <div className="item_slider">
+                  <img src={imgsl} alt=""/>
+                </div>
+              </div>
+
+            </Slider>
+
+          </div>
+
+
+        </div>
+        </div>
+
 
       </div>
 

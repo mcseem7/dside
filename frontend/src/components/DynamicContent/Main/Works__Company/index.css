@@ -62,5 +62,7 @@
 .brand {
     width: 70px;
     flex-basis: 25%;
+    margin-top: 27px;
+    margin-bottom: 10px;
 }
 
