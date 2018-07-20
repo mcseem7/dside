@@ -1,18 +1,20 @@
 import React, { Component } from 'react'
-import RootContent from './RootContent'
-import Header from './Basic/Header'
+import './App.css'
+import { Switch, Route } from 'react-router-dom'
+import MainContent from './Index/'
+import Footer from './Basic/Footer'
 
-export default class Layout extends Component {
-  constructor () {
-    super()
-  }
-
+class MainPages extends Component {
   render () {
     return (
-      <div className="wrapper___layout">
-        <Header />
-        <RootContent />
-      </div>
+        <div className="main__pages">
+          <div className="container">
+            <MainContent />
+          </div>
+          <Footer />
+        </div>
     )
   }
 }
+
+export default MainPages

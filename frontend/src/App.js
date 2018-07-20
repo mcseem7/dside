@@ -1,17 +1,20 @@
 import React, { Component } from 'react'
 import Layout from './components'
-import './App.css'
+import './components/App.css'
 import Footer from './components/Basic/Footer'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
+import ContactUs from './components/CompanyPages/ContactUs'
+import MainPages from './components/index'
 
 class App extends Component {
   render () {
     return (
       <div className="App">
-        <div className="container">
-          <Layout />
-        </div>
-        <Footer />
+        <Redirect from="/" to="/dside"/>
+        <Switch>
+          <Route  path="/dside" component={MainPages} />
+          <Route  path="/contactus" component={ContactUs} />
+        </Switch>
       </div>
     )
   }

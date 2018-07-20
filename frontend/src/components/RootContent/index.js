@@ -4,8 +4,10 @@ import { Switch, Route } from 'react-router-dom'
 import Blog from '../DynamicContent/Blog'
 import BlogItem from '../DynamicContent/BlogItem'
 import PortfolioItem from '../DynamicContent/PortfolioItem'
+import Portfolio from '../DynamicContent/Portfolio'
 import NotFound from '../Basic/NotFound'
 import ContactUs from '../CompanyPages/ContactUs'
+
 
 export default class RootContent extends Component {
   constructor () {
@@ -16,13 +18,12 @@ export default class RootContent extends Component {
   render () {
     return (
       <div className="main__content">
-
         <Switch>
-          <Route path="/contactus" component={ContactUs} />
-          <Route exact path="/" component={Main} />
-          <Route path="/blog" component={Blog} />
-          <Route path="/blog_item" component={BlogItem} />
-          <Route path="/portfolio_item" component={PortfolioItem} />
+          <Route exact path="/dside" component={Main} />
+          <Route path="/dside/blog" component={Blog} />
+          <Route path="/dside/blog/:blogitem" component={BlogItem} />
+          <Route path="/dside/portfolio" component={Portfolio} />
+          <Route path="/dside/portfolio/:item" component={PortfolioItem} />
           <Route component={NotFound} />
         </Switch>
       </div>

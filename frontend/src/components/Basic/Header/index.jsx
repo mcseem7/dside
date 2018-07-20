@@ -10,16 +10,17 @@ export default class Header extends Component {
     super()
 
     this.state = {
-      opacity: 0
+      opacity: 0,
+      display: 'none'
     }
   }
 
 
   showMenu = () => {
     if(this.state.opacity ==  1) {
-      this.setState({opacity: 0})
+      this.setState({opacity: 0, display: 'none'})
     } else {
-      this.setState({opacity: 1})
+      this.setState({opacity: 1, display: 'block'})
     }
   }
 
@@ -67,14 +68,14 @@ export default class Header extends Component {
         </div>
       </header>
 
-          <div className="main__header" style={{opacity: this.state.opacity, transition: '0.3s'}}>
+          <div className="main__header" style={{display: this.state.display, opacity: this.state.opacity, transition: '0.3s'}}>
             <div className="main__header-content">
             <div className="main__header-left">
 
               <div className="menu__header-column">
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to="/about-us"   className="link__menu">About Us</Link>
+                    <Link to="/dside/aboutus"   className="link__menu">About Us</Link>
                   </div>
                   <div className="description__menu-title">
                     <p>Caption text under about us</p>
@@ -83,7 +84,7 @@ export default class Header extends Component {
 
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to="/contact-us"  className="link__menu">Contact Us</Link>
+                    <Link to="/contactus"  className="link__menu">Contact Us</Link>
                   </div>
                   <div className="description__menu-title">
                     <p>Caption text under about us</p>
@@ -95,7 +96,7 @@ export default class Header extends Component {
               <div className="menu__header-column">
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to="/blog"  className="link__menu">Blog</Link>
+                    <Link to="/dside/blog"  className="link__menu">Blog</Link>
                   </div>
                   <div className="description__menu-title">
                     <p>Caption text under about us</p>
@@ -104,7 +105,7 @@ export default class Header extends Component {
 
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to="/"  className="link__menu">Home</Link>
+                    <Link to="/dside"  className="link__menu">Home</Link>
                   </div>
                   <div className="description__menu-title">
                     <p>Caption text under about us</p>

@@ -138,6 +138,7 @@
     width: 100%;
     position: absolute;
     top: 70px;
+    animation: showNav 250ms ease-in-out 0s 1 normal both running;
     z-index: 1;
 }
 
@@ -176,4 +177,9 @@
 
 .menu__header-column div {
     margin-right: 100px;
+}
+
+@keyframes showNav {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
