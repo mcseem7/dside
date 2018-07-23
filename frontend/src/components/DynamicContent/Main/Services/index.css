@@ -93,3 +93,11 @@ ul li {
     position: absolute;
     margin-top: 10px;
 }
+
+
+
+.services .list li a{
+    text-decoration: none;
+    color: black;
+    list-style-type: none;
+}

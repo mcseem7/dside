@@ -1,0 +1,63 @@
+.case-title h3 {
+    color: #060004;
+    font-family: MontBold;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.case-description p {
+    color: #060004;
+    font-family: MontLight;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.container__case-studies {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bad__logo-list  {
+    list-style-image: url('list-style.svg');
+}
+
+.bad__title-apple {
+    display: flex;
+}
+
+.bad__title-apple h3:nth-child(2) {
+    color: #141414;
+    font-family: MontBold;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 31.87px;
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+
+.bad__title-apple h3:nth-child(1) {
+    color: #4e4e4e;
+    text-decoration: line-through;
+    font-family: MontBold;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 31.87px;
+    text-transform: uppercase;
+}
+
+.bad__logo-list {
+    width: 250px;
+    color: #282828;
+    font-family: MontLight;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27.87px;
+    margin-left: 40px;
+}
+
+.features__cases {
+    display: flex;
+    margin-top: 70px;
+    justify-content: space-around;
+}
