@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 import './index.css'
 
 export default function Services () {
@@ -16,7 +17,7 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li>Branding</li>
+              <li><Link to="/branding">Branding</Link></li>
               <li>Logo creation</li>
               <li>Naming</li>
               <li>Identity</li>
@@ -28,7 +29,7 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li>Strategy</li>
+              <li><Link to="/logo">Logo</Link></li>
               <li>Logo creation</li>
               <li>Naming</li>
               <li>Identity</li>
@@ -40,7 +41,7 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li>Advertise</li>
+              <li><Link to="/videos">Videos</Link></li>
               <li>Logo creation</li>
               <li>Naming</li>
               <li>Identity</li>
@@ -52,7 +53,7 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li>Websites</li>
+              <li><Link to="/websites">Websites</Link></li>
               <li>Logo creation</li>
               <li>Naming</li>
               <li>Identity</li>

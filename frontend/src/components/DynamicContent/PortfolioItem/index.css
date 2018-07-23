@@ -1,0 +1,154 @@
+
+
+.portfolio__header_item-wrapper {
+    background: url('main__header.png') ;
+    background-size: cover;
+    height: 503px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.header__portfolio-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: url('layer-90.png');
+    min-width: 1200px;
+}
+
+.name__project h4 {
+    color: #ffffff;
+    font-family: Mont;
+    font-size: 30px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.category__project p,
+.name__customer p {
+    color: #ffffff;
+    font-family: Mont;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.project_description__content {
+    display: flex;
+}
+
+
+.name__description  {
+    color: #ffffff;
+    font-family: MontBold;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.description__project {
+    font-family: MontLight;
+    font-size: 18px;
+    font-weight: 300;
+    color:#ffffff;
+    margin: 0;
+}
+
+.project__titles {
+    padding-left: 55px;
+}
+
+.portfolio__datatime__content {
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+
+.portfolio__post-data {
+    display: flex;
+}
+
+
+.portfolio__post-data .watching__post {
+    margin-right: 71px;
+}
+
+
+.portfolio__name__content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 21px;
+}
+
+.project__names {
+    margin-left: 20px;
+}
+
+.project__task_portfolio p {
+    color: #000000;
+    font-family: MontLight;
+    font-size: 18px;
+    font-weight: 300;
+    max-width: 797px;
+    line-height: 29.87px;
+    min-width: 200px;
+}
+
+.name__task h4 {
+    color: #000000;
+    font-family: MontBold;
+    font-size: 18px;
+    margin: 22px 45px 0px 0px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.container__project-task {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #ffffff;
+    padding-top: 65px;
+    padding-bottom: 55px;
+}
+
+.content__project-portfolio {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.portfolio__screen-item img {
+    max-width: 100%;
+}
+
+
+.portfolio__carousel-title {
+    padding-top: 41px;
+    margin-top: -3px;
+    padding-bottom: 23px;
+}
+
+.portfolio__carousel-title h2 {
+    color: #000000;
+    font-family: MontBold;
+    font-size: 18px;
+    margin-left: 50px;
+    font-weight: 700;
+    line-height: 29.87px;
+    text-transform: uppercase;
+}
+
+
+
+.portfolio__carousel-wrapper {
+        background: #ffffff;
+}
+
+.item_slider {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.container__slider-portfolio {
+    padding-bottom: 60px;
+}

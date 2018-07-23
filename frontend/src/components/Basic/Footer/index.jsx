@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import Behance from '../Header/behance.png'
-import Instagram from '../Header/instagram.png'
 import './index.css'
 import arrow from '../../sources/images/works__logo/arrow.svg'
 
@@ -57,11 +55,11 @@ export default class Footer extends Component {
 
             <div className="social__icons">
               <div className="social__icon-behance">
-                <a href="">        <img src={Behance} alt="" /></a>
+                <a href="">        </a>
               </div>
 
               <div className="social__icon-instagram">
-                <a href="">       <img src={Instagram} alt="" /></a>
+                <a href="">       </a>
               </div>
             </div>
           </div>

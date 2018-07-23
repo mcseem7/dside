@@ -1,21 +1,33 @@
 import React, { Component } from 'react'
 import Main from '../DynamicContent/Main/index'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import Blog from '../DynamicContent/Blog'
+import BlogItem from '../DynamicContent/BlogItem'
+import PortfolioItem from '../DynamicContent/PortfolioItem'
+import Portfolio from '../DynamicContent/Portfolio'
 import NotFound from '../Basic/NotFound'
+import ContactUs from '../CompanyPages/ContactUs'
+
 
 export default class RootContent extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
+  }
+
+  componentDidMount() {
+    console.log(this.props)
   }
 
   render () {
+
     return (
       <div className="main__content">
         <Switch>
-          <Route exact path="/" component={Main} />
+          <Route path="/" component={Main} />
           <Route path="/blog" component={Blog} />
-          <Route component={NotFound} />
+          <Route path="/dside/blog/:blogitem" component={BlogItem} />
+          <Route path="/dside/portfolio" component={Portfolio} />
+          <Route path="/dside/portfolio/:item" component={PortfolioItem} />
         </Switch>
       </div>
     )

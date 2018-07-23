@@ -1,0 +1,29 @@
+.blog__post-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.left__img {
+    background-size: cover;
+    width: 445px;
+    height: 702px;
+}
+
+.content__body-post p {
+    color: #000000;
+    font-family: MontLight;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 29.87px;
+    margin-top: 0;
+}
+
+.portfolio_content__posts {
+    display: flex;
+    padding-top: 25px;
+}
+
+.right__content-post {
+    padding-right: 54px;
+}

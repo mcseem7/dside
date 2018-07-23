@@ -8,7 +8,8 @@ import FiveImage from './images/thumbs-05.jpg'
 import SixImage from './images/thumbs-06.jpg'
 import './index.css'
 import iconGrid from './images/icon__grid.png'
-import zindex from './images/Header_zIndex.png'
+// import zindex from './images/Header_zIndex.png'
+import About from './../Main/About__block/index'
 
 export default class HeaderPost extends Component {
   constructor () {
@@ -17,6 +18,7 @@ export default class HeaderPost extends Component {
 
   render () {
     return (
+        <div>
       <section className="portfolio__posts">
         <div className="relative__content">
 
@@ -27,27 +29,39 @@ export default class HeaderPost extends Component {
             <PortfolioPost imgPost={FirstImage} altImg="1post" />
             <PortfolioPost imgPost={SixImage} altImg="6post" />
             <PortfolioPost imgPost={SecondImage} altImg="2post" />
-            {/* <div className="background__absolute"> */}
-            {/* <img src={zindex} alt=""/> */}
-            {/* </div> */}
-
-            {/* <div>dsfsdfsdf</div> */}
           </div>
 
-          <div className="block__load__more">
-            <div className="load__more">
-              <div className="more__icon">
-                <img src={iconGrid} alt="" />
-              </div>
 
-              <button className="load">
-                    Load More
-              </button>
-            </div>
-          </div>
+          <div className="container__what" >
+        </div>
 
         </div>
       </section>
+
+          <div className="what__about-content">
+            <div className="block__load__more" >
+
+
+
+              <div className="load__more">
+                <div className="more__icon">
+                  <img src={iconGrid} alt="" />
+                </div>
+
+                <button className="load">
+                  Load More
+                </button>
+              </div>
+            </div>
+
+          <About/>
+
+
+
+          </div>
+
+
+        </div>
     )
   }
 }

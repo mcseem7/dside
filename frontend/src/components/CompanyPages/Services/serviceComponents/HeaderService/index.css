@@ -1,0 +1,118 @@
+.service__icon-behance {
+    background: url("behance-icon-hover.svg");
+    display: block;
+    width: 28px;
+    height: 18px;
+    background-repeat: no-repeat;
+}
+
+.service__icon-instagram {
+    background: url('inst-icon-hover.svg');
+    display: block;
+    width: 28px;
+    height: 25px;
+    background-repeat: no-repeat;
+}
+
+.heading__service {
+    background: url("background-service.png");
+    height: 850px;
+    background-size: cover;
+    margin-bottom: 100px;
+    padding-top: 30px;
+    position: relative;
+}
+
+.header__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.left__heading {
+    display: flex;
+    align-items: center;
+}
+
+.right__heading nav {
+    display: flex;
+    align-items: center;
+}
+
+.dside-company__links li {
+    margin-left: 35px;
+    list-style-type: none;
+}
+
+
+.header__service {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logotype__company {
+    margin-left: 40px;
+}
+
+
+.dside__header-text_container {
+    background-image: linear-gradient(to right, #743c18 60%, #1E1007 100%);
+    opacity: 1;
+    font-family: Mont;
+    font-size: 161px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    line-height: 31.87px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.logo__service-img {
+    position: absolute;
+    top: 281px;
+    left: -95px;
+    width: 950px;
+}
+
+.logo__service-img img{
+ max-width: 100%;
+    height: auto;
+}
+
+.header-button__order {
+    width: 217px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 21px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: MontBold;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30.48px;
+    border: 2px solid #422915;
+}
+
+.header-button__order img {
+    margin-right: 30px;
+    margin-left: -40px;
+}
+
+.radius__wrapper {
+    background: url('../../layer-radius.png');
+    position: absolute;
+    width: 100%;
+    background-size: cover;
+    z-index: 5;
+    bottom: -5px;
+    height: 85px;
+}

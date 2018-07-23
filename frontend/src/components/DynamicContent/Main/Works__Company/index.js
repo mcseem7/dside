@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import './index.css'
-import Adshara from '../../../sources/images/works__logo/adshara.svg'
-import Citron from '../../../sources/images/works__logo/citron.svg'
+import Solidar from '../../../sources/images/works__logo/solidarnosc.svg'
+import Grad from '../../../sources/images/works__logo/stolniy.svg'
 import ColorFest from '../../../sources/images/works__logo/colorfest.svg'
-import nau from '../../../sources/images/works__logo/nau.svg'
-import NewChannel from '../../../sources/images/works__logo/newchannel.svg'
-import NewDoc from '../../../sources/images/works__logo/newdoc.svg'
+import Bochka from '../../../sources/images/works__logo/bochka.svg'
+import adshara from '../../../sources/images/works__logo/adshara.svg'
+import yarmak from '../../../sources/images/works__logo/yarmak.svg'
 import Polismart from '../../../sources/images/works__logo/polismart.svg'
-
+import Motorlab from '../../../sources/images/works__logo/motorlab.svg'
+import Smotra from '../../../sources/images/works__logo/smotra.svg'
+import nau from '../../../sources/images/works__logo/nau.svg'
+import diet from '../../../sources/images/works__logo/uda.svg'
 class Brand extends Component {
   constructor (props) {
     super(props)
@@ -35,20 +38,20 @@ export default class Works extends Component {
             <div className="content__brands">
               <div className="brands">
 
-                <Brand brandImg={Adshara} />
-                <Brand brandImg={Citron} />
-                <Brand brandImg={Polismart} />
-                <Brand brandImg={NewDoc} />
-
+                <Brand brandImg={Solidar} />
+                <Brand brandImg={Grad} />
                 <Brand brandImg={ColorFest} />
-                <Brand brandImg={nau} />
-                <Brand brandImg={NewChannel} />
-                <Brand brandImg={Polismart} />
+                <Brand brandImg={Bochka} />
 
-                <Brand brandImg={Adshara} />
-                <Brand brandImg={Citron} />
+                <Brand brandImg={diet} />
+                <Brand brandImg={yarmak} />
+                <Brand brandImg={adshara} />
+                <Brand brandImg={Motorlab} />
+
+                <Brand brandImg={Smotra} />
                 <Brand brandImg={Polismart} />
-                <Brand brandImg={NewDoc} />
+                <Brand brandImg={nau} />
+                <Brand brandImg={nau} />
               </div>
 
             </div>
