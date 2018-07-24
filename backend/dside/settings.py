@@ -140,3 +140,17 @@ STATIC_URL = '/statico/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 MEDIA_URL = '/uploads/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
+
+
+"""
+CREATE DATABASE dside;
+CREATE USER dsider WITH PASSWORD 'R2SMS234t1ME';
+
+ALTER ROLE dsider SET client_encoding TO 'utf8';
+ALTER ROLE dsider SET default_transaction_isolation TO 'read committed';
+ALTER ROLE dsider SET timezone TO 'UTC';
+
+
+GRANT ALL PRIVILEGES ON DATABASE dside TO dsider;
+
+"""
