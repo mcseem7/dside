@@ -61,3 +61,29 @@
     margin-top: 70px;
     justify-content: space-around;
 }
+
+
+.bad__logo-description_container {
+    margin-left: 75px;
+}
+
+.dside_textContainer-logo {
+    background-image: linear-gradient(to right, #743c18 60%, #1E1007 100%);
+    opacity: 1;
+    font-family: MontBold;
+    font-size: 161px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    line-height: 31.87px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.logo__service_slogan {
+    position: absolute;
+    top: 281px;
+    width: 950px;
+    text-align: center;
+}

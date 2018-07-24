@@ -1,0 +1,58 @@
+.limited__service-container {
+    background: url('background__limited.png');
+    width: 100%;
+    height: 750px;
+    margin-top: 55px;
+    background-repeat: no-repeat;
+    background-position: 45% 10%;
+}
+
+
+.limited__service_form-data {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px;
+}
+
+.limit__offer-title {
+    color: #dc6c1c;
+    font-family: MontBold;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.87px;
+}
+
+.discount__offer-title h2 {
+    color: #ffffff;
+    font-family: MontBold;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 31.87px;
+}
+
+
+.title__timer {
+    font-family: MontBold;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.87px;
+    color: #dc6c1c;
+}
+
+
+#time {
+    color: #ffffff;
+    font-family: MontBold;
+    font-size: 72px;
+    margin-bottom: 0;
+    font-weight: 700;
+    line-height: 31.87px;
+}
+
+.timer__back-order {
+    display: flex;
+}
+
+.timer__back-order div {
+    margin-right: 50px;
+}

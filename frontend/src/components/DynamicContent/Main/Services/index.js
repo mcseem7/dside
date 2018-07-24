@@ -17,7 +17,7 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li><Link to="/branding">Branding</Link></li>
+              <li><Link to="/brand">Branding</Link></li>
               <li>Logo creation</li>
               <li>Naming</li>
               <li>Identity</li>

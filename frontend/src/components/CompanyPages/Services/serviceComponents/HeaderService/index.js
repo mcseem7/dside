@@ -2,7 +2,6 @@ import React, {Fragment, Component} from 'react'
 import './index.css'
 import GridImg from './grid__img.svg'
 import LogoWhite from './LogoWhite.svg'
-import logoHeader from './logo__header-service.png'
 import PlusHover from './plus-hover.svg'
 
 export default class HeaderService extends Component {
@@ -58,13 +57,18 @@ export default class HeaderService extends Component {
             </div>
 
             </div>
-              <div className="dside__header-text_container" >
-                <div className="logo__service-text">
+              <div className={`dside__header-text_container ${this.props.textContainer}`} >
+                <div className={`logo__service-text ${this.props.stylelogotext}`}>
                   {this.props.textHeader}
                 </div>
-                <div className="logo__service-img">
-                  <img src={logoHeader} alt=""/>
+                <div className={`logo__service-img ${this.props.imgLogoPosition}`}>
+                  <img src={this.props.logoHeader} alt=""/>
                 </div>
+
+                <div className="logo__service_slogan">
+                  {this.props.serviceSlogan}
+                </div>
+
               </div>
           </header>
             <div className="radius__wrapper"></div>

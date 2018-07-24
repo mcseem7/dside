@@ -1,9 +1,11 @@
 import React, {Component} from 'react'
 import HeaderService from '../serviceComponents/HeaderService/index'
 import CaseService from '../serviceComponents/CaseService/index'
+import LimitedService from '../serviceComponents/LimitedService'
 import './index.css'
 import BadLogo from './bad__logo.png'
 import GoodLogo from './goodlogo.png'
+import logoHeader from './logo__header-service.png'
 
 export default class LogoPage extends Component {
   constructor() {
@@ -17,7 +19,9 @@ export default class LogoPage extends Component {
 
     return(
         <div>
-           <HeaderService  textHeader={[<p>LOGO DES</p>, <p>IGN NOW</p>, <p> SUBWAYS</p>]} />
+           <HeaderService
+               textContainer={'dside_textContainer-logo'}
+               logoHeader={logoHeader} textHeader={[<p>LOGO DES</p>, <p>IGN NOW</p>, <p> SUBWAYS</p>]} />
             <section className="logo__service-case_studies">
 
               <div className="container__case-studies">
@@ -94,6 +98,7 @@ export default class LogoPage extends Component {
 
             </section>
             <CaseService/>
+            <LimitedService/>
         </div>
     )
   }

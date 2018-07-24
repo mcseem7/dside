@@ -70,11 +70,11 @@ export default class PortfolioItem extends Component {
                       <p>design</p>
                     </div>
                     <div className="name__project">
-                      <h4>Work name</h4>
+                      <h4>Create brand</h4>
                     </div>
 
                     <div className="name__customer">
-                      <p>customer name</p>
+                      <p>CiTRON European USB Warehouse</p>
                     </div>
                   </div>
                 </div>
@@ -84,9 +84,7 @@ export default class PortfolioItem extends Component {
                     <p className="name__description">Short project
                         description: <br />
                     </p>
-                    <p className="description__project"> Lorem ipsum dolor sit
-                        amet, consectetur adipisicing elit,
-                        sed do eiusmod tempor incididunt ut
+                    <p className="description__project"> Cоздать веб-сайт с минималистичным, качественным дизайном, с каталогом продуктов.  Сделать удобный конфигуратор для USB-накопителей
                     </p>
                   </div>
                 </div>
@@ -123,11 +121,7 @@ export default class PortfolioItem extends Component {
 
 
           <div className="project__task_portfolio">
-            <p>Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <p>Cоздать веб-сайт с минималистичным, качественным дизайном, с каталогом продуктов.  Сделать удобный конфигуратор для USB-накопителей
             </p>
           </div>
 
@@ -155,11 +149,7 @@ export default class PortfolioItem extends Component {
 
 
           <div className="project__task_portfolio">
-            <p>Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <p>В качестве основы используется сильный черно-белый стиль. За счет цветов, дизайн не только отлично смотрится, но и вполне достойно считывается конечным потребителем, который теперь испытывает ощущение того, что продукция CiTRON высококачественна и технологична.
             </p>
           </div>
 

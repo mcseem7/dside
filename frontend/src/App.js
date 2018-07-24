@@ -12,6 +12,7 @@ import PortfolioItem from './components/DynamicContent/PortfolioItem'
 import Portfolio from './components/DynamicContent/Portfolio'
 import Main from './components/DynamicContent/Main/index'
 import Header from './components/Basic/Header'
+import BrandPage from './components/CompanyPages/Services/branding'
 
 class App extends Component {
   render () {
@@ -28,7 +29,8 @@ class App extends Component {
           <Route path="/blogitem" component={BlogItem} />
           <Route path="/portfolio" component={Portfolio} />
           <Route path="/portfolioitem" component={PortfolioItem} />
-          <Route path="/logo" component={LogoPage} />
+          <Route  path="/logo" component={LogoPage} />
+          <Route path="/brand" component={BrandPage} />
         </Switch>
         <Footer/>
       </div>

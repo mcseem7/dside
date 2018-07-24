@@ -57,12 +57,12 @@ export default class Blog extends Component {
     return (
 
       <section className="blog__container">
-          <Route  exact path="/blog/:blog_item" component={BlogItem} />
+          <Route  exact path="/blog/blogitem" component={BlogItem} />
         <div className="blog__content">
           <div className="blog__post-items">
             {this.state.blogItem.map((item, key) => (<div className="blog__item">
               <div onClick={() => {
-                this.props.history.push(`./blogitem`)
+                this.props.history.push(`/blogitem`)
               }} className="blog__item-content">
                 <div className="tag-item">
                   <p>{item.tag}</p>
