@@ -97,7 +97,7 @@ class PortfolioDetails(APIView):
                 "id": x.id,
                 "name": x.portfoliotranslation_set.get(lang_code=lang_code),
                 "thumbnail": x.thumbnail.url
-            } for x in pi.similar_items.all()],
+            } for x in pi.similar_items.all() if x.portfoliotranslation_set.filter(lang_code=lang_code)],
 
         }
 
