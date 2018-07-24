@@ -41,3 +41,18 @@
     max-width: 100%;
     min-width: 100%;
 }
+
+
+.container__what {
+    background-image: url('images/layer-10.png');
+    position: absolute;
+    width: 100%;
+    background-size: cover;
+    z-index: 5;
+    bottom: -5px;
+    height: 85px;
+}
+
+.what__about-content {
+    background: #ffffff;
+}

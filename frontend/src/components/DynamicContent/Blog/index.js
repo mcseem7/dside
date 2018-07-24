@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './index.css'
 import gridIcon from './grid-icon.svg'
+import { Switch, Route } from 'react-router-dom'
+import BlogItem from '../BlogItem'
 
 export default class Blog extends Component {
   constructor () {
@@ -19,29 +21,22 @@ export default class Blog extends Component {
             name: 'Техника исполнения леттерингов и ее будущее',
             tag: 'Design',
             watching: '241',
-            watchingTime: '5',
+            watchingTime: '2',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, hic modi officiis pariatur quod reiciendis repellendus sit. Accusamus aspernatur assumenda corporis culpa cumque pariatur qui quod recusandae rerum similique, sunt?'
           },
           {
             name: 'Внедрение дизайна',
             tag: 'Design',
             watching: '241',
-            watchingTime: '5',
+            watchingTime: '3',
             description: 'lorem safsdfsdfsdf'
           },
           {
             name: 'Технология привличения клиентов',
             tag: 'Technologies',
             watching: '241',
-            watchingTime: '5',
+            watchingTime: '4',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis itaque quae quibusdam, recusandae sint tenetur vero voluptates. Animi at ex fugiat illo magnam quas saepe. Et expedita molestias rerum.'
-          },
-          {
-            name: 'Создание бренда на етапе формирования перспектив',
-            tag: 'Branding',
-            watching: '241',
-            watchingTime: '5',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cum deleniti dolore magnam quibusdam ut. Consectetur doloremque ducimus ipsa quod sint? Aperiam architecto deserunt laborum laudantium nulla quia sit totam.'
           },
           {
             name: 'Разработка логотипа для формирования перспективы компании',
@@ -62,10 +57,13 @@ export default class Blog extends Component {
     return (
 
       <section className="blog__container">
+          <Route  exact path="/blog/:blog_item" component={BlogItem} />
         <div className="blog__content">
           <div className="blog__post-items">
             {this.state.blogItem.map((item, key) => (<div className="blog__item">
-              <div className="blog__item-content">
+              <div onClick={() => {
+                this.props.history.push(`./blogitem`)
+              }} className="blog__item-content">
                 <div className="tag-item">
                   <p>{item.tag}</p>
                 </div>
@@ -79,22 +77,15 @@ export default class Blog extends Component {
                 <div className="blog__post-data">
                   <div className="watching__post">
                     <div className="icon-watching">
-                      <div className="icon__blog"><img
-                        src=""
-                        alt=""
-                      />
+                      <div className="icon__blog">
                       </div>
-                      <p>{item.watching}</p>
+                      <p>{item.watching} </p>
                     </div>
                   </div>
                   <div className="time__post">
                     <div className="icon-timer">
-                      <div className="icon__blog"><img
-                        src=""
-                        alt=""
-                      />
-                      </div>
-                      <p>{item.watchingTime}</p>
+                      <div className="icon__blog"></div>
+                      <p>{item.watchingTime} <span>minutes</span></p>
 
                     </div>
                   </div>
@@ -123,7 +114,7 @@ export default class Blog extends Component {
                 <div className="latest-post__tag">
                   <p>{item.tag}</p>
                 </div>
-
+                      <div>
                 <div className="latest-post__description">
                   <p>{item.name}</p>
                 </div>
@@ -151,6 +142,7 @@ export default class Blog extends Component {
                     </div>
                   </div>
                 </div>
+                      </div>
 
               </div>))
               }
