@@ -81,11 +81,14 @@ WSGI_APPLICATION = 'dside.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dside',
+        'USER': 'dsider',
+        'PASSWORD': 'R2SMS234t1ME',
+        'HOST': '185.69.152.24',
+        'PORT': '5433',
     }
 }
 
@@ -133,7 +136,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/statico/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 MEDIA_URL = '/uploads/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
+
+
+"""
+CREATE DATABASE dside;
+CREATE USER dsider WITH PASSWORD 'R2SMS234t1ME';
+
+ALTER ROLE dsider SET client_encoding TO 'utf8';
+ALTER ROLE dsider SET default_transaction_isolation TO 'read committed';
+ALTER ROLE dsider SET timezone TO 'UTC';
+
+
+GRANT ALL PRIVILEGES ON DATABASE dside TO dsider;
+
+"""
