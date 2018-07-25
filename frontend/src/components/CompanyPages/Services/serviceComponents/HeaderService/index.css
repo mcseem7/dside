@@ -60,19 +60,6 @@
 }
 
 
-.dside__header-text_container {
-    background-image: linear-gradient(to right, #743c18 60%, #1E1007 100%);
-    opacity: 1;
-    font-family: Mont;
-    font-size: 161px;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 700;
-    line-height: 31.87px;
-    margin: 0 auto;
-    text-transform: uppercase;
-    position: relative;
-}
 
 .logo__service-img {
     position: absolute;
@@ -115,4 +102,8 @@
     z-index: 5;
     bottom: -5px;
     height: 85px;
+}
+
+.dside__header-text_container {
+    position: relative;
 }

@@ -12,8 +12,15 @@ import PortfolioItem from './components/DynamicContent/PortfolioItem'
 import Portfolio from './components/DynamicContent/Portfolio'
 import Main from './components/DynamicContent/Main/index'
 import Header from './components/Basic/Header'
+import BrandPage from './components/CompanyPages/Services/branding'
+import VideoPage from './components/CompanyPages/Services/videos'
 
 class App extends Component {
+
+  componentDidMount() {
+    window.scrollTo(0,0)
+  }
+
   render () {
     return (
       <div className="App">
@@ -28,7 +35,9 @@ class App extends Component {
           <Route path="/blogitem" component={BlogItem} />
           <Route path="/portfolio" component={Portfolio} />
           <Route path="/portfolioitem" component={PortfolioItem} />
-          <Route path="/logo" component={LogoPage} />
+          <Route  path="/logo" component={LogoPage} />
+          <Route path="/brand" component={BrandPage} />
+          <Route path="/videos" component={VideoPage} />
         </Switch>
         <Footer/>
       </div>
