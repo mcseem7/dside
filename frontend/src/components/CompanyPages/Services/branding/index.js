@@ -34,9 +34,11 @@ export default class BrandPage extends Component {
 
                 <div className="louis__img-container">
 
-                  <img src={louis} alt=""/>
+                  <img src={louis} className="louis__bag-img" alt=""/>
 
-
+                  <div className="arrow__louis-container">
+                  <img src={arrow} className="louis__arrow-img" alt=""/>
+                  </div>
                 </div>
 
               </div>
@@ -44,7 +46,7 @@ export default class BrandPage extends Component {
             <div className="branding__service-right">
 
               <div className="price__louis_wrapper">
-                <img src={arrow} alt=""/>
+
               <h1 className="price__louis">$ 2000</h1>
               </div>
 
@@ -62,13 +64,34 @@ export default class BrandPage extends Component {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                 sed do eiusmod tempor incididunt ut labaccusantium doloremque laudantium,
                 sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-
               </p>
+            </div>
+
+          </div>
 
 
+          <div className="find__out-branding">
+
+            <div className="find__out-wrapper">
+              <div className="find__container">
+              <div className="diff__title">
+                <p>Statistics of successful business</p>
+              </div>
+
+              <div className="find__out-title">
+                <h2>What’s the difference?</h2>
+              </div>
+
+            </div>
+
+              <div className="find__button">
+                <a href="#">find out</a>
+              </div>
 
 
             </div>
+
+
 
           </div>
 

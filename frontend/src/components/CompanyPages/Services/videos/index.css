@@ -1,0 +1,15 @@
+.view__videos-title {
+    color: #000000;
+    font-family: MontBold;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 31.87px;
+}
+
+.view__videos-description {
+    color: #000000;
+    font-family: MontLight;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 31.87px;
+}
