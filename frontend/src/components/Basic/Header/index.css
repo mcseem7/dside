@@ -5,10 +5,17 @@
 }
 
 .basic__header-content {
-    height: 70px;
+    height: 50px;
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 35px;
+    margin-top: 25px;
+}
+
+.add__work_plus{
+    width: 15px;
+    height: 15px;
+    margin-top: 3px;
+    position: relative;
 }
 
 .header__content {
@@ -27,7 +34,7 @@
 }
 
 .add__work_wrapper {
-    padding-left: 50px;
+    padding-left: 20px;
 }
 
 
@@ -36,6 +43,8 @@
         align-items: center;
 }
 
+.add__work_plus::before,
+.add__work_plus::after,
 .social__icon-instagram::before,
 .social__icon-instagram::after,
 .social__icon-behance::before,
@@ -61,10 +70,14 @@
     cursor: pointer;
 }
 
-.social__icon-instagram,
+.social__icon-instagram {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
 .social__icon-behance {
-    width: 30px;
-    height: 30px;
+    width: 14px;
+    height: 14px;
     position: relative;
 }
 
@@ -137,7 +150,7 @@
     background-color: #f3f3f5;
     width: 100%;
     position: absolute;
-    top: 70px;
+    top: 50px;
     animation: showNav 250ms ease-in-out 0s 1 normal both running;
     z-index: 1;
 }

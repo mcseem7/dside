@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './index.css'
-import GridIcon from './grid_img.png'
-import PlusIcon from './plus.png'
+import GridIcon from './grid_img.svg'
+import PlusIcon from './plus.svg'
 import Logo from './Logo.svg'
 import {Link} from 'react-router-dom'
 
@@ -34,14 +34,14 @@ export default class Header extends Component {
             <div className="left__content-icons">
               <div className="check__work-sockets">
                 <div className="check__work" onClick={this.showMenu}>
-                  <img src={GridIcon} alt="" />
+                  <img src={GridIcon} alt="" width="15"/>
                 </div>
               </div>
 
               <div className="add__work_wrapper">
 
                 <div className="add__work">
-                  <img src={PlusIcon} alt="" />
+                  <img src={PlusIcon} className="add__work_plus" alt="" width="14"/>
                 </div>
               </div>
             </div>
@@ -49,7 +49,7 @@ export default class Header extends Component {
             <div className="mid__content-logo">
               <div className="logo__container">
                 <div className="logo">
-                  <img src={Logo} alt="" />
+                  <img src={Logo} alt="" width="90" />
                 </div>
               </div>
             </div>
