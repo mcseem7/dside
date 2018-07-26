@@ -11,7 +11,7 @@ export default class PortolioPost extends Component {
     return (
       <div className="portolio__post">
         <div className="portfolio__post-wrapper">
-          <img className="post__img" src={imgPost} alt={altImg} />
+          <img className="post__img" src={imgPost} alt={altImg}/>
         </div>
       </div>
     )

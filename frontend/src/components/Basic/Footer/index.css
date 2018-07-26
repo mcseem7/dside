@@ -3,7 +3,7 @@
     background-clip: text;
     color: #000000;
     font-family: MontBold;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 700;
     margin: 0;
     cursor: pointer;
@@ -14,7 +14,8 @@
 .question__form p {
     color: #000000;
     font-family: MontLight;
-    font-size: 30px;
+    font-size: 22px;
+    line-height: 32px;
     font-weight: 300;
 }
 
@@ -33,7 +34,7 @@ footer {
 .copyright p {
     color: #000000;
     font-family: MontLight;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .copyright__content {
@@ -41,15 +42,15 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 35px;
-    margin-top: 70px;
+    margin-top: 60px;
 }
 
 .dside__send {
-    width: 316px;
-    height: 64px;
-    border: 2px solid red;
+    width: 206px;
+    height: 38px;
+    border: 1px solid red;
     margin-top: 50px;
-    border-radius: 32px;
+    border-radius: 40px;
     cursor: pointer;
     border-image: url('../../sources/images/works__logo/rounded-rectangle-6.png') ;
     outline:none;
@@ -70,7 +71,7 @@ footer {
     background-clip: text;
     color: #000000;
     font-family: MontLight;
-    font-size: 30px;
+    font-size: 16px;
     font-weight: 300;
     text-transform: uppercase;
     -webkit-background-clip: text;
@@ -84,16 +85,15 @@ footer {
 }
 
 .button__content img {
-    width: 13px;
-    height: 23px;
-    width: 13px;
-    height: 23px;
+    width: 6px;
+    height: 13px;
     display: flex;
-    margin-left: 175px;
+    margin-left: 115px;
 }
 
 .button__content p {
-    padding-left: 20px;
+    padding-left: 16px;
+    padding-top: 3px;
 }
 
 #form__dside {
@@ -107,7 +107,7 @@ footer {
 
 .wrapper__name,
 .wrapper__phone {
-    width: 380px;
+    width: 280px;
     display: flex;
 }
 
@@ -119,16 +119,16 @@ footer {
     color: #000000;
     flex:1;
     font-family: MontLight;
-    font-size: 21px;
+    font-size: 16px;
     font-weight: 300;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
     background: none;
 }
 
 #name {
     background: none;
     outline: none;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
     border-top:none;
     border-left: none;
     border-right: none;
@@ -136,7 +136,7 @@ footer {
     flex: 1;
     color: #000000;
     font-family: MontLight;
-    font-size: 21px;
+    font-size: 16px;
     font-weight: 300;
 }
 
