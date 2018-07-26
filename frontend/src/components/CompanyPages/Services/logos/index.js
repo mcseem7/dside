@@ -22,7 +22,7 @@ export default class LogoPage extends Component {
            <HeaderService
                textContainer={'dside_textContainer-logo'}
                logoHeader={logoHeader}
-               serviceSlogan={'DSIDE to make your brand work BETTER'}
+               serviceSlogan={'DSIDE to make your logo work BETTER'}
                textHeader={[<p>LOGO DES</p>, <p>IGN NOW</p>, <p> SUBWAYS</p>]} />
             <section className="logo__service-case_studies">
 

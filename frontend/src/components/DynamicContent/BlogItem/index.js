@@ -2,10 +2,16 @@ import React, {Component} from 'react'
 import './index.css'
 import next from './next_post.png'
 import comm from './hypercomments.png'
+import ReactDisqusComments from 'react-disqus-comments';
+
 export default class BlogItem extends Component {
   constructor() {
     super()
 
+  }
+
+  handleNewComment(comment) {
+    console.log(comment.text);
   }
 
   render() {
@@ -59,7 +65,13 @@ export default class BlogItem extends Component {
               <div className="comment__body-post">
 
                 <div id="comment__container">
-                  <img src={comm} alt=""/>
+                  <ReactDisqusComments
+                      shortname="example"
+                      identifier="something-unique-12345"
+                      title="Example Thread"
+                      url="http://www.example.com/example-thread"
+                      category_id="123456"
+                      onNewComment={this.handleNewComment}/>
                 </div>
 
               </div>

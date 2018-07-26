@@ -67,7 +67,7 @@
     margin-left: 75px;
 }
 
-.dside_textContainer-logo {
+.dside_textContainer-logo .logo__service-text {
     background-image: linear-gradient(to right, #743c18 60%, #1E1007 100%);
     opacity: 1;
     font-family: MontBold;
@@ -75,7 +75,9 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
-    line-height: 31.87px;
+    line-height: 1.5;
+    text-align: right;
+    padding-right: 80px;
     margin: 0 auto;
     text-transform: uppercase;
     position: relative;
@@ -86,4 +88,28 @@
     top: 281px;
     width: 950px;
     text-align: center;
+}
+
+
+
+.dside_textContainer-logo .logo__service_slogan {
+    -webkit-text-fill-color: white;
+    line-height: 0.9;
+    text-shadow: 0 5px 5px rgba(95, 51, 20, 0.61);
+    color: #ffffff;
+    font-family: MontBold;
+    font-size: 86px;
+    width: 100%;
+    font-weight: 700;
+}
+
+.dside_textContainer-logo  .logo__service-img {
+    position: absolute;
+    top: 190px;
+    left: 75px;
+    width: 950px;
+}
+
+.logo__service-text p {
+    margin: 0;
 }

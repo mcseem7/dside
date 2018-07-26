@@ -2,7 +2,9 @@ import React, {Component} from 'react'
 import HeaderService from '../serviceComponents/HeaderService/index'
 import CaseService from '../serviceComponents/CaseService/index'
 import LimitedService from '../serviceComponents/LimitedService'
+import ProjectVideo from './project__video.png'
 import './index.css'
+import YouTube from 'react-youtube';
 
 export default class VideoPage extends Component {
   constructor() {
@@ -12,8 +14,23 @@ export default class VideoPage extends Component {
   }
 
 
-  render() {
+  _onReady(event) {
+    // access to player in all event handlers via event.target
+    event.target.pauseVideo();
+  }
 
+  render() {
+    const opts = {
+      height: '500',
+      width: '100%',
+      playerVars: { // https://developers.google.com/youtube/player_parameters
+        autoplay: 0,
+        controls: 0,
+        color: 'white',
+        modestbranding: 1,
+        loop: 1
+      }
+    };
     return(
         <div>
           <HeaderService
@@ -37,11 +54,22 @@ export default class VideoPage extends Component {
             
             <div className="view__videos-right">
               <div className="view__videos_img-wrapper">
-                <img src="" alt=""/>
+                <img src={ProjectVideo} alt=""/>
               </div>
             </div>
 
           </section>
+
+
+          <section className="video__background-dside">
+            <YouTube
+                videoId="InyLat42rBE"
+                opts={opts}
+                onReady={this._onReady}
+            />
+
+          </section>
+
           <CaseService/>
           <LimitedService/>
         </div>
