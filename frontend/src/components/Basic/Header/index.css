@@ -43,6 +43,47 @@
         align-items: center;
 }
 
+.right__content-socials .check__work-sockets {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+
+   .social__icons {
+         display: none;
+     }
+
+    .left__content-icons .check__work-sockets {
+        display: none;
+    }
+
+    .right__content-socials .check__work-sockets {
+        display: block;
+    }
+
+    .add__work_wrapper {
+        padding-left: 0px;
+    }
+
+}
+
+
+@media screen and (max-width: 480px){
+ .header__content {
+     margin-left: 40px;
+     margin-right: 40px;
+ }
+    .content__posts {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .container__about-content {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
 .add__work_plus::before,
 .add__work_plus::after,
 .social__icon-instagram::before,
@@ -196,3 +237,7 @@
     from {opacity: 0;}
     to {opacity: 1;}
 }
+
+
+
+

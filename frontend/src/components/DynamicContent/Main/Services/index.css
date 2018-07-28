@@ -39,7 +39,7 @@ ul li {
 
 .content__services {
     max-width: 1200px;
-    min-width: 1200px;
+    min-width: 480px;
     margin: 0 auto;
     padding-top: 75px;
     padding-bottom: 100px;
@@ -100,4 +100,56 @@ outline: none;
     text-decoration: none;
     color: black;
     list-style-type: none;
+}
+
+.content__services > .title__service {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content__services .title__service {
+        display: block;
+        margin-bottom: -30px;
+    }
+
+    .services .title__service {
+        display: none;
+    }
+
+    .more__about-service {
+        display: none;
+    }
+
+    .content__services {
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    .content__services {
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+    .title__service h4 {
+        font-size: 40px;
+    }
+
+    .list li:first-child {
+        font-size: 26px;
+    }
+
+    .list li {
+        font-size: 26px;
+    }
+
+    .content__services {
+        display: flex;
+    }
 }

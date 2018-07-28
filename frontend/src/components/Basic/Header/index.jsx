@@ -62,6 +62,13 @@ export default class Header extends Component {
                 <a href='#' className="social__icon-instagram">
                 </a>
               </div>
+
+              <div className="check__work-sockets">
+                <div className="check__work" onClick={this.showMenu}>
+                  <img src={GridIcon} alt="" width="15"/>
+                </div>
+              </div>
+
             </div>
 
           </div>

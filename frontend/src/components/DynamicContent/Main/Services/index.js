@@ -6,6 +6,9 @@ export default function Services () {
   return (
     <section>
       <div className="content__services">
+        <div className="title__service">
+          <h4>Our services</h4>
+        </div>
         <div className="services">
 
           <div className="title__service">

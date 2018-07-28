@@ -1,6 +1,6 @@
 .portfolio__posts {
     max-width: 1920px;
-    min-width: 1200px;
+    min-width: 480px;
     width: 100%;
     margin: 0 auto;
 }
@@ -18,7 +18,7 @@
 }
 
 .portolio__post {
-    flex: 0 1 20%;
+    flex: 1 1 30%;
     margin-bottom: -4px;
 }
 
@@ -53,4 +53,14 @@
 
 .what__about-content {
     background: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+    .content__posts  {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .container__what {
+        display: none;
+    }
 }

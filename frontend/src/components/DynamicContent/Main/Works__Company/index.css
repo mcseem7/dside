@@ -5,7 +5,7 @@
 
 .brands__company {
     max-width: 1200px;
-    min-width: 1200px;
+    min-width: 480px;
     margin: 0 auto;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .brand img {
-    max-width: 70%;
+    max-width: 100%;
     min-width: 70%;
     height: auto;
     opacity: 0.6;
@@ -61,3 +61,24 @@
     margin-bottom: 6px;
 }
 
+@media screen and (max-width: 768px) {
+     .brand {
+         flex-basis: 32%;
+     }
+    .brands {
+        justify-content: center;
+    }
+}
+
+
+@media screen and  (max-width: 480px){
+    .title__brand .title {
+        font-family: MontLight;
+        font-size: 2.2rem;
+        text-align: left;
+    }
+    .brands__company {
+        margin-left: 40px;
+      margin-right: 40px;
+    }
+}
