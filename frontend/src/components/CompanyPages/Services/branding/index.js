@@ -3,6 +3,7 @@ import HeaderService from '../serviceComponents/HeaderService/index'
 import CaseService from '../serviceComponents/CaseService/index'
 import LimitedService from '../serviceComponents/LimitedService'
 import LogoBrand from './logo_brand.png'
+import Footer from '../../../Basic/Footer'
 import './index.css'
 import louis from './lois_viton.png'
 import arrow from './arrow.png'
@@ -98,6 +99,7 @@ export default class BrandPage extends Component {
 
           <CaseService/>
           <LimitedService/>
+          <Footer/>
         </div>
     )
   }

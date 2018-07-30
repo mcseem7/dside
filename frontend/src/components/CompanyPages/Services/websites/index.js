@@ -6,6 +6,7 @@ import LogoBrand from './images/Layer 120.png'
 import Vova from './images/vova__dside.png'
 import Versus from './images/Layer 123.png'
 import BakerAndrew from './images/baker__andrew.svg'
+import Footer from '../../../Basic/Footer'
 import './index.css'
 
 export default class Website extends Component {
@@ -193,6 +194,7 @@ export default class Website extends Component {
         </div>
         <CaseService/>
         <LimitedService/>
+        <Footer/>
       </Fragment>
     )
   }

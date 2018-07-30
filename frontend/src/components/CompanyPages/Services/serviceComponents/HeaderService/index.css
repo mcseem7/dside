@@ -51,6 +51,8 @@
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
+
+    min-width: 480px;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -106,4 +108,54 @@
 
 .dside__header-text_container {
     position: relative;
+}
+
+.header__navigation > .logotype__company {
+    display: none;
+}
+
+
+@media screen and (max-width: 480px) {
+    .dside-company__links .behance {
+        display: none;
+    }
+
+    .dside-company__links .instagram {
+        display: none;
+    }
+
+
+    .header__navigation .logotype__company {
+        display: block;
+        z-index: 1;
+        margin-left: 185px;
+    }
+
+
+    .left__heading .logotype__company {
+        display: none;
+    }
+
+    .left__heading {
+        margin-left: 10px;
+    }
+
+    .studies__cases .content__posts {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .studies__cases .content__posts .portolio__post {
+        flex: 1 1 25%;
+    }
+
+
+    img {
+        max-width: 100%;
+    }
+
+    body {
+        display: flex;
+    }
+
 }

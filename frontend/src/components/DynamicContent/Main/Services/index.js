@@ -20,7 +20,7 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li><Link to="/brand">Branding</Link></li>
+              <li><Link to="/services/brand">Branding</Link></li>
               <li>Logo creation</li>
               <li>Naming</li>
               <li>Identity</li>
@@ -32,7 +32,7 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li><Link to="/logo">Logo</Link></li>
+              <li><Link to="/services/logo">Logo</Link></li>
               <li>Logo creation</li>
               <li>Naming</li>
               <li>Identity</li>
@@ -44,7 +44,7 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li><Link to="/videos">Videos</Link></li>
+              <li><Link to="/services/videos">Videos</Link></li>
               <li>Logo creation</li>
               <li>Naming</li>
               <li>Identity</li>
@@ -56,7 +56,7 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li><Link to="/website">Websites</Link></li>
+              <li><Link to="/services/website">Websites</Link></li>
               <li>Logo creation</li>
               <li>Naming</li>
 

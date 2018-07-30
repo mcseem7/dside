@@ -38,3 +38,9 @@
 .video__background-dside {
     margin-top: -4px;
 }
+
+@media screen and (max-width: 480px){
+    .view__container-videos {
+        flex-direction: column;
+    }
+}

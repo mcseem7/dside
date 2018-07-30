@@ -6,6 +6,7 @@ import './index.css'
 import BadLogo from './bad__logo.png'
 import GoodLogo from './goodlogo.png'
 import logoHeader from './logo__header-service.png'
+import Footer from '../../../Basic/Footer'
 
 export default class LogoPage extends Component {
   constructor() {
@@ -101,6 +102,7 @@ export default class LogoPage extends Component {
             </section>
             <CaseService/>
             <LimitedService/>
+          <Footer/>
         </div>
     )
   }

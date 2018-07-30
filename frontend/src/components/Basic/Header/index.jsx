@@ -82,17 +82,17 @@ export default class Header extends Component {
               <div className="menu__header-column">
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to="/portfolio"   className="link__menu">Portfolio</Link>
+                    <Link to="/dside/portfolio"   className="link__menu">Portfolio</Link>
                   </div>
                   <div className="description__menu-title">
-                    <Link to="/portfolioitem"   className="link__menu">PortfolioItem</Link>
+                    <Link to="/dside/portfolioitem"   className="link__menu">PortfolioItem</Link>
                     <p>Caption text under about us</p>
                   </div>
                 </div>
 
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to="/contactus"  className="link__menu">Contact Us</Link>
+                    <Link to="/dside/contactus"  className="link__menu">Contact Us</Link>
                   </div>
                   <div className="description__menu-title">
                     <p>Caption text under about us</p>
@@ -104,7 +104,7 @@ export default class Header extends Component {
               <div className="menu__header-column">
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to="/blog"  className="link__menu">Blog</Link>
+                    <Link to="/dside/blog"  className="link__menu">Blog</Link>
                   </div>
                   <div className="description__menu-title">
                     <p>Caption text under about us</p>
@@ -113,7 +113,7 @@ export default class Header extends Component {
 
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to="/"  className="link__menu">Home</Link>
+                    <Link to="/dside"  className="link__menu">Home</Link>
                   </div>
                   <div className="description__menu-title">
                     <p>Caption text under about us</p>

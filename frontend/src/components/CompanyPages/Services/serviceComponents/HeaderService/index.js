@@ -38,6 +38,14 @@ export default class HeaderService extends Component {
 
             </div>
 
+              <div className="logotype__company">
+
+                <div className="logo__services-white">
+                  <img src={LogoWhite} alt=""/>
+                </div>
+
+              </div>
+
             <div className="right__heading">
 
               <nav className="dside-company__links">

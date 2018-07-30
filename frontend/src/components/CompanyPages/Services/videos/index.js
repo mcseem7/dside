@@ -5,6 +5,7 @@ import LimitedService from '../serviceComponents/LimitedService'
 import ProjectVideo from './project__video.png'
 import './index.css'
 import YouTube from 'react-youtube';
+import Footer from '../../../Basic/Footer'
 
 export default class VideoPage extends Component {
   constructor() {
@@ -72,6 +73,7 @@ export default class VideoPage extends Component {
 
           <CaseService/>
           <LimitedService/>
+          <Footer/>
         </div>
     )
   }

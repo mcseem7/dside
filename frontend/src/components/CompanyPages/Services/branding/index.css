@@ -6,7 +6,7 @@
 
 
 .branding__service-case_studies {
-    max-width: 1200px;
+    /*max-width: 1200px;*/
     margin: 0 auto;
     display: flex;
 }
@@ -189,3 +189,33 @@
 .find__container {
     flex: 1;
 }
+
+@media screen and (max-width: 480px){
+
+    .dside_textContainer-brand div:first-child {
+     font-size: 8.5rem;
+ }
+
+    .branding__service-case_studies {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arrow__louis-container {
+        display: none;
+    }
+
+    .branding__service-right {
+        align-items: center;
+    }
+
+    .header__navigation {
+        z-index: 1;
+    }
+
+    .find__out-title h2 {
+        line-height: 0.9;
+        margin-top: -15px;
+    }
+}
+
