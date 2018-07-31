@@ -45,7 +45,7 @@ class BlogItem(models.Model):
 
 class BlogItemTranslation(models.Model):
     title = models.CharField(max_length=150)
-    description = models.CharField(max_length=250)
+    description = models.TextField()
     body = models.TextField()
     lang_code = models.CharField(choices=LANGUAGES, max_length=5, verbose_name="Language")
 
