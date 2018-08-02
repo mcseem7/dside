@@ -1,0 +1,221 @@
+.logo__service-text_brand p {
+    text-align: right;
+    margin-bottom: -34px;
+    margin-top: 20px;
+}
+
+
+.branding__service-case_studies {
+    /*max-width: 1200px;*/
+    margin: 0 auto;
+    display: flex;
+}
+
+
+
+.logo__service-img_brand {
+    position: absolute;
+    top: -76px;
+    left: -270px;
+    width: 1040px;
+}
+
+.dside_textContainer-brand div:first-child {
+    background-image: linear-gradient(to right, #743c18 60%, #1E1007 100%);
+    opacity: 1;
+    font-family: MontBold;
+    font-size: 161px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    margin-top: 35px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+
+.dside_textContainer-brand div:nth-child(3) {
+    text-shadow: 0 5px 5px rgba(95, 51, 20, 0.61);
+    color: #ffffff;
+    font-family: MontBold;
+    font-size: 86px;
+    width: 100%;
+    font-weight: 700;
+}
+
+.branding__service-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.branding__service-left {
+    z-index: 100;
+}
+
+
+
+.price__louis {
+    background-image: linear-gradient(-252deg, rgba(191, 240, 128, 0.68) 0%, rgba(16, 141, 104, 0.68) 100%); -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #21201f;
+    -webkit-background-clip: text;
+    font-family: MontBold;
+    font-size: 100px;
+    font-weight: 700;
+}
+
+.price__louis_wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.price__louis {
+    margin: 0;
+}
+
+.price__louis_wrapper img {
+    height: 2px;
+}
+
+.title__louis {
+    color: #21201f;
+    font-family: MontBold;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 31.87px;
+}
+
+.loius__viton_title-description {
+    color: #101010;
+    font-family: MontBold;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 31.87px;
+    text-transform: uppercase;
+}
+
+.loius__viton_description {
+    color: #101010;
+    font-family: MontLight;
+    width: 570px;
+    text-align: left;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 31.87px;
+}
+
+
+.louis__img-container {
+    display: flex;
+}
+
+.louis__bag-img {
+    z-index: -1;
+}
+
+.arrow__louis-container {
+    display: flex;
+    height: 120px;
+    margin-left: -145px;
+    align-items: center;
+}
+
+.louis__arrow-img {
+    height: 2px;
+    z-index: -2;
+}
+
+.find__out-branding {
+    background: url('cola-banks.png');
+    background-position: 39% 19%;
+    height: 240px;
+    margin-top: 200px;
+    margin-bottom: 70px;
+}
+
+.find__out-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 24px;
+    align-items: center;
+}
+
+
+.find__out-title h2 {
+    color: #ffffff;
+    font-family: MontBold;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 31.87px;
+    text-transform: uppercase;
+}
+
+
+.diff__title p {
+    opacity: 0.49;
+    color: #695050;
+    font-family: MontBold;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 31.87px;
+    text-transform: uppercase;
+}
+
+
+.find__button {
+    width: 300px;
+    height: 68px;
+    border-radius: 34px;
+    border: 3px solid #543026;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.find__button a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: MontBold;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 31.87px;
+    text-transform: uppercase;
+}
+
+.find__container {
+    flex: 1;
+}
+
+@media screen and (max-width: 480px){
+
+    .dside_textContainer-brand div:first-child {
+     font-size: 8.5rem;
+ }
+
+    .branding__service-case_studies {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arrow__louis-container {
+        display: none;
+    }
+
+    .branding__service-right {
+        align-items: center;
+    }
+
+    .header__navigation {
+        z-index: 1;
+    }
+
+    .find__out-title h2 {
+        line-height: 0.9;
+        margin-top: -15px;
+    }
+}
+
