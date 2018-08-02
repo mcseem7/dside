@@ -27,6 +27,7 @@ class App extends Component {
           <Route path="/services/brand" component={BrandPage} />
           <Route path="/services/videos" component={VideoPage} />
           <Route path="/services/website" component={Website} />
+          <Route path="/services/contactus" component={ContactUs} />
         </Switch>
       </div>
     )

@@ -1,0 +1,173 @@
+
+
+.aboutus__title-advantage h1 {
+    font-size: 8rem;
+    color: rgb(255,255,255);
+    font-family: "MontBold";
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.aboutus__wrapper {
+    padding-top: 120px;
+}
+
+
+.dside__what-about {
+    display: flex;
+    align-items: center;
+}
+
+.about__company-dside p {
+    color: #6c6c6c;
+    font-family: MontLight;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.title__what h4 {
+    color: #6c6c6c;
+    font-family: MontBold;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 9.87px;
+    text-transform: uppercase;
+}
+
+
+.title__whyus h5 {
+    color: #000000;
+    font-family: MontBold;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 16.87px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.about__us-content {
+    background: white;
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+.dside__red-logo {
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+.dside__what-content {
+    flex: 1 1 100%;
+}
+
+.dside__what-about {
+    padding-top: 120px;
+    padding-bottom: 90px;
+}
+
+.about__company-dside {
+    max-width: 85%;
+}
+
+.dside__shahmat-img {
+    position: absolute;
+    top: -260px;
+    right: 555px;
+}
+
+
+.description__business-process p {
+    color: #000000;
+    font-family: MontLight;
+    font-size: 17px;
+    font-weight: 300;
+    width: 240px
+}
+
+.business__title p {
+    color: #000000;
+    font-family: MontBold;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -1.46px;
+    margin-left: 7px;
+}
+
+.number__bus-process {
+    color: #777677;
+    font-family: MontLight;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.title__business-process {
+    display: flex;
+    align-items: center;
+    margin-left: -23px;
+}
+
+.dside__business_process {
+    display: flex;
+}
+
+.dside__business_process li {
+    flex: 1 1 25%;
+    margin-left: 55px;
+}
+
+.about__dside-process {
+    margin-top: 40px;
+}
+
+.meet__team-title h4 {
+    color: #000000;
+    font-family: MontBold;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.meet__team-title {
+    margin-top: 35px;
+    padding-bottom: 55px;
+}
+
+.dside__meet_team {
+    max-width: 1200px;
+    margin:  0 auto;
+}
+
+.dside__team-man img {
+    max-width: 100%;
+    cursor: pointer;
+}
+
+
+.dside__team-man {
+    opacity: 0.5;
+}
+
+.dside__team-man:hover {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.meet__team__dside {
+    display: flex;
+    align-items: baseline;
+}
+
+.dside__about-content {
+    padding-bottom: 75px;
+}
+
+.team__man {
+    background: url("./peopleCompany/Max.png");
+}

@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import './index.css'
 import gridIcon from './grid-icon.svg'
-import { Switch, Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import BlogItem from '../BlogItem'
+
 
 export default class Blog extends Component {
   constructor () {
@@ -57,7 +58,7 @@ export default class Blog extends Component {
     return (
 
       <section className="blog__container">
-          <Route  exact path="/blog/blogitem" component={BlogItem} />
+
         <div className="blog__content">
           <div className="blog__post-items">
             {this.state.blogItem.map((item, key) => (<div className="blog__item">

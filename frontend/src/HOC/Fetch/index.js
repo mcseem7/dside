@@ -10,7 +10,11 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
       super()
 
       this.state = {
-        data: []
+        data: [],
+        postData: {
+          name: '',
+          email: ''
+        }
       }
     }
 
@@ -22,12 +26,23 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
       fetch(`http://dside.pl/api${lang}${apiUrl}`).then((response) => response.json()).then(data => this.setState({data}))
     }
 
+    postFormData = (name, phone) => {
+      fetch(`http://dside.pl/api${lang}${apiUrl}`, {
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        method: "POST",
+        body: JSON.stringify({name: name.current.value, phone: phone.current.value, data: new Date().toISOString() })
+      })
+    }
+
 
 
     render() {
       return(
           <div>
-            <DsideComponent getDsideApi={this.getDsideApi} dataApi={this.state.data}/>
+            <DsideComponent postData={this.postFormData}  getDsideApi={this.getDsideApi} dataApi={this.state.data}/>
           </div>
       )
     }

@@ -3,6 +3,7 @@ import './index.css'
 import GridImg from './grid__img.svg'
 import LogoWhite from './LogoWhite.svg'
 import PlusHover from './plus-hover.svg'
+import OrderButton from '../OrderButton'
 
 export default class HeaderService extends Component {
   constructor() {
@@ -78,6 +79,7 @@ export default class HeaderService extends Component {
                 </div>
 
               </div>
+            <OrderButton/>
           </header>
             <div className="radius__wrapper"></div>
           </div>

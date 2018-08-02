@@ -5,16 +5,19 @@ import comm from './hypercomments.png'
 import ReactDisqusComments from 'react-disqus-comments';
 
 export default class BlogItem extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
   }
+
+
 
   handleNewComment(comment) {
     console.log(comment.text);
   }
 
   render() {
+    console.log(this.props)
     return(
         <div>
 

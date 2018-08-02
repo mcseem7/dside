@@ -21,7 +21,7 @@
 .container__about-content {
     display: flex;
     max-width: 1200px;
-    min-width: 480px;
+    min-width: 320px;
     margin: 0 auto;
 padding-top: 50px;
  padding-bottom: 90px;

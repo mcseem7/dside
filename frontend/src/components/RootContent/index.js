@@ -5,8 +5,8 @@ import Blog from '../DynamicContent/Blog'
 import BlogItem from '../DynamicContent/BlogItem'
 import PortfolioItem from '../DynamicContent/PortfolioItem'
 import Portfolio from '../DynamicContent/Portfolio'
+import AboutUs from '../DynamicContent/About'
 import NotFound from '../Basic/NotFound'
-import ContactUs from '../CompanyPages/ContactUs'
 
 
 export default class RootContent extends Component {
@@ -24,10 +24,11 @@ export default class RootContent extends Component {
       <div className="main__content">
         <Switch>
           <Route exact path="/dside" component={Main} />
-          <Route path="/dside/blog" component={Blog} />
+          <Route exact path="/dside/blog" component={Blog} />
           <Route exact path="/dside/blog/:blogitem" component={BlogItem} />
           <Route path="/dside/portfolio" component={Portfolio} />
           <Route path="/dside/portfolioitem" component={PortfolioItem} />
+          <Route path="/dside/aboutus" component={AboutUs} />
         </Switch>
       </div>
     )
