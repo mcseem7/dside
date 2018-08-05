@@ -49,7 +49,7 @@ export default class Header extends Component {
             <div className="mid__content-logo">
               <div className="logo__container">
                 <div className="logo">
-                  <img src={Logo} alt="" width="90" />
+                  <Link to="/dside" ><img src={Logo} alt="" width="90" /></Link>
                 </div>
               </div>
             </div>

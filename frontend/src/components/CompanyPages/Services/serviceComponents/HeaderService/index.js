@@ -3,6 +3,7 @@ import './index.css'
 import GridImg from './grid__img.svg'
 import LogoWhite from './LogoWhite.svg'
 import PlusHover from './plus-hover.svg'
+import {Link} from 'react-router-dom'
 
 export default class HeaderService extends Component {
   constructor() {
@@ -24,14 +25,14 @@ export default class HeaderService extends Component {
               <div className="menu__inject-news">
 
                 <div className="grid__service-img">
-                  <img src={GridImg} alt=""/>
+                  <img src={GridImg} alt="" width="15"/>
                 </div>
 
               </div>
               <div className="logotype__company">
 
                   <div className="logo__services-white">
-                    <img src={LogoWhite} alt=""/>
+                   <Link to="/dside"><img src={LogoWhite} alt="" width="90"/></Link>
                   </div>
 
               </div>
@@ -41,7 +42,7 @@ export default class HeaderService extends Component {
               <div className="logotype__company">
 
                 <div className="logo__services-white">
-                  <img src={LogoWhite} alt=""/>
+                <img src={LogoWhite} alt=""/>
                 </div>
 
               </div>
@@ -58,7 +59,7 @@ export default class HeaderService extends Component {
                 </li>
 
                 <li className="header-service__button-order">
-                  <a href="#" className="header-button__order"><img src={PlusHover} alt=""/>order now.</a>
+                  <a href="#" className="header-button__order"><img src={PlusHover} alt="" width="14"/>order now.</a>
                 </li>
               </nav>
 
