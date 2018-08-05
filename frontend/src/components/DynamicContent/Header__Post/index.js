@@ -7,7 +7,7 @@ import FourImage from './images/thumbs-04.jpg'
 import FiveImage from './images/thumbs-05.jpg'
 import SixImage from './images/thumbs-06.jpg'
 import './index.css'
-import iconGrid from './images/icon__grid.png'
+import iconGrid from './images/icon__grid.svg'
 // import zindex from './images/Header_zIndex.png'
 import About from './../Main/About__block/index'
 
@@ -49,7 +49,7 @@ export default class HeaderPost extends Component {
                 </div>
 
                 <button className="load">
-                  Load More
+                  load more
                 </button>
               </div>
             </div>
