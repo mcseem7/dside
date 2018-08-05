@@ -50,6 +50,7 @@ padding-top: 50px;
     font-family: "MontBold";
     font-weight: 300;
     transition: 0.3s;
+    padding: 0;
 }
 
 .more__about:after {
@@ -61,17 +62,6 @@ padding-top: 50px;
     margin-left: -7px;
 }
 
-.more__about:hover:after {
-    content: ' ';
-    background-image: linear-gradient(to right, #da8c93 0%, #ae6058 100%);
-    display: block;
-    transition: 0.3s;
-    opacity: 1;
-    height: 2px;
-    width: 115px;
-    position: absolute;
-    margin-top: 6px;
-}
 
 .question__wrapper {
     flex: 1 1 30%;
@@ -79,6 +69,7 @@ padding-top: 50px;
 
 .about__content p {
     text-align: left;
+    margin-left: -8px;
 }
 
 

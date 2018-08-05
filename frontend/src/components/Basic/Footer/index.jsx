@@ -32,10 +32,14 @@ export default class Footer extends Component {
               <form action="http://host" id="form__dside">
                 <div className="inputs__send">
                   <div className="wrapper__name">
-                    <input type="text" id="name" placeholder="name" />
+                    <div className="shining-underline-cf">
+                    <input type="text" id="name"  placeholder="Your Name"/><span></span>
+                  </div>
                   </div>
                   <div className="wrapper__phone">
-                    <input id="phone" type="phone" placeholder="phone" />
+                    <div className="shining-underline-cf">
+                    <input id="phone" type="phone" placeholder="Phone" /><span></span>
+                  </div>
                   </div>
                 </div>
                 <button className="dside__send">
@@ -55,11 +59,11 @@ export default class Footer extends Component {
 
             <div className="social__icons">
               <div className="social__icon-behance">
-                <a href="">        </a>
+                <a href="https://dishots.com/u/DSIDE" target="_blank">        </a>
               </div>
 
               <div className="social__icon-instagram">
-                <a href="">       </a>
+                <a href="https://instagram.com/dsided" target="_blank">       </a>
               </div>
             </div>
           </div>

@@ -20,7 +20,7 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li><Link to="/services/brand">Branding</Link></li>
+              <li><Link to="/services/brand" className="shining-underline">Branding<span></span></Link></li>
               <li>Logo creation</li>
               <li>Naming</li>
               <li>Identity</li>
@@ -32,7 +32,7 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li><Link to="/services/logo">Logo</Link></li>
+              <li><Link to="/services/logo" className="shining-underline">Logo<span></span></Link></li>
               <li>Logo creation</li>
               <li>Naming</li>
               <li>Identity</li>
@@ -44,7 +44,7 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li><Link to="/services/videos">Videos</Link></li>
+              <li><Link to="/services/videos" className="shining-underline">Videos<span></span></Link></li>
               <li>Logo creation</li>
               <li>Naming</li>
               <li>Identity</li>
@@ -56,7 +56,7 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li><Link to="/services/website">Websites</Link></li>
+              <li><Link to="/services/website" className="shining-underline">Websites<span></span></Link></li>
               <li>Logo creation</li>
               <li>Naming</li>
 
@@ -67,8 +67,9 @@ export default function Services () {
 
         </div>
 
-        <button className="more__about-service" >
+        <button className="more__about-service shining-underline" >
                 More services
+          <span></span>
         </button>
       </div>
     </section>
