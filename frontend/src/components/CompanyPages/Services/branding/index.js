@@ -27,6 +27,7 @@ export default class BrandPage extends Component {
               imgLogoPosition={'logo__service-img_brand'}
               textContainer={'dside_textContainer-brand'}
               serviceSlogan={'DSIDE to make your brand work BETTER'}
+              serviceCategory={'Branding'}
           />
 
           <div className="branding__service-case_studies">
@@ -35,7 +36,7 @@ export default class BrandPage extends Component {
 
                 <div className="louis__img-container">
 
-                  <img src={louis} className="louis__bag-img" alt=""/>
+                  <img src={louis} className="louis__bag-img" alt="" />
 
                   <div className="arrow__louis-container">
                   <img src={arrow} className="louis__arrow-img" alt=""/>
@@ -62,10 +63,12 @@ export default class BrandPage extends Component {
 
 
               <p className="loius__viton_description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labaccusantium doloremque laudantium,
-                sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+                How expensive you can sell your goods or services.<br />
+                As You know, brand-name original items from time to time are even more expensive than their unnamed counterparts.
               </p>
+                <div className="service_button_down">
+                  order now
+                </div>
             </div>
 
           </div>
@@ -86,7 +89,7 @@ export default class BrandPage extends Component {
             </div>
 
               <div className="find__button">
-                <a href="#">find out</a>
+                find out
               </div>
 
 

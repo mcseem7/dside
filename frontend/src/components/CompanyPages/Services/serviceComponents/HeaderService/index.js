@@ -79,6 +79,9 @@ export default class HeaderService extends Component {
                 </div>
 
               </div>
+             <div className="service_button">
+                  order now
+                </div>
           </header>
             <div className="radius__wrapper"></div>
           </div>
