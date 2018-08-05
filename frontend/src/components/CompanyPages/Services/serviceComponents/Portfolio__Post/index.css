@@ -5,13 +5,16 @@
 }
 
 .more__icon {
-    width: 20px;
-    margin-right: 12px;
+    width: 16px;
+    margin-right: 5px;
+    margin-top: 2px;
 }
 
 .load {
     outline: none;
     border: none;
+    padding: 0;
+    margin: 0;
     background: none;
     cursor: pointer;
     font-family: 'MontBold';
@@ -20,14 +23,38 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: rgb(0,0,0);
-    font-size: 18px;
+    font-size: 12px;
     font-weight: bold;
-    background-image: linear-gradient(90deg, #d99b91 0%, #ad6f59 100%);
+    background-image: linear-gradient(90deg, #000 0%, #000 100%);
+     -webkit-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+    -moz-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+    -o-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+    transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+    will-change: opacity;
 }
 
 .block__load__more {
-    padding-top: 41px;
+    padding-top: 11px;
+    opacity: .3;
+     -webkit-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+    -moz-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+    -o-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+    transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+    will-change: opacity;
 }
+.block__load__more:hover {
+    opacity: 1;
+     -webkit-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+    -moz-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+    -o-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+    transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+    will-change: opacity;
+}
+.block__load__more:hover .load{ background-image: linear-gradient(90deg, #d39483 0%, #b77764 100%); -webkit-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+    -moz-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+    -o-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+    transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+    will-change: opacity;}
 
 .load__more {
     display:  flex;

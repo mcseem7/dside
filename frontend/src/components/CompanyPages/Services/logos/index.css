@@ -69,9 +69,9 @@
 
 .dside_textContainer-logo .logo__service-text {
     background-image: linear-gradient(to right, #743c18 60%, #1E1007 100%);
-    opacity: 1;
+    opacity: 0.3;
     font-family: MontBold;
-    font-size: 161px;
+    font-size: 131px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
@@ -85,8 +85,8 @@
 
 .logo__service_slogan {
     position: absolute;
-    top: 281px;
-    width: 950px;
+    top: 181px;
+    width: 550px;
     text-align: center;
 }
 
