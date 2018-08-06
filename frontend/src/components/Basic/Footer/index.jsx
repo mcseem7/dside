@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './index.css'
 import arrow from '../../sources/images/works__logo/arrow.svg'
 import withDsideApi from '../../../HOC/Fetch'
+import Poppup from '../../../HOC/Poppup/index';
 
  class Footer extends Component {
 
@@ -43,19 +44,13 @@ import withDsideApi from '../../../HOC/Fetch'
               <form onSubmit={this.handleSubmit} id="form__dside">
                 <div className="inputs__send">
                   <div className="wrapper__name">
-
-                    <input ref={this.nameRef} type="text" id="name" placeholder="name" />
-                  </div>
-                  <div className="wrapper__phone">
-                    <input ref={this.phoneRef} id="phone" type="phone" placeholder="phone" />
-
                     <div className="shining-underline-cf">
-                    <input type="text" id="name"  placeholder="Your Name"/><span></span>
-                  </div>
+                      <input ref={this.nameRef} type="text" id="name" placeholder="name" /><span></span>
+                    </div>
                   </div>
                   <div className="wrapper__phone">
                     <div className="shining-underline-cf">
-                    <input id="phone" type="phone" placeholder="Phone" /><span></span>
+                      <input ref={this.phoneRef} id="phone" type="phone" placeholder="phone" /><span></span>
                   </div>
                   </div>
                 </div>

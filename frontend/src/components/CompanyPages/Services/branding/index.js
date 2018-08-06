@@ -66,9 +66,9 @@ export default class BrandPage extends Component {
                 How expensive you can sell your goods or services.<br />
                 As You know, brand-name original items from time to time are even more expensive than their unnamed counterparts.
               </p>
-                <div className="service_button_down">
-                  order now
-                </div>
+                {/*<div className="service_button_down">*/}
+                  {/*order now*/}
+                {/*</div>*/}
             </div>
 
           </div>

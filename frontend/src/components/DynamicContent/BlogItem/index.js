@@ -10,7 +10,9 @@ export default class BlogItem extends Component {
 
   }
 
-
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
 
   handleNewComment(comment) {
     console.log(comment.text);

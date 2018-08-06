@@ -67,10 +67,10 @@ export default function Services () {
 
         </div>
 
-        <button className="more__about-service shining-underline" >
-                More services
-          <span></span>
-        </button>
+        {/*<button className="more__about-service shining-underline" >*/}
+                {/*More services*/}
+          {/*<span></span>*/}
+        {/*</button>*/}
       </div>
     </section>
   )

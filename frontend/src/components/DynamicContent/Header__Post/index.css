@@ -19,9 +19,129 @@
 
 .portolio__post {
     flex: 1 1 30%;
-    margin-bottom: -4px;
+    margin-bottom: -22px;
 }
 
+
+.portfolio__post-wrapper {
+    position: relative;
+}
+
+
+
+
+
+.portfolio__post-wrapper  .effect-marley   h2,
+.portfolio__post-wrapper .effect-marley   p {
+    position: absolute;
+    right: 150px;
+    left: 30px;
+    padding: 10px 0;
+}
+
+
+.portfolio__post-wrapper .effect-marley  p {
+    bottom: 30px;
+    line-height: 1.5;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+}
+
+.portfolio__post-wrapper .effect-marley  h2 {
+    top: 30px;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+}
+
+.portfolio__post-wrapper:hover  {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+
+.portfolio__post-wrapper .effect-marley  h2::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    content: '';
+    -webkit-transform: translate3d(0,40px,0);
+    transform: translate3d(0,40px,0);
+}
+
+
+.portfolio__post-wrapper .effect-marley  h2::after,
+.portfolio__post-wrapper .effect-marley  p {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    bottom: 150px;
+    text-align: left;
+}
+
+.portfolio__post-wrapper .effect-marley:hover h2::after,
+.portfolio__post-wrapper .effect-marley:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+.portfolio__post-wrapper .effect-marley a::after,
+.portfolio__post-wrapper .effect-marley a {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+
+.portfolio__post-wrapper .effect-marley:hover a::after,
+.portfolio__post-wrapper .effect-marley:hover a {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+
+.effect-marley h2{
+    font-size: 19px;
+    line-height: 8px;
+    color: rgb(0,0,0);
+    font-family: "MontBold";
+    font-weight: bold;
+    right: 150px;
+}
+
+.effect-marley a {
+    bottom: 60px;
+    position: relative;
+    margin-left: 30px;
+    background-image: linear-gradient(to right, #d99b91 0%, #ad6f59 100%);
+    background-clip: text;
+    color: #000000;
+    font-family: MontBold;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: left;
+}
+
+
+.effect-marley p {
+    font-size: 28px;
+    top: 50px;
+    line-height: 12px;
+    font-family: "MontLight";
+    font-weight: 300;
+    color: #fff;
+}
 
 .relative__content {
     position: relative;
@@ -47,13 +167,14 @@
     width: 100%;
     background-size: cover;
     z-index: 5;
-    bottom: -5px;
+    bottom: -20px;
     height: 85px;
 }
 
 .what__about-content {
     background: #ffffff;
 }
+
 
 @media screen and (max-width: 768px) {
     .content__posts  {

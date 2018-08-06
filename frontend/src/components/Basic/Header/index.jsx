@@ -4,6 +4,7 @@ import GridIcon from './grid_img.svg'
 import PlusIcon from './plus.svg'
 import Logo from './Logo.svg'
 import {Link} from 'react-router-dom'
+import Poppup from '../../../HOC/Poppup/index';
 
 export default class Header extends Component {
   constructor () {
@@ -11,7 +12,8 @@ export default class Header extends Component {
 
     this.state = {
       opacity: 0,
-      display: 'none'
+      display: 'none',
+      modalActive: false
     }
   }
 
@@ -22,6 +24,13 @@ export default class Header extends Component {
     } else {
       this.setState({opacity: 1, display: 'block'})
     }
+  }
+
+
+  changePoppup = () => {
+    this.setState({modalActive: !this.state.modalActive}, () => {
+      console.log(this.state.modalActive)
+    })
   }
 
   render () {
@@ -41,7 +50,7 @@ export default class Header extends Component {
               <div className="add__work_wrapper">
 
                 <div className="add__work">
-                  <img src={PlusIcon} className="add__work_plus" alt="" width="14"/>
+                  <img src={PlusIcon} onClick={this.changePoppup} className="add__work_plus" alt="" width="14"/>
                 </div>
               </div>
             </div>
@@ -56,10 +65,10 @@ export default class Header extends Component {
 
             <div className="right__content-socials">
               <div className="social__icons">
-                <a href='#' className="social__icon-behance">
+                <a href='http://behance.com' className="social__icon-behance">
                 </a>
 
-                <a href='#' className="social__icon-instagram">
+                <a href='http://instagram.com' className="social__icon-instagram">
                 </a>
               </div>
 
@@ -124,7 +133,7 @@ export default class Header extends Component {
             </div>
             </div>
           </div>
-
+          {this.state.modalActive ? <Poppup onClose={this.changePoppup} /> :  null}
         </div>
     )
   }

@@ -5,15 +5,24 @@ import LogoWhite from './LogoWhite.svg'
 import PlusHover from './plus-hover.svg'
 import OrderButton from '../OrderButton'
 import {Link} from 'react-router-dom'
+import Poppup from '../../../../../HOC/Poppup/index';
 
 
 export default class HeaderService extends Component {
   constructor() {
     super()
 
+    this.state = {
+      modalActive: false
+    }
 
   }
 
+  changePoppup = () => {
+    this.setState({modalActive: !this.state.modalActive}, () => {
+      console.log(this.state.modalActive)
+    })
+  }
 
   render() {
     return(
@@ -61,7 +70,7 @@ export default class HeaderService extends Component {
                 </li>
 
                 <li className="header-service__button-order">
-                  <a href="#" className="header-button__order"><img src={PlusHover} alt="" width="14"/>order now.</a>
+                  <a href="#" onClick={this.changePoppup} className="header-button__order"><img src={PlusHover}  alt="" width="14"/>order now.</a>
                 </li>
               </nav>
 
@@ -82,7 +91,7 @@ export default class HeaderService extends Component {
 
               </div>
 
-            <OrderButton/>
+            <OrderButton handlePopup={this.changePoppup}/>
 
              {/*<div className="service_button">*/}
                   {/*order now*/}
@@ -90,6 +99,7 @@ export default class HeaderService extends Component {
 
           </header>
             <div className="radius__wrapper"></div>
+            {this.state.modalActive ? <Poppup onClose={this.changePoppup}/> :  null}
           </div>
         </Fragment>
     )

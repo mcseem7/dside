@@ -38,6 +38,10 @@ export default class PortfolioItem extends Component {
   }
 
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
 
   render () {
     var settings = {

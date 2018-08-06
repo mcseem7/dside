@@ -20,6 +20,16 @@
     /*display: flex;*/
 /*}*/
 
+.applyyour img {
+    min-width: 40% !important;
+}
+
+.applyyour {
+    align-self: center;
+    cursor: pointer;
+}
+
+
 
 body {
     min-width: 320px;

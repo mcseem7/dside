@@ -9,6 +9,7 @@ import LogoPage from './components/CompanyPages/Services/logos'
 import BrandPage from './components/CompanyPages/Services/branding'
 import VideoPage from './components/CompanyPages/Services/videos'
 import Website from './components/CompanyPages/Services/websites'
+import Poppup from './HOC/Poppup/index';
 
 class App extends Component {
 

@@ -10,6 +10,10 @@ export default class Main extends Component {
     super()
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   render () {
     return (
       <div className="complex__content">
