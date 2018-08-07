@@ -7,6 +7,7 @@ import './index.css'
 import YouTube from 'react-youtube';
 import Footer from '../../../Basic/Footer'
 import YoutubeBackground from 'react-youtube-background'
+import HeaderPost from '../../../DynamicContent/Header__Post/index';
 
 export default class VideoPage extends Component {
   constructor() {
@@ -78,7 +79,10 @@ export default class VideoPage extends Component {
 
           </section>
 
-          <CaseService/>
+          {/*<CaseService/>*/}
+          <div className="case__service">
+            <HeaderPost/>
+          </div>
           <LimitedService/>
           <Footer/>
         </div>

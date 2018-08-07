@@ -9,6 +9,7 @@ import BakerAndrew from './images/baker__andrew.svg'
 import Footer from '../../../Basic/Footer'
 import './index.css'
 import YoutubeBackground from 'react-youtube-background'
+import HeaderPost from '../../../DynamicContent/Header__Post/index';
 
 
 export default class Website extends Component {
@@ -199,7 +200,10 @@ export default class Website extends Component {
             </div>
           </section>
         </div>
-        <CaseService/>
+        {/*<CaseService/>*/}
+        <div className="case__service">
+          <HeaderPost/>
+        </div>
         <LimitedService/>
         <Footer/>
       </Fragment>

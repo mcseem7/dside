@@ -9,8 +9,6 @@
     "react-dom": "^16.4.1",
     "react-dribble-button": "^0.2.2",
     "react-google-maps": "^9.4.5",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "react-slick": "^0.23.1",
     "react-youtube": "^7.6.0",
@@ -23,5 +21,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-router-drilldown": "^3.0.2",
+    "react-view-slider": "^3.0.6"
   }
 }

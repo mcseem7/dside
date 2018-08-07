@@ -17,7 +17,7 @@ export default class PortolioPost extends Component {
               <figcaption>
                 <h2>Block Petro Poroschenko</h2>
                 <p>Work name</p>
-                <Link to="/">See project</Link>
+                <Link to="/dside/portfolioitem">See project</Link>
               </figcaption>
         </figure>
         </div>

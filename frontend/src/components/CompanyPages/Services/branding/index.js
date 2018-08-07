@@ -8,6 +8,7 @@ import './index.css'
 import louis from './lois_viton.png'
 import arrow from './arrow.png'
 import YoutubeBackground from 'react-youtube-background'
+import HeaderPost from '../../../DynamicContent/Header__Post/index';
 
 export default class BrandPage extends Component {
   constructor() {
@@ -114,7 +115,10 @@ export default class BrandPage extends Component {
           </div>
 
 
-          <CaseService/>
+          {/*<CaseService/>*/}
+          <div className="case__service">
+          <HeaderPost/>
+          </div>
           <LimitedService/>
           <Footer/>
         </div>

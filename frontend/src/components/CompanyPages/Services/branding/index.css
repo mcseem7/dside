@@ -18,6 +18,7 @@
     top: -70px;
     left: 0px;
     width: 935px;
+    z-index: 1;
 }
 
 .dside_textContainer-brand div:first-child {

@@ -8,6 +8,7 @@ import GoodLogo from './goodlogo.png'
 import logoHeader from './logo__header-service.png'
 import Footer from '../../../Basic/Footer'
 import YoutubeBackground from 'react-youtube-background'
+import HeaderPost from '../../../DynamicContent/Header__Post/index';
 
 export default class LogoPage extends Component {
   constructor() {
@@ -108,7 +109,10 @@ export default class LogoPage extends Component {
 
 
             </section>
-            <CaseService/>
+            {/*<CaseService/>*/}
+          <div className="case__service">
+            <HeaderPost/>
+          </div>
             <LimitedService/>
           <Footer/>
         </div>
