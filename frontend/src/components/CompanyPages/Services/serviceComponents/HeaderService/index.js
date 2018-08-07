@@ -13,16 +13,29 @@ export default class HeaderService extends Component {
     super()
 
     this.state = {
+      opacity: 0,
+      display: 'none',
       modalActive: false
     }
 
   }
+
+
+  showMenu = () => {
+    if(this.state.opacity ==  1) {
+      this.setState({opacity: 0, display: 'none'})
+    } else {
+      this.setState({opacity: 1, display: 'block'})
+    }
+  }
+
 
   changePoppup = () => {
     this.setState({modalActive: !this.state.modalActive}, () => {
       console.log(this.state.modalActive)
     })
   }
+
 
   render() {
     return(
@@ -35,7 +48,7 @@ export default class HeaderService extends Component {
 
               <div className="menu__inject-news">
 
-                <div className="grid__service-img">
+                <div className="grid__service-img" onClick={this.showMenu}>
                   <img src={GridImg} alt="" width="15"/>
                 </div>
 
@@ -98,6 +111,55 @@ export default class HeaderService extends Component {
                 {/*</div>*/}
 
           </header>
+            <div className="main__header" style={{top: '80px', display: this.state.display, opacity: this.state.opacity, transition: '0.3s'}}>
+              <div className="main__header-content">
+                <div className="main__header-left">
+
+                  <div className="menu__header-column">
+                    <div className="menu__header-item">
+                      <div className="description__menu-title">
+                        <Link to="/dside/aboutus"   className="link__menu">About Us</Link>
+                        <p>Caption text under about us</p>
+                      </div>
+                    </div>
+
+                    <div className="menu__header-item">
+                      <div className="menu__header-title">
+                        <Link to="/services/contactus"  className="link__menu">Contact Us</Link>
+                      </div>
+                      <div className="description__menu-title">
+                        <p>Caption text under about us</p>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div className="menu__header-column">
+                    <div className="menu__header-item">
+                      <div className="menu__header-title">
+                        <Link to="/dside/blog"  className="link__menu">Blog</Link>
+                      </div>
+                      <div className="description__menu-title">
+                        <p>Caption text under about us</p>
+                      </div>
+                    </div>
+
+                    <div className="menu__header-item">
+                      <div className="menu__header-title">
+                        <Link to="/dside"  className="link__menu">Home</Link>
+                      </div>
+                      <div className="description__menu-title">
+                        <p>Caption text under about us</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="main__header-right">
+
+                </div>
+              </div>
+            </div>
             <div className="radius__wrapper"></div>
             {this.state.modalActive ? <Poppup onClose={this.changePoppup}/> :  null}
           </div>

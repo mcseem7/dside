@@ -6,6 +6,7 @@ import ProjectVideo from './project__video.png'
 import './index.css'
 import YouTube from 'react-youtube';
 import Footer from '../../../Basic/Footer'
+import YoutubeBackground from 'react-youtube-background'
 
 export default class VideoPage extends Component {
   constructor() {
@@ -14,6 +15,9 @@ export default class VideoPage extends Component {
 
   }
 
+  componentDidMount() {
+    window.scrollTo(0,0)
+  }
 
   _onReady(event) {
     // access to player in all event handlers via event.target
@@ -34,11 +38,14 @@ export default class VideoPage extends Component {
     };
     return(
         <div>
+          <YoutubeBackground
+          >
           <HeaderService
               imgLogoPosition={'logo__service-img_'}
-              textContainer={'dside_textContainer-logo'}
+              textContainer={'dside_textContainer-video'}
               serviceSlogan={'DSIDE to make the best video'}
               textHeader={[<p>Video DES</p>, <p>IGN NOW</p>, <p> SUBWAYS</p>]} />
+          </YoutubeBackground>
           <section className="view__container-videos">
 
             <div className="view__videos-left">

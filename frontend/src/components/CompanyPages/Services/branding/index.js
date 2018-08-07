@@ -7,12 +7,24 @@ import Footer from '../../../Basic/Footer'
 import './index.css'
 import louis from './lois_viton.png'
 import arrow from './arrow.png'
+import YoutubeBackground from 'react-youtube-background'
 
 export default class BrandPage extends Component {
   constructor() {
     super()
 
 
+    this.state = {
+      findActive: false
+    }
+
+  }
+  componentDidMount() {
+    window.scrollTo(0,0)
+  }
+
+  findOut = () => {
+    this.setState({findActive: !this.state.findActive})
   }
 
 
@@ -20,6 +32,8 @@ export default class BrandPage extends Component {
 
     return(
         <div>
+          <YoutubeBackground
+          >
           <HeaderService
               stylelogotext={'logo__service-text_brand'}
               logoHeader={LogoBrand}
@@ -29,7 +43,7 @@ export default class BrandPage extends Component {
               serviceSlogan={'DSIDE to make your brand work BETTER'}
               serviceCategory={'Branding'}
           />
-
+          </YoutubeBackground>
           <div className="branding__service-case_studies">
 
               <div className="branding__service-left">
@@ -74,7 +88,7 @@ export default class BrandPage extends Component {
           </div>
 
 
-          <div className="find__out-branding">
+          <div className={`find__out-branding ${this.state.findActive ? 'findBrand' : ''}`}>
 
             <div className="find__out-wrapper">
               <div className="find__container">
@@ -88,7 +102,7 @@ export default class BrandPage extends Component {
 
             </div>
 
-              <div className="find__button">
+              <div className="find__button" onClick={this.findOut}>
                 find out
               </div>
 

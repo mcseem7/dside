@@ -1,10 +1,13 @@
 import React, {Component, Fragment} from 'react'
 import './index.css'
 
-export default class Poppup extends Component {
+
+
+ export  default  class Poppup extends Component {
   constructor(props) {
     super(props)
-
+    this.nameRef = React.createRef()
+    this.phoneRef = React.createRef()
     this.state = {
       modalState: this.props.modalStatus,
       result: false
@@ -12,12 +15,20 @@ export default class Poppup extends Component {
   }
 
 
-  changeResult = (event) => {
+
+
+  handleSubmit = async(event) => {
     event.preventDefault()
-    this.setState({result: !this.state.result})
-  }
-
-
+    await fetch(`http://dside.pl/api/en/home/addOrder/`, {
+       headers: {
+         'Accept': 'application/json',
+         'Content-Type': 'application/json'
+       },
+       method: "POST",
+       body: JSON.stringify({name: this.nameRef.current.value, phone: this.phoneRef.current.value, data: new Date().toISOString() })
+     })
+    await  this.setState({result: true})
+   }
 
   render() {
 
@@ -42,27 +53,27 @@ export default class Poppup extends Component {
                   <div id="form-result">
                     <h3 id="thanks">Cпасибо!
                       <span>Заявка успешно отправлена!</span></h3>
-                  </div> : null
+                  </div> :  <div id="form-itself">
+                      <h3 >Оставьте Ваш номер телефона</h3>
+                      <p >И Вы получите бесплатную консультацию по интересующему Вас вопросу. Обычно мы перезваниваем в течении 30 секунд.</p>
+                      <form  onSubmit={this.handleSubmit} id="request-form" method="post" autocomplete="off">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="16en0jPOOddfSpZ8FAdslU61aXFCtePx" />
+
+                        <div>
+                          <label for="id_subject">Имя:</label>
+
+                          <input ref={this.nameRef} id="id_name" maxlength="50" minlength="3" name="name" placeholder="Имя" required="required" type="text" />
+                        </div>
+                        <div>
+                          <label for="id_sender">Телефон:</label>
+
+                          <input   ref={this.phoneRef} id="id_phone" maxlength="50" minlength="6" name="phone" placeholder="Телефон" required="required" type="tel" />
+                        </div>
+                        <input type="submit" class="button14" value="Отправить" />
+                      </form>
+                    </div>
                 }
-                <div id="form-itself">
-                  <h3 >Оставьте Ваш номер телефона</h3>
-                  <p >И Вы получите бесплатную консультацию по интересующему Вас вопросу. Обычно мы перезваниваем в течении 30 секунд.</p>
-                  <form  id="request-form" method="post" autocomplete="off">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="16en0jPOOddfSpZ8FAdslU61aXFCtePx" />
 
-                      <div>
-                        <label for="id_subject">Имя:</label>
-
-                        <input id="id_name" maxlength="50" minlength="3" name="name" placeholder="Имя" required="required" type="text" />
-                      </div>
-                      <div>
-                        <label for="id_sender">Телефон:</label>
-
-                        <input id="id_phone" maxlength="50" minlength="6" name="phone" placeholder="Телефон" required="required" type="tel" />
-                      </div>
-                      <input type="submit" onClick={this.changeResult} class="button14" value="Отправить" />
-                  </form>
-                </div>
               </div>
 
             </div>
@@ -74,3 +85,6 @@ export default class Poppup extends Component {
   }
 
 }
+
+
+

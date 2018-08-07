@@ -7,6 +7,7 @@ import BadLogo from './bad__logo.png'
 import GoodLogo from './goodlogo.png'
 import logoHeader from './logo__header-service.png'
 import Footer from '../../../Basic/Footer'
+import YoutubeBackground from 'react-youtube-background'
 
 export default class LogoPage extends Component {
   constructor() {
@@ -15,16 +16,23 @@ export default class LogoPage extends Component {
 
   }
 
+  componentDidMount() {
+    window.scrollTo(0,0)
+  }
+
 
   render() {
 
     return(
         <div>
+          <YoutubeBackground
+          >
            <HeaderService
                textContainer={'dside_textContainer-logo'}
                logoHeader={logoHeader}
                serviceSlogan={'DSIDE to make your logo work BETTER'}
                textHeader={[<p>LOGO DES</p>, <p>IGN NOW</p>, <p> SUBWAYS</p>]} />
+          </YoutubeBackground>
             <section className="logo__service-case_studies">
 
               <div className="container__case-studies">

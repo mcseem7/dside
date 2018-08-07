@@ -9,7 +9,7 @@ import LogoPage from './components/CompanyPages/Services/logos'
 import BrandPage from './components/CompanyPages/Services/branding'
 import VideoPage from './components/CompanyPages/Services/videos'
 import Website from './components/CompanyPages/Services/websites'
-import Poppup from './HOC/Poppup/index';
+import Drilldown from 'react-router-drilldown'
 
 class App extends Component {
 
@@ -20,8 +20,8 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-
         <Switch>
+
           <Redirect exact from="/" to="/dside"/>
           <Route path="/dside" component={MainPages} />
           <Route path="/services/logo" component={LogoPage} />
