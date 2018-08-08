@@ -58,7 +58,7 @@ export default class Header extends Component {
             <div className="mid__content-logo">
               <div className="logo__container">
                 <div className="logo">
-                  <Link to="/dside" ><img src={Logo} alt="" width="90" /></Link>
+                  <Link to="/dside" className="link link--dside"><span><img src={Logo} alt="" width="90" /></span></Link>
                 </div>
               </div>
             </div>
