@@ -23,13 +23,13 @@ export default class RootContent extends Component {
     return (
       <div className="main__content">
         <Switch>
-          <Drilldown transitionDuration="500" viewportClassName="agrepullo" prefix="agrepullo">
+          <Drilldown transitionDuration="900" transitionTimingFunction="ease-in-out" viewportClassName="agrepullo" prefix="agrepullo">
           <Route exact path="/dside" component={Main} />
+            <Route path="/dside/aboutus" component={AboutUs} />
+            <Route path="/dside/portfolio" component={Portfolio} />
+            <Route path="/dside/portfolioitem" component={PortfolioItem} />
           <Route exact path="/dside/blog" component={Blog} />
           <Route exact path="/dside/blog/:blogitem" component={BlogItem} />
-          <Route path="/dside/portfolio" component={Portfolio} />
-          <Route path="/dside/portfolioitem" component={PortfolioItem} />
-          <Route path="/dside/aboutus" component={AboutUs} />
           </Drilldown>
         </Switch>
       </div>
