@@ -22,13 +22,13 @@ export default class RootContent extends Component {
 
     return (
       <div className="main__content">
-        <Switch component={Fader}>
-          <Route exact path="/dside" component={Main} />
+        <Switch >
+           <Route exact path="/dside" component={Main} />
             <Route path="/dside/aboutus" component={AboutUs} />
+            <Route exact path="/dside/blog" component={Blog} />
+            <Route exact path="/dside/blog/:blogitem" component={BlogItem} />
             <Route exact path="/dside/portfolio" component={Portfolio} />
             <Route exact path="/dside/:portfolioitem" component={PortfolioItem} />
-          <Route exact path="/dside/blog" component={Blog} />
-          <Route exact path="/dside/blog/:blogitem" component={BlogItem} />
         </Switch>
       </div>
     )

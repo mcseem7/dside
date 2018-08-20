@@ -151,7 +151,7 @@ figure.effect-marley:hover p {
 .grid figure figcaption > a {
     z-index: 1000;
     text-indent: 0%;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 12px;
     color: rgb(0,0,0);
     font-family: "MontBold";
@@ -159,7 +159,7 @@ figure.effect-marley:hover p {
     white-space: nowrap;
     opacity: 0;
     top: 207px;
-    left: -300px;
+    left: -620px;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
 }
@@ -171,7 +171,6 @@ figure.effect-marley:hover p {
 .grid figure figcaption:hover > a {
     opacity: 1;
     top: 207px;
-    left: -300px;
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }

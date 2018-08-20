@@ -11,7 +11,7 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
 
       this.state = {
         dataDside: [],
-        dataItem: [],
+        dataItemHome: [],
         postData: {
           name: '',
           email: ''
@@ -28,15 +28,15 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
        .then((response) => response.json())
        .then(data => this.setState({dataDside: data}))
         .catch(error => console.log(error))
-      await this.getItemApi()
+      await this.getItemApiHome()
     }
 
-    getItemApi = () => {
+    getItemApiHome = () => {
       Array.isArray(this.state.dataDside) &&  this.state.dataDside.map((homeItem) => {
           return fetch(`http://mydside.com/api/en/portfolio/getPortfolioItemDetails/${homeItem.id}/`).then((response) => {
             return response.json()
           }).then((item) => {
-            this.setState({dataItem: this.state.dataItem.concat(item)})
+            this.setState({dataItemHome: this.state.dataItemHome.concat(item)})
           })
         })
     }
@@ -58,7 +58,7 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
       return(
           <div>
             <DsideComponent
-                dataItem={this.state.dataItem}
+                dataItem={this.state.dataItemHome}
                 postData={this.postFormData}
                 getDsideApi={this.getDsideApi}
                 dataDside={this.state.dataDside}/>
