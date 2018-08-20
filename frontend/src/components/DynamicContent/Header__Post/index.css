@@ -100,6 +100,7 @@ figure.effect-marley:hover p {
     position: relative;
     list-style: none;
     text-align: center;
+    flex:  1 1 30%;
 }
 
 
@@ -110,8 +111,6 @@ figure.effect-marley:hover p {
     margin: 0px 0%;
     min-width: 320px;
     width: 100%;
-    max-width: 480px;
-    max-height: 360px;
     text-align: center;
     cursor: pointer;
 }
@@ -119,8 +118,10 @@ figure.effect-marley:hover p {
 .grid figure img {
     position: relative;
     display: block;
-    min-height: 315px;
-    max-width: 100%;
+    max-height: 360px;
+     max-width: 100%;
+     min-width: 100%;
+    min-height: 264px;
 }
 
 .grid figure figcaption {
@@ -174,6 +175,11 @@ figure.effect-marley:hover p {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }
+
+.grid figure figcaption > a:hover {
+    -webkit-text-fill-color: #e99758;
+}
+
 
 
 .grid figure h2 {
@@ -230,6 +236,9 @@ figure.effect-marley:hover p {
 .what__about-content {
     background: #ffffff;
 }
+
+
+
 
 
 @media screen and (max-width: 768px) {

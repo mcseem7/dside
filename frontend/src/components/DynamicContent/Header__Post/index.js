@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component,Fragment } from 'react'
 import PortfolioPost from './Portfolio__Post'
 import FirstImage from './images/four__image.png'
 import SecondImage from './images/thumbs-02.jpg'
@@ -10,12 +10,15 @@ import './index.css'
 import iconGrid from './images/icon__grid.svg'
 // import zindex from './images/Header_zIndex.png'
 import About from './../Main/About__block/index'
+import withDsideApi from './../../../HOC/Fetch'
+import PortolioPost from './Portfolio__Post'
 
+ class HeaderPost extends Component {
+  constructor (props) {
+    super(props)
 
-export default class HeaderPost extends Component {
-  constructor () {
-    super()
   }
+
 
   render () {
     return (
@@ -24,15 +27,7 @@ export default class HeaderPost extends Component {
         <div className="relative__content">
 
           <div className="content__posts">
-
-
-            <PortfolioPost imgPost={ThirdImage} altImg="3post" />
-            <PortfolioPost imgPost={FourImage} altImg="4post" />
-            <PortfolioPost imgPost={FiveImage} altImg="5post" />
-            <PortfolioPost imgPost={FirstImage} altImg="1post" />
-            <PortfolioPost imgPost={SixImage} altImg="6post" />
-            <PortfolioPost imgPost={SecondImage} altImg="2post" />
-
+                <PortolioPost {...this.props} />
           </div>
 
 
@@ -69,3 +64,5 @@ export default class HeaderPost extends Component {
     )
   }
 }
+
+export default withDsideApi(HeaderPost, '/portfolio/getHomePortfolioItems/', '/en')

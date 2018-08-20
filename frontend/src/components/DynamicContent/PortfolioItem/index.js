@@ -10,25 +10,17 @@ import imgsl from './layer-106-copy.png'
 
 
 export default class PortfolioItem extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
 
     this.state = {
-      items: []
+      items: [],
+      itemPortfolio: {}
     }
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
   }
 
-  async componentDidMount () {
-    try {
-      const portfolioJson = await fetch('http://dside.pl/api/en/portfolio/getPortfolioItemDetails/1')
-      const portfolioItem = await portfolioJson.json()
-      this.setState({ items: portfolioItem })
-    } catch (e) {
-      console.log(e)
-    }
-  }
 
   next = () => {
     this.slider.slickNext();
@@ -39,7 +31,11 @@ export default class PortfolioItem extends Component {
 
 
   componentDidMount() {
-    window.scrollTo(0, 0)
+    fetch(`http://mydside.com/api/en/portfolio/getPortfolioItemDetails/${this.props.match.params.portfolioitem}/`).then((response) => {
+      return response.json()
+    }).then((item) => {
+      return this.setState({itemPortfolio: item})
+    })
   }
 
 
@@ -51,10 +47,7 @@ export default class PortfolioItem extends Component {
       arrows:true,
       slidesToShow: 3,
       slidesToScroll: 1,
-
     };
-
-
     return (
       <div className="container__portfolio-item">
 
@@ -71,14 +64,14 @@ export default class PortfolioItem extends Component {
                   </div>
                   <div className="project__names">
                     <div className="category__project">
-                      <p>design</p>
+                      <p>websites</p>
                     </div>
                     <div className="name__project">
-                      <h4>Create brand</h4>
+                      <h4>{this.state.itemPortfolio.name}</h4>
                     </div>
 
                     <div className="name__customer">
-                      <p>CiTRON European USB Warehouse</p>
+                      <p>{this.state.itemPortfolio.name}</p>
                     </div>
                   </div>
                 </div>
@@ -88,7 +81,8 @@ export default class PortfolioItem extends Component {
                     <p className="name__description">Short project
                         description: <br />
                     </p>
-                    <p className="description__project"> Cоздать веб-сайт с минималистичным, качественным дизайном, с каталогом продуктов.  Сделать удобный конфигуратор для USB-накопителей
+                    <p className="description__project">
+                      {this.state.itemPortfolio.description}
                     </p>
                   </div>
                 </div>
@@ -98,13 +92,14 @@ export default class PortfolioItem extends Component {
                     <div className="watching__post">
                       <div className="icon-watching">
                         <div className="icon__blog" />
-                        <p>241 </p>
+                        <p>{
+                          this.state.itemPortfolio.views}</p>
                       </div>
                     </div>
                     <div className="time__post">
                       <div className="icon-timer">
                         <div className="icon__blog" />
-                        <p>5 <span>minutes</span></p>
+                        <p>{this.state.itemPortfolio.watching_time} <span>minutes</span></p>
                       </div>
                     </div>
                   </div>
@@ -125,7 +120,7 @@ export default class PortfolioItem extends Component {
 
 
           <div className="project__task_portfolio">
-            <p>Cоздать веб-сайт с минималистичным, качественным дизайном, с каталогом продуктов.  Сделать удобный конфигуратор для USB-накопителей
+            <p> {this.state.itemPortfolio.task}
             </p>
           </div>
 
@@ -138,7 +133,7 @@ export default class PortfolioItem extends Component {
           <div className="portfolio__screen-wrapper">
 
             <div className="portfolio__screen-item">
-              <img src={screenPortfolio} alt=""/>
+              <img src={`http://mydside.com/${this.state.itemPortfolio.main_image}`} alt=""/>
             </div>
           </div>
         </div>
@@ -153,7 +148,7 @@ export default class PortfolioItem extends Component {
 
 
           <div className="project__task_portfolio">
-            <p>В качестве основы используется сильный черно-белый стиль. За счет цветов, дизайн не только отлично смотрится, но и вполне достойно считывается конечным потребителем, который теперь испытывает ощущение того, что продукция CiTRON высококачественна и технологична.
+            <p>{this.state.itemPortfolio.decision}
             </p>
           </div>
 
@@ -182,7 +177,7 @@ export default class PortfolioItem extends Component {
 
           <div className="container__slider-portfolio">
 
-            <div className="item-slide" onClick={this.previous}>>
+            <div className="item-slide" onClick={this.previous}>
 
             </div>
 

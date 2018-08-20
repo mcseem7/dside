@@ -8,6 +8,7 @@
     "react-disqus-comments": "^1.2.0",
     "react-dom": "^16.4.1",
     "react-dribble-button": "^0.2.2",
+    "react-easy-transition": "^1.2.6",
     "react-google-maps": "^9.4.5",
     "react-scripts": "1.1.4",
     "react-slick": "^0.23.1",

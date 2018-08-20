@@ -43,6 +43,7 @@
     font-size: 18px;
     font-weight: 700;
     margin: 0;
+    flex: 1 1 45%;
 }
 
 .description__project {
@@ -119,6 +120,7 @@
 
 .portfolio__screen-item img {
     max-width: 100%;
+    width: 100%;
 }
 
 

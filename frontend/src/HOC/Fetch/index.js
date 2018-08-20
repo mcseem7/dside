@@ -10,7 +10,8 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
       super()
 
       this.state = {
-        data: [],
+        dataDside: [],
+        dataItem: [],
         postData: {
           name: '',
           email: ''
@@ -18,16 +19,30 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
       }
     }
 
-    componentDidMount() {
-        this.getDsideApi()
+    componentDidMount()  {
+     this.getDsideApi()
     }
 
-    getDsideApi = () => {
-      fetch(`http://dside.pl/api${lang}${apiUrl}`).then((response) => response.json()).then(data => this.setState({data}))
+    getDsideApi = async () => {
+      await fetch(`http://mydside.com/api${lang}${apiUrl}`)
+       .then((response) => response.json())
+       .then(data => this.setState({dataDside: data}))
+        .catch(error => console.log(error))
+      await this.getItemApi()
+    }
+
+    getItemApi = () => {
+      Array.isArray(this.state.dataDside) &&  this.state.dataDside.map((homeItem) => {
+          return fetch(`http://mydside.com/api/en/portfolio/getPortfolioItemDetails/${homeItem.id}/`).then((response) => {
+            return response.json()
+          }).then((item) => {
+            this.setState({dataItem: this.state.dataItem.concat(item)})
+          })
+        })
     }
 
     postFormData = (name, phone) => {
-      fetch(`http://dside.pl/api${lang}${apiUrl}`, {
+      fetch(`http://mydside.com/api${lang}${apiUrl}`, {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
@@ -42,7 +57,11 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
     render() {
       return(
           <div>
-            <DsideComponent postData={this.postFormData}  getDsideApi={this.getDsideApi} dataApi={this.state.data}/>
+            <DsideComponent
+                dataItem={this.state.dataItem}
+                postData={this.postFormData}
+                getDsideApi={this.getDsideApi}
+                dataDside={this.state.dataDside}/>
           </div>
       )
     }
