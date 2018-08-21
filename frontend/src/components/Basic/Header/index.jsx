@@ -43,7 +43,7 @@ export default class Header extends Component {
             <div className="left__content-icons">
               <div className="check__work-sockets">
                 <div className="check__work" onClick={this.showMenu}>
-                  <img src={GridIcon} alt="" width="15"/>
+                  <img src={GridIcon} width="15"/>
                 </div>
               </div>
 
