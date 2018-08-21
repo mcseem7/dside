@@ -11,3 +11,33 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
+.fade-appear,
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 500ms linear 550ms;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 550ms linear;
+}
+
+
+.wrapper___layout {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    right: 0px;
+    bottom:10px;
+}

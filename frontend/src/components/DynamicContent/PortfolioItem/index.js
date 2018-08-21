@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './index.css'
-import Slider from "react-slick";
+
 import logoProject from './rounded-rectangle-10.png'
 import screenPortfolio from './layer-104.png'
 import screenCitron from './layer-105.png'
@@ -17,17 +17,10 @@ export default class PortfolioItem extends Component {
       items: [],
       itemPortfolio: {}
     }
-    this.next = this.next.bind(this);
-    this.previous = this.previous.bind(this);
+
   }
 
 
-  next = () => {
-    this.slider.slickNext();
-  }
-  previous = () => {
-    this.slider.slickPrev();
-  }
 
 
   componentDidMount() {
@@ -40,14 +33,6 @@ export default class PortfolioItem extends Component {
 
 
   render () {
-    var settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      arrows:true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-    };
     return (
       <div className="container__portfolio-item">
 
@@ -181,7 +166,7 @@ export default class PortfolioItem extends Component {
 
             </div>
 
-            <Slider  ref={c => (this.slider = c)}  {...settings}>
+
 
                 <div className="slider-item__portfolio">
                   <div className="item_slider">
@@ -201,7 +186,7 @@ export default class PortfolioItem extends Component {
                 </div>
               </div>
 
-            </Slider>
+
 
           </div>
 

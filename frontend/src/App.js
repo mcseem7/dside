@@ -9,7 +9,7 @@ import LogoPage from './components/CompanyPages/Services/logos'
 import BrandPage from './components/CompanyPages/Services/branding'
 import VideoPage from './components/CompanyPages/Services/videos'
 import Website from './components/CompanyPages/Services/websites'
-import Drilldown from 'react-router-drilldown'
+import {CSSTransition,TransitionGroup} from 'react-transition-group'
 
 class App extends Component {
 
@@ -20,16 +20,22 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-        <Switch>
+        <Route render={({location}) => (
+          <TransitionGroup>
+            <CSSTransition key={location.key} timeout={1000} classNames="fade">
+              <Switch>
+                <Redirect exact from="/" to="/dside"/>
+                <Route path="/dside" component={MainPages} />
+                <Route path="/services/logo" component={LogoPage} />
+                <Route path="/services/brand" component={BrandPage} />
+                <Route path="/services/videos" component={VideoPage} />
+                <Route path="/services/website" component={Website} />
+                <Route path="/services/contactus" component={ContactUs} />
+              </Switch>
+            </CSSTransition>
+          </TransitionGroup>
+        )} />
 
-          <Redirect exact from="/" to="/dside"/>
-          <Route path="/dside" component={MainPages} />
-          <Route path="/services/logo" component={LogoPage} />
-          <Route path="/services/brand" component={BrandPage} />
-          <Route path="/services/videos" component={VideoPage} />
-          <Route path="/services/website" component={Website} />
-          <Route path="/services/contactus" component={ContactUs} />
-        </Switch>
       </div>
     )
   }

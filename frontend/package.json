@@ -8,14 +8,10 @@
     "react-disqus-comments": "^1.2.0",
     "react-dom": "^16.4.1",
     "react-dribble-button": "^0.2.2",
-    "react-easy-transition": "^1.2.6",
-    "react-google-maps": "^9.4.5",
     "react-scripts": "1.1.4",
-    "react-slick": "^0.23.1",
-    "react-transition-context": "^2.1.0",
+    "react-transition-group": "^2.4.0",
     "react-youtube": "^7.6.0",
     "react-youtube-background": "^0.1.4",
-    "slick-carousel": "^1.8.1",
     "styled-components": "^3.3.3",
     "styled-normalize": "^4.0.0"
   },
@@ -27,8 +23,6 @@
   },
   "devDependencies": {
     "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
-    "react-router-drilldown": "^3.0.2",
-    "react-view-slider": "^3.0.6"
+    "react-router-dom": "^4.3.1"
   }
 }
