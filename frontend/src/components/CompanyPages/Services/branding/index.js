@@ -9,17 +9,34 @@ import louis from './lois_viton.png'
 import arrow from './arrow.png'
 import YoutubeBackground from 'react-youtube-background'
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
+import withScrollReveal from 'react-scrollreveal';
+import WheelReact from 'wheel-react';
+import louisbag from './louisbag.png'
+import shadow from './shadow.png'
+import shadowLouis from './louisbag_shadow.png'
 
-export default class BrandPage extends Component {
+ class BrandPage extends Component {
   constructor() {
     super()
 
 
     this.state = {
-      findActive: false
+      findActive: false,
+      louisbag: false,
     }
 
+    WheelReact.config({
+      up: () => {
+        this.setState({louisbag: true})
+      },
+      down: () => {
+        this.setState({louisbag: false})
+      }
+    })
+
   }
+
+
   componentDidMount() {
     window.scrollTo(0,0)
   }
@@ -29,7 +46,9 @@ export default class BrandPage extends Component {
   }
 
 
+
   render() {
+    const { animationContainerReference } = this.props;
 
     return(
         <div>
@@ -45,49 +64,65 @@ export default class BrandPage extends Component {
               serviceCategory={'Branding'}
           />
           </YoutubeBackground>
-          <div className="branding__service-case_studies">
 
-              <div className="branding__service-left">
 
-                <div className="louis__img-container">
 
-                  <img src={louis} className="louis__bag-img" alt="" />
 
-                  <div className="arrow__louis-container">
-                  <img src={arrow} className="louis__arrow-img" alt=""/>
+
+
+            {
+              <div
+                  className="branding__service-case_studies sr-item"  {...WheelReact.events}>
+
+                <div className="branding__service-left">
+
+                  <div className="louis__img-container">
+
+                    <div className="shadow__louis">
+                    <img src={this.state.louisbag ? louis : louisbag} className={`louis__bag-img ${this.state.louisbag  ? 'sr-item' : ''}`} alt=""/>
+
+                    <div className="arrow__louis-container">
+                      <img src={arrow} className="louis__arrow-img" alt=""/>
+                    </div>
                   </div>
+
+                  <div className="shadow__wrapper">
+                    <img src={this.state.louisbag ? shadow : shadowLouis} alt=""/>
+                  </div>
+
+                  </div>
+
+
                 </div>
 
-              </div>
 
-            <div className="branding__service-right">
+                <div className="branding__service-right">
 
-              <div className="price__louis_wrapper">
+                  <div className="price__louis_wrapper">
 
-              <h1 className="price__louis">$ 2000</h1>
-              </div>
+                    <h1 className="price__louis">{this.state.louisbag ? '100$' : '2000$'}</h1>
+                  </div>
 
-              <p className="title__louis">
-                Louis Vuitton bag
-              </p>
-
-
-              <p className="loius__viton_title-description">
-                On branding depends
-              </p>
+                  <p className="title__louis">
+                    Louis Vuitton bag
+                  </p>
 
 
-              <p className="loius__viton_description">
-                How expensive you can sell your goods or services.<br />
-                As You know, brand-name original items from time to time are even more expensive than their unnamed counterparts.
-              </p>
-                {/*<div className="service_button_down">*/}
+                  <p className="loius__viton_title-description">
+                    On branding depends
+                  </p>
+
+
+                  <p className="loius__viton_description">
+                    How expensive you can sell your goods or services.<br/>
+                    As You know, brand-name original items from time to time are
+                    even more expensive than their unnamed counterparts.
+                  </p>
+                  {/*<div className="service_button_down">*/}
                   {/*order now*/}
-                {/*</div>*/}
-            </div>
-
-          </div>
-
+                  {/*</div>*/}
+                </div> </div>
+            }
 
           <div className={`find__out-branding ${this.state.findActive ? 'findBrand' : ''}`}>
 
@@ -125,3 +160,15 @@ export default class BrandPage extends Component {
     )
   }
 }
+
+export default withScrollReveal([
+
+  {
+    selector: '.sr-item',
+    options: {
+      reset: true,
+      delay: 400
+    },
+    interval: 100
+  }
+])(BrandPage)

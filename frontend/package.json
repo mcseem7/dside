@@ -3,17 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "apeman-react-scroll": "^2.0.10",
+    "gsap": "^2.0.1",
     "history": "^4.7.2",
     "react": "^16.4.1",
     "react-disqus-comments": "^1.2.0",
     "react-dom": "^16.4.1",
     "react-dribble-button": "^0.2.2",
     "react-scripts": "1.1.4",
+    "react-scrollreveal": "^1.2.0",
+    "react-spring": "^5.6.8",
     "react-transition-group": "^2.4.0",
     "react-youtube": "^7.6.0",
     "react-youtube-background": "^0.1.4",
+    "scrollreveal": "^4.0.0",
     "styled-components": "^3.3.3",
-    "styled-normalize": "^4.0.0"
+    "styled-normalize": "^4.0.0",
+    "wheel-react": "^1.0.3"
   },
   "scripts": {
     "start": "react-scripts start",

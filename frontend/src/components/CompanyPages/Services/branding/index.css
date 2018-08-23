@@ -114,6 +114,7 @@
 
 .louis__img-container {
     display: flex;
+    flex-direction: column;
 }
 
 .louis__bag-img {
@@ -255,8 +256,29 @@
 
 
 
+.shadow__louis {
+    display: flex;
+}
 
+.shadow__wrapper img {
+    max-width: 100%;
+}
 
+.louis__bag-img {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.sr-item {
+    transition: none;
+    -o-transition: none;
+    -ms-transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
 
 
 
