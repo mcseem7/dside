@@ -1,6 +1,6 @@
 {
   "name": "dside",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "apeman-react-scroll": "^2.0.10",
