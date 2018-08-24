@@ -46,6 +46,7 @@ import Poppup from '../../../../HOC/Poppup/index';
 
   componentDidMount() {
     window.scrollTo(0,0)
+
   }
 
   findOut = () => {
@@ -60,7 +61,14 @@ import Poppup from '../../../../HOC/Poppup/index';
 
   render() {
     const { animationContainerReference } = this.props;
-
+    WheelReact.config({
+      up: () => {
+        this.setState({louisbag: true})
+      },
+      down: () => {
+        this.setState({louisbag: false})
+      }
+    })
     return(
         <div>
           <YoutubeBackground
