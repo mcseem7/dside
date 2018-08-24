@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component, Fragment} from 'react'
 import HeaderService from '../serviceComponents/HeaderService/index'
 import CaseService from '../serviceComponents/CaseService/index'
 import LimitedService from '../serviceComponents/LimitedService'
@@ -72,15 +72,24 @@ import shadowLouis from './louisbag_shadow.png'
 
             {
               <div
-                  className="branding__service-case_studies sr-item"  {...WheelReact.events}>
+                  className="branding__service-case_studies "  {...WheelReact.events}>
 
                 <div className="branding__service-left">
 
                   <div className="louis__img-container">
 
                     <div className="shadow__louis">
-                    <img src={this.state.louisbag ? louis : louisbag} className={`louis__bag-img ${this.state.louisbag  ? 'sr-item' : ''}`} alt=""/>
-
+                      {this.state.louisbag ?
+                          <Fragment>
+                            <img src={louisbag} className={`louis__bag-img `} style={{ top: '-65px'}} alt=""/>
+                    <img src={louis} className={`louis__bag-img ${'sr-item'}`} alt=""/>
+                          </Fragment>
+                          :
+                          <Fragment>
+                            <img src={louisbag} className={`louis__bag-img ${ 'sr-item'}`} alt=""/>
+                          <img src={louis} className={`louis__bag-img `}  alt=""/>
+                          </Fragment>
+                      }
                     <div className="arrow__louis-container">
                       <img src={arrow} className="louis__arrow-img" alt=""/>
                     </div>
@@ -100,7 +109,7 @@ import shadowLouis from './louisbag_shadow.png'
 
                   <div className="price__louis_wrapper">
 
-                    <h1 className="price__louis">{this.state.louisbag ? '100$' : '2000$'}</h1>
+                    <h1 className="price__louis">{this.state.louisbag ? '2000$' : '100$'}</h1>
                   </div>
 
                   <p className="title__louis">

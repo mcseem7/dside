@@ -125,7 +125,7 @@
 .arrow__louis-container {
     display: flex;
     height: 80px;
-    margin-left: -155px;
+margin-left: 245px;
     align-items: center;
     margin-right: 45px;
 }
@@ -258,27 +258,33 @@
 
 .shadow__louis {
     display: flex;
+    position: relative;
 }
 
 .shadow__wrapper img {
     max-width: 100%;
+    position: relative;
+    top: 275px;
 }
+
 
 .louis__bag-img {
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    opacity:1;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+    filter: alpha(opacity=1);
 }
 
-.sr-item {
-    transition: none;
-    -o-transition: none;
-    -ms-transition: none;
-    -moz-transition: none;
-    -webkit-transition: none;
-    zoom: 1;
-    filter: alpha(opacity=50);
-    opacity: 0.5;
+ .sr-item {
+    opacity:0;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
 }
+
 
 
 
