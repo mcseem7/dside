@@ -61,14 +61,48 @@
 
 
 .price__louis {
-    background-image: linear-gradient(-252deg, rgba(191, 240, 128, 0.68) 0%, rgba(16, 141, 104, 0.68) 100%); -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #21201f;
-    -webkit-background-clip: text;
     font-family: MontBold;
     font-size: 70px;
+    padding-right: 10px;
     font-weight: 700;
 }
+
+
+
+.animate__louis {
+    width: 383px;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    animation-delay: 0ms;
+    animation-duration: 2000ms;
+    animation-fill-mode: both;
+}
+
+.price_animate {
+    animation-name: nabor-teksta;
+}
+
+
+.price_animate_end {
+    animation-name: nabor-teksta2;
+}
+
+@keyframes nabor-teksta {
+    0% { width: 0%;  }
+}
+
+
+@keyframes nabor-teksta2 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
 
 .price__louis_wrapper {
     display: flex;
@@ -89,7 +123,6 @@
     font-size: 25px;
     font-weight: 700;
     text-align: left;
-    line-height: 12px;
 }
 
 .loius__viton_title-description {
@@ -112,6 +145,19 @@
     font-weight: 300;
     line-height: 32px;
 }
+
+.sample_bag-text {
+    color: #21201f;
+}
+
+.louis_bag-text  {
+    background-image: linear-gradient(-252deg, rgba(99, 149, 34, 0.6) 0%, rgb(22, 114, 87) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #21201f;
+    -webkit-background-clip: text;
+}
+
 
 
 .louis__img-container {
@@ -277,22 +323,47 @@ margin-left: 245px;
 
 .louis__bag-img {
     position: absolute;
+    -webkit-transition: all 2000ms ease-in-out;
+    top: -90px;
+}
+
+.louis__bag-animate {
+    transform: translate(0,62px);
+    -webkit-transform: translate(0,62px);
+}
+
+.shadow__louis__wrapper {
+ position: relative;
+}
+
+
+.effect_animate-louisicon {
+    position: absolute;
+    left: 315px;
+    top: 145px;
+}
+
+.effect_animate-fadeBlock {
+    position: absolute;
+    width: 360px;
+    top: -38%;
+}
+
+.effect_animate-fadeBlock img {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.louis-icon {
+    opacity: 0;
     -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
     transition: opacity 1s ease-in-out;
-    opacity:1;
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+}
+
+.louis-icon_fade {
     filter: alpha(opacity=1);
+    opacity: 1;
 }
-
- .sr-item {
-    opacity:0;
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-}
-
-
 
 
 .cola__items {
@@ -378,3 +449,6 @@ margin-left: 245px;
     flex-direction: column;
     align-items: center;
 }
+
+
+

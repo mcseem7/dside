@@ -20,6 +20,8 @@ import thirdCola from './brandImg/color__three.png'
 import linear from './brandImg/Layer 113.png'
 import OrderButton from '../serviceComponents/OrderButton';
 import Poppup from '../../../../HOC/Poppup/index';
+import iconLouis from './brandImg/lois-icon.png'
+import fadeBag from './brandImg/Layer_108.png'
 
  class BrandPage extends Component {
   constructor() {
@@ -29,7 +31,8 @@ import Poppup from '../../../../HOC/Poppup/index';
     this.state = {
       findActive: false,
       louisbag: false,
-      modalActive: false
+      modalActive: false,
+      textlouisbag: false
     }
 
     WheelReact.config({
@@ -64,9 +67,13 @@ import Poppup from '../../../../HOC/Poppup/index';
     WheelReact.config({
       up: () => {
         this.setState({louisbag: true})
+        setTimeout(() => {
+          this.setState({louisbagtext: true})
+        },1800)
       },
       down: () => {
-        this.setState({louisbag: false})
+          this.setState({louisbag: false})
+          this.setState({louisbagtext: false})
       }
     })
     return(
@@ -98,24 +105,31 @@ import Poppup from '../../../../HOC/Poppup/index';
                   <div className="louis__img-container">
 
                     <div className="shadow__louis">
+                      <div className="shadow__louis__wrapper">
                       {this.state.louisbag ?
                           <Fragment>
-                            <img src={louisbag} className={`louis__bag-img `} style={{ top: '-65px'}} alt=""/>
-                    <img src={louis} className={`louis__bag-img ${'sr-item'}`} alt=""/>
+                            <img src={louis} className={`louis__bag-img louis__bag-animate`} alt=""/>
                           </Fragment>
                           :
                           <Fragment>
-                            <img src={louisbag} className={`louis__bag-img ${ 'sr-item'}`} alt=""/>
                           <img src={louis} className={`louis__bag-img `}  alt=""/>
                           </Fragment>
                       }
+                      <div className="effect_animate-louisicon">
+                            <img src={iconLouis} className={`louis-icon ${this.state.louisbagtext ? 'louis-icon_fade' : '' }`} alt=""/>
+                      </div>
+                      <div className="effect_animate-fadeBlock">
+                        <img src={fadeBag} className={`louis-icon ${this.state.louisbagtext ? 'louis-icon_fade' : '' }`} alt=""/>
+                      </div>
+
+                      </div>
                     <div className="arrow__louis-container">
                       <img src={arrow} className="louis__arrow-img" alt=""/>
                     </div>
                   </div>
 
                   <div className="shadow__wrapper">
-                    <img src={this.state.louisbag ? shadow : shadowLouis} alt=""/>
+                    <img src={this.state.louisbagtext ? shadow : shadowLouis} alt=""/>
                   </div>
 
                   </div>
@@ -128,12 +142,28 @@ import Poppup from '../../../../HOC/Poppup/index';
 
                   <div className="price__louis_wrapper">
 
-                    <h1 className="price__louis">{this.state.louisbag ? '2000$' : '100$'}</h1>
+
+
+                    {this.state.louisbagtext ?
+                        <Fragment>
+                          <span className="price__louis" style={{color: '#21201f'}}>$ </span>
+                          <h1 className={`price__louis louis_bag-text animate__louis ${'price_animate'}`}> 2000</h1>
+                        </Fragment>
+                    :
+                        <h1 className={`price__louis sample_bag-text animate__louis ${'price_animate_end'}`}>{'100 $'}</h1>
+                          }
+
                   </div>
 
-                  <p className="title__louis">
-                    Louis Vuitton bag
-                  </p>
+
+
+                  {this.state.louisbagtext ?   <p className={`title__louis animate__louis ${'price_animate'}`}>  Louis Vuitton bag</p>
+                      :
+                      <p className={`title__louis animate__louis ${'price_animate_end'}`}>  Sample bag</p>
+                  }
+
+
+
 
 
                   <p className="loius__viton_title-description">
