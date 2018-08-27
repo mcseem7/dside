@@ -77,8 +77,11 @@ figure.effect-marley h2::after {
     top: 100%;
     left: 0;
     width: 20%;
-    height: 2px;
-    background: #fff;
+    height: 1px;
+    background: -webkit-gradient(linear,left top,right top,from(#d99b91),to(#ad6f59));
+    background: -webkit-linear-gradient(left,#d99b91,#ad6f59);
+    background: -o-linear-gradient(left,#d99b91,#ad6f59);
+    background: linear-gradient(90deg,#d99b91,#ad6f59);
     content: '';
     -webkit-transform: translate3d(0,40px,0);
     transform: translate3d(0,40px,0);
@@ -154,8 +157,8 @@ figure.effect-marley:hover p {
     z-index: 1000;
     text-indent: 0%;
     font-size: 20px;
-    line-height: 12px;
-    color: rgb(0,0,0);
+    line-height: 9px;
+    color: #fff;
     font-family: "MontBold";
     text-decoration: none;
     white-space: nowrap;
@@ -187,7 +190,7 @@ figure.effect-marley:hover p {
     word-spacing: -0.15em;
     font-size: 19px;
     line-height: 8px;
-    color: rgb(0,0,0);
+    color: #fff;
     font-family: "MontLight";
 }
 
