@@ -21,14 +21,17 @@ export default class PortolioPost extends Component {
 <Fragment> {
   this.props.dataItem.map((item,key) => {
   return  <div className="grid">
+              <Link to={`/dside/${key + 1}`}>
       <figure className="effect-marley">
         <img src={`http://mydside.com/${item.main_image}`}
              alt={item.name}/>
         <figcaption>
           <h2>{item.name}</h2>
           <Link to={`/dside/${this.props.dataDside[0].id}`}>See project</Link>
+          <Link to={`/dside/${key + 1}`}>Explore project</Link>
         </figcaption>
       </figure>
+          </Link>
     </div>
   })
 }

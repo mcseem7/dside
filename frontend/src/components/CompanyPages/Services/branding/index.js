@@ -69,7 +69,7 @@ import fadeBag from './brandImg/Layer_108.png'
         this.setState({louisbag: true})
         setTimeout(() => {
             this.setState({louisbagtext: true})
-        },1000)
+        },400)
       },
       down: () => {
           this.setState({louisbag: false})
@@ -78,8 +78,7 @@ import fadeBag from './brandImg/Layer_108.png'
     })
     return(
         <div>
-          <YoutubeBackground
-          >
+          <YoutubeBackground videoId="eJ8SOYUkWl0">
           <HeaderService
               stylelogotext={'logo__service-text_brand'}
               logoHeader={LogoBrand}
@@ -152,7 +151,7 @@ import fadeBag from './brandImg/Layer_108.png'
 
 
 
-                  {this.state.louisbagtext ?   <p className={`title__louis animate__louis ${'price_animate'}`}>  Louis Vuitton bag</p>
+                  {this.state.louisbagtext ?   <p className={`title__louis animate__louis ${'price_animate'}`}>  Well-branded bag</p>
                       :
                       <p className={`title__louis animate__louis ${'price_animate_end'}`}>  Sample bag</p>
                   }
