@@ -37,7 +37,7 @@ export default class PortfolioItem extends Component {
     return (
       <div className="container__portfolio-item">
 
-        <div className="portfolio__header_item-wrapper">
+        <div className="portfolio__header_item-wrapper" style={{backgroundImage: `url(http://mydside.com/${this.state.itemPortfolio.main_image})`}}>
           <div className="header__portfolio-content">
             {/* <div className="project__picture"> */}
             {/* <img src="#" alt=""/> */}
@@ -46,7 +46,7 @@ export default class PortfolioItem extends Component {
               <div className="portfolio__title-content">
                 <div className="portfolio__name__content">
                   <div className="project__logo">
-                    <img src={logoProject} alt="" />
+                    <img src={`http://mydside.com/${this.state.itemPortfolio.logotype}`} alt="" />
                   </div>
                   <div className="project__names">
                     <div className="category__project">
@@ -56,9 +56,9 @@ export default class PortfolioItem extends Component {
                       <h4>{this.state.itemPortfolio.name}</h4>
                     </div>
 
-                    <div className="name__customer">
-                      <p>{this.state.itemPortfolio.name}</p>
-                    </div>
+                    {/*<div className="name__customer">*/}
+                      {/*<p>{this.state.itemPortfolio.name}</p>*/}
+                    {/*</div>*/}
                   </div>
                 </div>
 
