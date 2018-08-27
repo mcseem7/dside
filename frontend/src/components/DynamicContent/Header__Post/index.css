@@ -65,15 +65,15 @@ figure.effect-marley:hover h2 {
     transform: translate3d(0,0,0);
     opacity: 1;
 }
-
+figure.effect-marley  img {transform: scale(1); transition: all .3s;}
 figure.effect-marley:hover img {
     -webkit-filter: blur(5px);
     filter: blur(5px);
-    transform: scale(1);
+    transform: scale(1.1);
     background-color: rgba(15, 21, 30, 0.93);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-    transition: .3s filter linear;
+    transition: .3s filter linear, .3s transfrom linear;
 }
 
 figure.effect-marley h2::after {
