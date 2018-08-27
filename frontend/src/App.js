@@ -13,8 +13,20 @@ import {CSSTransition,TransitionGroup} from 'react-transition-group'
 
 class App extends Component {
 
+  constructor() {
+    super()
+
+    this.state = {
+      cook: true
+    }
+  }
+
   componentDidMount() {
     window.scrollTo(0,0)
+  }
+
+  confirmCookies = () => {
+    this.setState({cook: false})
   }
 
   render () {
@@ -35,7 +47,26 @@ class App extends Component {
             </CSSTransition>
           </TransitionGroup>
         )} />
+        {this.state.cook ?
+          <div className="cookies-container">
 
+            <div className="privacy__warning">
+              <p className="cook__description">
+                Мы используем куки-файлы, чтобы улучшить ваше восприятие нашего
+                сайта.
+                Вы можете увидеть, какие куки-файлы сохранены на вашем
+                устройстве с помощью настроек куки.
+                Просматривая наш сайт, вы соглашаетесь с использованием нами
+                куки-файлов.
+              </p>
+
+              <div className="cook__button">
+                <p onClick={this.confirmCookies}>Я согласен</p>
+              </div>
+
+            </div>
+          </div> : null
+        }
       </div>
     )
   }

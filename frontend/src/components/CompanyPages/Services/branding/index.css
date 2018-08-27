@@ -323,7 +323,7 @@ margin-left: 245px;
 
 .louis__bag-img {
     position: absolute;
-    -webkit-transition: all 2000ms ease-in-out;
+    -webkit-transition: all 1000ms ease-in-out;
     top: -90px;
 }
 
@@ -448,6 +448,19 @@ margin-left: 245px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.dside__team-man {
+    position: absolute;
+}
+
+.shadowImg__wrapper {
+    transform: scale(0.4);
+    -webkit-transition: all 1000ms ease-in-out;
+}
+
+.shadow__animate {
+    transform: scale(0.9);
 }
 
 

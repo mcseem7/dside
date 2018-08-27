@@ -68,8 +68,8 @@ import fadeBag from './brandImg/Layer_108.png'
       up: () => {
         this.setState({louisbag: true})
         setTimeout(() => {
-          this.setState({louisbagtext: true})
-        },1800)
+            this.setState({louisbagtext: true})
+        },1000)
       },
       down: () => {
           this.setState({louisbag: false})
@@ -90,11 +90,6 @@ import fadeBag from './brandImg/Layer_108.png'
               serviceCategory={'Branding'}
           />
           </YoutubeBackground>
-
-
-
-
-
 
             {
               <div
@@ -128,8 +123,8 @@ import fadeBag from './brandImg/Layer_108.png'
                     </div>
                   </div>
 
-                  <div className="shadow__wrapper">
-                    <img src={this.state.louisbagtext ? shadow : shadowLouis} alt=""/>
+                  <div className={'shadow__wrapper'}>
+                    <img className={`shadowImg__wrapper ${this.state.louisbag ? 'shadow__animate' : 'shadow__animate-return'}`} src={shadowLouis} alt=""/>
                   </div>
 
                   </div>
