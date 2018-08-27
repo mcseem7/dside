@@ -156,7 +156,7 @@ figure.effect-marley:hover p {
 .grid figure figcaption > a {
     z-index: 1000;
     text-indent: 0%;
-    font-size: 20px;
+    font-size: 10px;
     line-height: 9px;
     color: #fff;
     font-family: "MontBold";
@@ -180,9 +180,6 @@ figure.effect-marley:hover p {
     transform: translate3d(0,0,0);
 }
 
-.grid figure figcaption > a:hover {
-    -webkit-text-fill-color: #e99758;
-}
 
 
 

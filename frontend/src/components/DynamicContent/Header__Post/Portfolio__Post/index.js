@@ -23,7 +23,7 @@ export default class PortolioPost extends Component {
              alt={item.name}/>
         <figcaption>
           <h2>{item.name}</h2>
-          <Link to={`/dside/${key + 1}`}>Explore project</Link>
+          <Link className="shining-underline" to={`/dside/${key + 1}`}>Explore project<span></span></Link>
         </figcaption>
       </figure>
     </div>
