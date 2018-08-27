@@ -21,6 +21,7 @@ import PortolioPost from './Portfolio__Post'
 
 
   render () {
+    console.log(this.props)
     return (
         <div>
       <section className="portfolio__posts">

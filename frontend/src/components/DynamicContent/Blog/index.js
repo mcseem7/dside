@@ -105,7 +105,7 @@ export default class Blog extends Component {
               </div>
               <div className="icon-cube__wrapper">
                 <div className="icon__cube">
-                  <img src={gridIcon} alt=""/>
+
                 </div>
               </div>
             </div>

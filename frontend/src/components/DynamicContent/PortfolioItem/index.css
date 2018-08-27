@@ -153,4 +153,5 @@
 
 .container__slider-portfolio {
     padding-bottom: 60px;
+    display: flex;
 }
