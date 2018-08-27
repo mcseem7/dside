@@ -10,6 +10,7 @@
     "react-disqus-comments": "^1.2.0",
     "react-dom": "^16.4.1",
     "react-dribble-button": "^0.2.2",
+    "react-fader": "^2.0.3",
     "react-scripts": "1.1.4",
     "react-scrollreveal": "^1.2.0",
     "react-spring": "^5.6.8",
