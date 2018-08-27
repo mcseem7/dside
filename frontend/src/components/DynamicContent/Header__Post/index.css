@@ -103,6 +103,7 @@ figure.effect-marley:hover p {
     opacity: 1;
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
+    transition: opacity 0.35s, transform 0.35s;
 }
 
 .grid {
@@ -131,7 +132,7 @@ figure.effect-marley:hover p {
      max-width: 100%;
      min-width: 100%;
     min-height: 264px;
-     transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .grid figure figcaption {
@@ -183,6 +184,7 @@ figure.effect-marley:hover p {
     top: 227px;
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
+    transition: opacity 0.35s, transform 0.35s;
 }
 
 
