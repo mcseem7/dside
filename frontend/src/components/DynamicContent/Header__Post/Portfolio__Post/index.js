@@ -27,8 +27,7 @@ export default class PortolioPost extends Component {
              alt={item.name}/>
         <figcaption>
           <h2>{item.name}</h2>
-          <Link to={`/dside/${this.props.dataDside[0].id}`}>See project</Link>
-          <Link to={`/dside/${key + 1}`}>Explore project</Link>
+          <Link to={`/dside/${this.props.dataDside[0].id}`}>Explore project</Link>
         </figcaption>
       </figure>
           </Link>
