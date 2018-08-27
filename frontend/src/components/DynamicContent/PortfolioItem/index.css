@@ -155,3 +155,11 @@
     padding-bottom: 60px;
     display: flex;
 }
+
+.project__logo img {
+    max-width: 100%;
+}
+
+.project__logo {
+    width: 150px;
+}
