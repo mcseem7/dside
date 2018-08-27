@@ -11,6 +11,9 @@ import Motorlab from '../../../sources/images/works__logo/motorlab.svg'
 import Smotra from '../../../sources/images/works__logo/smotra.svg'
 import nau from '../../../sources/images/works__logo/nau.svg'
 import diet from '../../../sources/images/works__logo/uda.svg'
+import apply from '../../../sources/images/works__logo/applu.svg'
+import Poppup from '../../../../HOC/Poppup/index';
+
 class Brand extends Component {
   constructor (props) {
     super(props)
@@ -18,7 +21,7 @@ class Brand extends Component {
 
   render () {
     return (
-      <div className="brand">
+      <div className={`brand ${this.props.name != '' ? this.props.name : ''}`} >
         <img src={this.props.brandImg} alt="" />
       </div>
     )
@@ -26,6 +29,21 @@ class Brand extends Component {
 }
 
 export default class Works extends Component {
+
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      modalActive: false
+    }
+  }
+
+  changePoppup = () => {
+    this.setState({modalActive: !this.state.modalActive}, () => {
+      console.log(this.state.modalActive)
+    })
+  }
+
   render () {
     return (
       <section className="brands__company-container">
@@ -51,12 +69,15 @@ export default class Works extends Component {
                 <Brand brandImg={Smotra} />
                 <Brand brandImg={Polismart} />
                 <Brand brandImg={nau} />
-                <Brand brandImg={nau} />
+                <div className={`brand applyyour`}  onClick={this.changePoppup} >
+                  <img src={apply} alt="" />
+                </div>
               </div>
 
             </div>
           </div>
         </div>
+        {this.state.modalActive ? <Poppup onClose={this.changePoppup} /> :  null}
       </section>
     )
   }

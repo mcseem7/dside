@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import './index.css'
 import gridIcon from './grid-icon.svg'
-import { Switch, Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import BlogItem from '../BlogItem'
+
 
 export default class Blog extends Component {
   constructor () {
@@ -14,6 +15,7 @@ export default class Blog extends Component {
   }
 
   componentDidMount () {
+      window.scrollTo(0, 0)
     const jsonBlogItem =
       {
         blogPost: [
@@ -57,12 +59,12 @@ export default class Blog extends Component {
     return (
 
       <section className="blog__container">
-          <Route  exact path="/blog/:blog_item" component={BlogItem} />
+
         <div className="blog__content">
           <div className="blog__post-items">
             {this.state.blogItem.map((item, key) => (<div className="blog__item">
               <div onClick={() => {
-                this.props.history.push(`./blogitem`)
+                this.props.history.push(`/dside/blog/${key}`)
               }} className="blog__item-content">
                 <div className="tag-item">
                   <p>{item.tag}</p>
@@ -103,7 +105,7 @@ export default class Blog extends Component {
               </div>
               <div className="icon-cube__wrapper">
                 <div className="icon__cube">
-                  <img src={gridIcon} alt=""/>
+
                 </div>
               </div>
             </div>

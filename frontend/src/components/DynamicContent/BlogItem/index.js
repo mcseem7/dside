@@ -2,13 +2,24 @@ import React, {Component} from 'react'
 import './index.css'
 import next from './next_post.png'
 import comm from './hypercomments.png'
+import ReactDisqusComments from 'react-disqus-comments';
+
 export default class BlogItem extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
+  handleNewComment(comment) {
+    console.log(comment.text);
+  }
+
   render() {
+    console.log(this.props)
     return(
         <div>
 
@@ -59,7 +70,13 @@ export default class BlogItem extends Component {
               <div className="comment__body-post">
 
                 <div id="comment__container">
-                  <img src={comm} alt=""/>
+                  <ReactDisqusComments
+                      shortname="example"
+                      identifier="something-unique-12345"
+                      title="Thread"
+                      url="http://dside-pl/"
+                      category_id="123456"
+                      onNewComment={this.handleNewComment}/>
                 </div>
 
               </div>

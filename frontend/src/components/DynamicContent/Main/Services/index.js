@@ -6,6 +6,9 @@ export default function Services () {
   return (
     <section>
       <div className="content__services">
+        <div className="title__service">
+          <h4>Our services</h4>
+        </div>
         <div className="services">
 
           <div className="title__service">
@@ -17,7 +20,7 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li><Link to="/branding">Branding</Link></li>
+              <li><Link to="/services/brand" className="shining-underline">Branding<span></span></Link></li>
               <li>Logo creation</li>
               <li>Naming</li>
               <li>Identity</li>
@@ -29,7 +32,7 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li><Link to="/logo">Logo</Link></li>
+              <li><Link to="/services/logo" className="shining-underline">Logo<span></span></Link></li>
               <li>Logo creation</li>
               <li>Naming</li>
               <li>Identity</li>
@@ -41,7 +44,7 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li><Link to="/videos">Videos</Link></li>
+              <li><Link to="/services/videos" className="shining-underline">Videos<span></span></Link></li>
               <li>Logo creation</li>
               <li>Naming</li>
               <li>Identity</li>
@@ -53,18 +56,21 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li><Link to="/websites">Websites</Link></li>
+              <li><Link to="/services/website" className="shining-underline">Websites<span></span></Link></li>
               <li>Logo creation</li>
               <li>Naming</li>
+
+
               <li>Identity</li>
             </ul>
           </div>
 
         </div>
 
-        <button className="more__about-service" >
-                More services
-        </button>
+        {/*<button className="more__about-service shining-underline" >*/}
+                {/*More services*/}
+          {/*<span></span>*/}
+        {/*</button>*/}
       </div>
     </section>
   )

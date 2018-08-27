@@ -5,8 +5,8 @@
 }
 
 .more__icon {
-    width: 20px;
-    margin-right: 12px;
+    width: 14px;
+    margin-right: 9px;
 }
 
 .load {
@@ -20,7 +20,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: rgb(0,0,0);
-    font-size: 18px;
+    font-size: 12px;
     font-weight: bold;
     background-image: linear-gradient(90deg, #d99b91 0%, #ad6f59 100%);
 }
@@ -33,3 +33,11 @@
     display:  flex;
     justify-content:  center;
 }
+
+.portolio__post {
+    cursor: pointer;
+}
+
+
+
+

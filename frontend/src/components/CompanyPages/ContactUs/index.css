@@ -1,0 +1,95 @@
+.background__contactus {
+    width: 100%;
+    background: #F3F3F5;
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.contact-us__form_container {
+    display: flex;
+    justify-content: center;
+}
+
+.left__form-container {
+    background: white;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.right__form-container {
+    background: url('./Layer 106.png');
+}
+
+.left__form-container .title__form-contact h3 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 17px;
+    color: rgb(17,17,17);
+    font-family: "MontBold";
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.left__form-container .title__form-contact {
+    margin-top: 50px;
+    margin-bottom: 175px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.left__form-container .contactus__form_active {
+    padding-bottom: 260px;
+}
+
+
+.right__form-container {
+    padding-left: 60px;
+    padding-right: 125px;
+    padding-top: 75px;
+}
+
+
+
+.right__form-question_title h4 {
+    font-size: 18px;
+    line-height: 17px;
+    color: rgb(117,149,241);
+    font-family: "MontBold";
+    font-weight: bold;
+}
+
+.right__form_phone h2 {
+    font-size: 22px;
+    line-height: 17px;
+    color: rgb(255,255,255);
+    font-family: "MontBold";
+    font-weight: bold;
+}
+
+.right__form_street h4 {
+    font-size: 18px;
+    line-height: 17px;
+    color: rgb(117,149,241);
+    font-family: "MontBold";
+    font-weight: bold;
+}
+
+
+.background__contactus {
+    flex-direction: column;
+}
+
+.footer__copyright {
+    display: flex;
+    max-width: 1165px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.background__contactus .copyright__content {
+    width: 100%;
+    display: block;
+}

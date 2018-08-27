@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Logotype from '../../../sources/images/Logo.svg'
 import './index.css'
+import {Link} from 'react-router-dom'
 
 export default class About extends Component {
   constructor () {
@@ -27,9 +28,12 @@ export default class About extends Component {
           </div>
 
           <div className="more__about-button">
-            <button className="more__about">
+            <Link to="/dside/aboutus">
+            <button className="more__about shining-underline">
                   More about us
+              <span></span>
             </button>
+            </Link>
           </div>
         </div>
       </div>

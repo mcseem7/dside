@@ -43,6 +43,7 @@
     font-size: 18px;
     font-weight: 700;
     margin: 0;
+    flex: 1 1 64%;
 }
 
 .description__project {
@@ -80,7 +81,7 @@
 }
 
 .project__names {
-    margin-left: 20px;
+    margin-left: 50px;
 }
 
 .project__task_portfolio p {
@@ -108,6 +109,7 @@
     background-color: #ffffff;
     padding-top: 65px;
     padding-bottom: 55px;
+    padding-right: 80px;
 }
 
 .content__project-portfolio {
@@ -119,6 +121,8 @@
 
 .portfolio__screen-item img {
     max-width: 100%;
+    width: 100%;
+    height: 500px;
 }
 
 
@@ -151,4 +155,13 @@
 
 .container__slider-portfolio {
     padding-bottom: 60px;
+    display: flex;
+}
+
+.project__logo img {
+    max-width: 100%;
+}
+
+.project__logo {
+    width: 150px;
 }

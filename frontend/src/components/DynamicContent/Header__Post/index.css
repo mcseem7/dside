@@ -1,11 +1,9 @@
 .portfolio__posts {
     max-width: 1920px;
-    min-width: 1200px;
+    min-width: 320px;
     width: 100%;
     margin: 0 auto;
 }
-
-
 
 .post__img {
     max-width: 100%;
@@ -17,12 +15,202 @@
     display: flex;
     position: relative;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .portolio__post {
-    flex: 1 1 30%;
-    margin-bottom: -4px;
+    margin-bottom: -22px;
 }
+
+figure.effect-marley figcaption {
+    text-align: right;
+    transition: all 0.35s;
+}
+
+figure.effect-marley h2,
+figure.effect-marley p {
+    position: absolute;
+    right: 30px;
+    left: 30px;
+    padding: 10px 0;
+}
+
+
+figure.effect-marley p {
+    right: 220px;
+    bottom: 150px;
+    color: #fff;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+    font-size: 28px;
+    font-family: "MontLight";
+    font-weight: 300;
+}
+
+figure.effect-marley h2 {
+        color: #fff;
+    top: 50px;
+    left: 50px;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    text-align: left;
+    -webkit-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+    opacity: 0;
+}
+
+figure.effect-marley:hover figcaption{ background-color: rgba(15, 21, 30, 0.23); transition: all 0.25s;}
+figure.effect-marley:hover h2 {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    opacity: 1;
+}
+figure.effect-marley  img {transform: scale(1); transition: transform .3s  ease-in-out;}
+figure.effect-marley:hover img {
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    transform: scale(1.05);
+    background-color: rgba(15, 21, 30, 0.93);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    transition: .3s filter linear, .3s transform ease-in-out;
+}
+
+figure.effect-marley h2::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 20%;
+    height: 1px;
+    background: -webkit-gradient(linear,left top,right top,from(#d99b91),to(#ad6f59));
+    background: -webkit-linear-gradient(left,#d99b91,#ad6f59);
+    background: -o-linear-gradient(left,#d99b91,#ad6f59);
+    background: linear-gradient(90deg,#d99b91,#ad6f59);
+    content: '';
+    -webkit-transform: translate3d(0,40px,0);
+    transform: translate3d(0,40px,0);
+}
+
+figure.effect-marley h2::after,
+figure.effect-marley p {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-marley:hover h2::after,
+figure.effect-marley:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+.grid {
+    position: relative;
+    list-style: none;
+    text-align: center;
+    flex:  1 1 30%;
+}
+
+
+.grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 0px 0%;
+    min-width: 320px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.grid figure img {
+    position: relative;
+    display: block;
+    max-height: 360px;
+     max-width: 100%;
+     min-width: 100%;
+    min-height: 264px;
+    transform: scale(1.1);
+}
+
+.grid figure figcaption {
+    padding: 0em;
+    color: #fff;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+    pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+    z-index: 1000;
+    text-indent: 0%;
+    font-size: 12px;
+    line-height: 9px;
+    color: #fff;
+    font-family: "MontBold";
+    text-decoration: none;
+    white-space: nowrap;
+    opacity: 0;
+    top: 317px;
+    left: -340px;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+.grid figure figcaption > a::before {
+    background-image: url("./images/arrow.svg");
+}
+
+.grid figure figcaption:hover > a {
+    opacity: 1;
+    top: 227px;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+
+
+
+.grid figure h2 {
+    word-spacing: -0.15em;
+    font-size: 19px;
+    line-height: 8px;
+    color: #fff;
+    font-family: "MontLight";
+}
+
+.grid figure h2 span {
+    font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+    margin: 0;
+}
+
+.grid figure p {
+    letter-spacing: 1px;
+}
+
 
 
 .relative__content {
@@ -44,15 +232,29 @@
 
 
 .container__what {
-    background-image: url('images/layer-10.png');
+    background-image: url('images/layer-10.svg');
     position: absolute;
     width: 100%;
     background-size: cover;
     z-index: 5;
-    bottom: -5px;
+    bottom: -3px;
     height: 85px;
 }
 
 .what__about-content {
     background: #ffffff;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .content__posts  {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .container__what {
+        display: none;
+    }
 }

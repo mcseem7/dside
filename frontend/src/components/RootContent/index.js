@@ -5,9 +5,9 @@ import Blog from '../DynamicContent/Blog'
 import BlogItem from '../DynamicContent/BlogItem'
 import PortfolioItem from '../DynamicContent/PortfolioItem'
 import Portfolio from '../DynamicContent/Portfolio'
+import AboutUs from '../DynamicContent/About'
 import NotFound from '../Basic/NotFound'
-import ContactUs from '../CompanyPages/ContactUs'
-
+import Fader from 'react-fader'
 
 export default class RootContent extends Component {
   constructor (props) {
@@ -22,12 +22,13 @@ export default class RootContent extends Component {
 
     return (
       <div className="main__content">
-        <Switch>
-          <Route path="/" component={Main} />
-          <Route path="/blog" component={Blog} />
-          <Route path="/dside/blog/:blogitem" component={BlogItem} />
-          <Route path="/dside/portfolio" component={Portfolio} />
-          <Route path="/dside/portfolio/:item" component={PortfolioItem} />
+        <Switch >
+           <Route exact path="/dside" component={Main} />
+            <Route path="/dside/aboutus" component={AboutUs} />
+            <Route exact path="/dside/blog" component={Blog} />
+            <Route exact path="/dside/blog/:blogitem" component={BlogItem} />
+            <Route exact path="/dside/portfolio" component={Portfolio} />
+            <Route exact path="/dside/:portfolioitem" component={PortfolioItem} />
         </Switch>
       </div>
     )

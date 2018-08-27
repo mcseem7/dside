@@ -10,16 +10,46 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
       super()
 
       this.state = {
-        data: []
+        dataDside: [],
+        dataItemHome: [],
+        postData: {
+          name: '',
+          email: ''
+        }
       }
     }
 
-    componentDidMount() {
-        this.getDsideApi()
+    componentDidMount()  {
+     this.getDsideApi()
     }
 
-    getDsideApi = () => {
-      fetch(`http://dside.pl/api${lang}${apiUrl}`).then((response) => response.json()).then(data => this.setState({data}))
+    getDsideApi = async () => {
+      await fetch(`http://mydside.com/api${lang}${apiUrl}`)
+       .then((response) => response.json())
+       .then(data => this.setState({dataDside: data}))
+        .catch(error => console.log(error))
+      await this.getItemApiHome()
+    }
+
+    getItemApiHome = () => {
+      Array.isArray(this.state.dataDside) &&  this.state.dataDside.map((homeItem) => {
+          return fetch(`http://mydside.com/api/en/portfolio/getPortfolioItemDetails/${homeItem.id}/`).then((response) => {
+            return response.json()
+          }).then((item) => {
+            this.setState({dataItemHome: this.state.dataItemHome.concat(item)})
+          })
+        })
+    }
+
+    postFormData = (name, phone) => {
+      fetch(`http://mydside.com/api${lang}${apiUrl}`, {
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        method: "POST",
+        body: JSON.stringify({name: name.current.value, phone: phone.current.value, data: new Date().toISOString() })
+      })
     }
 
 
@@ -27,7 +57,11 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
     render() {
       return(
           <div>
-            <DsideComponent getDsideApi={this.getDsideApi} dataApi={this.state.data}/>
+            <DsideComponent
+                dataItem={this.state.dataItemHome}
+                postData={this.postFormData}
+                getDsideApi={this.getDsideApi}
+                dataDside={this.state.dataDside}/>
           </div>
       )
     }

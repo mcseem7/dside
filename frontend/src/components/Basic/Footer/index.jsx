@@ -1,10 +1,22 @@
 import React, { Component } from 'react'
 import './index.css'
 import arrow from '../../sources/images/works__logo/arrow.svg'
+import withDsideApi from '../../../HOC/Fetch'
+import Poppup from '../../../HOC/Poppup/index';
 
-export default class Footer extends Component {
+ class Footer extends Component {
+
   constructor (props) {
     super(props)
+
+    this.nameRef = React.createRef()
+    this.phoneRef = React.createRef()
+
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault()
+    this.props.postData(this.nameRef, this.phoneRef)
   }
 
   render () {
@@ -29,13 +41,17 @@ export default class Footer extends Component {
             </div>
 
             <div className="sending__form">
-              <form action="http://host" id="form__dside">
+              <form onSubmit={this.handleSubmit} id="form__dside">
                 <div className="inputs__send">
                   <div className="wrapper__name">
-                    <input type="text" id="name" placeholder="name" />
+                    <div className="shining-underline-cf">
+                      <input ref={this.nameRef} type="text" id="name" placeholder="name" /><span></span>
+                    </div>
                   </div>
                   <div className="wrapper__phone">
-                    <input id="phone" type="phone" placeholder="phone" />
+                    <div className="shining-underline-cf">
+                      <input ref={this.phoneRef} id="phone" type="phone" placeholder="phone" /><span></span>
+                  </div>
                   </div>
                 </div>
                 <button className="dside__send">
@@ -54,17 +70,18 @@ export default class Footer extends Component {
             </div>
 
             <div className="social__icons">
-              <div className="social__icon-behance">
-                <a href="">        </a>
-              </div>
-
-              <div className="social__icon-instagram">
-                <a href="">       </a>
-              </div>
+              <a href='http://behance.com' target="_blank" className="social__icon-behance">
+              </a>
+              <a href='http://instagram.com' target="_blank" className="social__icon-instagram">
+              </a>
             </div>
+
           </div>
         </div>
       </footer>
     )
   }
 }
+
+
+export default withDsideApi(Footer,'/home/addOrder/', '/en')
