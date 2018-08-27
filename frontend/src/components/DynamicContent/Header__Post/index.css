@@ -24,6 +24,7 @@
 
 figure.effect-marley figcaption {
     text-align: right;
+    transition: all 0.35s;
 }
 
 figure.effect-marley h2,
@@ -58,7 +59,7 @@ figure.effect-marley h2 {
     opacity: 0;
 }
 
-figure.effect-marley:hover figcaption{ background-color: rgba(15, 21, 30, 0.13);}
+figure.effect-marley:hover figcaption{ background-color: rgba(15, 21, 30, 0.23); transition: all 0.25s;}
 figure.effect-marley:hover h2 {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
