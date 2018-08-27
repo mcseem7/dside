@@ -184,9 +184,10 @@ margin-left: 245px;
 }
 
 .find__out-branding {
-    background-size: cover;
+    background-size: 100%;
     margin-top: 200px;
     background-image: url('./brandImg/cola__ground.png');
+    background-color: rgb(28, 10, 8) ;
     margin-bottom: 70px;
 }
 
@@ -316,8 +317,9 @@ margin-left: 245px;
 .shadow__wrapper img {
     max-width: 100%;
     position: relative;
-    left: -216px;
+    left: -276px;
     top: 275px;
+    opacity: .7;
 }
 
 
@@ -356,13 +358,19 @@ margin-left: 245px;
 
 .louis-icon {
     opacity: 0;
-    -webkit-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out;
+    transform: translateY(-20px);
+    -webkit-transition:  transform .3s ease, opacity .2s ease;
+    transition: transform .3s ease, opacity .2s ease;
+    transition-delay: .2s;
 }
-
+.cookies-container{z-index: 1000;}
 .louis-icon_fade {
     filter: alpha(opacity=1);
+     -webkit-transition:  transform .3s ease, opacity .6s ease;
+    transition: transform .3s ease, opacity .6s ease;
     opacity: 1;
+    transition-delay: .2s;
+    transform: translateY(0px);
 }
 
 
