@@ -43,7 +43,7 @@
     font-size: 18px;
     font-weight: 700;
     margin: 0;
-    flex: 1 1 45%;
+    flex: 1 1 64%;
 }
 
 .description__project {
@@ -81,7 +81,7 @@
 }
 
 .project__names {
-    margin-left: 20px;
+    margin-left: 50px;
 }
 
 .project__task_portfolio p {
