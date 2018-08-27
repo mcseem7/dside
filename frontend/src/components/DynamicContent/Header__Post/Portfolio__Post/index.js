@@ -18,7 +18,7 @@ export default class PortolioPost extends Component {
 <Fragment> {
   this.props.dataItem.map((item,key) => {
   return  <div className="grid">
-      <figure className="effect-marley">
+      <figure className="effect-marley" styleElm="background: url('{`http://mydside.com/${item.main_image}`}')">
         <img src={`http://mydside.com/${item.main_image}`}
              alt={item.name}/>
         <figcaption>
