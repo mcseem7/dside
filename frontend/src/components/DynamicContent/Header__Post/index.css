@@ -48,7 +48,8 @@ figure.effect-marley p {
 
 figure.effect-marley h2 {
         color: #fff;
-    top: 30px;
+    top: 50px;
+    left: 50px;
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
     text-align: left;
@@ -156,15 +157,15 @@ figure.effect-marley:hover p {
 .grid figure figcaption > a {
     z-index: 1000;
     text-indent: 0%;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 9px;
     color: #fff;
     font-family: "MontBold";
     text-decoration: none;
     white-space: nowrap;
     opacity: 0;
-    top: 207px;
-    left: -330px;
+    top: 357px;
+    left: -340px;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
 }
@@ -175,7 +176,7 @@ figure.effect-marley:hover p {
 
 .grid figure figcaption:hover > a {
     opacity: 1;
-    top: 207px;
+    top: 257px;
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }
