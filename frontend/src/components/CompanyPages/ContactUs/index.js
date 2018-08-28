@@ -17,7 +17,7 @@ export default class Contact  extends  Component {
   render() {
     return(
         <div>
-          <Header/>
+
           <section id="google__maps-container">
             <div className="google_map">
               {/*<MapWithAMarker*/}

@@ -64,7 +64,7 @@ export default class Blog extends Component {
           <div className="blog__post-items">
             {this.state.blogItem.map((item, key) => (<div className="blog__item">
               <div onClick={() => {
-                this.props.history.push(`/dside/blog/${key}`)
+                this.props.history.push(`/blog/${key}`)
               }} className="blog__item-content">
                 <div className="tag-item">
                   <p>{item.tag}</p>

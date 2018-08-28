@@ -11,7 +11,7 @@ export default class MainContent extends Component {
   render () {
     return (
         <div className="wrapper___layout">
-          <Header />
+
           <RootContent />
           <Footer/>
         </div>
