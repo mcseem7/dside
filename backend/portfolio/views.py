@@ -93,9 +93,11 @@ class PortfolioDetails(APIView):
             "headers_classes": pi.headers_classes,
             "logotype": pi.logotype.url,
             "days_developing": pi.days_developing,
+            "attachment":[{"type":x.kind, "content":x.content.url} for x in pi.attachment_set.all()],
+            "blocks":[{"type":x.kind, "content":(x.image if x.kind == "image" else x.content).url} for x in pi.attachment2_set.all()],
             "similar_items": [{
                 "id": x.id,
-                "name": x.portfoliotranslation_set.get(lang_code=lang_code),
+                "name": x.portfoliotranslation_set.get(lang_code=lang_code).name,
                 "thumbnail": x.thumbnail.url
             } for x in pi.similar_items.all() if x.portfoliotranslation_set.filter(lang_code=lang_code)],
         }
