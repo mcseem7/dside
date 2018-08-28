@@ -111,7 +111,6 @@ export default class AbotUs extends Component {
       activeTeam: true,
       result: {}
     }
-
   }
 
   componentDidMount() {
