@@ -7,6 +7,7 @@
 .more__icon {
     width: 14px;
     margin-right: 9px;
+    margin-top: 5px !important;
 }
 
 .load {

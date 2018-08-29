@@ -73,6 +73,7 @@ padding-top: 50px;
 }
 .advantages{display: flex; flex-direction: row; font-family: MontLight; font-size: 14px;}
 .advantages img{width: 36px;}
+.advantages span{text-align: center}
 
 @media screen and (max-width: 768px){
 
