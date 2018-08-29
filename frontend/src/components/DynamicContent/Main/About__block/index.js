@@ -28,7 +28,7 @@ export default class About extends Component {
           </div>
 
           <div className="more__about-button">
-            <Link to="/dside/aboutus">
+            <Link to="/aboutus">
             <button className="more__about shining-underline">
                   More about us
               <span></span>

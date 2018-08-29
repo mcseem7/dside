@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import registerServiceWorker from './registerServiceWorker'
 import styledNormalize from 'styled-normalize'
 import { injectGlobal } from 'styled-components'
@@ -16,9 +16,9 @@ const render = () => {
   baseStyles()
 
   ReactDOM.render(
-    <Router>
+    <BrowserRouter>
       <App />
-    </Router>,
+    </BrowserRouter>,
     document.getElementById('root')
   )
 }

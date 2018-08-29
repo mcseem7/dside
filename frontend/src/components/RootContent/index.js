@@ -19,16 +19,24 @@ export default class RootContent extends Component {
   }
 
   render () {
-
+    function forceTrailingSlash(nextState, replace) {
+      const path = nextState.location.pathname;
+      if (path.slice(-1) !== '/') {
+        replace({
+          ...nextState.location,
+          pathname: path + '/'
+        });
+      }
+    }
     return (
       <div className="main__content">
-        <Switch >
-           <Route exact path="/dside" component={Main} />
-            <Route path="/dside/aboutus" component={AboutUs} />
-            <Route exact path="/dside/blog" component={Blog} />
-            <Route exact path="/dside/blog/:blogitem" component={BlogItem} />
-            <Route exact path="/dside/portfolio" component={Portfolio} />
-            <Route exact path="/dside/:portfolioitem" component={PortfolioItem} />
+        <Switch onEnter={forceTrailingSlash}>
+            <Route exact path="/" component={Main} />
+            <Route exact path="/aboutus" component={AboutUs} />
+            <Route exact path="/blog" component={Blog} />
+            <Route exact path="/blog/:blogitem" component={BlogItem} />
+            <Route exact path="/portfolio" component={Portfolio} />
+            <Route exact path="/portfolio/:portfolioitem" component={PortfolioItem} />
         </Switch>
       </div>
     )

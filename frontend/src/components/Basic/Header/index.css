@@ -27,6 +27,7 @@
 
 .header__container {
     position: relative;
+    z-index: 1;
 }
 
 .left__content-icons {

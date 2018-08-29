@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Layout from './components'
 import './components/App.css'
 import Footer from './components/Basic/Footer'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import ContactUs from './components/CompanyPages/ContactUs'
 import MainPages from './components/index'
 import LogoPage from './components/CompanyPages/Services/logos'
@@ -10,6 +10,8 @@ import BrandPage from './components/CompanyPages/Services/branding'
 import VideoPage from './components/CompanyPages/Services/videos'
 import Website from './components/CompanyPages/Services/websites'
 import {CSSTransition,TransitionGroup} from 'react-transition-group'
+import Cookies from 'js-cookie'
+import Header from './components/Basic/Header/index';
 
 class App extends Component {
 
@@ -17,36 +19,48 @@ class App extends Component {
     super()
 
     this.state = {
-      cook: true
+        cook: true
     }
   }
 
   componentDidMount() {
+    if (Cookies.get('accept-cookie') == undefined) {
+      this.setState({cook: true})
+    } else {
+      this.setState({cook: false})
+    }
     window.scrollTo(0,0)
   }
 
   confirmCookies = () => {
     this.setState({cook: false})
+    Cookies.set('accept-cookie', true, { expires: 365 });
   }
 
   render () {
+
     return (
       <div className="App">
-        <Route render={({location}) => (
-          <TransitionGroup>
-            <CSSTransition key={location.key} timeout={1000} classNames="fade">
+
+        <Route render={(props) => {
+
+
+          return(
+
+              <TransitionGroup>
+                {props.location.pathname.match(/services\//gi) ?  null : <Header/>}
+            <CSSTransition key={props.location.key} timeout={300} classNames="fade">
               <Switch>
-                <Redirect exact from="/" to="/dside"/>
-                <Route path="/dside" component={MainPages} />
-                <Route path="/services/logo" component={LogoPage} />
-                <Route path="/services/brand" component={BrandPage} />
-                <Route path="/services/videos" component={VideoPage} />
-                <Route path="/services/website" component={Website} />
-                <Route path="/services/contactus" component={ContactUs} />
+                <Route exact path="/services/logo" component={LogoPage}/>
+                <Route exact path="/services/brand" component={BrandPage}/>
+                <Route exact path="/services/videos" component={VideoPage}/>
+                <Route exact path="/services/website" component={Website}/>
+                <Route exact path="/contactus" component={ContactUs}/>
+                <Route path="/" component={MainPages}/>
               </Switch>
             </CSSTransition>
-          </TransitionGroup>
-        )} />
+          </TransitionGroup>)
+        }} />
         {this.state.cook ?
           <div className="cookies-container">
 
