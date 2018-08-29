@@ -21,8 +21,9 @@ export default class PortolioPost extends Component {
 <Fragment> {
   this.props.dataItem.map((item,key) => {
   return  <div className="grid">
-      <figure className="effect-marley">
-        <Link to={`/portfolio/${this.props.dataDside[0].id + 1}`}><img src={`http://mydside.com/${item.thumbnail_image}`}
+      <Link to={`/portfolio/${this.props.dataDside[0].id + 1}`}>
+          <figure className="effect-marley">
+        <img src={`http://mydside.com/${item.thumbnail_image}`}
              alt={item.name}/>
         <figcaption>
           <h2>{item.name}</h2>
