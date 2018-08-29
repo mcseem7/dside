@@ -22,14 +22,14 @@ export default class PortolioPost extends Component {
   this.props.dataItem.map((item,key) => {
   return  <div className="grid">
       <figure className="effect-marley">
-        <img src={`http://mydside.com/${item.thumbnail_image}`}
+        <Link to={`/portfolio/${this.props.dataDside[0].id + 1}`}><img src={`http://mydside.com/${item.thumbnail_image}`}
              alt={item.name}/>
         <figcaption>
           <h2>{item.name}</h2>
-          <Link to={`/portfolio/${this.props.dataDside[0].id}`}>Explore project</Link>
+          <Link to={`/portfolio/${this.props.dataDside[0].id + 1}`}>Explore project</Link>
         </figcaption>
       </figure>
-
+     </Link>
     </div>
   })
 }
