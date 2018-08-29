@@ -25,7 +25,7 @@ export default class About extends Component {
             <p className="company__content">
               <div className="logotype">
                 <img src={Logotype} alt="" />
-              </div> is a value driven, focused and very ambitious digital agency based <br /> in Warsaw,
+              </div> is a value driven, focused and very ambitious digital agency based in Warsaw,<br />
               providing the best and innovative solutions for your business.
             </p>
           </div>
