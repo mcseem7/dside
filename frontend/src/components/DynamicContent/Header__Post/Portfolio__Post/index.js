@@ -23,7 +23,7 @@ export default class PortolioPost extends Component {
   return  <div className="grid">
               <Link to={`/dside/${this.props.dataDside[0].id}`}>
       <figure className="effect-marley">
-        <img src={`http://mydside.com/${item.main_image}`}
+        <img src={`http://mydside.com/${item.thumbnail_image}`}
              alt={item.name}/>
         <figcaption>
           <h2>{item.name}</h2>
