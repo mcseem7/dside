@@ -2,16 +2,16 @@
     max-width: 100%;
 }
 .logotype {
-    width: 70px;
+    width: 50px;
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 7px;
 }
 .question {
-    margin-top: 35px;
+    margin-top: 25px;
 }
 
 .company__content {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 30px;
     color: rgb(0,0,0);
     font-family: "MontLight";
@@ -36,7 +36,7 @@ padding-top: 50px;
 }
 
 .about__company-content {
-    flex: 1 1 70%;
+    flex: 1 4 80%;
 }
 
 .more__about {
@@ -71,7 +71,8 @@ padding-top: 50px;
     text-align: left;
     margin-left: -8px;
 }
-
+.advantages{display: flex; flex-direction: row; font-family: MontLight; font-size: 14px;}
+.advantages img{width: 36px;}
 
 @media screen and (max-width: 768px){
 
