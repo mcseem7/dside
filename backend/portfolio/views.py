@@ -49,6 +49,7 @@ class PortfolioItemList(APIView):
                         "tag": x.category.tag
                     },
                     "views": x.views,
+                    "CURL": x.base_name,
                     "watching_time": x.watching_time,
                     "description": translation.description,
                     "days_developing": x.days_developing,
