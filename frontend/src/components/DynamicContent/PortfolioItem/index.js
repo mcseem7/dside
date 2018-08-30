@@ -15,7 +15,9 @@ export default class PortfolioItem extends Component {
 
     this.state = {
       items: [],
-      itemPortfolio: {}
+      itemPortfolio: {},
+        blocksImg: '',
+        attachImg: ''
     }
   }
 
@@ -23,18 +25,27 @@ export default class PortfolioItem extends Component {
 
 
 
-  componentDidMount() {
-    console.log(this.props)
-    fetch(`http://mydside.com/api/en/portfolio/getPortfolioItemDetails/${this.props.match.params.portfolioitem}/`).then((response) => {
-      return response.json()
-    }).then((item) => {
-      return this.setState({itemPortfolio: item})
-    })
+ componentDidMount() {
+     return fetch(`http://mydside.com/api/en/portfolio/getPortfolioItemDetails/${this.props.match.params.portfolioitem}/`).then((response) => {
+         return response.json()
+     }).then((item) => {
+         this.setState({itemPortfolio: item}, () => {
+           for(let key in this.state.itemPortfolio.blocks ) {
+             console.log(this.state.itemPortfolio.blocks)
+            this.setState({blocksImg: this.state.itemPortfolio.blocks})
+           }
+
+            for(let key in this.state.itemPortfolio.attachment ) {
+                 this.setState({attachImg: this.state.itemPortfolio.attachment[key].content})
+             }
+         })
+     })
 
   }
 
 
   render () {
+
     return (
       <div className="container__portfolio-item">
 
@@ -120,7 +131,7 @@ export default class PortfolioItem extends Component {
           <div className="portfolio__screen-wrapper">
 
             <div className="portfolio__screen-item">
-              <img src={`http://mydside.com/${this.state.itemPortfolio.main_image}`} alt=""/>
+                <img src={`http://mydside.com/${this.state.attachImg }`} />
             </div>
           </div>
         </div>
@@ -147,9 +158,15 @@ export default class PortfolioItem extends Component {
 
           <div className="portfolio__screen-wrapper">
 
-            <div className="portfolio__screen-item">
-              <img src={screenCitron} alt=""/>
-            </div>
+              {Object.keys(this.state.blocksImg).map((item) => {
+                return (
+                    <div className="portfolio__screen-item">
+                        <img src={`http://mydside.com/${this.state.blocksImg[item].content }`} alt=""/>
+                    </div>
+                )
+              })
+
+              }
           </div>
         </div>
 
@@ -164,7 +181,7 @@ export default class PortfolioItem extends Component {
 
           <div className="container__slider-portfolio">
 
-            <div className="item-slide" onClick={this.previous}>
+            <div className="item-slide" >
 
             </div>
 

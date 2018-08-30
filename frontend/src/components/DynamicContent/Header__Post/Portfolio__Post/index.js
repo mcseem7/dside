@@ -13,11 +13,7 @@ export default class PortolioPost extends Component {
         }
     }
 
-    componentDidMount() {
-        this.props.dataDside.map((items) => {
-            this.setState({itemId: items.id})
-        })
-    }
+
 
 
     render() {
