@@ -49,6 +49,7 @@ class PortfolioItemList(APIView):
                         "tag": x.category.tag
                     },
                     "views": x.views,
+                    "thumbnail": x.thumbnail.url,
                     "CURL": x.base_name,
                     "watching_time": x.watching_time,
                     "description": translation.description,
@@ -79,6 +80,7 @@ class PortfolioDetails(APIView):
         response = {
             "name": translation.name,
             "task": translation.task,
+            "thumbnail": pi.thumbnail.url,
             "decision": translation.decision,
             "category": {
                 "name": pi.category.categorytranslation_set.get(lang_code=lang_code).name,
