@@ -91,6 +91,7 @@ class PortfolioDetails(APIView):
             "font_family": pi.font_family,
             "main_image": pi.main_image.url,
             "headers_classes": pi.headers_classes,
+            "CURL": pi.base_name,
             "logotype": pi.logotype.url,
             "days_developing": pi.days_developing,
             "attachment":[{"type":x.kind, "content":x.content.url} for x in pi.attachment_set.all()],
