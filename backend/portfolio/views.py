@@ -65,11 +65,11 @@ class PortfolioHomeItemList(PortfolioItemList):
 
 
 class PortfolioDetails(APIView):
-    def get(self, request, format=None, lang_code=None, id=None):
+    def get(self, request, format=None, lang_code=None, cURL=None):
 
         response = []
 
-        pi = PortfolioItem.objects.get(id=id)
+        pi = PortfolioItem.objects.get(base_name=cURL)
 
         try:
             translation = pi.portfoliotranslation_set.get(lang_code=lang_code)

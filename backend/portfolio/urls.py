@@ -7,5 +7,5 @@ urlpatterns = [
     url(r'^getPortfolioItems/$', PortfolioItemList.as_view()),
     url(r'^getHomePortfolioItems/(?P<category>[^.]+)/$', PortfolioHomeItemList.as_view()),
     url(r'^getHomePortfolioItems/$', PortfolioHomeItemList.as_view()),
-    url(r'^getPortfolioItemDetails/(?P<id>[^.]+)/$', PortfolioDetails.as_view()),
+    url(r'^getPortfolioItemDetails/(?P<cURL>[^.]+)/$', PortfolioDetails.as_view()),
 ]
