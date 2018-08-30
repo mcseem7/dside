@@ -169,7 +169,7 @@ figure.effect-marley:hover p {
     text-decoration: none;
     white-space: nowrap;
     opacity: 0;
-    top: 317px;
+    top: 195px;
     left: -340px;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
@@ -179,7 +179,7 @@ figure.effect-marley:hover p {
     background-image: url("./images/arrow.svg");
 }
 
-.grid:hover > a {
+.grid figure figcaption:hover > a {
     opacity: 1;
    
     -webkit-transform: translate3d(0,0,0);

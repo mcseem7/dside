@@ -4,30 +4,37 @@ import {Link} from 'react-router-dom'
 
 
 export default class PortolioPost extends Component {
-  constructor (props) {
-    super(props)
-
-  }
+    constructor(props) {
+        super(props)
 
 
+        this.state = {
+            itemId: []
+        }
+    }
+
+    componentDidMount() {
+        this.props.dataDside.map((items) => {
+            this.setState({itemId: items.id})
+        })
+    }
 
 
-  render () {
-     console.log(this.props)
+    render() {
+
+
     return (
 <Fragment> {
   this.props.dataItem.map((item,key) => {
   return  <div className="grid">
       <figure className="effect-marley">
-        <img src={`http://mydside.com/${item.main_image}`}
+        <img src={`http://mydside.com/${item.thumbnail}`}
              alt={item.name}/>
         <figcaption>
           <h2>{item.name}</h2>
-          {this.props.dataDside.map((items) => {
-            return (
-              <Link to={`/portfolio/${items.id}`}>Explore project</Link>
-            )
-          })
+          {
+              <Link to={`/portfolio/${item.CURL}`}>Explore project</Link>
+
         }
         </figcaption>
       </figure>

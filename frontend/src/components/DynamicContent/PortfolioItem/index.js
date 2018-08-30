@@ -30,6 +30,7 @@ export default class PortfolioItem extends Component {
     }).then((item) => {
       return this.setState({itemPortfolio: item})
     })
+
   }
 
 

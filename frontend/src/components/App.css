@@ -35,10 +35,3 @@ body {
     min-width: 320px;
 }
 
-
-@media screen and (max-width: 1200px ){
-    body {
-        display: flex;
-
-    }
-}

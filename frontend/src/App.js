@@ -48,7 +48,7 @@ class App extends Component {
           return(
 
               <TransitionGroup>
-                {props.location.pathname.match(/services\//gi) ?  null : <Header/>}
+                {props.location.pathname.match(/services\//gi) ?  <Header style={'none'}/>  : <Header style={'block'}/> }
             <CSSTransition key={props.location.key} timeout={300} classNames="fade">
               <Switch>
                 <Route exact path="/services/logo" component={LogoPage}/>

@@ -33,7 +33,7 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
 
     getItemApiHome = () => {
       Array.isArray(this.state.dataDside) &&  this.state.dataDside.map((homeItem) => {
-          return fetch(`http://mydside.com/api/en/portfolio/getPortfolioItemDetails/${homeItem.id}/`).then((response) => {
+          return fetch(`http://mydside.com/api/en/portfolio/getPortfolioItemDetails/${homeItem.CURL}/`).then((response) => {
             return response.json()
           }).then((item) => {
             this.setState({dataItemHome: this.state.dataItemHome.concat(item)})

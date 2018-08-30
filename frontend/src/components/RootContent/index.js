@@ -30,7 +30,7 @@ export default class RootContent extends Component {
     }
     return (
       <div className="main__content">
-        <Switch onEnter={forceTrailingSlash}>
+        <Switch >
             <Route exact path="/" component={Main} />
             <Route exact path="/aboutus" component={AboutUs} />
             <Route exact path="/blog" component={Blog} />

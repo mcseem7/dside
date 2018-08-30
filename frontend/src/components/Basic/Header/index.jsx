@@ -35,7 +35,7 @@ export default class Header extends Component {
 
   render () {
     return (
-        <div className="header__container">
+        <div className="header__container" style={{display: this.props.style}}>
       <header className="basic__header">
         <div className="basic__header-content">
           <div className="header__content">
