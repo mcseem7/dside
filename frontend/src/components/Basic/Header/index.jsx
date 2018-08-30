@@ -58,7 +58,7 @@ export default class Header extends Component {
             <div className="mid__content-logo">
               <div className="logo__container">
                 <div className="logo">
-                  <Link to="/dside" className="link link--dside"><span><img src={Logo} alt="" width="90" /></span></Link>
+                  <Link to="/" className="link link--dside"><span><img src={Logo} alt="" width="90" /></span></Link>
                 </div>
               </div>
             </div>
@@ -91,18 +91,18 @@ export default class Header extends Component {
               <div className="menu__header-column">
                 <div className="menu__header-item">
                   <div className="description__menu-title">
-                    <Link to="/dside/aboutus"   className="link__menu">About Us</Link>
-                    <p>Caption text under about us</p>
+                    <Link to="/aboutus"   className="link__menu">About Us</Link>
+                    {/*<p>Caption text under about us</p>*/}
                   </div>
                 </div>
 
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to="/services/contactus"  className="link__menu">Contact Us</Link>
+                    <Link to="/contactus"  className="link__menu">Contact Us</Link>
                   </div>
-                  <div className="description__menu-title">
-                    <p>Caption text under about us</p>
-                  </div>
+                  {/*<div className="description__menu-title">*/}
+                    {/*<p>Caption text under about us</p>*/}
+                  {/*</div>*/}
                 </div>
               </div>
 
@@ -110,20 +110,20 @@ export default class Header extends Component {
               <div className="menu__header-column">
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to="/dside/blog"  className="link__menu">Blog</Link>
+                    <Link to="/blog"  className="link__menu">Blog</Link>
                   </div>
-                  <div className="description__menu-title">
-                    <p>Caption text under about us</p>
-                  </div>
+                  {/*<div className="description__menu-title">*/}
+                    {/*<p>Caption text under about us</p>*/}
+                  {/*</div>*/}
                 </div>
 
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to="/dside"  className="link__menu">Home</Link>
+                    <Link to="/"  className="link__menu">Home</Link>
                   </div>
-                  <div className="description__menu-title">
-                    <p>Caption text under about us</p>
-                  </div>
+                  {/*<div className="description__menu-title">*/}
+                    {/*<p>Caption text under about us</p>*/}
+                  {/*</div>*/}
                 </div>
               </div>
             </div>

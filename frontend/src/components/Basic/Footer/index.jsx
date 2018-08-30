@@ -34,7 +34,7 @@ import Poppup from '../../../HOC/Poppup/index';
 
               <div className="question__form">
                 <p>Ready to talk to the team who can’t wait to<br />
-                  take your brand to new, exciting places?
+                  take your company to new, exciting places?
                 </p>
               </div>
 

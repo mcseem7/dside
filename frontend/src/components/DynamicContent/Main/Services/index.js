@@ -7,12 +7,13 @@ export default function Services () {
     <section>
       <div className="content__services">
         <div className="title__service">
-          <h4>Our services</h4>
+          <h4>What can you get?</h4>
         </div>
         <div className="services">
 
           <div className="title__service">
-            <h4>Our services</h4>
+            <h4>What can you get?</h4>
+            <h2>You can just come up with an IDEA</h2><p> and get a name for the company (naming), a name for the domain, a logo, a corporate identity, a marketing-kit, as well as a good-selling website and a customized advertising campaign.</p>
           </div>
 
           <div className="list__services-branding">
@@ -21,33 +22,10 @@ export default function Services () {
             {/* </div> */}
             <ul className="list">
               <li><Link to="/services/brand" className="shining-underline">Branding<span></span></Link></li>
-              <li>Logo creation</li>
-              <li>Naming</li>
+              <li>Brand legend</li>
+              <li>Brandbook</li>
               <li>Identity</li>
-            </ul>
-          </div>
-
-          <div className="list__services-strategy">
-            {/* <div className="title__list"> */}
-            {/* <h2>Branding</h2> */}
-            {/* </div> */}
-            <ul className="list">
-              <li><Link to="/services/logo" className="shining-underline">Logo<span></span></Link></li>
-              <li>Logo creation</li>
               <li>Naming</li>
-              <li>Identity</li>
-            </ul>
-          </div>
-
-          <div className="list__services-advert">
-            {/* <div className="title__list"> */}
-            {/* <h2>Branding</h2> */}
-            {/* </div> */}
-            <ul className="list">
-              <li><Link to="/services/videos" className="shining-underline">Videos<span></span></Link></li>
-              <li>Logo creation</li>
-              <li>Naming</li>
-              <li>Identity</li>
             </ul>
           </div>
 
@@ -57,11 +35,47 @@ export default function Services () {
             {/* </div> */}
             <ul className="list">
               <li><Link to="/services/website" className="shining-underline">Websites<span></span></Link></li>
-              <li>Logo creation</li>
-              <li>Naming</li>
+              <li>Landing page</li>
+              <li>E-commerce</li>
+              <li>Corporate</li>
+              <li>Intranet</li>
+            </ul>
+          </div>
 
-
-              <li>Identity</li>
+          <div className="list__services-advert">
+            {/* <div className="title__list"> */}
+            {/* <h2>Branding</h2> */}
+            {/* </div> */}
+            <ul className="list">
+              <li><Link to="/services/advertising" className="shining-underline">Advertising<span></span></Link></li>
+              <li>E-mail marketing</li>
+              <li>CPA marketing</li>
+              <li>Social media</li>
+              <li>Direct</li>
+            </ul>
+          </div>
+<div className="list__services-automation">
+            {/* <div className="title__list"> */}
+            {/* <h2>Branding</h2> */}
+            {/* </div> */}
+            <ul className="list">
+              <li><Link to="/services/automation" className="shining-underline">Automation<span></span></Link></li>
+              <li>Increasing efficency</li>
+              <li>Quality improvement</li>
+              <li>Reduction of staff</li>
+              <li>Сost reduction</li>
+            </ul>
+          </div>
+          <div className="list__services-videos">
+            {/* <div className="title__list"> */}
+            {/* <h2>Branding</h2> */}
+            {/* </div> */}
+            <ul className="list">
+              <li><Link to="/services/videos" className="shining-underline">Videos<span></span></Link></li>
+              <li>Motion graphics</li>
+              <li>3D modelling</li>
+              <li>Commercials</li>
+              <li>Filming</li>
             </ul>
           </div>
 

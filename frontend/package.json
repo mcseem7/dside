@@ -6,6 +6,7 @@
     "apeman-react-scroll": "^2.0.10",
     "gsap": "^2.0.1",
     "history": "^4.7.2",
+    "js-cookie": "^2.2.0",
     "react": "^16.4.1",
     "react-disqus-comments": "^1.2.0",
     "react-dom": "^16.4.1",

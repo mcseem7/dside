@@ -17,8 +17,8 @@ export default class PortfolioItem extends Component {
       items: [],
       itemPortfolio: {}
     }
-
   }
+
 
 
 
