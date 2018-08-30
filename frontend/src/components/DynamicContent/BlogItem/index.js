@@ -73,8 +73,8 @@ export default class BlogItem extends Component {
                   <ReactDisqusComments
                       shortname="example"
                       identifier="something-unique-12345"
-                      title="Example Thread"
-                      url="http://www.example.com/example-thread"
+                      title="Thread"
+                      url="http://dside-pl/"
                       category_id="123456"
                       onNewComment={this.handleNewComment}/>
                 </div>

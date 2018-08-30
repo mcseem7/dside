@@ -135,13 +135,16 @@
 }
 
 .meet__team-title {
+    max-width: 1200px;
+    margin: 0 auto;
     margin-top: 35px;
     padding-bottom: 55px;
 }
 
 .dside__meet_team {
-    max-width: 1200px;
+    max-width: 1349px;
     margin:  0 auto;
+    height: 470px;
 }
 
 .dside__team-man img {
@@ -151,7 +154,8 @@
 
 
 .dside__team-man {
-    opacity: 0.5;
+    opacity: 0.7;
+    position: absolute;
 }
 
 .dside__team-man:hover {
@@ -162,6 +166,7 @@
 .meet__team__dside {
     display: flex;
     align-items: baseline;
+    position: relative;
 }
 
 .dside__about-content {
@@ -170,4 +175,122 @@
 
 .team__man {
     background: url("./peopleCompany/Max.png");
+}
+
+.dside__team-man:nth-child(1) {
+    width: 260px;
+}
+
+.dside__team-man:nth-child(2) {
+    left: 195px;
+    width: 260px;
+    top: -14px;
+}
+
+
+.dside__team-man:nth-child(3) {
+    left: 390px;
+    width: 211px;
+    top: 41px;
+}
+
+.dside__team-man:nth-child(4) {
+    left: 550px;
+    width: 249px;
+    top: 59px;
+}
+
+.dside__team-man:nth-child(5) {
+    left: 730px;
+    width: 249px;
+    top: 46px;
+}
+
+.dside__team-man:nth-child(6) {
+    left: 920px;
+    width: 249px;
+    top: 40.8px;
+}
+
+.dside__team-man:nth-child(7) {
+    left: 1109px;
+    width: 305px;
+    top: 41px;
+}
+
+.fade__team {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.5s ;
+}
+
+.fadeNo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dside__meet-developer {
+    margin-top: 36px;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    margin-left: 55px;
+}
+
+.name-developer h4 {
+    color: #000000;
+    font-family: MontBold;
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.position-developer p {
+    color: #000000;
+    margin: 0;
+    font-family: MontLight;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.about__developer p {
+    color: #000000;
+    font-family: MontLight;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.about__developer {
+    margin-top: 60px;
+    max-width: 435px;
+    min-width: 200px;
+}
+
+.post_developer {
+    display: flex;
+    align-items: center;
+}
+
+.button__back-team {
+    margin-right: 20px;
+}
+
+.right__data-dev {
+    margin-left: 90px;
+}
+
+.button__back-team {
+    cursor: pointer;
+}
+
+.contact__links-developer {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.contact__links-developer a {
+    display: block;
 }

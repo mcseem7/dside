@@ -184,13 +184,30 @@
     width: 100%;
     background-size: cover;
     z-index: 5;
-    bottom: -5px;
+    bottom: -100px;
     height: 85px;
 }
 
 .dside__header-text_container {
     position: relative;
 }
+
+
+@media screen and (max-width: 480px){
+    .Player__videoContainer___2TVqS {
+        display: none;
+    }
+
+    .radius__wrapper {
+        bottom: -20px;
+    }
+
+    .logo__service-text {
+        line-height: 1;
+    }
+}
+
+
 
 
 .order__wrap {
@@ -337,4 +354,12 @@ box-shadow: 0px 0px 22px -1px rgba(176,255,102,0.7);
         display: flex;
     }
 
+}
+
+.Player__container___f3NHe {
+    overflow: inherit;
+}
+
+.grid__service-img {
+    cursor: pointer;
 }

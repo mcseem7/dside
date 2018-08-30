@@ -8,7 +8,7 @@
     height: 50px;
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 25px;
+    margin-top: 6px;
 }
 
 .add__work_plus{
@@ -27,6 +27,7 @@
 
 .header__container {
     position: relative;
+    z-index: 1;
 }
 
 .left__content-icons {
@@ -293,3 +294,96 @@
 
 
 
+/* General link styles */
+.link {
+	outline: none;
+	text-decoration: none;
+	position: relative;
+	line-height: 0;
+	color: #9e9ba4;
+	display: inline-block;
+}
+/* dside */
+.link--dside {
+	overflow: hidden;
+	padding: 10px 18px;
+	line-height: 0;
+	color: #242424;
+}
+
+.link--dside:hover {
+	color: #242424;
+}
+
+.link--dside::after {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	right: 0;
+	z-index: 0;
+	background: #0c0c0c;
+	-webkit-transform: translate3d(0,101%,0);
+	transform: translate3d(0,101%,0);
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	transition-delay: .1s;
+	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.link--dside:hover::after {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	background: #ed1d24;
+	transition-delay: .1s;
+}
+
+.link--dside span {
+	display: block;
+	position: relative;
+}
+
+.link--dside span::before {
+	content: url(Logo2.svg);
+	position: absolute;
+	color: #fff;
+	left: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 100%;
+	height: 0%;
+	opacity: 0;
+    z-index: 1;
+	transform: translate3d(0px,-5px,3px);
+    -webkit-transform: translate3d(0px,-5px,3px);
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	transition-delay: .15s;
+}
+
+.link--dside:hover span::before {
+    -webkit-transform: translate3d(0,0,0);
+	width: 100%;
+	opacity: 1;
+	transition: all 0.3s;
+	transform: translate3d(0px,0px,0px);
+	height: 100%;
+	transition-delay: .1s;
+}
+/* Media Queries */
+
+@media screen and (max-width: 42em) {
+	.link--dside { font-size: 3em; }
+}
+.agrepullo{
+    animation-name: example;
+    animation-duration: .5s;
+}
+@-webkit-keyframes example {
+    from {opacity: 0 ;}
+    to {opacity: 1 ;}
+}

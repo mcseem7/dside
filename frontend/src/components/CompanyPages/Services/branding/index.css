@@ -1,7 +1,6 @@
 .logo__service-text_brand p {
     text-align: right;
     margin-bottom: -34px;
-    margin-top: 20px;
 }
 
 
@@ -9,15 +8,18 @@
     /*max-width: 1200px;*/
     margin: 0 auto;
     display: flex;
+    justify-content: center;
+    margin-top: 110px;
 }
 
 
 
 .logo__service-img_brand {
     position: absolute;
-    top: -76px;
+    top: -70px;
     left: 0px;
-    width: 840px;
+    width: 935px;
+    z-index: 1;
 }
 
 .dside_textContainer-brand div:first-child {
@@ -53,19 +55,54 @@
     z-index: 100;
      display: flex;
     margin-left: 6%;
+    margin-right: -310px;
 }
 
 
 
 .price__louis {
-    background-image: linear-gradient(-252deg, rgba(191, 240, 128, 0.68) 0%, rgba(16, 141, 104, 0.68) 100%); -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #21201f;
-    -webkit-background-clip: text;
     font-family: MontBold;
     font-size: 70px;
+    padding-right: 10px;
     font-weight: 700;
 }
+
+
+
+.animate__louis {
+    width: 383px;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    animation-delay: 0ms;
+    animation-duration: 2000ms;
+    animation-fill-mode: both;
+}
+
+.price_animate {
+    animation-name: nabor-teksta;
+}
+
+
+.price_animate_end {
+    animation-name: nabor-teksta2;
+}
+
+@keyframes nabor-teksta {
+    0% { width: 0%;  }
+}
+
+
+@keyframes nabor-teksta2 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
 
 .price__louis_wrapper {
     display: flex;
@@ -86,7 +123,6 @@
     font-size: 25px;
     font-weight: 700;
     text-align: left;
-    line-height: 12px;
 }
 
 .loius__viton_title-description {
@@ -110,9 +146,23 @@
     line-height: 32px;
 }
 
+.sample_bag-text {
+    color: #21201f;
+}
+
+.louis_bag-text  {
+    background-image: linear-gradient(-252deg, rgba(99, 149, 34, 0.6) 0%, rgb(22, 114, 87) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #21201f;
+    -webkit-background-clip: text;
+}
+
+
 
 .louis__img-container {
     display: flex;
+    flex-direction: column;
 }
 
 .louis__bag-img {
@@ -123,7 +173,7 @@
 .arrow__louis-container {
     display: flex;
     height: 80px;
-    margin-left: -155px;
+margin-left: 245px;
     align-items: center;
     margin-right: 45px;
 }
@@ -134,10 +184,10 @@
 }
 
 .find__out-branding {
-    background: url('cola-banks.png');
-    background-position: 39% 19%;
-    height: 240px;
+    background-size: 100%;
     margin-top: 200px;
+    background-image: url('./brandImg/cola__ground.png');
+    background-color: rgb(28, 10, 8) ;
     margin-bottom: 70px;
 }
 
@@ -146,6 +196,7 @@
     margin: 0 auto;
     display: flex;
     padding-top: 24px;
+    padding-bottom: 20px;
     align-items: center;
 }
 
@@ -176,6 +227,7 @@
     width: 160px;
     height: 40px;
     font-size: 14px;
+    cursor: pointer;
     margint-top: 20px;
     color: #fff;
     text-transform: uppercase;
@@ -205,7 +257,7 @@
 @media screen and (max-width: 480px){
 
     .dside_textContainer-brand div:first-child {
-     font-size: 8.5rem;
+     font-size: 7.2rem;
  }
 
     .branding__service-case_studies {
@@ -221,6 +273,16 @@
         align-items: center;
     }
 
+    .logo__service-img_brand {
+        position: absolute;
+        top: -82px;
+        left: -119px;
+        width: 790px;
+        z-index: 1;
+    }
+
+
+
     .header__navigation {
         z-index: 1;
     }
@@ -230,4 +292,184 @@
         margin-top: -15px;
     }
 }
+
+.find__out-branding{
+    height: 225px;
+    transition: height 0.3s ease-out;
+    overflow: hidden;
+    background-repeat: no-repeat;
+
+}
+
+.findBrand {
+    background-repeat: no-repeat;
+    height: 1600px;
+    transition: height 1s ease-in;
+}
+
+
+
+.shadow__louis {
+    display: flex;
+    position: relative;
+}
+
+.shadow__wrapper img {
+    max-width: 100%;
+    position: relative;
+    left: -276px;
+    top: 275px;
+    opacity: .7;
+}
+
+
+.louis__bag-img {
+    position: absolute;
+    -webkit-transition: all 1000ms ease-in-out;
+    top: -90px;
+}
+
+.louis__bag-animate {
+    transform: translate(0,62px);
+    -webkit-transform: translate(0,62px);
+}
+
+.shadow__louis__wrapper {
+ position: relative;
+}
+
+
+.effect_animate-louisicon {
+    position: absolute;
+    left: 315px;
+    top: 145px;
+}
+
+.effect_animate-fadeBlock {
+    position: absolute;
+    width: 360px;
+    top: -38%;
+}
+
+.effect_animate-fadeBlock img {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.louis-icon {
+    opacity: 0;
+    transform: translateY(-20px);
+    -webkit-transition:  transform .3s ease, opacity .2s ease;
+    transition: transform .3s ease, opacity .2s ease;
+    transition-delay: .2s;
+}
+.cookies-container{z-index: 1000;}
+.louis-icon_fade {
+    filter: alpha(opacity=1);
+     -webkit-transition:  transform .3s ease, opacity .6s ease;
+    transition: transform .3s ease, opacity .6s ease;
+    opacity: 1;
+    transition-delay: .2s;
+    transform: translateY(0px);
+}
+
+
+.cola__items {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+
+.cola-item img {
+    max-width: 100%;
+}
+
+
+.cola__content h2 {
+    font-size: 30px;
+    line-height: 32px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    color: rgb(255,255,255);
+    font-family: "MontBold";
+}
+
+.cola__content p {
+    font-size: 14px;
+    color: rgb(255,255,255);
+    font-family: "MontLight";
+    font-weight: 300;
+}
+
+.cola__item-title {
+    display: flex;
+    align-items: flex-start;
+}
+
+.number__cola {
+    margin-top: 0px;
+    margin-right: 16px;
+    font-size: 50px;
+    line-height: 32px;
+    color: rgb(65,36,30);
+    font-family: "MontBold";
+}
+
+.cola-item_two .cola-item__content {
+        margin-top: 25px;
+}
+
+
+.cola-item_three .cola-item__content {
+    margin-top: 15px;
+}
+
+
+.linear__fade-arrow {
+    position: relative;
+    height: 370px;
+}
+
+.linear__fade-arrow img {
+    position: absolute;
+    top: -220px;
+    left: -225px;
+}
+
+
+.cola__items li:first-child {
+    margin-left: 35px;
+}
+
+.dsided__order-container h3 {
+    font-size: 53px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: rgb(255,255,255);
+    font-family: "MontBold";
+}
+
+
+.dsided__order-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dside__team-man {
+    position: absolute;
+}
+
+.shadowImg__wrapper {
+    transform: scale(0.4);
+    -webkit-transition: all 1000ms ease-in-out;
+}
+
+.shadow__animate {
+    transform: scale(0.9);
+}
+
+
 

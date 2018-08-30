@@ -34,7 +34,7 @@ import Poppup from '../../../HOC/Poppup/index';
 
               <div className="question__form">
                 <p>Ready to talk to the team who can’t wait to<br />
-                  take your brand to new, exciting places?
+                  take your company to new, exciting places?
                 </p>
               </div>
 
@@ -70,14 +70,12 @@ import Poppup from '../../../HOC/Poppup/index';
             </div>
 
             <div className="social__icons">
-              <div className="social__icon-behance">
-                <a href="https://dishots.com/u/DSIDE" target="_blank">        </a>
-              </div>
-
-              <div className="social__icon-instagram">
-                <a href="https://instagram.com/dsided" target="_blank">       </a>
-              </div>
+              <a href='http://behance.com' target="_blank" className="social__icon-behance">
+              </a>
+              <a href='http://instagram.com' target="_blank" className="social__icon-instagram">
+              </a>
             </div>
+
           </div>
         </div>
       </footer>

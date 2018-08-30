@@ -75,7 +75,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
-    line-height: 1.5;
+    line-height: 1;
     text-align: right;
     padding-right: 80px;
     margin: 0 auto;
@@ -105,8 +105,9 @@
 
 .dside_textContainer-logo  .logo__service-img {
     position: absolute;
-    top: 190px;
-    left: 75px;
+    top: 160px;
+    left: 100px;
+    z-index: 1;
     width: 950px;
 }
 
@@ -120,8 +121,10 @@
       width: auto;
   }
 
+
+
     .dside_textContainer-logo .logo__service-text {
-        font-size: 8.5rem;
+        font-size: 7.5rem;
     }
 
 
@@ -142,7 +145,7 @@
 
 
           .dside_textContainer-logo .logo__service-img {
-              top: 270px;
+              top: 170px;
               left: 10px;
           }
 

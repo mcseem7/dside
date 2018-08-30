@@ -1,25 +1,42 @@
-import React, { Component } from 'react'
+import React, { Component,Fragment } from 'react'
 import './index.css'
 import {Link} from 'react-router-dom'
+
 
 export default class PortolioPost extends Component {
   constructor (props) {
     super(props)
+
   }
 
+
+
+
   render () {
-    const { imgPost, altImg } = this.props
+     console.log(this.props)
     return (
-      <div className="portolio__post">
-        <div className="portfolio__post-wrapper">
-          <img className="post__img" src={imgPost} alt={altImg}/>
-              <div className="effect-marley">
-                <h2>Block Petro Poroschenko</h2>
-                <p>Work name</p>
-                <Link to="/">See project</Link>
-              </div>
-        </div>
-      </div>
+<Fragment> {
+  this.props.dataItem.map((item,key) => {
+  return  <div className="grid">
+      <figure className="effect-marley">
+        <img src={`http://mydside.com/${item.main_image}`}
+             alt={item.name}/>
+        <figcaption>
+          <h2>{item.name}</h2>
+          {this.props.dataDside.map((items) => {
+            return (
+              <Link to={`/portfolio/${items.id}`}>Explore project</Link>
+            )
+          })
+        }
+        </figcaption>
+      </figure>
+
+    </div>
+  })
+}
+</Fragment>
     )
   }
+
 }

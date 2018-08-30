@@ -15,133 +15,203 @@
     display: flex;
     position: relative;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .portolio__post {
-    flex: 1 1 30%;
     margin-bottom: -22px;
 }
 
-
-.portfolio__post-wrapper {
-    position: relative;
+figure.effect-marley figcaption {
+    text-align: right;
+    transition: all 0.35s;
 }
 
-
-
-
-
-.portfolio__post-wrapper  .effect-marley   h2,
-.portfolio__post-wrapper .effect-marley   p {
+figure.effect-marley h2,
+figure.effect-marley p {
     position: absolute;
-    right: 150px;
+    right: 30px;
     left: 30px;
     padding: 10px 0;
 }
 
 
-.portfolio__post-wrapper .effect-marley  p {
-    bottom: 30px;
-    line-height: 1.5;
+figure.effect-marley p {
+    right: 220px;
+    bottom: 150px;
+    color: #fff;
     -webkit-transform: translate3d(0,100%,0);
     transform: translate3d(0,100%,0);
+    font-size: 28px;
+    font-family: "MontLight";
+    font-weight: 300;
 }
 
-.portfolio__post-wrapper .effect-marley  h2 {
-    top: 30px;
+figure.effect-marley h2 {
+        color: #fff;
+    top: 50px;
+    left: 50px;
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
+    text-align: left;
     -webkit-transform: translate3d(0,20px,0);
     transform: translate3d(0,20px,0);
+    opacity: 0;
 }
 
-.portfolio__post-wrapper:hover  {
+figure.effect-marley:hover figcaption{ background-color: rgba(15, 21, 30, 0.23); transition: all 0.25s;}
+figure.effect-marley:hover h2 {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
+    opacity: 1;
+}
+figure.effect-marley  img {transform: scale(1); transition: transform .3s  ease-in-out;}
+figure.effect-marley:hover img {
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    transform: scale(1.05);
+    background-color: rgba(15, 21, 30, 0.93);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    transition: .3s filter linear, .3s transform ease-in-out;
 }
 
-
-
-.portfolio__post-wrapper .effect-marley  h2::after {
+figure.effect-marley h2::after {
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
-    height: 4px;
-    background: #fff;
+    width: 20%;
+    height: 1px;
+    background: -webkit-gradient(linear,left top,right top,from(#d99b91),to(#ad6f59));
+    background: -webkit-linear-gradient(left,#d99b91,#ad6f59);
+    background: -o-linear-gradient(left,#d99b91,#ad6f59);
+    background: linear-gradient(90deg,#d99b91,#ad6f59);
     content: '';
     -webkit-transform: translate3d(0,40px,0);
     transform: translate3d(0,40px,0);
 }
 
-
-.portfolio__post-wrapper .effect-marley  h2::after,
-.portfolio__post-wrapper .effect-marley  p {
-    opacity: 0;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s;
-    bottom: 150px;
-    text-align: left;
-}
-
-.portfolio__post-wrapper .effect-marley:hover h2::after,
-.portfolio__post-wrapper .effect-marley:hover p {
-    opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-}
-
-
-.portfolio__post-wrapper .effect-marley a::after,
-.portfolio__post-wrapper .effect-marley a {
+figure.effect-marley h2::after,
+figure.effect-marley p {
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
 }
 
-
-.portfolio__post-wrapper .effect-marley:hover a::after,
-.portfolio__post-wrapper .effect-marley:hover a {
+figure.effect-marley:hover h2::after,
+figure.effect-marley:hover p {
     opacity: 1;
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+.grid {
+    position: relative;
+    list-style: none;
+    text-align: center;
+    flex:  1 1 30%;
 }
 
 
-.effect-marley h2{
+.grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 0px 0%;
+    min-width: 320px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.grid figure img {
+    position: relative;
+    display: block;
+    max-height: 360px;
+     max-width: 100%;
+     min-width: 100%;
+    min-height: 264px;
+    transform: scale(1.1);
+}
+
+.grid figure figcaption {
+    padding: 0em;
+    color: #fff;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+    pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+    z-index: 1000;
+    text-indent: 0%;
+    font-size: 12px;
+    line-height: 9px;
+    color: #fff;
+    font-family: "MontBold";
+    text-decoration: none;
+    white-space: nowrap;
+    opacity: 0;
+    top: 317px;
+    left: -340px;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+.grid figure figcaption > a::before {
+    background-image: url("./images/arrow.svg");
+}
+
+.grid:hover > a {
+    opacity: 1;
+   
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+
+
+
+.grid figure h2 {
+    word-spacing: -0.15em;
     font-size: 19px;
     line-height: 8px;
-    color: rgb(0,0,0);
-    font-family: "MontBold";
-    font-weight: bold;
-    right: 150px;
-}
-
-.effect-marley a {
-    bottom: 60px;
-    position: relative;
-    margin-left: 30px;
-    background-image: linear-gradient(to right, #d99b91 0%, #ad6f59 100%);
-    background-clip: text;
-    color: #000000;
-    font-family: MontBold;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: left;
-}
-
-
-.effect-marley p {
-    font-size: 28px;
-    top: 50px;
-    line-height: 12px;
-    font-family: "MontLight";
-    font-weight: 300;
     color: #fff;
+    font-family: "MontLight";
 }
+
+.grid figure h2 span {
+    font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+    margin: 0;
+}
+
+.grid figure p {
+    letter-spacing: 1px;
+}
+
+
 
 .relative__content {
     position: relative;
@@ -167,13 +237,16 @@
     width: 100%;
     background-size: cover;
     z-index: 5;
-    bottom: -20px;
+    bottom: -3px;
     height: 85px;
 }
 
 .what__about-content {
     background: #ffffff;
 }
+
+
+
 
 
 @media screen and (max-width: 768px) {
