@@ -53,7 +53,7 @@ class PortfolioTranslation(models.Model):
 
 
 class PortfolioItem(models.Model):
-    base_name = models.CharField(max_length=100, verbose_name="Technical name(only for panel)")
+    base_name = models.CharField(max_length=100, verbose_name="Technical name(only for panel)", unique=True)
     date = models.DateTimeField(default=django.utils.timezone.now)
     thumbnail = models.ImageField()
     font_file = models.FileField(blank=True)

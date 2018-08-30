@@ -49,6 +49,8 @@ class PortfolioItemList(APIView):
                         "tag": x.category.tag
                     },
                     "views": x.views,
+                    "thumbnail": x.thumbnail.url,
+                    "CURL": x.base_name,
                     "watching_time": x.watching_time,
                     "description": translation.description,
                     "days_developing": x.days_developing,
@@ -64,11 +66,11 @@ class PortfolioHomeItemList(PortfolioItemList):
 
 
 class PortfolioDetails(APIView):
-    def get(self, request, format=None, lang_code=None, id=None):
+    def get(self, request, format=None, lang_code=None, cURL=None):
 
         response = []
 
-        pi = PortfolioItem.objects.get(id=id)
+        pi = PortfolioItem.objects.get(base_name=cURL)
 
         try:
             translation = pi.portfoliotranslation_set.get(lang_code=lang_code)
@@ -78,6 +80,7 @@ class PortfolioDetails(APIView):
         response = {
             "name": translation.name,
             "task": translation.task,
+            "thumbnail": pi.thumbnail.url,
             "decision": translation.decision,
             "category": {
                 "name": pi.category.categorytranslation_set.get(lang_code=lang_code).name,
@@ -91,6 +94,7 @@ class PortfolioDetails(APIView):
             "font_family": pi.font_family,
             "main_image": pi.main_image.url,
             "headers_classes": pi.headers_classes,
+            "CURL": pi.base_name,
             "logotype": pi.logotype.url,
             "days_developing": pi.days_developing,
             "attachment":[{"type":x.kind, "content":x.content.url} for x in pi.attachment_set.all()],
