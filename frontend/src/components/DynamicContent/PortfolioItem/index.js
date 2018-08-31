@@ -8,7 +8,7 @@ import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from '
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import {Link} from "react-router-dom";
 
-
+import arrowImg from './arrowImg.png'
 
 
 
@@ -238,8 +238,8 @@ export default class PortfolioItem extends Component {
         </Slider>
 
         <div className="data__buttons">
-        <ButtonBack>Back</ButtonBack>
-        <ButtonNext>Next</ButtonNext>
+        <ButtonBack><img src={arrowImg} alt=""/></ButtonBack>
+        <ButtonNext><img src={arrowImg} alt=""/></ButtonNext>
         </div>
     </CarouselProvider>
 

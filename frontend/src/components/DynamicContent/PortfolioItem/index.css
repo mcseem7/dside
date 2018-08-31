@@ -218,6 +218,21 @@
     left: 950px;
 }
 
-.carousel__right-button {
-    right: 10px;
+.carousel__back-button {
+    position: absolute;
+    left: -93px;
 }
+
+.data__buttons button img {
+width: 40px;
+}
+.data__buttons button {
+    outline: none;
+    border: none;
+}
+
+.carousel__back-button img {
+    transform: rotate(180deg);
+}
+
+
