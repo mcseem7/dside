@@ -155,8 +155,9 @@
 
 .container__slider-portfolio {
     padding-bottom: 60px;
-    display: flex;
+
 }
+
 
 .project__logo img {
     max-width: 100%;
@@ -164,4 +165,59 @@
 
 .project__logo {
     width: 150px;
+}
+
+.sliderItem {
+    background-color: #2e71f0;
+    height: 180px;
+    color: #fff;
+    font-size: 60px;
+    text-align: center;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+.containerData {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.sliderContent {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+.styleCarouselImg {
+    margin-left: 10px;
+}
+
+.carousel__inner-slide {
+    top: 60px !important;
+}
+
+.similarItem figcaption h2{
+    line-height: 15px;
+}
+
+.similarItem figcaption a {
+    top: 175px !important;
+    left: -41px !important;
+}
+
+.carousel {
+    position: relative;
+}
+
+.data__buttons {
+    top: 170px;
+    position: absolute;
+}
+
+.carousel__next-button {
+    position: absolute;
+    left: 950px;
+}
+
+.carousel__right-button {
+    right: 10px;
 }

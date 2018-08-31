@@ -1,25 +1,34 @@
-import React, { Component } from 'react'
+import React, {Component, Fragment} from 'react'
 import './index.css'
-
 import logoProject from './rounded-rectangle-10.png'
 import screenPortfolio from './layer-104.png'
 import screenCitron from './layer-105.png'
 import imgsl from './layer-106-copy.png'
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
+import {Link} from "react-router-dom";
+
 
 
 
 
 export default class PortfolioItem extends Component {
+
+
   constructor (props) {
     super(props)
 
     this.state = {
       items: [],
-      itemPortfolio: {},
+      itemPortfolio: [],
         blocksImg: '',
-        attachImg: ''
+        attachImg: '',
+        similarItems: []
     }
+
   }
+
+
 
 
 
@@ -38,6 +47,10 @@ export default class PortfolioItem extends Component {
             for(let key in this.state.itemPortfolio.attachment ) {
                  this.setState({attachImg: this.state.itemPortfolio.attachment[key].content})
              }
+
+
+                 this.setState({similarItems: this.state.itemPortfolio.similar_items})
+
          })
      })
 
@@ -45,7 +58,7 @@ export default class PortfolioItem extends Component {
 
 
   render () {
-
+      console.log(this.state.similarItems)
     return (
       <div className="container__portfolio-item">
 
@@ -181,29 +194,59 @@ export default class PortfolioItem extends Component {
 
           <div className="container__slider-portfolio">
 
-            <div className="item-slide" >
+<div className="sliderContent">
+
+
+
+
+    <CarouselProvider
+        naturalSlideWidth={400}
+        naturalSlideHeight={405}
+        totalSlides={4}
+        visibleSlides={3}
+    >
+        <Slider>
+
+            {this.state.similarItems != [] ?  Object.values(this.state.similarItems).map((  item, key) =>  {
+
+
+                console.log(item)
+                return (
+                    <Fragment>
+                    <Slide index={key} classNameVisible={'styleCarousellImg'}>
+                    <div className="grid">
+                    <figure className="effect-marley similarItem">
+                        <Image src={`http://mydside.com/${item.thumbnail}`} alt=""/>
+                <figcaption>
+                    <h2>{item.name}</h2>
+                    {
+                        <Link to={`/portfolio/${item.CURL}`}>Explore project</Link>
+
+                    }
+                </figcaption>
+                </figure>
 
             </div>
+                    </Slide>
+                        </Fragment>
+                )
+
+              }) : null
+
+               }
+
+        </Slider>
+
+        <div className="data__buttons">
+        <ButtonBack>Back</ButtonBack>
+        <ButtonNext>Next</ButtonNext>
+        </div>
+    </CarouselProvider>
 
 
 
-                <div className="slider-item__portfolio">
-                  <div className="item_slider">
-                    <img src={imgsl} alt=""/>
-                  </div>
-                </div>
+</div>
 
-              <div className="slider-item__portfolio">
-                <div className="item_slider">
-                  <img src={imgsl} alt=""/>
-                </div>
-              </div>
-
-              <div className="slider-item__portfolio">
-                <div className="item_slider">
-                  <img src={imgsl} alt=""/>
-                </div>
-              </div>
 
 
 
@@ -214,8 +257,9 @@ export default class PortfolioItem extends Component {
         </div>
 
 
-      </div>
 
+
+      </div>
       </div>
 
     )

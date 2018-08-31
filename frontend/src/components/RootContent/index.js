@@ -7,7 +7,7 @@ import PortfolioItem from '../DynamicContent/PortfolioItem'
 import Portfolio from '../DynamicContent/Portfolio'
 import AboutUs from '../DynamicContent/About'
 import NotFound from '../Basic/NotFound'
-import Fader from 'react-fader'
+
 
 export default class RootContent extends Component {
   constructor (props) {

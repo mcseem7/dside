@@ -49,8 +49,9 @@ import fadeBag from './brandImg/Layer_108.png'
 
   componentDidMount() {
     window.scrollTo(0,0)
-
   }
+
+
 
   findOut = () => {
     this.setState({findActive: !this.state.findActive})
@@ -61,6 +62,8 @@ import fadeBag from './brandImg/Layer_108.png'
        console.log(this.state.modalActive)
      })
    }
+
+
 
   render() {
     const { animationContainerReference } = this.props;
@@ -92,7 +95,7 @@ import fadeBag from './brandImg/Layer_108.png'
 
             {
               <div
-                  className="branding__service-case_studies "  {...WheelReact.events}>
+                  className="branding__service-case_studies " onScrollCapture={this.scrollCheck} {...WheelReact.events}>
 
                 <div className="branding__service-left">
 
