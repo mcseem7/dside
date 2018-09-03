@@ -22,6 +22,7 @@ import OrderButton from '../serviceComponents/OrderButton';
 import Poppup from '../../../../HOC/Poppup/index';
 import iconLouis from './brandImg/lois-icon.png'
 import fadeBag from './brandImg/Layer_108.png'
+import WeCare from "../../../Basic/TrustBlocks/WeCare";
 
  class BrandPage extends Component {
   constructor() {
