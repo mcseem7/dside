@@ -8,6 +8,7 @@
     "history": "^4.7.2",
     "js-cookie": "^2.2.0",
     "jss-global": "^3.0.0",
+    "pure-react-carousel": "^1.13.2",
     "react": "^16.4.1",
     "react-disqus-comments": "^1.2.0",
     "react-dom": "^16.4.2",
@@ -20,12 +21,13 @@
     "react-transition-group": "^2.4.0",
     "react-youtube": "^7.6.0",
     "react-youtube-background": "^0.1.4",
+    "scrollreveal": "^4.0.0",
     "styled-components": "^3.3.3",
     "styled-normalize": "^4.0.0",
     "wheel-react": "^1.0.3"
   },
   "scripts": {
-    "start": "./node_modules/react-scripts/bin/react-scripts.js start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

@@ -84,6 +84,7 @@ export default class VideoPage extends Component {
             <HeaderPost/>
           </div>
           <LimitedService/>
+            <WeCare name="videos"/>
           <Footer/>
         </div>
     )

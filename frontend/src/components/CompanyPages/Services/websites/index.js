@@ -205,6 +205,7 @@ export default class Website extends Component {
           <HeaderPost/>
         </div>
         <LimitedService/>
+          <WeCare name="websites"/>
         <Footer/>
       </Fragment>
     )

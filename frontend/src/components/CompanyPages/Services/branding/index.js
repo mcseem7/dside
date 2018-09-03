@@ -305,6 +305,7 @@ import fadeBag from './brandImg/Layer_108.png'
           <HeaderPost/>
           </div>
           <LimitedService/>
+            <WeCare name="brandes"/>
           <Footer/>
           {this.state.modalActive ? <Poppup onClose={this.changePoppup}/> :  null}
         </div>
