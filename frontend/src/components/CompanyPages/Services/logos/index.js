@@ -10,6 +10,7 @@ import Footer from '../../../Basic/Footer'
 import YoutubeBackground from 'react-youtube-background'
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
 import WeCare from "../../../Basic/TrustBlocks/WeCare";
+import Advantages from "../../../Basic/TrustBlocks/Advantages";
 
 export default class LogoPage extends Component {
     constructor() {
@@ -130,6 +131,7 @@ export default class LogoPage extends Component {
                 </div>
                 <LimitedService/>
                 <WeCare name="logotypes"/>
+                <Advantages/>
                 <Footer/>
             </div>
         )
