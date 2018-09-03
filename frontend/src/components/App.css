@@ -57,3 +57,7 @@ body {
     border-radius: 30px;
     text-align: center;
 }
+
+.container__case-studies {
+    margin-top: 110px;
+}

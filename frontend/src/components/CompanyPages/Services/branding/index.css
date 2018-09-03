@@ -6,11 +6,15 @@
 
 .branding__service-case_studies {
     /*max-width: 1200px;*/
-    margin: 0 auto;
     display: flex;
     justify-content: center;
-    margin-top: 110px;
+    margin: 232px auto 0;
 }
+.branding__service-right p {
+    margin-top: 0;
+    margin-bottom: 17px;
+}
+
 
 
 
@@ -473,3 +477,10 @@ margin-left: 245px;
 
 
 
+.heading__service{
+    height: 630px;
+}
+
+p.loius__viton_title-description {
+    margin-top: 30px;
+}

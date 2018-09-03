@@ -199,7 +199,7 @@ img.adv-icon {
 .dside-promo{
     display: flex;
     justify-content: space-around;
-    padding: 90px 130px;
+    padding: 90px 130px 0;
 }
 
 .dside-promo .text {
