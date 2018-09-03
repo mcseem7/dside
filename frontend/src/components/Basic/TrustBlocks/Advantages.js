@@ -1,6 +1,9 @@
 import React, {Component} from 'react'
 import './style.css'
-import Eye from './eye.svg'
+import Eye from '../../sources/images/works__logo/eye.svg'
+import Five from '../../sources/images/works__logo/five.svg'
+import HQ from '../../sources/images/works__logo/high-quality.svg'
+import Nimb from '../../sources/images/works__logo/nimb-saver.svg'
 export default class Advantages extends Component {
     constructor() {
         super()
@@ -32,7 +35,7 @@ export default class Advantages extends Component {
                             </div>
 
                             <div className="advantage">
-                                <img className="adv-icon"  src={Eye}/>
+                                <img className="adv-icon"  src={Five}/>
                                 <div className="advantage-heading">
                                     You cam watch the process
                                 </div>
@@ -42,7 +45,7 @@ export default class Advantages extends Component {
                             </div>
 
                             <div className="advantage">
-                                <img className="adv-icon"  src={Eye} />
+                                <img className="adv-icon"  src={HQ} />
                                 <div className="advantage-heading">
                                     Highly experienced team
                                 </div>
@@ -52,7 +55,7 @@ export default class Advantages extends Component {
                             </div>
 
                             <div className="advantage">
-                                <img className="adv-icon"  src={Eye}/>
+                                <img className="adv-icon"  src={Nimb}/>
                                 <div className="advantage-heading">
                                     Highest quality products
                                 </div>
