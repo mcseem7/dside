@@ -10,6 +10,7 @@ import YoutubeBackground from 'react-youtube-background'
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
 import WeCare from "../../../Basic/TrustBlocks/WeCare";
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
+import Own from "../../../Basic/TrustBlocks/Own";
 
 export default class VideoPage extends Component {
   constructor() {
@@ -85,9 +86,10 @@ export default class VideoPage extends Component {
           <div className="case__service">
             <HeaderPost/>
           </div>
-          <LimitedService/>
             <Advantages/>
             <WeCare name="videos"/>
+            <Own/>
+            <LimitedService/>
           <Footer/>
         </div>
     )

@@ -5,12 +5,29 @@
 }
 
 .convupper-block {
+    max-width: 1920px;
+    margin: auto;
+}
+
+
+#cu-own {
+    background: #ffffff url("own.png") no-repeat top center;
+    background-size: auto 528px;
+}
+
+.convupper-block {
     background-size: 100% auto;
     width: 100%;
     height: 550px;
 
     display: flex;
     align-items: center;
+}
+
+#cu-own.convupper-block {
+    height: unset;
+    position: relative;
+    display: block;
 }
 
 .convupper-block h3, h2, h1, h4 {
@@ -32,8 +49,12 @@
 
 .cu-wrapper {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+
+}
+
+#cu-we-care .cu-wrapper{
+    justify-content: flex-end;
 }
 
 #cu-we-care .cu-content {
@@ -74,7 +95,7 @@ img.adv-icon {
     text-align: center;
     font-family: Mont;
     font-weight: 400;
-    flex-basis: 200px;
+    flex-basis: 210px;
 }
 
 .advantage-heading {
@@ -95,4 +116,105 @@ img.adv-icon {
     font-size: 1.8em;
     margin-bottom: 76px;
     margin-top: 0;
+}
+
+.own-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 460px;
+    margin: auto;
+    max-width: 1075px;
+}
+
+.own-instance{
+    display: flex;
+    flex-direction: column;
+}
+
+.own-instance img {
+    width: auto;
+    height: auto;
+    max-height: 350px;
+    margin-bottom: 16px;
+}
+
+.own-instance .own-heading, .own-instance .own-desc{
+    font-family: Mont;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin:auto;
+}
+
+.own-instance .own-heading {
+    font-size: 22px;
+    margin-top: 6px;
+    margin-bottom: 7px;
+}
+
+.own-heading.doctor{
+    color: #6c87c2;
+}
+.own-heading.barber{
+    color: #9cbfe4;
+}
+.own-heading.coach{
+    color: #ff8d79;
+}
+.own-heading.cms{
+    color: #3a393c;
+}
+.own-heading.hero{
+    color: #ec362e;
+}
+
+
+
+#cu-own .cu-content {
+    width: 100%;
+}
+
+#cu-own hr {
+
+    width: 265px;
+    padding-top: 11px;
+    border: none;
+    border-bottom: 1px solid #fff;
+}
+
+.cu-heading {
+    top:16%;
+    left: 0;
+    position: absolute;
+    color: #fff;
+    font-family: Mont;
+    display: flex;
+}
+
+.cu-heading .text{
+    margin-left: 30px;
+    line-height: 29px;
+
+}
+
+.dside-promo{
+    display: flex;
+    justify-content: space-around;
+    padding: 90px 130px;
+}
+
+.dside-promo .text {
+    max-width: 500px;
+    text-transform: uppercase;
+    font-family: Mont;
+    font-weight: 400;
+    line-height: 31px;
+    margin-top: -8px;
+}
+img.dside-logo {
+    width: auto;
+    padding: initial;
+    height: auto;
+    max-height: 75px;
+    display: block;
+
 }

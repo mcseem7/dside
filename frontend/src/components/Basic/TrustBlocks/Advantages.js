@@ -25,7 +25,7 @@ export default class Advantages extends Component {
                         <h3>Pure advantages of DSIDE</h3>
                         <div className="advantages-container">
                             <div className="advantage">
-                                <img className="adv-icon" src={Eye}/>
+                                <img className="adv-icon" src={Nimb}/>
                                 <div className="advantage-heading">
                                     Accurate meeting deadlines
                                 </div>
@@ -35,7 +35,7 @@ export default class Advantages extends Component {
                             </div>
 
                             <div className="advantage">
-                                <img className="adv-icon"  src={Five}/>
+                                <img className="adv-icon"  src={Eye}/>
                                 <div className="advantage-heading">
                                     You cam watch the process
                                 </div>
@@ -45,7 +45,7 @@ export default class Advantages extends Component {
                             </div>
 
                             <div className="advantage">
-                                <img className="adv-icon"  src={HQ} />
+                                <img className="adv-icon"  src={Five} />
                                 <div className="advantage-heading">
                                     Highly experienced team
                                 </div>
@@ -55,7 +55,7 @@ export default class Advantages extends Component {
                             </div>
 
                             <div className="advantage">
-                                <img className="adv-icon"  src={Nimb}/>
+                                <img className="adv-icon"  src={HQ}/>
                                 <div className="advantage-heading">
                                     Highest quality products
                                 </div>

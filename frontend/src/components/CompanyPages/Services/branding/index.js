@@ -24,6 +24,7 @@ import iconLouis from './brandImg/lois-icon.png'
 import fadeBag from './brandImg/Layer_108.png'
 import WeCare from "../../../Basic/TrustBlocks/WeCare";
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
+import Own from "../../../Basic/TrustBlocks/Own";
 
  class BrandPage extends Component {
   constructor() {
@@ -309,6 +310,7 @@ import Advantages from "../../../Basic/TrustBlocks/Advantages";
           <LimitedService/>
           <Advantages/>
             <WeCare name="brandes"/>
+            <Own/>
           <Footer/>
           {this.state.modalActive ? <Poppup onClose={this.changePoppup}/> :  null}
         </div>
