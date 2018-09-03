@@ -42,4 +42,18 @@ body {
     margin: 0 auto;
 
 }
+.center {
+    text-align: center;
+}
 
+.order-now-btn{
+    display: inline-block;
+    background: linear-gradient(right, #7ec622, #72b519);
+    color: #fff;
+    font-family: Mont;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 21px 71px;
+    border-radius: 30px;
+    text-align: center;
+}

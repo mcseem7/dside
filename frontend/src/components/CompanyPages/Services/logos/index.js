@@ -116,22 +116,42 @@ export default class LogoPage extends Component {
 
                                 </div>
 
+
+
                             </div>
+
 
 
                         </div>
 
                     </div>
-
+                    <div className="page-centered center">
+                    <div className="order-now-btn">
+                        Order now.
+                    </div>
+                    </div>
 
                 </section>
 
                 {/*<CaseService/>*/}
+
+                <div className="container__case-studies">
+                <div className="case-title">
+                    <h3>Case Studies</h3>
+                </div>
+                <div className="case-description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                        voluptatem.</p>
+                </div>
+                </div>
                 <div className="case__service">
                     <HeaderPost/>
                 </div>
-                <Advantages/>
                 <WeCare name="logotypes"/>
+                <Advantages/>
                 <Own/>
                 <LimitedService/>
                 <Footer/>
