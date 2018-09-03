@@ -23,6 +23,7 @@ import Poppup from '../../../../HOC/Poppup/index';
 import iconLouis from './brandImg/lois-icon.png'
 import fadeBag from './brandImg/Layer_108.png'
 import WeCare from "../../../Basic/TrustBlocks/WeCare";
+import Advantages from "../../../Basic/TrustBlocks/Advantages";
 
  class BrandPage extends Component {
   constructor() {
@@ -306,6 +307,7 @@ import WeCare from "../../../Basic/TrustBlocks/WeCare";
           <HeaderPost/>
           </div>
           <LimitedService/>
+          <Advantages/>
             <WeCare name="brandes"/>
           <Footer/>
           {this.state.modalActive ? <Poppup onClose={this.changePoppup}/> :  null}

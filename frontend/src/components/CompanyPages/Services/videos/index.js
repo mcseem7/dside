@@ -9,6 +9,7 @@ import Footer from '../../../Basic/Footer'
 import YoutubeBackground from 'react-youtube-background'
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
 import WeCare from "../../../Basic/TrustBlocks/WeCare";
+import Advantages from "../../../Basic/TrustBlocks/Advantages";
 
 export default class VideoPage extends Component {
   constructor() {
@@ -85,6 +86,7 @@ export default class VideoPage extends Component {
             <HeaderPost/>
           </div>
           <LimitedService/>
+            <Advantages/>
             <WeCare name="videos"/>
           <Footer/>
         </div>

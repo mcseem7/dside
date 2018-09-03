@@ -129,9 +129,9 @@ export default class LogoPage extends Component {
                 <div className="case__service">
                     <HeaderPost/>
                 </div>
-                <LimitedService/>
                 <WeCare name="logotypes"/>
                 <Advantages/>
+                <LimitedService/>
                 <Footer/>
             </div>
         )
