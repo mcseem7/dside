@@ -102,7 +102,8 @@ class PortfolioDetails(APIView):
             "similar_items": [{
                 "id": x.id,
                 "name": x.portfoliotranslation_set.get(lang_code=lang_code).name,
-                "thumbnail": x.thumbnail.url
+                "thumbnail": x.thumbnail.url,
+                "CURL": x.base_name,
             } for x in pi.similar_items.all() if x.portfoliotranslation_set.filter(lang_code=lang_code)],
         }
 

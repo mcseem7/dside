@@ -10,6 +10,8 @@ import Footer from '../../../Basic/Footer'
 import './index.css'
 import YoutubeBackground from 'react-youtube-background'
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
+import WeCare from "../../../Basic/TrustBlocks/WeCare";
+import Advantages from "../../../Basic/TrustBlocks/Advantages";
 
 
 export default class Website extends Component {
@@ -204,6 +206,8 @@ export default class Website extends Component {
         <div className="case__service">
           <HeaderPost/>
         </div>
+        <WeCare name="websites"/>
+        <Advantages/>
         <LimitedService/>
         <Footer/>
       </Fragment>
