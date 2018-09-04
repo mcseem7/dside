@@ -7,6 +7,7 @@ import styledNormalize from 'styled-normalize'
 import { injectGlobal } from 'styled-components'
 import baseStyles from './index'
 import './index.css'
+import { hydrateData } from 'react-universal-data'
 
 export default () => injectGlobal`
   ${styledNormalize}
@@ -15,7 +16,7 @@ export default () => injectGlobal`
 const render = () => {
   baseStyles()
 
-  ReactDOM.render(
+  ReactDOM.hydrate(
     <BrowserRouter>
       <App />
     </BrowserRouter>,

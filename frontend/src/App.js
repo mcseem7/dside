@@ -13,6 +13,8 @@ import {CSSTransition,TransitionGroup} from 'react-transition-group'
 import Cookies from 'js-cookie'
 import Header from './components/Basic/Header/index';
 
+import Helmet from "react-helmet";
+
 class App extends Component {
 
   constructor() {
@@ -41,6 +43,35 @@ class App extends Component {
 
     return (
       <div className="App">
+          <Helmet
+              htmlAttributes={{lang: "en", amp: undefined}}
+              title="My Dside"
+              titleTemplate="dsite.com - %s"
+              defaultTitle="Dside Title"
+              titleAttributes={{itemprop: "name", lang: "en"}}
+              base={{target: "_blank", href: "http://mysite.com/"}}
+              meta={[
+                  {name: "charset-8", content: "Dsdide application"},
+                  {name: "description", content: "Dsdide application"},
+                  {name: "viewport", content: "width=device-width"},
+                  {property: "og:type", content: "article"}
+              ]}
+              link={[
+                  {rel: "canonical", href: "http://dside.com"},
+                  {rel: "apple-touch-icon", href: "http://mydside.com/img/apple-touch-icon-57x57.png"},
+                  {rel: "apple-touch-icon", sizes: "72x72", href: "http://mydside.com/img/apple-touch-icon-72x72.png"}
+              ]}
+              script={[
+                  {src: "http://include.com/pathtojs.js", type: "text/javascript"},
+                  {type: "application/ld+json", innerHTML: `{ "@context": "http://schema.org" }`}
+              ]}
+              noscript={[
+                  {innerHTML: `<link rel="stylesheet" type="text/css" href="foo.css" />`}
+              ]}
+              style={[
+                  {type: "text/css", cssText: "body {background-color: blue;} p {font-size: 12px;}"}
+              ]}
+          />
 
         <Route render={(props) => {
 
