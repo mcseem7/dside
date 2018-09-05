@@ -29,7 +29,7 @@ import Poppup from '../../../HOC/Poppup/index';
             <div className="form__titles">
 
               <div className="title__drop">
-                <h3>Drop the line</h3>
+                <h3 className="golden">Drop the line</h3>
               </div>
 
               <div className="question__form">
@@ -56,7 +56,7 @@ import Poppup from '../../../HOC/Poppup/index';
                 </div>
                 <button className="dside__send">
                   <div className="button__content">
-                    <p>Send</p> <img src={arrow} alt="" />
+                    <span>Send</span><div class="whitespace"></div><img src={arrow} alt="" />
                   </div>
                 </button>
               </form>

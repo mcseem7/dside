@@ -69,7 +69,7 @@ class App extends Component {
                   {innerHTML: `<link rel="stylesheet" type="text/css" href="foo.css" />`}
               ]}
               style={[
-                  {type: "text/css", cssText: "body {background-color: blue;} p {font-size: 12px;}"}
+                  {type: "text/css", cssText: "p {font-size: 12px;}"}
               ]}
           />
 
