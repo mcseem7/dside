@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 16" width="32" height="16">
-	<defs>
-		<image width="32" height="16" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAQCAMAAABA3o1rAAABNVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9vAW14AAAAZ3RSTlMABECLxen56IoZie7/GA+R+NCBRRoIhd6PDlHl6jQBOuvkUAeTgwaIEsP9gtMzhzbBERXU7Ebw5u3SK/YKCyzbMNotPqB8fT/7dUjnDUd3vhAFkMaoAqnHjkvjp+FJ9HouL3vzFoaydEp/sAAAAStJREFUeJxtUfkjwnAUf0ul2kdGkixHuqiZGjWVI0Qht4XcVP//n2BPbHO8nz7H+37fRWSF4Bpye7zeYbfPJdDf8AdEWCEGRn7ZwVEJGBsPTYTD/tBkBJCmok5/WgZiMxadnZsH4gsWTyT525SJ0j5ZzqRNkGIlmRj4i0vI5hQsm1BlXTXBCpRcFvkC+9oq1opUAhOdE2R+hBIV16FoZntlyBWiKjacCZuoElV0lIOcoG8RbaPmLFHDDtHuZwJpCsQ9qmOfm1RlWeUmD1Cnhoiyxk0U8mgeHuG4ZY8d9eDktImz8wG9uASuPLg2vn2jjdgNcGtv/K7Dxe+DX2ttM3t4dK4yGngyNf35RRBe33iW90yLfkY3E7eP1VG7/9zTcPX6EUmK9HsNw1Y/ADM5JxYHvCxnAAAAAElFTkSuQmCC"/>
-	</defs>
-	<style>
-		tspan { white-space:pre }
-	</style>
-	<use id="Layer 91" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
-</svg>
