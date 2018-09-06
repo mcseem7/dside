@@ -330,7 +330,7 @@ export default class AbotUs extends Component {
                             <div className="left__data-dev">
 
                               <div className="photo__image-developer">
-                                <img src={this.state.result.img} alt=""/>
+                                <img src={this.state.result.img} alt="" className={this.state.result.checkName} />
                               </div>
 
                             </div>

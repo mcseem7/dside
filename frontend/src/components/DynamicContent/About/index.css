@@ -1,296 +1,367 @@
+ .aboutus__title-advantage h1 {
+        font-size: 3rem;
+        color: rgb(255, 255, 255);
+        font-family: "MontBold";
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    .aboutus__wrapper {
+        padding-top: 120px;
+    }
+
+    .dside__what-about {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .about__company-dside p {
+        color: #6c6c6c;
+        font-family: 'MontLight', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        text-align: left;
+    }
+
+    .title__what h4 {
+        color: #6c6c6c;
+        font-family: 'MontBold', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 9.87px;
+        text-transform: uppercase;
+    }
+
+    .title__whyus h5 {
+        color: #000000;
+        font-family: 'MontBold', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 16.87px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .about__us-content {
+        background: white;
+        max-width: 1200px;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .dside__red-logo {
+        flex: 1 1 100%;
+        text-align: center;
+        width: 40%;
+    }
+
+    .dside__what-content {
+        flex: 1 1 100%;
+        padding: 2rem 3rem;
+    }
+
+    .dside__what-about {
+        padding-top: 8rem;
+        padding-bottom: 3rem;
+    }
+
+    .about__company-dside {
+        max-width: 85%;
+    }
+    .dside__shahmat-img {
+        position: absolute;
+        top: -135px;
+        right: 163px;
+        width: 30%;
+    }
+
+    .dside__business_process li {
+        flex: 1 1 25%;
+        margin-left: 3rem;
+        margin-top: 2rem;
+    }
+
+    .description__business-process p {
+        color: #000000;
+        font-family: 'MontLight', sans-serif;
+        font-size: 17px;
+        font-weight: 300;
+        width: 240px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .business__title p {
+        color: #000000;
+        font-family: 'MontBold', sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: -1.46px;
+        margin-left: 7px;
+    }
+
+    .number__bus-process {
+        color: #777677;
+        font-family: 'MontLight', sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+    }
+
+    .title__business-process {
+        display: flex;
+        align-items: center;
+        margin-left: -23px;
+    }
+
+    .dside__business_process {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
 
-.aboutus__title-advantage h1 {
-    font-size: 8rem;
-    color: rgb(255,255,255);
-    font-family: "MontBold";
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 0;
-}
+    .about__dside-process {
+        margin-top: 40px;
+    }
 
-.aboutus__wrapper {
-    padding-top: 120px;
-}
+    .meet__team-title h4 {
+        color: #000000;
+        font-family: 'MontBold', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0;
+        margin-left: 3rem;
+        text-transform: uppercase;
+    }
 
+    .meet__team-title {
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 35px;
+        padding-bottom: 55px;
+    }
 
-.dside__what-about {
-    display: flex;
-    align-items: center;
-}
+    .dside__meet_team {
+        max-width: 1349px;
+        margin: 0 auto;
+        display: none;
+    }
 
-.about__company-dside p {
-    color: #6c6c6c;
-    font-family: 'MontLight', sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    text-align: left;
-}
+    .meet__team__dside {
+        display: flex;
+        align-items: baseline;
+        position: relative;
+    }
 
-.title__what h4 {
-    color: #6c6c6c;
-    font-family: 'MontBold', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 9.87px;
-    text-transform: uppercase;
-}
+    .dside__about-content {
+        padding-bottom: 75px;
+    }
 
-
-.title__whyus h5 {
-    color: #000000;
-    font-family: 'MontBold', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 16.87px;
-    text-align: center;
-    text-transform: uppercase;
-}
+    .team__man {
+        background: url("./peopleCompany/Max.png");
+    }
 
 
-.about__us-content {
-    background: white;
-    max-width: 1200px;
+    .fade__team {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.2s, opacity 0.5s;
+    }
+
+    .fadeNo {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .dside__meet-developer {
+        margin-top: 36px;
+        max-width: 1200px;
+        display: flex;
+        align-items: center;
+        margin-left: 55px;
+    }
+
+
+
+    .post_developer {
+        display: flex;
+        align-items: center;
+    }
+
+    .button__back-team {
+        margin-right: 20px;
+    }
+
+    .right__data-dev {
+        margin-left: 0px;
+    }
+
+
+    .contact__links-developer {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .contact__links-developer a {
+        display: block;
+    }
+    .fade__team{display: flex; flex-direction: column; flex-wrap: wrap;}
+    .fade__team div{display: flex; position: relative;}
+/* Tablets */
+@media only screen and (min-width: 480px) {
+    .description__business-process p{
+        font-size: 1rem;
+    }
+    .dside__business_process li {
+        flex: 1 1 25%;
+    }
+    .dside__shahmat-img {
     position: relative;
     margin: 0 auto;
+    left: 0;
+    width: 302px;
+    top: -208px;
 }
-
-
-.dside__red-logo {
-    flex: 1 1 100%;
-    text-align: center;
+     .aboutus__title-advantage h1 {
+        font-size: 6rem;
+    }
+    .dside__what-about{
+        padding-top: 0;
+        margin-top: -8rem;
+    }
+    .dside__red-logo img{
+        width: 40%;
+    }
+    .about__company-dside{width: 100%;}
+    .title__whyus h5{text-align: left; margin-left: 3rem;}
 }
-
-.dside__what-content {
-    flex: 1 1 100%;
-}
-
-.dside__what-about {
-    padding-top: 120px;
-    padding-bottom: 90px;
-}
-
-.about__company-dside {
-    max-width: 85%;
-}
-
-.dside__shahmat-img {
-    position: absolute;
-    top: -260px;
-    right: 555px;
-}
-
-
-.description__business-process p {
-    color: #000000;
-    font-family: 'MontLight', sans-serif;
-    font-size: 17px;
-    font-weight: 300;
-    width: 240px
-}
-
-.business__title p {
-    color: #000000;
-    font-family: 'MontBold', sans-serif;
-    font-size: 17px;
-    font-weight: 700;
-    letter-spacing: -1.46px;
-    margin-left: 7px;
-}
-
-.number__bus-process {
-    color: #777677;
-    font-family: 'MontLight', sans-serif;
-    font-size: 17px;
-    font-weight: 700;
-}
-
-.title__business-process {
-    display: flex;
-    align-items: center;
-    margin-left: -23px;
-}
-
-.dside__business_process {
-    display: flex;
-}
-
-.dside__business_process li {
-    flex: 1 1 25%;
-    margin-left: 55px;
-}
-
-.about__dside-process {
-    margin-top: 40px;
-}
-
-.meet__team-title h4 {
-    color: #000000;
-    font-family: 'MontBold', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    margin: 0;
-    text-transform: uppercase;
-}
-
-.meet__team-title {
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 35px;
-    padding-bottom: 55px;
-}
-
-.dside__meet_team {
-    max-width: 1349px;
-    margin:  0 auto;
-    height: 470px;
-}
-
-.dside__team-man img {
-    max-width: 100%;
-    cursor: pointer;
-}
-
-
-.dside__team-man {
-    opacity: 0.7;
-    position: absolute;
-}
-
-.dside__team-man:hover {
-    opacity: 1;
-    transition: 0.5s;
-}
-
-.meet__team__dside {
-    display: flex;
-    align-items: baseline;
-    position: relative;
-}
-
-.dside__about-content {
-    padding-bottom: 75px;
-}
-
-.team__man {
-    background: url("./peopleCompany/Max.png");
-}
-
+ /* Laptops */
+@media only screen and (min-width: 1024px) {
+    .title__whyus h5{margin-left: 0; text-align: center}
+    .dside__what-about{flex-direction: row;}
+    .dside__what-content{flex: 1 1 70%;}
+    .dside__red-logo {flex: 1 1 30%;}
+    .about__company-dside {max-width: 90%;}
+    .dside__business_process{justify-content: space-between;  align-items: baseline;    padding-left: 3rem;}
+    .dside__business_process li{margin-left: 0;}
+    .description__business-process p{width: auto; padding-right: 4rem;}
+    .button__back-team img{width: 10px;}
+    .button__back-team {
+        cursor: pointer;
+    }
 .dside__team-man:nth-child(1) {
-    width: 260px;
-}
+        width: 160px;
+    }
 
-.dside__team-man:nth-child(2) {
-    left: 195px;
-    width: 260px;
-    top: -14px;
-}
+    .dside__team-man:nth-child(2) {
+    left: 150px;
+    width: 160px;
+    top: -9px;
+    }
 
+    .dside__team-man:nth-child(3) {
+    left: 290px;
+    width: 141px;
+    top: 14px;
+    }
 
-.dside__team-man:nth-child(3) {
-    left: 390px;
-    width: 211px;
-    top: 41px;
-}
+    .dside__team-man:nth-child(4) {
+  left: 411px;
+    width: 179px;
+    top: 14px;
+    }
 
-.dside__team-man:nth-child(4) {
-    left: 550px;
-    width: 249px;
-    top: 59px;
-}
+    .dside__team-man:nth-child(5) {
+left: 561px;
+    width: 164px;
+    top: 19px;
+    }
 
-.dside__team-man:nth-child(5) {
-    left: 730px;
-    width: 249px;
-    top: 46px;
-}
+    .dside__team-man:nth-child(6) {
+           left: 694px;
+    width: 157px;
+    top: 23px;
+    }
 
-.dside__team-man:nth-child(6) {
-    left: 920px;
-    width: 249px;
-    top: 40.8px;
-}
+    .dside__team-man:nth-child(7) {
+     left: 821px;
+    width: 200px;
+    top: 17px;
+    }
+    .dside__meet_team {
+        max-width: 1024px;
+        display: flex;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        height: 287px;
+    }
+        .dside__team-man img {
+        max-width: 100%;
+        cursor: pointer;
+    }
 
-.dside__team-man:nth-child(7) {
-    left: 1109px;
-    width: 305px;
-    top: 41px;
-}
+    .dside__team-man {
+        opacity: 1;
+        position: absolute;
+    }
 
-.fade__team {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0.2s, opacity 0.5s ;
-}
+    .dside__team-man:hover {
+        opacity: 0.8;
+        transition: 0.3s;
+    }
 
-.fadeNo {
-    opacity: 1;
-    visibility: visible;
-}
-
-.dside__meet-developer {
-    margin-top: 36px;
+    .fade__team{flex-direction: row; flex-wrap: nowrap;}
+    .fade__team div{position: absolute; display: block}
+    .dside__meet_team{display: block;}
+    .devimg{width: 70%}
+    .dside__meet-developer {
+    margin-top: -80px;
     max-width: 1200px;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-align: center;
     align-items: center;
-    margin-left: 55px;
+    margin-left: 3rem;
+    background: #f3f3f5;
 }
+    .meet__team-title h4 {text-align: center; margin-left: 0;}
+    .name-developer h4 {
+        color: #000000;
+        font-family: 'MontBold', sans-serif;
+        font-size: 1.2rem;
+        margin: 0;
+        margin-bottom: 0.2rem;
+        text-transform: uppercase;
+    }
+     .position-developer p {
+        color: #000000;
+        margin: 0;
+        font-family: 'MontLight', sans-serif;
+        font-size: 0.8rem;
+        font-weight: 300;
+    }
+       .about__developer p {
+        color: #000000;
+        font-family: 'MontLight', sans-serif;
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+       .Max{width: 74%}
+       .Vova{width: 74%}
+       .Ruslan, .Pavel, .Valentyn, .Maksym, .Oleksii{width: 88%}
+    .about__developer {
+        margin-top: 2rem;
+        max-width: 435px;
+        min-width: 200px;
+    }
 
-.name-developer h4 {
-    color: #000000;
-    font-family: 'MontBold', sans-serif;
-    font-size: 24px;
-    margin: 0;
-    margin-bottom: 12px;
-    text-transform: uppercase;
 }
-
-.position-developer p {
-    color: #000000;
-    margin: 0;
-    font-family: 'MontLight', sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-}
-
-.about__developer p {
-    color: #000000;
-    font-family: 'MontLight', sans-serif;
-    margin: 0;
-    font-size: 18px;
-    font-weight: 300;
-}
-
-.about__developer {
-    margin-top: 60px;
-    max-width: 435px;
-    min-width: 200px;
-}
-
-.post_developer {
-    display: flex;
-    align-items: center;
-}
-
-.button__back-team {
-    margin-right: 20px;
-}
-
-.right__data-dev {
-    margin-left: 90px;
-}
-
-.button__back-team {
-    cursor: pointer;
-}
-
-.contact__links-developer {
-    display: flex;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.contact__links-developer a {
-    display: block;
+ /* Fullpage */
+@media only screen and (min-width: 1024px) {
+    .dside__what-content{padding: 0 3rem;}
+    .dside__business_process:nth-child(1){margin-left: 3rem;}
 }
