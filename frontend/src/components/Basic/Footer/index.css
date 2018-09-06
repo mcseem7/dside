@@ -51,11 +51,10 @@
         font-weight: 300;
         border-bottom: 1px solid black;
     }
-    #phone{margin-top: 1em;}
     .wrapper__name,
     .wrapper__phone {
         width: 100% ;
-        margin-top: 20px;
+        margin-top: 2rem;
     }
 
 
@@ -79,7 +78,7 @@
 }
     .shining-underline-cf {
     position: relative;
-    max-width: 80%;
+    max-width: 100%;
     }
 
     .shining-underline-cf span {
@@ -186,7 +185,7 @@
 .footer__content {
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 60px;
+    padding:1rem 4rem;
 }
 
 .copyright p {
@@ -206,7 +205,6 @@
 .sending__form {
     margin-top: 110px;
 }
-.wrapper__phone{margin-left: 30px;}
 
 
 .button__content {
@@ -227,15 +225,17 @@
 .inputs__send {
     display: flex;
 }
-.wrapper__phone{margin-left: 30px;}
 .wrapper__name,
 .wrapper__phone {
-    width: 280px;
+    width: 40%;
     display: flex;
 }
+.wrapper__phone{margin-left: 3rem;}
 
 
-
+ .inputs__send {
+        flex-direction: row;
+    }
 
     .shining-underline-cf:hover span::before {
         -webkit-transform: scaleX(1);
@@ -250,12 +250,33 @@
         transform-origin: 0 0;
     }
     #phone {
-    width: 280px;
-    font-size: 2rem;
+    width: 480px;
+    font-size: 1rem;
     }
 
     #name {
-        width: 250px;
-        font-size: 2rem;
+        width: 450px;
+        font-size: 1rem;
     }
+    .dside__send {
+    width: 40%;
+    }
+    .dside__send span{font-size: 1rem;}
+}
+/* Laptop */
+
+@media only screen and (min-width: 1024px) {
+    .dside__send{width: 30%;}
+    .social__icons{display: flex;  align-items: center;}
+}
+/* Fullpage */
+
+@media only screen and (min-width: 1440px) {
+.wrapper__name, .wrapper__phone {
+    width: 25%;
+}
+    .dside__send {
+    width: 17%;
+}
+    .copyright{font-size: .5rem;}
 }

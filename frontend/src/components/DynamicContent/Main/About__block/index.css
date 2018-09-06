@@ -110,9 +110,8 @@
     }
 
     .question__wrapper {
-        flex: 1 1 30%;
+        flex: 1 6 30%;
     }
-
     .about__content p {
         text-align: left;
         margin-left: -8px;
@@ -133,4 +132,15 @@
         text-align: center
     }
 
+}
+/* Fullscreen */
+
+@media only screen and (min-width: 1024px) {
+.question__wrapper {
+    -ms-flex: 1 6 30%;
+    flex: 1 1 30%;
+}
+    .question{display: block}
+    .container__about-content{padding: 3em 4em;}
+    .advantages{padding: 1rem 0;}
 }

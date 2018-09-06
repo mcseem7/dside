@@ -62,3 +62,14 @@
     will-change: opacity;}
 
 }
+/* Full */
+
+@media only screen and (min-width: 1024px) {
+.more__icon {
+    width: 1rem;
+}
+.grid figure {
+    min-width: 350px;
+}
+.load{font-size: 0.8rem;}
+}
