@@ -68,7 +68,7 @@ export default class Header extends Component {
                   <Link to="/" className="link link--dside"><span>
 
 
-                    <svg className="svg-logo" width="58px" height="21px" viewBox="0 0 209 39" version="1.1"
+                    <svg className="svg-logo" width="86px" height="26px" viewBox="0 0 209 39" version="1.1"
                          xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
     <pattern id="rollover" width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
       <image id="rollover-image" xlinkHref="https://s3-us-west-2.amazonaws.com/s.cdpn.io/277/1.gif" width="100"
