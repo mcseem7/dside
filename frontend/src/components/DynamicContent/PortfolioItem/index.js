@@ -8,7 +8,7 @@ import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from '
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import {Link} from "react-router-dom";
 
-import arrowImg from './arrowImg.png'
+import arrowImg from './arrow.svg'
 
 
 
@@ -73,6 +73,7 @@ export default class PortfolioItem extends Component {
                   <div className="project__logo">
                     <img src={`http://mydside.com/${this.state.itemPortfolio.logotype}`} alt="" />
                   </div>
+              <div className="superwrapper">
                   <div className="project__names">
                     <div className="category__project">
                       <p>websites</p>
@@ -85,18 +86,16 @@ export default class PortfolioItem extends Component {
                       {/*<p>{this.state.itemPortfolio.name}</p>*/}
                     {/*</div>*/}
                   </div>
-                </div>
-
-                <div className="portfolio__description__content">
+          <div className="portfolio__description__content">
                   <div className="project_description__content">
-                    <p className="name__description">Short project
-                        description: <br />
-                    </p>
                     <p className="description__project" dangerouslySetInnerHTML={{__html: this.state.itemPortfolio.description}}>
                       {/*{this.state.itemPortfolio.description}*/}
                     </p>
                   </div>
                 </div>
+                </div>
+
+
 
                 <div className="portfolio__datatime__content">
                   <div className="portfolio__post-data">
@@ -110,12 +109,12 @@ export default class PortfolioItem extends Component {
                     <div className="time__post">
                       <div className="icon-timer">
                         <div className="icon__blog" />
-                        <p>{this.state.itemPortfolio.watching_time} <span>minutes</span></p>
+                        <p>{this.state.itemPortfolio.watching_time} <span>days</span></p>
                       </div>
                     </div>
                   </div>
+                 </div>
                 </div>
-
               </div>
             </div>
           </div>
