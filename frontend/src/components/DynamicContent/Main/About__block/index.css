@@ -1,109 +1,146 @@
-.logotype img {
-    max-width: 100%;
-}
-.logotype {
-    width: 50px;
-    display: inline-block;
-    margin-right: 7px;
-}
-.question {
-    margin-top: 25px;
-}
-
+.container__about-content{padding: 2rem;}
 .company__content {
-    font-size: 14px;
-    line-height: 30px;
-    color: rgb(0,0,0);
-    width: 100%;
-    font-family: "MontLight";
-    font-weight: 300;
-}
-
-.container__about-content {
-    display: flex;
-    max-width: 1200px;
-    min-width: 320px;
-    margin: 0 auto;
-padding-top: 50px;
- padding-bottom: 90px;
-}
-
-.question__wrapper .question {
-    font-size: 16px;
-    line-height: 10px;
-    color: rgb(188,176,182);
-    font-family: "MontBold";
-    font-weight: bold;
-}
-
-.about__company-content {
-    flex: 1 1 70%;
-}
-
-.more__about {
-    outline: none;
-    border: none;
-    background: none;
-    cursor: pointer;
-    font-size: 16px;
-    line-height: 6px;
-    color: rgb(12,16,16);
-    font-family: "MontBold";
-    font-weight: 300;
-    transition: 0.3s;
-    padding: 0;
-}
-
-.more__about:after {
-    opacity: 0;
-}
-
-.more__about-button {
-    position: relative;
-    margin-left: -7px;
-}
-
-
-.question__wrapper {
-    flex: 1 1 30%;
-}
-
-.about__content p {
-    text-align: left;
-    margin-left: -8px;
-}
-.advantages{display: flex; flex-direction: row; font-family: MontLight; font-size: 14px;}
-.advantages img{width: 36px;}
-.advantages span{text-align: center}
-
-@media screen and (max-width: 768px){
-
-.container__about-content {
-    flex-direction: column;
-}
-
-}
-
-@media screen and (max-width: 480px){
-
-    .question__wrapper .question {
-        font-size: 32px;
-        line-height: 1.3;
-        margin: 0;
+        font-size: 1.2rem;
+        line-height: 30px;
+        color: rgb(0, 0, 0);
+        width: 100%;
+        font-family: "MontLight";
+        font-weight: 300;
     }
-
-    .company__content,
-    .more__about {
-        font-size: 38px;
-        line-height: 1.3;
-    }
-
-    .more__about {
-        font-family: MontLight;
+  .logotype img {
+        max-width: 100%;
     }
 
     .logotype {
-        width: 110px;
+        width: 50px;
+        display: inline-block;
+        margin-right: 7px;
+    }
+     .question {
+        display: none;
+    }
+     .more__about {
+        outline: none;
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: rgb(12, 16, 16);
+        font-family: "MontBold";
+        font-weight: 300;
+        transition: 0.3s;
+        padding: 0;
+    }
+     .advantages {
+        display: flex;
+        flex-direction: row;
+        font-family: 'MontLight', sans-serif;
+        font-size: 1.2rem;
+         padding: 3rem 0;
     }
 
+    .advantages img {
+        width: 3rem;
+    }
+
+    .advantages span {
+        text-align: center
+    }
+/* Tablets */
+
+@media only screen and (min-width: 480px) {
+
+
+    .question {
+        margin-top: 25px;
+    }
+
+    .company__content {
+        font-size: 14px;
+        line-height: 30px;
+        color: rgb(0, 0, 0);
+        width: 100%;
+        font-family: "MontLight";
+        font-weight: 300;
+    }
+
+    .container__about-content {
+        display: flex;
+        max-width: 1200px;
+        min-width: 320px;
+        margin: 0 auto;
+        padding-top: 50px;
+        padding-bottom: 90px;
+    }
+
+    .question__wrapper .question {
+        font-size: 16px;
+        line-height: 10px;
+        color: rgb(188, 176, 182);
+        font-family: "MontBold";
+        font-weight: bold;
+    }
+
+    .about__company-content {
+        flex: 1 1 70%;
+    }
+
+    .more__about {
+        outline: none;
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 6px;
+        color: rgb(12, 16, 16);
+        font-family: "MontBold";
+        font-weight: 300;
+        transition: 0.3s;
+        padding: 0;
+    }
+
+    .more__about:after {
+        opacity: 0;
+    }
+
+    .more__about-button {
+        position: relative;
+        margin-left: -7px;
+    }
+
+    .question__wrapper {
+        flex: 1 6 30%;
+    }
+    .about__content p {
+        text-align: left;
+        margin-left: -8px;
+    }
+
+    .advantages {
+        display: flex;
+        flex-direction: row;
+        font-family: 'MontLight', sans-serif;
+        font-size: 14px;
+    }
+
+    .advantages img {
+        width: 36px;
+    }
+
+    .advantages span {
+        text-align: center
+    }
+
+}
+/* Fullscreen */
+
+@media only screen and (min-width: 1024px) {
+.question__wrapper {
+    -ms-flex: 1 6 30%;
+    flex: 1 1 30%;
+}
+    .question{display: block}
+    .container__about-content{padding: 3em 4em;}
+    .advantages{padding: 1rem 0;}
 }

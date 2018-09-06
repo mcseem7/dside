@@ -3,11 +3,14 @@
     min-width: 100%;
     height: auto;
 }
-
+.load__more {
+    display:  flex;
+    justify-content:  center;
+}
 .more__icon {
-    width: 16px;
+    width: 1.4rem;
     margin-right: 5px;
-    margin-top: 15px;
+    margin-top: 1px;
 }
 
 .load {
@@ -23,7 +26,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: rgb(0,0,0);
-    font-size: 12px;
+    font-size: 1rem;
     font-weight: bold;
     background-image: linear-gradient(90deg, #000 0%, #000 100%);
      -webkit-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
@@ -34,7 +37,6 @@
 }
 
 .block__load__more {
-    padding-top: 11px;
     opacity: .3;
      -webkit-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
     -moz-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
@@ -42,6 +44,9 @@
     transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
     will-change: opacity;
 }
+/* Tablets */
+
+@media only screen and (min-width: 480px) {
 .block__load__more:hover {
     opacity: 1;
      -webkit-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
@@ -56,7 +61,15 @@
     transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
     will-change: opacity;}
 
-.load__more {
-    display:  flex;
-    justify-content:  center;
+}
+/* Full */
+
+@media only screen and (min-width: 1024px) {
+.more__icon {
+    width: 1rem;
+}
+.grid figure {
+    min-width: 350px;
+}
+.load{font-size: 0.8rem;}
 }

@@ -39,7 +39,7 @@
 
 .name__description  {
     color: #ffffff;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 18px;
     font-weight: 700;
     margin: 0;
@@ -47,7 +47,7 @@
 }
 
 .description__project {
-    font-family: MontLight;
+    font-family: 'MontLight', sans-serif;
     font-size: 18px;
     font-weight: 300;
     color:#ffffff;
@@ -86,7 +86,7 @@
 
 .project__task_portfolio p {
     color: #000000;
-    font-family: MontLight;
+    font-family: 'MontLight', sans-serif;
     font-size: 18px;
     font-weight: 300;
     max-width: 797px;
@@ -96,7 +96,7 @@
 
 .name__task h4 {
     color: #000000;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 18px;
     margin: 22px 45px 0px 0px;
     font-weight: 700;
@@ -134,7 +134,7 @@
 
 .portfolio__carousel-title h2 {
     color: #000000;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 18px;
     margin-left: 50px;
     font-weight: 700;

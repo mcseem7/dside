@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-import { withData } from 'react-universal-data'
+
 
 
 export default function withDsideApi(DsideComponent, apiUrl, lang) {
@@ -67,5 +67,5 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
     }
   }
 
-  return withData()(withDsideApi)
+  return withDsideApi;
 }

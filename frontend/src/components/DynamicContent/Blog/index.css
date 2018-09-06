@@ -13,21 +13,21 @@
 
 .tag-item p {
     color: #ffffff;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 18px;
     font-weight: 700;
 }
 
 .title-item h4 {
     color: #ffffff;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 30px;
     font-weight: 700;
 }
 
 .description-item p {
     color: #ffffff;
-    font-family: MontLight;
+    font-family: 'MontLight', sans-serif;
     font-size: 18px;
     font-weight: 300;
 }
@@ -35,7 +35,7 @@
 .watching__post,
 .time__post {
     color: #ffffff;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 18px;
     font-weight: 700;
 }
@@ -75,7 +75,7 @@
 
 .latest__post-title h4 {
     color: #000000;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 24px;
     font-weight: 700;
     margin: 0;
@@ -123,7 +123,7 @@
 
 .latest-post__tag {
     color: #ffffff;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 14px;
     flex: 1;
     font-weight: 700;
@@ -132,7 +132,7 @@
 .latest-post__description p {
     color: #ffffff;
     margin: 0;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 17px;
     font-weight: 700;
 }

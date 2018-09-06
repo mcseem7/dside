@@ -22,7 +22,7 @@
 
 .about__company-dside p {
     color: #6c6c6c;
-    font-family: MontLight;
+    font-family: 'MontLight', sans-serif;
     font-size: 14px;
     font-weight: 300;
     text-align: left;
@@ -30,7 +30,7 @@
 
 .title__what h4 {
     color: #6c6c6c;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 9.87px;
@@ -40,7 +40,7 @@
 
 .title__whyus h5 {
     color: #000000;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 16.87px;
@@ -84,7 +84,7 @@
 
 .description__business-process p {
     color: #000000;
-    font-family: MontLight;
+    font-family: 'MontLight', sans-serif;
     font-size: 17px;
     font-weight: 300;
     width: 240px
@@ -92,7 +92,7 @@
 
 .business__title p {
     color: #000000;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 17px;
     font-weight: 700;
     letter-spacing: -1.46px;
@@ -101,7 +101,7 @@
 
 .number__bus-process {
     color: #777677;
-    font-family: MontLight;
+    font-family: 'MontLight', sans-serif;
     font-size: 17px;
     font-weight: 700;
 }
@@ -127,7 +127,7 @@
 
 .meet__team-title h4 {
     color: #000000;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 18px;
     font-weight: 700;
     margin: 0;
@@ -239,7 +239,7 @@
 
 .name-developer h4 {
     color: #000000;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 24px;
     margin: 0;
     margin-bottom: 12px;
@@ -249,14 +249,14 @@
 .position-developer p {
     color: #000000;
     margin: 0;
-    font-family: MontLight;
+    font-family: 'MontLight', sans-serif;
     font-size: 18px;
     font-weight: 300;
 }
 
 .about__developer p {
     color: #000000;
-    font-family: MontLight;
+    font-family: 'MontLight', sans-serif;
     margin: 0;
     font-size: 18px;
     font-weight: 300;

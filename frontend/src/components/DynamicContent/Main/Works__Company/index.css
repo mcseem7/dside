@@ -1,84 +1,79 @@
-.brands__company-container {
-    background: #171817;
-    width: 100%;
-}
-
-.brands__company {
-    max-width: 1200px;
-    min-width: 320px;
-    margin: 0 auto;
-}
-
-.brand__content {
-    display: flex;
-    flex-direction: column;
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
-
-
-.title__brand .title {
-    font-family: MontBold;
-    font-size: 20px;
-    font-weight: 300;
-    margin: 0;
-    color: #ffffff;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-.content__brands {
-    margin-top: 60px;
-}
-
-.brand img {
-    max-width: 80%;
-    min-width: 70%;
-    height: auto;
-    opacity: 0.6;
-    transition: opacity  0.6s;
-}
-
-.brand img:hover{
-    opacity: 1;
-}
-
-
-
-.brands {
-    display: flex;
-    flex-wrap: wrap;
-}
-
+  .brands__company-container {
+        background: #171817;
+        width: 100%;
+        padding: 2rem 0;
+    }
+  .title__brand .title {
+        font-family: 'MontBold', sans-serif;
+        font-size: 1.6rem;
+        padding: 2em;
+        font-weight: 300;
+        margin: 0;
+        color: #ffffff;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
 .brand {
-    width: 70px;
-    flex-basis: 25%;
-    margin-top: 21px;
-    text-align: center;
-    margin-bottom: 6px;
-}
-
-@media screen and (max-width: 768px) {
-     .brand {
          flex-basis: 32%;
      }
     .brands {
         justify-content: center;
     }
-}
+/* Tablets */
 
+@media only screen and (min-width: 480px) {
 
-@media screen and  (max-width: 480px){
-    .title__brand .title {
-        font-family: MontLight;
-        font-size: 2.2rem;
-        text-align: left;
-    }
     .brands__company {
-        margin-left: 40px;
-      margin-right: 40px;
+        max-width: 1200px;
+        min-width: 320px;
+        margin: 0 auto;
+    }
+
+    .brand__content {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 60px;
+    }
+    .brands__company-container {padding: 0 0 2rem 0;}
+    .title__brand .title {
+        font-family: 'MontBold', sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        margin: 0;
+        color: #ffffff;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content__brands {
+        margin-top: 20px;
+    }
+
+    .brand img {
+        max-width: 80%;
+        min-width: 70%;
+        height: auto;
+        opacity: 0.6;
+        transition: opacity 0.6s;
+    }
+
+    .brand img:hover {
+        opacity: 1;
+    }
+
+    .brands {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .brand {
+        width: 70px;
+        flex-basis: 25%;
+        margin-top: 21px;
+        text-align: center;
+        margin-bottom: 6px;
     }
 }

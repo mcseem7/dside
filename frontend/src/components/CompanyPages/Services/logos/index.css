@@ -1,6 +1,6 @@
 .case-title h3 {
     color: #060004;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
@@ -9,7 +9,7 @@
 
 .case-description p {
     color: #060004;
-    font-family: MontLight;
+    font-family: 'MontLight', sans-serif;
     font-size: 14px;
     font-weight: 300;
 }
@@ -29,7 +29,7 @@
     justify-content: flex-end;
 }
 .bad__title-apple h3{
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 24px;
     font-weight: 700;
     line-height: 31.87px;
@@ -50,7 +50,7 @@
 .bad__logo-list {
     width: 210px;
     color: #282828;
-    font-family: MontLight;
+    font-family: 'MontLight', sans-serif;
     font-size: 14px;
     font-weight: 300;
     line-height: 27.87px;
@@ -89,7 +89,7 @@
 .dside_textContainer-logo .logo__service-text {
     background-image: linear-gradient(to right, #743c18 60%, #1E1007 100%);
     opacity: 0.3;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 131px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -116,7 +116,7 @@
     line-height: 0.9;
     text-shadow: 0 5px 5px rgba(95, 51, 20, 0.61);
     color: #ffffff;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 86px;
     width: 100%;
     font-weight: 700;
