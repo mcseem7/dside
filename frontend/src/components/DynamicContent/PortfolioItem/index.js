@@ -92,8 +92,8 @@ export default class PortfolioItem extends Component {
                     <p className="name__description">Short project
                         description: <br />
                     </p>
-                    <p className="description__project">
-                      {this.state.itemPortfolio.description}
+                    <p className="description__project" dangerouslySetInnerHTML={{__html: this.state.itemPortfolio.description}}>
+                      {/*{this.state.itemPortfolio.description}*/}
                     </p>
                   </div>
                 </div>
