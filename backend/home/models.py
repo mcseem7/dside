@@ -33,3 +33,16 @@ def request_handler(sender, instance, **kwargs):
 
     bot.send_message(chat_id=ORDERS_CHAT_ID,
                      text=text, parse_mode=telegram.ParseMode.HTML, disable_web_page_preview=True)
+
+
+class LimitedOffer(models.Model):
+    background = models.ImageField()
+    date = models.DateTimeField()
+    week = models.IntegerField(choices=[[1,1],[2,2],[3,2],[4,4]], blank=True)
+
+
+class LimitedOfferTranslation(models.Model):
+    lang_code = models.CharField(choices=LANGUAGES, max_length=5, verbose_name="Language")
+    title = models.CharField(max_length=200)
+    text = models.TextField()
+    offer = models.ForeignKey(LimitedOffer, models.CASCADE)
