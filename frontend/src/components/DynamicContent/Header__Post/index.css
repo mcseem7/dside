@@ -16,6 +16,7 @@
     position: relative;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0;
 }
 
 .portolio__post {
@@ -59,22 +60,6 @@ figure.effect-marley h2 {
     opacity: 0;
 }
 
-figure.effect-marley:hover figcaption{ background-color: rgba(15, 21, 30, 0.23); transition: all 0.25s;}
-figure.effect-marley:hover h2 {
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-    opacity: 1;
-}
-figure.effect-marley  img {transform: scale(1); transition: transform .3s  ease-in-out;}
-figure.effect-marley:hover img {
-    -webkit-filter: blur(5px);
-    filter: blur(5px);
-    transform: scale(1.05);
-    background-color: rgba(15, 21, 30, 0.93);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    transition: .3s filter linear, .3s transform ease-in-out;
-}
 
 figure.effect-marley h2::after {
     position: absolute;
@@ -98,13 +83,6 @@ figure.effect-marley p {
     transition: opacity 0.35s, transform 0.35s;
 }
 
-figure.effect-marley:hover h2::after,
-figure.effect-marley:hover p {
-    opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-    transition: opacity 0.35s, transform 0.35s;
-}
 
 .grid {
     position: relative;
@@ -179,13 +157,6 @@ figure.effect-marley:hover p {
     background-image: url("./images/arrow.svg");
 }
 
-.grid figure figcaption:hover > a {
-    opacity: 1;
-   
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-    transition: opacity 0.35s, transform 0.35s;
-}
 
 
 
@@ -244,17 +215,38 @@ figure.effect-marley:hover p {
 .what__about-content {
     background: #ffffff;
 }
+/* Tablets */
 
-
-
-
-
-@media screen and (max-width: 768px) {
-    .content__posts  {
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }
-    .container__what {
-        display: none;
-    }
+@media only screen and (min-width: 480px) {
+figure.effect-marley:hover figcaption{ background-color: rgba(15, 21, 30, 0.23); transition: all 0.25s;}
+figure.effect-marley:hover h2 {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    opacity: 1;
 }
+figure.effect-marley  img {transform: scale(1); transition: transform .3s  ease-in-out;}
+figure.effect-marley:hover img {
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    transform: scale(1.05);
+    background-color: rgba(15, 21, 30, 0.93);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    transition: .3s filter linear, .3s transform ease-in-out;
+}
+figure.effect-marley:hover h2::after,
+figure.effect-marley:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    transition: opacity 0.35s, transform 0.35s;
+}
+.grid figure figcaption:hover > a {
+    opacity: 1;
+
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    transition: opacity 0.35s, transform 0.35s;
+}
+}
+

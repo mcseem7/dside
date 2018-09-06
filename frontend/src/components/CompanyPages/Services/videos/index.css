@@ -1,7 +1,7 @@
 
 .view__videos-title {
     color: #000000;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 23px;
     font-weight: 700;
     line-height: 31.87px;
@@ -9,7 +9,7 @@
 
 .view__videos-description {
     color: #000000;
-    font-family: MontLight;
+    font-family: 'MontLight', sans-serif;
     font-size: 18px;
     font-weight: 300;
     line-height: 31.87px;
@@ -58,7 +58,7 @@
 .dside_textContainer-video .logo__service-text {
     background-image: linear-gradient(to right, #743c18 60%, #1E1007 100%);
     opacity: 0.3;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 131px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -85,7 +85,7 @@
     line-height: 0.9;
     text-shadow: 0 5px 5px rgba(95, 51, 20, 0.61);
     color: #ffffff;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 86px;
     width: 100%;
     font-weight: 700;

@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /dside-venv
+/frontend/build
 /frontend/node_modules
 /venv
 

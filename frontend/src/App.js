@@ -60,6 +60,17 @@ class App extends Component {
                   {rel: "apple-touch-icon", sizes: "72x72", href: "http://mydside.com/img/apple-touch-icon-72x72.png"}
               ]}
 
+              script={[
+                  {src: "http://include.com/pathtojs.js", type: "text/javascript"},
+                  {type: "application/ld+json", innerHTML: `{ "@context": "http://schema.org" }`}
+              ]}
+              noscript={[
+                  {innerHTML: `<link rel="stylesheet" type="text/css" href="foo.css" />`}
+              ]}
+              style={[
+                  {type: "text/css", cssText: "p {font-size: 12px;}"}
+              ]}
+
           />
 
         <Route render={(props) => {

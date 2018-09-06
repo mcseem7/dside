@@ -6,16 +6,13 @@ export default function Services () {
   return (
     <section>
       <div className="content__services">
-        <div className="title__service">
-          <h4>What can you get?</h4>
-        </div>
         <div className="services">
 
           <div className="title__service">
-            <h4>What can you get?</h4>
+            <h4 className="golden">What can you get?</h4>
             <h2>You can just come up with an IDEA</h2><p> and get a name for the company (naming), a name for the domain, a logo, a corporate identity, a marketing-kit, as well as a good-selling website and a customized advertising campaign.</p>
           </div>
-
+<div className="listwrapper">
           <div className="list__services-branding">
             {/* <div className="title__list"> */}
             {/* <h2>Branding</h2> */}
@@ -80,6 +77,7 @@ export default function Services () {
           </div>
 
         </div>
+</div>
 
         {/*<button className="more__about-service shining-underline" >*/}
                 {/*More services*/}

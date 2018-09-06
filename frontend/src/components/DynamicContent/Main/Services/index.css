@@ -1,42 +1,79 @@
+/* Mobile-First Home Services */
+    .content__services {
+        margin-right: 40px;
+        margin-left: 40px;
+        font-family: 'MontLight', sans-serif;
+    }
 
-.title__service h4 {
-    margin: 0;
-    padding: 0;
-    background-image: linear-gradient(to right, #da8c93 0%, #ae6058 100%);
-    opacity: .5;
-    color: #000000;
-    font-family: MontBold;
-    font-size: 18px;
-    font-weight: 700;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-p{ font-family: MontLight; font-size: 14px; width: 80%; line-height: 1.6em;}
-h2{ font-family: MontLight; font-size: 1.4em;}
+    .title__service h4 {
+        font-size: 1.6rem;
+    }
+    .title__service h2 {
+        font-size: 1.8rem;
+    }
+    .title__service p {
+        font-size: 1.2rem;
+        padding: 0 0 3rem 0;
+        line-height: 1.8rem;
+    }
+    .content__services {
+        display: flex;
+        flex-direction: column;
+    }
+
+      .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content__services .title__service {
+        display: block;
+        margin-bottom: -30px;
+    }
+ul{ margin: 0; padding:0 0 2rem 0;}
 ul li {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    font-size: 1.2rem;
 }
 
-
+.listwrapper{display: flex;  flex-wrap: wrap; flex-direction: column;}
 .list li:first-child {
     color: #000000;
-    font-family: MontBold;
-    font-size: 16px;
+    font-family: 'MontBold', sans-serif;
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 9.87px;
     text-transform: uppercase;
 }
 
+.list li a{text-decoration: underline; color: #000;}
 .list li {
     color: #112537;
-    font-family: MontLight;
-    font-size: 14px;
+    font-family: 'MontLight', sans-serif;
     margin-bottom: 10px;
     font-weight: 300;
 }
+.shining-underline span{display: none;}
+
+/* Tablets */
+
+@media only screen and (min-width: 480px) {
+.title__service h4 {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, #da8c93 0%, #ae6058 100%);
+    opacity: .5;
+    color: #000000;
+    font-family: 'MontBold', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+p{ font-family: 'MontLight', sans-serif; font-size: 14px; line-height: 1.6em;}
+h2{ font-family: 'MontLight', sans-serif; font-size: 1.4em;}
 
 .content__services {
     max-width: 1200px;
@@ -92,54 +129,5 @@ outline: none;
     list-style-type: none;
 }
 
-.content__services > .title__service {
-    display: none;
-}
 
-@media screen and (max-width: 768px) {
-    .services {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .content__services .title__service {
-        display: block;
-        margin-bottom: -30px;
-    }
-
-    .services .title__service {
-        display: none;
-    }
-
-    .more__about-service {
-        display: none;
-    }
-
-    .content__services {
-        padding-bottom: 0;
-    }
-}
-
-@media screen and (max-width: 480px){
-
-    .content__services {
-        margin-right: 40px;
-        margin-left: 40px;
-    }
-
-    .title__service h4 {
-        font-size: 40px;
-    }
-
-    .list li:first-child {
-        font-size: 26px;
-    }
-
-    .list li {
-        font-size: 26px;
-    }
-
-    .content__services {
-        display: flex;
-    }
 }

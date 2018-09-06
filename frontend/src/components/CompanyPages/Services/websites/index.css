@@ -1,7 +1,7 @@
 .logo__service-text_website {
     background-image: linear-gradient(to right, #743c18 60%, #1E1007 100%);
     opacity: 0.3;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 161px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -16,7 +16,7 @@
 .dside_textContainer-website .logo__service_slogan{
     text-shadow: 0 5px 5px rgba(95, 51, 20, 0.61);
     color: #ffffff;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 86px;
     width: 100%;
     z-index: 1;
@@ -84,7 +84,7 @@
     border: 2px solid #d79888;
     background-image: linear-gradient(to right, #d79888 0%, #b2725e 100%);
     color: #000000;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 18px;
@@ -115,7 +115,7 @@
 
 .versus__title {
     color: #ffffff;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 24px;
     font-weight: 700;
     margin-top: 55px;
@@ -127,7 +127,7 @@
 
 .versus__text {
     color: #ffffff;
-    font-family: MontLight;
+    font-family: 'MontLight', sans-serif;
     font-size: 14px;
     font-weight: 300;
     line-height: 31.87px;
@@ -137,7 +137,7 @@
 
 .versus__text span {
     font-weight: 700;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
 }
 
 
@@ -169,7 +169,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #242424;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 24px;
     font-weight: 700;
     line-height: 31.87px;
@@ -179,7 +179,7 @@
 
 .baker__titles p {
     color: #101010;
-    font-family: MontLight;
+    font-family: 'MontLight', sans-serif;
     font-size: 14px;
     margin: 0;
     font-weight: 300;
@@ -198,7 +198,7 @@
 
 .features__bakers li {
     color: #101010;
-    font-family: MontLight;
+    font-family: 'MontLight', sans-serif;
     font-size: 14px;
     width: 200px;
     font-weight: 300;
@@ -228,7 +228,7 @@
 
 .al__time-wrapper p {
     color: #ffffff;
-    font-family: MontLight;
+    font-family: 'MontLight', sans-serif;
     font-size: 14px;
     font-weight: 300;
     margin-top: 51px;
@@ -239,7 +239,7 @@
 .al__time-wrapper h3 {
     color: #ffffff;
     margin: 0;
-    font-family: MontBold;
+    font-family: 'MontBold', sans-serif;
     font-size: 48px;
     font-weight: 700;
     line-height: 20.87px;
