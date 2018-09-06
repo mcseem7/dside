@@ -1,16 +1,22 @@
 import React, {Component} from 'react'
-
+import DribbleButton from 'react-dribble-button';
 
 
 export default function OrderButton(props) {
 
   return(
-      <div className="order__wrap" onClick={() => {
+      <DribbleButton style={{
+          width: '236px',
+          height: '60px',
+          zIndex: 1,
+          marginTop: '500px',
+          borderRadius: '29px',
+          fontFamily: 'MontBold'
+      }} className="order__wrap" color='light-green' onClick={() => {
         return props.handlePopup()
       }}>
-          меня зовут кнопка
-      {/*\*/}
-      </div>
+          order now
+      </DribbleButton>
   )
 }
 

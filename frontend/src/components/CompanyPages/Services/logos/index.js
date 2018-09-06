@@ -13,6 +13,7 @@ import WeCare from "../../../Basic/TrustBlocks/WeCare";
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
 import Own from "../../../Basic/TrustBlocks/Own";
 
+
 export default class LogoPage extends Component {
     constructor() {
         super()

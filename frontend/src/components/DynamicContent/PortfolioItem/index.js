@@ -40,17 +40,12 @@ export default class PortfolioItem extends Component {
      }).then((item) => {
          this.setState({itemPortfolio: item}, () => {
            for(let key in this.state.itemPortfolio.blocks ) {
-             console.log(this.state.itemPortfolio.blocks)
             this.setState({blocksImg: this.state.itemPortfolio.blocks})
            }
-
             for(let key in this.state.itemPortfolio.attachment ) {
                  this.setState({attachImg: this.state.itemPortfolio.attachment[key].content})
              }
-
-
                  this.setState({similarItems: this.state.itemPortfolio.similar_items})
-
          })
      })
 

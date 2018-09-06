@@ -90,6 +90,7 @@ export default class HeaderService extends Component {
             </div>
 
             </div>
+            <div className={'head_container_with-button'}>
               <div className={`dside__header-text_container ${this.props.textContainer}`} >
                 <div className={`logo__service-text ${this.props.stylelogotext}`}>
                   {this.props.textHeader}
@@ -105,7 +106,7 @@ export default class HeaderService extends Component {
               </div>
 
             <OrderButton handlePopup={this.changePoppup}/>
-
+            </div>
              {/*<div className="service_button">*/}
                   {/*order now*/}
                 {/*</div>*/}
