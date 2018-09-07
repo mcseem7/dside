@@ -1,3 +1,8 @@
+
+
+
+/* Tablets */
+@media only screen and (min-width: 480px) {
 .logo__service-text_brand p {
     text-align: right;
     margin-bottom: -34px;
@@ -258,45 +263,6 @@ margin-left: 245px;
     flex: 1;
 }
 
-@media screen and (max-width: 480px){
-
-    .dside_textContainer-brand div:first-child {
-     font-size: 7.2rem;
- }
-
-    .branding__service-case_studies {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .arrow__louis-container {
-        display: none;
-    }
-
-    .branding__service-right {
-        align-items: center;
-    }
-
-    .logo__service-img_brand {
-        position: absolute;
-        top: -82px;
-        left: -119px;
-        width: 790px;
-        z-index: 1;
-    }
-
-
-
-    .header__navigation {
-        z-index: 1;
-    }
-
-    .find__out-title h2 {
-        line-height: 0.9;
-        margin-top: -15px;
-    }
-}
-
 .find__out-branding{
     height: 225px;
     transition: height 0.3s ease-out;
@@ -483,4 +449,5 @@ margin-left: 245px;
 
 p.loius__viton_title-description {
     margin-top: 30px;
+}
 }
