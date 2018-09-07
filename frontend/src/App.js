@@ -97,16 +97,11 @@ class App extends Component {
 
             <div className="privacy__warning">
               <p className="cook__description">
-                Мы используем куки-файлы, чтобы улучшить ваше восприятие нашего
-                сайта.
-                Вы можете увидеть, какие куки-файлы сохранены на вашем
-                устройстве с помощью настроек куки.
-                Просматривая наш сайт, вы соглашаетесь с использованием нами
-                куки-файлов.
+                Did you know? This website uses cookies to ensure you get the best experience on our website. <span className="shining-underline">Learn more<span></span></span>
               </p>
 
-              <div className="cook__button">
-                <p onClick={this.confirmCookies}>Я согласен</p>
+              <div className="cook__button golden">
+                <p onClick={this.confirmCookies}>Agree</p>
               </div>
 
             </div>
