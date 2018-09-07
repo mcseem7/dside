@@ -1,5 +1,5 @@
   .limited__service-container {
-    background: url(/static/media/background__limited.afb78cf7.png);
+    background: url('background__limited.png');
     margin-top: 4rem;
     background-repeat: no-repeat;
     background-position: 65% 10%;
