@@ -1,127 +1,105 @@
-#cu-we-care {
+#cu-advantages .cu-content {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+.advantages-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0rem 1rem 1rem 1rem;
+}
+
+img.adv-icon {
+    width: 4rem;
+    margin-bottom: 15px;
+}
+
+.advantage {
+    text-align: center;
+    font-family: 'MontLight',sans-serif;
+    font-weight: 400;
+    flex: .3 1 40%;
+    margin-top: 2rem;
+
+}
+
+.advantage-heading {
+    font-size: 1rem;
+    text-transform: uppercase;
+    max-width: 200px;
+    line-height: 1.4rem;
+    margin: auto;
+    font-family: 'MontBold',sans-serif;
+}
+
+.advantage-text {
+    display: none;
+}
+ #cu-we-care {
     color: #fff;
     background: #030305 url("we-care.png") no-repeat;
-    background-size: auto 550px;
+    background-size: cover;
+    background-position: 9% 20%;
 }
 
 .convupper-block {
     max-width: 1920px;
     margin: auto;
 }
-
-
-#cu-own {
-    background: #ffffff url("own.png") no-repeat top center;
-    background-size: auto 528px;
+#cu-advantages h3 {
+    font-size: 1.8em;
+    font-family: 'MontBold',sans-serif;
+    margin-top: 0;
+    padding: 0rem 1rem 1rem 1rem;
 }
-
-.convupper-block {
-    background-size: 100% auto;
-    width: 100%;
-    height: 550px;
-
-    display: flex;
-    align-items: center;
-}
-
-#cu-own.convupper-block {
-    height: unset;
-    position: relative;
-    display: block;
-}
-
-.convupper-block h3, h2, h1, h4 {
-    font-family: 'Mont';
-    font-weight: 600;
-}
-
-.convupper-block h3 {
-    font-size: 1.3em;
-    margin-bottom: 14px;
-    margin-top: 54px;
-}
-
 #cu-we-care .text p {
-    font-size: 12pt;
-    line-height: 22pt;
+    font-family: 'MontLight',sans-serif;
+    font-size: 1rem;
+    line-height: 1.6rem;
     width: initial;
+     padding: 1rem 7rem 2em 2rem;
 }
 
 .cu-wrapper {
     display: flex;
     align-items: center;
-
+    padding: 1rem 1rem 1rem 1rem;
 }
 
 #cu-we-care .cu-wrapper{
     justify-content: flex-end;
 }
 
-#cu-we-care .cu-content {
-    flex-basis: 670px;
-}
 
 #cu-we-care hr {
     border: none;
     height: 1px;
-    background: #543026;
-    width: 212px;
-    margin-left: 0;
+    background: #905241;
+    width: 15rem;
+    margin-left: 2rem;
 }
-
+.cu-content h3{font-size: 1.8em;
+    font-family: 'MontBold',sans-serif;
+    margin-top: 0;
+    padding: 3rem 0rem 0rem 2rem;}
 .text p {
     margin-top: 22px;
 }
 
-#cu-advantages .cu-content {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.advantages-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-img.adv-icon {
-    width: 80px;
-    margin-bottom: 15px;
-}
-
-.advantage {
-    text-align: center;
-    font-family: Mont;
-    font-weight: 400;
-    flex-basis: 210px;
-}
-
-.advantage-heading {
-    font-weight: 600;
-    font-size: 18px;
-    text-transform: uppercase;
-    max-width: 200px;
-    margin: auto;
-}
-
-.advantage-text {
-    font-size: 14px;
-    line-height: 25px;
-    margin-top: 10px;
-}
-
-#cu-advantages h3 {
-    font-size: 1.8em;
-    margin-bottom: 76px;
-    margin-top: 0;
+#cu-own {
+    background: #ffffff url("own.png") no-repeat top center;
+    background-size: auto 328px;
+    padding: 2rem 2rem;
 }
 
 .own-container{
     display: flex;
     justify-content: space-between;
-    padding-top: 460px;
+    padding-top: 1rem;
     margin: auto;
     max-width: 1075px;
 }
@@ -129,13 +107,14 @@ img.adv-icon {
 .own-instance{
     display: flex;
     flex-direction: column;
+        flex-basis: 30%;
 }
-
+.own-instance:nth-child(4){display: none;}
+.own-instance:nth-child(3){display: none;}
 .own-instance img {
     width: auto;
-    height: auto;
-    max-height: 350px;
-    margin-bottom: 16px;
+    height: 10rem;
+    margin-bottom: 1rem;
 }
 
 .own-instance .own-heading, .own-instance .own-desc{
@@ -180,11 +159,8 @@ img.adv-icon {
     border: none;
     border-bottom: 1px solid #fff;
 }
-
 .cu-heading {
-    top:16%;
     left: 0;
-    position: absolute;
     color: #fff;
     font-family: Mont;
     display: flex;
@@ -199,9 +175,10 @@ img.adv-icon {
 .dside-promo{
     display: flex;
     justify-content: space-around;
-    padding: 90px 130px 0;
+    flex-direction: column;
+    padding: 2rem 0 0 0;
 }
-
+.dside-promo img{padding: 2em; width: 50%; margin: 0 auto;}
 .dside-promo .text {
     max-width: 500px;
     text-transform: uppercase;
@@ -209,6 +186,48 @@ img.adv-icon {
     font-weight: 400;
     line-height: 31px;
     margin-top: -8px;
+    text-align: center;
+}
+/* Tablets */
+@media only screen and (min-width: 480px) {
+.own-instance  {flex-basis: 20%;}
+#care{background: rgba(0, 0, 0, 0.71);}
+#cu-we-care {
+    background-position: 0% 0%;
+}
+.own-instance img {
+    height: 16rem;
+}
+.own-container{padding-top: 10rem;}
+.own-instance .own-heading, .own-instance .own-desc{text-align: center}
+.dside-promo .text{
+    font-family: 'MontLight', sans-serif;
+    line-height: 31px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 1rem;}
+.convupper-block {
+    background-size: 100% auto;
+
+    display: flex;
+    align-items: center;
+}
+
+#cu-own.convupper-block {
+    height: unset;
+    position: relative;
+    display: block;
+}
+
+.convupper-block h3, h2, h1, h4 {
+    font-family: 'Mont';
+    font-weight: 600;
+}
+
+.convupper-block h3 {
+    font-size: 1.3em;
+    margin-bottom: 14px;
+    margin-top: 54px;
 }
 img.dside-logo {
     width: auto;
@@ -216,5 +235,63 @@ img.dside-logo {
     height: auto;
     max-height: 75px;
     display: block;
-
+}
+.advantage-text {
+    font-size: .8rem;
+    line-height: 25px;
+    margin-top: 10px;
+    display: flex;
+}
+#cu-advantages .cu-content {
+    padding: 2rem;
+}
+}
+/* Laptops */
+@media only screen and (min-width: 1024px) {
+    .own-instance:nth-child(4){display: flex;}
+.own-instance:nth-child(3){display: flex;}
+.own-instance img {
+    height: 20rem;
+}
+.dside-promo{padding: 4rem 0 0 0;}
+.own-container {
+    padding-top: 7rem;
+}
+img.dside-logo{    width: 10%;}
+    #cu-we-care .cu-wrapper {
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    }
+    #care{background: transparent;}
+    #cu-we-care .cu-content{
+flex-basis: 670px;
+    }
+    .advantage {
+        flex: 0.1 1 22%;
+}
+    #cu-we-care {
+    background-position: 29% 0%;
+}
+    #cu-we-care .text p{font-size: .8rem; line-height: 1.2rem}
+    .convupper-block h3{font-size: 1.8rem;}
+    .cu-heading {  padding-top: 3rem;  }
+    img.adv-icon{
+        width: 3rem;
+    }
+    .advantage-heading{
+        font-size: .76rem;
+    }
+}
+/* Full */
+@media only screen and (min-width: 1024px) {
+    .own-instance img {
+    height: 375px;
+}
+    .cu-heading{    width: 60%;}
+    img.adv-icon{
+        width: 4rem;
+    }
+    .advantage-heading{
+        font-size: 1rem;
+    }
 }
