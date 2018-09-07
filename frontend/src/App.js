@@ -100,7 +100,7 @@ class App extends Component {
                 Did you know? This website uses cookies to ensure you get the best experience on our website. <span className="shining-underline">Learn more<span></span></span>
               </p>
 
-              <div className="cook__button golden">
+              <div className="cook__button">
                 <p onClick={this.confirmCookies}>Agree</p>
               </div>
 
