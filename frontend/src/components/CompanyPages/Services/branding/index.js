@@ -7,9 +7,9 @@ import Footer from '../../../Basic/Footer'
 import './index.css'
 import louis from './lois_viton.png'
 import arrow from './arrow.png'
-import YoutubeBackground from 'react-youtube-background'
+
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
-import withScrollReveal from 'react-scrollreveal';
+
 import WheelReact from 'wheel-react';
 import louisbag from './louisbag.png'
 import shadow from './shadow.png'
@@ -82,7 +82,7 @@ class BrandPage extends Component {
         })
         return (
             <div>
-                <YoutubeBackground videoId="eJ8SOYUkWl0">
+
                     <HeaderService
                         stylelogotext={'logo__service-text_brand'}
                         logoHeader={LogoBrand}
@@ -92,7 +92,7 @@ class BrandPage extends Component {
                         serviceSlogan={'DSIDE to make your brand work BETTER'}
                         serviceCategory={'Branding'}
                     />
-                </YoutubeBackground>
+
 
                 {
                     <div
@@ -337,14 +337,4 @@ class BrandPage extends Component {
     }
 }
 
-export default withScrollReveal([
-
-    {
-        selector: '.sr-item',
-        options: {
-            reset: true,
-            delay: 400
-        },
-        interval: 100
-    }
-])(BrandPage)
+export default BrandPage

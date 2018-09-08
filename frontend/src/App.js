@@ -16,100 +16,101 @@ import Helmet from "react-helmet";
 
 class App extends Component {
 
-  constructor() {
-    super()
+    constructor() {
+        super()
 
-    this.state = {
-        cook: true
-    }
-  }
-
-  componentDidMount() {
-    if (Cookies.get('accept-cookie') == undefined) {
-      this.setState({cook: true})
-    } else {
-      this.setState({cook: false})
-    }
-    window.scrollTo(0,0)
-  }
-
-  confirmCookies = () => {
-    this.setState({cook: false})
-    Cookies.set('accept-cookie', true, { expires: 365 });
-  }
-
-  render () {
-
-    return (
-      <div className="App">
-          <Helmet
-              htmlAttributes={{lang: "en"}}
-              title="Dside Branding Agency"
-              titleTemplate="dside.pl - %s"
-              defaultTitle="Dside Branding Agency"
-              titleAttributes={{itemprop: "name", lang: "en"}}
-              meta={[
-                  {name: "charset-8", content: "Dside Branding Agency"},
-                  {name: "description", content: "Dside Branding Agency"},
-                  {name: "viewport", content: "width=device-width"},
-                  {property: "og:type", content: "article"}
-              ]}
-              link={[
-                  {rel: "canonical", href: "http://mydside.com"},
-                  {rel: "apple-touch-icon", href: "http://mydside.com/img/apple-touch-icon-57x57.png"},
-                  {rel: "apple-touch-icon", sizes: "72x72", href: "http://mydside.com/img/apple-touch-icon-72x72.png"}
-              ]}
-
-              script={[
-                  {src: "http://include.com/pathtojs.js", type: "text/javascript"},
-                  {type: "application/ld+json", innerHTML: `{ "@context": "http://schema.org" }`}
-              ]}
-              noscript={[
-                  {innerHTML: `<link rel="stylesheet" type="text/css" href="foo.css" />`}
-              ]}
-              style={[
-                  {type: "text/css", cssText: "p {font-size: 12px;}"}
-              ]}
-
-          />
-
-        <Route render={(props) => {
-
-
-          return(
-
-              <TransitionGroup>
-                {props.location.pathname.match(/services\//gi) ?  <Header style={'none'}/>  : <Header style={'block'}/> }
-            <CSSTransition key={props.location.key} timeout={300} classNames="fade">
-              <Switch>
-                <Route exact path="/services/logo" component={LogoPage}/>
-                <Route exact path="/services/brand" component={BrandPage}/>
-                <Route exact path="/services/videos" component={VideoPage}/>
-                <Route exact path="/services/website" component={Website}/>
-                <Route exact path="/contactus" component={ContactUs}/>
-                <Route path="/" component={MainPages}/>
-              </Switch>
-            </CSSTransition>
-          </TransitionGroup>)
-        }} />
-        {this.state.cook ?
-          <div className="cookies-container">
-
-            <div className="privacy__warning">
-              <p className="cook__description">
-                Did you know? This website uses cookies to ensure you get the best experience on our website. <span className="shining-underline">Learn more<span></span></span>
-              </p>
-
-              <div className="cook__button">
-                <p onClick={this.confirmCookies}>Agree</p>
-              </div>
-
-            </div>
-          </div> : null
+        this.state = {
+            cook: true
         }
-      </div>
-    )
-  }
+    }
+
+    componentDidMount() {
+        if (Cookies.get('accept-cookie') == undefined) {
+            this.setState({cook: true})
+        } else {
+            this.setState({cook: false})
+        }
+        window.scrollTo(0,0)
+    }
+
+    confirmCookies = () => {
+        this.setState({cook: false})
+        Cookies.set('accept-cookie', true, { expires: 365 });
+    }
+
+    render () {
+
+        return (
+            <div className="App">
+                <div>sdfdfsfsdf</div>
+                <Helmet
+                    htmlAttributes={{lang: "en"}}
+                    title="Dside Branding Agency"
+                    titleTemplate="dside.pl - %s"
+                    defaultTitle="Dside Branding Agency"
+                    titleAttributes={{itemprop: "name", lang: "en"}}
+                    meta={[
+                        {name: "charset-8", content: "Dside Branding Agency"},
+                        {name: "description", content: "Dside Branding Agency"},
+                        {name: "viewport", content: "width=device-width"},
+                        {property: "og:type", content: "article"}
+                    ]}
+                    link={[
+                        {rel: "canonical", href: "http://mydside.com"},
+                        {rel: "apple-touch-icon", href: "http://mydside.com/img/apple-touch-icon-57x57.png"},
+                        {rel: "apple-touch-icon", sizes: "72x72", href: "http://mydside.com/img/apple-touch-icon-72x72.png"}
+                    ]}
+
+                    script={[
+                        {src: "http://include.com/pathtojs.js", type: "text/javascript"},
+                        {type: "application/ld+json", innerHTML: `{ "@context": "http://schema.org" }`}
+                    ]}
+                    noscript={[
+                        {innerHTML: `<link rel="stylesheet" type="text/css" href="foo.css" />`}
+                    ]}
+                    style={[
+                        {type: "text/css", cssText: "p {font-size: 12px;}"}
+                    ]}
+
+                />
+
+                <Route render={(props) => {
+
+                    return(
+
+                        <TransitionGroup>
+                            {props.location.pathname.match(/services\//gi) ?  <Header style={'none'}/>  : <Header style={'block'}/> }
+                            <CSSTransition key={props.location.key} timeout={300} classNames="fade">
+                                <Switch>
+                                    <Route exact path="/services/logo" component={LogoPage}/>
+                                    <Route exact path="/services/brand" component={BrandPage}/>
+                                    <Route exact path="/services/videos" component={VideoPage}/>
+                                    <Route exact path="/services/website" component={Website}/>
+                                    <Route exact path="/contactus" component={ContactUs}/>
+                                    <Route path="/" component={MainPages}/>
+                                </Switch>
+                            </CSSTransition>
+                        </TransitionGroup>)
+                }} />
+                {this.state.cook ?
+                    <div className="cookies-container">
+
+                        <div className="privacy__warning">
+                            <p className="cook__description">
+                                Did you know? This website uses cookies to ensure you get the best experience on our website. <span className="shining-underline">Learn more<span></span></span>
+                            </p>
+
+                            <div className="cook__button">
+                                <p onClick={this.confirmCookies}>Agree</p>
+                            </div>
+
+                        </div>
+                    </div> : null
+                }
+            </div>
+        )
+    }
 }
 
 export default App
+

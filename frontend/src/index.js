@@ -1,3 +1,4 @@
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
@@ -16,14 +17,14 @@ export default () => injectGlobal`
 
 
 const render = () => {
-  baseStyles()
+    baseStyles()
 
-  ReactDOM.render(
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>,
-    document.getElementById('root')
-  )
+    ReactDOM.hydrate(
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>,
+        document.getElementById('root')
+    )
 }
 
 render()
