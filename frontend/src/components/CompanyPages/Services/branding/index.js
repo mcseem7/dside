@@ -151,11 +151,11 @@ class BrandPage extends Component {
 
                                 {this.state.louisbagtext ?
                                     <Fragment>
-                                        <span className="price__louis" style={{color: '#21201f'}}>$ </span>
-                                        <h1 className={`price__louis louis_bag-text animate__louis ${'price_animate'}`}> 2000</h1>
+
+                                        <h1 className={`price__louis louis_bag-text animate__louis ${'price_animate'}`}> <span className="price__louis" style={{color: '#21201f'}}>$ </span>2000</h1>
                                     </Fragment>
                                     :
-                                    <h1 className={`price__louis sample_bag-text animate__louis ${'price_animate_end'}`}>{'100 $'}</h1>
+                                    <h1 className={`price__louis sample_bag-text animate__louis ${'price_animate_end'}`}><span style={{color: '#21201f'}}>$ </span>{'100'}</h1>
                                 }
 
                             </div>
