@@ -1,33 +1,43 @@
+
+
+
 const path = require('path');
 
 const React = require('react');
-import {
-  createReactAppExpress,
-  handleUniversalRender
-} from '@cra-express/core';
+const ReactDOMServer = require('react-dom/server');
+import { StaticRouter } from 'react-router'
 
-const { default: App } = require('../src/App');
-const clientBuildPath = path.resolve(__dirname, '../client');
 
-let AppClass = App;
+
+import { createReactAppExpress } from '@cra-express/core';
+
+const {default: App} = require('../src/App');
+const clientBuildPath = path.resolve(__dirname, 'client');
+
+
+
+function handleUniversalRender(req, res) {
+    const context = {};
+    const stream = ReactDOMServer.renderToNodeStream(
+        <StaticRouter location={req.url} context={context}>
+            <App />
+        </StaticRouter>
+    );
+
+    if (context.url) {
+        res.redirect(301, context.url);
+        return;
+    }
+
+    return stream;
+}
 
 const app = createReactAppExpress({
-  clientBuildPath,
-  universalRender:  handleUniversalRender(<App />),
+    clientBuildPath,
+    universalRender: handleUniversalRender
 });
 
 
-
-
-if (module.hot) {
-    module.hot.accept('../src/App', () => {
-        const { default: App } = require('../src/App');
-        AppClass = App;
-        console.log('✅ Server hot reloaded App');
-    });
-
-
-}
-
-
 module.exports = app;
+
+

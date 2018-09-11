@@ -5,7 +5,7 @@ import Footer from './components/Basic/Footer'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import ContactUs from './components/CompanyPages/ContactUs'
 import MainPages from './components/index'
-import LogoPage from './components/CompanyPages/Services/logos'
+// import LogoPage from './components/CompanyPages/Services/logos'
 import BrandPage from './components/CompanyPages/Services/branding'
 import VideoPage from './components/CompanyPages/Services/videos'
 import Website from './components/CompanyPages/Services/websites'
@@ -13,6 +13,28 @@ import {CSSTransition,TransitionGroup} from 'react-transition-group'
 import Cookies from 'js-cookie'
 import Header from './components/Basic/Header/index';
 import Helmet from "react-helmet";
+import loadable from 'loadable-components';
+import 'regenerator-runtime/runtime';
+
+
+
+const LoadingView = () => (
+    <div
+        style={{
+            padding: '10px'
+        }}
+    >
+        Loading...
+    </div>
+);
+
+
+const LogoPage = loadable((props) => import('./components/CompanyPages/Services/logos'), {
+    modules: ['./components/CompanyPages/Services/logos'],
+    LoadingComponent: props => <LoadingView />
+})
+
+
 
 class App extends Component {
 
@@ -42,7 +64,7 @@ class App extends Component {
 
         return (
             <div className="App">
-                <div>sdfdfsfsdf</div>
+
                 <Helmet
                     htmlAttributes={{lang: "en"}}
                     title="Dside Branding Agency"
@@ -75,14 +97,12 @@ class App extends Component {
                 />
 
                 <Route render={(props) => {
-
                     return(
-
                         <TransitionGroup>
                             {props.location.pathname.match(/services\//gi) ?  <Header style={'none'}/>  : <Header style={'block'}/> }
                             <CSSTransition key={props.location.key} timeout={300} classNames="fade">
                                 <Switch>
-                                    <Route exact path="/services/logo" component={LogoPage}/>
+
                                     <Route exact path="/services/brand" component={BrandPage}/>
                                     <Route exact path="/services/videos" component={VideoPage}/>
                                     <Route exact path="/services/website" component={Website}/>
