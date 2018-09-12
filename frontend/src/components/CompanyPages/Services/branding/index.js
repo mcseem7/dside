@@ -9,7 +9,7 @@ import louis from './lois_viton.png'
 import arrow from './arrow.png'
 
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
-import YoutubeBackground from 'react-youtube-background'
+
 import WheelReact from 'wheel-react';
 import louisbag from './louisbag.png'
 import shadow from './shadow.png'
@@ -82,7 +82,7 @@ class BrandPage extends Component {
         })
         return (
             <div>
-<YoutubeBackground>
+
                     <HeaderService
                         stylelogotext={'logo__service-text_brand'}
                         logoHeader={LogoBrand}
@@ -92,7 +92,7 @@ class BrandPage extends Component {
                         serviceSlogan={'DSIDE to make your brand work BETTER'}
                         serviceCategory={'Branding'}
                     />
-</YoutubeBackground>
+
 
                 {
                     <div

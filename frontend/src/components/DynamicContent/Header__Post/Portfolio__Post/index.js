@@ -34,7 +34,7 @@ export default class PortolioPost extends Component {
         }
         </figcaption>
       </figure>
-      <script dangerouslySetInnerHTML={ { __html: 'window.PROPS=' + JSON.stringify(this.props.dataItem) } }/>
+
 
     </div>
   })

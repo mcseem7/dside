@@ -13,6 +13,7 @@ export default class  LimitData extends Component {
 
 
     render() {
+        console.log(this.props.limitData)
         return (
             <Fragment>
                 <div className="timer__back-order">
