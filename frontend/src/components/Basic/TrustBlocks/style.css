@@ -285,7 +285,7 @@ flex-basis: 670px;
 /* Full */
 @media only screen and (min-width: 1024px) {
     .own-instance img {
-    height: 375px;
+    height: 340px;
 }
     .cu-heading{    width: 60%;}
     img.adv-icon{

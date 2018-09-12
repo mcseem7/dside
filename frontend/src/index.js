@@ -17,15 +17,15 @@ export default () => injectGlobal`
 
 
 
-ReactDOM.hydrate(
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>,
-    document.getElementById('root')
-);
+
+        ReactDOM.hydrate(
+
+            <BrowserRouter>
+                <App {...this.props} />
+            </BrowserRouter>
+            ,
+            document.getElementById('root')
+        );
 
 
-if (module.hot) {
-    module.hot.accept();
-}
 

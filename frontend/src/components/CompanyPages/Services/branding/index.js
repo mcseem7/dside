@@ -9,7 +9,7 @@ import louis from './lois_viton.png'
 import arrow from './arrow.png'
 
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
-
+import YoutubeBackground from 'react-youtube-background'
 import WheelReact from 'wheel-react';
 import louisbag from './louisbag.png'
 import shadow from './shadow.png'
@@ -82,7 +82,7 @@ class BrandPage extends Component {
         })
         return (
             <div>
-
+<YoutubeBackground>
                     <HeaderService
                         stylelogotext={'logo__service-text_brand'}
                         logoHeader={LogoBrand}
@@ -92,7 +92,7 @@ class BrandPage extends Component {
                         serviceSlogan={'DSIDE to make your brand work BETTER'}
                         serviceCategory={'Branding'}
                     />
-
+</YoutubeBackground>
 
                 {
                     <div
@@ -151,11 +151,11 @@ class BrandPage extends Component {
 
                                 {this.state.louisbagtext ?
                                     <Fragment>
-                                        <span className="price__louis" style={{color: '#21201f'}}>$ </span>
-                                        <h1 className={`price__louis louis_bag-text animate__louis ${'price_animate'}`}> 2000</h1>
+
+                                        <h1 className={`price__louis louis_bag-text animate__louis ${'price_animate'}`}> <span className="price__louis" style={{color: '#21201f'}}>$ </span>2000</h1>
                                     </Fragment>
                                     :
-                                    <h1 className={`price__louis sample_bag-text animate__louis ${'price_animate_end'}`}>{'100 $'}</h1>
+                                    <h1 className={`price__louis sample_bag-text animate__louis ${'price_animate_end'}`}><span style={{color: '#21201f'}}>$ </span>{'100'}</h1>
                                 }
 
                             </div>

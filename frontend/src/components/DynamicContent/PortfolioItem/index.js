@@ -26,6 +26,8 @@ export default class PortfolioItem extends Component {
         similarItems: []
     }
 
+
+
   }
 
 
@@ -34,7 +36,7 @@ export default class PortfolioItem extends Component {
 
 
 
- componentDidMount() {
+ componentWillMount() {
      return fetch(`http://mydside.com/api/en/portfolio/getPortfolioItemDetails/${this.props.match.params.portfolioitem}/`).then((response) => {
          return response.json()
      }).then((item) => {
@@ -256,6 +258,7 @@ export default class PortfolioItem extends Component {
 
 
       </div>
+
       </div>
 
     )

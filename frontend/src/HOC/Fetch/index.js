@@ -12,11 +12,13 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
       this.state = {
         dataDside: [],
         dataItemHome: [],
+          loading: false,
         postData: {
           name: '',
           email: ''
         }
       }
+
     }
 
     componentDidMount()  {
@@ -29,6 +31,7 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
        .then(data => this.setState({dataDside: data}))
         .catch(error => console.log(error))
       await this.getItemApiHome()
+        await this.setState({loading: true})
     }
 
     getItemApiHome = () => {
@@ -60,6 +63,7 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
             <DsideComponent
                 dataItem={this.state.dataItemHome}
                 postData={this.postFormData}
+                loading={this.state.loading}
                 getDsideApi={this.getDsideApi}
                 dataDside={this.state.dataDside}/>
           </div>

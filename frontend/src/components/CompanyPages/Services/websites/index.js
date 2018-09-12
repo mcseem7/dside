@@ -8,7 +8,7 @@ import Versus from './images/Layer 123.png'
 import BakerAndrew from './images/baker__andrew.svg'
 import Footer from '../../../Basic/Footer'
 import './index.css'
-
+import YoutubeBackground from 'react-youtube-background'
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
 import WeCare from "../../../Basic/TrustBlocks/WeCare";
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
@@ -26,7 +26,7 @@ export default class Website extends Component {
     return (
       <Fragment>
         <div>
-
+<YoutubeBackground>
           <HeaderService
               logoHeader={LogoBrand}
               stylelogotext={'logo__service-text_website'}
@@ -35,7 +35,7 @@ export default class Website extends Component {
               textContainer={'dside_textContainer-website'}
               textHeader={[<p>Webstes</p>, <p>That sell</p>, <p>your</p>, <p>goods</p>]}
           />
-
+</YoutubeBackground>
           <section className="developers__quality">
 
             <div className="developer__left-content">

@@ -28,7 +28,9 @@ import PortolioPost from './Portfolio__Post'
         <div className="relative__content">
 
           <div className="content__posts">
-                <PortolioPost {...this.props} />
+              {this.props.loading ?  <PortolioPost {...this.props} /> :  null}
+
+
           </div>
 
 

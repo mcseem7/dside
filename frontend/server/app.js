@@ -1,6 +1,4 @@
 
-
-
 const path = require('path');
 
 const React = require('react');
