@@ -290,6 +290,7 @@
     flex-wrap: wrap;  }
    .header__portfolio-content {
         width: 100%;
+       height: 360px;
             background: url('layer-90.png');
         }
 .portfolio__header_item-wrapper{padding: 0; text-align: left}
@@ -299,6 +300,7 @@
             align-items: flex-start;
             justify-content: flex-start;
             flex-wrap: wrap;
+    padding-top: 25px;
 }
 .icon-timer p{width: 10rem;}
 .portfolio__datatime__content {

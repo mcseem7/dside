@@ -19,24 +19,19 @@ export default class RootContent extends Component {
   }
 
   render () {
-    function forceTrailingSlash(nextState, replace) {
-      const path = nextState.location.pathname;
-      if (path.slice(-1) !== '/') {
-        replace({
-          ...nextState.location,
-          pathname: path + '/'
-        });
-      }
-    }
+
+      console.log(this.props)
     return (
       <div className="main__content">
         <Switch >
-            <Route exact path="/" component={Main} />
-            <Route exact path="/aboutus" component={AboutUs} />
-            <Route exact path="/blog" component={Blog} />
-            <Route exact path="/blog/:blogitem" component={BlogItem} />
-            <Route exact path="/portfolio" component={Portfolio} />
-            <Route exact path="/portfolio/:portfolioitem" component={PortfolioItem} />
+
+            <Route exact path={`/${localStorage.getItem('lang')}`}  component={Main} />
+            <Route exact path={`/${localStorage.getItem('lang')}/aboutus`}  component={AboutUs} />
+            <Route exact path={`/${localStorage.getItem('lang')}/blog`}  component={Blog} />
+            <Route exact path={`/${localStorage.getItem('lang')}/blog/:blogitem`} component={BlogItem} />
+            <Route exact path={`/${localStorage.getItem('lang')}/portfolio`} component={Portfolio} />
+            <Route exact path={`/${localStorage.getItem('lang')}/portfolio/:portfolioitem`}  component={PortfolioItem} />
+            <Route exact path={`/`}  component={Main} />
         </Switch>
       </div>
     )

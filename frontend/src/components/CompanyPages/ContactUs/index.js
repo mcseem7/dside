@@ -15,18 +15,18 @@ export default class Contact  extends  Component {
 
 
   render() {
+   //  (document.getElementById("map_canvas"), {
+   //    panControl: false,
+   //    zoomControl: false,
+   //    scaleControl: false,
+   // });
+   const framegoo = '<iframe src="https://snazzymaps.com/embed/98430" width="100%" height="400px" style="border:none;"></iframe>'
     return(
         <div>
 
           <section id="google__maps-container">
-            <div className="google_map">
-              {/*<MapWithAMarker*/}
-                  {/*containerElement={<div style={{ height: `375px` }} />}*/}
-                  {/*mapElement={<div style={{ height: `100%` }} />}*/}
-              {/*/>*/}
-              <object style={{width: '100%'}}  data={ContactMap} type="image/svg+xml">
-                <img  alt="Location Dside"/>
-              </object>
+            <div className="google_map" dangerouslySetInnerHTML={{ __html: framegoo}}>
+            
             </div>
           </section>
           <section id="contact-us__container">

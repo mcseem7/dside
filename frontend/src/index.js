@@ -9,19 +9,18 @@ import { injectGlobal } from 'styled-components'
 import baseStyles from './index'
 import './index.css'
 import { unregister } from './registerServiceWorker';
+import history from 'history/createBrowserHistory'
 
 export default () => injectGlobal`
   ${styledNormalize}
 `
 
-
-
+const getIdentityDomen = window.location.hostname.split('.')[1]
 
 
         ReactDOM.hydrate(
-
-            <BrowserRouter>
-                <App {...this.props} />
+            <BrowserRouter basename={getIdentityDomen == 'com' ? window.navigator.languages[1] : null} >
+                <App {...this.props} domen={getIdentityDomen} />
             </BrowserRouter>
             ,
             document.getElementById('root')
