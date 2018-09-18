@@ -37,7 +37,7 @@ class App extends Component {
     }
 
     componentWillMount() {
-        const getIdentityDomen = window.location.hostname.split('.')[1]
+        const getIdentityDomen = this.props.domen
         if(!getIdentityDomen || getIdentityDomen == '') {
             this.setState({langPoppup: false})
         }
@@ -58,7 +58,7 @@ class App extends Component {
     }
 
     render () {
-        const itemLang = localStorage.setItem('lang', this.props.domen)
+        // const itemLang = localStorage.setItem('lang', this.props.domen)
 
         return (
             <div className="App">
