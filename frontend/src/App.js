@@ -23,6 +23,8 @@ import PortfolioItem from './components/DynamicContent/PortfolioItem'
 import Portfolio from './components/DynamicContent/Portfolio'
 import AboutUs from './components/DynamicContent/About'
 import Main from "./components/DynamicContent/Main";
+import Advertising from "./components/CompanyPages/Services/advertising";
+import Automation from "./components/CompanyPages/Services/automation";
 
 
 class App extends Component {
@@ -77,6 +79,9 @@ class App extends Component {
                                     <Route exact path={`/${props.match.params.language}/services/logo`}  component={LogoPage}/>
                                     <Route exact path={`/${props.match.params.language}/services/videos`} component={VideoPage}/>
                                     <Route exact path={`/${props.match.params.language}/services/website`} component={Website}/>
+                                    <Route exact path={`/${props.match.params.language}/services/brand`}  component={BrandPage}/>
+                                    <Route exact path={`/${props.match.params.language}/services/advertising`}  component={Advertising}/>
+                                    <Route exact path={`/${props.match.params.language}/services/automation`}  component={Automation}/>
                                     <Route exact path={`/${props.match.params.language}/services/brand`}  component={BrandPage}/>
                                     <Route exact path={`/${props.match.params.language}/aboutus`}  component={AboutUs} />
                                     <Route exact path={`/${props.match.params.language}/blog`}  component={Blog} />

@@ -14,7 +14,7 @@ import WeCare from "../../../Basic/TrustBlocks/WeCare";
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
 
 
-export default class Website extends Component {
+export default class Automation extends Component {
   constructor () {
     super()
   }
