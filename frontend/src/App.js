@@ -51,6 +51,7 @@ class App extends Component {
         } else {
             this.setState({cook: false})
         }
+        localStorage.setItem('lang', this.props.domen)
         window.scrollTo(0,0)
     }
 

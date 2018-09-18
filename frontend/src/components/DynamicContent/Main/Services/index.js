@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import './index.css'
 
+const landId = localStorage.getItem('lang')
+
 export default function Services () {
   return (
     <section>
@@ -18,7 +20,7 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li><Link to="/services/brand" className="shining-underline">Branding<span></span></Link></li>
+              <li><Link to={`${landId}/services/brand`} className="shining-underline">Branding<span></span></Link></li>
               <li>Brand legend</li>
               <li>Brandbook</li>
               <li>Identity</li>
@@ -31,7 +33,7 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li><Link to="/services/website" className="shining-underline">Websites<span></span></Link></li>
+              <li><Link to={`${landId}/services/website`} className="shining-underline">Websites<span></span></Link></li>
               <li>Landing page</li>
               <li>E-commerce</li>
               <li>Corporate</li>
@@ -44,7 +46,7 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li><Link to="/services/advertising" className="shining-underline">Advertising<span></span></Link></li>
+              <li><Link to={`${landId}/services/advertising`} className="shining-underline">Advertising<span></span></Link></li>
               <li>E-mail marketing</li>
               <li>CPA marketing</li>
               <li>Social media</li>
@@ -56,7 +58,7 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li><Link to="/services/automation" className="shining-underline">Automation<span></span></Link></li>
+              <li><Link to={`${landId}/services/automation`} className="shining-underline">Automation<span></span></Link></li>
               <li>Increasing efficency</li>
               <li>Quality improvement</li>
               <li>Reduction of staff</li>
@@ -68,7 +70,7 @@ export default function Services () {
             {/* <h2>Branding</h2> */}
             {/* </div> */}
             <ul className="list">
-              <li><Link to="/services/videos" className="shining-underline">Videos<span></span></Link></li>
+              <li><Link to={`${landId}/services/videos`} className="shining-underline">Videos<span></span></Link></li>
               <li>Motion graphics</li>
               <li>3D modelling</li>
               <li>Commercials</li>
