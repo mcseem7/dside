@@ -10,20 +10,19 @@ import baseStyles from './index'
 import './index.css'
 import { unregister } from './registerServiceWorker';
 import history from 'history/createBrowserHistory'
-
+import root from ' window-or-global/'
 export default () => injectGlobal`
   ${styledNormalize}
 `
-const getIdentityDomen = window.location.hostname.split('.')[1] !== undefined ? window.location.hostname.split('.')[1] : 'en'
+const getIdentityDomen = root.location.hostname.split('.')[1] !== undefined ? root.location.hostname.split('.')[1] : 'en'
 
 
     ReactDOM.hydrate(
-            <BrowserRouter basename={getIdentityDomen == 'com' ? window.navigator.languages[1] : null} >
+            <BrowserRouter basename={getIdentityDomen == 'com' ? root.navigator.languages[1] : null} >
                 <App {...this.props} domen={getIdentityDomen} />
             </BrowserRouter>
             ,
             document.getElementById('root')
         );
-
 
 
