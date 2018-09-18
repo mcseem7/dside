@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Main from '../DynamicContent/Main/index'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Switch, Route, Redirect,withRouter } from 'react-router-dom'
 import Blog from '../DynamicContent/Blog'
 import BlogItem from '../DynamicContent/BlogItem'
 import PortfolioItem from '../DynamicContent/PortfolioItem'
@@ -12,6 +12,7 @@ import NotFound from '../Basic/NotFound'
 export default class RootContent extends Component {
   constructor (props) {
     super(props)
+
   }
 
   componentDidMount() {
@@ -19,19 +20,16 @@ export default class RootContent extends Component {
   }
 
   render () {
-
-      console.log(this.props)
+      const langId = localStorage.getItem('lang')
     return (
       <div className="main__content">
-        <Switch >
-
-            <Route exact path={`/${localStorage.getItem('lang')}`}  component={Main} />
-            <Route exact path={`/${localStorage.getItem('lang')}/aboutus`}  component={AboutUs} />
-            <Route exact path={`/${localStorage.getItem('lang')}/blog`}  component={Blog} />
-            <Route exact path={`/${localStorage.getItem('lang')}/blog/:blogitem`} component={BlogItem} />
-            <Route exact path={`/${localStorage.getItem('lang')}/portfolio`} component={Portfolio} />
-            <Route exact path={`/${localStorage.getItem('lang')}/portfolio/:portfolioitem`}  component={PortfolioItem} />
-            <Route exact path={`/`}  component={Main} />
+        <Switch>
+            <Route exact path={`/${langId}/`}  component={Main} />
+            <Route exact path={`/${langId}/aboutus`}  component={AboutUs} />
+            <Route exact path={`/${langId}/blog`}  component={Blog} />
+            <Route exact path={`/${langId}/blog/:blogitem`} component={BlogItem} />
+            <Route exact path={`/${langId}/portfolio`} component={Portfolio} />
+            <Route exact  path={`/${langId}/portfolio/:portfolioitem`}  component={PortfolioItem} />
         </Switch>
       </div>
     )

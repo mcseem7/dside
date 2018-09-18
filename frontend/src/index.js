@@ -2,7 +2,7 @@ import { loadComponents, getState } from 'loadable-components';
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route,withRouter } from 'react-router-dom'
 import registerServiceWorker from './registerServiceWorker'
 import styledNormalize from 'styled-normalize'
 import { injectGlobal } from 'styled-components'
@@ -14,11 +14,10 @@ import history from 'history/createBrowserHistory'
 export default () => injectGlobal`
   ${styledNormalize}
 `
+const getIdentityDomen = window.location.hostname.split('.')[1] !== undefined ? window.location.hostname.split('.')[1] : 'en'
 
-const getIdentityDomen = window.location.hostname.split('.')[1]
 
-
-        ReactDOM.hydrate(
+    ReactDOM.hydrate(
             <BrowserRouter basename={getIdentityDomen == 'com' ? window.navigator.languages[1] : null} >
                 <App {...this.props} domen={getIdentityDomen} />
             </BrowserRouter>

@@ -57,30 +57,31 @@ class App extends Component {
 
     render () {
         const itemLang = localStorage.setItem('lang', this.props.domen)
+
         return (
             <div className="App">
-
-                <Route render={(props) => {
+                <Route exact path="/" render={(props) => (<Redirect to={`${this.props.domen}`}    />)} />
+                <Route exact path={`/contactus`} component={ContactUs}/>
+                <Route exact path={`/${this.props.domen}/services/logo`}  component={LogoPage}/>s
+                <Route exact path={`/${this.props.domen}/services/videos`} component={VideoPage}/>
+                <Route exact path={`/${this.props.domen}/services/website`} component={Website}/>
+                <Route exact path={`/${this.props.domen}/services/brand`}  component={BrandPage}/>
+                <Route  path='/:language' render={(props) => {
                     console.log(props)
                     return(
                         <TransitionGroup>
                             {props.location.pathname.match(/services\//gi) ?  <Header style={'none'}/>  : <Header style={'block'}/> }
+
                             <CSSTransition key={props.location.key} timeout={300} classNames="fade">
                                 <Switch>
-                                    <Route path={`/`}     render={(props) => { return <MainPages {...props} /> } } />
-                                    <Route path={`/${this.props.domen}`}     render={(props) => { return <MainPages {...props} /> } } />
-                                    <Route exact path="/services/logos" component={LogoPage}/>
-                                    <Route exact path="/services/brand" component={BrandPage}/>
-
-                                    <Route exact path="/services/videos" component={VideoPage}/>
-                                    <Route exact path="/services/website" component={Website}/>
-                                    <Route exact path="/contactus" component={ContactUs}/>
-
-                                    <Route path="/notfound" component={NotFound}/>
+                                    <Route  path={`/${props.match.params.language}`}    component={MainPages} />
                                 </Switch>
+
                             </CSSTransition>
+
                         </TransitionGroup>)
                 }} />
+
                 {this.state.cook ?
                     <div className="cookies-container">
 
