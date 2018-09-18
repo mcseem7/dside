@@ -30,10 +30,12 @@
 .fade-enter {
     opacity: 0;
     z-index: 1;
+    transform: translateY(5px) scale(0.97);
 }
 .fade-appear-active,
 .fade-enter.fade-enter-active {
     opacity: 1;
+    transform: translateY(0px) scale(1);
     transition: opacity 550ms linear, transform 300ms linear;
 }
 
