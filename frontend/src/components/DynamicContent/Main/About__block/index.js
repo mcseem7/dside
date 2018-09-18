@@ -32,7 +32,7 @@ export default class About extends Component {
 
           <div className="more__about-button">
               {console.log(this.props)}
-            <Link to={`${localStorage.getItem('en')}/aboutus`}>
+            <Link to={`${localStorage.getItem('lang')}/aboutus`}>
             <button className="more__about shining-underline">
                   More about us
               <span></span>

@@ -17,7 +17,7 @@ const getIdentityDomen = window.location.hostname.split('.')[1] !== undefined ? 
 
 
     ReactDOM.hydrate(
-            <BrowserRouter basename={getIdentityDomen == 'com' ? root.navigator.languages[1] : null} >
+            <BrowserRouter basename={getIdentityDomen == 'com' ? window.navigator.languages[1] : null} >
                 <App {...this.props} domen={getIdentityDomen} />
             </BrowserRouter>
             ,
