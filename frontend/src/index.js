@@ -3,7 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import { BrowserRouter, Route,withRouter } from 'react-router-dom'
-
+import registerServiceWorker from './registerServiceWorker'
 import styledNormalize from 'styled-normalize'
 import { injectGlobal } from 'styled-components'
 import baseStyles from './index'
