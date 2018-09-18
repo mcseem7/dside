@@ -27,8 +27,12 @@ function handleUniversalRender(req, res) {
         return;
     }
 
+    if (typeof(window) == 'undefined') global.window = new Object();
+
     return stream;
 }
+
+
 
 const app = createReactAppExpress({
     clientBuildPath,

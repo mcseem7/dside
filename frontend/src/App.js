@@ -17,10 +17,12 @@ import loadable from 'loadable-components';
 import 'regenerator-runtime/runtime';
 import LanguagePoppup from "./HOC/ChangeLanguage/ChangePup";
 import NotFound from "./components/Basic/NotFound";
-
-
-
-
+import Blog from './components/DynamicContent/Blog'
+import BlogItem from './components/DynamicContent/BlogItem'
+import PortfolioItem from './components/DynamicContent/PortfolioItem'
+import Portfolio from './components/DynamicContent/Portfolio'
+import AboutUs from './components/DynamicContent/About'
+import Main from "./components/DynamicContent/Main";
 
 
 class App extends Component {
@@ -60,27 +62,38 @@ class App extends Component {
 
         return (
             <div className="App">
-                <Route exact path="/" render={(props) => (<Redirect to={`${this.props.domen}`}    />)} />
-                <Route exact path={`/contactus`} component={ContactUs}/>
-                <Route exact path={`/${this.props.domen}/services/logo`}  component={LogoPage}/>s
-                <Route exact path={`/${this.props.domen}/services/videos`} component={VideoPage}/>
-                <Route exact path={`/${this.props.domen}/services/website`} component={Website}/>
-                <Route exact path={`/${this.props.domen}/services/brand`}  component={BrandPage}/>
-                <Route  path='/:language' render={(props) => {
+                <Route exact path="/" render={(props) => (<Redirect to={`/${this.props.domen}`}    />)} />
+                <Route  path={'/:language'} render={(props) => {
                     console.log(props)
                     return(
                         <TransitionGroup>
                             {props.location.pathname.match(/services\//gi) ?  <Header style={'none'}/>  : <Header style={'block'}/> }
 
                             <CSSTransition key={props.location.key} timeout={300} classNames="fade">
+
                                 <Switch>
-                                    <Route  path={`/${props.match.params.language}`}    component={MainPages} />
+                                    <Route exact path={`/${props.match.params.language}`}    component={Main} />
+                                    <Route exact path={`/${props.match.params.language}/contactus`} component={ContactUs}/>
+                                    <Route exact path={`/${props.match.params.language}/services/logo`}  component={LogoPage}/>
+                                    <Route exact path={`/${props.match.params.language}/services/videos`} component={VideoPage}/>
+                                    <Route exact path={`/${props.match.params.language}/services/website`} component={Website}/>
+                                    <Route exact path={`/${props.match.params.language}/services/brand`}  component={BrandPage}/>
+                                    <Route exact path={`/${props.match.params.language}/aboutus`}  component={AboutUs} />
+                                    <Route exact path={`/${props.match.params.language}/blog`}  component={Blog} />
+                                    <Route exact path={`/${props.match.params.language}/blog/:blogitem`} component={BlogItem} />
+                                    <Route exact path={`/${props.match.params.language}/portfolio`} component={Portfolio} />
+                                    <Route exact  path={`/${props.match.params.language}/portfolio/:portfolioitem`}  component={PortfolioItem} />
                                 </Switch>
 
-                            </CSSTransition>
 
+                            </CSSTransition>
+                            {props.location.pathname.match(/services\//gi) ?  null  : <Footer/> }
                         </TransitionGroup>)
+
+
                 }} />
+
+
 
                 {this.state.cook ?
                     <div className="cookies-container">

@@ -7,7 +7,6 @@ import BadLogo from './bad__logo.png'
 import GoodLogo from './goodlogo.png'
 import logoHeader from './logo__header-service.png'
 import Footer from '../../../Basic/Footer'
-
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
 import WeCare from "../../../Basic/TrustBlocks/WeCare";
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
@@ -30,12 +29,24 @@ export default class LogoPage extends Component {
 
         return (
             <div>
-
+<div>
+                <div className="video-background">
+                    {/*<div className="video-foreground">*/}
+                        {/*<iframe*/}
+                            {/*src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ"*/}
+                            {/*frameBorder={0}*/}
+                            {/*allowFullScreen*/}
+                        {/*/>*/}
+                    {/*</div>*/}
+                </div>
+                <div id="vidtop-content">
                     <HeaderService
                         textContainer={'dside_textContainer-logo'}
                         logoHeader={logoHeader}
                         serviceSlogan={'DSIDE to make your logo work BETTER'}
                         textHeader={[<p>LOGO DES</p>, <p>IGN NOW</p>, <p> SUBWAYS</p>]}/>
+                </div>
+</div>
 
                 <section className="logo__service-case_studies">
 

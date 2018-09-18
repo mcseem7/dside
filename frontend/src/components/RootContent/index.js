@@ -20,17 +20,14 @@ export default class RootContent extends Component {
   }
 
   render () {
-      const langId = localStorage.getItem('lang')
+    const langId = localStorage.getItem('lang')
     return (
       <div className="main__content">
-        <Switch>
-            <Route exact path={`/${langId}/`}  component={Main} />
-            <Route exact path={`/${langId}/aboutus`}  component={AboutUs} />
-            <Route exact path={`/${langId}/blog`}  component={Blog} />
-            <Route exact path={`/${langId}/blog/:blogitem`} component={BlogItem} />
-            <Route exact path={`/${langId}/portfolio`} component={Portfolio} />
-            <Route exact  path={`/${langId}/portfolio/:portfolioitem`}  component={PortfolioItem} />
-        </Switch>
+          <Route  path={`/${langId}/aboutus`}  component={AboutUs} />
+          <Route exact path={`/${langId}/blog`}  component={Blog} />
+          <Route exact path={`/${langId}/blog/:blogitem`} component={BlogItem} />
+          <Route exact path={`/${langId}/portfolio`} component={Portfolio} />
+          <Route exact  path={`/${langId}/portfolio/:portfolioitem`}  component={PortfolioItem} />
       </div>
     )
   }

@@ -25,6 +25,7 @@ import fadeBag from './brandImg/Layer_108.png'
 import WeCare from "../../../Basic/TrustBlocks/WeCare";
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
 import Own from "../../../Basic/TrustBlocks/Own";
+import logoHeader from "../logos/logo__header-service.png";
 
 class BrandPage extends Component {
     constructor() {
@@ -83,16 +84,26 @@ class BrandPage extends Component {
         return (
             <div>
 
-                    <HeaderService
-                        stylelogotext={'logo__service-text_brand'}
-                        logoHeader={LogoBrand}
-                        textHeader={[<p> Branding</p>, <p>That takes</p>, <p> Business</p>, <p>Further</p>]}
-                        imgLogoPosition={'logo__service-img_brand'}
-                        textContainer={'dside_textContainer-brand'}
-                        serviceSlogan={'DSIDE to make your brand work BETTER'}
-                        serviceCategory={'Branding'}
-                    />
 
+
+                <div>
+                    <div className="video-background">
+                        <div className="video-foreground">
+                            <iframe
+                                src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ"
+                                frameBorder={0}
+                                allowFullScreen
+                            />
+                        </div>
+                    </div>
+                    <div id="vidtop-content">
+                        <HeaderService
+                            textContainer={'dside_textContainer-logo'}
+                            logoHeader={logoHeader}
+                            serviceSlogan={'DSIDE to make your logo work BETTER'}
+                            textHeader={[<p>LOGO DES</p>, <p>IGN NOW</p>, <p> SUBWAYS</p>]}/>
+                    </div>
+                </div>
 
                 {
                     <div
