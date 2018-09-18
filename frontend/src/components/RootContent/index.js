@@ -20,7 +20,7 @@ export default class RootContent extends Component {
   }
 
   render () {
-    const langId = localStorage.getItem('lang')
+    const langId = '/pl'
     return (
       <div className="main__content">
           <Route  path={`/${langId}/aboutus`}  component={AboutUs} />

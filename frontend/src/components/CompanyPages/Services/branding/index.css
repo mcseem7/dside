@@ -53,6 +53,11 @@
     left: -145px;
     width: 526px;
 }
+
+.logo__service-img_brand img {
+    height: 600px !important;
+}
+
 .price__louis_wrapper {
     font-family: 'MontBold',sans-serif;
     display: flex;
@@ -80,7 +85,7 @@
 .loius__viton_title-description{font-family: 'MontBold',sans-serif;}
 .header__navigation{padding: 0 2rem;}
 .header__navigation .logotype__company{margin: 0; width: 90px;}
-.order__wrap{top: 500px;}
+.order__wrap{top: 340px;}
 .dside-company__links li{margin: 0;}
 .branding__service-right{ padding: 3rem 2rem; font-family: 'MontLight',sans-serif}
 .price__louis_wrapper{font-family: 'MontBold',sans-serif;}
@@ -549,19 +554,21 @@ p.loius__viton_title-description {
     margin-top: 30px;
 }
 }
+
+
+
 /* Full */
 @media only screen and (min-width: 1024px) {
 .behance, .instagram{display: flex;}
 .dside-company__links li{margin-left: 2rem;}
 .dside-company__links li:nth-child(2){margin-left: 1.6rem;}
 .logo__service-img img {
-    max-width: 80%;
+    max-width: 75%;
     height: auto;
     position: relative;
 }
 .logo__service_slogan {
     margin: 0 auto;
-    margin-top: 139px;
     width: 650px !important;
 }
 .branding__service-left {
