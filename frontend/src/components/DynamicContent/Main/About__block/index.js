@@ -5,13 +5,28 @@ import Palm from '../../../sources/images/works__logo/palm.svg'
 import Wallet from '../../../sources/images/works__logo/wallet.svg'
 import './index.css'
 import {Link} from 'react-router-dom'
+import { StorageUtil } from 'browser-util';
 
 export default class About extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
+
+      this.state = {
+        lang: ''
+      }
+
+      console.log(props)
   }
 
-  render () {
+
+
+componentDidMount() {
+    this.setState({lang: localStorage.getItem('lang')})
+}
+
+
+    render () {
+
     return (
       <div className="container__about-content">
 
@@ -31,10 +46,11 @@ export default class About extends Component {
           </div>
 
           <div className="more__about-button">
-              {console.log(this.props)}
-            <Link to={`${localStorage.getItem('lang')}/aboutus`}>
+
+            <Link to={`${this.state.lang}/aboutus`}>
             <button className="more__about shining-underline">
                   More about us
+
               <span></span>
             </button>
             </Link>

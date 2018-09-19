@@ -29,6 +29,7 @@ function handleUniversalRender(req, res) {
 
     if (typeof(window) == 'undefined') global.window = new Object();
 
+
     return stream;
 }
 

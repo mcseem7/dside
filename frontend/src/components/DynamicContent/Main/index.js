@@ -6,8 +6,8 @@ import Services from './Services/index'
 
 import {Route} from 'react-router-dom'
 export default class Main extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
   }
 
   componentDidMount() {
@@ -15,11 +15,12 @@ export default class Main extends Component {
   }
 
   render () {
+console.log(this.props)
     return (
       <div className="complex__content">
-        <HeaderPost />
-        <Works />
-        <Services />
+        <HeaderPost dataLang={this.props.match.path} />
+        <Works  />
+        <Services {...this.props} />
       </div>
     )
   }

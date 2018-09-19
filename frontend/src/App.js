@@ -67,16 +67,18 @@ class App extends Component {
             <div className="App">
                 <Route exact path="/" render={(props) => (<Redirect to={`/${this.props.domen}`}    />)} />
                 <Route  path={'/:language'} render={(props) => {
-                    console.log(props)
+
                     return(
                         <TransitionGroup>
-                            {props.location.pathname.match(/services\//gi) ?  <Header style={'none'}/>  : <Header style={'block'}/> }
 
-                            <CSSTransition key={props.location.key} timeout={300} classNames="fade">
+                            {props.location.pathname.match(/services\//gi) ?  <Header domenErty={props.match.params.language} style={'none'}/>  : <Header  domenErty={props.match.params.language} style={'block'}/> }
+
+                            <CSSTransition key={props.location.key} timeout={1000} classNames="fade">
 
                                 <Switch>
-                                    <Route exact path={`/${props.match.params.language}`}    component={Main} />
-                                    <Route exact path={`/${props.match.params.language}/contactus`} component={ContactUs}/>
+                                    <Route exact path={`/${props.match.params.language}`}  render={(props) => {
+                                        return <Main {...props}/>
+                                    }}  />
                                     <Route exact path={`/${props.match.params.language}/services/logo`}  component={LogoPage}/>
                                     <Route exact path={`/${props.match.params.language}/services/videos`} component={VideoPage}/>
                                     <Route exact path={`/${props.match.params.language}/services/website`} component={Website}/>
@@ -89,11 +91,12 @@ class App extends Component {
                                     <Route exact path={`/${props.match.params.language}/blog/:blogitem`} component={BlogItem} />
                                     <Route exact path={`/${props.match.params.language}/portfolio`} component={Portfolio} />
                                     <Route exact  path={`/${props.match.params.language}/portfolio/:portfolioitem`}  component={PortfolioItem} />
+                                    <Route  exact path={`/${props.match.params.language}/services/contactus`} component={ContactUs}/>
                                 </Switch>
 
 
                             </CSSTransition>
-                            {props.location.pathname.match(/services\//gi) ?  null  : <Footer/> }
+                            {props.location.pathname.match(/services\//gi) ?   <Footer style={'none'}/>   : <Footer style={'block'}/> }
                         </TransitionGroup>)
 
 

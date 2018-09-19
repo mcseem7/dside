@@ -17,18 +17,26 @@ import PortolioPost from './Portfolio__Post'
   constructor (props) {
     super(props)
 
+      this.state = {
+        lang: ''
+      }
   }
 
 
+     componentDidMount() {
+         this.setState({lang: localStorage.getItem('lang')})
+     }
+
+
   render () {
-    console.log(this.props)
+    console.log(this.props.dataLang)
     return (
         <div>
       <section className="portfolio__posts">
         <div className="relative__content">
 
           <div className="content__posts">
-              {this.props.loading ?  <PortolioPost {...this.props} /> :  null}
+              {this.props.loading ?  <PortolioPost lang={this.state.lang} {...this.props} /> :  null}
 
 
           </div>
@@ -56,7 +64,7 @@ import PortolioPost from './Portfolio__Post'
               </div>
             </div>
 
-          <About/>
+          <About />
 
 
 

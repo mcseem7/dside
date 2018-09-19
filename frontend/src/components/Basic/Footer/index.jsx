@@ -20,9 +20,10 @@ import Poppup from '../../../HOC/Poppup/index';
   }
 
   render () {
+    console.log(this.props)
     return (
-      <footer>
-        <div className="footer__content">
+      <footer style={{display: this.props.style}}>
+        <div className="footer__content" >
 
           <div className="clients__form">
 

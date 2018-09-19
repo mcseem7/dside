@@ -89,7 +89,7 @@ export default class VideoPage extends Component {
             <WeCare name="videos"/>
             <Own/>
             <LimitedService/>
-          <Footer/>
+
         </div>
     )
   }

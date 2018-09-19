@@ -207,8 +207,7 @@ export default class Website extends Component {
         </div>
         <WeCare name="websites"/>
         <Advantages/>
-        <LimitedService/>
-        <Footer/>
+
       </Fragment>
     )
   }

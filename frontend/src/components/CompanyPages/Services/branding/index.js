@@ -343,7 +343,7 @@ class BrandPage extends Component {
                 <Advantages/>
                 <Own/>
                 <LimitedService/>
-                <Footer/>
+
                 {this.state.modalActive ? <Poppup onClose={this.changePoppup}/> : null}
             </div>
         )

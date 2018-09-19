@@ -5,19 +5,21 @@ import PlusIcon from './plus.svg'
 import Logo from './Logo.svg'
 import {Link} from 'react-router-dom'
 import Poppup from '../../../HOC/Poppup/index';
-
+var localStorage = require('web-storage');
 
 
 export default class Header extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
 
     this.state = {
       opacity: 0,
       display: 'none',
-      modalActive: false
+      modalActive: false,
+        lang: ''
     }
   }
+
 
 
   showMenu = () => {
@@ -32,7 +34,9 @@ export default class Header extends Component {
 
 
 
-  changePoppup = () => {
+
+
+    changePoppup = () => {
     this.setState({modalActive: !this.state.modalActive}, () => {
       console.log(this.state.modalActive)
     })
@@ -136,14 +140,15 @@ export default class Header extends Component {
               <div className="menu__header-column">
                 <div className="menu__header-item">
                   <div className="description__menu-title">
-                    <Link to={`/${localStorage.getItem('lang')}/aboutus`}   className="link__menu">About Us</Link>
+
+                    <Link to={`/${this.props.domenErty}/aboutus`}   className="link__menu">About Us</Link>
                     {/*<p>Caption text under about us</p>*/}
                   </div>
                 </div>
 
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to={`/${localStorage.getItem('lang')}/contactus`}  className="link__menu">Contact Us</Link>
+                    <Link to={`/${this.props.domenErty}/contactus`}  className="link__menu">Contact Us</Link>
                   </div>
                   {/*<div className="description__menu-title">*/}
                     {/*<p>Caption text under about us</p>*/}
@@ -155,7 +160,7 @@ export default class Header extends Component {
               <div className="menu__header-column">
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to={`/${localStorage.getItem('lang')}/blog`}  className="link__menu">Blog</Link>
+                    <Link to={`/${this.props.domenErty}/blog`}  className="link__menu">Blog</Link>
                   </div>
                   {/*<div className="description__menu-title">*/}
                     {/*<p>Caption text under about us</p>*/}
@@ -164,7 +169,7 @@ export default class Header extends Component {
 
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to={`/${localStorage.getItem('lang')}`}  className="link__menu">Home</Link>
+                    <Link to={`/${this.props.domenErty}`}  className="link__menu">Home</Link>
                   </div>
                   {/*<div className="description__menu-title">*/}
                     {/*<p>Caption text under about us</p>*/}

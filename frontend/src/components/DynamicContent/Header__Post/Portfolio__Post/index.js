@@ -29,7 +29,7 @@ export default class PortolioPost extends Component {
         <figcaption>
           <h2>{item.name}</h2>
           {
-              <Link to={`/portfolio/${item.CURL}`}>Explore project</Link>
+              <Link to={`${this.props.lang}/portfolio/${item.CURL}`}>Explore project</Link>
 
         }
         </figcaption>
