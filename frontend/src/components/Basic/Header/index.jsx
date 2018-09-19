@@ -5,7 +5,7 @@ import PlusIcon from './plus.svg'
 import Logo from './Logo.svg'
 import {Link} from 'react-router-dom'
 import Poppup from '../../../HOC/Poppup/index';
-var localStorage = require('web-storage');
+
 
 
 export default class Header extends Component {
@@ -16,7 +16,7 @@ export default class Header extends Component {
       opacity: 0,
       display: 'none',
       modalActive: false,
-        lang: ''
+      lang: ''
     }
   }
 

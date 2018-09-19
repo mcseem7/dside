@@ -8,6 +8,23 @@ import {Route} from 'react-router-dom'
 export default class Main extends Component {
   constructor (props) {
     super(props)
+
+    this.state = {
+        mainData: {
+            en: {
+                enWhat: 'What?'
+            },
+            pl: {
+                plWhat: 'Как?'
+            },
+            cz: {
+                czWhat: 'Что?'
+            },
+            ru: {
+                ruWhat: 'Откуда?'
+            }
+        }
+    }
   }
 
   componentDidMount() {
@@ -15,10 +32,10 @@ export default class Main extends Component {
   }
 
   render () {
-console.log(this.props)
+
     return (
       <div className="complex__content">
-        <HeaderPost dataLang={this.props.match.path} />
+        <HeaderPost dataLang={this.props.match.path} textData={this.state.mainData} />
         <Works  />
         <Services {...this.props} />
       </div>

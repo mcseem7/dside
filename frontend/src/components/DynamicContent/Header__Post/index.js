@@ -29,9 +29,10 @@ import PortolioPost from './Portfolio__Post'
 
 
   render () {
-    console.log(this.props.dataLang)
+
     return (
         <div>
+
       <section className="portfolio__posts">
         <div className="relative__content">
 
@@ -64,7 +65,7 @@ import PortolioPost from './Portfolio__Post'
               </div>
             </div>
 
-          <About />
+          <About dat={this.props.textData}/>
 
 
 

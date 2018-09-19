@@ -9,11 +9,12 @@ import { injectGlobal } from 'styled-components'
 import baseStyles from './index'
 import './index.css'
 
+
 import history from 'history/createBrowserHistory'
 
 
 
-const getIdentityDomen = window.location.hostname.split('.')[1] !== undefined ? window.location.hostname.split('.')[1] : 'en'
+const getIdentityDomen = window.location.hostname.split('.')[1] !== undefined ? window.location.hostname.split('.')[1] : 'pl'
 
 
     ReactDOM.hydrate(

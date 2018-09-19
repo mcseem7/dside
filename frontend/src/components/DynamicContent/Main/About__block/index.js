@@ -5,7 +5,7 @@ import Palm from '../../../sources/images/works__logo/palm.svg'
 import Wallet from '../../../sources/images/works__logo/wallet.svg'
 import './index.css'
 import {Link} from 'react-router-dom'
-import { StorageUtil } from 'browser-util';
+
 
 export default class About extends Component {
   constructor (props) {
@@ -31,7 +31,7 @@ componentDidMount() {
       <div className="container__about-content">
 
         <div className="question__wrapper">
-          <p className="question">What?</p>
+          <p className="question">{'What'}</p>
         </div>
 
         <div className="about__company-content">
