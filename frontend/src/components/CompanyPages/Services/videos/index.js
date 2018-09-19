@@ -11,6 +11,7 @@ import HeaderPost from '../../../DynamicContent/Header__Post/index';
 import WeCare from "../../../Basic/TrustBlocks/WeCare";
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
 import Own from "../../../Basic/TrustBlocks/Own";
+import LogoBrand from "../branding/logo_brand.png";
 
 export default class VideoPage extends Component {
   constructor() {
@@ -43,11 +44,22 @@ export default class VideoPage extends Component {
     return(
         <div>
 
-          <HeaderService
-              imgLogoPosition={'logo__service-img_'}
-              textContainer={'dside_textContainer-video'}
-              serviceSlogan={'DSIDE to make the best video'}
-              textHeader={[<p>Video DES</p>, <p>IGN NOW</p>, <p> SUBWAYS</p>]} />
+            <div>
+                <div className="video-background">
+                    <div className="video-foreground">
+                        <iframe
+                            src="https://www.youtube.com/embed/2MpUj-Aua48?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1"
+                            width="560" height="315" frameBorder="0" allowFullScreen></iframe>
+                    </div>
+                </div>
+                <div id="vidtop-content">
+                    <HeaderService
+                        imgLogoPosition={'logo__service-img_video'}
+                        textContainer={'dside_textContainer-video'}
+                        serviceSlogan={'DSIDE to make the best video'}
+                        textHeader={[<p></p>]} />
+                </div>
+            </div>
 
           <section className="view__container-videos">
 

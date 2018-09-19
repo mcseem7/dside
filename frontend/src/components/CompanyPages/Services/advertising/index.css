@@ -13,14 +13,8 @@
 }
 
 
-.dside_textContainer-website .logo__service_slogan{
-    display: flex;
-    position: absolute !important;
-    width: 1200px !important;
-    font-size: 3rem;
-    text-align: center;
-    margin-top: 18rem;
-}
+
+
 .slogan-wrapper{margin: 0 auto;}
 
 .logo__service-img_website-ads img{max-width: 100%;
@@ -37,10 +31,7 @@
 }
 
 
-.dside_textContainer-website {
-    position: absolute;
-    top: -5rem;
-}
+
 
 .contentby__vova h3  {
     font-family: "MontBold";
@@ -253,6 +244,12 @@
 }
 
 
+.dside_textContainer-advertising .logo__service_slogan{
+    font-size: 2.3rem;
+    top: 140px;
+}
+
+
 @media screen and (max-width: 480px){
 
 
@@ -307,5 +304,13 @@
     .al__time-wrapper {
         margin-left: 40px;
     }
+}
+
+.logo__service-img-ads {
+    position: absolute;
+    left: 14rem;
+    width: 100%;
+    z-index: 1;
+    top: 50px;
 }
 

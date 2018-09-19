@@ -26,15 +26,25 @@ export default class Advertising extends Component {
     return (
       <Fragment>
         <div>
-
-          <HeaderService
-              logoHeader={LogoBrand}
-              stylelogotext={'logo__service-text_website'}
-              serviceSlogan={[<div className="slogan-wrapper">DSIDE to make your business <br />earn more MONEY</div>]}
-              imgLogoPosition={'logo__service-img_website-ads'}
-              textContainer={'dside_textContainer-website'}
-              textHeader={[<p>Webstes</p>, <p>That sell</p>, <p>your</p>, <p>goods</p>]}
-          />
+            <div style={{overflow: 'hidden'}}>
+                <div className="video-background">
+                    <div className="video-foreground">
+                        <iframe
+                            src="https://www.youtube.com/embed/2MpUj-Aua48?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1"
+                            width="560" height="315" frameBorder="0" allowFullScreen></iframe>
+                    </div>
+                </div>
+                <div id="vidtop-content">
+                    <HeaderService
+                        logoHeader={LogoBrand}
+                        stylelogotext={'logo__service-text_advertising'}
+                        serviceSlogan={'DSIDE to make your business earn more MONEY'}
+                        imgLogoPosition={'logo__service-img-ads'}
+                        textContainer={'dside_textContainer-advertising'}
+                        // textHeader={[<p>Webstes</p>, <p>That sell</p>, <p>your</p>, <p>goods</p>]}
+                    />
+                </div>
+            </div>
 
           <section className="developers__quality">
 

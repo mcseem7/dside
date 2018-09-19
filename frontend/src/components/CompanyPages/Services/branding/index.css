@@ -16,6 +16,8 @@
     padding: 4rem 2rem 1rem 1rem;
     margin: 0;
 }
+
+
 .button-0-2 {
     background-color: #4c9a15 !important;
     background-image: radial-gradient( ellipse at center, #8fde34 0%, rgba(85, 139, 47, 0) 60%, #407719 100% ) !important;
@@ -47,15 +49,14 @@
     max-width: 100%;
     min-width: 100%;
 }
-.logo__service-img {
-    position: absolute;
-    top: -64px;
-    left: -145px;
-    width: 526px;
-}
+
 
 .logo__service-img_brand img {
     height: 600px !important;
+}
+
+.logo__service-img_brand {
+    top: -64px;
 }
 
 .price__louis_wrapper {
@@ -69,23 +70,11 @@
     font-size: 1rem;
     line-height: 1.4rem;
 }
-.logo__service_slogan {
-    text-align: center;
-    padding: 3rem;
-    color: #fff;
-    font-size: 2rem;
-    top: 120px !important;
-    line-height: 3rem;
-    z-index: 3;
-    text-shadow: 0 3px 4px rgba(0,0,0,.3);
-    max-width: 280px;
-    position: relative !important;
-    font-family: 'MontBold',sans-serif;
-}
+
 .loius__viton_title-description{font-family: 'MontBold',sans-serif;}
 .header__navigation{padding: 0 2rem;}
 .header__navigation .logotype__company{margin: 0; width: 90px;}
-.order__wrap{top: 340px;}
+
 .dside-company__links li{margin: 0;}
 .branding__service-right{ padding: 3rem 2rem; font-family: 'MontLight',sans-serif}
 .price__louis_wrapper{font-family: 'MontBold',sans-serif;}
@@ -116,7 +105,9 @@
 }
     .effect_animate-louisicon img{left: 0;}
     .header__navigation .logotype__company{margin-left: 1rem;}
-.logo__service_slogan{padding: 0; max-width: unset; font-size: 3rem;line-height: 3.6rem; margin: 0 auto;}
+
+.dside_textContainer-brand .logo__service_slogan{ top: 130px; max-width: unset; font-size: 2.3rem;line-height: 3.6rem; margin: 0 auto;}
+
 .logo__service-text_brand p {
     text-align: right;
     margin-bottom: -34px;
@@ -567,10 +558,7 @@ p.loius__viton_title-description {
     height: auto;
     position: relative;
 }
-.logo__service_slogan {
-    margin: 0 auto;
-    width: 650px !important;
-}
+
 .branding__service-left {
     margin-left: 5%;
 }
@@ -598,3 +586,5 @@ p.loius__viton_title-description{font-size: 1.4rem;}
     display: block;
 }
 }
+
+
