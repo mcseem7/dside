@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import './index.css'
-
+import {reactTranslateChangeLanguage} from "translate-components";
+import Translate from 'translate-components'
 
 export default class  Services extends Component  {
 
@@ -13,6 +14,9 @@ export default class  Services extends Component  {
         }
     }
 
+    componentDidMount() {
+        reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
+    }
 
 
     render() {
@@ -22,7 +26,7 @@ export default class  Services extends Component  {
                     <div className="services">
 
                         <div className="title__service">
-                            <h4 className="golden">What can you get?</h4>
+                            <h4 className="golden"><Translate>What can you get?</Translate></h4>
                             <h2>You can just come up with an IDEA</h2><p> and get a name for the company (naming), a
                             name for the domain, a logo, a corporate identity, a marketing-kit, as well as a
                             good-selling website and a customized advertising campaign.</p>

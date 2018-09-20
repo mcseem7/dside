@@ -23,8 +23,9 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
     }
 
    componentDidMount()  {
-        this.setState({langContent: localStorage.getItem('lang')})
-        this.getDsideApi()
+        this.setState({langContent: localStorage.getItem('lang')}, () => { //callback after get language
+            this.getDsideApi()
+        })
     }
 
     getDsideApi = async () => {

@@ -21,10 +21,9 @@ export default class About extends Component {
   }
 
 
-  componentDidUpdate() {
+  componentDidMount() {
       reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
   }
-
 
 
     render () {
@@ -51,14 +50,16 @@ export default class About extends Component {
 
             <Link to={`/${localStorage.getItem('lang')}/aboutus`}>
             <button className="more__about shining-underline">
-                  More about us
-
+               More about us
               <span></span>
             </button>
             </Link>
           </div>
         </div>
-        <div className="advantages"><span><img src={Shiny} alt="" />Brightly.</span><span> <img src={Palm} alt="" />Easy.</span> <span><img src={Wallet} alt="" />Profitable.</span></div>
+          <div className="advantages"><span><
+              img src={Shiny} alt="" /><Translate>Brightly.</Translate></span>
+              <span> <img src={Palm} alt="" /><Translate>Easy.</Translate></span> <span>
+                  <img src={Wallet} alt="" /><Translate>Profitable.</Translate></span></div>
       </div>
     )
   }

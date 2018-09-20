@@ -2,6 +2,7 @@ import React, {Component, Fragment} from 'react'
 import './index.css'
 import LimitData from './LimitData'
 import "babel-polyfill"
+import OrderButton from "../OrderButton";
 
 
 export default class LimitedService extends Component {
@@ -20,8 +21,7 @@ export default class LimitedService extends Component {
   async componentDidMount() {
      let response = await  fetch('http://mydside.com/api/en/home/getLimitedOffers/')
      let limitOfer = await response.json()
-
-      this.setState({offer: limitOfer})
+     this.setState({offer: limitOfer})
   }
 
 
