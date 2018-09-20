@@ -25,6 +25,8 @@ import AboutUs from './components/DynamicContent/About'
 import Main from "./components/DynamicContent/Main";
 import Advertising from "./components/CompanyPages/Services/advertising";
 import Automation from "./components/CompanyPages/Services/automation";
+import { TranslateProvider } from 'translate-components'
+import translations from './translations.json'
 
 
 class App extends Component {
@@ -64,6 +66,7 @@ class App extends Component {
         // const itemLang = localStorage.setItem('lang', this.props.domen)
 
         return (
+            <TranslateProvider translations={translations} defaultLanguage={'en'}>
             <div className="App">
                 <Route exact path="/" render={(props) => (<Redirect to={`/${this.props.domen}`}    />)} />
                 <Route  path={'/:language'} render={(props) => {
@@ -122,6 +125,7 @@ class App extends Component {
 
                 {this.state.langPoppup ? <LanguagePoppup/> : null}
             </div>
+            </TranslateProvider>
         )
     }
 }

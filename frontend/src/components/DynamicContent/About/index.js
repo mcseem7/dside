@@ -15,7 +15,8 @@ import Valentyn from './peopleCompany/lorem3.png'
 import Maksym from './peopleCompany/lorem4.png'
 import Oleksii from './peopleCompany/lorem5.png'
 import arrow from './arrowMeet.png'
-
+import Translate from 'translate-components'
+import { reactTranslateChangeLanguage } from 'translate-components'
 
 export default class AbotUs extends Component {
   constructor() {
@@ -130,6 +131,10 @@ export default class AbotUs extends Component {
     this.setState({activeTeam: true})
   }
 
+  componentDidUpdate() {
+    reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
+  }
+
   render() {
     return(
         <div>
@@ -156,7 +161,7 @@ export default class AbotUs extends Component {
 
                 <div className="dside__what-content">
                   <div className="title__what">
-                    <h4>What dside?</h4>
+                      <h4><Translate>What dside?</Translate></h4>
                   </div>
 
                   <div className="about__company-dside">

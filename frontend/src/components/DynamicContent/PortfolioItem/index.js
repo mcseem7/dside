@@ -36,8 +36,8 @@ export default class PortfolioItem extends Component {
 
 
 
- componentWillMount() {
-     return fetch(`http://mydside.com/api/en/portfolio/getPortfolioItemDetails/${this.props.match.params.portfolioitem}/`).then((response) => {
+ componentDidMount() {
+     return fetch(`http://mydside.com/api/${localStorage.getItem('lang')}/portfolio/getPortfolioItemDetails/${this.props.match.params.portfolioitem}/`).then((response) => {
          return response.json()
      }).then((item) => {
          this.setState({itemPortfolio: item}, () => {
@@ -128,8 +128,8 @@ export default class PortfolioItem extends Component {
         </div>
 
 
-          <div className="project__task_portfolio">
-            <p> {this.state.itemPortfolio.task}
+          <div className="project__task_portfolio" >
+            <p dangerouslySetInnerHTML={{__html: this.state.itemPortfolio.task }}>
             </p>
           </div>
 
@@ -157,7 +157,7 @@ export default class PortfolioItem extends Component {
 
 
           <div className="project__task_portfolio">
-            <p>{this.state.itemPortfolio.decision}
+            <p dangerouslySetInnerHTML={{__html: this.state.itemPortfolio.decision}}>
             </p>
           </div>
 
@@ -218,7 +218,7 @@ export default class PortfolioItem extends Component {
                 <figcaption>
                     <h2>{item.name}</h2>
                     {
-                        <Link to={`/portfolio/${item.CURL}`}>Explore project</Link>
+                        <Link to={`/${localStorage.getItem('lang')}/portfolio/${item.CURL}`}>Explore project</Link>
 
                     }
                 </figcaption>

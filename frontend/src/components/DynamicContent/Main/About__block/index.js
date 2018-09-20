@@ -5,6 +5,8 @@ import Palm from '../../../sources/images/works__logo/palm.svg'
 import Wallet from '../../../sources/images/works__logo/wallet.svg'
 import './index.css'
 import {Link} from 'react-router-dom'
+import Translate from 'translate-components'
+import { reactTranslateChangeLanguage } from 'translate-components'
 
 
 export default class About extends Component {
@@ -15,14 +17,14 @@ export default class About extends Component {
         lang: ''
       }
 
-      console.log(props)
+
   }
 
 
+  componentDidUpdate() {
+      reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
+  }
 
-componentDidMount() {
-    this.setState({lang: localStorage.getItem('lang')})
-}
 
 
     render () {
@@ -31,7 +33,7 @@ componentDidMount() {
       <div className="container__about-content">
 
         <div className="question__wrapper">
-          <p className="question">{'What'}</p>
+            <p className="question"><Translate>What?</Translate></p>
         </div>
 
         <div className="about__company-content">
@@ -40,14 +42,14 @@ componentDidMount() {
             <p className="company__content">
               <div className="logotype">
                 <img src={Logotype} alt="" />
-              </div> is a value driven, focused and very ambitious digital agency based in Warsaw,<br />
-              providing the best and innovative solutions for your business.
+              </div> <Translate>is a value driven, focused and very ambitious digital agency based in Warsaw,
+                providing the best and innovative solutions for your business.</Translate>
             </p>
           </div>
 
           <div className="more__about-button">
 
-            <Link to={`${this.state.lang}/aboutus`}>
+            <Link to={`/${localStorage.getItem('lang')}/aboutus`}>
             <button className="more__about shining-underline">
                   More about us
 

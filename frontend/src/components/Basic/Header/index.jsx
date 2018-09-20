@@ -5,6 +5,9 @@ import PlusIcon from './plus.svg'
 import Logo from './Logo.svg'
 import {Link} from 'react-router-dom'
 import Poppup from '../../../HOC/Poppup/index';
+import pl from "../../../HOC/ChangeLanguage/svg/006-poland.svg";
+import cz from "../../../HOC/ChangeLanguage/svg/003-czech-republic.svg";
+import ru from "../../../HOC/ChangeLanguage/svg/005-russia.svg";
 
 
 
@@ -64,7 +67,11 @@ export default class Header extends Component {
                   <img src={PlusIcon} onClick={this.changePoppup} className="add__work_plus" alt="" width="14"/>
                 </div>
               </div>
+
+
             </div>
+
+
 
             <div className="mid__content-logo">
               <div className="logo__container">

@@ -8,15 +8,14 @@ import styledNormalize from 'styled-normalize'
 import { injectGlobal } from 'styled-components'
 import baseStyles from './index'
 import './index.css'
-
-
+import 'regenerator-runtime/runtime';
 import history from 'history/createBrowserHistory'
 
+const initialLanguage = 'pl'
 
 
-const getIdentityDomen = window.location.hostname.split('.')[1] !== undefined ? window.location.hostname.split('.')[1] : 'pl'
 
-
+const getIdentityDomen = window.location.hostname.split('.')[1] !== undefined ? window.location.hostname.split('.')[1] : initialLanguage
     ReactDOM.hydrate(
             <BrowserRouter basename={getIdentityDomen == 'com' ? window.navigator.languages[1] : null} >
                 <App {...this.props} domen={getIdentityDomen} />
