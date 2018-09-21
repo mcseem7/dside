@@ -11,7 +11,7 @@ import './index.css'
 import 'regenerator-runtime/runtime';
 import history from 'history/createBrowserHistory'
 
-const initialLanguage = 'pl'
+const initialLanguage = 'cz'
 
 
 

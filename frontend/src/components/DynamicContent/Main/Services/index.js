@@ -27,9 +27,9 @@ export default class  Services extends Component  {
 
                         <div className="title__service">
                             <h4 className="golden"><Translate>What can you get?</Translate></h4>
-                            <h2>You can just come up with an IDEA</h2><p> and get a name for the company (naming), a
+                            <h2><Translate>You can just come up with an IDEA</Translate></h2><p><Translate>and get a name for the company (naming), a
                             name for the domain, a logo, a corporate identity, a marketing-kit, as well as a
-                            good-selling website and a customized advertising campaign.</p>
+                            good-selling website and a customized advertising campaign.</Translate></p>
                         </div>
                         <div className="listwrapper">
                             <div className="list__services-branding">
@@ -39,10 +39,10 @@ export default class  Services extends Component  {
                                 <ul className="list">
                                     <li><Link to={`${this.props.match.path}/services/brand`}
                                               className="shining-underline">Branding<span></span></Link></li>
-                                    <li>Brand legend</li>
-                                    <li>Brandbook</li>
-                                    <li>Identity</li>
-                                    <li>Naming</li>
+                                    <li><Translate>Brand legend</Translate></li>
+                                    <li><Translate>Brandbook</Translate></li>
+                                    <li><Translate>Identity</Translate></li>
+                                    <li><Translate>Naming</Translate></li>
                                 </ul>
                             </div>
 

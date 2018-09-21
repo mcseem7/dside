@@ -291,10 +291,11 @@
    .header__portfolio-content {
         width: 100%;
        height: 360px;
-            background: url('layer-90.png');
+       position: relative;
+            /*background: url('layer-90.png');*/
         }
-.portfolio__header_item-wrapper{padding: 0; text-align: left}
-.header__portfolio-content-wrapper{max-width: 1200px;  margin: 0 auto;  min-width: 50px;background: url('layer-90.png'); }
+.portfolio__header_item-wrapper{text-align: left}
+.header__portfolio-content-wrapper{position:absolute; bottom: 0; max-width: 1200px;  margin: 0 auto;  min-width: 50px; }
 .portfolio__name__content {
             flex-direction: column;
             align-items: flex-start;
