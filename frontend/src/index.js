@@ -12,8 +12,6 @@ import 'regenerator-runtime/runtime';
 import history from 'history/createBrowserHistory'
 
 const initialLanguage = 'en'
-
-
 window.localStorage.setItem('lang', window.location.pathname.substr(1, 2) || initialLanguage)
 const getIdentityDomen =  window.location.pathname
 
