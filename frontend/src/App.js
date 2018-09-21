@@ -53,7 +53,6 @@ class App extends Component {
         } else {
             this.setState({cook: false})
         }
-        localStorage.setItem('lang', this.props.domen)
         window.scrollTo(0,0)
     }
 
@@ -63,7 +62,6 @@ class App extends Component {
     }
 
     render () {
-        // const itemLang = localStorage.setItem('lang', this.props.domen)
 
         return (
             <TranslateProvider translations={translations} defaultLanguage={'en'}>

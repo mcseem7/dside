@@ -14,9 +14,10 @@ import history from 'history/createBrowserHistory'
 const initialLanguage = 'en'
 
 
+window.localStorage.setItem('lang', window.location.pathname.substr(1, 2) || initialLanguage)
+const getIdentityDomen =  window.location.pathname
 
-const getIdentityDomen = window.location.pathname !== undefined ? window.location.pathname : initialLanguage
-localStorage.setItem('lang', getIdentityDomen.substr(1, 2))
+
     ReactDOM.hydrate(
             <BrowserRouter  >
                 <App {...this.props} domen={getIdentityDomen} />
