@@ -68,7 +68,7 @@ class App extends Component {
         return (
             <TranslateProvider translations={translations} defaultLanguage={'en'}>
             <div className="App">
-                <Route exact path="/" render={(props) => (<Redirect to={`/${this.props.domen}`}    />)} />
+                <Route exact path="/" render={(props) => (<Redirect to={`/en`}    />)} />
                 <Route  path={'/:language'} render={(props) => {
 
                     return(
@@ -79,22 +79,33 @@ class App extends Component {
                             <CSSTransition key={props.location.key} timeout={1000} classNames="fade">
 
                                 <Switch>
-                                    <Route exact path={`/${props.match.params.language}`}  render={(props) => {
+                                    <Route exact path={`/${'en'}`}  render={(props) => {
                                         return <Main {...props}/>
                                     }}  />
-                                    <Route exact path={`/${props.match.params.language}/services/logo`}  component={LogoPage}/>
-                                    <Route exact path={`/${props.match.params.language}/services/videos`} component={VideoPage}/>
-                                    <Route exact path={`/${props.match.params.language}/services/website`} component={Website}/>
-                                    <Route exact path={`/${props.match.params.language}/services/brand`}  component={BrandPage}/>
-                                    <Route exact path={`/${props.match.params.language}/services/advertising`}  component={Advertising}/>
-                                    <Route exact path={`/${props.match.params.language}/services/automation`}  component={Automation}/>
-                                    <Route exact path={`/${props.match.params.language}/services/brand`}  component={BrandPage}/>
-                                    <Route exact path={`/${props.match.params.language}/aboutus`}  component={AboutUs} />
-                                    <Route exact path={`/${props.match.params.language}/blog`}  component={Blog} />
-                                    <Route exact path={`/${props.match.params.language}/blog/:blogitem`} component={BlogItem} />
-                                    <Route exact path={`/${props.match.params.language}/portfolio`} component={Portfolio} />
-                                    <Route exact  path={`/${props.match.params.language}/portfolio/:portfolioitem`}  component={PortfolioItem} />
-                                    <Route  exact path={`/${props.match.params.language}/services/contactus`} component={ContactUs}/>
+                                    <Route exact path={`/${'pl'}`}  render={(props) => {
+                                        return <Main {...props}/>
+                                    }}  />
+                                    <Route exact path={`/${'cz'}`}  render={(props) => {
+                                        return <Main {...props}/>
+                                    }}  />
+                                    <Route exact path={`/${'ru'}`}  render={(props) => {
+                                        return <Main {...props}/>
+                                    }}  />
+                                    <Route exact path={`/${'en'}/services/logo`}  component={LogoPage}/>
+                                    <Route exact path={`/${'en'}/services/videos`} component={VideoPage}/>
+                                    <Route exact path={`/${'en'}/services/website`} component={Website}/>
+                                    <Route exact path={`/${'en'}/services/brand`}  component={BrandPage}/>
+                                    <Route exact path={`/${'en'}/services/advertising`}  component={Advertising}/>
+                                    <Route exact path={`/${'en'}/services/automation`}  component={Automation}/>
+                                    <Route exact path={`/${'en'}/services/brand`}  component={BrandPage}/>
+                                    <Route exact path={`/${'en'}/aboutus`}  component={AboutUs} />
+                                    <Route exact path={`/${'en'}/blog`}  component={Blog} />
+                                    <Route exact path={`/${'en'}/blog/:blogitem`} component={BlogItem} />
+                                    <Route exact path={`/${'en'}/portfolio`} component={Portfolio} />
+                                    <Route exact  path={`/${'en'}/portfolio/:portfolioitem`}  component={PortfolioItem} />
+                                    <Route  exact path={`/${'en'}/services/contactus`} component={ContactUs}/>
+
+
                                 </Switch>
 
 

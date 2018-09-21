@@ -11,13 +11,14 @@ import './index.css'
 import 'regenerator-runtime/runtime';
 import history from 'history/createBrowserHistory'
 
-const initialLanguage = 'cz'
+const initialLanguage = 'en'
 
 
 
-const getIdentityDomen = window.location.hostname.split('.')[1] !== undefined ? window.location.hostname.split('.')[1] : initialLanguage
+const getIdentityDomen = window.location.pathname !== undefined ? window.location.pathname : initialLanguage
+localStorage.setItem('lang', getIdentityDomen.substr(1, 2))
     ReactDOM.hydrate(
-            <BrowserRouter basename={getIdentityDomen == 'com' ? window.navigator.languages[1] : null} >
+            <BrowserRouter  >
                 <App {...this.props} domen={getIdentityDomen} />
             </BrowserRouter>
             ,
