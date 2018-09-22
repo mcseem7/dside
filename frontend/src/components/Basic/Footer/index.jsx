@@ -9,6 +9,7 @@ import Poppup from '../../../HOC/Poppup/index';
   constructor (props) {
     super(props)
 
+
     this.nameRef = React.createRef()
     this.phoneRef = React.createRef()
 
@@ -16,14 +17,15 @@ import Poppup from '../../../HOC/Poppup/index';
 
   handleSubmit = (event) => {
     event.preventDefault()
-    this.props.postData(this.nameRef, this.phoneRef)
+    // this.props.postData(this.nameRef, this.phoneRef)
+
   }
 
   render () {
     console.log(this.props)
     return (
-      <footer style={{display: this.props.style}}>
-        <div className="footer__content" >
+      <footer>
+        <div className="footer__content" style={{display: this.props.style}}>
 
           <div className="clients__form">
 
@@ -85,4 +87,4 @@ import Poppup from '../../../HOC/Poppup/index';
 }
 
 
-export default withDsideApi(Footer,'/home/addOrder/', '/en')
+export default Footer;

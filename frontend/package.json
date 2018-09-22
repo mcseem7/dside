@@ -9,9 +9,11 @@
     "browser-util": "^1.2.0",
     "exenv": "^1.2.2",
     "express": "^4.16.3",
+    "fsevents": "^1.2.4",
     "gsap": "^2.0.1",
     "history": "^4.7.2",
     "i": "^0.3.6",
+    "increase-memory-limit": "^1.0.6",
     "js-cookie": "^2.2.0",
     "jss-global": "^3.0.0",
     "loadable-components": "^2.2.2",
@@ -43,16 +45,12 @@
     "window-or-global": "^1.0.1"
   },
   "scripts": {
-    "crau:start": "better-npm-run crau:start",
-    "crau:build": "better-npm-run crau:build",
-    "crau:clean": "better-npm-run crau:clean",
-    "start": "react-scripts start",
-    "start:prod": "better-npm-run start:prod",
+    "start": "node --max_old_space_size=8000 $(which npx) react-scripts start",
     "build": "react-scripts build",
+    "cra-build": "node --max_old_space_size=8000 $(which npx) cra-universal build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build:all": "cra-universal build",
-    "prettier": "prettier --write \"{src,__{tests,mocks}__}/**/*.js\""
+    "build:all": "cra-universal build"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -64,26 +62,5 @@
     "cra-universal": "^3.2.5",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1"
-  },
-  "betterScripts": {
-    "start:prod": {
-      "command": "node ./server/bundle",
-      "env": {
-        "NODE_ENV": "production"
-      }
-    },
-    "crau:start": {
-      "command": "cra-universal start",
-      "env": {
-        "NODE_ENV": "development"
-      }
-    },
-    "crau:build": {
-      "command": "cra-universal build",
-      "env": {
-        "NODE_ENV": "production"
-      }
-    },
-    "crau:clean": "cra-universal clean"
   }
 }
