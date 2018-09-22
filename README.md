@@ -6,15 +6,22 @@ Frontend start development:
 
 2. npx cra-universal start
    
-        OR
+        or
 
-npx cra-universal start --both
+1. npx cra-universal start --both
+
+
+
+
 
 Frontend building application:
 
 npm run cra-build
 
 //result > /dist/client |  /dist/server
+
+
+
 
 
 
