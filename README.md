@@ -1,3 +1,21 @@
+Frontend start development: 
+
+1. npm start 
+
+2. npx cra-universal start
+   
+        OR
+
+npx cra-universal start --both
+
+Frontend building application:
+
+npm run cra-build
+
+//result > /dist/client |  /dist/server
+
+
+
 Frontend location:
 frontend/
 

@@ -5,9 +5,9 @@
 /dside-venv
 /frontend/build
 /frontend/node_modules
-/frontend/server-build
 /venv
 /frontend/server-build
+/frontend/dist
 # testing
 /coverage
 
