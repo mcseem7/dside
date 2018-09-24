@@ -35,9 +35,6 @@ To start the application you need to do:
 
 
 
-
-
-
 Frontend location:
 frontend/
 
