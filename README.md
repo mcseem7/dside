@@ -1,18 +1,37 @@
 Frontend start development: 
 
+====================
+
 1. npm start 
 
 2. npx cra-universal start
    
-        OR
+        or
 
-npx cra-universal start --both
+1. npx cra-universal start --both
+
 
 Frontend building application:
 
 npm run cra-build
 
 //result > /dist/client |  /dist/server
+
+
+After building application if your want run application you need copy /client >>> /dist/server/.
+
+Your result:
+   /dist
+      >/server
+       bundle.js
+           > /client
+               static 
+               .....
+
+
+To start the application you need to do:
+
+   pm2 start bundle.js >> Server creating to port 3001
 
 
 
