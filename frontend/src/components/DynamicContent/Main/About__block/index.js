@@ -22,7 +22,6 @@ export default class About extends Component {
 
 
   componentDidMount() {
-      reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
       this.setState({lang: localStorage.getItem('lang') })
   }
 
@@ -49,7 +48,7 @@ export default class About extends Component {
 
           <div className="more__about-button">
 
-            <Link to={`/}/aboutus`} >
+            <Link to={`/${this.state.lang}/aboutus`} >
             <button className="more__about shining-underline">
                More about us
               <span></span>

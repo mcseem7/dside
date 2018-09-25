@@ -9,7 +9,7 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import {Link} from "react-router-dom";
 
 import arrowImg from './arrow.svg'
-
+import fetch from 'isomorphic-fetch'
 
 
 export default class PortfolioItem extends Component {

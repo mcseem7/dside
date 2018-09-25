@@ -20,24 +20,9 @@ import {LangContextConsumer} from "../Main";
  class HeaderPost extends Component {
   constructor (props) {
     super(props)
-console.log(props)
-      this.state = {
-          mainData: {
-              en: {
-                  enWhat: 'What?'
-              },
-              pl: {
-                  plWhat: 'who?'
-              },
-              cz: {
-                  czWhat: 'whоy?'
-              },
-              ru: {
-                  ruWhat: 'Откуда?'
-              }
 
-          },
-          landData: ''
+      this.state = {
+          lang: ''
       }
   }
 
@@ -99,4 +84,4 @@ console.log(props)
   }
 }
 
-export default withDsideApi(HeaderPost, '/portfolio/getHomePortfolioItems/', '/en')
+export default withDsideApi(HeaderPost, `/portfolio/getHomePortfolioItems/`)

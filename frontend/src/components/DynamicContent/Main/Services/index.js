@@ -14,9 +14,6 @@ export default class  Services extends Component  {
         }
     }
 
-    componentDidMount() {
-        reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
-    }
 
 
     render() {

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-
+import fetch from 'isomorphic-fetch'
 
 
 
@@ -22,11 +22,20 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
 
     }
 
+
+
    componentDidMount()  {
-        this.setState({langContent: localStorage.getItem('lang')}, () => { //callback after get language
-            this.getDsideApi()
-        })
+       if(typeof window != "undefined") {
+           this.setState({langContent: localStorage.getItem('lang')}, () => { //callback after get language
+               this.getDsideApi()
+           })
+       } else {
+           console.log('loading')
+       }
     }
+
+
+
 
     getDsideApi = async () => {
       await fetch(`http://mydside.com/api/${this.state.langContent}${apiUrl}`)
@@ -34,7 +43,7 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
        .then(data => this.setState({dataDside: data}))
         .catch(error => console.log(error))
       await this.getItemApiHome()
-        await this.setState({loading: true})
+      await this.setState({loading: true})
     }
 
     getItemApiHome = () => {

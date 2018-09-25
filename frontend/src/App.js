@@ -25,7 +25,7 @@ import AboutUs from './components/DynamicContent/About'
 import Main from "./components/DynamicContent/Main";
 import Advertising from "./components/CompanyPages/Services/advertising";
 import Automation from "./components/CompanyPages/Services/automation";
-import { TranslateProvider } from 'translate-components'
+import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
 import translations from './translations.json'
 
 
@@ -55,6 +55,8 @@ class App extends Component {
             this.setState({cook: false})
         }
         window.scrollTo(0,0)
+      reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
+
     }
 
     confirmCookies = () => {

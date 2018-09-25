@@ -587,4 +587,7 @@ p.loius__viton_title-description{font-size: 1.4rem;}
 }
 }
 
+.case__service {
+    display: flex;
+}
 

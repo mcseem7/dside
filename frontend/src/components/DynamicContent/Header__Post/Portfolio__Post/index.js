@@ -1,18 +1,22 @@
 import React, { Component,Fragment } from 'react'
 import './index.css'
 import {Link} from 'react-router-dom'
+const renderReact = require('hypernova-react').renderReact;
 
-
-export default class PortolioPost extends Component {
+ class PortolioPost extends Component {
     constructor(props) {
         super(props)
 
 
         this.state = {
-            itemId: []
+            itemId: [],
+            lang: ''
         }
     }
 
+    componentDidMount() {
+      this.setState({lang: localStorage.getItem('lang')})
+    }
 
 
 
@@ -20,6 +24,7 @@ export default class PortolioPost extends Component {
 
 
     return (
+
 <Fragment> {
   this.props.dataItem.map((item,key) => {
   return  <div className="grid">
@@ -29,7 +34,7 @@ export default class PortolioPost extends Component {
         <figcaption>
           <h2>{item.name}</h2>
           {
-              <Link to={`${this.props.lang}/portfolio/${item.CURL}`}>Explore project</Link>
+              <Link to={`/${this.state.lang}/portfolio/${item.CURL}`}>Explore project</Link>
 
         }
         </figcaption>
@@ -44,3 +49,5 @@ export default class PortolioPost extends Component {
   }
 
 }
+
+export default  PortolioPost

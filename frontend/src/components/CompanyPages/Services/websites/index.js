@@ -12,9 +12,11 @@ import './index.css'
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
 import WeCare from "../../../Basic/TrustBlocks/WeCare";
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
+import PortolioPost from "../../../DynamicContent/Header__Post/Portfolio__Post";
+import withDsideApi from "../../../../HOC/Fetch";
 
 
-export default class Website extends Component {
+ class Website extends Component {
   constructor () {
     super()
   }
@@ -212,10 +214,25 @@ export default class Website extends Component {
             </div>
           </section>
         </div>
-        {/*<CaseService/>*/}
-        <div className="case__service">
-          <HeaderPost/>
+
+
+        <div className="container__case-studies">
+          <div className="case-title">
+            <h3>Case Studies</h3>
+          </div>
+          <div className="case-description">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+              voluptatem.</p>
+          </div>
         </div>
+        <div className="case__service">
+          <PortolioPost {...this.props} />
+        </div>
+
+
         <WeCare name="websites"/>
         <Advantages/>
 
@@ -223,3 +240,6 @@ export default class Website extends Component {
     )
   }
 }
+
+
+export default withDsideApi(Website, '/portfolio/getPortfolioItems/Websites/')

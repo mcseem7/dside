@@ -41,9 +41,6 @@ export default class Works extends Component {
     }
   }
 
-  componentDidMount() {
-      reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
-  }
 
   changePoppup = () => {
     this.setState({modalActive: !this.state.modalActive}, () => {

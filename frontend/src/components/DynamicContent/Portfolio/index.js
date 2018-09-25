@@ -9,6 +9,7 @@ export default class Portfolio extends Component {
     this.state = {
       dataItems: []
     }
+
   }
 
 

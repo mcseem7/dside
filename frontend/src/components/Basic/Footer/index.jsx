@@ -4,7 +4,7 @@ import arrow from '../../sources/images/works__logo/arrow.svg'
 import withDsideApi from '../../../HOC/Fetch'
 import Poppup from '../../../HOC/Poppup/index';
 
- class Footer extends Component {
+class Footer extends Component {
 
   constructor (props) {
     super(props)

@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component, Fragment } from "react";
 import HeaderService from '../serviceComponents/HeaderService/index'
 import CaseService from '../serviceComponents/CaseService/index'
 import LimitedService from '../serviceComponents/LimitedService'
@@ -12,8 +12,10 @@ import WeCare from "../../../Basic/TrustBlocks/WeCare";
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
 import Own from "../../../Basic/TrustBlocks/Own";
 import LogoBrand from "../branding/logo_brand.png";
+import PortolioPost from "../../../DynamicContent/Header__Post/Portfolio__Post";
+import withDsideApi from "../../../../HOC/Fetch";
 
-export default class VideoPage extends Component {
+ class VideoPage extends Component {
   constructor() {
     super()
 
@@ -93,10 +95,23 @@ export default class VideoPage extends Component {
 
           </section>
 
-          {/*<CaseService/>*/}
-          <div className="case__service">
-            <HeaderPost/>
+
+          <div className="container__case-studies">
+            <div className="case-title">
+              <h3>Case Studies</h3>
+            </div>
+            <div className="case-description">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                voluptatem.</p>
+            </div>
           </div>
+          <div className="case__service">
+            <PortolioPost {...this.props} />
+          </div>
+
             <Advantages/>
             <WeCare name="videos"/>
             <Own/>
@@ -106,3 +121,5 @@ export default class VideoPage extends Component {
     )
   }
 }
+
+export default withDsideApi(VideoPage, '/portfolio/getPortfolioItems/Videos/')

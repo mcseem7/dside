@@ -17,11 +17,14 @@ const getIdentityDomen =  window.location.pathname
 
 
     ReactDOM.hydrate(
-            <BrowserRouter  >
-                <App {...this.props} domen={getIdentityDomen} />
-            </BrowserRouter>
-            ,
-            document.getElementById('root')
-        );
+        <BrowserRouter>
+            <App {...this.props} domen={getIdentityDomen}/>
+        </BrowserRouter>
+        ,
+        document.getElementById('root')
+    )
+
+
+
 
 

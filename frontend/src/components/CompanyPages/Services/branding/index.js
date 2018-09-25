@@ -26,6 +26,8 @@ import WeCare from "../../../Basic/TrustBlocks/WeCare";
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
 import Own from "../../../Basic/TrustBlocks/Own";
 import logoHeader from "../logos/logo__header-service.png";
+import PortolioPost from "../../../DynamicContent/Header__Post/Portfolio__Post";
+import withDsideApi from "../../../../HOC/Fetch";
 
 class BrandPage extends Component {
     constructor() {
@@ -36,7 +38,7 @@ class BrandPage extends Component {
             findActive: false,
             louisbag: false,
             modalActive: false,
-            textlouisbag: false
+            textlouisbag: false,
         }
 
         WheelReact.config({
@@ -83,9 +85,6 @@ class BrandPage extends Component {
         })
         return (
             <div>
-
-
-
                 <div>
                     <div className="video-background">
                         <div className="video-foreground">
@@ -337,7 +336,7 @@ class BrandPage extends Component {
                     </div>
                 </div>
                 <div className="case__service">
-                    <HeaderPost/>
+                    <PortolioPost {...this.props} />
                 </div>
                 <WeCare name="brandes"/>
                 <Advantages/>
@@ -350,4 +349,4 @@ class BrandPage extends Component {
     }
 }
 
-export default BrandPage
+export default withDsideApi(BrandPage, '/portfolio/getPortfolioItems/Branding/')
