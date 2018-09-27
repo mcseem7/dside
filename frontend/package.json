@@ -12,6 +12,8 @@
     "fsevents": "^1.2.4",
     "gsap": "^2.0.1",
     "history": "^4.7.2",
+    "hypernova": "^2.3.0",
+    "hypernova-react": "^2.1.0",
     "i": "^0.3.6",
     "increase-memory-limit": "^1.0.6",
     "js-cookie": "^2.2.0",
