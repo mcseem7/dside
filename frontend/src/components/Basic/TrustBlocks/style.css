@@ -26,7 +26,14 @@ img.adv-icon {
     margin-top: 2rem;
 
 }
-
+.cu-we-iter {
+    font-family: 'MontLight', sans-serif;
+    font-weight: 400;
+    flex: .3 1 40%;
+    margin-top: 2rem;
+}
+.ketchupp{}
+#iter h3{margin: 0 !important; padding: 0;}
 .advantage-heading {
     font-size: 1rem;
     text-transform: uppercase;
@@ -112,7 +119,7 @@ img.adv-icon {
 .own-instance:nth-child(4){display: none;}
 .own-instance:nth-child(3){display: none;}
 .own-instance img {
-    width: auto;
+    width: 6.4rem;
     height: 10rem;
     margin-bottom: 1rem;
 }
@@ -178,7 +185,8 @@ img.adv-icon {
     flex-direction: column;
     padding: 2rem 0 0 0;
 }
-.dside-promo img{padding: 2em; width: 50%; margin: 0 auto;}
+.dside-promo img{ width: 50%;
+    height:auto; margin: 2rem auto;}
 .dside-promo .text {
     max-width: 500px;
     text-transform: uppercase;
@@ -188,8 +196,16 @@ img.adv-icon {
     margin-top: -8px;
     text-align: center;
 }
+.ketchupp{width: 100%; height: auto;}
+.iterimage{    flex-basis: 50%;}
+.iter{
+     display: flex;  flex-direction: column;}
+.iter{padding: 1rem 3rem;}
+#iter{flex-basis: 50%;}
+#iter .text{font-family: 'MontLight',sans-serif; font-size: 1.2rem; flex-basis: 50%;}
 /* Tablets */
 @media only screen and (min-width: 480px) {
+    .iter{  flex-direction: row;     flex-wrap: wrap;}
 .own-instance  {flex-basis: 20%;}
 #care{background: rgba(0, 0, 0, 0.71);}
 #cu-we-care {
@@ -197,7 +213,9 @@ img.adv-icon {
 }
 .own-instance img {
     height: 16rem;
+    width: 8.8rem;
 }
+.own-instance:last-child img{width: 9.7rem;}
 .own-container{padding-top: 10rem;}
 .own-instance .own-heading, .own-instance .own-desc{text-align: center}
 .dside-promo .text{
@@ -252,7 +270,9 @@ img.dside-logo {
 .own-instance:nth-child(3){display: flex;}
 .own-instance img {
     height: 20rem;
+    widht: 11rem;
 }
+.own-instance:last-child img{width: 12.5rem;}
 .dside-promo{padding: 4rem 0 0 0;}
 .own-container {
     padding-top: 7rem;
@@ -286,7 +306,9 @@ flex-basis: 670px;
 @media only screen and (min-width: 1024px) {
     .own-instance img {
     height: 340px;
-}
+    width: 185px;
+    }
+    .own-instance:last-child img {width: 210px;}
     .cu-heading{    width: 60%;}
     img.adv-icon{
         width: 4rem;

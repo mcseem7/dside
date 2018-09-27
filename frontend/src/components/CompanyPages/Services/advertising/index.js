@@ -11,6 +11,8 @@ import './index.css'
 
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
 import WeCare from "../../../Basic/TrustBlocks/WeCare";
+import Iter from "../../../Basic/TrustBlocks/iter";
+import Own from "../../../Basic/TrustBlocks/Own";
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
 import PortolioPost from "../../../DynamicContent/Header__Post/Portfolio__Post";
 import withDsideApi from "../../../../HOC/Fetch";
@@ -100,8 +102,10 @@ import { reactTranslateChangeLanguage } from 'translate-components'
         <div className="case__service">
           <PortolioPost {...this.props} />
         </div>
+        <Iter/>
         <WeCare name="websites"/>
         <Advantages/>
+        <Own/>
         <LimitedService/>
       </Fragment>
     )
