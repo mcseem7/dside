@@ -16,15 +16,25 @@ window.localStorage.setItem('lang', window.location.pathname.substr(1, 2) || ini
 const getIdentityDomen =  window.location.pathname
 
 
-    ReactDOM.hydrate(
-        <BrowserRouter>
-            <App {...this.props} domen={getIdentityDomen}/>
-        </BrowserRouter>
-        ,
-        document.getElementById('root')
-    )
+
+
+const render = (Component) => {
+  return   ReactDOM.hydrate(
+    <BrowserRouter >
+      <Component {...this.props} domen={getIdentityDomen}/>
+    </BrowserRouter>
+    ,
+    document.getElementById('root')
+  )
+};
+
+render(App);
 
 
 
-
-
+if (module.hot) {
+  module.hot.accept('./App', () => {
+    const NextApp = require('./App').default;
+    render(NextApp);
+  });
+}
