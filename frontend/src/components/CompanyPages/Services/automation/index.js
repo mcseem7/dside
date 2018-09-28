@@ -52,42 +52,12 @@ import withDsideApi from "../../../../HOC/Fetch";
 
 
 
-          <section className="developers__quality">
+          <section className="automation__quality">
 
-            <div className="developer__left-content">
 
-              <div className="contentby__vova">
-              <h3>Quality implemented  website</h3>
-              <p>is the key to a successful and scalable business</p>
-              </div>
-
-              <div className="titles__developer">
-                <p className="name__developer">Volodymyr Piskun</p>
-                <p className="position__developer">Senior backend developer</p>
-              </div>
-
-              <div className="discover__button">
-                <a href="#">
-                  discover your possibilites
-                </a>
-              </div>
-
-            </div>
-
-            <div className="developer__right-content">
-
-              <div className="developer__photo">
-
-                <img src={Vova} alt=""/>
-
-              </div>
-
-            </div>
 
 
           </section>
-
-
 
           <section className="versus__section">
 

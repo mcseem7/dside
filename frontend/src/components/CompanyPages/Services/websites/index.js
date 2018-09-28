@@ -20,9 +20,6 @@ import withDsideApi from "../../../../HOC/Fetch";
   constructor () {
     super()
   }
-  componentDidMount() {
-    window.scrollTo(0,0)
-  }
 
   render () {
     return (
@@ -33,8 +30,9 @@ import withDsideApi from "../../../../HOC/Fetch";
                 <div className="video-background">
                     <div className="video-foreground">
                         <iframe
-                            src="https://www.youtube.com/embed/2MpUj-Aua48?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1"
-                            width="560" height="315" frameBorder="0" allowFullScreen></iframe>
+                            src="https://www.youtube.com/embed/uaGotppPsCs?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1&fs=1"
+                            width="100%"  frameBorder="0"
+                            allowFullScreen ></iframe>
                     </div>
                 </div>
                 <div id="vidtop-content">
@@ -49,7 +47,7 @@ import withDsideApi from "../../../../HOC/Fetch";
                 </div>
             </div>
 
-          <section className="developers__quality">
+          <section className="developers__quality" id='website__developer'>
 
             <div className="developer__left-content">
 

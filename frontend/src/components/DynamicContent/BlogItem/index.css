@@ -26,4 +26,23 @@
 
 .right__content-post {
     padding-right: 54px;
+    margin-left: 10px;
 }
+
+@media screen and (max-width: 768px) {
+    .left__content-post {
+        display: none;
+    }
+
+    .portfolio_content__posts {
+        padding-top: 0;
+    }
+
+    .content__body-post p {
+       font-size: 0.75rem;
+    }
+}
+
+
+
+

@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './style.css'
 import Ketchup from './ketchup.jpg'
+
 export default class Iter extends Component {
     constructor() {
         super()
@@ -8,9 +9,6 @@ export default class Iter extends Component {
 
     }
 
-    componentDidMount() {
-        window.scrollTo(0, 0)
-    }
 
 
     render() {

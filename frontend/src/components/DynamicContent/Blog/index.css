@@ -1,43 +1,32 @@
-.blog__content {
-    max-width: 1200px;
-    min-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-}
 
-
-
-.description-item p {
- width: 100%
-}
-
-.tag-item p {
+.watching__post,
+.time__post {
     color: #ffffff;
     font-family: 'MontBold', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.title-item h4 {
-    color: #ffffff;
-    font-family: 'MontBold', sans-serif;
-    font-size: 30px;
     font-weight: 700;
 }
 
 .description-item p {
     color: #ffffff;
     font-family: 'MontLight', sans-serif;
-    font-size: 18px;
     font-weight: 300;
 }
 
-.watching__post,
-.time__post {
+.title-item h4 {
     color: #ffffff;
     font-family: 'MontBold', sans-serif;
-    font-size: 18px;
     font-weight: 700;
+}
+
+.tag-item p {
+    color: #ffffff;
+    font-family: 'MontBold', sans-serif;
+    font-weight: 700;
+}
+
+.blog__content {
+    width: 100%;
+    margin: 0 auto;
 }
 
 .blog__item {
@@ -45,22 +34,15 @@
     background-size: cover;
 }
 
-.tag-item {
-    width: 12%;
-    height: 39px;
-    border-radius: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(to left, #f1af1f 0%, #f47b20 100%);
-}
-
 .blog__post-data {
     display: flex;
 }
 
-.blog__post-data .watching__post {
-    margin-right: 71px;
+.latest__post-title h4 {
+    color: #000000;
+    font-family: 'MontBold', sans-serif;
+    font-weight: 700;
+    margin: 0;
 }
 
 .blog__item-content {
@@ -68,73 +50,10 @@
     padding-left: 40px;
 }
 
-.blog__item {
-    cursor: pointer;
-    margin-bottom: 25px;
-}
-
-.latest__post-title h4 {
-    color: #000000;
-    font-family: 'MontBold', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    margin: 0;
-}
-
-.latest__post-content {
-    display: flex;
-}
-
-.icon__cube img {
-    width: 20px;
-    height: 20px;
-    display: block;
-}
-
-.latest-posts__titles {
-    display: flex;
-    padding-left: 35px;
-    padding-right: 35px;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 35px;
-    padding-bottom: 35px;
-}
-
-.latest-post__tag p {
-    margin: 0;
-}
-
-.latest-post__data {
-    display: flex;
-}
-
-.latest-post {
-    background-image: url('./latest.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 299px;
-    cursor: pointer;
-    height: 199px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-}
-
-.latest-post__tag {
-    color: #ffffff;
-    font-family: 'MontBold', sans-serif;
-    font-size: 14px;
-    flex: 1;
-    font-weight: 700;
-}
-
-.latest-post__description p {
-    color: #ffffff;
-    margin: 0;
-    font-family: 'MontBold', sans-serif;
-    font-size: 17px;
-    font-weight: 700;
+.blog__content {
+    max-width: 1200px;
+    min-width: 375px;
+    width: 100%;
 }
 
 
@@ -164,25 +83,188 @@
     align-items: center;
 }
 
-.latest-post__data .watching__post {
-    margin-right: 31px;
+@media screen and (max-width: 450px){
+    .blog__item-content {
+        padding-top: 20px;
+    }
+    .blog__item {
+        margin-bottom: 10px;
+    }
+
+    .icon-watching {
+        padding-right: 15px;
+    }
 }
 
-.latest-post {
-    padding-left: 16px;
-    padding-right: 40px;
+@media screen and (min-width: 1024px){
+    .blog__content {
+        width: 100%;
+    }
+
+    .blog__item {
+        margin-bottom: 20px;
+    }
+
+    .icon-watching {
+        padding-right: 20px;
+    }
 }
 
-.latest-post__tag p {
-    border-radius: 14px;
-    background-image: linear-gradient(to left, #f1af1f 0%, #f47b20 100%);
-    padding: 8px;
-    display: inline-block;
-    margin-top: 20px;
-    text-align: right;
+
+@media screen and (min-width: 768px){
+    .blog__item {
+        margin-bottom: 30px;
+    }
+
+    .icon-watching {
+        padding-right: 20px;
+    }
+}
+
+@media screen and (min-width: 425px){
+    .blog__item {
+        margin-bottom: 40px;
+    }
+
+    .icon-watching {
+        padding-right: 20px;
+    }
 }
 
 
 
 
+
+@media screen and (min-width: 1200px ){
+
+    .description-item p {
+        width: 100%
+    }
+
+    .tag-item p {
+        font-size: 18px;
+    }
+
+    .title-item h4 {
+        font-size: 30px;
+    }
+
+    .description-item p {
+        font-size: 20px;
+    }
+
+    .watching__post,
+    .time__post {
+        font-size: 18px;
+    }
+
+    .tag-item {
+        width: 12%;
+        height: 39px;
+        border-radius: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to left, #f1af1f 0%, #f47b20 100%);
+    }
+
+    .blog__post-data {
+        display: flex;
+    }
+
+    .blog__post-data .watching__post {
+        margin-right: 71px;
+    }
+
+
+
+    .blog__item {
+        cursor: pointer;
+        margin-bottom: 25px;
+    }
+
+    .latest__post-title h4 {
+        color: #000000;
+        font-family: 'MontBold', sans-serif;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .latest__post-content {
+        display: flex;
+    }
+
+    .icon__cube img {
+        width: 20px;
+        height: 20px;
+        display: block;
+    }
+
+    .latest-posts__titles {
+        display: flex;
+        padding-left: 35px;
+        padding-right: 35px;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .latest-post__tag p {
+        margin: 0;
+    }
+
+    .latest-post__data {
+        display: flex;
+    }
+
+    .latest-post {
+        background-image: url('./latest.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 299px;
+        cursor: pointer;
+        height: 199px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+
+    .latest-post__tag {
+        color: #ffffff;
+        font-family: 'MontBold', sans-serif;
+        font-size: 14px;
+        flex: 1;
+        font-weight: 700;
+    }
+
+    .latest-post__description p {
+        color: #ffffff;
+        margin: 0;
+        font-family: 'MontBold', sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+    }
+
+
+
+    .latest-post__data .watching__post {
+        margin-right: 31px;
+    }
+
+    .latest-post {
+        padding-left: 16px;
+        padding-right: 40px;
+    }
+
+    .latest-post__tag p {
+        border-radius: 14px;
+        background-image: linear-gradient(to left, #f1af1f 0%, #f47b20 100%);
+        padding: 8px;
+        display: inline-block;
+        margin-top: 20px;
+        text-align: right;
+    }
+
+}
 
