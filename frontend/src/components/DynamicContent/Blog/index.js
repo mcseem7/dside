@@ -3,11 +3,12 @@ import './index.css'
 import gridIcon from './grid-icon.svg'
 import { Link } from 'react-router-dom'
 import BlogItem from '../BlogItem'
+import withDsideApi from "../../../HOC/Fetch";
+import { withRouter } from 'react-router'
 
-
-export default class Blog extends Component {
-  constructor () {
-    super()
+class Blog extends Component {
+  constructor (props) {
+    super(props)
 
     this.state = {
       blogItem: []
@@ -16,6 +17,7 @@ export default class Blog extends Component {
 
   componentDidMount () {
       window.scrollTo(0, 0)
+
     const jsonBlogItem =
       {
         blogPost: [
@@ -64,7 +66,7 @@ export default class Blog extends Component {
           <div className="blog__post-items">
             {this.state.blogItem.map((item, key) => (<div className="blog__item">
               <div onClick={() => {
-                this.props.history.push(`/blog/${key}`)
+                this.props.history.push(`/${this.props.location.pathname.substr(1,2)}/blog/${key}`)
               }} className="blog__item-content">
                 <div className="tag-item">
                   <p>{item.tag}</p>
@@ -97,92 +99,94 @@ export default class Blog extends Component {
             }
           </div>
 
-          <div className="blog-post__latest-posts">
-            
-            <div className="latest-posts__titles">
-              <div className="latest__post-title">
-                <h4>Latest posts</h4>
-              </div>
-              <div className="icon-cube__wrapper">
-                <div className="icon__cube">
+          {/*<div className="blog-post__latest-posts">*/}
+            {/**/}
+            {/*<div className="latest-posts__titles">*/}
+              {/*<div className="latest__post-title">*/}
+                {/*<h4>Latest posts</h4>*/}
+              {/*</div>*/}
+              {/*<div className="icon-cube__wrapper">*/}
+                {/*<div className="icon__cube">*/}
 
-                </div>
-              </div>
-            </div>
+                {/*</div>*/}
+              {/*</div>*/}
+            {/*</div>*/}
 
-            <div className="latest__post-content">
-              {this.state.blogItem.map((item, key) => (<div className="latest-post">
+            {/*<div className="latest__post-content">*/}
+              {/*{this.state.blogItem.map((item, key) => (<div className="latest-post">*/}
 
-                <div className="latest-post__tag">
-                  <p>{item.tag}</p>
-                </div>
-                      <div>
-                <div className="latest-post__description">
-                  <p>{item.name}</p>
-                </div>
+                {/*<div className="latest-post__tag">*/}
+                  {/*<p>{item.tag}</p>*/}
+                {/*</div>*/}
+                      {/*<div>*/}
+                {/*<div className="latest-post__description">*/}
+                  {/*<p>{item.name}</p>*/}
+                {/*</div>*/}
 
-                <div className="latest-post__data">
-                  <div className="watching__post">
-                    <div className="icon-watching">
-                      <div className="icon__blog"><img
-                        src=""
-                        alt=""
-                      />
-                      </div>
-                      <p>{item.watching}</p>
-                    </div>
-                  </div>
-                  <div className="time__post">
-                    <div className="icon-timer">
-                      <div className="icon__blog"><img
-                        src=""
-                        alt=""
-                      />
-                      </div>
-                      <p>{item.watchingTime}</p>
+                {/*<div className="latest-post__data">*/}
+                  {/*<div className="watching__post">*/}
+                    {/*<div className="icon-watching">*/}
+                      {/*<div className="icon__blog"><img*/}
+                        {/*src=""*/}
+                        {/*alt=""*/}
+                      {/*/>*/}
+                      {/*</div>*/}
+                      {/*<p>{item.watching}</p>*/}
+                    {/*</div>*/}
+                  {/*</div>*/}
+                  {/*<div className="time__post">*/}
+                    {/*<div className="icon-timer">*/}
+                      {/*<div className="icon__blog"><img*/}
+                        {/*src=""*/}
+                        {/*alt=""*/}
+                      {/*/>*/}
+                      {/*</div>*/}
+                      {/*<p>{item.watchingTime}</p>*/}
 
-                    </div>
-                  </div>
-                </div>
-                      </div>
+                    {/*</div>*/}
+                  {/*</div>*/}
+                {/*</div>*/}
+                      {/*</div>*/}
 
-              </div>))
-              }
+              {/*</div>))*/}
+              {/*}*/}
 
-            </div>
-          </div>
+            {/*</div>*/}
+          {/*</div>*/}
 
-          <div className="post__incoming">
+          {/*<div className="post__incoming">*/}
 
-            <div className="post__incoming-content">
+            {/*<div className="post__incoming-content">*/}
 
-              <div className="post__incoming-right">
-                <div className="post__incoming-img">
-                  <img src="#" alt="" />
-                </div>
-              </div>
+              {/*<div className="post__incoming-right">*/}
+                {/*<div className="post__incoming-img">*/}
+                  {/*<img src="#" alt="" />*/}
+                {/*</div>*/}
+              {/*</div>*/}
 
-              <div className="post__incoming-left">
-                <div className="post__incoming-content">
-                  <div className="incoming__title">
-                    <h3>New posts</h3>
-                  </div>
-                  <div className="incoming__description">
-                    <p>Are coming soon</p>
-                  </div>
+              {/*<div className="post__incoming-left">*/}
+                {/*<div className="post__incoming-content">*/}
+                  {/*<div className="incoming__title">*/}
+                    {/*<h3>New posts</h3>*/}
+                  {/*</div>*/}
+                  {/*<div className="incoming__description">*/}
+                    {/*<p>Are coming soon</p>*/}
+                  {/*</div>*/}
 
-                  <div className="incoming__button">
-                    <button>Suggest a topic</button>
-                  </div>
-                </div>
-              </div>
+                  {/*<div className="incoming__button">*/}
+                    {/*<button>Suggest a topic</button>*/}
+                  {/*</div>*/}
+                {/*</div>*/}
+              {/*</div>*/}
 
-            </div>
-          </div>
+            {/*</div>*/}
+          {/*</div>*/}
 
         </div>
       </section>
-
     )
   }
 }
+
+
+export default Blog

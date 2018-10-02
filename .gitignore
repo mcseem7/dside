@@ -6,7 +6,8 @@
 /frontend/build
 /frontend/node_modules
 /venv
-
+/frontend/server-build
+/frontend/dist
 # testing
 /coverage
 

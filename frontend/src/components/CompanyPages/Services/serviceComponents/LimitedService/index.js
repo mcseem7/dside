@@ -1,11 +1,27 @@
 import React, {Component, Fragment} from 'react'
 import './index.css'
+import LimitData from './LimitData'
+import "babel-polyfill"
+import OrderButton from "../OrderButton";
 
 
 export default class LimitedService extends Component {
   constructor() {
     super()
 
+
+      this.state = {
+        offer: []
+      }
+
+
+  }
+
+
+  async componentDidMount() {
+     let response = await  fetch('http://mydside.com/api/en/home/getLimitedOffers/')
+     let limitOfer = await response.json()
+     this.setState({offer: limitOfer})
   }
 
 
@@ -14,48 +30,27 @@ export default class LimitedService extends Component {
   render() {
     return(
         <Fragment>
-          <section className="limited__service">
+            {this.state.offer.map(((item) => {
+          return (<section className="limited__service">
 
-            <div className="limited__service-container">
+            <div style={{backgroundImage: `url(http://mydside.com${item.background})` }} className="limited__service-container">
 
               <div className="limited__service_form-data">
 
                 <div className="limit__offer-title">
-                  <h3>Limited offer</h3>
+                  <h3>{item.title}</h3>
                 </div>
 
 
                 <div className="discount__offer-title">
-                  <h2>Play with us for discount!</h2>
+                  <h2>{item.description}</h2>
                 </div>
 
 
                 <div className="form__order__container">
 
-                  <div className="timer__back-order">
 
-                    <div className="timer-days__order">
-                      <p id="time">21</p>
-                      <p className="title__timer">days</p>
-                    </div>
-
-                    <div className="timer-hours__order">
-                      <p id="time">20</p>
-                      <p className="title__timer">hours</p>
-                    </div>
-
-                    <div className="timer-minutes__order">
-                      <p id="time">53</p>
-                      <p className="title__timer">minutes</p>
-                    </div>
-
-                    <div className="timer-seconds__order">
-                      <p id="time">11</p>
-                      <p className="title__timer">seconds</p>
-                    </div>
-
-
-                  </div>
+                         <LimitData limitData={item}/>
 
                 </div>
 
@@ -66,7 +61,9 @@ export default class LimitedService extends Component {
 
             </div>
 
-          </section>
+          </section> )
+            }))
+            }
         </Fragment>
     )
   }

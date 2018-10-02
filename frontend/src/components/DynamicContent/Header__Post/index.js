@@ -13,22 +13,39 @@ import About from './../Main/About__block/index'
 import withDsideApi from './../../../HOC/Fetch'
 import PortolioPost from './Portfolio__Post'
 
+import {LangContextConsumer} from "../Main";
+
+
+
  class HeaderPost extends Component {
   constructor (props) {
     super(props)
 
+      this.state = {
+          lang: ''
+      }
   }
 
 
+     componentDidMount() {
+         this.setState({lang: localStorage.getItem('lang')})
+     }
+
+
+
+
   render () {
-    console.log(this.props)
+
+
     return (
+
+
         <div>
       <section className="portfolio__posts">
         <div className="relative__content">
 
           <div className="content__posts">
-                <PortolioPost {...this.props} />
+              {this.props.loading ?  <PortolioPost lang={this.state.lang} {...this.props} /> :  null}
           </div>
 
 
@@ -54,7 +71,7 @@ import PortolioPost from './Portfolio__Post'
               </div>
             </div>
 
-          <About/>
+          <About  />
 
 
 
@@ -62,8 +79,9 @@ import PortolioPost from './Portfolio__Post'
 
 
         </div>
+
     )
   }
 }
 
-export default withDsideApi(HeaderPost, '/portfolio/getHomePortfolioItems/', '/en')
+export default withDsideApi(HeaderPost, `/portfolio/getHomePortfolioItems/`)

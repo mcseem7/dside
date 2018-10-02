@@ -5,18 +5,34 @@ import Palm from '../../../sources/images/works__logo/palm.svg'
 import Wallet from '../../../sources/images/works__logo/wallet.svg'
 import './index.css'
 import {Link} from 'react-router-dom'
+import Translate from 'translate-components'
+import { reactTranslateChangeLanguage } from 'translate-components'
+
 
 export default class About extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
+
+      this.state = {
+        lang: ''
+      }
+
+
   }
 
-  render () {
+
+  componentDidMount() {
+      this.setState({lang: localStorage.getItem('lang') })
+  }
+
+
+    render () {
+
     return (
       <div className="container__about-content">
 
         <div className="question__wrapper">
-          <p className="question">What?</p>
+            <p className="question"><Translate>What?</Translate></p>
         </div>
 
         <div className="about__company-content">
@@ -25,21 +41,25 @@ export default class About extends Component {
             <p className="company__content">
               <div className="logotype">
                 <img src={Logotype} alt="" />
-              </div> is a value driven, focused and very ambitious digital agency based in Warsaw,<br />
-              providing the best and innovative solutions for your business.
+              </div> <Translate>is a value driven, focused and very ambitious digital agency based in Warsaw,
+                providing the best and innovative solutions for your business.</Translate>
             </p>
           </div>
 
           <div className="more__about-button">
-            <Link to="/aboutus">
+
+            <Link to={`/${this.state.lang}/aboutus`} >
             <button className="more__about shining-underline">
-                  More about us
+               More about us
               <span></span>
             </button>
             </Link>
           </div>
         </div>
-        <div className="advantages"><span><img src={Shiny} alt="" />Brightly.</span><span> <img src={Palm} alt="" />Easy.</span> <span><img src={Wallet} alt="" />Profitable.</span></div>
+          <div className="advantages"><span><
+              img src={Shiny} alt="" /><Translate>Brightly.</Translate></span>
+              <span> <img src={Palm} alt="" /><Translate>Easy.</Translate></span> <span>
+                  <img src={Wallet} alt="" /><Translate>Profitable.</Translate></span></div>
       </div>
     )
   }

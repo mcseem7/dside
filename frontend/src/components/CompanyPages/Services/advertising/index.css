@@ -1,0 +1,310 @@
+.logo__service-text_website {
+    background-image: linear-gradient(to right, #743c18 60%, #1E1007 100%);
+    opacity: 0.3;
+    font-family: 'MontBold', sans-serif;
+    font-size: 161px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    margin-top: 65px;
+    text-align: right;
+    text-transform: uppercase;
+    position: relative;
+}
+.bolder{font-family: 'MontBold',sans-serif; text-transform: uppercase;}
+.al__time-wrapper{margin: 0 !important; padding: 0 3rem;}
+.al__time-wrapper h3 {
+    color: #ffffff;
+    margin: 0;
+    font-family: 'MontBold', sans-serif;
+    font-size: 2.1rem !important;
+    font-weight: 700;
+    line-height: 3rem !important;
+}
+.container__case-studies {
+    padding: 4rem 3rem 1rem 3rem !important;}
+.case-description, .case-title{margin-left: 0 !important;}
+.al__time-section{padding-top: 3rem !important; padding-bottom: 3rem !important;}
+.contendby_ads{    margin-top: -25%;}
+.superb{font-family: 'MontBold',sans-serif; text-transform: uppercase; font-size: .8rem;}
+.developers__quality{display: flex; flex-direction: column;}
+.advantages{    justify-content: center;}
+.developer__left-content{font-family: 'MontLight',sans-serif; padding: 0 3rem; line-height: 1.6rem; font-size:1.2rem;}
+.advantages span {
+    text-align: center;
+    flex-basis: 25%;
+}
+
+.logo__service-img-ads {
+    position: absolute;
+    width: 200%;
+    z-index: 1;
+    left: -50%;
+    top: 4rem;
+}
+
+
+
+.slogan-wrapper{margin: 0 auto;}
+
+.logo__service-img_website-ads img{max-width: 100%;
+    height: auto;
+    position: relative;
+}
+.logo__service-img_website-ads {
+     width: 100%;
+    height: auto;
+    z-index: 1;
+    position: relative;
+    margin: 0 auto;
+        left: 0;
+}
+
+.developers__quality-wrapper {
+    background: #ffffff;
+}
+
+
+.contentby__vova h3  {
+    font-family: 'MontBold', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.87px;
+    margin-bottom: 7px;
+}
+
+.contentby__vova p {
+    font-family: 'MontLight', sans-serif;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.name__developer {
+    font-family: 'MontBold', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.position__developer {
+    font-family: 'MontLight', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+
+.developers__quality {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.titles__developer {
+    text-align: right;
+    margin-top: 40px;
+}
+
+.discover__button {
+    text-align: center;
+    margin-top: 60px;
+    width: 295px;
+    height: 42px;
+    border-radius: 21px;
+    border: 2px solid #d79888;
+    background-image: linear-gradient(to right, #d79888 0%, #b2725e 100%);
+    color: #000000;
+    font-family: 'MontBold', sans-serif;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    line-height: 2;
+    text-align: center;
+}
+
+
+.versus__section {
+    margin-top: -4px;
+}
+
+.versus__section-wrapper   {
+    background: url('backgroundVersus.png');
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 77%;
+}
+
+.content__section-versus {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.versus__title {
+    color: #ffffff;
+    font-family: 'MontBold', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    line-height: 31.87px;
+    text-transform: uppercase;
+}
+
+
+.versus__text {
+    color: #ffffff;
+    font-family: 'MontLight', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 31.87px;
+    width: 550px;
+    text-align: center;
+}
+
+.versus__text span {
+    font-weight: 700;
+    font-family: 'MontBold', sans-serif;
+}
+
+
+.versus__section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+
+
+.content__people-versus {
+    background: #F2F3F4;
+    width: 100%;
+}
+
+.about__people-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px;
+    display: flex;
+    padding-bottom: 100px;
+}
+
+
+.baker__titles h3 {
+    background-image: linear-gradient(to right, #d79888 0%, #b2725e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #242424;
+    font-family: 'MontBold', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.87px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.baker__titles p {
+    color: #101010;
+    font-family: 'MontLight', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    font-weight: 300;
+    line-height: 31.87px;
+    text-transform: uppercase;
+}
+
+.baker__titles {
+    margin-left: 20px;
+}
+
+.about__bakers-title {
+    display: flex;
+    align-items: center;
+}
+
+.features__bakers li {
+    color: #101010;
+    font-family: 'MontLight', sans-serif;
+    font-size: 14px;
+    width: 200px;
+    font-weight: 300;
+    margin: 20px;
+    line-height: 20.87px;
+}
+
+.about__andrew-baker {
+    flex: 0.8 1;
+}
+
+
+.al__time-section {
+    background: url('./images/background__time.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 180px;
+    padding-bottom: 225px;
+    background-size: cover;
+}
+
+
+.al__time-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.al__time-wrapper p {
+    color: #ffffff;
+    font-family: 'MontLight', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 51px;
+    max-width: 670px;
+    line-height: 20.87px;
+}
+
+.al__time-wrapper h3 {
+    color: #ffffff;
+    margin: 0;
+    font-family: 'MontBold', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 20.87px;
+}
+
+
+.dside_textContainer-advertising .logo__service_slogan{
+    font-size: 2.3rem;
+    top: 100px;
+    width: 80% !important;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.666);
+}
+
+/* Tablets */
+@media only screen and (min-width: 480px) {
+       .logo__service-img img {
+    max-width: 100%;
+    height: auto;
+    left: 0 !important;
+    position: relative;
+}
+    .logo__service-img-ads {
+    width: 150%;
+    left: -25%;
+    top: 2rem;
+}
+    .contentby__ads{width: 68%;
+    text-align: center;
+    margin: 0 auto;
+}
+}
+
+/* Full */
+@media only screen and (min-width: 1024px) {
+.dside_textContainer-advertising .logo__service_slogan{top: 200px;}
+.developers__quality{padding-bottom: 2rem;}
+.al__time-wrapper{margin: 0 auto !important;}
+}

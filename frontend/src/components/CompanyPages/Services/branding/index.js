@@ -7,9 +7,9 @@ import Footer from '../../../Basic/Footer'
 import './index.css'
 import louis from './lois_viton.png'
 import arrow from './arrow.png'
-import YoutubeBackground from 'react-youtube-background'
+
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
-import withScrollReveal from 'react-scrollreveal';
+
 import WheelReact from 'wheel-react';
 import louisbag from './louisbag.png'
 import shadow from './shadow.png'
@@ -25,6 +25,10 @@ import fadeBag from './brandImg/Layer_108.png'
 import WeCare from "../../../Basic/TrustBlocks/WeCare";
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
 import Own from "../../../Basic/TrustBlocks/Own";
+import logoHeader from "../logos/logo__header-service.png";
+import PortolioPost from "../../../DynamicContent/Header__Post/Portfolio__Post";
+import withDsideApi from "../../../../HOC/Fetch";
+import { HeroVideo } from "react-hero-video";
 
 class BrandPage extends Component {
     constructor() {
@@ -35,7 +39,7 @@ class BrandPage extends Component {
             findActive: false,
             louisbag: false,
             modalActive: false,
-            textlouisbag: false
+            textlouisbag: false,
         }
 
         WheelReact.config({
@@ -80,20 +84,27 @@ class BrandPage extends Component {
                 this.setState({louisbagtext: false})
             }
         })
+      const idVideo = 'uaGotppPsCs'
         return (
             <div>
-                <YoutubeBackground videoId="eJ8SOYUkWl0">
-                    <HeaderService
-                        stylelogotext={'logo__service-text_brand'}
-                        logoHeader={LogoBrand}
-                        textHeader={[<p> Branding</p>, <p>That takes</p>, <p> Business</p>, <p>Further</p>]}
-                        imgLogoPosition={'logo__service-img_brand'}
-                        textContainer={'dside_textContainer-brand'}
-                        serviceSlogan={'DSIDE to make your brand work BETTER'}
-                        serviceCategory={'Branding'}
-                    />
-                </YoutubeBackground>
+                <div className='video-wrap'>
+                  <HeroVideo
+                    videoSrc={`https://www.youtube.com/embed/${idVideo}?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1&fs=1`}
+                  ></HeroVideo>
+                    <div id="vidtop-content">
+                        <HeaderService
+                            stylelogotext={'logo__service-text_brand'}
+                            logoHeader={LogoBrand}
+                            textHeader={[<p> Branding</p>, <p>That takes</p>, <p> Business</p>, <p>Further</p>]}
+                            imgLogoPosition={'logo__service-img_brand'}
+                            textContainer={'dside_textContainer-brand'}
+                            serviceSlogan={'DSIDE to make your brand work BETTER'}
+                            serviceCategory={'Branding'}
+                        />
 
+                    </div>
+                </div>
+              <div className='branding__service-wrapper'>
                 {
                     <div
                         className="branding__service-case_studies "
@@ -151,11 +162,11 @@ class BrandPage extends Component {
 
                                 {this.state.louisbagtext ?
                                     <Fragment>
-                                        <span className="price__louis" style={{color: '#21201f'}}>$ </span>
-                                        <h1 className={`price__louis louis_bag-text animate__louis ${'price_animate'}`}> 2000</h1>
+
+                                        <h1 className={`price__louis louis_bag-text animate__louis ${'price_animate'}`}> <span className="price__louis" style={{color: '#21201f'}}>$ </span>2000</h1>
                                     </Fragment>
                                     :
-                                    <h1 className={`price__louis sample_bag-text animate__louis ${'price_animate_end'}`}>{'100 $'}</h1>
+                                    <h1 className={`price__louis sample_bag-text animate__louis ${'price_animate_end'}`}><span style={{color: '#21201f'}}>$ </span>{'100'}</h1>
                                 }
 
                             </div>
@@ -184,6 +195,7 @@ class BrandPage extends Component {
                         </div>
                     </div>
                 }
+              </div>
 
                 <div className={`find__out-branding ${this.state.findActive ? 'findBrand' : ''}`}>
 
@@ -309,7 +321,7 @@ class BrandPage extends Component {
 
                 </div>
 
-
+              <div id='case__wrapper' style={{background: '#fff'}}>
                 {/*<CaseService/>*/}
                 <div className="container__case-studies">
                     <div className="case-title">
@@ -324,27 +336,18 @@ class BrandPage extends Component {
                     </div>
                 </div>
                 <div className="case__service">
-                    <HeaderPost/>
+                    <PortolioPost {...this.props} />
                 </div>
+              </div>
                 <WeCare name="brandes"/>
                 <Advantages/>
                 <Own/>
                 <LimitedService/>
-                <Footer/>
+
                 {this.state.modalActive ? <Poppup onClose={this.changePoppup}/> : null}
             </div>
         )
     }
 }
 
-export default withScrollReveal([
-
-    {
-        selector: '.sr-item',
-        options: {
-            reset: true,
-            delay: 400
-        },
-        interval: 100
-    }
-])(BrandPage)
+export default withDsideApi(BrandPage, '/portfolio/getPortfolioItems/Branding/')

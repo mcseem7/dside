@@ -13,6 +13,9 @@ import nau from '../../../sources/images/works__logo/nau.svg'
 import diet from '../../../sources/images/works__logo/uda.svg'
 import apply from '../../../sources/images/works__logo/applu.svg'
 import Poppup from '../../../../HOC/Poppup/index';
+import Translate from 'translate-components'
+import { reactTranslateChangeLanguage } from 'translate-components'
+
 
 class Brand extends Component {
   constructor (props) {
@@ -38,6 +41,7 @@ export default class Works extends Component {
     }
   }
 
+
   changePoppup = () => {
     this.setState({modalActive: !this.state.modalActive}, () => {
       console.log(this.state.modalActive)
@@ -50,7 +54,7 @@ export default class Works extends Component {
         <div className="brands__company">
           <div className="brand__content">
             <div className="title__brand">
-              <h3 className="title"> We work with brands we believe in.</h3>
+                <h3 className="title"><Translate>We work with brands we believe in.</Translate></h3>
             </div>
 
             <div className="content__brands">

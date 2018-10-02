@@ -8,36 +8,43 @@ import Versus from './images/Layer 123.png'
 import BakerAndrew from './images/baker__andrew.svg'
 import Footer from '../../../Basic/Footer'
 import './index.css'
-import YoutubeBackground from 'react-youtube-background'
+
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
 import WeCare from "../../../Basic/TrustBlocks/WeCare";
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
+import PortolioPost from "../../../DynamicContent/Header__Post/Portfolio__Post";
+import withDsideApi from "../../../../HOC/Fetch";
+import { HeroVideo } from "react-hero-video";
 
 
-export default class Website extends Component {
+ class Website extends Component {
   constructor () {
     super()
   }
-  componentDidMount() {
-    window.scrollTo(0,0)
-  }
 
   render () {
+    const idVideo = 'uaGotppPsCs'
     return (
       <Fragment>
         <div>
-          <YoutubeBackground
-          >
-          <HeaderService
-              logoHeader={LogoBrand}
-              stylelogotext={'logo__service-text_website'}
-              serviceSlogan={'DSIDE to make your website DO'}
-              imgLogoPosition={'logo__service-img_website'}
-              textContainer={'dside_textContainer-website'}
-              textHeader={[<p>Webstes</p>, <p>That sell</p>, <p>your</p>, <p>goods</p>]}
-          />
-          </YoutubeBackground>
-          <section className="developers__quality">
+
+            <div style={{overflow: 'hidden'}} className='video-wrap'>
+              <HeroVideo
+                videoSrc={`https://www.youtube.com/embed/${idVideo}?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1&fs=1`}
+              ></HeroVideo>
+                <div id="vidtop-content">
+                    <HeaderService
+                        logoHeader={LogoBrand}
+                        stylelogotext={'logo__service-text_website'}
+                        serviceSlogan={'DSIDE to make your website DO'}
+                        imgLogoPosition={'logo__service-img_website'}
+                        textContainer={'dside_textContainer-website'}
+                        textHeader={[<p></p>]}
+                    />
+                </div>
+            </div>
+          <div className='websites__quality-wraoper'>
+          <section className="developers__quality" id='website__developer'>
 
             <div className="developer__left-content">
 
@@ -71,7 +78,7 @@ export default class Website extends Component {
 
 
           </section>
-
+          </div>
 
 
           <section className="versus__section">
@@ -119,7 +126,7 @@ export default class Website extends Component {
 
                   <div className="baker__titles">
                     <h3>andrew</h3>
-                    <p>24 YO Baker</p>
+                    <p>24 Y.O Baker</p>
                   </div>
                 </div>
 
@@ -202,15 +209,32 @@ export default class Website extends Component {
             </div>
           </section>
         </div>
-        {/*<CaseService/>*/}
-        <div className="case__service">
-          <HeaderPost/>
+
+        <div id='case__wrapper' style={{background: '#fff'}}>
+        <div className="container__case-studies">
+          <div className="case-title">
+            <h3>Case Studies</h3>
+          </div>
+          <div className="case-description">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+              voluptatem.</p>
+          </div>
         </div>
+        <div className="case__service">
+          <PortolioPost {...this.props} />
+        </div>
+        </div>
+
         <WeCare name="websites"/>
         <Advantages/>
-        <LimitedService/>
-        <Footer/>
+
       </Fragment>
     )
   }
 }
+
+
+export default withDsideApi(Website, '/portfolio/getPortfolioItems/Websites/')

@@ -8,8 +8,8 @@ import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from '
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import {Link} from "react-router-dom";
 
-import arrowImg from './arrowImg.png'
-
+import arrowImg from './arrow.svg'
+import fetch from 'isomorphic-fetch'
 
 
 export default class PortfolioItem extends Component {
@@ -26,6 +26,8 @@ export default class PortfolioItem extends Component {
         similarItems: []
     }
 
+
+
   }
 
 
@@ -35,22 +37,17 @@ export default class PortfolioItem extends Component {
 
 
  componentDidMount() {
-     return fetch(`http://mydside.com/api/en/portfolio/getPortfolioItemDetails/${this.props.match.params.portfolioitem}/`).then((response) => {
+     return fetch(`http://mydside.com/api/${localStorage.getItem('lang')}/portfolio/getPortfolioItemDetails/${this.props.match.params.portfolioitem}/`).then((response) => {
          return response.json()
      }).then((item) => {
          this.setState({itemPortfolio: item}, () => {
            for(let key in this.state.itemPortfolio.blocks ) {
-             console.log(this.state.itemPortfolio.blocks)
             this.setState({blocksImg: this.state.itemPortfolio.blocks})
            }
-
             for(let key in this.state.itemPortfolio.attachment ) {
                  this.setState({attachImg: this.state.itemPortfolio.attachment[key].content})
              }
-
-
                  this.setState({similarItems: this.state.itemPortfolio.similar_items})
-
          })
      })
 
@@ -64,16 +61,18 @@ export default class PortfolioItem extends Component {
 
         <div className="portfolio__header_item-wrapper" style={{backgroundImage: `url(http://mydside.com/${this.state.itemPortfolio.main_image})`}}>
           <div className="header__portfolio-content">
+          <div className="header__portfolio-content-wrapper">
             {/* <div className="project__picture"> */}
             {/* <img src="#" alt=""/> */}
             {/* </div> */}
             <div className="project__titles">
               <div className="portfolio__title-content">
                 <div className="portfolio__name__content">
-                  <div className="project__logo">
+              <div className="superwrapper">
+                  <div className="project__names">
+              <div className="project__logo">
                     <img src={`http://mydside.com/${this.state.itemPortfolio.logotype}`} alt="" />
                   </div>
-                  <div className="project__names">
                     <div className="category__project">
                       <p>websites</p>
                     </div>
@@ -85,18 +84,16 @@ export default class PortfolioItem extends Component {
                       {/*<p>{this.state.itemPortfolio.name}</p>*/}
                     {/*</div>*/}
                   </div>
-                </div>
-
-                <div className="portfolio__description__content">
+          <div className="portfolio__description__content">
                   <div className="project_description__content">
-                    <p className="name__description">Short project
-                        description: <br />
-                    </p>
-                    <p className="description__project">
-                      {this.state.itemPortfolio.description}
+                    <p className="description__project" dangerouslySetInnerHTML={{__html: this.state.itemPortfolio.description}}>
+                      {/*{this.state.itemPortfolio.description}*/}
                     </p>
                   </div>
                 </div>
+                </div>
+
+
 
                 <div className="portfolio__datatime__content">
                   <div className="portfolio__post-data">
@@ -110,12 +107,13 @@ export default class PortfolioItem extends Component {
                     <div className="time__post">
                       <div className="icon-timer">
                         <div className="icon__blog" />
-                        <p>{this.state.itemPortfolio.watching_time} <span>minutes</span></p>
+                        <p><span>Developed in: </span> {this.state.itemPortfolio.watching_time} <span>days</span></p>
                       </div>
                     </div>
                   </div>
+                 </div>
                 </div>
-
+                </div>
               </div>
             </div>
           </div>
@@ -130,8 +128,8 @@ export default class PortfolioItem extends Component {
         </div>
 
 
-          <div className="project__task_portfolio">
-            <p> {this.state.itemPortfolio.task}
+          <div className="project__task_portfolio" >
+            <p dangerouslySetInnerHTML={{__html: this.state.itemPortfolio.task }}>
             </p>
           </div>
 
@@ -159,7 +157,7 @@ export default class PortfolioItem extends Component {
 
 
           <div className="project__task_portfolio">
-            <p>{this.state.itemPortfolio.decision}
+            <p dangerouslySetInnerHTML={{__html: this.state.itemPortfolio.decision}}>
             </p>
           </div>
 
@@ -220,7 +218,7 @@ export default class PortfolioItem extends Component {
                 <figcaption>
                     <h2>{item.name}</h2>
                     {
-                        <Link to={`/portfolio/${item.CURL}`}>Explore project</Link>
+                        <Link to={`/${localStorage.getItem('lang')}/portfolio/${item.CURL}`}>Explore project</Link>
 
                     }
                 </figcaption>
@@ -260,6 +258,7 @@ export default class PortfolioItem extends Component {
 
 
       </div>
+
       </div>
 
     )

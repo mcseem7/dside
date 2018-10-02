@@ -12,12 +12,61 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100%;
+
     -webkit-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
     -moz-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
     -o-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
     transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
     will-change: opacity;
 }
+
+
+.video-background {
+overflow: hidden;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -99;
+}
+.video-foreground iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 600px;
+    pointer-events: none;
+}
+#vidtop-content {
+    top: 0;
+    color: #fff;
+}
+
+.website__developer {
+    flex-direction: row;
+}
+
+.video-wrap div div:nth-child(2) {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.vid-info { position: absolute; top: 0; right: 0; width: 33%;  padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+
+@media (min-aspect-ratio: 16/9) {
+    .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+    .video-foreground { width: 300%; left: -100%; }
+}
+
+@media all and (max-width: 600px) {
+    .vid-info { width: 50%; padding: .5rem; }
+    .vid-info h1 { margin-bottom: .2rem; }
+}
+@media all and (max-width: 500px) {
+    .vid-info .acronym { display: none; }
+}
+
+
 
 .service__icon-instagram:hover::before,
 .service__icon-behance:hover::before{
@@ -42,13 +91,13 @@
 .service__icon-instagram {
     width: 20px;
     height: 20px;
-    top: 37px;
+    top: 10px;
     position: absolute;
 }
 .service__icon-behance {
     width: 14px;
     height: 14px;
-    top: 40px;
+    top: 13px;
     position: absolute;
 }
 .service__icon-instagram::before {
@@ -73,11 +122,11 @@
 
 
 .heading__service {
-    background: url("background-service.png");
+    /*background: url("background-service.png");*/
     height: 650px;
     background-size: cover;
     margin-bottom: 100px;
-    padding-top: 30px;
+    /*padding-top: 30px;*/
     position: relative;
 }
 
@@ -122,12 +171,6 @@
 
 
 
-.logo__service-img {
-    position: absolute;
-    top: 281px;
-    left: -95px;
-    width: 950px;
-}
 
 .logo__service-img img{
  max-width: 100%;
@@ -185,7 +228,7 @@
     background-size: cover;
     z-index: 5;
     bottom: -100px;
-    height: 85px;
+    height: 130px;
 }
 
 .dside__header-text_container {
@@ -212,8 +255,11 @@
 
 .order__wrap {
     display: flex;
+    position: absolute !important;
+    top: 400px;
+    margin-top: 0px !important;
+    align-self: center;
     justify-content: center;
-    margin-top: -180px;
 }
 
 .header__navigation > .logotype__company {
@@ -362,4 +408,22 @@ box-shadow: 0px 0px 22px -1px rgba(176,255,102,0.7);
 
 .grid__service-img {
     cursor: pointer;
+}
+
+.head_container_with-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.logo__service_slogan {
+    margin: 0 auto;
+    width: 650px !important;
+}
+
+.logo__service_slogan {
+    z-index: 3;
+    position: relative !important;
+    font-family: 'MontBold',sans-serif;
 }

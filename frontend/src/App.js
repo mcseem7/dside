@@ -12,109 +12,193 @@ import Website from './components/CompanyPages/Services/websites'
 import {CSSTransition,TransitionGroup} from 'react-transition-group'
 import Cookies from 'js-cookie'
 import Header from './components/Basic/Header/index';
-import Helmet from "react-helmet";
+
+import loadable from 'loadable-components';
+import 'regenerator-runtime/runtime';
+import LanguagePoppup from "./HOC/ChangeLanguage/ChangePup";
+import NotFound from "./components/Basic/NotFound";
+import Blog from './components/DynamicContent/Blog'
+import BlogItem from './components/DynamicContent/BlogItem'
+import PortfolioItem from './components/DynamicContent/PortfolioItem'
+import Portfolio from './components/DynamicContent/Portfolio'
+import AboutUs from './components/DynamicContent/About'
+import Main from "./components/DynamicContent/Main";
+import Advertising from "./components/CompanyPages/Services/advertising";
+import Automation from "./components/CompanyPages/Services/automation";
+import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
+import translations from './translations.json'
+
 
 class App extends Component {
 
-  constructor() {
-    super()
+    constructor() {
+        super()
 
-    this.state = {
-        cook: true
-    }
-  }
-
-  componentDidMount() {
-    if (Cookies.get('accept-cookie') == undefined) {
-      this.setState({cook: true})
-    } else {
-      this.setState({cook: false})
-    }
-    window.scrollTo(0,0)
-  }
-
-  confirmCookies = () => {
-    this.setState({cook: false})
-    Cookies.set('accept-cookie', true, { expires: 365 });
-  }
-
-  render () {
-
-    return (
-      <div className="App">
-          <Helmet
-              htmlAttributes={{lang: "en"}}
-              title="Dside Branding Agency"
-              titleTemplate="dside.pl - %s"
-              defaultTitle="Dside Branding Agency"
-              titleAttributes={{itemprop: "name", lang: "en"}}
-              meta={[
-                  {name: "charset-8", content: "Dside Branding Agency"},
-                  {name: "description", content: "Dside Branding Agency"},
-                  {name: "viewport", content: "width=device-width"},
-                  {property: "og:type", content: "article"}
-              ]}
-              link={[
-                  {rel: "canonical", href: "http://mydside.com"},
-                  {rel: "apple-touch-icon", href: "http://mydside.com/img/apple-touch-icon-57x57.png"},
-                  {rel: "apple-touch-icon", sizes: "72x72", href: "http://mydside.com/img/apple-touch-icon-72x72.png"}
-              ]}
-
-              script={[
-                  {src: "http://include.com/pathtojs.js", type: "text/javascript"},
-                  {type: "application/ld+json", innerHTML: `{ "@context": "http://schema.org" }`}
-              ]}
-              noscript={[
-                  {innerHTML: `<link rel="stylesheet" type="text/css" href="foo.css" />`}
-              ]}
-              style={[
-                  {type: "text/css", cssText: "p {font-size: 12px;}"}
-              ]}
-
-          />
-
-        <Route render={(props) => {
-
-
-          return(
-
-              <TransitionGroup>
-                {props.location.pathname.match(/services\//gi) ?  <Header style={'none'}/>  : <Header style={'block'}/> }
-            <CSSTransition key={props.location.key} timeout={300} classNames="fade">
-              <Switch>
-                <Route exact path="/services/logo" component={LogoPage}/>
-                <Route exact path="/services/brand" component={BrandPage}/>
-                <Route exact path="/services/videos" component={VideoPage}/>
-                <Route exact path="/services/website" component={Website}/>
-                <Route exact path="/contactus" component={ContactUs}/>
-                <Route path="/" component={MainPages}/>
-              </Switch>
-            </CSSTransition>
-          </TransitionGroup>)
-        }} />
-        {this.state.cook ?
-          <div className="cookies-container">
-
-            <div className="privacy__warning">
-              <p className="cook__description">
-                Мы используем куки-файлы, чтобы улучшить ваше восприятие нашего
-                сайта.
-                Вы можете увидеть, какие куки-файлы сохранены на вашем
-                устройстве с помощью настроек куки.
-                Просматривая наш сайт, вы соглашаетесь с использованием нами
-                куки-файлов.
-              </p>
-
-              <div className="cook__button">
-                <p onClick={this.confirmCookies}>Я согласен</p>
-              </div>
-
-            </div>
-          </div> : null
+        this.state = {
+            cook: true,
+            langPoppup: false
         }
-      </div>
-    )
-  }
+
+    }
+
+    componentWillMount() {
+        const getIdentityDomen = this.props.domen
+        if(!getIdentityDomen || getIdentityDomen == '') {
+            this.setState({langPoppup: false})
+        }
+    }
+
+    componentDidMount() {
+        if (Cookies.get('accept-cookie') == undefined) {
+            this.setState({cook: true})
+        } else {
+            this.setState({cook: false})
+        }
+        window.scrollTo(0,0)
+      reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
+
+    }
+
+    confirmCookies = () => {
+        this.setState({cook: false})
+        Cookies.set('accept-cookie', true, { expires: 365 });
+    }
+
+    render () {
+        // const itemLang = localStorage.setItem('lang', this.props.domen)
+        function findWord(word, str) {
+            return str.split(' ').some(function(w){return w === word})
+        }
+        return (
+            <TranslateProvider translations={translations} defaultLanguage={'en'}>
+                <div className="App">
+                    <Route exact path="/" render={(props) => (<Redirect to={`/en`}    />)} />
+                    <Route  path={'/:language'} render={(props) => {
+
+                        return(
+                            <TransitionGroup>
+
+                                {props.location.pathname.match(/services\//gi) ?  <Header domenErty={props.match.params.language} style={'none'}/>  : <Header  domenErty={props.match.params.language} style={'block'}/> }
+
+                                <CSSTransition key={props.location.key} timeout={1000} classNames="fade">
+
+                                    <Switch>
+
+                                        <Route exact path={`/${'en'}`}  render={(props) => {
+                                            return <Main {...props}/>
+                                        }}  />
+                                        <Route exact path={`/${'pl'}`}  render={(props) => {
+                                            return <Main {...props}/>
+                                        }}  />
+                                        <Route exact path={`/${'cz'}`}  render={(props) => {
+                                            return <Main {...props}/>
+                                        }}  />
+                                        <Route exact path={`/${'ru'}`}  render={(props) => {
+                                            return <Main {...props}/>
+                                        }}  />
+
+
+                                        <Route exact path={`/${'en'}/services/logo`}  component={LogoPage}/>
+                                        <Route exact path={`/${'pl'}/services/logo`}  component={LogoPage}/>
+                                        <Route exact path={`/${'ru'}/services/logo`}  component={LogoPage}/>
+                                        <Route exact path={`/${'cz'}/services/logo`}  component={LogoPage}/>
+
+                                        <Route exact path={`/${'en'}/services/videos`} component={VideoPage}/>
+                                        <Route exact path={`/${'pl'}/services/videos`} component={VideoPage}/>
+                                        <Route exact path={`/${'ru'}/services/videos`} component={VideoPage}/>
+                                        <Route exact path={`/${'cz'}/services/videos`} component={VideoPage}/>
+
+
+                                        <Route exact path={`/${'en'}/services/website`} component={Website}/>
+                                        <Route exact path={`/${'pl'}/services/website`} component={Website}/>
+                                        <Route exact path={`/${'ru'}/services/website`} component={Website}/>
+                                        <Route exact path={`/${'cz'}/services/website`} component={Website}/>
+
+                                        <Route exact path={`/${'en'}/services/brand`}  component={BrandPage}/>
+                                        <Route exact path={`/${'ru'}/services/brand`}  component={BrandPage}/>
+                                        <Route exact path={`/${'cz'}/services/brand`}  component={BrandPage}/>
+                                        <Route exact path={`/${'pl'}/services/brand`}  component={BrandPage}/>
+
+
+                                        <Route exact path={`/${'en'}/services/advertising`}  component={Advertising}/>
+                                        <Route exact path={`/${'pl'}/services/advertising`}  component={Advertising}/>
+                                        <Route exact path={`/${'ru'}/services/advertising`}  component={Advertising}/>
+                                        <Route exact path={`/${'cz'}/services/advertising`}  component={Advertising}/>
+
+                                        <Route exact path={`/${'en'}/services/automation`}  component={Automation}/>
+                                        <Route exact path={`/${'pl'}/services/automation`}  component={Automation}/>
+                                        <Route exact path={`/${'ru'}/services/automation`}  component={Automation}/>
+                                        <Route exact path={`/${'cz'}/services/automation`}  component={Automation}/>
+
+                                        <Route exact path={`/${'en'}/services/brand`}  component={BrandPage}/>
+                                        <Route exact path={`/${'pl'}/services/brand`}  component={BrandPage}/>
+                                        <Route exact path={`/${'ru'}/services/brand`}  component={BrandPage}/>
+                                        <Route exact path={`/${'cz'}/services/brand`}  component={BrandPage}/>
+
+                                        <Route exact path={`/${'en'}/aboutus`}  component={AboutUs} />
+                                        <Route exact path={`/${'pl'}/aboutus`}  component={AboutUs} />
+                                        <Route exact path={`/${'ru'}/aboutus`}  component={AboutUs} />
+                                        <Route exact path={`/${'cz'}/aboutus`}  component={AboutUs} />
+
+                                        <Route exact path={`/${'en'}/blog`}  component={Blog} />
+                                        <Route exact path={`/${'pl'}/blog`}  component={Blog} />
+                                        <Route exact path={`/${'ru'}/blog`}  component={Blog} />
+                                        <Route exact path={`/${'cz'}/blog`}  component={Blog} />
+
+                                        <Route exact path={`/${'en'}/blog/:blogitem`} component={BlogItem} />
+                                        <Route exact path={`/${'pl'}/blog/:blogitem`} component={BlogItem} />
+                                        <Route exact path={`/${'ru'}/blog/:blogitem`} component={BlogItem} />
+                                        <Route exact path={`/${'cz'}/blog/:blogitem`} component={BlogItem} />
+
+                                        <Route exact path={`/${'en'}/portfolio`} component={Portfolio} />
+                                        <Route exact path={`/${'pl'}/portfolio`} component={Portfolio} />
+                                        <Route exact path={`/${'ru'}/portfolio`} component={Portfolio} />
+                                        <Route exact path={`/${'cz'}/portfolio`} component={Portfolio} />
+
+                                        <Route exact  path={`/${'en'}/portfolio/:portfolioitem`}  component={PortfolioItem} />
+                                        <Route exact  path={`/${'pl'}/portfolio/:portfolioitem`}  component={PortfolioItem} />
+                                        <Route exact  path={`/${'ru'}/portfolio/:portfolioitem`}  component={PortfolioItem} />
+                                        <Route exact  path={`/${'cz'}/portfolio/:portfolioitem`}  component={PortfolioItem} />
+
+                                        <Route  exact path={`/${'en'}/contactus`} component={ContactUs}/>
+                                        <Route  exact path={`/${'pl'}/contactus`} component={ContactUs}/>
+                                        <Route  exact path={`/${'ru'}/contactus`} component={ContactUs}/>
+                                        <Route  exact path={`/${'cz'}/contactus`} component={ContactUs}/>
+
+                                    </Switch>
+
+
+                                </CSSTransition>
+
+                                {findWord('/contactus', props.location.pathname.substr(3)) ?   <Footer style={'none'}/>   : <Footer style={'block'}/> }
+                            </TransitionGroup>)
+
+
+                    }} />
+
+
+
+                    {this.state.cook ?
+                        <div className="cookies-container">
+
+                            <div className="privacy__warning">
+                                <p className="cook__description">
+                                    Did you know? This website uses cookies to ensure you get the best experience on our website. <span className="shining-underline">Learn more<span></span></span>
+                                </p>
+
+                                <div className="cook__button">
+                                    <p onClick={this.confirmCookies}>Agree</p>
+                                </div>
+
+                            </div>
+                        </div> : null
+                    }
+
+                    {this.state.langPoppup ? <LanguagePoppup/> : null}
+                </div>
+            </TranslateProvider>
+        )
+    }
 }
 
 export default App

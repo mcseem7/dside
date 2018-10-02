@@ -1,58 +1,107 @@
-.limited__service-container {
+  .limited__service-container {
     background: url('background__limited.png');
-    width: 100%;
-    height: 550px;
-    margin-top: 55px;
+    margin-top: 4rem;
     background-repeat: no-repeat;
-    background-position: 45% 10%;
+    background-position: 65% 10%;
+    padding: 1rem;
 }
-
-
-.limited__service_form-data {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 100px;
-}
-
 .limit__offer-title {
     color: #dc6c1c;
     font-family: 'MontBold', sans-serif;
-    font-size: 22px;
+    font-size: 1.2rem;
     font-weight: 700;
     line-height: 31.87px;
 }
-
+.limited__service_form-data {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
 .discount__offer-title h2 {
     color: #ffffff;
     font-family: 'MontBold', sans-serif;
-    font-size: 52px;
+    font-size: 2rem;
     font-weight: 700;
-    line-height: 31.87px;
+    line-height: 2rem;
 }
 
 
 .title__timer {
     font-family: 'MontBold', sans-serif;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 700;
-    line-height: 31.87px;
+    line-height: 1.2rem;
     color: #dc6c1c;
 }
-
-
-#time {
+.time {
     color: #ffffff;
     font-family: 'MontBold', sans-serif;
-    font-size: 52px;
+    font-size: 4rem;
     margin-bottom: 0;
     font-weight: 700;
     line-height: 31.87px;
 }
-
 .timer__back-order {
-    display: flex;
+   display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .timer__back-order div {
-    margin-right: 50px;
+    flex: 1 1 50%;
+}
+/* Tablets */
+@media only screen and (min-width: 480px) {
+
+.limited__service-container {
+    background-position: 45% 10%;
+}
+
+.limited__service_form-data {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem;
+}
+
+.limit__offer-title {
+    font-size: 22px;
+}
+
+
+
+.timer__back-order div {
+    flex: 1 1 25%;
+}
+}
+  /*  Laptop */
+@media only screen and (min-width: 1024px) {
+    .timer__back-order {
+   display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+ .timer__back-order div {
+    flex: 0.1 1 8%;
+}
+ .limit__offer-title{
+     font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+ }
+ .discount__offer-title h2{
+         line-height: 1rem;
+ }
+ .time{font-size: 3rem;}
+ .limited__service-container {
+    background-position: 75% 10%;
+}
+}
+   /* Fullpage */
+@media only screen and (min-width: 1440px) {
+    .timer__back-order div {
+        -ms-flex: 0.1 1 8%;
+        flex: 0.1 1 1%;
+    }
 }

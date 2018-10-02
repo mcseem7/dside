@@ -1,21 +1,28 @@
-import React, {Component} from 'react'
+import React, { Component, Fragment } from "react";
+import 'react-modal-video/css/modal-video.min.css';
+import ModalVideo from 'react-modal-video';
 import HeaderService from '../serviceComponents/HeaderService/index'
 import CaseService from '../serviceComponents/CaseService/index'
 import LimitedService from '../serviceComponents/LimitedService'
 import ProjectVideo from './project__video.png'
 import './index.css'
-import YouTube from 'react-youtube';
-import Footer from '../../../Basic/Footer'
-import YoutubeBackground from 'react-youtube-background'
+import playIcon from './playVideo.svg'
+
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
 import WeCare from "../../../Basic/TrustBlocks/WeCare";
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
 import Own from "../../../Basic/TrustBlocks/Own";
-
-export default class VideoPage extends Component {
+import LogoBrand from "../branding/logo_brand.png";
+import PortolioPost from "../../../DynamicContent/Header__Post/Portfolio__Post";
+import withDsideApi from "../../../../HOC/Fetch";
+import  { HeroVideo } from 'react-hero-video'
+ class VideoPage extends Component {
   constructor() {
     super()
 
+    this.state = {
+      isOpen: false
+    }
 
   }
 
@@ -25,8 +32,12 @@ export default class VideoPage extends Component {
 
   _onReady(event) {
     // access to player in all event handlers via event.target
-    event.target.pauseVideo();
+    event.target.playVideo();
   }
+
+   openModal () {
+     this.setState({isOpen: true})
+   }
 
   render() {
     const opts = {
@@ -40,16 +51,25 @@ export default class VideoPage extends Component {
         loop: 1
       }
     };
-    return(
+ const idVideo = 'uaGotppPsCs'
+      return(
         <div>
-          <YoutubeBackground
-          >
-          <HeaderService
-              imgLogoPosition={'logo__service-img_'}
-              textContainer={'dside_textContainer-video'}
-              serviceSlogan={'DSIDE to make the best video'}
-              textHeader={[<p>Video DES</p>, <p>IGN NOW</p>, <p> SUBWAYS</p>]} />
-          </YoutubeBackground>
+
+            <div className='video-wrap'>
+              <HeroVideo
+                videoSrc={`https://www.youtube.com/embed/${idVideo}?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1&fs=1`}
+              >
+              </HeroVideo>
+                <div id="vidtop-content">
+                    <HeaderService
+                        imgLogoPosition={'logo__service-img_video'}
+                        textContainer={'dside_textContainer-video'}
+                        serviceSlogan={'DSIDE to make the best video'}
+                        textHeader={[<p></p>]} />
+                </div>
+            </div>
+
+          <div className='view__container-wrapper'>
           <section className="view__container-videos">
 
             <div className="view__videos-left">
@@ -71,27 +91,45 @@ export default class VideoPage extends Component {
             </div>
 
           </section>
-
+          </div>
 
           <section className="video__background-dside">
-            <YouTube
-                videoId="InyLat42rBE"
-                opts={opts}
-                onReady={this._onReady}
-            />
+            <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId='L61p2uyiMSo' onClose={() => this.setState({isOpen: false})} />
 
+            <div className="background-image__videos">
+              <img src={playIcon} alt="" onClick={this.openModal.bind(this)}/>
+            </div>
           </section>
 
-          {/*<CaseService/>*/}
-          <div className="case__service">
-            <HeaderPost/>
+<div id='case__wrapper' style={{background: '#fff'}}>
+          <div className="container__case-studies">
+            <div className="case-title">
+              <h3>Case Studies</h3>
+            </div>
+            <div className="case-description">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                voluptatem.</p>
+            </div>
+            <div className="case__service__wrap" >
+              <div className="case__service">
+                <PortolioPost {...this.props} />
+              </div>
+            </div>
           </div>
+
+
+</div>
             <Advantages/>
             <WeCare name="videos"/>
-            <Own/>
-            <LimitedService/>
-          <Footer/>
+          <LimitedService/>
+          <Own/>
+
         </div>
     )
   }
 }
+
+export default withDsideApi(VideoPage, '/portfolio/getPortfolioItems/Videos/')

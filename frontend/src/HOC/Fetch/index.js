@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-
+import fetch from 'isomorphic-fetch'
 
 
 
@@ -12,28 +12,43 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
       this.state = {
         dataDside: [],
         dataItemHome: [],
+          loading: false,
         postData: {
           name: '',
           email: ''
-        }
+        },
+          langContent: ''
       }
+
     }
 
-    componentDidMount()  {
-     this.getDsideApi()
+
+
+   componentDidMount()  {
+       if(typeof window != "undefined") {
+           this.setState({langContent: localStorage.getItem('lang')}, () => { //callback after get language
+               this.getDsideApi()
+           })
+       } else {
+           console.log('loading')
+       }
     }
+
+
+
 
     getDsideApi = async () => {
-      await fetch(`http://mydside.com/api${lang}${apiUrl}`)
+      await fetch(`http://mydside.com/api/${this.state.langContent}${apiUrl}`)
        .then((response) => response.json())
        .then(data => this.setState({dataDside: data}))
         .catch(error => console.log(error))
       await this.getItemApiHome()
+      await this.setState({loading: true})
     }
 
     getItemApiHome = () => {
       Array.isArray(this.state.dataDside) &&  this.state.dataDside.map((homeItem) => {
-          return fetch(`http://mydside.com/api/en/portfolio/getPortfolioItemDetails/${homeItem.CURL}/`).then((response) => {
+          return fetch(`http://mydside.com/api/${this.state.langContent}/portfolio/getPortfolioItemDetails/${homeItem.CURL}/`).then((response) => {
             return response.json()
           }).then((item) => {
             this.setState({dataItemHome: this.state.dataItemHome.concat(item)})
@@ -42,7 +57,7 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
     }
 
     postFormData = (name, phone) => {
-      fetch(`http://mydside.com/api${lang}${apiUrl}`, {
+      fetch(`http://mydside.com/api/${this.state.langContent}${apiUrl}`, {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
@@ -60,6 +75,7 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
             <DsideComponent
                 dataItem={this.state.dataItemHome}
                 postData={this.postFormData}
+                loading={this.state.loading}
                 getDsideApi={this.getDsideApi}
                 dataDside={this.state.dataDside}/>
           </div>

@@ -1,14 +1,129 @@
+.find__out-branding {background: #1E1007; color: #fff; font-family: 'MontLight',sans-serif; padding: 3rem 2rem}
+.cola-item img{padding: 3rem 1rem;}
+.find__out-title{font-family: 'MontBold',sans-serif;}
+.find__button{display: none}
+.diff__title p{color: #a35727; font-size: 1rem;}
+.number__cola{color: #a35727; font-size: 1rem;}
+.cola__content h2{font-family: 'MontBold',sans-serif;}
+.cola__content p{font-size: 1rem; line-height: 1.4rem;}
+.linear__fade-arrow{display: none;}
+.dsided__order-container{text-align: center; display: flex; position: relative}
+.dsided__order-container h3{margin: 0 auto;}
+.dsided__order-container button{ top: 2.4rem;
+    left: 2.4rem;
+    margin: 0 auto;}
+.container__case-studies {
+    padding: 4rem 2rem 1rem 1rem;
+    margin: 0;
+}
+
+
+.button-0-2 {
+    background-color: #4c9a15 !important;
+    background-image: radial-gradient( ellipse at center, #8fde34 0%, rgba(85, 139, 47, 0) 60%, #407719 100% ) !important;
+    width: 186px !important;
+    height: 45px !important;
+    z-index: 1;
+    font-size: 0.8rem !important;
+}
+.dsided__order-container button{ background-color: #4c9a15 !important;
+    background-image: radial-gradient( ellipse at center, #8fde34 0%, rgba(85, 139, 47, 0) 60%, #407719 100% ) !important;
+    width: 186px !important;
+    height: 45px !important;
+    z-index: 1;
+    font-size: 0.8rem !important;}
+.louis_bag-text  {
+    background-image: linear-gradient(-252deg, rgba(99, 149, 34, 0.6) 0%, rgb(22, 114, 87) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #21201f;
+    -webkit-background-clip: text;
+}
+.title__louis{    font-size: 1rem;}
+.effect_animate-fadeBlock {
+     position: relative;
+    width: 328px;
+    margin-top: -109%;
+}
+.effect_animate-fadeBlock img {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+
+.logo__service-img_brand img {
+    height: 600px !important;
+}
+
+.logo__service-img_brand {
+    top: -64px;
+}
+
+.price__louis_wrapper {
+    font-family: 'MontBold',sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.price__louis{}
+.loius__viton_description{
+    font-size: 1rem;
+    line-height: 1.4rem;
+}
+
+.loius__viton_title-description{font-family: 'MontBold',sans-serif;}
+.header__navigation{padding: 0 2rem;}
+.header__navigation .logotype__company{margin: 0; width: 90px;}
+
+.dside-company__links li{margin: 0;}
+.branding__service-right{ padding: 3rem 2rem; font-family: 'MontLight',sans-serif}
+.price__louis_wrapper{font-family: 'MontBold',sans-serif;}
+.arrow__louis-container{display: none;}
+
+.effect_animate-louisicon {
+    position: relative;
+    top: -172px;
+    z-index: 3;
+}
+.effect_animate-louisicon img{
+    position: relative;
+    left: 292px;
+}
+/* Tablets */
+@media only screen and (min-width: 480px) {
+   .logo__service-img img {
+    max-width: 100%;
+    height: auto;
+    left: -5rem;
+    position: relative;
+}
+    .logo__service-img_brand {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    z-index: 1;
+}
+    .effect_animate-louisicon img{left: 0;}
+    .header__navigation .logotype__company{margin-left: 1rem;}
+
+.dside_textContainer-brand .logo__service_slogan{ top: 130px; max-width: unset; font-size: 2.3rem;line-height: 3.6rem; margin: 0 auto;}
+
 .logo__service-text_brand p {
     text-align: right;
     margin-bottom: -34px;
 }
 
+#case__wrapper {
+    padding-bottom: 20px;
+}
 
 .branding__service-case_studies {
     /*max-width: 1200px;*/
     display: flex;
     justify-content: center;
-    margin: 232px auto 0;
+padding-top: 200px;
+    padding-bottom: 200px;
+    margin: 0 auto;
 }
 .branding__service-right p {
     margin-top: 0;
@@ -18,13 +133,6 @@
 
 
 
-.logo__service-img_brand {
-    position: absolute;
-    top: -70px;
-    left: 0px;
-    width: 935px;
-    z-index: 1;
-}
 
 .dside_textContainer-brand div:first-child {
     background-image: linear-gradient(to right, #743c18 60%, #1E1007 100%);
@@ -40,30 +148,20 @@
 }
 
 
-.dside_textContainer-brand div:nth-child(3) {
-       text-shadow: 0 5px 5px rgba(95, 51, 20, 0.61);
-    color: #ffffff;
-    font-family: 'MontBold', sans-serif;
-    font-size: 66px;
-    width: 74%;
-    font-weight: 700;
-    margin-left: 12%;
-}
 
 .branding__service-right {
     display: flex;
     flex-direction: column;
+    padding: 0rem 2rem 0 7rem;
+    font-family: 'MontLight',sans-serif;
 }
-
 .branding__service-left {
-    z-index: 100;
-     display: flex;
-    margin-left: 6%;
-    margin-right: -310px;
+    z-index: 10;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -15%;
+    margin-right: -275px;
 }
-
-
-
 .price__louis {
     font-family: 'MontBold', sans-serif;
     font-size: 70px;
@@ -143,7 +241,6 @@
 .loius__viton_description {
     color: #101010;
     font-family: 'MontLight', sans-serif;
-    width: 570px;
     text-align: left;
     font-size: 18px;
     font-weight: 300;
@@ -175,11 +272,14 @@
 }
 
 .arrow__louis-container {
+       display: -ms-flexbox;
     display: flex;
     height: 80px;
-margin-left: 245px;
+    margin-left: 78px;
+    -ms-flex-align: center;
+    width: 4rem;
     align-items: center;
-    margin-right: 45px;
+    margin-right: 475px;
 }
 
 .louis__arrow-img {
@@ -189,10 +289,9 @@ margin-left: 245px;
 
 .find__out-branding {
     background-size: 100%;
-    margin-top: 200px;
     background-image: url('./brandImg/cola__ground.png');
     background-color: rgb(28, 10, 8) ;
-    margin-bottom: 70px;
+  padding-bottom: 70px;
 }
 
 .find__out-wrapper {
@@ -258,45 +357,6 @@ margin-left: 245px;
     flex: 1;
 }
 
-@media screen and (max-width: 480px){
-
-    .dside_textContainer-brand div:first-child {
-     font-size: 7.2rem;
- }
-
-    .branding__service-case_studies {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .arrow__louis-container {
-        display: none;
-    }
-
-    .branding__service-right {
-        align-items: center;
-    }
-
-    .logo__service-img_brand {
-        position: absolute;
-        top: -82px;
-        left: -119px;
-        width: 790px;
-        z-index: 1;
-    }
-
-
-
-    .header__navigation {
-        z-index: 1;
-    }
-
-    .find__out-title h2 {
-        line-height: 0.9;
-        margin-top: -15px;
-    }
-}
-
 .find__out-branding{
     height: 225px;
     transition: height 0.3s ease-out;
@@ -307,8 +367,8 @@ margin-left: 245px;
 
 .findBrand {
     background-repeat: no-repeat;
-    height: 1600px;
     transition: height 1s ease-in;
+    height: 70rem;
 }
 
 
@@ -415,10 +475,10 @@ margin-left: 245px;
 .number__cola {
     margin-top: 0px;
     margin-right: 16px;
-    font-size: 50px;
+    font-size: 2rem;
     line-height: 32px;
     color: rgb(65,36,30);
-    font-family: "MontBold";
+    font-family: 'MontBold',sans-serif;
 }
 
 .cola-item_two .cola-item__content {
@@ -446,15 +506,19 @@ margin-left: 245px;
 .cola__items li:first-child {
     margin-left: 35px;
 }
-
 .dsided__order-container h3 {
-    font-size: 53px;
+    font-size: 2rem;
     line-height: 32px;
+    padding: 3rem;
     text-transform: uppercase;
     color: rgb(255,255,255);
     font-family: "MontBold";
 }
-
+.dsided__order-container button {
+    top: 0;
+    position: relative !important;
+    left: 0;
+}
 
 .dsided__order-container {
     display: flex;
@@ -476,11 +540,61 @@ margin-left: 245px;
 }
 
 
-
-.heading__service{
-    height: 630px;
+.branding__service-wrapper {
+    background: #ffffff;
 }
 
+.heading__service{
+    height: 530px;
+}
+.behance, .instagram{display: none;}
 p.loius__viton_title-description {
     margin-top: 30px;
 }
+}
+
+
+
+/* Full */
+@media only screen and (min-width: 1024px) {
+.behance, .instagram{display: flex;}
+.dside-company__links li{margin-left: 2rem;}
+.dside-company__links li:nth-child(2){margin-left: 1.6rem;}
+.logo__service-img img {
+    max-width: 75%;
+    height: auto;
+    position: relative;
+}
+
+.branding__service-left {
+    margin-left: 5%;
+}
+.arrow__louis-container{margin-left: 105px;}
+.price__louis{font-size: 3rem;}
+p.loius__viton_title-description{font-size: 1.4rem;}
+.loius__viton_description{font-size: .8rem;}
+.diff__title p{font-size: 1rem  }
+.find__out-title h2 {
+    font-size: 2rem;
+    line-height: 0;
+}
+.arrow__louis-container {
+    margin-left: 170px;
+}
+.branding__service-left {
+    margin-left: 10%;
+    margin-right: -475px;
+}
+.findBrand {height: 80rem;}
+.container__case-studies {
+   padding: 1rem 0rem 0rem 0rem;
+    margin: 0 auto;
+    max-width: 1175px;
+    display: block;
+}
+}
+
+.case__service {
+    display: flex;
+}
+

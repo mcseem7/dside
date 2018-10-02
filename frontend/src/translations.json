@@ -1,0 +1,68 @@
+{
+    "What?": {
+    "pl": "Co?",
+    "cz": "Co?",
+    "ru": "Что такое Dside?"
+    },
+    "What dside?": {
+        "pl": "Co Dside?",
+        "cz": "Co Dside?",
+        "ru": "Что такое Dside?"
+    },
+    "is a value driven, focused and very ambitious digital agency based in Warsaw, providing the best and innovative solutions for your business.": {
+        "pl": "to zorientowana na wartość, skoncentrowana i bardzo ambitna agencja cyfrowa z siedzibą w Warszawie, zapewniająca najlepsze i innowacyjne rozwiązania dla Twojej firmy.",
+        "cz": "je hodnotově řízená, zaměřená a velmi ambiciózní digitální agentura se sídlem ve Varšavě, která poskytuje nejlepší a inovativní řešení pro vaše podnikání.",
+        "ru": "ето стоимость, которое ведет, сосредоточенное и очень амбициозное цифровое агентство, базирующееся в Варшаве, предоставляя лучшие и инновационные решения для Вашего бизнеса."
+    },
+    "More about us": {
+        "pl": "Więcej o nas",
+        "cz": "Více o nás",
+        "ru": "Подробнее о нас"
+    },
+    "Brightly.": {
+        "pl": "Jaskravo.",
+        "cz": "Zářivě.",
+        "ru": "Ярко."
+    },
+    "Easy.": {
+        "pl": "łatwo",
+        "cz": "snadný",
+        "ru": "Легко."
+    },
+    "Profitable.": {
+        "pl": "opłacalny",
+        "cz": "Ziskové.",
+        "ru": "Выгодно."
+    },
+    "We work with brands we believe in.": {
+        "pl": "Współpracujemy z markami, w które wierzymy.",
+        "cz": "Spolupracujeme se značkami, které věříme.",
+        "ru": "Мы работаем с брендами, в которые мы верим."
+    },
+    "What can you get?": {
+        "pl": "Co możesz dostać?",
+        "cz": "Co můžete získat?",
+        "ru": "Что вы можете получить?"
+    },
+    "You can just come up with an IDEA": {
+        "pl": "Możesz po prostu wymyślić IDEA",
+        "cz": "Můžete prostě přijít s IDEA",
+        "ru": "Вы можете просто придумать идею"
+    },
+    "and get a name for the company (naming), a name for the domain, a logo, a corporate identity, a marketing-kit, as well as a good-selling website and a customized advertising campaign.": {
+        "ru": "и получить имя для компании (именования), имя домена, логотип, фирменный стиль, маркетинговый комплект, а также хорошо продаваемый веб-сайт и индивидуальную рекламную кампанию.",
+        "cz": "a získat jméno pro společnost (pojmenování), jméno domény, logo, firemní identitu, marketingový kit a dobře prodávaná webová stránka a individuální reklamní kampaň.",
+        "pl": "i uzyskaj nazwę firmy (nazywanie), nazwa domeny, logo, identyfikacja wizualna, zestaw marketingowy i dobrze sprzedana strona internetowa i pojedyncza kampania reklamowa."
+    },
+     "Brandbook": {
+         "ru": "Брендбук",
+         "pl": "Brandbook",
+         "cz": "Brandbook"
+     },
+    "Brand legend": {
+        "ru": "Легенда Бренда",
+        "pl": "Legenda marki",
+        "cz": "Legenda značky"
+    }
+
+}

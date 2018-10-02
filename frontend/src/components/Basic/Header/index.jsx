@@ -5,19 +5,24 @@ import PlusIcon from './plus.svg'
 import Logo from './Logo.svg'
 import {Link} from 'react-router-dom'
 import Poppup from '../../../HOC/Poppup/index';
+import pl from "../../../HOC/ChangeLanguage/svg/006-poland.svg";
+import cz from "../../../HOC/ChangeLanguage/svg/003-czech-republic.svg";
+import ru from "../../../HOC/ChangeLanguage/svg/005-russia.svg";
 
 
 
 export default class Header extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
 
     this.state = {
       opacity: 0,
       display: 'none',
-      modalActive: false
+      modalActive: false,
+      lang: ''
     }
   }
+
 
 
   showMenu = () => {
@@ -32,7 +37,9 @@ export default class Header extends Component {
 
 
 
-  changePoppup = () => {
+
+
+    changePoppup = () => {
     this.setState({modalActive: !this.state.modalActive}, () => {
       console.log(this.state.modalActive)
     })
@@ -60,7 +67,11 @@ export default class Header extends Component {
                   <img src={PlusIcon} onClick={this.changePoppup} className="add__work_plus" alt="" width="14"/>
                 </div>
               </div>
+
+
             </div>
+
+
 
             <div className="mid__content-logo">
               <div className="logo__container">
@@ -71,7 +82,7 @@ export default class Header extends Component {
                     <svg className="svg-logo" width="86px" height="26px" viewBox="0 0 209 39" version="1.1"
                          xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
     <pattern id="rollover" width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
-      <image id="rollover-image" xlinkHref="https://s3-us-west-2.amazonaws.com/s.cdpn.io/277/1.gif" width="100"
+      <image id="rollover-image" xlinkHref="http://quest.masons.pl/1.gif" width="100"
              height="100" preserveAspectRatio="none"/>
     </pattern>
 <g id="main-logo">
@@ -136,14 +147,15 @@ export default class Header extends Component {
               <div className="menu__header-column">
                 <div className="menu__header-item">
                   <div className="description__menu-title">
-                    <Link to="/aboutus"   className="link__menu">About Us</Link>
+
+                    <Link to={`/${this.props.domenErty}/aboutus`}   className="link__menu">About Us</Link>
                     {/*<p>Caption text under about us</p>*/}
                   </div>
                 </div>
 
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to="/contactus"  className="link__menu">Contact Us</Link>
+                    <Link to={`/${this.props.domenErty}/contactus`}  className="link__menu">Contact Us</Link>
                   </div>
                   {/*<div className="description__menu-title">*/}
                     {/*<p>Caption text under about us</p>*/}
@@ -155,7 +167,7 @@ export default class Header extends Component {
               <div className="menu__header-column">
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to="/blog"  className="link__menu">Blog</Link>
+                    <Link to={`/${this.props.domenErty}/blog`}  className="link__menu">Blog</Link>
                   </div>
                   {/*<div className="description__menu-title">*/}
                     {/*<p>Caption text under about us</p>*/}
@@ -164,7 +176,7 @@ export default class Header extends Component {
 
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to="/"  className="link__menu">Home</Link>
+                    <Link to={`/${this.props.domenErty}`}  className="link__menu">Home</Link>
                   </div>
                   {/*<div className="description__menu-title">*/}
                     {/*<p>Caption text under about us</p>*/}
