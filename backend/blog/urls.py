@@ -15,7 +15,7 @@ urlpatterns = [
 
     url(r'^getBlogItems/(?P<category>[^.]+)/$', BlogItemList.as_view()),
     url(r'^getBlogItems/$', BlogItemList.as_view()),
-    url(r'^getBlogItemDetails/(?P<id>[^.]+)/$', BlogItemDetails.as_view()),
+    url(r'^getBlogItemDetails/(?P<base_name>[^.]+)/$', BlogItemDetails.as_view()),
 
 
 ]

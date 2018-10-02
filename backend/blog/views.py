@@ -50,9 +50,9 @@ class BlogItemList(APIView):
 
 
 class BlogItemDetails(APIView):
-    def get(self, request, format="json", lang_code=None, id=None):
+    def get(self, request, format="json", lang_code=None, base_name=None):
         try:
-            x = BlogItem.objects.get(id=id)
+            x = BlogItem.objects.get(base_name=base_name)
             data = BlogItemSerializer(x).data
             translation = x.blogitemtranslation_set.get(lang_code=lang_code)
             category_name = x.category.blogcategorytranslation_set.get(lang_code=lang_code).name
