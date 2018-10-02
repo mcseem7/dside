@@ -36,7 +36,7 @@ class BlogItemList(APIView):
             data = BlogItemSerializer(x).data
             try:
                 translation = x.blogitemtranslation_set.get(lang_code=lang_code)
-                print(x.category)
+                # print(x.category)
                 category_name = x.category.blogcategorytranslation_set.get(lang_code=lang_code).name
             except (BlogItemTranslation.DoesNotExist, BlogCategoryTranslation.DoesNotExist):
                 continue
