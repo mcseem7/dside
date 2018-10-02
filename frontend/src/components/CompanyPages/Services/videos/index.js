@@ -1,11 +1,12 @@
 import React, { Component, Fragment } from "react";
+import 'react-modal-video/css/modal-video.min.css';
+import ModalVideo from 'react-modal-video';
 import HeaderService from '../serviceComponents/HeaderService/index'
 import CaseService from '../serviceComponents/CaseService/index'
 import LimitedService from '../serviceComponents/LimitedService'
 import ProjectVideo from './project__video.png'
 import './index.css'
-import YouTube from 'react-youtube';
-import Footer from '../../../Basic/Footer'
+import playIcon from './playVideo.svg'
 
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
 import WeCare from "../../../Basic/TrustBlocks/WeCare";
@@ -14,11 +15,14 @@ import Own from "../../../Basic/TrustBlocks/Own";
 import LogoBrand from "../branding/logo_brand.png";
 import PortolioPost from "../../../DynamicContent/Header__Post/Portfolio__Post";
 import withDsideApi from "../../../../HOC/Fetch";
-
+import  { HeroVideo } from 'react-hero-video'
  class VideoPage extends Component {
   constructor() {
     super()
 
+    this.state = {
+      isOpen: false
+    }
 
   }
 
@@ -28,8 +32,12 @@ import withDsideApi from "../../../../HOC/Fetch";
 
   _onReady(event) {
     // access to player in all event handlers via event.target
-    event.target.pauseVideo();
+    event.target.playVideo();
   }
+
+   openModal () {
+     this.setState({isOpen: true})
+   }
 
   render() {
     const opts = {
@@ -43,17 +51,15 @@ import withDsideApi from "../../../../HOC/Fetch";
         loop: 1
       }
     };
-    return(
+ const idVideo = 'uaGotppPsCs'
+      return(
         <div>
 
-            <div>
-                <div className="video-background">
-                    <div className="video-foreground">
-                        <iframe
-                            src="https://www.youtube.com/embed/2MpUj-Aua48?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1"
-                            width="560" height="315" frameBorder="0" allowFullScreen></iframe>
-                    </div>
-                </div>
+            <div className='video-wrap'>
+              <HeroVideo
+                videoSrc={`https://www.youtube.com/embed/${idVideo}?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1&fs=1`}
+              >
+              </HeroVideo>
                 <div id="vidtop-content">
                     <HeaderService
                         imgLogoPosition={'logo__service-img_video'}
@@ -63,6 +69,7 @@ import withDsideApi from "../../../../HOC/Fetch";
                 </div>
             </div>
 
+          <div className='view__container-wrapper'>
           <section className="view__container-videos">
 
             <div className="view__videos-left">
@@ -84,18 +91,17 @@ import withDsideApi from "../../../../HOC/Fetch";
             </div>
 
           </section>
-
+          </div>
 
           <section className="video__background-dside">
-            <YouTube
-                videoId="InyLat42rBE"
-                opts={opts}
-                onReady={this._onReady}
-            />
+            <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId='L61p2uyiMSo' onClose={() => this.setState({isOpen: false})} />
 
+            <div className="background-image__videos">
+              <img src={playIcon} alt="" onClick={this.openModal.bind(this)}/>
+            </div>
           </section>
 
-
+<div id='case__wrapper' style={{background: '#fff'}}>
           <div className="container__case-studies">
             <div className="case-title">
               <h3>Case Studies</h3>
@@ -107,15 +113,19 @@ import withDsideApi from "../../../../HOC/Fetch";
                 non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
                 voluptatem.</p>
             </div>
-          </div>
-          <div className="case__service">
-            <PortolioPost {...this.props} />
+            <div className="case__service__wrap" >
+              <div className="case__service">
+                <PortolioPost {...this.props} />
+              </div>
+            </div>
           </div>
 
+
+</div>
             <Advantages/>
             <WeCare name="videos"/>
-            <Own/>
-            <LimitedService/>
+          <LimitedService/>
+          <Own/>
 
         </div>
     )

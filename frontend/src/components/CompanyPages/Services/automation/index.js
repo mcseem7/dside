@@ -14,6 +14,7 @@ import WeCare from "../../../Basic/TrustBlocks/WeCare";
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
 import PortolioPost from "../../../DynamicContent/Header__Post/Portfolio__Post";
 import withDsideApi from "../../../../HOC/Fetch";
+import { HeroVideo } from "react-hero-video";
 
 
  class Automation extends Component {
@@ -25,19 +26,16 @@ import withDsideApi from "../../../../HOC/Fetch";
   }
 
   render () {
-
+    const idVideo = 'uaGotppPsCs'
     return (
       <Fragment>
         <div>
 
-            <div style={{overflow: 'hidden'}}>
-                <div className="video-background">
-                    <div className="video-foreground">
-                        <iframe
-                            src="https://www.youtube.com/embed/2MpUj-Aua48?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1"
-                            width="560" height="315" frameBorder="0" allowFullScreen></iframe>
-                    </div>
-                </div>
+            <div style={{overflow: 'hidden'}} className='video-wrap'>
+              <HeroVideo
+                videoSrc={`https://www.youtube.com/embed/${idVideo}?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1&fs=1`}
+              >
+              </HeroVideo>
                 <div id="vidtop-content">
                     <HeaderService
                         logoHeader={LogoBrand}
@@ -48,17 +46,18 @@ import withDsideApi from "../../../../HOC/Fetch";
                         // textHeader={[<p>Webstes</p>, <p>That sell</p>, <p>your</p>, <p>goods</p>]}
                     />
                 </div>
+
             </div>
 
 
-
+<div className='automation__quality-wrapper'>
           <section className="automation__quality">
 
 
 
 
           </section>
-
+</div>
           <section className="versus__section">
 
 
@@ -187,7 +186,7 @@ import withDsideApi from "../../../../HOC/Fetch";
             </div>
           </section>
         </div>
-
+        <div id='case__wrapper' style={{background: '#fff'}}>
         <div className="container__case-studies">
           <div className="case-title">
             <h3>Case Studies</h3>
@@ -203,7 +202,7 @@ import withDsideApi from "../../../../HOC/Fetch";
         <div className="case__service">
           <PortolioPost {...this.props} />
         </div>
-
+        </div>
         <WeCare name="websites"/>
         <Advantages/>
         <LimitedService/>

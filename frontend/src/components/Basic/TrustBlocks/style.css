@@ -24,8 +24,12 @@ img.adv-icon {
     font-weight: 400;
     flex: .3 1 40%;
     margin-top: 2rem;
-
 }
+
+#cu-we-iter {
+    background: #ffffff;
+}
+
 .cu-we-iter {
     font-family: 'MontLight', sans-serif;
     font-weight: 400;
@@ -53,6 +57,9 @@ img.adv-icon {
     background-position: 9% 20%;
 }
 
+ #cu-advantages {
+     background: #ffffff;
+ }
 .convupper-block {
     max-width: 1920px;
     margin: auto;

@@ -89,10 +89,19 @@
     }
     .blog__item {
         margin-bottom: 10px;
+        height: 250px;
     }
 
     .icon-watching {
         padding-right: 15px;
+    }
+
+    .description-item p {
+        font-size: 0.7rem;
+    }
+
+    .title-item h4 {
+        font-size: 0.8rem;
     }
 }
 

@@ -134,9 +134,6 @@
     margin: 0;
 }
 
-.case__service{
-    margin-bottom: 85px;
-}
 
 @media screen and (max-width: 480px) {
   .dside_textContainer-logo .logo__service-img {

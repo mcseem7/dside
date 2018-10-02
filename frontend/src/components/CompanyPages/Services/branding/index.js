@@ -28,6 +28,7 @@ import Own from "../../../Basic/TrustBlocks/Own";
 import logoHeader from "../logos/logo__header-service.png";
 import PortolioPost from "../../../DynamicContent/Header__Post/Portfolio__Post";
 import withDsideApi from "../../../../HOC/Fetch";
+import { HeroVideo } from "react-hero-video";
 
 class BrandPage extends Component {
     constructor() {
@@ -83,16 +84,13 @@ class BrandPage extends Component {
                 this.setState({louisbagtext: false})
             }
         })
+      const idVideo = 'uaGotppPsCs'
         return (
             <div>
-                <div>
-                    <div className="video-background">
-                        <div className="video-foreground">
-                            <iframe
-                                src="https://www.youtube.com/embed/2MpUj-Aua48?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1"
-                                width="560" height="315" frameBorder="0" allowFullScreen></iframe>
-                        </div>
-                    </div>
+                <div className='video-wrap'>
+                  <HeroVideo
+                    videoSrc={`https://www.youtube.com/embed/${idVideo}?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1&fs=1`}
+                  ></HeroVideo>
                     <div id="vidtop-content">
                         <HeaderService
                             stylelogotext={'logo__service-text_brand'}
@@ -103,9 +101,10 @@ class BrandPage extends Component {
                             serviceSlogan={'DSIDE to make your brand work BETTER'}
                             serviceCategory={'Branding'}
                         />
+
                     </div>
                 </div>
-
+              <div className='branding__service-wrapper'>
                 {
                     <div
                         className="branding__service-case_studies "
@@ -196,6 +195,7 @@ class BrandPage extends Component {
                         </div>
                     </div>
                 }
+              </div>
 
                 <div className={`find__out-branding ${this.state.findActive ? 'findBrand' : ''}`}>
 
@@ -321,7 +321,7 @@ class BrandPage extends Component {
 
                 </div>
 
-
+              <div id='case__wrapper' style={{background: '#fff'}}>
                 {/*<CaseService/>*/}
                 <div className="container__case-studies">
                     <div className="case-title">
@@ -338,6 +338,7 @@ class BrandPage extends Component {
                 <div className="case__service">
                     <PortolioPost {...this.props} />
                 </div>
+              </div>
                 <WeCare name="brandes"/>
                 <Advantages/>
                 <Own/>

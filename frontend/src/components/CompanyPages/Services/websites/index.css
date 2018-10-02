@@ -13,8 +13,14 @@
     position: relative;
 }
 
+.websites__quality-wraoper {
+    background: #ffffff;
+}
 
-
+#website__developer {
+    display: flex;
+    flex-direction: row;
+}
 
 .dside_textContainer-website .logo__service_slogan{
     max-width: unset;

@@ -1,3 +1,19 @@
+.background-image__videos {
+    background: url('videoImg.png');
+    height: 410px;
+    background-size: cover ;
+    display: flex;
+    justify-content: center;
+}
+
+.background-image__videos img {
+    width: 70px;
+    cursor: pointer;
+}
+
+.view__container-wrapper {
+    background: #ffffff;
+}
 
 .view__videos-title {
     color: #000000;

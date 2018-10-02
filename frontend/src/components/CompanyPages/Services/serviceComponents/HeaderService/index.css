@@ -40,8 +40,13 @@ overflow: hidden;
     color: #fff;
 }
 
-#website__developer {
+.website__developer {
     flex-direction: row;
+}
+
+.video-wrap div div:nth-child(2) {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .vid-info { position: absolute; top: 0; right: 0; width: 33%;  padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
@@ -86,13 +91,13 @@ overflow: hidden;
 .service__icon-instagram {
     width: 20px;
     height: 20px;
-    top: 37px;
+    top: 10px;
     position: absolute;
 }
 .service__icon-behance {
     width: 14px;
     height: 14px;
-    top: 40px;
+    top: 13px;
     position: absolute;
 }
 .service__icon-instagram::before {
@@ -121,7 +126,7 @@ overflow: hidden;
     height: 650px;
     background-size: cover;
     margin-bottom: 100px;
-    padding-top: 30px;
+    /*padding-top: 30px;*/
     position: relative;
 }
 

@@ -18,6 +18,7 @@ import PortolioPost from "../../../DynamicContent/Header__Post/Portfolio__Post";
 import withDsideApi from "../../../../HOC/Fetch";
 import Translate from 'translate-components'
 import { reactTranslateChangeLanguage } from 'translate-components'
+import { HeroVideo } from "react-hero-video";
 
  class Advertising extends Component {
   constructor () {
@@ -28,17 +29,15 @@ import { reactTranslateChangeLanguage } from 'translate-components'
   }
 
   render () {
+    const idVideo = 'uaGotppPsCs'
     return (
       <Fragment>
         <div>
-            <div style={{overflow: 'hidden'}}>
-                <div className="video-background">
-                    <div className="video-foreground">
-                        <iframe
-                            src="https://www.youtube.com/embed/2MpUj-Aua48?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1"
-                            width="560" height="315" frameBorder="0" allowFullScreen></iframe>
-                    </div>
-                </div>
+            <div style={{overflow: 'hidden'}} className='video-wrap'>
+              <HeroVideo
+                videoSrc={`https://www.youtube.com/embed/${idVideo}?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1&fs=1`}
+              >
+              </HeroVideo>
                 <div id="vidtop-content">
                     <HeaderService
                         logoHeader={LogoBrand}
@@ -49,8 +48,10 @@ import { reactTranslateChangeLanguage } from 'translate-components'
                         // textHeader={[<p>Webstes</p>, <p>That sell</p>, <p>your</p>, <p>goods</p>]}
                     />
                 </div>
+
             </div>
 
+          <div className="developers__quality-wrapper">
           <section className="developers__quality">
 
             <div className="developer__left-content">
@@ -73,7 +74,7 @@ import { reactTranslateChangeLanguage } from 'translate-components'
 
 
           </section>
-
+          </div>
 
           <section className="al__time-section">
 
@@ -91,6 +92,7 @@ import { reactTranslateChangeLanguage } from 'translate-components'
             </div>
           </section>
         </div>
+        <div id='case__wrapper' style={{background: '#fff'}}>
         <div className="container__case-studies">
           <div className="case-title">
             <h3>Case Studies</h3>
@@ -101,6 +103,7 @@ import { reactTranslateChangeLanguage } from 'translate-components'
         </div>
         <div className="case__service">
           <PortolioPost {...this.props} />
+        </div>
         </div>
         <Iter/>
         <WeCare name="websites"/>

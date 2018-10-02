@@ -11,6 +11,9 @@
     text-transform: uppercase;
     position: relative;
 }
+.automation__quality-wrapper {
+    background: #ffffff;
+}
 
 .logo__service-img-auto {
     position: absolute;

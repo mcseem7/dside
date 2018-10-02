@@ -113,12 +113,17 @@
     margin-bottom: -34px;
 }
 
+#case__wrapper {
+    padding-bottom: 20px;
+}
 
 .branding__service-case_studies {
     /*max-width: 1200px;*/
     display: flex;
     justify-content: center;
-    margin: 232px auto 0;
+padding-top: 200px;
+    padding-bottom: 200px;
+    margin: 0 auto;
 }
 .branding__service-right p {
     margin-top: 0;
@@ -284,10 +289,9 @@
 
 .find__out-branding {
     background-size: 100%;
-    margin-top: 200px;
     background-image: url('./brandImg/cola__ground.png');
     background-color: rgb(28, 10, 8) ;
-    margin-bottom: 70px;
+  padding-bottom: 70px;
 }
 
 .find__out-wrapper {
@@ -536,6 +540,9 @@
 }
 
 
+.branding__service-wrapper {
+    background: #ffffff;
+}
 
 .heading__service{
     height: 530px;
