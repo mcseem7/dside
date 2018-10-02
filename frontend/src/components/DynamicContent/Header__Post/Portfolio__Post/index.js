@@ -29,7 +29,7 @@ const renderReact = require('hypernova-react').renderReact;
   this.props.dataItem.map((item,key) => {
   return  <div className="grid">
       <figure className="effect-marley">
-        <img src={`http://mydside.com/${item.thumbnail}`}
+        <img src={`//mydside.com/${item.thumbnail}`}
              alt={item.name}/>
         <figcaption>
           <h2>{item.name}</h2>

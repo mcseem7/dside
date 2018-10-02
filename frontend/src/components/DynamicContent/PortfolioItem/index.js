@@ -37,7 +37,7 @@ export default class PortfolioItem extends Component {
 
 
  componentDidMount() {
-     return fetch(`http://mydside.com/api/${localStorage.getItem('lang')}/portfolio/getPortfolioItemDetails/${this.props.match.params.portfolioitem}/`).then((response) => {
+     return fetch(`//mydside.com/api/${localStorage.getItem('lang')}/portfolio/getPortfolioItemDetails/${this.props.match.params.portfolioitem}/`).then((response) => {
          return response.json()
      }).then((item) => {
          this.setState({itemPortfolio: item}, () => {
@@ -59,7 +59,7 @@ export default class PortfolioItem extends Component {
     return (
       <div className="container__portfolio-item">
 
-        <div className="portfolio__header_item-wrapper" style={{backgroundImage: `url(http://mydside.com/${this.state.itemPortfolio.main_image})`}}>
+        <div className="portfolio__header_item-wrapper" style={{backgroundImage: `url(//mydside.com/${this.state.itemPortfolio.main_image})`}}>
           <div className="header__portfolio-content">
           <div className="header__portfolio-content-wrapper">
             {/* <div className="project__picture"> */}
@@ -71,7 +71,7 @@ export default class PortfolioItem extends Component {
               <div className="superwrapper">
                   <div className="project__names">
               <div className="project__logo">
-                    <img src={`http://mydside.com/${this.state.itemPortfolio.logotype}`} alt="" />
+                    <img src={`//mydside.com/${this.state.itemPortfolio.logotype}`} alt="" />
                   </div>
                     <div className="category__project">
                       <p>websites</p>
@@ -142,7 +142,7 @@ export default class PortfolioItem extends Component {
           <div className="portfolio__screen-wrapper">
 
             <div className="portfolio__screen-item">
-                <img src={`http://mydside.com/${this.state.attachImg }`} />
+                <img src={`//mydside.com/${this.state.attachImg }`} />
             </div>
           </div>
         </div>
@@ -172,7 +172,7 @@ export default class PortfolioItem extends Component {
               {Object.keys(this.state.blocksImg).map((item) => {
                 return (
                     <div className="portfolio__screen-item">
-                        <img src={`http://mydside.com/${this.state.blocksImg[item].content }`} alt=""/>
+                        <img src={`//mydside.com/${this.state.blocksImg[item].content }`} alt=""/>
                     </div>
                 )
               })
@@ -214,7 +214,7 @@ export default class PortfolioItem extends Component {
                     <Slide index={key} classNameVisible={'styleCarousellImg'}>
                     <div className="grid">
                     <figure className="effect-marley similarItem">
-                        <Image src={`http://mydside.com/${item.thumbnail}`} alt=""/>
+                        <Image src={`//mydside.com/${item.thumbnail}`} alt=""/>
                 <figcaption>
                     <h2>{item.name}</h2>
                     {

@@ -38,7 +38,7 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
 
 
     getDsideApi = async () => {
-      await fetch(`http://mydside.com/api/${this.state.langContent}${apiUrl}`)
+      await fetch(`//mydside.com/api/${this.state.langContent}${apiUrl}`)
        .then((response) => response.json())
        .then(data => this.setState({dataDside: data}))
         .catch(error => console.log(error))
@@ -48,7 +48,7 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
 
     getItemApiHome = () => {
       Array.isArray(this.state.dataDside) &&  this.state.dataDside.map((homeItem) => {
-          return fetch(`http://mydside.com/api/${this.state.langContent}/portfolio/getPortfolioItemDetails/${homeItem.CURL}/`).then((response) => {
+          return fetch(`//mydside.com/api/${this.state.langContent}/portfolio/getPortfolioItemDetails/${homeItem.CURL}/`).then((response) => {
             return response.json()
           }).then((item) => {
             this.setState({dataItemHome: this.state.dataItemHome.concat(item)})
@@ -57,7 +57,7 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
     }
 
     postFormData = (name, phone) => {
-      fetch(`http://mydside.com/api/${this.state.langContent}${apiUrl}`, {
+      fetch(`//mydside.com/api/${this.state.langContent}${apiUrl}`, {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json'

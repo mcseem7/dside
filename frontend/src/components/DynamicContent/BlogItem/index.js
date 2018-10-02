@@ -74,7 +74,7 @@ export default class BlogItem extends Component {
                       shortname="example"
                       identifier="something-unique-12345"
                       title="Thread"
-                      url="http://dside-pl/"
+                      url="//dside-pl/"
                       category_id="123456"
                       onNewComment={this.handleNewComment}/>
                 </div>
