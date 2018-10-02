@@ -19,7 +19,7 @@ import './index.css'
 
   handleSubmit = async(event) => {
     event.preventDefault()
-    await fetch(`http://dside.pl/api/en/home/addOrder/`, {
+    await fetch(`//dside.pl/api/en/home/addOrder/`, {
        headers: {
          'Accept': 'application/json',
          'Content-Type': 'application/json'
