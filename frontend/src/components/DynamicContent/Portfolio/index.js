@@ -14,7 +14,7 @@ export default class Portfolio extends Component {
 
 
   componentDidMount() {
-      fetch(`http://dside.pl/api/en/portfolio/getPortfolioItems`)
+      fetch(`//dside.pl/api/en/portfolio/getPortfolioItems`)
         .then((response) => {
         return response.json()
         }).then((data) => {

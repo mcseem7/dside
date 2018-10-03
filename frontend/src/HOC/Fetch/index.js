@@ -39,7 +39,7 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
 
 
     getDsideApi = async () => {
-      await fetch(`http://mydside.com/api/${this.state.langContent}${apiUrl}`)
+      await fetch(`${process.env.REACT_APP_API}/${this.state.langContent}${apiUrl}`)
        .then((response) => response.json())
        .then(data => this.setState({dataDside: data}))
         .catch(error => console.log(error))
@@ -56,7 +56,7 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
 
     getItemApiHome = () => {
       Array.isArray(this.state.dataDside) &&  this.state.dataDside.map((homeItem) => {
-          return fetch(`http://mydside.com/api/${this.state.langContent}/portfolio/getPortfolioItemDetails/${homeItem.CURL}/`).then((response) => {
+          return fetch(`${process.env.REACT_APP_API}/${this.state.langContent}/portfolio/getPortfolioItemDetails/${homeItem.CURL}/`).then((response) => {
             return response.json()
           }).then((item) => {
             this.setState({dataItemHome: this.state.dataItemHome.concat(item)})
@@ -66,7 +66,7 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
 
     getItemBlog = () => {
       Array.isArray(this.state.dataDside) &&  this.state.dataDside.map((blogItem) => {
-        return fetch(`http://mydside.com/api/${this.state.langContent}/blog/getBlogItemDetails/${blogItem.base_name}/`).then((response) => {
+        return fetch(`${process.env.REACT_APP_API}/${this.state.langContent}/blog/getBlogItemDetails/${blogItem.base_name}/`).then((response) => {
           return response.json()
         }).then((item) => {
           this.setState({blogItem: this.state.blogItem.concat(item)})
@@ -77,7 +77,7 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
 
 
     postFormData = (name, phone) => {
-      fetch(`http://mydside.com/api/${this.state.langContent}${apiUrl}`, {
+      fetch(`${process.env.REACT_APP_API}/${this.state.langContent}${apiUrl}`, {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json'

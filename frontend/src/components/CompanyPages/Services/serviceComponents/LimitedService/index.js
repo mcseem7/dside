@@ -19,7 +19,7 @@ export default class LimitedService extends Component {
 
 
   async componentDidMount() {
-     let response = await  fetch('http://mydside.com/api/en/home/getLimitedOffers/')
+     let response = await  fetch('//mydside.com/api/en/home/getLimitedOffers/')
      let limitOfer = await response.json()
      this.setState({offer: limitOfer})
   }
@@ -33,7 +33,7 @@ export default class LimitedService extends Component {
             {this.state.offer.map(((item) => {
           return (<section className="limited__service">
 
-            <div style={{backgroundImage: `url(http://mydside.com${item.background})` }} className="limited__service-container">
+            <div style={{backgroundImage: `url(${process.env.REACT_APP_DOMAIN}${item.background})` }} className="limited__service-container">
 
               <div className="limited__service_form-data">
 

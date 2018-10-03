@@ -16,7 +16,7 @@ export default class BlogItem extends Component {
 
   async componentDidMount() {
    window.scrollTo(0, 0)
-   await fetch(`http://mydside.com/api/${localStorage.getItem('lang')}/blog/getBlogItemDetails/${this.props.match.params.blogitem}/`).then((response) => {
+   await fetch(`${process.env.REACT_APP_API}/${localStorage.getItem('lang')}/blog/getBlogItemDetails/${this.props.match.params.blogitem}/`).then((response) => {
         return response.json()
       }).then((item) => {
         this.setState({
@@ -36,7 +36,7 @@ export default class BlogItem extends Component {
         <div>
           <div className="blog__post-container">
 
-            <div className="blog__item" style={{backgroundImage: `url(https://mydside.com${blogItem.main_image})`}}>
+            <div className="blog__item" style={{backgroundImage: `url(${process.env.REACT_APP_DOMAIN}${blogItem.main_image})`}}>
               <div className="blog__item-content">
                 <div className="tag-item">
                   <p>{this.state.blogCategory.name}</p>
@@ -85,7 +85,7 @@ export default class BlogItem extends Component {
                       shortname="example"
                       identifier="something-unique-12345"
                       title="Thread"
-                      url="http://dside-pl/"
+                      url="//dside-pl/"
                       category_id="123456"
                       onNewComment={this.handleNewComment}/>
                 </div>
@@ -98,7 +98,7 @@ export default class BlogItem extends Component {
 
               <div className="content__body-post_img">
 
-                <div className="left__img" style={{ backgroundImage:  `url(https://mydside.com${blogItem.thumbnail})` }}></div>
+                <div className="left__img" style={{ backgroundImage:  `url(${process.env.REACT_APP_DOMAIN}${blogItem.thumbnail})` }}></div>
 
               </div>
             </div>

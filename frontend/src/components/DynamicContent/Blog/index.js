@@ -29,7 +29,7 @@ class Blog extends Component {
         <div className="blog__content">
           <div className="blog__post-items">
             {this.props.dataDside.length == 0 ? <div className='progress'>Loading...</div> : this.props.dataDside.map((item, key) => (
-              <div className="blog__item" style={{backgroundImage: `url(https://mydside.com${item.main_image})` }}>
+              <div className="blog__item" style={{backgroundImage: `url(${process.env.REACT_APP_DOMAIN}${item.main_image})` }}>
               <div onClick={() => {
                   history.push({
                     pathname: `/${location.pathname.substr(1,2)}/blog/${item.base_name}`,
