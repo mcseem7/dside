@@ -8,10 +8,22 @@ export default class BlogItem extends Component {
   constructor(props) {
     super(props)
 
+    this.state = {
+      blogItem: [],
+      blogCategory: ''
+    }
   }
 
-  componentDidMount() {
-    window.scrollTo(0, 0)
+  async componentDidMount() {
+   window.scrollTo(0, 0)
+   await fetch(`http://mydside.com/api/${localStorage.getItem('lang')}/blog/getBlogItemDetails/${this.props.match.params.blogitem}/`).then((response) => {
+        return response.json()
+      }).then((item) => {
+        this.setState({
+          blogItem: item
+        })
+      })
+   await this.setState({blogCategory: this.state.blogItem.category})
   }
 
   handleNewComment(comment) {
@@ -19,35 +31,36 @@ export default class BlogItem extends Component {
   }
 
   render() {
-    console.log(this.props)
+    const { blogItem } = this.state
     return(
         <div>
-
           <div className="blog__post-container">
-            <div className="blog__item">
+
+            <div className="blog__item" style={{backgroundImage: `url(https://mydside.com${blogItem.main_image})`}}>
               <div className="blog__item-content">
                 <div className="tag-item">
-                  <p>dfsf</p>
+                  <p>{this.state.blogCategory.name}</p>
                 </div>
                 <div className="title-item">
-                  <h4>sdf</h4>
+                  <h4>{blogItem.title}</h4>
                 </div>
                 <div className="description-item">
-                  <p>ghj</p>
+                  <p dangerouslySetInnerHTML={{__html: this.props.location.state}} />
                 </div>
+
 
                 <div className="blog__post-data">
                   <div className="watching__post">
                     <div className="icon-watching">
                       <div className="icon__blog">
                       </div>
-                      <p>jkl</p>
+                      <p>{blogItem.views}</p>
                     </div>
                   </div>
                   <div className="time__post">
                     <div className="icon-timer">
                       <div className="icon__blog"></div>
-                      <p>jkl <span>minutes</span></p>
+                      <p>{blogItem.watching_time} <span>minutes</span></p>
 
                     </div>
                   </div>
@@ -61,9 +74,7 @@ export default class BlogItem extends Component {
 
               <div className="content__body-post">
 
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+               <p dangerouslySetInnerHTML={{__html: blogItem.description}} />
 
               </div>
 
@@ -87,7 +98,7 @@ export default class BlogItem extends Component {
 
               <div className="content__body-post_img">
 
-                <div className="left__img" style={{ backgroundImage:  `url(${next})` }}></div>
+                <div className="left__img" style={{ backgroundImage:  `url(https://mydside.com${blogItem.thumbnail})` }}></div>
 
               </div>
             </div>

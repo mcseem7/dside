@@ -5,84 +5,45 @@ import { Link } from 'react-router-dom'
 import BlogItem from '../BlogItem'
 import withDsideApi from "../../../HOC/Fetch";
 import { withRouter } from 'react-router-dom'
-import { compose } from 'recompose'
+import { compose, branch, renderComponent } from 'recompose'
 import PropTypes from "prop-types";
 
 class Blog extends Component {
-  constructor (props, context) {
-    super(props, context)
+  constructor (props) {
+    super(props)
 
     this.state = {
       blogItem: []
     }
   }
 
-  static contextTypes = {
-    router: PropTypes.object
-  }
 
   componentDidMount () {
       window.scrollTo(0, 0)
-  console.log(this.props)
-    const jsonBlogItem =
-      {
-        blogPost: [
-          {
-            name: 'Техника исполнения леттерингов и ее будущее',
-            tag: 'Design',
-            watching: '241',
-            watchingTime: '2',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, hic modi officiis pariatur quod reiciendis repellendus sit. Accusamus aspernatur assumenda corporis culpa cumque pariatur qui quod recusandae rerum similique, sunt?'
-          },
-          {
-            name: 'Внедрение дизайна',
-            tag: 'Design',
-            watching: '241',
-            watchingTime: '3',
-            description: 'lorem safsdfsdfsdf'
-          },
-          {
-            name: 'Технология привличения клиентов',
-            tag: 'Technologies',
-            watching: '241',
-            watchingTime: '4',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam corporis itaque quae quibusdam, recusandae sint tenetur vero voluptates. Animi at ex fugiat illo magnam quas saepe. Et expedita molestias rerum.'
-          },
-          {
-            name: 'Разработка логотипа для формирования перспективы компании',
-            tag: 'logos',
-            watching: '241',
-            watchingTime: '5',
-            description: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cupiditate eos itaque odit quos sunt voluptatum. Accusantium deleniti dolorum itaque laboriosam officia pariatur porro possimus voluptatibus! Deserunt enim itaque magni.'
-          }
-        ]
-      }
-
-    this.setState({
-      blogItem: jsonBlogItem.blogPost
-    }, () => console.log(this.state.blogItem))
   }
 
   render () {
-    const {history, route} = this.context.router
+    const {history, location} = this.props
     return (
-
       <section className="blog__container">
-
         <div className="blog__content">
           <div className="blog__post-items">
-            {this.props.dataDside.map((item, key) => (<div className="blog__item">
+            {this.props.dataDside.length == 0 ? <div className='progress'>Loading...</div> : this.props.dataDside.map((item, key) => (
+              <div className="blog__item" style={{backgroundImage: `url(https://mydside.com${item.main_image})` }}>
               <div onClick={() => {
-                  history.push(`/${route.location.pathname.substr(1,2)}/blog/${item.base_name.toLowerCase()}`)
+                  history.push({
+                    pathname: `/${location.pathname.substr(1,2)}/blog/${item.base_name}`,
+                    state: item.description
+                  })
               }} className="blog__item-content">
                 <div className="tag-item">
-                  <p>{item.tag}</p>
+                  <p>{item.category.name }</p>
                 </div>
                 <div className="title-item">
-                  <h4>{item.name}</h4>
+                  <h4>{item.title}</h4>
                 </div>
                 <div className="description-item">
-                  <p>{item.description}</p>
+                  <p dangerouslySetInnerHTML={{__html: item.description}} />
                 </div>
 
                 <div className="blog__post-data">
@@ -90,14 +51,13 @@ class Blog extends Component {
                     <div className="icon-watching">
                       <div className="icon__blog">
                       </div>
-                      <p>{item.watching} </p>
+                      <p>{item.views} </p>
                     </div>
                   </div>
                   <div className="time__post">
                     <div className="icon-timer">
                       <div className="icon__blog"></div>
-                      <p>{item.watchingTime} <span>minutes</span></p>
-
+                      <p>{item.watching_time} <span>minutes</span></p>
                     </div>
                   </div>
                 </div>
@@ -196,4 +156,14 @@ class Blog extends Component {
 }
 
 
-export default compose(withRouter, withDsideApi)(Blog, '/blog/getBlogItems/', 'BLOG')
+export default compose(
+  withRouter, withDsideApi
+)(Blog, '/blog/getBlogItems/', 'BLOG')
+
+Blog.defaultProps = {
+  dataDside: []
+};
+
+Blog.propTypes = {
+  dataDside: PropTypes.array.isRequired,
+}

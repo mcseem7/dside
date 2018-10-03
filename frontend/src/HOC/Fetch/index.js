@@ -93,6 +93,7 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
       return(
           <div>
             <DsideComponent
+                {...this.props}
                 dataItem={this.state.dataItemHome}
                 blogItem={this.state.blogItem}
                 postData={this.postFormData}
