@@ -3,7 +3,7 @@ import fetch from 'isomorphic-fetch'
 
 
 
-export default function withDsideApi(DsideComponent, apiUrl, lang) {
+export default function withDsideApi(DsideComponent, apiUrl, type) {
 
   class withDsideApi extends Component {
     constructor() {
@@ -13,6 +13,7 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
         dataDside: [],
         dataItemHome: [],
           loading: false,
+        blogItem: [],
         postData: {
           name: '',
           email: ''
@@ -42,7 +43,14 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
        .then((response) => response.json())
        .then(data => this.setState({dataDside: data}))
         .catch(error => console.log(error))
-      await this.getItemApiHome()
+      switch (type) {
+        case 'BLOG':
+          await this.getItemBlog()
+          break;
+        case 'HOME':
+          await this.getItemApiHome()
+          break;
+      }
       await this.setState({loading: true})
     }
 
@@ -55,6 +63,18 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
           })
         })
     }
+
+    getItemBlog = () => {
+      Array.isArray(this.state.dataDside) &&  this.state.dataDside.map((blogItem) => {
+        return fetch(`http://mydside.com/api/${this.state.langContent}/blog/getBlogItemDetails/${blogItem.base_name}/`).then((response) => {
+          return response.json()
+        }).then((item) => {
+          this.setState({blogItem: this.state.blogItem.concat(item)})
+        })
+      })
+    }
+
+
 
     postFormData = (name, phone) => {
       fetch(`http://mydside.com/api/${this.state.langContent}${apiUrl}`, {
@@ -74,6 +94,7 @@ export default function withDsideApi(DsideComponent, apiUrl, lang) {
           <div>
             <DsideComponent
                 dataItem={this.state.dataItemHome}
+                blogItem={this.state.blogItem}
                 postData={this.postFormData}
                 loading={this.state.loading}
                 getDsideApi={this.getDsideApi}

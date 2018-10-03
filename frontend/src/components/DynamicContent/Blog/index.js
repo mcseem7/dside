@@ -4,20 +4,26 @@ import gridIcon from './grid-icon.svg'
 import { Link } from 'react-router-dom'
 import BlogItem from '../BlogItem'
 import withDsideApi from "../../../HOC/Fetch";
-import { withRouter } from 'react-router'
+import { withRouter } from 'react-router-dom'
+import { compose } from 'recompose'
+import PropTypes from "prop-types";
 
 class Blog extends Component {
-  constructor (props) {
-    super(props)
+  constructor (props, context) {
+    super(props, context)
 
     this.state = {
       blogItem: []
     }
   }
 
+  static contextTypes = {
+    router: PropTypes.object
+  }
+
   componentDidMount () {
       window.scrollTo(0, 0)
-
+  console.log(this.props)
     const jsonBlogItem =
       {
         blogPost: [
@@ -58,15 +64,16 @@ class Blog extends Component {
   }
 
   render () {
+    const {history, route} = this.context.router
     return (
 
       <section className="blog__container">
 
         <div className="blog__content">
           <div className="blog__post-items">
-            {this.state.blogItem.map((item, key) => (<div className="blog__item">
+            {this.props.dataDside.map((item, key) => (<div className="blog__item">
               <div onClick={() => {
-                this.props.history.push(`/${this.props.location.pathname.substr(1,2)}/blog/${key}`)
+                  history.push(`/${route.location.pathname.substr(1,2)}/blog/${item.base_name.toLowerCase()}`)
               }} className="blog__item-content">
                 <div className="tag-item">
                   <p>{item.tag}</p>
@@ -189,4 +196,4 @@ class Blog extends Component {
 }
 
 
-export default Blog
+export default compose(withRouter, withDsideApi)(Blog, '/blog/getBlogItems/', 'BLOG')

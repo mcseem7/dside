@@ -84,4 +84,4 @@ import {LangContextConsumer} from "../Main";
   }
 }
 
-export default withDsideApi(HeaderPost, `/portfolio/getHomePortfolioItems/`)
+export default withDsideApi(HeaderPost, `/portfolio/getHomePortfolioItems/`, 'HOME')
