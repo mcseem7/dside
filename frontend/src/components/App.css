@@ -1,4 +1,13 @@
-
+.progress {
+    color: #0a0a0a;
+    font-family: "MontBold";
+    font-size: 24px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    align-items: center;
+}
 
 .container {
     height: 100%;

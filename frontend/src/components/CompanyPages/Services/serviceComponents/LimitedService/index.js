@@ -33,7 +33,7 @@ export default class LimitedService extends Component {
             {this.state.offer.map(((item) => {
           return (<section className="limited__service">
 
-            <div style={{backgroundImage: `url(//mydside.com${item.background})` }} className="limited__service-container">
+            <div style={{backgroundImage: `url(${process.env.REACT_APP_DOMAIN}${item.background})` }} className="limited__service-container">
 
               <div className="limited__service_form-data">
 

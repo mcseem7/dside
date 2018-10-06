@@ -26,8 +26,6 @@ export default class PortfolioItem extends Component {
         similarItems: []
     }
 
-
-
   }
 
 
@@ -37,29 +35,24 @@ export default class PortfolioItem extends Component {
 
 
  componentDidMount() {
-     return fetch(`//mydside.com/api/${localStorage.getItem('lang')}/portfolio/getPortfolioItemDetails/${this.props.match.params.portfolioitem}/`).then((response) => {
+     return fetch(`${process.env.REACT_APP_API}/${localStorage.getItem('lang')}/portfolio/getPortfolioItemDetails/${this.props.match.params.portfolioitem}/`).then((response) => {
          return response.json()
      }).then((item) => {
-         this.setState({itemPortfolio: item}, () => {
-           for(let key in this.state.itemPortfolio.blocks ) {
-            this.setState({blocksImg: this.state.itemPortfolio.blocks})
-           }
-            for(let key in this.state.itemPortfolio.attachment ) {
-                 this.setState({attachImg: this.state.itemPortfolio.attachment[key].content})
-             }
-                 this.setState({similarItems: this.state.itemPortfolio.similar_items})
+         this.setState({
+           itemPortfolio: item,
+           blocksImg: item.blocks,
+           similarItems: item.similar_items,
+           attachImg: item.attachment
          })
      })
-
   }
 
 
   render () {
-      console.log(this.state.similarItems)
     return (
       <div className="container__portfolio-item">
 
-        <div className="portfolio__header_item-wrapper" style={{backgroundImage: `url(//mydside.com/${this.state.itemPortfolio.main_image})`}}>
+        <div className="portfolio__header_item-wrapper" style={{backgroundImage: `url(${process.env.REACT_APP_DOMAIN}${this.state.itemPortfolio.main_image})`}}>
           <div className="header__portfolio-content">
           <div className="header__portfolio-content-wrapper">
             {/* <div className="project__picture"> */}
@@ -71,7 +64,7 @@ export default class PortfolioItem extends Component {
               <div className="superwrapper">
                   <div className="project__names">
               <div className="project__logo">
-                    <img src={`//mydside.com/${this.state.itemPortfolio.logotype}`} alt="" />
+                    <img src={`${process.env.REACT_APP_DOMAIN}/${this.state.itemPortfolio.logotype}`} alt="" />
                   </div>
                     <div className="category__project">
                       <p>websites</p>
@@ -84,7 +77,7 @@ export default class PortfolioItem extends Component {
                       {/*<p>{this.state.itemPortfolio.name}</p>*/}
                     {/*</div>*/}
                   </div>
-          <div className="portfolio__description__content">
+               <div className="portfolio__description__content">
                   <div className="project_description__content">
                     <p className="description__project" dangerouslySetInnerHTML={{__html: this.state.itemPortfolio.description}}>
                       {/*{this.state.itemPortfolio.description}*/}
@@ -141,9 +134,20 @@ export default class PortfolioItem extends Component {
 
           <div className="portfolio__screen-wrapper">
 
-            <div className="portfolio__screen-item">
-                <img src={`//mydside.com/${this.state.attachImg }`} />
-            </div>
+
+
+
+            {Object.keys(this.state.attachImg).map((item) => {
+              return (
+                <div className="portfolio__screen-item">
+                <img src={`${process.env.REACT_APP_DOMAIN}/${this.state.attachImg[item].content}`} />
+               </div>
+              )
+            })
+            }
+
+
+
           </div>
         </div>
 
@@ -172,11 +176,10 @@ export default class PortfolioItem extends Component {
               {Object.keys(this.state.blocksImg).map((item) => {
                 return (
                     <div className="portfolio__screen-item">
-                        <img src={`//mydside.com/${this.state.blocksImg[item].content }`} alt=""/>
+                        <img src={`${process.env.REACT_APP_DOMAIN}/${this.state.blocksImg[item].content }`} alt=""/>
                     </div>
                 )
               })
-
               }
           </div>
         </div>
@@ -214,7 +217,7 @@ export default class PortfolioItem extends Component {
                     <Slide index={key} classNameVisible={'styleCarousellImg'}>
                     <div className="grid">
                     <figure className="effect-marley similarItem">
-                        <Image src={`//mydside.com/${item.thumbnail}`} alt=""/>
+                        <Image src={`${process.env.REACT_APP_DOMAIN}/${item.thumbnail}`} alt=""/>
                 <figcaption>
                     <h2>{item.name}</h2>
                     {
