@@ -66,60 +66,67 @@ class Blog extends Component {
             }
           </div>
 
-          {/*<div className="blog-post__latest-posts">*/}
-            {/**/}
-            {/*<div className="latest-posts__titles">*/}
-              {/*<div className="latest__post-title">*/}
-                {/*<h4>Latest posts</h4>*/}
-              {/*</div>*/}
-              {/*<div className="icon-cube__wrapper">*/}
-                {/*<div className="icon__cube">*/}
+          <div className="blog-post__latest-posts">
 
-                {/*</div>*/}
-              {/*</div>*/}
-            {/*</div>*/}
+            <div className="latest-posts__titles">
+              <div className="latest__post-title">
+                <h4>Latest posts</h4>
+              </div>
+              <div className="icon-cube__wrapper">
+                <div className="icon__cube">
 
-            {/*<div className="latest__post-content">*/}
-              {/*{this.state.blogItem.map((item, key) => (<div className="latest-post">*/}
+                </div>
+              </div>
+            </div>
 
-                {/*<div className="latest-post__tag">*/}
-                  {/*<p>{item.tag}</p>*/}
-                {/*</div>*/}
-                      {/*<div>*/}
-                {/*<div className="latest-post__description">*/}
-                  {/*<p>{item.name}</p>*/}
-                {/*</div>*/}
+            <div className="latest__post-content">
+              {this.props.dataDside.map((item, key) => (
 
-                {/*<div className="latest-post__data">*/}
-                  {/*<div className="watching__post">*/}
-                    {/*<div className="icon-watching">*/}
-                      {/*<div className="icon__blog"><img*/}
-                        {/*src=""*/}
-                        {/*alt=""*/}
-                      {/*/>*/}
-                      {/*</div>*/}
-                      {/*<p>{item.watching}</p>*/}
-                    {/*</div>*/}
-                  {/*</div>*/}
-                  {/*<div className="time__post">*/}
-                    {/*<div className="icon-timer">*/}
-                      {/*<div className="icon__blog"><img*/}
-                        {/*src=""*/}
-                        {/*alt=""*/}
-                      {/*/>*/}
-                      {/*</div>*/}
-                      {/*<p>{item.watchingTime}</p>*/}
+                <div className="latest-post" onClick={() => {
+                  history.push({
+                    pathname: `/${location.pathname.substr(1,2)}/blog/${item.base_name}`,
+                    state: item.description
+                  })
+                }} style={{backgroundImage: `url(${process.env.REACT_APP_DOMAIN}${item.main_image})` }}>
 
-                    {/*</div>*/}
-                  {/*</div>*/}
-                {/*</div>*/}
-                      {/*</div>*/}
+                <div className="latest-post__tag">
+                  <p>{item.category.name}</p>
+                </div>
+                      <div>
+                <div className="latest-post__description">
+                  <p>{item.title}</p>
+                </div>
 
-              {/*</div>))*/}
-              {/*}*/}
+                <div className="latest-post__data">
+                  <div className="watching__post">
+                    <div className="icon-watching">
+                      <div className="icon__blog"><img
+                        src=""
+                        alt=""
+                      />
+                      </div>
+                      <p>{item.views}</p>
+                    </div>
+                  </div>
+                  <div className="time__post">
+                    <div className="icon-timer">
+                      <div className="icon__blog"><img
+                        src=""
+                        alt=""
+                      />
+                      </div>
+                      <p>{item.watching_time}</p>
 
-            {/*</div>*/}
-          {/*</div>*/}
+                    </div>
+                  </div>
+                </div>
+                      </div>
+
+              </div>))
+              }
+
+            </div>
+          </div>
 
           {/*<div className="post__incoming">*/}
 

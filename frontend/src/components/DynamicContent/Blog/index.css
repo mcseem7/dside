@@ -197,10 +197,12 @@
         font-family: 'MontBold', sans-serif;
         font-weight: 700;
         margin: 0;
+        font-size: 1.4rem;
     }
 
     .latest__post-content {
         display: flex;
+        margin-bottom: 25px;
     }
 
     .icon__cube img {

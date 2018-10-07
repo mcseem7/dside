@@ -53,7 +53,7 @@
   "scripts": {
     "start": "node --max_old_space_size=8000 $(which npx) react-scripts start",
     "build": "react-scripts build",
-    "cra-build": "node --max_old_space_size=8000 $(which npx) cra-universal build",
+    "cra-build": "node --max_old_space_size=8000 $(which npx cra-universal build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "build:all": "cra-universal build"
