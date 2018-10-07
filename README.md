@@ -18,20 +18,17 @@ npm run cra-build
 //result > /dist/client |  /dist/server
 
 
-After building application if your want run application you need copy /client >>> /dist/server/.
 
 Your result:
    /dist
       >/server
-       bundle.js
-           > /client
-               static 
-               .....
+      /client
+
 
 
 To start the application you need to do:
 
-   pm2 start bundle.js >> Server creating to port 3001
+   pm2 start dist/server/bundle.js >> Server creating to port 3001
 
 
 
