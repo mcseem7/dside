@@ -51,7 +51,7 @@
     "window-or-global": "^1.0.1"
   },
   "scripts": {
-    "start": "node --max_old_space_size=8000 $(which npx) react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "cra-build": "node --max_old_space_size=8000 $(which npx cra-universal build",
     "test": "react-scripts test --env=jsdom",

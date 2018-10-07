@@ -25,7 +25,7 @@ class Blog extends Component {
   render () {
     const {history, location} = this.props
     return (
-      <section className="blog__container">
+      <section className="blog__container page-centered">
         <div className="blog__content">
           <div className="blog__post-items">
             {this.props.dataDside.length == 0 ? <div className='progress'>Loading...</div> : this.props.dataDside.map((item, key) => (
