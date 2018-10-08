@@ -40,7 +40,7 @@
     margin-top: 180px;
 }
 .logo__service-text_website {font-size: 2rem; }
-.dside_textContainer-website .logo__service_slogan{font-size: 2rem; max-width: 80%;}
+.dside_textContainer-website .logo__service_slogan{font-size: 2rem; text-align: center}
 /* Tablets */
 
 @media only screen and (min-width: 480px) {
@@ -73,4 +73,15 @@
     position: absolute;
     margin-top: -10px;
 }
+}
+
+@media screen and (max-width: 768px){
+    .logo__service-img_website {
+        margin-top: 135px;
+    }
+
+    .dside_textContainer-website .logo__service_slogan {
+        top: 135px;
+        font-size: 1.5rem;
+    }
 }

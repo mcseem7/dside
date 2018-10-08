@@ -26,9 +26,12 @@
 .dside_textContainer-automation .logo__service_slogan {
     font-size: 2.3rem;
     top: 140px;
+    text-align: center;
 }
 
-
+.versus__image-people img {
+    max-width: 100%;
+}
 
 
 
@@ -245,3 +248,28 @@
     line-height: 20.87px;
 }
 
+@media screen and (max-width: 768px) {
+    .logo__service-img-auto {
+        top: 150px;
+        left: 0;
+    }
+
+    .versus__text {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about__people-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dside_textContainer-automation .logo__service-img-auto {
+        top: 290px
+    }
+
+    .dside_textContainer-automation .logo__service_slogan {
+        font-size: 1.7rem;
+    }
+}
