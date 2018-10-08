@@ -25,23 +25,19 @@
     background: url('./Layer 106.png');
     transition: background 1000ms linear;
     width: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
 .right__form-container:hover {
     transition: background 1000ms linear;
     background: url("./alexey.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-@media screen and  (max-width: 1024px){
-    .left__form-container {
-        width: 400px;
-    }
 
-    .right__form-container {
-        width: 400px;
-    }
-}
 
 .left__form-container .title__form-contact h3 {
     margin: 0;
@@ -60,6 +56,8 @@
     display: flex;
     justify-content: flex-end;
 }
+
+
 
 .left__form-container .contactus__form_active {
     padding-bottom: 13%;
@@ -120,4 +118,76 @@
 
 #form__dside .dside__send {
     width: 140px;
+}
+
+@media screen and  (max-width: 1024px){
+    .left__form-container {
+        width: 400px;
+    }
+
+    .right__form-container {
+        width: 400px;
+    }
+
+    .left__form-container .title__form-contact {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .social__icons {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer__copyright {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .background__contactus .copyright__content  {
+        margin-top: 10px;
+    }
+
+    .right__form-phone h2 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .contact-us__form_container  {
+        flex-direction: column;
+    }
+
+    .left__form-container {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        order: 1;
+    }
+
+    .title__drop h3 {
+        text-align: center;
+        width: 100%;
+    }
+    .title__form-contact h3 {
+        text-align: center;
+        width: 100%;
+    }
+
+    .clients__form  {
+        padding: 3rem 0.9rem;
+    }
+
+    .right__form-container {
+        padding-top: 75px;
+        width: auto;
+        padding-bottom: 75px;
+        background-position-y: 100%;
+    }
+
+    .right__form-container:hover {
+        background-position-y: 30%;
+    }
 }
