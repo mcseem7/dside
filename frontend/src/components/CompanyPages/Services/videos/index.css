@@ -108,3 +108,24 @@
     text-align: center;
     font-weight: 700;
 }
+
+@media screen and (max-width: 768px){
+    .view__container-videos {
+        flex-direction: column;
+    }
+
+    .view__videos-left {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .view__videos_img-wrapper  {
+        width: auto;
+    }
+
+    .dside_textContainer-video .logo__service_slogan {
+        font-size: 1.8rem;
+    }
+}
