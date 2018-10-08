@@ -17,7 +17,7 @@ class Footer extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    // this.props.postData(this.nameRef, this.phoneRef)
+    this.props.postData(this.nameRef, this.phoneRef)
 
   }
 
@@ -87,4 +87,4 @@ class Footer extends Component {
 }
 
 
-export default Footer;
+export default withDsideApi(Footer, '/home/addOrder/')

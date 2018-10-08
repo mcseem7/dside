@@ -7,6 +7,8 @@
 }
 
 
+
+
 .contact-us__form_container {
     display: flex;
     justify-content: center;
@@ -16,10 +18,29 @@
     background: white;
     padding-left: 50px;
     padding-right: 50px;
+    width: 800px;
 }
 
 .right__form-container {
     background: url('./Layer 106.png');
+    transition: background 1000ms linear;
+    width: 400px;
+}
+
+
+.right__form-container:hover {
+    transition: background 1000ms linear;
+    background: url("./alexey.png");
+}
+
+@media screen and  (max-width: 1024px){
+    .left__form-container {
+        width: 400px;
+    }
+
+    .right__form-container {
+        width: 400px;
+    }
 }
 
 .left__form-container .title__form-contact h3 {
@@ -41,13 +62,12 @@
 }
 
 .left__form-container .contactus__form_active {
-    padding-bottom: 260px;
+    padding-bottom: 13%;
 }
 
 
 .right__form-container {
     padding-left: 60px;
-    padding-right: 125px;
     padding-top: 75px;
 }
 
@@ -92,4 +112,12 @@
 .background__contactus .copyright__content {
     width: 100%;
     display: block;
+}
+
+.send__title {
+    padding-right: 20px;
+}
+
+#form__dside .dside__send {
+    width: 140px;
 }
