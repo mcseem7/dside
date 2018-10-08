@@ -20,6 +20,11 @@
     will-change: opacity;
 }
 
+.logo__service_slogan {
+    z-index: 3;
+    position: relative ;
+    font-family: 'MontBold',sans-serif;
+}
 
 .video-background {
 overflow: hidden;
@@ -396,6 +401,14 @@ box-shadow: 0px 0px 22px -1px rgba(176,255,102,0.7);
         display: flex;
     }
 
+    .logo__service_slogan {
+        position: absolute;
+    }
+
+    .heading__service {
+        height: 550px;
+    }
+
 }
 
 .Player__container___f3NHe {
@@ -413,13 +426,8 @@ box-shadow: 0px 0px 22px -1px rgba(176,255,102,0.7);
 }
 
 
-.logo__service_slogan {
-    margin: 0 auto;
-    width: 650px !important;
-}
+/*.logo__service_slogan {*/
+    /*margin: 0 auto;*/
+    /*width: 650px !important;*/
+/*}*/
 
-.logo__service_slogan {
-    z-index: 3;
-    position: relative !important;
-    font-family: 'MontBold',sans-serif;
-}

@@ -350,3 +350,69 @@
 .latest-post__description p {
     font-size: 13px;
 }
+
+.post__incoming {
+    background: linear-gradient(
+            257deg, #000101 0%, #ffffff 100%);
+    background: #A50012;
+    margin-bottom: 30px;
+}
+
+.post__incoming-content {
+    display: flex;
+}
+
+.post__incoming-img {
+    opacity: 0.8;
+}
+
+.post__incoming-img {
+  display: flex;
+    justify-content: flex-end;
+}
+
+.post__incoming__titles {
+    display: flex;
+    justify-content: center;
+}
+
+.incoming__title h3 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    font-family: "MontBold";
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.post__incoming-left {
+    display: flex;
+    align-items: center;
+}
+
+
+.incoming__description p {
+    font-size: 2.1rem;
+    color: #ffffff;
+    font-family: "Mont";
+    letter-spacing: 4px;
+}
+
+.post__incoming-left {
+    background: url("./backgroundRedLeft.png");
+    padding-left: 30px;
+    width: 100%;
+}
+
+.incoming__button {
+    width: 180px;
+    height: 31px;
+    text-align: center;
+    line-height: 2;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-radius: 21px;
+    border: 2px solid #d79888;
+    color: #000000;
+    font-family: 'MontBold', sans-serif;
+    background-image: linear-gradient(90deg, #d79888 0%, #b2725e 100%);
+}

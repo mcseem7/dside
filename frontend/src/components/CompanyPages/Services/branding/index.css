@@ -1,4 +1,4 @@
-.find__out-branding {background: #1E1007; color: #fff; font-family: 'MontLight',sans-serif; padding: 3rem 2rem}
+.find__out-branding {background: #1E1007; color: #fff; font-family: 'MontLight',sans-serif; padding-top: 3rem }
 .cola-item img{padding: 3rem 1rem;}
 .find__out-title{font-family: 'MontBold',sans-serif;}
 .find__button{display: none}
@@ -7,15 +7,27 @@
 .cola__content h2{font-family: 'MontBold',sans-serif;}
 .cola__content p{font-size: 1rem; line-height: 1.4rem;}
 .linear__fade-arrow{display: none;}
-.dsided__order-container{text-align: center; display: flex; position: relative}
+.dsided__order-container{text-align: center; display: flex; justify-content: center; position: relative}
 .dsided__order-container h3{margin: 0 auto;}
 .dsided__order-container button{ top: 2.4rem;
-    left: 2.4rem;
     margin: 0 auto;}
 .container__case-studies {
     padding: 4rem 2rem 1rem 1rem;
     margin: 0;
 }
+.dsided__order-container {
+    padding-bottom: 100px;
+}
+.dsided__order-container h3 {
+    text-transform: uppercase;
+    color: rgb(255,255,255);
+    font-family: "MontBold";
+}
+
+
+
+
+
 
 
 .button-0-2 {
@@ -56,7 +68,7 @@
 }
 
 .logo__service-img_brand {
-    top: -64px;
+    top: -83px;
 }
 
 .price__louis_wrapper {
@@ -89,85 +101,19 @@
     position: relative;
     left: 292px;
 }
-/* Tablets */
-@media only screen and (min-width: 480px) {
-   .logo__service-img img {
-    max-width: 100%;
-    height: auto;
-    left: -5rem;
-    position: relative;
-}
-    .logo__service-img_brand {
-    position: absolute;
-    left: 0px;
-    width: 100%;
-    z-index: 1;
-}
-    .effect_animate-louisicon img{left: 0;}
-    .header__navigation .logotype__company{margin-left: 1rem;}
 
-.dside_textContainer-brand .logo__service_slogan{ top: 130px; max-width: unset; font-size: 2.3rem;line-height: 3.6rem; margin: 0 auto;}
 
-.logo__service-text_brand p {
-    text-align: right;
-    margin-bottom: -34px;
-}
-
-#case__wrapper {
-    padding-bottom: 20px;
-}
-
-.branding__service-case_studies {
-    /*max-width: 1200px;*/
-    display: flex;
-    justify-content: center;
-padding-top: 200px;
-    padding-bottom: 200px;
-    margin: 0 auto;
-}
-.branding__service-right p {
-    margin-top: 0;
-    margin-bottom: 17px;
-}
+.branding__service-case_studies { background: #ffffff;}
 
 
 
 
 
-.dside_textContainer-brand div:first-child {
-    background-image: linear-gradient(to right, #743c18 60%, #1E1007 100%);
-    opacity: 0.3;
-    font-family: 'MontBold', sans-serif;
-    font-size: 131px;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 700;
-    margin-top: 35px;
-    text-transform: uppercase;
-    position: relative;
-}
 
 
 
-.branding__service-right {
-    display: flex;
-    flex-direction: column;
-    padding: 0rem 2rem 0 7rem;
-    font-family: 'MontLight',sans-serif;
-}
-.branding__service-left {
-    z-index: 10;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: -15%;
-    margin-right: -275px;
-}
-.price__louis {
-    font-family: 'MontBold', sans-serif;
-    font-size: 70px;
-    padding-right: 10px;
-    font-weight: 700;
-}
+
+
 
 
 
@@ -204,6 +150,70 @@ padding-top: 200px;
     }
 }
 
+
+.shadow__louis {
+    display: flex;
+    position: relative;
+}
+
+.shadow__wrapper img {
+    max-width: 100%;
+    position: relative;
+    left: -276px;
+    top: 275px;
+    opacity: .7;
+}
+
+
+.louis__bag-img {
+    position: absolute;
+    -webkit-transition: all 1000ms ease-in-out;
+    top: -90px;
+}
+
+.louis__bag-animate {
+    transform: translate(0,62px);
+    -webkit-transform: translate(0,62px);
+}
+
+.shadow__louis__wrapper {
+    position: relative;
+}
+
+
+.effect_animate-louisicon {
+    position: absolute;
+    left: 315px;
+    top: 145px;
+}
+
+.effect_animate-fadeBlock {
+    position: absolute;
+    width: 360px;
+    top: -38%;
+}
+
+.effect_animate-fadeBlock img {
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.louis-icon {
+    opacity: 0;
+    transform: translateY(-20px);
+    -webkit-transition:  transform .3s ease, opacity .2s ease;
+    transition: transform .3s ease, opacity .2s ease;
+    transition-delay: .2s;
+}
+.cookies-container{z-index: 1000;}
+.louis-icon_fade {
+    filter: alpha(opacity=1);
+    -webkit-transition:  transform .3s ease, opacity .6s ease;
+    transition: transform .3s ease, opacity .6s ease;
+    opacity: 1;
+    transition-delay: .2s;
+    transform: translateY(0px);
+}
 
 
 .price__louis_wrapper {
@@ -272,7 +282,7 @@ padding-top: 200px;
 }
 
 .arrow__louis-container {
-       display: -ms-flexbox;
+    display: -ms-flexbox;
     display: flex;
     height: 80px;
     margin-left: 78px;
@@ -286,6 +296,108 @@ padding-top: 200px;
     height: 2px;
     z-index: -2;
 }
+
+.shadowImg__wrapper {
+    transform: scale(0.4);
+    -webkit-transition: all 1000ms ease-in-out;
+}
+
+.shadow__animate {
+    transform: scale(0.9);
+}
+
+.price__louis {
+    font-family: 'MontBold', sans-serif;
+    font-size: 70px;
+    padding-right: 10px;
+    font-weight: 700;
+}
+
+.effect_animate-louisicon img{left: 0;}
+
+
+/* Tablets */
+@media only screen and (min-width: 480px) {
+   .logo__service-img img {
+    max-width: 100%;
+    height: auto;
+    left: -5rem;
+    position: relative;
+   }
+
+
+    .logo__service-img_brand {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    z-index: 1;
+}
+
+    .header__navigation .logotype__company{margin-left: 1rem;}
+
+.dside_textContainer-brand .logo__service_slogan{ text-align:center; top: 130px; max-width: unset; font-size: 2.3rem;line-height: 3.6rem; margin: 0 auto;}
+
+.logo__service-text_brand p {
+    text-align: right;
+    margin-bottom: -34px;
+}
+
+#case__wrapper {
+    padding-bottom: 20px;
+}
+
+.branding__service-case_studies {
+    /*max-width: 1200px;*/
+    display: flex;
+    justify-content: center;
+padding-top: 200px;
+    padding-bottom: 200px;
+    margin: 0 auto;
+}
+
+.branding__service-right p {
+    margin-top: 0;
+    margin-bottom: 17px;
+}
+
+
+
+
+
+.dside_textContainer-brand div:first-child {
+    background-image: linear-gradient(to right, #743c18 60%, #1E1007 100%);
+    opacity: 0.3;
+    font-family: 'MontBold', sans-serif;
+    font-size: 131px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    margin-top: 35px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+
+
+.branding__service-right {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 2rem 0 7rem;
+    font-family: 'MontLight',sans-serif;
+}
+.branding__service-left {
+    z-index: 10;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -15%;
+    margin-right: -275px;
+}
+
+
+
+
+
+
 
 .find__out-branding {
     background-size: 100%;
@@ -373,69 +485,7 @@ padding-top: 200px;
 
 
 
-.shadow__louis {
-    display: flex;
-    position: relative;
-}
 
-.shadow__wrapper img {
-    max-width: 100%;
-    position: relative;
-    left: -276px;
-    top: 275px;
-    opacity: .7;
-}
-
-
-.louis__bag-img {
-    position: absolute;
-    -webkit-transition: all 1000ms ease-in-out;
-    top: -90px;
-}
-
-.louis__bag-animate {
-    transform: translate(0,62px);
-    -webkit-transform: translate(0,62px);
-}
-
-.shadow__louis__wrapper {
- position: relative;
-}
-
-
-.effect_animate-louisicon {
-    position: absolute;
-    left: 315px;
-    top: 145px;
-}
-
-.effect_animate-fadeBlock {
-    position: absolute;
-    width: 360px;
-    top: -38%;
-}
-
-.effect_animate-fadeBlock img {
-    max-width: 100%;
-    min-width: 100%;
-}
-
-.louis-icon {
-    opacity: 0;
-    transform: translateY(-20px);
-    -webkit-transition:  transform .3s ease, opacity .2s ease;
-    transition: transform .3s ease, opacity .2s ease;
-    transition-delay: .2s;
-}
-.cookies-container{z-index: 1000;}
-.louis-icon_fade {
-    filter: alpha(opacity=1);
-     -webkit-transition:  transform .3s ease, opacity .6s ease;
-    transition: transform .3s ease, opacity .6s ease;
-    opacity: 1;
-    transition-delay: .2s;
-    transform: translateY(0px);
-}
 
 
 .cola__items {
@@ -517,7 +567,6 @@ padding-top: 200px;
 .dsided__order-container button {
     top: 0;
     position: relative !important;
-    left: 0;
 }
 
 .dsided__order-container {
@@ -530,14 +579,7 @@ padding-top: 200px;
     position: absolute;
 }
 
-.shadowImg__wrapper {
-    transform: scale(0.4);
-    -webkit-transition: all 1000ms ease-in-out;
-}
 
-.shadow__animate {
-    transform: scale(0.9);
-}
 
 
 .branding__service-wrapper {
@@ -551,6 +593,8 @@ padding-top: 200px;
 p.loius__viton_title-description {
     margin-top: 30px;
 }
+
+
 }
 
 
@@ -585,16 +629,85 @@ p.loius__viton_title-description{font-size: 1.4rem;}
     margin-left: 10%;
     margin-right: -475px;
 }
-.findBrand {height: 80rem;}
+/*.findBrand {height: 80rem;}*/
 .container__case-studies {
    padding: 1rem 0rem 0rem 0rem;
     margin: 0 auto;
     max-width: 1175px;
     display: block;
 }
+
+    .branding__service-right {
+        margin-left: 15%;
+    }
 }
 
 .case__service {
     display: flex;
 }
 
+@media screen and (max-width: 480px){
+  .dside_textContainer-brand  .logo__service_slogan {
+        top: 200px;
+      text-align: center;
+      width: 100%;
+      font-size: 1.6rem;
+    }
+
+    .dside_textContainer-brand .logo__service-img_brand {
+        margin-top: -80px;
+    }
+
+    .cola-item img {
+        padding: 0;
+    }
+
+    .find__out-branding {
+        padding-left: 1rem;
+    }
+
+    .louis__bag-img {
+        z-index: 0;
+        width: 370px;
+    }
+
+    .shadow__louis__wrapper > img {
+        max-width: none;
+    }
+
+    .branding__service-case_studies {
+        padding-top: 7rem;
+    }
+
+    .effect_animate-fadeBlock {
+        margin-top: 0;
+    }
+
+    .effect_animate-louisicon {
+        left: 305px;
+        top: 128px;
+        width: 70px;
+    }
+    .branding__service-right {
+        margin-top: 11rem;
+    }
+
+    .shadow__wrapper img {
+        left: 0;
+        top: 215px
+    }
+
+    .effect_animate-fadeBlock img {
+        height: 320px;
+    }
+    .loius__viton_title-description {
+        line-height: normal;
+    }
+
+}
+
+@media screen and  (min-width: 1200px){
+        .arrow__louis-container {
+            margin-left: 270px;
+        }
+}
