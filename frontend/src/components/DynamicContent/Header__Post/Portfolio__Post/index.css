@@ -24,9 +24,13 @@
 @media screen and (max-width: 550px){
     .case__service {
         flex-direction: column;
+        padding-bottom: 20px;
     }
 }
 
+.content__posts .grid {
+    flex: 1 1 30%;
+}
 .block__load__more {
     padding-top: 41px;
 }

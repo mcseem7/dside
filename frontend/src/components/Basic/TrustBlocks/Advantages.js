@@ -4,6 +4,8 @@ import Eye from '../../sources/images/works__logo/eye.svg'
 import Five from '../../sources/images/works__logo/five.svg'
 import HQ from '../../sources/images/works__logo/high-quality.svg'
 import Nimb from '../../sources/images/works__logo/nimb-saver.svg'
+import Translate from "translate-components";
+
 export default class Advantages extends Component {
     constructor() {
         super()
@@ -22,45 +24,44 @@ export default class Advantages extends Component {
             <section className="convupper-block" id="cu-advantages">
                 <div className="page-centered cu-wrapper">
                     <div className="cu-content">
-                        <h3>Pure advantages of DSIDE</h3>
+                      <h3><Translate>Pure advantages of DSIDE</Translate></h3>
                         <div className="advantages-container">
                             <div className="advantage">
                                 <img className="adv-icon" src={Nimb}/>
                                 <div className="advantage-heading">
-                                    Accurate meeting deadlines
+                                  <Translate>Accurate meeting deadlines</Translate>
                                 </div>
                                 <div className="advantage-text">
-                                    We can not miss deadlines because each employee is financially responsible
+                                  <Translate>We can not miss deadlines because each employee is financially responsible</Translate>
                                 </div>
                             </div>
 
                             <div className="advantage">
                                 <img className="adv-icon"  src={Eye}/>
                                 <div className="advantage-heading">
-                                    You cam watch the process
+                                  <Translate>You can watch the process</Translate>
                                 </div>
                                 <div className="advantage-text">
-                                    You can see the progress of your project in our innovative Nimb system in detail. 24/7
+                                  <Translate>You can see the progress of your project in our innovative Nimb system in detail. 24/7</Translate>
                                 </div>
                             </div>
 
                             <div className="advantage">
                                 <img className="adv-icon"  src={Five} />
                                 <div className="advantage-heading">
-                                    Highly experienced team
+                                  <Translate>Highest experienced team</Translate>
                                 </div>
                                 <div className="advantage-text">
-                                    Five years - is minimum experience of experts who work in our team
+                                  <Translate>Five years - is minimum experience of experts who work in our team</Translate>
                                 </div>
                             </div>
 
                             <div className="advantage">
                                 <img className="adv-icon"  src={HQ}/>
-                                <div className="advantage-heading">
-                                    Highest quality products
+                              <div className="advantage-heading"><Translate>Highest quality products</Translate>
                                 </div>
                                 <div className="advantage-text">
-                                    Our customers receive more than they expected
+                                  <Translate>Our customers receive more than they expected!</Translate>
                                 </div>
                             </div>
 

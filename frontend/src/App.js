@@ -55,7 +55,7 @@ class App extends Component {
             this.setState({cook: false})
         }
         window.scrollTo(0,0)
-      reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
+
 
     }
 
@@ -69,6 +69,7 @@ class App extends Component {
         function findWord(word, str) {
             return str.split(' ').some(function(w){return w === word})
         }
+      reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
         return (
             <TranslateProvider translations={translations} defaultLanguage={'en'}>
                 <div className="App">

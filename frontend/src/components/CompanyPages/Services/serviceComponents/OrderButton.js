@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import DribbleButton from 'react-dribble-button';
-
+import Translate from 'translate-components'
 
 export default function OrderButton(props) {
 
@@ -18,7 +18,7 @@ export default function OrderButton(props) {
       }} className="order__wrap" color='light-green' onClick={() => {
         return props.handlePopup()
       }}>
-          order now
+        <Translate>order now</Translate>
       </DribbleButton>
   )
 }

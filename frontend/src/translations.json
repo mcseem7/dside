@@ -278,7 +278,234 @@
     "ru":"фирменный стиль, маркетинговый комплект, а также хорошо продаваемый веб-сайт и индивидуальную рекламную кампанию."
   },
 
+  "What's the difference?": {
+    "cz": "Jaký je v tom rozdíl?",
+    "pl": "Co za różnica?",
+    "ru":"Какая разница?"
+  },
+
+  "USERS": {
+    "ru": "ПОЛЬЗОВАТЕЛИ",
+    "cz": "Uživatelé",
+    "pl":"Użytkownicy"
+  },
+
+  "PER CUSTOMER": {
+    "ru": "для клиента",
+    "cz": "před zákazníkem",
+    "pl":"przed klientem"
+  },
+
+  "SALES": {
+    "ru": "Продажи",
+    "cz": "Prodej",
+    "pl":"Sprzedaj"
+  },
+
+  "RESALES": {
+    "ru": "перепродажи",
+    "pl": "odsprzedaż",
+    "cz":"opětovné prodeje"
+  },
+
+  "FRIENDS INVITED": {
+    "ru": "Приглашенние друзья",
+    "pl": "PRZYJACIELE ZAPRASZAMY",
+    "cz":"Přátelé pozvaní"
+  },
+
+  "RETURNED": {
+    "ru": "Возвращенние",
+    "pl": "zwrócony",
+    "cz":"vratil"
+  },
+
+  "TOTAL": {
+    "ru": "Сума",
+    "pl": "ogółem",
+    "cz":"totální"
+  },
 
 
+  "Professional commercials": {
+    "ru": "Профессиональная реклами",
+    "cz": "Profesionální reklamy",
+    "pl": "Profesjonalne reklamy"
+  },
 
+  "It is enough to know what your video will be about and try to convey to the audience its meaning as if you were telling your friends about it. And after that you will definitely notice that your videos began to look much more often.": {
+    "ru": " Достаточно знать, о чем будет ваше видео, и попытаться донести до зрителей его смысл так, как если бы вы рассказывали о нем своим друзьям. И после этого вы обязательно заметите, что ваши ролики стали смотреть гораздо чаще.",
+    "pl": "Wystarczy wiedzieć, na czym polega film i starać się przekazać odbiorcom znaczenie, jak gdyby opowiadali o tym swoim znajomym. A potem na pewno zauważysz, że twoje filmy zaczęły wyglądać znacznie częściej.",
+    "cz":  "Stačí, abyste věděli, o co bude vaše video, a snažte se sdělit divákovi svůj význam, jako byste o něm informovali své přátele. A pak si určitě všimnete, že vaše videa začaly vypadat mnohem častěji."
+  },
+
+  "International Expierence": {
+    "ru": "Международный опыт",
+    "cz": "Mezinárodní zkušenosti",
+    "pl": "Międzynarodowe doświadczenie"
+  },
+
+  "We use international practice to make our campaings and products work better for you.": {
+    "ru": "Мы используем международную практику, чтобы наши кампании и продукты работали лучше для вас.",
+    "cz": "Využíváme mezinárodní praxe k tomu, aby naše kampaně a produkty fungovaly lépe pro vás.",
+    "pl": "Korzystamy z międzynarodowych praktyk, aby nasze kampanie i produkty działały lepiej dla Ciebie."
+  },
+
+  "We try to surround ourselves with people who are competent in their business.": {
+    "ru": "Мы стараемся окружить себя людьми, которые компетентны в своем бизнесе.",
+    "cz": "Snažíme se obklopovat s lidmi, kteří jsou kompetentní v jejich podnikání.",
+    "pl": "Staramy się otaczać ludźmi, którzy są kompetentni w swoim biznesie."
+  },
+
+  "Look We all have 'our own' people.": {
+    "ru": "Смотрите, у всех нас есть «наши собственные» люди.",
+    "cz": "Podívejte, všichni máme 'naše' lidi.",
+    "pl": "Spójrz Wszyscy mamy 'naszych' ludzi."
+  },
+
+  "own": {
+    "ru": "Владелец",
+    "cz": "Vlastní",
+    "pl": "Posiadać"
+  },
+
+  "is your own company in the field of creation of sites, business promotion, the Internet marketing and increase of sales on sites.": {
+    "ru": "ваша собственная компания в области создания сайтов, продвижения бизнеса, интернет-маркетинга и увеличения продаж на сайтах.",
+    "cz": "Vje vaší vlastní firmou v oblasti tvorby webových stránek, podpory podnikání, internetového marketingu a nárůstu prodeje na stránkách.",
+    "pl": "to Twoja własna firma w zakresie tworzenia stron, promocji biznesu, marketingu internetowego i wzrostu sprzedaży na stronach."
+  },
+
+
+  "Pure advantages of DSIDE": {
+    "ru": "Чистые преимущества от DSIDE",
+    "pl": "Čisté výhody DSIDE",
+    "cz": "Czyste zalety DSIDE"
+  },
+
+
+  "Accurate meeting deadlines": {
+    "ru": "Точные сроки выполнения",
+    "pl": "Dokładne terminy spotkań",
+    "cz": "Přesné termíny splnění"
+  },
+
+  "We can not miss deadlines because each employee is financially responsible": {
+    "ru": "Мы не можем пропустить сроки, поскольку каждый сотрудник несет финансовую ответственность.",
+    "pl": "Nie możemy przegapić terminów, ponieważ każdy pracownik ponosi odpowiedzialność finansową",
+    "cz": "Nesmíme chybět termíny, protože každý zaměstnanec je finančně odpovědný"
+  },
+
+"You can watch the process": {
+  "ru": "Можете посмотреть процесс.",
+  "pl": "Możesz obejrzeć proces.",
+  "cz": "Proces můžete sledovat."
+},
+
+  "You can see the progress of your project in our innovative Nimb system in detail. 24/7": {
+    "ru": "Вы можете подробно ознакомиться с ходом вашего проекта в нашей инновационной системе Nimb. 24/7",
+    "pl": "Możesz zobaczyć postęp swojego projektu w naszym innowacyjnym systemie Nimb w szczegółach. 24/7",
+    "cz": "Průběh vašeho projektu můžete vidět podrobněji v našem inovativním systému Nimb. 24/7"
+  },
+
+  "Highest experienced team": {
+      "ru": "Самая опытная команда",
+    "cz": "Nejvyšší zkušený tým",
+    "pl": "Najbardziej doświadczony zespół"
+  },
+
+  "Five years - is minimum experience of experts who work in our team": {
+    "ru": "Пять лет - это минимальный опыт экспертов, которые работают в нашей команде",
+    "pl": "Pięć lat - to minimalne doświadczenie ekspertów, którzy pracują w naszym zespole ",
+    "cz": "Pět let - je to minimální zkušenost odborníků, kteří pracují v našem týmu "
+  },
+
+
+  "Highest quality products": {
+    "ru": "Продукты самого высокого качества",
+    "pl": "Najwyższej jakości produkty",
+    "cz": "Produkty nejvyšší kvality"
+  },
+
+  "Our customers receive more than they expected!": {
+    "ru": "Наши клиенты получают больше, чем ожидали!",
+    "pl": "Nasi klienci otrzymują więcej, niż oczekiwali",
+    "cz": "Naši zákazníci dostávají více, než očekávali"
+  },
+
+  "Why do DSIDE's": {
+    "ru": "Почему DSIDE's",
+    "pl": "Dlaczego DSIDE's",
+    "cz": "Proč je DSIDE's"
+  },
+
+  "sell better": {
+    "ru": "лучшие продажи",
+    "pl": "sprzedawać lepiej",
+    "cz": "prodat lépe"
+  },
+
+  "Our slogan - we do care.": {
+    "cz": "Náš slogan - je nám jedno.",
+    "pl": "Nasz slogan - dbamy.",
+    "ru": "Наш лозунг - мы заботимся"
+  },
+
+  "When we receive an order for the development or advertisement of a calculator of an insurance company, we study what is retrocedent and reinsurance,": {
+    "cz": "Když obdržíme rozkaz pro vývoj nebo inzerci kalkulačky pojišťovny, studujeme, co je retrocese a zajištění",
+    "ru": "Когда мы получаем заказ на разработку или рекламу калькулятора страховой компании, мы изучаем, что такое ретроспектива и перестрахование",
+    "pl": "Kiedy otrzymujemy zamówienie na opracowanie lub reklamę kalkulatora firmy ubezpieczeniowej, badamy, co jest retrocedentem i reasekuracją"
+  },
+
+  "delving into the heart of  the matter. To talk with clients of our customer in one language.": {
+    "cz": "vlézt do srdce této věci. Mluvit s klienty zákazníka v jednom jazyce.",
+    "pl": "zagłębiając się w sedno sprawy. Aby porozmawiać z klientami naszego klienta w jednym języku.",
+    "ru": "вникая в суть дела. Поговорить с клиентами нашего клиента на одном языке."
+  },
+  "At the same time, the customer's participation is minimal.": {
+    "cz": "Účast zákazníka je zároveň minimální.",
+    "pl": "W tym samym czasie udział klienta jest minimalny.",
+    "ru": "В то же время участие клиента минимально."
+  },
+
+  "Imagine if the doctor asked the client: 'Show me how you want me to treat your tooth?'": {
+    "cz": "Představte si, jestli se lékař zeptal klienta: 'Ukažte mi, jak chcete, abych se ke zubu zacházel?'",
+    "pl": "Wyobraź sobie, że lekarz zapytał klienta: 'Pokaż mi, jak chcesz, żebym leczył twój ząb?'",
+    "ru": "Представьте, если бы врач спросил клиента: «Покажите мне, как вы хотите, чтобы я лечил ваш зуб?»"
+  },
+
+  "Man, damn, I just want it not to hurt. Do it.": {
+    "ru": "Человек, блин, я просто хочу, чтобы не повредить. Сделай это.",
+     "pl": "Człowieku, cholera, chcę tylko, żeby nie bolało. Zrób to.",
+    "cz": "Člověče, zatraceně, chci, aby to neublížilo. Udělej to."
+  },
+
+  "order now": {
+    "cz": "objednat teď",
+    "pl": "Zamów teraz",
+    "ru": "заказать сейчас"
+  },
+
+  "DSIDE to make your business earn more MONEY": {
+    "ru": "DSIDE, чтобы ваш бизнес зарабатывал больше денег",
+    "pl": "DSIDE, aby Twoja firma zarabiała więcej PIENIĄDZE",
+    "cz": "DSIDE, aby vaše firma vydělala více peněz"
+  },
+
+  "DSIDE to make your brand work": {
+    "cz": "DSIDE, aby vaše značka fungovala",
+    "pl": "DSIDE, aby Twoja marka działała",
+    "ru": "DSIDE, чтобы ваша марка работала"
+  },
+
+  "BETTER": {
+    "ru": "ЛУЧШЕ",
+    "pl": "LEPSZY",
+    "cz": "lepší"
+  },
+
+  "DSIDE to make your website SELL BETTER": {
+    "cz": "DSIDE, aby vaše webové stránky prodávaly lépe",
+    "pl": "DSIDE, aby Twoja strona internetowa SPRZEDAWAŁA LEPIEJ",
+    "ru": "DSIDE, чтобы сделать ваш сайт ПРОДАВАТЬ ЛУЧШЕ"
+  }
 }

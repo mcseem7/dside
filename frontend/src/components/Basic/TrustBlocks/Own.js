@@ -6,6 +6,7 @@ import Coach from '../../sources/images/works__logo/coach.png'
 import CarMaster from '../../sources/images/works__logo/service-master.png'
 import Hero from '../../sources/images/works__logo/hero.png'
 import Dside from './dside.png'
+import Translate from 'translate-components'
 export default class Own extends Component {
     constructor() {
         super()
@@ -26,9 +27,9 @@ export default class Own extends Component {
                 <div className="cu-heading">
                     <hr />
                     <div className="text">
-                        We try to surround ourselves with people who are competent in their business.
+                      <Translate>We try to surround ourselves with people who are competent in their business.</Translate>
                     <br/>
-                    <strong>Look We all have 'our own' people .</strong>
+                      <strong><Translate>Look We all have 'our own' people.</Translate></strong>
                     </div>
                 </div>
                 <div className="page-centered cu-wrapper">
@@ -38,35 +39,35 @@ export default class Own extends Component {
                             <div className="own-instance">
                                 <img src={Doctor} />
                                 <div className="own-heading doctor">
-                                    own
+                                  <Translate>own</Translate>
                                 </div>
                                 <div className="own-desc ">DOCTOR</div>
                             </div>
                             <div className="own-instance">
                                 <img src={Barber} />
                                 <div className="own-heading barber">
-                                    own
+                                  <Translate>own</Translate>
                                 </div>
                                 <div className="own-desc ">BARBER</div>
                             </div>
                             <div className="own-instance">
                                 <img src={Coach} />
                                 <div className="own-heading coach">
-                                    own
+                                  <Translate>own</Translate>
                                 </div>
                                 <div className="own-desc">COACH</div>
                             </div>
                             <div className="own-instance">
                                 <img src={CarMaster} />
                                 <div className="own-heading cms">
-                                    own
+                                  <Translate>own</Translate>
                                 </div>
                                 <div className="own-desc">CAR SERVICE MASTER</div>
                             </div>
                             <div className="own-instance">
                                 <img src={Hero} />
                                 <div className="own-heading hero">
-                                    own
+                                  <Translate>own</Translate>
                                 </div>
                                 <div className="own-desc">HERO</div>
                             </div>
@@ -76,9 +77,9 @@ export default class Own extends Component {
                         <div className="dside-promo">
                             <img className="dside-logo" src={Dside} />
                                 <div className="text">
-                                    is your own company in the field of creation of sites,
+                                    <Translate>is your own company in the field of creation of sites,
                                     business promotion, the Internet marketing and
-                                    increase of sales on sites.
+                                      increase of sales on sites.</Translate>
                                 </div>
 
                         </div>

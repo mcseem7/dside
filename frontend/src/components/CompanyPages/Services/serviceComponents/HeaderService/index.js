@@ -9,6 +9,7 @@ import Poppup from '../../../../../HOC/Poppup/index';
 import Translate from 'translate-components'
 import {reactTranslateChangeLanguage} from "translate-components";
 
+
 export default class HeaderService extends Component {
   constructor() {
     super()
@@ -96,7 +97,8 @@ export default class HeaderService extends Component {
                 </li>
 
                 <li className="header-service__button-order">
-                  <a href="#" onClick={this.changePoppup} className="header-button__order"><img src={PlusHover}  alt="" width="14"/>order now.</a>
+                  <a href="#" onClick={this.changePoppup} className="header-button__order"><img src={PlusHover}  alt="" width="14"/>
+                    <Translate>order now</Translate></a>
                 </li>
               </nav>
 
@@ -113,7 +115,7 @@ export default class HeaderService extends Component {
                 </div>
 
                 <div className="logo__service_slogan">
-                  {this.props.serviceSlogan}
+                  <Translate>{this.props.serviceSlogan}</Translate>
                 </div>
 
               </div>

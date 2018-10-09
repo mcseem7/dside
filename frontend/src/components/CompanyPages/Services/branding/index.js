@@ -9,7 +9,7 @@ import louis from './lois_viton.png'
 import arrow from './arrow.png'
 
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
-import Translate from "translate-components";
+import Translate, { reactTranslateChangeLanguage } from "translate-components";
 import WheelReact from 'wheel-react';
 import louisbag from './louisbag.png'
 import shadow from './shadow.png'
@@ -56,6 +56,7 @@ class BrandPage extends Component {
 
     componentDidMount() {
         window.scrollTo(0, 0)
+      reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
     }
 
 
@@ -99,7 +100,7 @@ class BrandPage extends Component {
                             logoHeader={LogoBrand}
                             imgLogoPosition={'logo__service-img_brand'}
                             textContainer={'dside_textContainer-brand'}
-                            serviceSlogan={[<Fragment>DSIDE to make your brand work <br/> BETTER</Fragment>]}
+                            serviceSlogan={[<Fragment><Translate>DSIDE to make your brand work</Translate> <br/> <Translate>BETTER</Translate></Fragment>]}
                             serviceCategory={'Branding'}
                         />
 

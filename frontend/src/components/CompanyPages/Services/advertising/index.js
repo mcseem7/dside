@@ -25,6 +25,7 @@ import { HeroVideo } from "react-hero-video";
   }
   componentDidMount() {
     window.scrollTo(0,0)
+    reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
   }
 
   render () {
