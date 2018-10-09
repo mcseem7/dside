@@ -53,9 +53,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "cra-build": "node --max_old_space_size=8000 $(which npx cra-universal build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "cra-nginx": "node --max_old_space_size=2048 $(which npx) cra-universal build",
     "build:all": "cra-universal build"
   },
   "devDependencies": {
