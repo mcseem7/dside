@@ -6,12 +6,89 @@
     font-weight: 700;
 }
 
+.latest__post-content {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.latest-posts__titles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 35px 35px;
+}
+
+.latest-post__tag p {
+    margin: 0;
+}
+
+.latest-post__data {
+    display: flex;
+}
+
+.latest-post {
+    background-image: url('./latest.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 299px;
+    cursor: pointer;
+    height: 199px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.latest-post__tag {
+    color: #ffffff;
+    font-family: 'MontBold', sans-serif;
+    font-size: 14px;
+    flex: 1;
+    font-weight: 700;
+}
+
+.latest-post__description p {
+    color: #ffffff;
+    margin: 0;
+    font-family: 'MontBold', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+
+
+.latest-post__data .watching__post {
+    margin-right: 31px;
+}
+
+.latest-post {
+    padding-left: 16px;
+    padding-right: 40px;
+}
+
+.latest-post__tag p {
+    border-radius: 14px;
+    background-image: linear-gradient(to left, #f1af1f 0%, #f47b20 100%);
+    padding: 8px;
+    display: inline-block;
+    margin-top: 20px;
+    text-align: right;
+}
+
 .description-item p {
     color: #ffffff;
     font-family: 'MontLight', sans-serif;
     font-weight: 300;
 }
-
+.tag-item {
+    background-image: -webkit-gradient(linear, right top, left top, from(#f1af1f), to(#f47b20));
+    background-image: -webkit-linear-gradient(right, #f1af1f 0%, #f47b20 100%);
+    background-image: -o-linear-gradient(right, #f1af1f 0%, #f47b20 100%);
+    background-image: linear-gradient(to left, #f1af1f 0%, #f47b20 100%);
+    border-radius: 18px;
+    align-items: center;
+    display: inline-block;
+    padding: 2px 17px;
+}
 .title-item h4 {
     color: #ffffff;
     font-family: 'MontBold', sans-serif;
@@ -35,6 +112,7 @@
     height: 450px;
     background-size: 100%;
     display: flex;
+    background-size: cover;
     flex-direction: column;
     justify-content: flex-end;
 }
@@ -98,6 +176,10 @@
 
     .title-item h4 {
         font-size: 0.8rem;
+    }
+
+    .description-item p {
+        display: none;
     }
 }
 
@@ -163,16 +245,7 @@
         font-size: 18px;
     }
 
-    .tag-item {
-        border-radius: 18px;
-        align-items: center;
-        background-image: -webkit-gradient(linear, right top, left top, from(#f1af1f), to(#f47b20));
-        background-image: -webkit-linear-gradient(right, #f1af1f 0%, #f47b20 100%);
-        background-image: -o-linear-gradient(right, #f1af1f 0%, #f47b20 100%);
-        background-image: linear-gradient(to left, #f1af1f 0%, #f47b20 100%);
-        display: inline-block;
-        padding: 2px 17px;
-    }
+
 
     .blog__post-data {
         display: flex;
@@ -197,10 +270,7 @@
         font-size: 1.4rem;
     }
 
-    .latest__post-content {
-        display: flex;
-        margin-bottom: 25px;
-    }
+
 
     .icon__cube img {
         width: 20px;
@@ -208,68 +278,7 @@
         display: block;
     }
 
-    .latest-posts__titles {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 15px 35px 35px;
-    }
 
-    .latest-post__tag p {
-        margin: 0;
-    }
-
-    .latest-post__data {
-        display: flex;
-    }
-
-    .latest-post {
-        background-image: url('./latest.png');
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        width: 299px;
-        cursor: pointer;
-        height: 199px;
-        display: flex;
-        flex-direction: column;
-        margin-left: 10px;
-    }
-
-    .latest-post__tag {
-        color: #ffffff;
-        font-family: 'MontBold', sans-serif;
-        font-size: 14px;
-        flex: 1;
-        font-weight: 700;
-    }
-
-    .latest-post__description p {
-        color: #ffffff;
-        margin: 0;
-        font-family: 'MontBold', sans-serif;
-        font-size: 17px;
-        font-weight: 700;
-    }
-
-
-
-    .latest-post__data .watching__post {
-        margin-right: 31px;
-    }
-
-    .latest-post {
-        padding-left: 16px;
-        padding-right: 40px;
-    }
-
-    .latest-post__tag p {
-        border-radius: 14px;
-        background-image: linear-gradient(to left, #f1af1f 0%, #f47b20 100%);
-        padding: 8px;
-        display: inline-block;
-        margin-top: 20px;
-        text-align: right;
-    }
 
 }
 
@@ -349,4 +358,115 @@
 
 .latest-post__description p {
     font-size: 13px;
+}
+
+.post__incoming {
+    background: linear-gradient(
+            257deg, #000101 0%, #ffffff 100%);
+    background: #A50012;
+    margin-bottom: 30px;
+}
+
+.post__incoming-content {
+    display: flex;
+}
+
+.post__incoming-img {
+    opacity: 0.8;
+}
+
+.post__incoming-img {
+  display: flex;
+    justify-content: flex-end;
+}
+
+.post__incoming__titles {
+    display: flex;
+    justify-content: center;
+}
+
+.incoming__title h3 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    font-family: "MontBold";
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.post__incoming-left {
+    display: flex;
+    align-items: center;
+}
+
+
+.incoming__description p {
+    font-size: 2.1rem;
+    color: #ffffff;
+    font-family: "Mont";
+    letter-spacing: 4px;
+}
+
+.post__incoming-left {
+    background: url("./backgroundRedLeft.png");
+    padding-left: 30px;
+    width: 100%;
+}
+
+.incoming__button {
+    width: 180px;
+    height: 31px;
+    text-align: center;
+    line-height: 2;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-radius: 21px;
+    border: 2px solid #d79888;
+    color: #000000;
+    font-family: 'MontBold', sans-serif;
+    background-image: linear-gradient(90deg, #d79888 0%, #b2725e 100%);
+}
+
+@media screen and (max-width: 768px){
+    .post__incoming-img img{
+        max-width: 80%;
+    }
+
+    .post__incoming {
+        margin-bottom: 0;
+    }
+
+    .post__incoming-titles {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .post__incoming-right {
+        display: none;
+    }
+
+    .post__incoming-left {
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .latest__post-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .latest-post {
+        margin-bottom: 20px;
+    }
+
+    .latest-posts__titles {
+        justify-content: center;
+    }
+
+    .incoming__description p {
+        text-align: center;
+    }
 }

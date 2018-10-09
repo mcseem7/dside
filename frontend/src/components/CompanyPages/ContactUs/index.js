@@ -3,15 +3,25 @@ import ContactMap from './contactmap.svg'
 import Header from '../../Basic/Header'
 import './index.css'
 import arrow from '../../sources/images/works__logo/arrow.svg'
+import withDsideApi from "../../../HOC/Fetch";
 
 
 
 
-export default class Contact  extends  Component {
+ class Contact  extends  Component {
   constructor() {
     super()
 
+    this.nameRef = React.createRef()
+    this.phoneRef = React.createRef()
+
   }
+
+   handleSubmit = (event) => {
+     event.preventDefault()
+     this.props.postData(this.nameRef, this.phoneRef)
+
+   }
 
 
   render() {
@@ -75,7 +85,7 @@ export default class Contact  extends  Component {
                           </div>
                           <button className="dside__send">
                             <div className="button__content">
-                              <p>Send</p> <img src={arrow} alt="" />
+                              <span className='send__title'>Send</span> <img src={arrow} alt="" />
                             </div>
                           </button>
                         </form>
@@ -137,3 +147,5 @@ export default class Contact  extends  Component {
     )
   }
 }
+
+export default withDsideApi(Contact, '/home/addOrder/')

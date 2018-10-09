@@ -98,9 +98,7 @@
     display: none;
 }
 
-.social__icons {
-         display: none;
-     }
+
 
     .left__content-icons .check__work-sockets {
         display: none;
@@ -358,3 +356,14 @@
 .large-shadow {
     opacity: 0.25;
 }
+
+@media screen and (max-width: 768px){
+   .social__icons {
+       display: none !important;
+   }
+    .main__header-left {
+        padding-bottom: 0;
+    }
+}
+
+

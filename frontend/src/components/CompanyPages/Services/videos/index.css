@@ -87,12 +87,12 @@
     /*position: relative;*/
 /*}*/
 
-.logo__service_slogan {
-    position: absolute;
-    top: 181px;
-    width: 550px;
-    text-align: center;
-}
+/*.logo__service_slogan {*/
+    /*position: absolute;*/
+    /*top: 181px;*/
+    /*width: 550px;*/
+    /*text-align: center;*/
+/*}*/
 
 
 
@@ -105,5 +105,27 @@
     text-shadow: 0 5px 5px rgba(95, 51, 20, 0.61);
     font-family: 'MontBold', sans-serif;
     width: 100%;
+    text-align: center;
     font-weight: 700;
+}
+
+@media screen and (max-width: 768px){
+    .view__container-videos {
+        flex-direction: column;
+    }
+
+    .view__videos-left {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .view__videos_img-wrapper  {
+        width: auto;
+    }
+
+    .dside_textContainer-video .logo__service_slogan {
+        font-size: 1.8rem;
+    }
 }

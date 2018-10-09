@@ -7,6 +7,8 @@ import withDsideApi from "../../../HOC/Fetch";
 import { withRouter } from 'react-router-dom'
 import { compose, branch, renderComponent } from 'recompose'
 import PropTypes from "prop-types";
+import subscribe from './subscribe.png'
+
 
 class Blog extends Component {
   constructor (props) {
@@ -128,33 +130,33 @@ class Blog extends Component {
             </div>
           </div>
 
-          {/*<div className="post__incoming">*/}
+          <div className="post__incoming">
 
-            {/*<div className="post__incoming-content">*/}
+            <div className="post__incoming-content">
 
-              {/*<div className="post__incoming-right">*/}
-                {/*<div className="post__incoming-img">*/}
-                  {/*<img src="#" alt="" />*/}
-                {/*</div>*/}
-              {/*</div>*/}
+              <div className="post__incoming-right">
+                <div className="post__incoming-img">
+                  <img src={subscribe} alt="" />
+                </div>
+              </div>
 
-              {/*<div className="post__incoming-left">*/}
-                {/*<div className="post__incoming-content">*/}
-                  {/*<div className="incoming__title">*/}
-                    {/*<h3>New posts</h3>*/}
-                  {/*</div>*/}
-                  {/*<div className="incoming__description">*/}
-                    {/*<p>Are coming soon</p>*/}
-                  {/*</div>*/}
+              <div className="post__incoming-left">
+                <div className="post__incoming-titles">
+                  <div className="incoming__title">
+                    <h3>New posts</h3>
+                  </div>
+                  <div className="incoming__description">
+                    <p>Are coming soon.</p>
+                  </div>
 
-                  {/*<div className="incoming__button">*/}
-                    {/*<button>Suggest a topic</button>*/}
-                  {/*</div>*/}
-                {/*</div>*/}
-              {/*</div>*/}
+                  <div className="incoming__button">
+                    <a href='#'>Suggest a topic</a>
+                  </div>
+                </div>
+              </div>
 
-            {/*</div>*/}
-          {/*</div>*/}
+            </div>
+          </div>
 
         </div>
       </section>

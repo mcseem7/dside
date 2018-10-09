@@ -95,10 +95,9 @@ class BrandPage extends Component {
                         <HeaderService
                             stylelogotext={'logo__service-text_brand'}
                             logoHeader={LogoBrand}
-                            textHeader={[<p> Branding</p>, <p>That takes</p>, <p> Business</p>, <p>Further</p>]}
                             imgLogoPosition={'logo__service-img_brand'}
                             textContainer={'dside_textContainer-brand'}
-                            serviceSlogan={'DSIDE to make your brand work BETTER'}
+                            serviceSlogan={[<Fragment>DSIDE to make your brand work <br/> BETTER</Fragment>]}
                             serviceCategory={'Branding'}
                         />
 
