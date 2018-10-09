@@ -16,6 +16,7 @@ import Advantages from "../../../Basic/TrustBlocks/Advantages";
 import PortolioPost from "../../../DynamicContent/Header__Post/Portfolio__Post";
 import withDsideApi from "../../../../HOC/Fetch";
 import { HeroVideo } from "react-hero-video";
+import Translate from "translate-components";
 
 
  class Website extends Component {
@@ -72,18 +73,14 @@ import { HeroVideo } from "react-hero-video";
         </div>
 
         <div id='case__wrapper' style={{background: '#fff'}}>
-        <div className="container__case-studies">
-          <div className="case-title">
-            <h3>Case Studies</h3>
+          <div className="container__case-studies">
+            <div className="case-title">
+              <h3><Translate>Case Studies</Translate></h3>
+            </div>
+            <div className="case-description">
+              <p><Translate>Evaluate our previous experience . Each case in our portfolio perfectly shows the way we work.</Translate></p>
+            </div>
           </div>
-          <div className="case-description">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-              voluptatem.</p>
-          </div>
-        </div>
         <div className="case__service">
           <PortolioPost {...this.props} />
         </div>

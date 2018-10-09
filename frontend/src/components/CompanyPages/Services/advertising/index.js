@@ -8,7 +8,6 @@ import Palm from '../../../sources/images/works__logo/palm.svg'
 import Wallet from '../../../sources/images/works__logo/wallet.svg'
 import Footer from '../../../Basic/Footer'
 import './index.css'
-
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
 import WeCare from "../../../Basic/TrustBlocks/WeCare";
 import Iter from "../../../Basic/TrustBlocks/iter";
@@ -57,9 +56,10 @@ import { HeroVideo } from "react-hero-video";
             <div className="developer__left-content">
 
               <div className="contentby__ads">
-              <div className="golden superb">We are engaged in packaging business and sale of its services</div>
-              <h3>You can just come up with an IDEA</h3>
-              <p> and get a name for the company (naming), a name for the domain, a logo, a corporate identity, a marketing-kit, as well as a good-selling website and a customized advertising campaign.</p>
+                <div className="golden superb"><Translate>We are engaged in packaging business and sale of its services</Translate></div>
+                <h3><Translate>You can just come up with an IDEA</Translate></h3>
+                <p><Translate>and get a name for the company (naming), a name for the domain, a logo,</Translate>
+                  <Translate>a corporate identity, a marketing-kit, as well as a good-selling website and a customized advertising campaign.</Translate></p>
               </div>
 
 
@@ -80,9 +80,11 @@ import { HeroVideo } from "react-hero-video";
 
             <div className="al__time-wrapper">
 
-              <h3>Become powerful</h3>
+              <h3><Translate>Become powerful</Translate></h3>
 
-              <p>Take the first step to the strongest and most profitable sales. Already advertised? Order an audit of an existing advertising campaign, we will point out the weaknesses <span className="golden bolder">for free.</span></p>
+              <p><Translate>Take the first step to the strongest and most profitable sales.
+                Already advertised? Order an audit of an existing advertising campaign, we will point out the weaknesses</Translate>
+                <span className="golden bolder"> <Translate>for free.</Translate></span></p>
 
 
               <div className="al__time-button">
@@ -93,14 +95,14 @@ import { HeroVideo } from "react-hero-video";
           </section>
         </div>
         <div id='case__wrapper' style={{background: '#fff'}}>
-        <div className="container__case-studies">
-          <div className="case-title">
-            <h3>Case Studies</h3>
+          <div className="container__case-studies">
+            <div className="case-title">
+              <h3><Translate>Case Studies</Translate></h3>
+            </div>
+            <div className="case-description">
+              <p><Translate>Evaluate our previous experience . Each case in our portfolio perfectly shows the way we work.</Translate></p>
+            </div>
           </div>
-          <div className="case-description">
-            <p>Evaluate our previous experience in advertising. Each case in our portfolio perfectly shows the way we work.</p>
-          </div>
-        </div>
         <div className="case__service">
           <PortolioPost {...this.props} />
         </div>

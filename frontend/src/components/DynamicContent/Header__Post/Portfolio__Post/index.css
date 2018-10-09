@@ -20,6 +20,13 @@
     background-image: linear-gradient(90deg, #d99b91 0%, #ad6f59 100%);
 }
 
+
+@media screen and (max-width: 550px){
+    .case__service {
+        flex-direction: column;
+    }
+}
+
 .block__load__more {
     padding-top: 41px;
 }

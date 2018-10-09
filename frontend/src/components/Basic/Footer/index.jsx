@@ -3,6 +3,7 @@ import './index.css'
 import arrow from '../../sources/images/works__logo/arrow.svg'
 import withDsideApi from '../../../HOC/Fetch'
 import Poppup from '../../../HOC/Poppup/index';
+import  Translate  from "translate-components";
 
 class Footer extends Component {
 
@@ -32,12 +33,12 @@ class Footer extends Component {
             <div className="form__titles">
 
               <div className="title__drop">
-                <h3 className="golden">Drop the line</h3>
+                <h3 className="golden"><Translate>Drop the line</Translate></h3>
               </div>
 
               <div className="question__form">
-                <p>Ready to talk to the team who can’t wait to<br />
-                  take your company to new, exciting places?
+                <p><Translate>Ready to talk to the team who can’t wait to</Translate><br/>
+                  <Translate>take your company to new, exciting places?</Translate>
                 </p>
               </div>
 
@@ -59,7 +60,7 @@ class Footer extends Component {
                 </div>
                 <button className="dside__send">
                   <div className="button__content">
-                    <span>Send</span><div class="whitespace"></div><img src={arrow} alt="" />
+                    <span><Translate>Send</Translate></span><div class="whitespace"></div><img src={arrow} alt="" />
                   </div>
                 </button>
               </form>

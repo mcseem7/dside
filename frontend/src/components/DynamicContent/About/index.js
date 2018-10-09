@@ -165,12 +165,10 @@ export default class AbotUs extends Component {
                   </div>
 
                   <div className="about__company-dside">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                      ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                      laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab il</p>
+                    <p><Translate>is a modern, fast-growing company, in which the main principles of work are high professionalism,</Translate>
+                      <br/>
+                      <Translate>responsibility to each client and the reliability of the guaranteed result</Translate>
+                    </p>
                   </div>
                 </div>
                 </div>
@@ -181,7 +179,7 @@ export default class AbotUs extends Component {
                   <div className="dside__whyus-content">
 
                     <div className="title__whyus">
-                      <h5>why us?</h5>
+                      <h5><Translate>why us?</Translate></h5>
                     </div>
 
                     <div className="about__dside-process">
@@ -197,13 +195,13 @@ export default class AbotUs extends Component {
                               01
                             </div>
                             <div className="business__title">
-                              <p>Automated business</p>
+                              <p><Translate>Automated business</Translate></p>
                             </div>
                           </div>
                           <div className="description__business-process">
-                            <p>Do so that your business is
+                            <p><Translate>Do so that your business is
                               working while you are solving
-                              more important issues</p>
+                              more important issues</Translate></p>
                           </div>
                         </li>
 
@@ -216,13 +214,13 @@ export default class AbotUs extends Component {
                               02
                             </div>
                             <div className="business__title">
-                              <p>Brand yourself</p>
+                              <p><Translate>Create brand yourself</Translate></p>
                             </div>
                           </div>
                           <div className="description__business-process">
-                            <p>Branded companies sell their
+                            <p><Translate>Branded companies sell their
                               products much more expensive,
-                              what's stopping you?</p>
+                              what's stopping you?</Translate></p>
                           </div>
                         </li>
 
@@ -235,12 +233,12 @@ export default class AbotUs extends Component {
                               03
                             </div>
                             <div className="business__title">
-                              <p>Memorable logos</p>
+                              <p><Translate>Memorable logos</Translate></p>
                             </div>
                           </div>
                           <div className="description__business-process">
-                            <p>Make your client remember
-                              your company</p>
+                            <p><Translate>Make your client remember
+                              your company</Translate></p>
                           </div>
                         </li>
 
@@ -253,12 +251,12 @@ export default class AbotUs extends Component {
                               04
                             </div>
                             <div className="business__title">
-                              <p>Expirienced websites</p>
+                              <p><Translate>Expirienced websites</Translate></p>
                             </div>
                           </div>
                           <div className="description__business-process">
-                            <p>Which perform specific
-                              business tasks</p>
+                            <p><Translate>Which perform specific
+                              business tasks</Translate></p>
                           </div>
                         </li>
                         
@@ -275,7 +273,7 @@ export default class AbotUs extends Component {
               <div className="dside__meet_team">
 
                 <div className="meet__team-title">
-                  <h4>meet our team</h4>
+                  <h4><Translate>meet our team</Translate></h4>
                 </div>
 
 

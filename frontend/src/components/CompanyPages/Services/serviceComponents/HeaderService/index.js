@@ -6,7 +6,8 @@ import PlusHover from './plus-hover.svg'
 import OrderButton from '../OrderButton'
 import {Link} from 'react-router-dom'
 import Poppup from '../../../../../HOC/Poppup/index';
-
+import Translate from 'translate-components'
+import {reactTranslateChangeLanguage} from "translate-components";
 
 export default class HeaderService extends Component {
   constructor() {
@@ -15,19 +16,30 @@ export default class HeaderService extends Component {
     this.state = {
       opacity: 0,
       display: 'none',
-      modalActive: false
+      modalActive: false,
+      lang: ''
     }
 
   }
 
+  componentDidMount() {
+    this.setState({
+      lang: localStorage.getItem('lang')
+    })
+  }
 
-  showMenu = () => {
+
+  showMenu = async  () => {
     if(this.state.opacity ==  1) {
       this.setState({opacity: 0, display: 'none'})
     } else {
-      this.setState({opacity: 1, display: 'block'})
+      await reactTranslateChangeLanguage.bind(this, this.state.lang)()
+      await this.setState({opacity: 1, display: 'block'}, () => {})
     }
   }
+
+
+
 
 
   changePoppup = () => {
@@ -38,6 +50,7 @@ export default class HeaderService extends Component {
 
 
   render() {
+
     return(
         <Fragment>
 
@@ -119,14 +132,14 @@ export default class HeaderService extends Component {
                   <div className="menu__header-column">
                     <div className="menu__header-item">
                       <div className="description__menu-title">
-                        <Link to="/aboutus"   className="link__menu">About Us</Link>
+                        <Link to={`/${this.state.lang}/aboutus`}   className="link__menu"><Translate>About Us</Translate></Link>
 
                       </div>
                     </div>
 
                     <div className="menu__header-item">
                       <div className="menu__header-title">
-                        <Link to="/contactus"  className="link__menu">Contact Us</Link>
+                        <Link to={`/${this.state.lang}/contactus`}  className="link__menu"><Translate>Contact Us</Translate></Link>
                       </div>
                       <div className="description__menu-title">
                       </div>
@@ -134,10 +147,11 @@ export default class HeaderService extends Component {
                   </div>
 
 
+
                   <div className="menu__header-column">
                     <div className="menu__header-item">
                       <div className="menu__header-title">
-                        <Link to="/blog"  className="link__menu">Blog</Link>
+                        <Link to={`/${this.state.lang}/blog`}  className="link__menu"><Translate>Blog</Translate></Link>
                       </div>
                       <div className="description__menu-title">
 
@@ -146,7 +160,7 @@ export default class HeaderService extends Component {
 
                     <div className="menu__header-item">
                       <div className="menu__header-title">
-                        <Link to="/"  className="link__menu">Home</Link>
+                        <Link to={`/`}   className="link__menu"><Translate>Home</Translate></Link>
                       </div>
                       <div className="description__menu-title">
                       </div>

@@ -12,7 +12,6 @@ import Website from './components/CompanyPages/Services/websites'
 import {CSSTransition,TransitionGroup} from 'react-transition-group'
 import Cookies from 'js-cookie'
 import Header from './components/Basic/Header/index';
-
 import loadable from 'loadable-components';
 import 'regenerator-runtime/runtime';
 import LanguagePoppup from "./HOC/ChangeLanguage/ChangePup";
@@ -27,6 +26,7 @@ import Advertising from "./components/CompanyPages/Services/advertising";
 import Automation from "./components/CompanyPages/Services/automation";
 import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
 import translations from './translations.json'
+
 
 
 class App extends Component {
@@ -193,6 +193,8 @@ class App extends Component {
                             </div>
                         </div> : null
                     }
+
+
 
                     {this.state.langPoppup ? <LanguagePoppup/> : null}
                 </div>

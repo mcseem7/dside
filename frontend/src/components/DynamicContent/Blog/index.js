@@ -8,7 +8,7 @@ import { withRouter } from 'react-router-dom'
 import { compose, branch, renderComponent } from 'recompose'
 import PropTypes from "prop-types";
 import subscribe from './subscribe.png'
-
+import Translate from 'translate-components'
 
 class Blog extends Component {
   constructor (props) {
@@ -143,14 +143,14 @@ class Blog extends Component {
               <div className="post__incoming-left">
                 <div className="post__incoming-titles">
                   <div className="incoming__title">
-                    <h3>New posts</h3>
+                    <h3><Translate>New posts</Translate></h3>
                   </div>
                   <div className="incoming__description">
-                    <p>Are coming soon.</p>
+                    <p><Translate>Are coming soon.</Translate></p>
                   </div>
 
                   <div className="incoming__button">
-                    <a href='#'>Suggest a topic</a>
+                    <a href='#'><Translate>Suggest a topic</Translate></a>
                   </div>
                 </div>
               </div>

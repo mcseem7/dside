@@ -63,6 +63,222 @@
         "ru": "Легенда Бренда",
         "pl": "Legenda marki",
         "cz": "Legenda značky"
-    }
+    },
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt": {
+        "ru": "Легенда Бренда",
+        "pl": "Legenda marki",
+        "cz": "Legenda značky"
+    },
+
+    "is a modern, fast-growing company, in which the main principles of work are high professionalism,": {
+       "ru": "является современной, быстро развивающейся компанией, в которой основными принципами работы являются высокий профессионализм,",
+        "pl": "jest nowoczesną, szybko rozwijającą się firmą, w której głównymi zasadami pracy są wysoki profesjonalizm,",
+        "cz": "je moderní, rychle se rozvíjející společnost, ve které jsou hlavními principy práce vysoká profesionalita,"
+    },
+    "responsibility to each client and the reliability of the guaranteed result": {
+        "ru": "ответственность каждого клиента и надежность гарантированного результата",
+        "pl": "odpowiedzialność wobec każdego klienta i wiarygodność gwarantowanego wyniku",
+        "cz": "odpovědnost vůči každému klientovi a důvěryhodnost garantovaného výsledku"
+    },
+    "why us?": {
+        "ru": "Почему мы?",
+        "pl": "Dlaczego my?",
+        "cz": "Proč nás?"
+    },
+  "Automated business": {
+    "ru": "Автоматизация бизнеса",
+    "pl": "Automatyzacja biznesu",
+    "cz": "Automatizace podnikání"
+  },
+  "Do so that your business is working while you are solving more important issues": {
+    "pl": "Zrób tak, aby Twoja firma działała, a Ty rozwiązujesz ważniejsze problemy",
+    "cz": "Udělejte tak, aby vaše podnikání fungovalo při řešení důležitějších otázek",
+    "ru": "Сделаем так, чтобы ваш бизнес работал, когда вы решаете более важные проблемы"
+  },
+  "Create brand yourself": {
+    "pl": "Stwórz swoją markę",
+    "cz": "Vytvořte svou značku",
+    "ru": "Сделать свой бренд"
+  },
+  "Branded companies sell their products much more expensive, what's stopping you?": {
+    "pl": "Markowe firmy sprzedają swoje produkty znacznie droższe, co Cię powstrzymuje?",
+    "cz": "Značkové společnosti prodávají své výrobky mnohem dražší, co vás zastaví?",
+    "ru": "Фирменные компании продают свою продукцию намного дороже, что останавливает вас?"
+  },
+  "Memorable logos": {
+    "pl": "Niezapomniane logo",
+    "cz": "Památné loga",
+    "ru": "Запоминающиеся логотипы"
+  },
+  "Make your client remember your company": {
+    "pl": "Spraw, aby Twój klient zapamiętał Twoją firmę",
+    "cz": "Vyžádejte svého klienta o zapamatování vaší společnosti",
+    "ru": "Заставьте вашего клиента запомнить вашу компанию"
+  },
+  "Expirienced websites": {
+    "cz": "Zkušených webových stránek",
+    "pl": "Doświadczone strony internetowe",
+    "ru": "Опытные веб-сайты"
+  },
+  "Which perform specific business tasks": {
+    "cz": "Které vykonávají konkrétní obchodní úkoly",
+    "pl": "Które wykonują określone zadania biznesowe",
+    "ru": "Какие конкретные бизнес-задачи?"
+  },
+  "meet our team": {
+    "ru": "Встречай нашу команду",
+    "cz": "Setkání s naším týmem",
+    "pl": "Poznaj naszą drużynę"
+  },
+  "Drop the line": {
+    "ru": "Прокрутите",
+    "cz": "Zrušte linku",
+    "pl": "Upuść linię"
+  },
+  "Ready to talk to the team who can’t wait to": {
+    "ru": "Готов поговорить с командой, которая не может дождаться",
+    "cz": "Připravte se na příkaz, který nelze odeslat",
+    "pl": "Gotowy do rozmowy z zespołem, który nie może czekać"
+  },
+  "take your company to new, exciting places?": {
+    "ru": "взять вашу компанию в новые, захватывающие места?",
+    "cz": "převezme svou společnost na nové, vzrušující místa?",
+    "pl": "przenieść swoją firmę do nowych, ekscytujących miejsc?"
+  },
+  "Send": {
+    "ru": "Отправить",
+    "cz": "Poslat",
+    "pl": "Wysłać"
+  },
+  "Home": {
+    "ru": "Главная",
+    "cz": "Home",
+    "pl": "Home"
+  },
+  "Blog": {
+    "ru": "Блог",
+    "cz": "Blog",
+    "pl": "Blog"
+  },
+  "About Us": {
+    "ru": "О нас",
+    "cz": "O nás",
+    "pl": "O nas"
+  },
+  "Home": {
+    "ru": "Главная",
+    "cz": "Home",
+    "pl": "Home"
+  },
+  "Contact Us": {
+    "ru": "Свяжитесь с нами",
+    "cz": "Kontaktujte nás",
+    "pl": "Skontaktuj się z nami"
+  },
+  "New posts": {
+    "ru": "Новые посты",
+    "cz": "Nové posts",
+    "pl": "Nowe posts"
+  },
+  "Are coming soon.": {
+    "ru": "Скоро.",
+    "cz": "Brzy přijdou.",
+    "pl": "Już wkrótce."
+  },
+  "Suggest a topic": {
+    "ru": "Предложить тему для блога.",
+    "cz": "navrhnout téma.",
+    "pl": "zaproponuj temat."
+  },
+  "Well-branded bag": {
+    "ru": "Хорошая фирменная сумка",
+    "cz": "Dobře značková taška",
+    "pl": "Dobrze markowa torba"
+  },
+  "Sample bag": {
+    "ru": "Просто сумка",
+    "cz": "Jen tašku",
+    "pl": "Jen bag"
+  },
+  "On branding depends": {
+    "ru": "От брендинга зависит",
+    "cz": "Na značku závisí",
+    "pl": "Na temat marki zależy"
+  },
+  "As You know, brand-name original items from time to time are even more expensive than their unnamed counterparts.": {
+    "ru": "От брендинга зависит",
+    "cz": "Jak znáte, originální věci značky čas od času jsou ještě dražší než jejich nepojmenované protějšky.",
+    "pl": "Jak wiadomo, oryginalne markowe przedmioty od czasu do czasu są nawet droższe niż ich nienazwane odpowiedniki."
+  },
+  "How expensive you can sell your goods or services.": {
+    "ru": "Как дорого вы можете продать свои товары или услуги.",
+    "cz": "Jak drahé můžete prodávat své zboží nebo služby.",
+    "pl": "Jak drogie możesz sprzedać swoje towary lub usługi."
+  },
+  "Statistics of successful business": {
+    "ru": "Статистика успешного бизнеса",
+    "cz": "Statistiky úspěšného podnikání",
+    "pl": "Statystyki udanego biznesu"
+  },
+  "What’s the difference?": {
+    "ru": "Какая разница?",
+    "cz": "Jaký je v tom rozdíl?",
+    "pl": "Co za różnica?"
+  },
+  "find out": {
+    "ru": "Узнать",
+    "cz": "zjistit",
+    "pl": "dopytać"
+  },
+  "Evaluate our previous experience . Each case in our portfolio perfectly shows the way we work.": {
+    "ru": "Оцените наш предыдущий опыт . Каждый случай в нашем портфолио прекрасно показывает, как мы работаем.",
+    "cz": "Vyhodnoťte naše předchozí zkušenosti . Každý případ v našem portfoliu dokonale ukazuje způsob, jakým pracujeme.",
+    "pl": "Oceń nasze wcześniejsze doświadczenie . Każdy przypadek w naszym portfolio doskonale pokazuje, w jaki sposób pracujemy."
+  },
+  "Case Studies": {
+    "cz": "případové studie",
+    "pl": "studium przypadku",
+    "ru":"примеры работ"
+  },
+  "Become powerful": {
+    "cz": "Stać się potężnym",
+    "pl": "Stát se silným",
+    "ru":"Cтать Лютим"
+  },
+"Take the first step to the strongest and most profitable sales. Already advertised? Order an audit of an existing advertising campaign, we will point out the weaknesses": {
+  "pl": "Zrób pierwszy krok do najsilniejszej i najbardziej dochodowej sprzedaży. Już reklamowane? Zamów audyt istniejącej kampanii reklamowej, wskażemy słabe strony",
+  "cz": "Udělejte první krok k nejsilnějšímu a nejvýnosnějšímu prodeji. Již jste inzerovali? Objednejte si audit stávající reklamní kampaně, upozorníme na slabiny",
+  "ru":"Сделайте первый шаг к самым сильным и прибыльным продажам. Уже рекламируется? Закажите аудит существующей рекламной кампании, отметим недостатки"
+ },
+  "for free.": {
+    "cz": "zdarma.",
+    "pl": "za darmo.",
+    "ru":"бесплатно."
+  },
+  "We are engaged in packaging business and sale of its services": {
+    "ru": "Мы занимаемся упаковкой бизнеса и продаем его услуги",
+    "pl": "Zajmujemy się produkcją opakowań i sprzedażą ich usług",
+    "cz":"Zabýváme se balením a prodejem služeb"
+  },
+  "You can just come up with an IDEA": {
+    "cz": "Stačí přijít s IDEA",
+    "pl": "Możesz po prostu wymyślić IDEA",
+    "ru":"Вы можете просто придумать IDEA"
+  },
+
+  "and get a name for the company (naming), a name for the domain, a logo,": {
+    "cz": "a získat jméno pro společnost (pojmenování), název domény, logo,",
+    "pl": "i uzyskaj nazwę firmy (nazwę), nazwę domeny, logo,",
+    "ru":"и получить имя для компании (имя), имя домена, логотип,"
+  },
+
+  "a corporate identity, a marketing-kit, as well as a good-selling website and a customized advertising campaign.": {
+    "cz": "firemní identitu, marketingovou sadu, stejně jako dobře prodávanou webovou stránku a přizpůsobenou reklamní kampaň.",
+    "pl": "identyfikacja wizualna, zestaw marketingowy, a także dobrze sprzedająca się strona internetowa i spersonalizowana kampania reklamowa.",
+    "ru":"фирменный стиль, маркетинговый комплект, а также хорошо продаваемый веб-сайт и индивидуальную рекламную кампанию."
+  },
+
+
+
 
 }
