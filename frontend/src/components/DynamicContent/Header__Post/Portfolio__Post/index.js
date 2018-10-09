@@ -22,11 +22,11 @@ const renderReact = require('hypernova-react').renderReact;
 
     render() {
 
-
+      console.log(this.props)
     return (
 
 <Fragment> {
-  this.props.dataItem.map((item,key) => {
+  this.props.dataDside.map((item,key) => {
   return  <div className="grid">
       <figure className="effect-marley">
         <img src={`${process.env.REACT_APP_DOMAIN}/${item.thumbnail}`}

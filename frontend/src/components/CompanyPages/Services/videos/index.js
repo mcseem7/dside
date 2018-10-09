@@ -7,7 +7,7 @@ import LimitedService from '../serviceComponents/LimitedService'
 import ProjectVideo from './project__video.png'
 import './index.css'
 import playIcon from './playVideo.svg'
-
+import Translate, { reactTranslateChangeLanguage } from "translate-components";
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
 import WeCare from "../../../Basic/TrustBlocks/WeCare";
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
@@ -16,6 +16,7 @@ import LogoBrand from "../branding/logo_brand.png";
 import PortolioPost from "../../../DynamicContent/Header__Post/Portfolio__Post";
 import withDsideApi from "../../../../HOC/Fetch";
 import  { HeroVideo } from 'react-hero-video'
+
  class VideoPage extends Component {
   constructor() {
     super()
@@ -28,6 +29,7 @@ import  { HeroVideo } from 'react-hero-video'
 
   componentDidMount() {
     window.scrollTo(0,0)
+    reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
   }
 
   _onReady(event) {
@@ -73,13 +75,13 @@ import  { HeroVideo } from 'react-hero-video'
           <section className="view__container-videos">
 
             <div className="view__videos-left">
-              <div className="view__videos-title">
-                <h3>Professional commercials</h3>
-              </div>
-
-              <div className="view__videos-description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt  Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                  </p>
+              <div className="container__case-studies">
+                <div className="case-title">
+                  <h3><Translate>Case Studies</Translate></h3>
+                </div>
+                <div className="case-description">
+                  <p><Translate>It is enough to know what your video will be about and try to convey to the audience its meaning as if you were telling your friends about it. And after that you will definitely notice that your videos began to look much more often.</Translate></p>
+                </div>
               </div>
             </div>
             
@@ -103,15 +105,13 @@ import  { HeroVideo } from 'react-hero-video'
 
 <div id='case__wrapper' style={{background: '#fff'}}>
           <div className="container__case-studies">
-            <div className="case-title">
-              <h3>Case Studies</h3>
-            </div>
-            <div className="case-description">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                voluptatem.</p>
+             <div className="container__case-studies">
+              <div className="case-title">
+                <h3><Translate>Case Studies</Translate></h3>
+              </div>
+              <div className="case-description">
+                <p><Translate>Evaluate our previous experience . Each case in our portfolio perfectly shows the way we work.</Translate></p>
+              </div>
             </div>
             <div className="case__service__wrap" >
               <div className="case__service">

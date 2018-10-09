@@ -30,7 +30,8 @@
 }
 
 
-.right__form-container:hover {
+.right__form-container:hover,
+.right__form-container:active {
     transition: background 1000ms linear;
     background: url("./alexey.png");
     background-size: cover;

@@ -139,9 +139,12 @@ img.adv-icon {
 }
 
 .own-instance .own-heading {
-    font-size: 22px;
+    font-size: 20px;
     margin-top: 6px;
     margin-bottom: 7px;
+}
+.own-heading {
+    text-transform: uppercase;
 }
 
 .own-heading.doctor{

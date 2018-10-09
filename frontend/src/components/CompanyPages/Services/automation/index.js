@@ -15,6 +15,7 @@ import Advantages from "../../../Basic/TrustBlocks/Advantages";
 import PortolioPost from "../../../DynamicContent/Header__Post/Portfolio__Post";
 import withDsideApi from "../../../../HOC/Fetch";
 import { HeroVideo } from "react-hero-video";
+import { reactTranslateChangeLanguage } from "translate-components";
 
 
  class Automation extends Component {
@@ -23,6 +24,7 @@ import { HeroVideo } from "react-hero-video";
   }
   componentDidMount() {
     window.scrollTo(0,0)
+    reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
   }
 
   render () {

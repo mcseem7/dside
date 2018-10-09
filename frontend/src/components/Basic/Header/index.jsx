@@ -8,7 +8,7 @@ import Poppup from '../../../HOC/Poppup/index';
 import pl from "../../../HOC/ChangeLanguage/svg/006-poland.svg";
 import cz from "../../../HOC/ChangeLanguage/svg/003-czech-republic.svg";
 import ru from "../../../HOC/ChangeLanguage/svg/005-russia.svg";
-
+import Translate from 'translate-components'
 
 
 export default class Header extends Component {
@@ -148,14 +148,14 @@ export default class Header extends Component {
                 <div className="menu__header-item">
                   <div className="description__menu-title">
 
-                    <Link to={`/${this.props.domenErty}/aboutus`}   className="link__menu">About Us</Link>
+                    <Link to={`/${this.props.domenErty}/aboutus`}   className="link__menu"><Translate>About Us</Translate></Link>
                     {/*<p>Caption text under about us</p>*/}
                   </div>
                 </div>
 
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to={`/${this.props.domenErty}/contactus`}  className="link__menu">Contact Us</Link>
+                    <Link to={`/${this.props.domenErty}/contactus`}  className="link__menu"><Translate>Contact Us</Translate></Link>
                   </div>
                   {/*<div className="description__menu-title">*/}
                     {/*<p>Caption text under about us</p>*/}
@@ -167,7 +167,7 @@ export default class Header extends Component {
               <div className="menu__header-column">
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to={`/${this.props.domenErty}/blog`}  className="link__menu">Blog</Link>
+                    <Link to={`/${this.props.domenErty}/blog`}  className="link__menu"><Translate>Blog</Translate></Link>
                   </div>
                   {/*<div className="description__menu-title">*/}
                     {/*<p>Caption text under about us</p>*/}
@@ -176,7 +176,7 @@ export default class Header extends Component {
 
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to={`/${this.props.domenErty}`}  className="link__menu">Home</Link>
+                    <Link to={`/${this.props.domenErty}`}  className="link__menu"><Translate>Home</Translate></Link>
                   </div>
                   {/*<div className="description__menu-title">*/}
                     {/*<p>Caption text under about us</p>*/}

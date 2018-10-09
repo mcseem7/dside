@@ -18,6 +18,7 @@ const getIdentityDomen =  window.location.pathname
 
 
 
+
 const render = (Component) => {
   return   ReactDOM.hydrate(
     <BrowserRouter >

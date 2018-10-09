@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './style.css'
 import Ketchup from './ketchup.jpg'
+import Translate from "translate-components";
 
 export default class Iter extends Component {
     constructor() {
@@ -18,11 +19,11 @@ export default class Iter extends Component {
                 <div className="page-centered cu-wrapper iter">
                 <div className="iterimage"><img src={Ketchup} className="ketchupp"/></div>
                     <div className="cu-content" id="iter">
-                        <h3>International Expierence </h3>
+                      <h3><Translate>International Expierence</Translate></h3>
                         {/* TODO: Inject LP name instead of *LP NAME **/}
                         <div className="text">
                             <p>
-                                We use international practice to make our campaings and products work better for you.
+                              <Translate>We use international practice to make our campaings and products work better for you.</Translate>
                             </p>
                         </div>
 

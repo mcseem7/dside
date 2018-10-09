@@ -8,13 +8,14 @@
     max-width: unset;
     font-size: 2.8rem;
     margin: 0 auto;
-    top: 18px;
+    top: 118px;
     -webkit-text-fill-color: white;
     text-shadow: 0 5px 5px rgba(95, 51, 20, 0.61);
     font-family: 'MontBold', sans-serif;
     width: 100%;
     font-weight: 700;
 }
+
 .comp-h-right span, .comp-h-left span{ display: none;}
 .websites-dev__quality h2{text-align: center; padding-bottom: 1rem; font-family: 'MontBold',sans-serif;}
 .websites-dev__quality{display: flex; flex-direction: column;}
@@ -26,7 +27,7 @@
 .comp-h-right, .comp-h-left{display: flex; align-items: center; align-content: center;}
 .body-websites-comparsion{display: flex; flex-direction: column; justify-content: center; justify-items: center; align-items: center;}
 .roow{display: flex; font-family: 'MontLight',sans-serif; width: 375px; line-height: 2rem;}
-.roow span{font-family: 'MontBold',sans-serif; flex-basis: 28%; text-align: center;}
+.roow span{font-family: 'MontBold',sans-serif; flex-basis: 28%; text-align: center; text-transform: uppercase}
 .roow strong{ flex-basis: 43%; font-family: 'MontLight',sans-serif; text-align: center; font-size: .8rem;}
 .greygoose{opacity: .4;}
 .greater{font-size: 1.4rem;}
@@ -61,7 +62,6 @@
 }
 .logo__service-img_website {
     position: absolute;
-    margin-top: 50px;
 }
 .comp-h-right span{flex-direction: column;}
 }
@@ -83,5 +83,11 @@
     .dside_textContainer-website .logo__service_slogan {
         top: 135px;
         font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .logo__service-img_website {
+        top: 70px;
     }
 }

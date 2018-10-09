@@ -9,7 +9,7 @@ import louis from './lois_viton.png'
 import arrow from './arrow.png'
 
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
-
+import Translate, { reactTranslateChangeLanguage } from "translate-components";
 import WheelReact from 'wheel-react';
 import louisbag from './louisbag.png'
 import shadow from './shadow.png'
@@ -56,6 +56,7 @@ class BrandPage extends Component {
 
     componentDidMount() {
         window.scrollTo(0, 0)
+      reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
     }
 
 
@@ -70,7 +71,9 @@ class BrandPage extends Component {
     }
 
 
+
     render() {
+
         const {animationContainerReference} = this.props;
         WheelReact.config({
             up: () => {
@@ -97,7 +100,7 @@ class BrandPage extends Component {
                             logoHeader={LogoBrand}
                             imgLogoPosition={'logo__service-img_brand'}
                             textContainer={'dside_textContainer-brand'}
-                            serviceSlogan={[<Fragment>DSIDE to make your brand work <br/> BETTER</Fragment>]}
+                            serviceSlogan={[<Fragment><Translate>DSIDE to make your brand work</Translate> <br/> <Translate>BETTER</Translate></Fragment>]}
                             serviceCategory={'Branding'}
                         />
 
@@ -107,7 +110,7 @@ class BrandPage extends Component {
                 {
                     <div
                         className="branding__service-case_studies "
-                        onScrollCapture={this.scrollCheck} {...WheelReact.events}>
+                        onScrollCapture={this.scrollCheck} {...WheelReact.events} >
 
                         <div className="branding__service-left">
 
@@ -172,21 +175,21 @@ class BrandPage extends Component {
 
 
                             {this.state.louisbagtext ?
-                                <p className={`title__louis animate__louis ${'price_animate'}`}> Well-branded bag</p>
+                              <p className={`title__louis animate__louis ${'price_animate'}`}><Translate>Well-branded bag</Translate></p>
                                 :
-                                <p className={`title__louis animate__louis ${'price_animate_end'}`}> Sample bag</p>
+                              <p className={`title__louis animate__louis ${'price_animate_end'}`}><Translate>Sample bag</Translate></p>
                             }
 
 
                             <p className="loius__viton_title-description">
-                                On branding depends
+                              <Translate>On branding depends</Translate>
                             </p>
 
 
                             <p className="loius__viton_description">
-                                How expensive you can sell your goods or services.<br/>
-                                As You know, brand-name original items from time to time are
-                                even more expensive than their unnamed counterparts.
+                              <Translate>How expensive you can sell your goods or services.</Translate><br/>
+                              <Translate>As You know, brand-name original items from time to time are
+                                  even more expensive than their unnamed counterparts.</Translate>
                             </p>
                             {/*<div className="service_button_down">*/}
                             {/*order now*/}
@@ -201,17 +204,17 @@ class BrandPage extends Component {
                     <div className="find__out-wrapper">
                         <div className="find__container">
                             <div className="diff__title">
-                                <p>Statistics of successful business</p>
+                              <p><Translate>Statistics of successful business</Translate></p>
                             </div>
 
                             <div className="find__out-title">
-                                <h2>What’s the difference?</h2>
+                                <h2><Translate>What’s the difference?</Translate></h2>
                             </div>
 
                         </div>
 
                         <div className="find__button" onClick={this.findOut}>
-                            find out
+                          <Translate>find out</Translate>
                         </div>
                     </div>
 
@@ -234,12 +237,12 @@ class BrandPage extends Component {
                                             </div>
 
                                             <div className="cola__content">
-                                                <h2>coca-cola</h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                              <h2><Translate>Fanta</Translate></h2>
+                                                <p><Translate>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                                                     eiusmod tempor
                                                     incididunt ut labore et dolore magna aliqua.
                                                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                                    nis</p>
+                                                  nis</Translate></p>
                                             </div>
                                         </div>
 
@@ -324,14 +327,10 @@ class BrandPage extends Component {
                 {/*<CaseService/>*/}
                 <div className="container__case-studies">
                     <div className="case-title">
-                        <h3>Case Studies</h3>
+                      <h3><Translate>Case Studies</Translate></h3>
                     </div>
                     <div className="case-description">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
-                            voluptatem.</p>
+                        <p><Translate>Evaluate our previous experience . Each case in our portfolio perfectly shows the way we work.</Translate></p>
                     </div>
                 </div>
                 <div className="case__service">

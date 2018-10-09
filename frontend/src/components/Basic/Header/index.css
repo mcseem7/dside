@@ -367,3 +367,8 @@
 }
 
 
+@media screen and (max-width: 480px) {
+    .main__header-left {
+        padding-bottom: 50px;
+    }
+}

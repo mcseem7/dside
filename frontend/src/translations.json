@@ -63,6 +63,449 @@
         "ru": "Легенда Бренда",
         "pl": "Legenda marki",
         "cz": "Legenda značky"
-    }
+    },
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt": {
+        "ru": "Легенда Бренда",
+        "pl": "Legenda marki",
+        "cz": "Legenda značky"
+    },
 
+    "is a modern, fast-growing company, in which the main principles of work are high professionalism,": {
+       "ru": "является современной, быстро развивающейся компанией, в которой основными принципами работы являются высокий профессионализм,",
+        "pl": "jest nowoczesną, szybko rozwijającą się firmą, w której głównymi zasadami pracy są wysoki profesjonalizm,",
+        "cz": "je moderní, rychle se rozvíjející společnost, ve které jsou hlavními principy práce vysoká profesionalita,"
+    },
+    "responsibility to each client and the reliability of the guaranteed result": {
+        "ru": "ответственность каждого клиента и надежность гарантированного результата",
+        "pl": "odpowiedzialność wobec każdego klienta i wiarygodność gwarantowanego wyniku",
+        "cz": "odpovědnost vůči každému klientovi a důvěryhodnost garantovaného výsledku"
+    },
+    "why us?": {
+        "ru": "Почему мы?",
+        "pl": "Dlaczego my?",
+        "cz": "Proč nás?"
+    },
+  "Automated business": {
+    "ru": "Автоматизация бизнеса",
+    "pl": "Automatyzacja biznesu",
+    "cz": "Automatizace podnikání"
+  },
+  "Do so that your business is working while you are solving more important issues": {
+    "pl": "Zrób tak, aby Twoja firma działała, a Ty rozwiązujesz ważniejsze problemy",
+    "cz": "Udělejte tak, aby vaše podnikání fungovalo při řešení důležitějších otázek",
+    "ru": "Сделаем так, чтобы ваш бизнес работал, когда вы решаете более важные проблемы"
+  },
+  "Create brand yourself": {
+    "pl": "Stwórz swoją markę",
+    "cz": "Vytvořte svou značku",
+    "ru": "Сделать свой бренд"
+  },
+  "Branded companies sell their products much more expensive, what's stopping you?": {
+    "pl": "Markowe firmy sprzedają swoje produkty znacznie droższe, co Cię powstrzymuje?",
+    "cz": "Značkové společnosti prodávají své výrobky mnohem dražší, co vás zastaví?",
+    "ru": "Фирменные компании продают свою продукцию намного дороже, что останавливает вас?"
+  },
+  "Memorable logos": {
+    "pl": "Niezapomniane logo",
+    "cz": "Památné loga",
+    "ru": "Запоминающиеся логотипы"
+  },
+  "Make your client remember your company": {
+    "pl": "Spraw, aby Twój klient zapamiętał Twoją firmę",
+    "cz": "Vyžádejte svého klienta o zapamatování vaší společnosti",
+    "ru": "Заставьте вашего клиента запомнить вашу компанию"
+  },
+  "Expirienced websites": {
+    "cz": "Zkušených webových stránek",
+    "pl": "Doświadczone strony internetowe",
+    "ru": "Опытные веб-сайты"
+  },
+  "Which perform specific business tasks": {
+    "cz": "Které vykonávají konkrétní obchodní úkoly",
+    "pl": "Które wykonują określone zadania biznesowe",
+    "ru": "Какие конкретные бизнес-задачи?"
+  },
+  "meet our team": {
+    "ru": "Встречай нашу команду",
+    "cz": "Setkání s naším týmem",
+    "pl": "Poznaj naszą drużynę"
+  },
+  "Drop the line": {
+    "ru": "Прокрутите",
+    "cz": "Zrušte linku",
+    "pl": "Upuść linię"
+  },
+  "Ready to talk to the team who can’t wait to": {
+    "ru": "Готов поговорить с командой, которая не может дождаться",
+    "cz": "Připravte se na příkaz, který nelze odeslat",
+    "pl": "Gotowy do rozmowy z zespołem, który nie może czekać"
+  },
+  "take your company to new, exciting places?": {
+    "ru": "взять вашу компанию в новые, захватывающие места?",
+    "cz": "převezme svou společnost na nové, vzrušující místa?",
+    "pl": "przenieść swoją firmę do nowych, ekscytujących miejsc?"
+  },
+  "Send": {
+    "ru": "Отправить",
+    "cz": "Poslat",
+    "pl": "Wysłać"
+  },
+  "Home": {
+    "ru": "Главная",
+    "cz": "Home",
+    "pl": "Home"
+  },
+  "Blog": {
+    "ru": "Блог",
+    "cz": "Blog",
+    "pl": "Blog"
+  },
+  "About Us": {
+    "ru": "О нас",
+    "cz": "O nás",
+    "pl": "O nas"
+  },
+  "Home": {
+    "ru": "Главная",
+    "cz": "Home",
+    "pl": "Home"
+  },
+  "Contact Us": {
+    "ru": "Свяжитесь с нами",
+    "cz": "Kontaktujte nás",
+    "pl": "Skontaktuj się z nami"
+  },
+  "New posts": {
+    "ru": "Новые посты",
+    "cz": "Nové posts",
+    "pl": "Nowe posts"
+  },
+  "Are coming soon.": {
+    "ru": "Скоро.",
+    "cz": "Brzy přijdou.",
+    "pl": "Już wkrótce."
+  },
+  "Suggest a topic": {
+    "ru": "Предложить тему для блога.",
+    "cz": "navrhnout téma.",
+    "pl": "zaproponuj temat."
+  },
+  "Well-branded bag": {
+    "ru": "Хорошая фирменная сумка",
+    "cz": "Dobře značková taška",
+    "pl": "Dobrze markowa torba"
+  },
+  "Sample bag": {
+    "ru": "Просто сумка",
+    "cz": "Jen tašku",
+    "pl": "Jen bag"
+  },
+  "On branding depends": {
+    "ru": "От брендинга зависит",
+    "cz": "Na značku závisí",
+    "pl": "Na temat marki zależy"
+  },
+  "As You know, brand-name original items from time to time are even more expensive than their unnamed counterparts.": {
+    "ru": "От брендинга зависит",
+    "cz": "Jak znáte, originální věci značky čas od času jsou ještě dražší než jejich nepojmenované protějšky.",
+    "pl": "Jak wiadomo, oryginalne markowe przedmioty od czasu do czasu są nawet droższe niż ich nienazwane odpowiedniki."
+  },
+  "How expensive you can sell your goods or services.": {
+    "ru": "Как дорого вы можете продать свои товары или услуги.",
+    "cz": "Jak drahé můžete prodávat své zboží nebo služby.",
+    "pl": "Jak drogie możesz sprzedać swoje towary lub usługi."
+  },
+  "Statistics of successful business": {
+    "ru": "Статистика успешного бизнеса",
+    "cz": "Statistiky úspěšného podnikání",
+    "pl": "Statystyki udanego biznesu"
+  },
+  "What’s the difference?": {
+    "ru": "Какая разница?",
+    "cz": "Jaký je v tom rozdíl?",
+    "pl": "Co za różnica?"
+  },
+  "find out": {
+    "ru": "Узнать",
+    "cz": "zjistit",
+    "pl": "dopytać"
+  },
+  "Evaluate our previous experience . Each case in our portfolio perfectly shows the way we work.": {
+    "ru": "Оцените наш предыдущий опыт . Каждый случай в нашем портфолио прекрасно показывает, как мы работаем.",
+    "cz": "Vyhodnoťte naše předchozí zkušenosti . Každý případ v našem portfoliu dokonale ukazuje způsob, jakým pracujeme.",
+    "pl": "Oceń nasze wcześniejsze doświadczenie . Każdy przypadek w naszym portfolio doskonale pokazuje, w jaki sposób pracujemy."
+  },
+  "Case Studies": {
+    "cz": "případové studie",
+    "pl": "studium przypadku",
+    "ru":"примеры работ"
+  },
+  "Become powerful": {
+    "cz": "Stać się potężnym",
+    "pl": "Stát se silným",
+    "ru":"Cтать Лютим"
+  },
+"Take the first step to the strongest and most profitable sales. Already advertised? Order an audit of an existing advertising campaign, we will point out the weaknesses": {
+  "pl": "Zrób pierwszy krok do najsilniejszej i najbardziej dochodowej sprzedaży. Już reklamowane? Zamów audyt istniejącej kampanii reklamowej, wskażemy słabe strony",
+  "cz": "Udělejte první krok k nejsilnějšímu a nejvýnosnějšímu prodeji. Již jste inzerovali? Objednejte si audit stávající reklamní kampaně, upozorníme na slabiny",
+  "ru":"Сделайте первый шаг к самым сильным и прибыльным продажам. Уже рекламируется? Закажите аудит существующей рекламной кампании, отметим недостатки"
+ },
+  "for free.": {
+    "cz": "zdarma.",
+    "pl": "za darmo.",
+    "ru":"бесплатно."
+  },
+  "We are engaged in packaging business and sale of its services": {
+    "ru": "Мы занимаемся упаковкой бизнеса и продаем его услуги",
+    "pl": "Zajmujemy się produkcją opakowań i sprzedażą ich usług",
+    "cz":"Zabýváme se balením a prodejem služeb"
+  },
+  "You can just come up with an IDEA": {
+    "cz": "Stačí přijít s IDEA",
+    "pl": "Możesz po prostu wymyślić IDEA",
+    "ru":"Вы можете просто придумать IDEA"
+  },
+
+  "and get a name for the company (naming), a name for the domain, a logo,": {
+    "cz": "a získat jméno pro společnost (pojmenování), název domény, logo,",
+    "pl": "i uzyskaj nazwę firmy (nazwę), nazwę domeny, logo,",
+    "ru":"и получить имя для компании (имя), имя домена, логотип,"
+  },
+
+  "a corporate identity, a marketing-kit, as well as a good-selling website and a customized advertising campaign.": {
+    "cz": "firemní identitu, marketingovou sadu, stejně jako dobře prodávanou webovou stránku a přizpůsobenou reklamní kampaň.",
+    "pl": "identyfikacja wizualna, zestaw marketingowy, a także dobrze sprzedająca się strona internetowa i spersonalizowana kampania reklamowa.",
+    "ru":"фирменный стиль, маркетинговый комплект, а также хорошо продаваемый веб-сайт и индивидуальную рекламную кампанию."
+  },
+
+  "What's the difference?": {
+    "cz": "Jaký je v tom rozdíl?",
+    "pl": "Co za różnica?",
+    "ru":"Какая разница?"
+  },
+
+  "USERS": {
+    "ru": "ПОЛЬЗОВАТЕЛИ",
+    "cz": "Uživatelé",
+    "pl":"Użytkownicy"
+  },
+
+  "PER CUSTOMER": {
+    "ru": "для клиента",
+    "cz": "před zákazníkem",
+    "pl":"przed klientem"
+  },
+
+  "SALES": {
+    "ru": "Продажи",
+    "cz": "Prodej",
+    "pl":"Sprzedaj"
+  },
+
+  "RESALES": {
+    "ru": "перепродажи",
+    "pl": "odsprzedaż",
+    "cz":"opětovné prodeje"
+  },
+
+  "FRIENDS INVITED": {
+    "ru": "Приглашенние друзья",
+    "pl": "PRZYJACIELE ZAPRASZAMY",
+    "cz":"Přátelé pozvaní"
+  },
+
+  "RETURNED": {
+    "ru": "Возвращенние",
+    "pl": "zwrócony",
+    "cz":"vratil"
+  },
+
+  "TOTAL": {
+    "ru": "Сума",
+    "pl": "ogółem",
+    "cz":"totální"
+  },
+
+
+  "Professional commercials": {
+    "ru": "Профессиональная реклами",
+    "cz": "Profesionální reklamy",
+    "pl": "Profesjonalne reklamy"
+  },
+
+  "It is enough to know what your video will be about and try to convey to the audience its meaning as if you were telling your friends about it. And after that you will definitely notice that your videos began to look much more often.": {
+    "ru": " Достаточно знать, о чем будет ваше видео, и попытаться донести до зрителей его смысл так, как если бы вы рассказывали о нем своим друзьям. И после этого вы обязательно заметите, что ваши ролики стали смотреть гораздо чаще.",
+    "pl": "Wystarczy wiedzieć, na czym polega film i starać się przekazać odbiorcom znaczenie, jak gdyby opowiadali o tym swoim znajomym. A potem na pewno zauważysz, że twoje filmy zaczęły wyglądać znacznie częściej.",
+    "cz":  "Stačí, abyste věděli, o co bude vaše video, a snažte se sdělit divákovi svůj význam, jako byste o něm informovali své přátele. A pak si určitě všimnete, že vaše videa začaly vypadat mnohem častěji."
+  },
+
+  "International Expierence": {
+    "ru": "Международный опыт",
+    "cz": "Mezinárodní zkušenosti",
+    "pl": "Międzynarodowe doświadczenie"
+  },
+
+  "We use international practice to make our campaings and products work better for you.": {
+    "ru": "Мы используем международную практику, чтобы наши кампании и продукты работали лучше для вас.",
+    "cz": "Využíváme mezinárodní praxe k tomu, aby naše kampaně a produkty fungovaly lépe pro vás.",
+    "pl": "Korzystamy z międzynarodowych praktyk, aby nasze kampanie i produkty działały lepiej dla Ciebie."
+  },
+
+  "We try to surround ourselves with people who are competent in their business.": {
+    "ru": "Мы стараемся окружить себя людьми, которые компетентны в своем бизнесе.",
+    "cz": "Snažíme se obklopovat s lidmi, kteří jsou kompetentní v jejich podnikání.",
+    "pl": "Staramy się otaczać ludźmi, którzy są kompetentni w swoim biznesie."
+  },
+
+  "Look We all have 'our own' people.": {
+    "ru": "Смотрите, у всех нас есть «наши собственные» люди.",
+    "cz": "Podívejte, všichni máme 'naše' lidi.",
+    "pl": "Spójrz Wszyscy mamy 'naszych' ludzi."
+  },
+
+  "own": {
+    "ru": "Владелец",
+    "cz": "Vlastní",
+    "pl": "Posiadać"
+  },
+
+  "is your own company in the field of creation of sites, business promotion, the Internet marketing and increase of sales on sites.": {
+    "ru": "ваша собственная компания в области создания сайтов, продвижения бизнеса, интернет-маркетинга и увеличения продаж на сайтах.",
+    "cz": "Vje vaší vlastní firmou v oblasti tvorby webových stránek, podpory podnikání, internetového marketingu a nárůstu prodeje na stránkách.",
+    "pl": "to Twoja własna firma w zakresie tworzenia stron, promocji biznesu, marketingu internetowego i wzrostu sprzedaży na stronach."
+  },
+
+
+  "Pure advantages of DSIDE": {
+    "ru": "Чистые преимущества от DSIDE",
+    "pl": "Čisté výhody DSIDE",
+    "cz": "Czyste zalety DSIDE"
+  },
+
+
+  "Accurate meeting deadlines": {
+    "ru": "Точные сроки выполнения",
+    "pl": "Dokładne terminy spotkań",
+    "cz": "Přesné termíny splnění"
+  },
+
+  "We can not miss deadlines because each employee is financially responsible": {
+    "ru": "Мы не можем пропустить сроки, поскольку каждый сотрудник несет финансовую ответственность.",
+    "pl": "Nie możemy przegapić terminów, ponieważ każdy pracownik ponosi odpowiedzialność finansową",
+    "cz": "Nesmíme chybět termíny, protože každý zaměstnanec je finančně odpovědný"
+  },
+
+"You can watch the process": {
+  "ru": "Можете посмотреть процесс.",
+  "pl": "Możesz obejrzeć proces.",
+  "cz": "Proces můžete sledovat."
+},
+
+  "You can see the progress of your project in our innovative Nimb system in detail. 24/7": {
+    "ru": "Вы можете подробно ознакомиться с ходом вашего проекта в нашей инновационной системе Nimb. 24/7",
+    "pl": "Możesz zobaczyć postęp swojego projektu w naszym innowacyjnym systemie Nimb w szczegółach. 24/7",
+    "cz": "Průběh vašeho projektu můžete vidět podrobněji v našem inovativním systému Nimb. 24/7"
+  },
+
+  "Highest experienced team": {
+      "ru": "Самая опытная команда",
+    "cz": "Nejvyšší zkušený tým",
+    "pl": "Najbardziej doświadczony zespół"
+  },
+
+  "Five years - is minimum experience of experts who work in our team": {
+    "ru": "Пять лет - это минимальный опыт экспертов, которые работают в нашей команде",
+    "pl": "Pięć lat - to minimalne doświadczenie ekspertów, którzy pracują w naszym zespole ",
+    "cz": "Pět let - je to minimální zkušenost odborníků, kteří pracují v našem týmu "
+  },
+
+
+  "Highest quality products": {
+    "ru": "Продукты самого высокого качества",
+    "pl": "Najwyższej jakości produkty",
+    "cz": "Produkty nejvyšší kvality"
+  },
+
+  "Our customers receive more than they expected!": {
+    "ru": "Наши клиенты получают больше, чем ожидали!",
+    "pl": "Nasi klienci otrzymują więcej, niż oczekiwali",
+    "cz": "Naši zákazníci dostávají více, než očekávali"
+  },
+
+  "Why do DSIDE's": {
+    "ru": "Почему DSIDE's",
+    "pl": "Dlaczego DSIDE's",
+    "cz": "Proč je DSIDE's"
+  },
+
+  "sell better": {
+    "ru": "лучшие продажи",
+    "pl": "sprzedawać lepiej",
+    "cz": "prodat lépe"
+  },
+
+  "Our slogan - we do care.": {
+    "cz": "Náš slogan - je nám jedno.",
+    "pl": "Nasz slogan - dbamy.",
+    "ru": "Наш лозунг - мы заботимся"
+  },
+
+  "When we receive an order for the development or advertisement of a calculator of an insurance company, we study what is retrocedent and reinsurance,": {
+    "cz": "Když obdržíme rozkaz pro vývoj nebo inzerci kalkulačky pojišťovny, studujeme, co je retrocese a zajištění",
+    "ru": "Когда мы получаем заказ на разработку или рекламу калькулятора страховой компании, мы изучаем, что такое ретроспектива и перестрахование",
+    "pl": "Kiedy otrzymujemy zamówienie na opracowanie lub reklamę kalkulatora firmy ubezpieczeniowej, badamy, co jest retrocedentem i reasekuracją"
+  },
+
+  "delving into the heart of  the matter. To talk with clients of our customer in one language.": {
+    "cz": "vlézt do srdce této věci. Mluvit s klienty zákazníka v jednom jazyce.",
+    "pl": "zagłębiając się w sedno sprawy. Aby porozmawiać z klientami naszego klienta w jednym języku.",
+    "ru": "вникая в суть дела. Поговорить с клиентами нашего клиента на одном языке."
+  },
+  "At the same time, the customer's participation is minimal.": {
+    "cz": "Účast zákazníka je zároveň minimální.",
+    "pl": "W tym samym czasie udział klienta jest minimalny.",
+    "ru": "В то же время участие клиента минимально."
+  },
+
+  "Imagine if the doctor asked the client: 'Show me how you want me to treat your tooth?'": {
+    "cz": "Představte si, jestli se lékař zeptal klienta: 'Ukažte mi, jak chcete, abych se ke zubu zacházel?'",
+    "pl": "Wyobraź sobie, że lekarz zapytał klienta: 'Pokaż mi, jak chcesz, żebym leczył twój ząb?'",
+    "ru": "Представьте, если бы врач спросил клиента: «Покажите мне, как вы хотите, чтобы я лечил ваш зуб?»"
+  },
+
+  "Man, damn, I just want it not to hurt. Do it.": {
+    "ru": "Человек, блин, я просто хочу, чтобы не повредить. Сделай это.",
+     "pl": "Człowieku, cholera, chcę tylko, żeby nie bolało. Zrób to.",
+    "cz": "Člověče, zatraceně, chci, aby to neublížilo. Udělej to."
+  },
+
+  "order now": {
+    "cz": "objednat teď",
+    "pl": "Zamów teraz",
+    "ru": "заказать сейчас"
+  },
+
+  "DSIDE to make your business earn more MONEY": {
+    "ru": "DSIDE, чтобы ваш бизнес зарабатывал больше денег",
+    "pl": "DSIDE, aby Twoja firma zarabiała więcej PIENIĄDZE",
+    "cz": "DSIDE, aby vaše firma vydělala více peněz"
+  },
+
+  "DSIDE to make your brand work": {
+    "cz": "DSIDE, aby vaše značka fungovala",
+    "pl": "DSIDE, aby Twoja marka działała",
+    "ru": "DSIDE, чтобы ваша марка работала"
+  },
+
+  "BETTER": {
+    "ru": "ЛУЧШЕ",
+    "pl": "LEPSZY",
+    "cz": "lepší"
+  },
+
+  "DSIDE to make your website SELL BETTER": {
+    "cz": "DSIDE, aby vaše webové stránky prodávaly lépe",
+    "pl": "DSIDE, aby Twoja strona internetowa SPRZEDAWAŁA LEPIEJ",
+    "ru": "DSIDE, чтобы сделать ваш сайт ПРОДАВАТЬ ЛУЧШЕ"
+  }
 }

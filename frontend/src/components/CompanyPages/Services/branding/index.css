@@ -113,10 +113,6 @@
 
 
 
-
-
-
-
 .animate__louis {
     width: 383px;
     text-align: left;
@@ -646,6 +642,8 @@ p.loius__viton_title-description{font-size: 1.4rem;}
     display: flex;
 }
 
+
+
 @media screen and (max-width: 480px){
   .dside_textContainer-brand  .logo__service_slogan {
         top: 200px;
@@ -656,6 +654,10 @@ p.loius__viton_title-description{font-size: 1.4rem;}
 
     .dside_textContainer-brand .logo__service-img_brand {
         margin-top: -80px;
+    }
+
+    .title__louis {
+        width: 100%;
     }
 
     .cola-item img {

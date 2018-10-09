@@ -12,7 +12,6 @@ import Website from './components/CompanyPages/Services/websites'
 import {CSSTransition,TransitionGroup} from 'react-transition-group'
 import Cookies from 'js-cookie'
 import Header from './components/Basic/Header/index';
-
 import loadable from 'loadable-components';
 import 'regenerator-runtime/runtime';
 import LanguagePoppup from "./HOC/ChangeLanguage/ChangePup";
@@ -27,6 +26,7 @@ import Advertising from "./components/CompanyPages/Services/advertising";
 import Automation from "./components/CompanyPages/Services/automation";
 import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
 import translations from './translations.json'
+
 
 
 class App extends Component {
@@ -55,7 +55,7 @@ class App extends Component {
             this.setState({cook: false})
         }
         window.scrollTo(0,0)
-      reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
+
 
     }
 
@@ -69,6 +69,7 @@ class App extends Component {
         function findWord(word, str) {
             return str.split(' ').some(function(w){return w === word})
         }
+      reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
         return (
             <TranslateProvider translations={translations} defaultLanguage={'en'}>
                 <div className="App">
@@ -193,6 +194,8 @@ class App extends Component {
                             </div>
                         </div> : null
                     }
+
+
 
                     {this.state.langPoppup ? <LanguagePoppup/> : null}
                 </div>
