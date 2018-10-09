@@ -190,4 +190,8 @@
     .right__form-container:hover {
         background-position-y: 30%;
     }
+
+    .question__form p {
+        text-align: center;
+    }
 }
