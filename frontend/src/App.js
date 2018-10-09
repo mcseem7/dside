@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from "react";
 import Layout from './components'
 import './components/App.css'
 import Footer from './components/Basic/Footer'
@@ -36,7 +36,8 @@ class App extends Component {
 
         this.state = {
             cook: true,
-            langPoppup: false
+            langPoppup: false,
+            orientation: false
         }
 
     }
@@ -49,14 +50,37 @@ class App extends Component {
     }
 
     componentDidMount() {
+      window.scrollTo(0,0)
+      function isLandscape() {
+        return (window.orientation === 90 || window.orientation === -90);
+      }
+
+      if(isLandscape() == true) {
+        this.setState({
+          orientation: true
+        })
+      }
+
+      const self = this;
         if (Cookies.get('accept-cookie') == undefined) {
             this.setState({cook: true})
         } else {
             this.setState({cook: false})
         }
-        window.scrollTo(0,0)
+      window.addEventListener("orientationchange", function() {
+        self.checkOrient()
+      }, false);
+    }
 
-
+    checkOrient = () => {
+      if (window.matchMedia("(orientation: portrait)").matches) {
+        this.setState({
+          orientation: true
+        })
+      }
+      if (window.matchMedia("(orientation: landscape)").matches) {
+        this.setState({orientation: false})
+      }
     }
 
     confirmCookies = () => {
@@ -72,6 +96,20 @@ class App extends Component {
       reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
         return (
             <TranslateProvider translations={translations} defaultLanguage={'en'}>
+              <Fragment>
+                {
+                  this.state.orientation  ? <Fragment>
+                    <div className="stop_rotation">
+                      <div className="stop_rotation_contant_wrapper">
+                        <div className="stop_rotation_content_img_wrapper">
+                          <img className="stop_rotation_content_img" src={'http://www.masons.pl/wizex/mobile/images/clock.svg'} />
+                        </div>
+                        <p className="stop_rotation_content_p">Proszę<br/>obrócić<br/>urządzenie</p>
+                      </div>
+                    </div>
+                  </Fragment> : null
+                }
+              </Fragment>
                 <div className="App">
                     <Route exact path="/" render={(props) => (<Redirect to={`/en`}    />)} />
                     <Route  path={'/:language'} render={(props) => {
@@ -194,6 +232,7 @@ class App extends Component {
                             </div>
                         </div> : null
                     }
+
 
 
 
