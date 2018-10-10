@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react'
 import './index.css'
-
-
+import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
+import Translate from 'translate-components'
 
  export  default  class Poppup extends Component {
   constructor(props) {
@@ -14,6 +14,11 @@ import './index.css'
     }
   }
 
+
+
+  componentDidMount() {
+    reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
+  }
 
 
 
@@ -51,25 +56,26 @@ import './index.css'
               <div class="form-wrap">
                 {this.state.result ?
                   <div id="form-result">
-                    <h3 id="thanks">Cпасибо!
-                      <span>Заявка успешно отправлена!</span></h3>
+                    <h3 id="thanks"><Translate>Thank you! Application successfully submitted!</Translate></h3>
                   </div> :  <div id="form-itself">
-                      <h3 >Оставьте Ваш номер телефона</h3>
-                      <p >И Вы получите бесплатную консультацию по интересующему Вас вопросу. Обычно мы перезваниваем в течении 30 секунд.</p>
+                    <h3><Translate>Leave your phone number</Translate></h3>
+                      <p><Translate>And you will receive a free consultation on the question that interests you. Usually we call back
+                        within 30 seconds.
+                      </Translate></p>
                       <form  onSubmit={this.handleSubmit} id="request-form" method="post" autocomplete="off">
                         <input type="hidden" name="csrfmiddlewaretoken" value="16en0jPOOddfSpZ8FAdslU61aXFCtePx" />
 
                         <div>
                           <label for="id_subject">Имя:</label>
 
-                          <input ref={this.nameRef} id="id_name" maxlength="50" minlength="3" name="name" placeholder="Имя" required="required" type="text" />
+                          <input ref={this.nameRef} id="id_name" maxlength="50" minlength="3" name="name" placeholder="name" required="required" type="text" />
                         </div>
                         <div>
                           <label for="id_sender">Телефон:</label>
 
-                          <input   ref={this.phoneRef} id="id_phone" maxlength="50" minlength="6" name="phone" placeholder="Телефон" required="required" type="tel" />
+                          <input   ref={this.phoneRef} id="id_phone" maxlength="50" minlength="6" name="phone" placeholder="phone" required="required" type="tel" />
                         </div>
-                        <input type="submit" class="button14" value="Отправить" />
+                        <button type="submit" class="button14"  ><Translate>Send</Translate></button>
                       </form>
                     </div>
                 }

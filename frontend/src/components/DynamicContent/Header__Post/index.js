@@ -65,9 +65,9 @@ import {LangContextConsumer} from "../Main";
                   <img src={iconGrid} alt="" />
                 </div>
 
-                <button className="load">
-                  load more
-                </button>
+                {/*<button className="load">*/}
+                  {/*load more*/}
+                {/*</button>*/}
               </div>
             </div>
 

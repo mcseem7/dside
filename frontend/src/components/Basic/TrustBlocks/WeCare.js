@@ -27,7 +27,7 @@ export default class WeCare extends Component {
                             <p>
                               <Translate>Our slogan - we do care.</Translate><br/>
                                 <Translate>When we receive an order for the development or advertisement of a calculator of an
-                                  insurance company, we study what is retrocedent and reinsurance</Translate>, <Translate>delving into the heart
+                                  insurance company, we study what is retrocedent and reinsurance,</Translate>, <Translate>delving into the heart
                               of  the matter. To talk with clients of our customer in one language.</Translate>
                             </p>
                             <p>

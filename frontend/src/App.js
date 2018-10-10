@@ -26,7 +26,7 @@ import Advertising from "./components/CompanyPages/Services/advertising";
 import Automation from "./components/CompanyPages/Services/automation";
 import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
 import translations from './translations.json'
-
+import clock from './clock.svg'
 
 
 class App extends Component {
@@ -102,7 +102,7 @@ class App extends Component {
                     <div className="stop_rotation">
                       <div className="stop_rotation_contant_wrapper">
                         <div className="stop_rotation_content_img_wrapper">
-                          <img className="stop_rotation_content_img" src={'http://www.masons.pl/wizex/mobile/images/clock.svg'} />
+                          <img className="stop_rotation_content_img" viewBox="0 0 250 250" src={clock} />
                         </div>
                         <p className="stop_rotation_content_p">Proszę<br/>obrócić<br/>urządzenie</p>
                       </div>

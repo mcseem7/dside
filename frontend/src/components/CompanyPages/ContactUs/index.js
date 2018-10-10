@@ -4,7 +4,7 @@ import Header from '../../Basic/Header'
 import './index.css'
 import arrow from '../../sources/images/works__logo/arrow.svg'
 import withDsideApi from "../../../HOC/Fetch";
-
+import Translate, { reactTranslateChangeLanguage } from "translate-components";
 
 
 
@@ -15,6 +15,10 @@ import withDsideApi from "../../../HOC/Fetch";
     this.nameRef = React.createRef()
     this.phoneRef = React.createRef()
 
+  }
+
+  componentDidMount() {
+    reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
   }
 
    handleSubmit = (event) => {
@@ -52,7 +56,7 @@ import withDsideApi from "../../../HOC/Fetch";
 
                 <div className="left__form-container">
 <div className="title__form-contact">
-  <h3>Contact us</h3>
+  <h3><Translate>Contact Us</Translate></h3>
 </div>
 
                   <div className="contactus__form_active">
@@ -62,12 +66,12 @@ import withDsideApi from "../../../HOC/Fetch";
                       <div className="form__titles">
 
                         <div className="title__drop">
-                          <h3>Drop the line</h3>
+                          <h3><Translate>Drop the line</Translate></h3>
                         </div>
 
                         <div className="question__form">
-                          <p>Ready to talk to the team who can’t wait to<br />
-                            take your brand to new, exciting places?
+                          <p><Translate>Ready to talk to the team who can’t wait to</Translate>
+                            <Translate>take your company to new, exciting places?</Translate>
                           </p>
                         </div>
 
@@ -85,7 +89,7 @@ import withDsideApi from "../../../HOC/Fetch";
                           </div>
                           <button className="dside__send">
                             <div className="button__content">
-                              <span className='send__title'>Send</span> <img src={arrow} alt="" />
+                              <span className='send__title'><Translate>Send</Translate></span> <img src={arrow} alt="" />
                             </div>
                           </button>
                         </form>
@@ -102,7 +106,7 @@ import withDsideApi from "../../../HOC/Fetch";
 
 
                   <div className="right__form-question_title">
-                    <h4>Awaiting Questions</h4>
+                    <h4><Translate>Awaiting Questions</Translate></h4>
                     <div className="right__form_phone">
                       <h2>+34234234234</h2>
                     </div>
@@ -111,7 +115,7 @@ import withDsideApi from "../../../HOC/Fetch";
 
 
                   <div className="right__form_street">
-                    <h4>Find us here</h4>
+                    <h4><Translate>Find us here</Translate></h4>
                     <div className="right__form_phone">
                       <h2>Aleja Solidarności 117,  lok 805</h2>
                     </div>

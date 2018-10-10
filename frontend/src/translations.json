@@ -64,7 +64,146 @@
         "pl": "Legenda marki",
         "cz": "Legenda značky"
     },
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt": {
+  "Branding": {
+    "ru": "Брендинг",
+    "pl": "Branding",
+    "cz": "Branding"
+  },
+
+  "Identity": {
+    "ru": "Идентичность",
+    "pl": "Identyczność",
+    "cz": "Identita"
+  },
+
+  "Naming": {
+    "ru": "Нейминг",
+    "pl": "Nazewnictwo",
+    "cz": "Pojmenování"
+  },
+
+
+  "Websites": {
+    "ru": "Веб-сайты",
+    "pl": "Websites",
+    "cz": "Websites"
+  },
+
+  "Landing page": {
+    "ru": "Лендинг пейдж",
+    "pl": "Wstęp",
+    "cz": "Vstupní stránky"
+  },
+
+  "E-commerce": {
+    "ru": "Интернет-магазин",
+    "pl": "E-commerce",
+    "cz": "E-commerce"
+  },
+  "Corporate": {
+    "ru": "Корпоративний сайт",
+    "pl": "Korporacyjny",
+    "cz": "Korporační"
+  },
+  "Intranet": {
+    "ru": "Интрасеть",
+    "pl": "Intranet",
+    "cz": "Intranet"
+  },
+  "Advertising": {
+    "ru": "реклама",
+    "pl": "Reklama",
+    "cz": "Reklamní"
+  },
+  "E-mail marketing": {
+    "ru": "Рекламная рассылка",
+    "pl": "Marketing e-mailowy",
+    "cz": "Emailový marketing"
+  },
+  "CPA marketing": {
+    "ru": "CPA-маркетинг",
+    "pl": "Marketing CPA",
+    "cz": "Marketing CPA"
+  },
+  "Social media": {
+    "ru": "Cоциальные медиа",
+    "pl": "Media społecznościowe",
+    "cz": "Sociální média"
+  },
+  "Direct": {
+    "ru": "Продвижение",
+    "pl": "Bezpośredni",
+    "cz": "Přímo"
+  },
+
+  "Automation": {
+    "ru": "Автоматизация",
+    "pl": "Automatyzacja",
+    "cz": "Automatizace"
+  },
+
+  "Reduction of staff": {
+    "ru": "Сокращение штата",
+    "pl": "Redukcja personelu",
+    "cz": "Snížení počtu zaměstnanců"
+  },
+
+  "Сost reduction": {
+    "ru": "Сокращение",
+    "pl": "Redukcja redukcji",
+    "cz": "Sost redukce"
+  },
+
+
+  "Increasing efficency": {
+    "ru": "Повышение эффективности",
+    "pl": "Zwiększenie wydajności",
+    "cz": "Zvyšování efektivity"
+  },
+
+  "Quality improvement": {
+    "ru": "Улучшение качества",
+    "pl": "Polepszanie jakości",
+    "cz": "Zlepšení kvality"
+  },
+
+
+  "Videos": {
+    "ru": "Видео",
+    "pl": "Filmy wideo",
+    "cz": "Videa"
+  },
+
+
+  "Motion graphics": {
+    "ru": "Анимация видео",
+    "pl": "Animacji",
+    "cz": "pohybová grafika"
+  },
+
+
+  "3D modelling": {
+    "ru": "3D-моделирование",
+    "pl": "Modelowanie 3D",
+    "cz": "3D modelování"
+  },
+
+  "Commercials": {
+    "ru": "Рекламные ролики",
+    "pl": "Reklamy video",
+    "cz": "reklamní šot"
+  },
+
+
+
+  "Filming": {
+    "ru": "Съемки фильма",
+    "pl": "Filmowanie",
+    "cz": "Natáčení"
+  },
+
+
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt": {
         "ru": "Легенда Бренда",
         "pl": "Legenda marki",
         "cz": "Legenda značky"
@@ -507,5 +646,66 @@
     "cz": "DSIDE, aby vaše webové stránky prodávaly lépe",
     "pl": "DSIDE, aby Twoja strona internetowa SPRZEDAWAŁA LEPIEJ",
     "ru": "DSIDE, чтобы сделать ваш сайт ПРОДАВАТЬ ЛУЧШЕ"
+  },
+
+  "Task": {
+    "ru": "Задача",
+    "pl": "ZADANIE",
+    "cz": "ÚKOL"
+  },
+
+  "Task": {
+    "ru": "Задача",
+    "pl": "ZADANIE",
+    "cz": "ÚKOL"
+  },
+
+  "OUR Decision": {
+    "ru": "НАШЕ РЕШЕНИЕ",
+    "pl": "Nasza decyzja",
+    "cz": "OUR rozhodnutí"
+  },
+
+  "Other cases": {
+    "ru": "Другие работы",
+    "pl": "inne przypadki",
+    "cz": "ostatních případech"
+  },
+
+  "Latest posts": {
+    "ru": "Последние посты",
+    "pl": "Najnowsze posty",
+    "cz": "Nejnovější příspěvky"
+  },
+
+  "Explore project": {
+    "ru": "Cмотреть работу",
+    "pl": "Obserwuj pracę",
+    "cz": "Hodnoťte práci"
+  },
+ "Thank you! Application successfully submitted!": {
+   "ru": "Спасибо! Заявка успешно отправлена!",
+   "pl": "ODziękuję Ci! Aplikacja została pomyślnie przesłana!",
+   "cz": "Děkuji! Aplikace byla úspěšně odeslána!"
+ },
+  "Leave your phone number": {
+    "ru": "Оставьте свой номер телефона",
+    "pl": "Zostaw swój numer telefonu",
+    "cz": "Nechte své telefonní číslo"
+  },
+  "And you will receive a free consultation on the question that interests you. Usually we call back within 30 seconds.": {
+    "ru": "И вы получите бесплатную консультацию по интересующему вас вопросу. Обычно мы перезвоним в течение 30 секунд.",
+    "pl": "Otrzymasz bezpłatną konsultację na temat, który Cię interesuje. Zazwyczaj oddzwonimy w ciągu 30 sekund.",
+    "cz": "A obdržíte bezplatnou konzultaci o otázce, která vás zajímá. Obvykle zavoláme zpátky do 30 sekund."
+  },
+  "Awaiting Questions": {
+    "ru": "Есть вопросы?",
+    "pl": "Oczekiwanie na prośbę",
+    "cz": "Čeká na žádost"
+  },
+  "Find us here": {
+    "ru": "Найди нас здесь",
+    "pl": "Znajdź nas tutaj",
+    "cz": "Najděte nás zde"
   }
 }

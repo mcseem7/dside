@@ -218,7 +218,7 @@
         position: relative;
     }
 
-    .shining-underline span {
+    .shining-underline span:nth-child(2) {
         position: absolute;
         bottom: -5px;
         left: 0;
@@ -228,7 +228,7 @@
         will-change: transform;
     }
 
-    .shining-underline span::before {
+    .shining-underline span:nth-child(2):before {
         content: '';
         position: absolute;
         top: 0;
@@ -258,7 +258,7 @@
         transition: transform 0.48s cubic-bezier(0.7, 0.3, 0, 1), -webkit-transform 0.48s cubic-bezier(0.7, 0.3, 0, 1);
     }
 
-    .shining-underline:hover span::before {
+    .shining-underline:hover span:nth-child(2):before {
         -webkit-transform: scaleX(1);
         -moz-transform: scaleX(1);
         -ms-transform: scaleX(1);

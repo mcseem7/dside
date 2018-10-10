@@ -9,6 +9,7 @@ import { compose, branch, renderComponent } from 'recompose'
 import PropTypes from "prop-types";
 import subscribe from './subscribe.png'
 import Translate from 'translate-components'
+import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
 
 class Blog extends Component {
   constructor (props) {
@@ -22,6 +23,7 @@ class Blog extends Component {
 
   componentDidMount () {
       window.scrollTo(0, 0)
+    reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
   }
 
   render () {
@@ -72,7 +74,7 @@ class Blog extends Component {
 
             <div className="latest-posts__titles">
               <div className="latest__post-title">
-                <h4>Latest posts</h4>
+                <h4><Translate>Latest posts</Translate></h4>
               </div>
               <div className="icon-cube__wrapper">
                 <div className="icon__cube">

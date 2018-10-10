@@ -50,7 +50,7 @@ export default class About extends Component {
 
             <Link to={`/${this.state.lang}/aboutus`} >
             <button className="more__about shining-underline">
-              <div>More about us</div>
+              <Translate>More about us</Translate>
               <span></span>
             </button>
             </Link>
