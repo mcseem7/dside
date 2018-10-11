@@ -14,16 +14,26 @@ export default class BlogItem extends Component {
     }
   }
 
+    componentWillReceiveProps(nextProps) {
+        if(this.props.match.params.id !== nextProps.match.params.id) {
+            this.getData(nextProps.match.params.id);
+        }
+    }
+
   async componentDidMount() {
    window.scrollTo(0, 0)
-   await fetch(`${process.env.REACT_APP_API}/${localStorage.getItem('lang')}/blog/getBlogItemDetails/${this.props.match.params.blogitem}/`).then((response) => {
-        return response.json()
-      }).then((item) => {
-        this.setState({
-          blogItem: item
-        })
-      })
+   await this.getData()
    await this.setState({blogCategory: this.state.blogItem.category})
+  }
+
+  getData = () => {
+    return fetch(`${process.env.REACT_APP_API}/${localStorage.getItem('lang')}/blog/getBlogItemDetails/${this.props.match.params.blogitem}/`).then((response) => {
+        return response.json()
+    }).then((item) => {
+        this.setState({
+            blogItem: item
+        })
+    })
   }
 
   handleNewComment(comment) {
@@ -98,7 +108,9 @@ export default class BlogItem extends Component {
 
               <div className="content__body-post_img">
 
-                <div className="left__img" style={{ backgroundImage:  `url(${process.env.REACT_APP_DOMAIN}${blogItem.thumbnail})` }}></div>
+                <div className="left__img" style={{ backgroundImage:  `url(${process.env.REACT_APP_DOMAIN}${blogItem.thumbnail})` }}>
+
+                </div>
 
               </div>
             </div>

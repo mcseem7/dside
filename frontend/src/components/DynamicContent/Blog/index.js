@@ -37,9 +37,11 @@ class Blog extends Component {
               <div onClick={() => {
                   history.push({
                     pathname: `/${location.pathname.substr(1,2)}/blog/${item.base_name}`,
-                    state: item.description
-                  })
-              }} className="blog__item-content">
+                    state: {
+                      description: item.description,
+                      nextPost: JSON.stringify(item)
+                  }
+                  })}} className="blog__item-content">
                 <div className="tag-item">
                   <p>{item.category.name }</p>
                 </div>

@@ -51,6 +51,7 @@ class App extends Component {
 
     componentDidMount() {
       window.scrollTo(0,0)
+      reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
       function isLandscape() {
         return (window.orientation === 90 || window.orientation === -90);
       }
@@ -93,7 +94,7 @@ class App extends Component {
         function findWord(word, str) {
             return str.split(' ').some(function(w){return w === word})
         }
-      reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
+
         return (
             <TranslateProvider translations={translations} defaultLanguage={'en'}>
               <Fragment>
