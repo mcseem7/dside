@@ -3,7 +3,7 @@ var Logo = {
     $logoFillArea: null,
     imageIds: [],
     imageCount: 2,
-    assetBase: 'http://quest.masons.pl/',
+    assetBase: 'https://quest.masons.pl/',
 
     init: function() {
         // Bind hover events
