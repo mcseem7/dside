@@ -16,6 +16,11 @@
         padding: 0 0 3rem 0;
         line-height: 1.8rem;
     }
+
+    .list li:first-child {
+        display: inline-block;
+    }
+
     .content__services {
         display: flex;
         flex-direction: column;
@@ -48,7 +53,7 @@ ul li {
     text-transform: uppercase;
 }
 
-.list li a{text-decoration: underline; color: #000;}
+.list li a{text-decoration: underline; color: #000; display: inline-block}
 .list li {
     color: #112537;
     font-family: 'MontLight', sans-serif;

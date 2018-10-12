@@ -7,7 +7,7 @@ import imgsl from './layer-106-copy.png'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import {Link} from "react-router-dom";
-
+import Translate, { reactTranslateChangeLanguage } from "translate-components";
 import arrowImg from './arrow.svg'
 import fetch from 'isomorphic-fetch'
 
@@ -23,7 +23,8 @@ export default class PortfolioItem extends Component {
       itemPortfolio: [],
         blocksImg: '',
         attachImg: '',
-        similarItems: []
+        similarItems: [],
+       category: []
     }
 
   }
@@ -34,8 +35,9 @@ export default class PortfolioItem extends Component {
 
 
 
- componentDidMount() {
-     return fetch(`${process.env.REACT_APP_API}/${localStorage.getItem('lang')}/portfolio/getPortfolioItemDetails/${this.props.match.params.portfolioitem}/`).then((response) => {
+ async componentDidMount() {
+   reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
+     await fetch(`${process.env.REACT_APP_API}/${localStorage.getItem('lang')}/portfolio/getPortfolioItemDetails/${this.props.match.params.portfolioitem}/`).then((response) => {
          return response.json()
      }).then((item) => {
          this.setState({
@@ -45,6 +47,7 @@ export default class PortfolioItem extends Component {
            attachImg: item.attachment
          })
      })
+   await this.setState({category: this.state.itemPortfolio.category.name})
   }
 
 
@@ -55,9 +58,6 @@ export default class PortfolioItem extends Component {
         <div className="portfolio__header_item-wrapper" style={{backgroundImage: `url(${process.env.REACT_APP_DOMAIN}${this.state.itemPortfolio.main_image})`}}>
           <div className="header__portfolio-content">
           <div className="header__portfolio-content-wrapper">
-            {/* <div className="project__picture"> */}
-            {/* <img src="#" alt=""/> */}
-            {/* </div> */}
             <div className="project__titles">
               <div className="portfolio__title-content">
                 <div className="portfolio__name__content">
@@ -67,20 +67,16 @@ export default class PortfolioItem extends Component {
                     <img src={`${process.env.REACT_APP_DOMAIN}/${this.state.itemPortfolio.logotype}`} alt="" />
                   </div>
                     <div className="category__project">
-                      <p>websites</p>
+                      <p> {this.state.category}</p>
                     </div>
                     <div className="name__project">
                       <h4>{this.state.itemPortfolio.name}</h4>
                     </div>
 
-                    {/*<div className="name__customer">*/}
-                      {/*<p>{this.state.itemPortfolio.name}</p>*/}
-                    {/*</div>*/}
                   </div>
                <div className="portfolio__description__content">
                   <div className="project_description__content">
                     <p className="description__project" dangerouslySetInnerHTML={{__html: this.state.itemPortfolio.description}}>
-                      {/*{this.state.itemPortfolio.description}*/}
                     </p>
                   </div>
                 </div>
@@ -117,7 +113,7 @@ export default class PortfolioItem extends Component {
       <div className="container__project-task">
 
         <div className="name__task">
-          <h4>Task</h4>
+          <h4><Translate>Task</Translate></h4>
         </div>
 
 
@@ -156,7 +152,7 @@ export default class PortfolioItem extends Component {
         <div className="container__project-task">
 
           <div className="name__task">
-            <h4>OUR Decision</h4>
+            <h4><Translate>OUR Decision</Translate></h4>
           </div>
 
 
@@ -189,7 +185,7 @@ export default class PortfolioItem extends Component {
 
   <div className="portfolio__carousel-wrapper">
           <div className="portfolio__carousel-title">
-            <h2>Other cases</h2>
+            <h2><Translate>Other cases</Translate></h2>
           </div>
 
 
@@ -211,7 +207,7 @@ export default class PortfolioItem extends Component {
             {this.state.similarItems != [] ?  Object.values(this.state.similarItems).map((  item, key) =>  {
 
 
-                console.log(item)
+
                 return (
                     <Fragment>
                     <Slide index={key} classNameVisible={'styleCarousellImg'}>

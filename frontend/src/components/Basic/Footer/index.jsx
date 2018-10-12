@@ -23,7 +23,6 @@ class Footer extends Component {
   }
 
   render () {
-    console.log(this.props)
     return (
       <footer>
         <div className="footer__content" style={{display: this.props.style}}>

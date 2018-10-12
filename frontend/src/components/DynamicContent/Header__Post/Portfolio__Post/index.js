@@ -1,7 +1,7 @@
 import React, { Component,Fragment } from 'react'
 import './index.css'
 import {Link} from 'react-router-dom'
-const renderReact = require('hypernova-react').renderReact;
+import Translate, { reactTranslateChangeLanguage } from "translate-components";
 
  class PortolioPost extends Component {
     constructor(props) {
@@ -16,13 +16,14 @@ const renderReact = require('hypernova-react').renderReact;
 
     componentDidMount() {
       this.setState({lang: localStorage.getItem('lang')})
+      reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
     }
 
 
 
     render() {
 
-      console.log(this.props)
+
     return (
 
 <Fragment> {
@@ -34,7 +35,7 @@ const renderReact = require('hypernova-react').renderReact;
         <figcaption>
           <h2>{item.name}</h2>
           {
-              <Link to={`/${this.state.lang}/portfolio/${item.CURL}`}>Explore project</Link>
+            <Link to={`/${this.state.lang}/portfolio/${item.CURL}`}><Translate>Explore project</Translate></Link>
 
         }
         </figcaption>

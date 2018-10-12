@@ -3,7 +3,7 @@ import './index.css'
 import GridIcon from './grid_img.svg'
 import PlusIcon from './plus.svg'
 import Logo from './Logo.svg'
-import {Link} from 'react-router-dom'
+import {NavLink, Link} from 'react-router-dom'
 import Poppup from '../../../HOC/Poppup/index';
 import pl from "../../../HOC/ChangeLanguage/svg/006-poland.svg";
 import cz from "../../../HOC/ChangeLanguage/svg/003-czech-republic.svg";
@@ -40,9 +40,7 @@ export default class Header extends Component {
 
 
     changePoppup = () => {
-    this.setState({modalActive: !this.state.modalActive}, () => {
-      console.log(this.state.modalActive)
-    })
+    this.setState({modalActive: !this.state.modalActive})
   }
 
   render () {
@@ -76,7 +74,7 @@ export default class Header extends Component {
             <div className="mid__content-logo">
               <div className="logo__container">
                 <div className="logo">
-                  <Link to="/" className="link link--dside"><span>
+                  <NavLink to="/" className="link link--dside"><span>
 
 
                     <svg className="svg-logo" width="86px" height="26px" viewBox="0 0 209 39" version="1.1"
@@ -114,7 +112,7 @@ export default class Header extends Component {
 </g>
   </svg>
 
-                  </span></Link>
+                  </span></NavLink>
                 </div>
               </div>
             </div>
@@ -148,7 +146,7 @@ export default class Header extends Component {
                 <div className="menu__header-item">
                   <div className="description__menu-title">
 
-                    <Link to={`/${this.props.domenErty}/aboutus`}   className="link__menu"><Translate>About Us</Translate></Link>
+                    <NavLink to={`/${this.props.domenErty}/aboutus`}   className="link__menu"><Translate>About Us</Translate></NavLink>
                     {/*<p>Caption text under about us</p>*/}
                   </div>
                 </div>
@@ -167,7 +165,7 @@ export default class Header extends Component {
               <div className="menu__header-column">
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to={`/${this.props.domenErty}/blog`}  className="link__menu"><Translate>Blog</Translate></Link>
+                    <NavLink to={`/${this.props.domenErty}/blog`}  className="link__menu"><Translate>Blog</Translate></NavLink>
                   </div>
                   {/*<div className="description__menu-title">*/}
                     {/*<p>Caption text under about us</p>*/}
@@ -176,7 +174,7 @@ export default class Header extends Component {
 
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to={`/${this.props.domenErty}`}  className="link__menu"><Translate>Home</Translate></Link>
+                    <NavLink to={`/${this.props.domenErty}`}  className="link__menu"><Translate>Home</Translate></NavLink>
                   </div>
                   {/*<div className="description__menu-title">*/}
                     {/*<p>Caption text under about us</p>*/}

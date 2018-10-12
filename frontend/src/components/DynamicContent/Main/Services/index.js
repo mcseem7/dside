@@ -35,7 +35,7 @@ export default class  Services extends Component  {
                                 {/* </div> */}
                                 <ul className="list">
                                     <li><Link to={`${this.props.match.path}/services/brand`}
-                                              className="shining-underline">Branding<span></span></Link></li>
+                                              className="shining-underline"><Translate>Branding</Translate><span></span></Link></li>
                                     <li><Translate>Brand legend</Translate></li>
                                     <li><Translate>Brandbook</Translate></li>
                                     <li><Translate>Identity</Translate></li>
@@ -49,11 +49,11 @@ export default class  Services extends Component  {
                                 {/* </div> */}
                                 <ul className="list">
                                     <li><Link to={`${this.props.match.path}/services/website`}
-                                              className="shining-underline">Websites<span></span></Link></li>
-                                    <li>Landing page</li>
-                                    <li>E-commerce</li>
-                                    <li>Corporate</li>
-                                    <li>Intranet</li>
+                                              className="shining-underline"><Translate>Websites</Translate><span></span></Link></li>
+                                  <li><Translate>Landing page</Translate></li>
+                                  <li><Translate>E-commerce</Translate></li>
+                                  <li><Translate>Corporate</Translate></li>
+                                  <li><Translate>Intranet</Translate></li>
                                 </ul>
                             </div>
 
@@ -62,12 +62,13 @@ export default class  Services extends Component  {
                                 {/* <h2>Branding</h2> */}
                                 {/* </div> */}
                                 <ul className="list">
-                                    <li><Link to={`${this.props.match.path}/services/advertising`} className="shining-underline">Advertising<span></span></Link>
+                                    <li><Link to={`${this.props.match.path}/services/advertising`} className="shining-underline"><Translate>
+                                      Advertising</Translate><span></span></Link>
                                     </li>
-                                    <li>E-mail marketing</li>
-                                    <li>CPA marketing</li>
-                                    <li>Social media</li>
-                                    <li>Direct</li>
+                                  <li><Translate>E-mail marketing</Translate></li>
+                                  <li><Translate>CPA marketing</Translate></li>
+                                  <li><Translate>Social media</Translate></li>
+                                  <li><Translate>Direct</Translate></li>
                                 </ul>
                             </div>
                             <div className="list__services-automation">
@@ -75,12 +76,15 @@ export default class  Services extends Component  {
                                 {/* <h2>Branding</h2> */}
                                 {/* </div> */}
                                 <ul className="list">
-                                    <li><Link to={`${this.props.match.path}/services/automation`} className="shining-underline">Automation<span></span></Link>
+                                    <li><Link to={`${this.props.match.path}/services/automation`} className="shining-underline">
+
+                                      <Translate>Automation</Translate><span></span></Link>
+
                                     </li>
-                                    <li>Increasing efficency</li>
-                                    <li>Quality improvement</li>
-                                    <li>Reduction of staff</li>
-                                    <li>Сost reduction</li>
+                                  <li><Translate>Increasing efficency</Translate></li>
+                                  <li><Translate>Quality improvement</Translate></li>
+                                  <li><Translate>Reduction of staff</Translate></li>
+                                  <li><Translate>Сost reduction</Translate></li>
                                 </ul>
                             </div>
                             <div className="list__services-videos">
@@ -89,11 +93,11 @@ export default class  Services extends Component  {
                                 {/* </div> */}
                                 <ul className="list">
                                     <li><Link to={`${this.props.match.path}/services/videos`}
-                                              className="shining-underline">Videos<span></span></Link></li>
-                                    <li>Motion graphics</li>
-                                    <li>3D modelling</li>
-                                    <li>Commercials</li>
-                                    <li>Filming</li>
+                                              className="shining-underline"><Translate>Videos</Translate><span></span></Link></li>
+                                  <li><Translate>Motion graphics</Translate></li>
+                                  <li><Translate>3D modelling</Translate></li>
+                                  <li><Translate>Commercials</Translate></li>
+                                  <li><Translate>Filming</Translate></li>
                                 </ul>
                             </div>
 

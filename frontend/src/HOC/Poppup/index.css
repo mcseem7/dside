@@ -126,11 +126,9 @@
 }
 
 #request-form label {display: none;}
-#request-form button {display: none}
 #id_phone:focus{border-color: rgba(99, 178, 255, 0.77)}
 #id_name:focus{border-color: rgba(99, 178, 255, 0.77)}
 #request-form label {display: none;}
-#request-form button {display: none}
 #thanks{color: rgba(39, 152, 30, 0.93); font-family: 'MontLight', sans-serif;}
 #thanks span{color: rgba(20, 32, 44, 0.83);}
 
@@ -151,18 +149,21 @@
     border-bottom: 1px #ccc solid;
 }
 
-input[type=submit] {
-    padding:6px 18px;
+.button14 {
+    padding: 6px 18px;
     background: #14202c;
     color: #fff;
-    cursor:pointer;
+    cursor: pointer;
     transition: 0.3s;
     border: 1px solid transparent;
+
 }
-input[type=submit]:hover{
+
+.button14:hover{
     background: transparent;
     color: #14202c;
     transition: 0.3s;
     border: 1px solid #14202c;
     cursor:pointer;
 }
+
