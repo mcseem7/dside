@@ -60,7 +60,10 @@ ul li {
     margin-bottom: 10px;
     font-weight: 300;
 }
-.shining-underline span{display: none;}
+
+.listwrapper div .list li a {
+    text-decoration: none;
+}
 
 /* Tablets */
 
