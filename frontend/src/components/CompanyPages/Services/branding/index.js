@@ -65,9 +65,7 @@ class BrandPage extends Component {
     }
 
     changePoppup = () => {
-        this.setState({modalActive: !this.state.modalActive}, () => {
-            console.log(this.state.modalActive)
-        })
+        this.setState({modalActive: !this.state.modalActive})
     }
 
 

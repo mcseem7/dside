@@ -3,8 +3,10 @@ import './index.css'
 import next from './next_post.png'
 import comm from './hypercomments.png'
 import ReactDisqusComments from 'react-disqus-comments';
-
-export default class BlogItem extends Component {
+import {withRouter} from 'react-router-dom'
+import {compose} from 'recompose'
+import withDsideApi from "../../../HOC/Fetch";
+ class BlogItem extends Component {
   constructor(props) {
     super(props)
 
@@ -14,20 +16,17 @@ export default class BlogItem extends Component {
     }
   }
 
-    componentWillReceiveProps(nextProps) {
-        if(this.props.match.params.id !== nextProps.match.params.id) {
-            this.getData(nextProps.match.params.id);
-        }
-    }
+
+
 
   async componentDidMount() {
    window.scrollTo(0, 0)
-   await this.getData()
+   await this.getData(this.props.match.params.blogitem)
    await this.setState({blogCategory: this.state.blogItem.category})
   }
 
-  getData = () => {
-    return fetch(`${process.env.REACT_APP_API}/${localStorage.getItem('lang')}/blog/getBlogItemDetails/${this.props.match.params.blogitem}/`).then((response) => {
+  getData = (postName) => {
+    return fetch(`${process.env.REACT_APP_API}/${localStorage.getItem('lang')}/blog/getBlogItemDetails/${postName}/`).then((response) => {
         return response.json()
     }).then((item) => {
         this.setState({
@@ -41,7 +40,8 @@ export default class BlogItem extends Component {
   }
 
   render() {
-    const { blogItem } = this.state
+    const {blogItem} = this.state
+      const {location, history} = this.props
     return(
         <div>
           <div className="blog__post-container">
@@ -108,7 +108,12 @@ export default class BlogItem extends Component {
 
               <div className="content__body-post_img">
 
-                <div className="left__img" style={{ backgroundImage:  `url(${process.env.REACT_APP_DOMAIN}${blogItem.thumbnail})` }}>
+                <div className="left__img" style={{ backgroundImage:  `url(${process.env.REACT_APP_DOMAIN}${blogItem.thumbnail})` }}
+                     onClick={() => {
+                         history.push({
+                             pathname: `/${location.pathname.substr(1,2)}/blog/${this.props.nextPost.base_name}`
+                         })
+                     }} >
 
                 </div>
 
@@ -124,3 +129,4 @@ export default class BlogItem extends Component {
   }
 }
 
+export default compose (withRouter,withDsideApi)(BlogItem,'/blog/getBlogItems/', 'BLOG')

@@ -23,7 +23,7 @@ import Translate, { reactTranslateChangeLanguage } from "translate-components";
 
     render() {
 
-      console.log(this.props)
+
     return (
 
 <Fragment> {

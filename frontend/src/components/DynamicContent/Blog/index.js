@@ -23,7 +23,7 @@ class Blog extends Component {
 
   componentDidMount () {
       window.scrollTo(0, 0)
-    reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
+      reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
   }
 
   render () {

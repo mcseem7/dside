@@ -207,7 +207,7 @@ export default class PortfolioItem extends Component {
             {this.state.similarItems != [] ?  Object.values(this.state.similarItems).map((  item, key) =>  {
 
 
-                console.log(item)
+
                 return (
                     <Fragment>
                     <Slide index={key} classNameVisible={'styleCarousellImg'}>

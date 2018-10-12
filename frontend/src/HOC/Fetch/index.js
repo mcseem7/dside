@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import fetch from 'isomorphic-fetch'
-
+import PropTypes from 'prop-types'
 
 
 export default function withDsideApi(DsideComponent, apiUrl, type) {
@@ -12,8 +12,9 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
       this.state = {
         dataDside: [],
         dataItemHome: [],
-          loading: false,
+        loading: false,
         blogItem: [],
+        nextPost: [],
         postData: {
           name: '',
           email: ''
@@ -23,6 +24,9 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
 
     }
 
+    static  contextTypes = {
+          router: PropTypes.object.isRequired
+      }
 
 
    componentDidMount()  {
@@ -30,8 +34,6 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
            this.setState({langContent: localStorage.getItem('lang')}, () => { //callback after get language
                this.getDsideApi()
            })
-       } else {
-           console.log('loading')
        }
     }
 
@@ -41,7 +43,9 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
     getDsideApi = async () => {
       await fetch(`${process.env.REACT_APP_API}/${this.state.langContent}${apiUrl}`)
        .then((response) => response.json())
-       .then(data => this.setState({dataDside: data}))
+       .then(data => this.setState({
+           dataDside: data
+       }))
         .catch(error => console.log(error))
       switch (type) {
         case 'BLOG':
@@ -64,16 +68,30 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
         })
     }
 
+
     getItemBlog = () => {
       Array.isArray(this.state.dataDside) &&  this.state.dataDside.map((blogItem) => {
         return fetch(`${process.env.REACT_APP_API}/${this.state.langContent}/blog/getBlogItemDetails/${blogItem.base_name}/`).then((response) => {
           return response.json()
         }).then((item) => {
-          this.setState({blogItem: this.state.blogItem.concat(item)})
+          this.setState({blogItem: this.state.blogItem.concat(item)},() => {
+              this.prevNextPost()
+          })
         })
       })
     }
 
+    prevNextPost = () => {
+        const {blogitem} = this.context.router.route.match.params
+        const {dataDside} = this.state
+        const nextPost = dataDside.findIndex(item => {
+           return item.base_name == blogitem
+        })
+        this.setState({nextPost: dataDside[nextPost + 1]})
+        if(typeof this.state.nextPost == "undefined") {
+            this.setState({nextPost: dataDside[nextPost - 1]})
+        }
+    }
 
 
     postFormData = (name, phone) => {
@@ -94,6 +112,7 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
           <div>
             <DsideComponent
                 {...this.props}
+                nextPost={this.state.nextPost}
                 dataItem={this.state.dataItemHome}
                 blogItem={this.state.blogItem}
                 postData={this.postFormData}
