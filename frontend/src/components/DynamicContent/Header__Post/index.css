@@ -55,6 +55,7 @@ figure.effect-marley h2 {
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
     text-align: left;
+    line-height: 1;
     -webkit-transform: translate3d(0,20px,0);
     transform: translate3d(0,20px,0);
     opacity: 0;
@@ -148,11 +149,10 @@ figure.effect-marley p {
     line-height: 9px;
     color: #fff;
     font-family: "MontBold";
+    display: none;
     text-decoration: none;
     white-space: nowrap;
-    opacity: 0;
-    top: 195px;
-    left: -340px;
+    left: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
 }
@@ -168,7 +168,6 @@ figure.effect-marley p {
 .grid figure h2 {
     word-spacing: -0.15em;
     font-size: 19px;
-    line-height: 8px;
     color: #fff;
     font-family: "MontLight";
 }
@@ -221,15 +220,20 @@ figure.effect-marley p {
 }
 /* Tablets */
 
-@media only screen and (min-width: 480px) {
-figure.effect-marley:hover figcaption{ background-color: rgba(15, 21, 30, 0.23); transition: all 0.25s;}
-figure.effect-marley:hover h2 {
+
+figure.effect-marley:hover figcaption,
+figure.effect-marley:active figcaption{ background-color: rgba(15, 21, 30, 0.23); transition: all 0.25s;}
+
+figure.effect-marley:hover h2 ,
+figure.effect-marley:active h2 {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
     opacity: 1;
 }
-figure.effect-marley  img {transform: scale(1); transition: transform .3s  ease-in-out;}
-figure.effect-marley:hover img {
+figure.effect-marley  img {
+    transform: scale(1); transition: transform .3s  ease-in-out;}
+figure.effect-marley:hover img,
+figure.effect-marley:active img{
     -webkit-filter: blur(5px);
     filter: blur(5px);
     transform: scale(1.05);
@@ -239,18 +243,25 @@ figure.effect-marley:hover img {
     transition: .3s filter linear, .3s transform ease-in-out;
 }
 figure.effect-marley:hover h2::after,
-figure.effect-marley:hover p {
+figure.effect-marley:hover p,
+figure.effect-marley:active h2::after,
+figure.effect-marley:active p {
     opacity: 1;
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
     transition: opacity 0.35s, transform 0.35s;
 }
-.grid figure figcaption:hover > a {
-    opacity: 1;
 
+
+.grid figure figcaption:hover > a,
+.grid figure figcaption:active > a {
+    opacity: 1;
+    display: inline-flex;
+    margin-left: 50px;
+    top:195px;
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
     transition: opacity 0.35s, transform 0.35s;
 }
-}
+
 
