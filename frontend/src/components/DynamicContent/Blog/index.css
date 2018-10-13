@@ -78,7 +78,12 @@
     color: #ffffff;
     font-family: 'MontLight', sans-serif;
     font-weight: 300;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 75%;
 }
+
 .tag-item {
     background-image: -webkit-gradient(linear, right top, left top, from(#f1af1f), to(#f47b20));
     background-image: -webkit-linear-gradient(right, #f1af1f 0%, #f47b20 100%);
@@ -224,9 +229,6 @@
 
 @media screen and (min-width: 1200px ){
 
-    .description-item p {
-        width: 100%
-    }
 
     .tag-item p {
         font-size: 18px;
