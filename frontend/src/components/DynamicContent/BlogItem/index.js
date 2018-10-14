@@ -6,6 +6,7 @@ import ReactDisqusComments from 'react-disqus-comments';
 import {withRouter} from 'react-router-dom'
 import {compose} from 'recompose'
 import withDsideApi from "../../../HOC/Fetch";
+import redirect from './redirect.svg'
 
  class BlogItem extends Component {
   constructor(props) {
@@ -41,8 +42,9 @@ import withDsideApi from "../../../HOC/Fetch";
   }
 
   render() {
-    const {blogItem} = this.state
+      const {blogItem} = this.state
       const {location, history} = this.props
+      console.log(this.props.nextPost)
     return(
         <div>
           <div className="blog__post-container">
@@ -108,16 +110,25 @@ import withDsideApi from "../../../HOC/Fetch";
             <div className="left__content-post">
 
               <div className="content__body-post_img">
-
-                <div className="left__img" style={{ backgroundImage:  `url(${process.env.REACT_APP_DOMAIN}${blogItem.thumbnail})` }}
-                     onClick={() => {
-                         history.push({
-                             pathname: `/${location.pathname.substr(1,2)}/blog/${this.props.nextPost.base_name}`
-                         })
-                     }} >
-
-                </div>
-
+                  {this.props.nextPost != undefined ?
+                      <div className="left__img"
+                           style={{backgroundImage: `url(${process.env.REACT_APP_DOMAIN}${this.props.nextPost.main_image})`}}
+                      >
+                          <div className="content__left-post">
+                                <div className="left__redirect-content">
+                                    {this.props.lastPost ? <p>Previous post</p> : <p>Next post</p>}
+                                    <h4 className='left__redirect-title'>{this.props.nextPost.title}</h4>
+                                </div>
+                                <div className="right__redirect-next">
+                                    <img  onClick={() => {
+                                        history.push({
+                                            pathname: `/${location.pathname.substr(1, 2)}/blog/${this.props.nextPost.base_name}`
+                                        })
+                                    }} src={redirect} alt=""/>
+                                </div>
+                          </div>
+                      </div>
+                  : null}
               </div>
             </div>
             </div>
