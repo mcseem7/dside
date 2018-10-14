@@ -16,10 +16,11 @@ export default function withPoppupHOC(PoppupHOC, apiUrl, type) {
 
 
 
-        async componentDidMount() {
-              await  this.setState({lang: localStorage.getItem('lang')})
-              await  reactTranslateChangeLanguage.bind(this, this.state.lang)()
+        componentDidMount() {
+            reactTranslateChangeLanguage.bind(this, this.state.lang)()
+             this.setState({lang: localStorage.getItem('lang')})
         }
+
 
 
         handleSubmit = async(event, ...postData) => {

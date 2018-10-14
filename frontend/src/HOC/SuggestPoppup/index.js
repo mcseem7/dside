@@ -1,10 +1,10 @@
-import React, {PureComponent, Fragment} from 'react'
+import React, {Component, Fragment} from 'react'
 import './index.css'
 import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
 import Translate from 'translate-components'
 import withPoppupHOC from '../Poppup/index'
 
-class SuggestPoppup extends PureComponent {
+class SuggestPoppup extends Component {
     constructor(props) {
         super(props)
 
