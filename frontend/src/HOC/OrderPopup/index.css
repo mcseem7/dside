@@ -126,15 +126,22 @@
 }
 
 #request-form label {display: none;}
-#id_phone:focus{border-color: rgba(99, 178, 255, 0.77)}
-#id_name:focus{border-color: rgba(99, 178, 255, 0.77)}
+
+#id_phone:focus,
+#id_email:focus,
+#id_social:focus,
+#id_email:focus,
+#id_name:focus {
+    border-color: rgba(99, 178, 255, 0.77)
+}
+
 #request-form label {display: none;}
 #thanks{color: rgba(39, 152, 30, 0.93); font-family: 'MontLight', sans-serif;}
 #thanks span{color: rgba(20, 32, 44, 0.83);}
 
 
 
-#id_name, #id_phone{
+#id_name, #id_phone, #id_topic, #id_social, #id_email {
     border: none;
     outline: none;
     width: 40%;

@@ -5,7 +5,7 @@ import LogoWhite from './LogoWhite.svg'
 import PlusHover from './plus-hover.svg'
 import OrderButton from '../OrderButton'
 import {Link} from 'react-router-dom'
-import Poppup from '../../../../../HOC/Poppup/index';
+import Poppup from '../../../../../HOC/OrderPopup/index';
 import Translate from 'translate-components'
 import {reactTranslateChangeLanguage} from "translate-components";
 

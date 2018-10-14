@@ -6,6 +6,7 @@ import ReactDisqusComments from 'react-disqus-comments';
 import {withRouter} from 'react-router-dom'
 import {compose} from 'recompose'
 import withDsideApi from "../../../HOC/Fetch";
+
  class BlogItem extends Component {
   constructor(props) {
     super(props)

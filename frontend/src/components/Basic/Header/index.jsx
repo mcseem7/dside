@@ -4,7 +4,7 @@ import GridIcon from './grid_img.svg'
 import PlusIcon from './plus.svg'
 import Logo from './Logo.svg'
 import {NavLink, Link} from 'react-router-dom'
-import Poppup from '../../../HOC/Poppup/index';
+import OrderPoppup from '../../../HOC/OrderPopup/index';
 import pl from "../../../HOC/ChangeLanguage/svg/006-poland.svg";
 import cz from "../../../HOC/ChangeLanguage/svg/003-czech-republic.svg";
 import ru from "../../../HOC/ChangeLanguage/svg/005-russia.svg";
@@ -47,7 +47,7 @@ export default class Header extends Component {
 
 
     return (
-        <div className="header__container" style={{display: this.props.style}}>
+        <div className="header__container" style={{display: this.props.style, zIndex: 10}}>
       <header className="basic__header">
         <div className="basic__header-content">
           <div className="header__content">
@@ -189,7 +189,7 @@ export default class Header extends Component {
             </div>
             </div>
           </div>
-          {this.state.modalActive ? <Poppup onClose={this.changePoppup} /> :  null}
+          {this.state.modalActive ? <OrderPoppup onClose={this.changePoppup} /> :  null}
         </div>
     )
   }

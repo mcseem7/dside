@@ -374,11 +374,11 @@
 }
 
 .post__incoming-img {
-    opacity: 0.8;
+    opacity: 0.45;
 }
 
 .post__incoming-img {
-  display: flex;
+     display: flex;
     justify-content: flex-end;
 }
 

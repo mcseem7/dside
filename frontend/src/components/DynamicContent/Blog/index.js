@@ -10,15 +10,22 @@ import PropTypes from "prop-types";
 import subscribe from './subscribe.png'
 import Translate from 'translate-components'
 import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
+import SuggestPoppup from "../../../HOC/SuggestPoppup";
 
 class Blog extends Component {
   constructor (props) {
     super(props)
 
     this.state = {
-      blogItem: []
+      blogItem: [],
+      modalActive: false
     }
   }
+
+
+    changePoppup = () => {
+        this.setState({modalActive: !this.state.modalActive})
+    }
 
 
   componentDidMount () {
@@ -151,9 +158,10 @@ class Blog extends Component {
                     <p><Translate>Are coming soon.</Translate></p>
                   </div>
 
-                  <div className="incoming__button">
-                    <a href='#'><Translate>Suggest a topic</Translate></a>
+                  <div onClick={this.changePoppup} className="incoming__button">
+                    <a href='#' ><Translate>Suggest a topic</Translate></a>
                   </div>
+                    {this.state.modalActive ? <SuggestPoppup onClose={this.changePoppup} /> :  null}
                 </div>
               </div>
 
