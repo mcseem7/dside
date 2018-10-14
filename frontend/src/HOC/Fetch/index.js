@@ -15,6 +15,7 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
         loading: false,
         blogItem: [],
         nextPost: [],
+        lastPost:false,
         postData: {
           name: '',
           email: ''
@@ -87,9 +88,9 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
         const nextPost = dataDside.findIndex(item => {
            return item.base_name == blogitem
         })
-        this.setState({nextPost: dataDside[nextPost + 1]})
+        this.setState({nextPost: dataDside[nextPost + 1], lastPost: false})
         if(typeof this.state.nextPost == "undefined") {
-            this.setState({nextPost: dataDside[nextPost - 1]})
+            this.setState({nextPost: dataDside[nextPost - 1], lastPost: true})
         }
     }
 
@@ -117,6 +118,7 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
                 blogItem={this.state.blogItem}
                 postData={this.postFormData}
                 loading={this.state.loading}
+                lastPost={this.state.lastPost}
                 getDsideApi={this.getDsideApi}
                 dataDside={this.state.dataDside}/>
           </div>

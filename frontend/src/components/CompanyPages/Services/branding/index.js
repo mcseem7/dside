@@ -19,7 +19,7 @@ import twoCola from './brandImg/firstCola.png'
 import thirdCola from './brandImg/color__three.png'
 import linear from './brandImg/Layer 113.png'
 import OrderButton from '../serviceComponents/OrderButton';
-import Poppup from '../../../../HOC/Poppup/index';
+import Poppup from '../../../../HOC/OrderPopup/index';
 import iconLouis from './brandImg/lois-icon.png'
 import fadeBag from './brandImg/Layer_108.png'
 import WeCare from "../../../Basic/TrustBlocks/WeCare";

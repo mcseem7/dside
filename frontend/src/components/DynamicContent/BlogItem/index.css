@@ -43,6 +43,41 @@
     }
 }
 
+.left__redirect-title {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: 'MontBold', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
 
+.left__redirect-content p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: "MontLight";
+    font-weight: 300;
+}
+
+.content__left-post {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    display: flex;
+}
+
+.left__redirect-content {
+    max-width: 250px;
+    align-self: center;
+    margin-right: 40px;
+}
+
+
+.left__img {
+    border-radius: 30px;
+    position: relative;
+}
 
 

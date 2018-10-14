@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './index.css'
 import arrow from '../../sources/images/works__logo/arrow.svg'
 import withDsideApi from '../../../HOC/Fetch'
-import Poppup from '../../../HOC/Poppup/index';
+import Poppup from '../../../HOC/OrderPopup/index';
 import  Translate  from "translate-components";
 
 class Footer extends Component {
@@ -19,7 +19,6 @@ class Footer extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
     this.props.postData(this.nameRef, this.phoneRef)
-
   }
 
   render () {

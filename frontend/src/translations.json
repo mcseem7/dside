@@ -683,6 +683,16 @@
     "pl": "Obserwuj pracę",
     "cz": "Hodnoťte práci"
   },
+  "Developed in": {
+    "ru": "Разработан за",
+    "pl": "Opracowany w ciągu",
+    "cz": "vyvinuté za"
+  },
+  "days": {
+    "ru": "дня",
+    "pl": "dny",
+    "cz": "dni"
+  },
  "Thank you! Application successfully submitted!": {
    "ru": "Спасибо! Заявка успешно отправлена!",
    "pl": "ODziękuję Ci! Aplikacja została pomyślnie przesłana!",

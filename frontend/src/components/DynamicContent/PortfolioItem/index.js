@@ -96,7 +96,7 @@ export default class PortfolioItem extends Component {
                     <div className="time__post">
                       <div className="icon-timer">
                         <div className="icon__blog" />
-                        <p><span>Developed in: </span> {this.state.itemPortfolio.watching_time} <span>days</span></p>
+                          <p><span><Translate>Developed in</Translate>:</span> {this.state.itemPortfolio.watching_time} <span><Translate>days</Translate></span></p>
                       </div>
                     </div>
                   </div>
