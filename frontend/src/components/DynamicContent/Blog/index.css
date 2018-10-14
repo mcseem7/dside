@@ -422,11 +422,14 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     border-radius: 21px;
+    cursor: pointer;
     border: 2px solid #d79888;
     color: #000000;
     font-family: 'MontBold', sans-serif;
     background-image: linear-gradient(90deg, #d79888 0%, #b2725e 100%);
 }
+
+
 
 @media screen and (max-width: 768px){
     .post__incoming-img img{
