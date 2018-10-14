@@ -158,8 +158,8 @@ class Blog extends Component {
                     <p><Translate>Are coming soon.</Translate></p>
                   </div>
 
-                  <div onClick={this.changePoppup} className="incoming__button">
-                    <a href='#' ><Translate>Suggest a topic</Translate></a>
+                  <div className="incoming__button" onClick={this.changePoppup}>
+                    <a   ><Translate>Suggest a topic</Translate></a>
                   </div>
                     {this.state.modalActive ? <SuggestPoppup onClose={this.changePoppup} /> :  null}
                 </div>
