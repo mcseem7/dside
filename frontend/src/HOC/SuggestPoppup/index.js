@@ -19,6 +19,9 @@ class SuggestPoppup extends Component {
         }
     }
 
+    componentDidMount() {
+
+    }
 
     componentWillReceiveProps(nextProps) {
         if(this.state.result != nextProps.result) {

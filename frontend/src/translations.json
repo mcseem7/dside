@@ -717,5 +717,15 @@
     "ru": "Найди нас здесь",
     "pl": "Znajdź nas tutaj",
     "cz": "Najděte nás zde"
+  },
+  "Add your proposal for the new post!": {
+    "ru": "Добавьте свое предложение для нового поста!",
+    "pl": "Dodaj swoją propozycję do nowego posta!",
+    "cz": "Přidejte svůj návrh k novému příspěvku!"
+  },
+  "We publish a post on your topic within three days after your application.": {
+    "ru": "Мы опубликуем пост по вашей теме в течение трех дней после вашего заявления.",
+    "pl": "Publikujemy post na Twój temat w ciągu trzech dni po Twojej aplikacji.",
+    "cz": "Publikujeme příspěvek na vaše téma do tří dnů po podání žádosti."
   }
 }

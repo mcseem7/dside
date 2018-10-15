@@ -11,7 +11,7 @@ import Motorlab from '../../../sources/images/works__logo/motorlab.svg'
 import Smotra from '../../../sources/images/works__logo/smotra.svg'
 import nau from '../../../sources/images/works__logo/nau.svg'
 import diet from '../../../sources/images/works__logo/uda.svg'
-import apply from '../../../sources/images/works__logo/applu.svg'
+import apply from './Layer 83.svg'
 import Poppup from '../../../../HOC/OrderPopup/index';
 import Translate from 'translate-components'
 import { reactTranslateChangeLanguage } from 'translate-components'

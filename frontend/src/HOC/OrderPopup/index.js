@@ -1,5 +1,6 @@
 import React, {Component, Fragment} from 'react'
 import './index.css'
+import ReactDOM from 'react-dom'
 import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
 import Translate from 'translate-components'
 import withPoppupHOC from '../Poppup/index'

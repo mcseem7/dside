@@ -17,8 +17,9 @@ export default function withPoppupHOC(PoppupHOC, apiUrl, type) {
 
 
         componentDidMount() {
-            reactTranslateChangeLanguage.bind(this, this.state.lang)()
-             this.setState({lang: localStorage.getItem('lang')})
+            this.setState({lang: localStorage.getItem('lang')}, () => {
+                reactTranslateChangeLanguage.bind(this, this.state.lang)()
+            })
         }
 
 
