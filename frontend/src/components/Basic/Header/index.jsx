@@ -74,7 +74,7 @@ export default class Header extends Component {
             <div className="mid__content-logo">
               <div className="logo__container">
                 <div className="logo">
-                  <NavLink to="/" className="link link--dside"><span>
+                  <NavLink to={`/${this.props.domenErty}`}   className="link link--dside"><span>
 
 
                     <svg className="svg-logo" width="86px" height="26px" viewBox="0 0 209 39" version="1.1"

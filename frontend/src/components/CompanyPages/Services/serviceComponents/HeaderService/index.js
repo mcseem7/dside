@@ -160,7 +160,7 @@ export default class HeaderService extends Component {
 
                     <div className="menu__header-item">
                       <div className="menu__header-title">
-                        <Link to={`/`}   className="link__menu"><Translate>Home</Translate></Link>
+                        <Link to={`/${this.state.lang}`}    className="link__menu"><Translate>Home</Translate></Link>
                       </div>
                       <div className="description__menu-title">
                       </div>
