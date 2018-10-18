@@ -26,7 +26,6 @@ import WeCare from "../../../Basic/TrustBlocks/WeCare";
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
 import Own from "../../../Basic/TrustBlocks/Own";
 import logoHeader from "../logos/logo__header-service.png";
-import PortolioPost from "../../../DynamicContent/Header__Post/Portfolio__Post";
 import withDsideApi from "../../../../HOC/Fetch";
 import { HeroVideo } from "react-hero-video";
 
@@ -321,20 +320,7 @@ class BrandPage extends Component {
 
                 </div>
 
-              <div id='case__wrapper' style={{background: '#fff'}}>
-                {/*<CaseService/>*/}
-                <div className="container__case-studies">
-                    <div className="case-title">
-                      <h3><Translate>Case Studies</Translate></h3>
-                    </div>
-                    <div className="case-description">
-                        <p><Translate>Evaluate our previous experience . Each case in our portfolio perfectly shows the way we work.</Translate></p>
-                    </div>
-                </div>
-                <div className="case__service">
-                    <PortolioPost {...this.props} />
-                </div>
-              </div>
+                <CaseService {...this.props} name='brandes' />
                 <WeCare name="brandes"/>
                 <Advantages/>
                 <Own/>
@@ -345,5 +331,4 @@ class BrandPage extends Component {
         )
     }
 }
-
 export default withDsideApi(BrandPage, '/portfolio/getPortfolioItems/Branding/')

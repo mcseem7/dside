@@ -105,48 +105,71 @@
 
 
 
-
-.dside_textContainer-logo .logo__service_slogan {
-    -webkit-text-fill-color: white;
-    line-height: 0.9;
-    text-shadow: 0 5px 5px rgba(95, 51, 20, 0.61);
-    color: #ffffff;
-    font-family: 'MontBold', sans-serif;
-    font-size: 86px;
-    width: 100%;
-    font-weight: 700;
-}
-
-.dside_textContainer-logo  .logo__service-img {
-    position: absolute;
-    top: 160px;
-    left: 100px;
-    z-index: 1;
-    width: 950px;
-}
-
 .logo__service-text p {
     margin: 0;
 }
 
+.logo__service-img_grafiklog img {
+    height: 250px !important ;
+}
 
-@media screen and (max-width: 480px) {
-  .dside_textContainer-logo .logo__service-img {
-      width: auto;
-  }
+.dside_textContainer-logo .logo__service_slogan { text-align:center; top: 155px; max-width: unset; font-size: 2.3rem; margin: 0 auto;}
 
 
+@media only screen and (min-width: 480px) {
+   
 
-    .dside_textContainer-logo .logo__service-text {
-        font-size: 7.5rem;
+    .logo__service-img img {
+        max-width: 100%;
+    height: auto;
+    left: 0 !important;
+    position: relative;
+       }
+
+      
+    
+    
+        .logo__service-img_grafiklog {
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
     }
 
+   
+
+}
+
+
+.dside_textContainer-logo .logo__service-img_grafiklog {
+    margin-top: 60px;
+}
+
+
+@media screen and (max-width: 480px) {
+    .dside_textContainer-logo .logo__service_slogan {
+        top: 200px;
+      text-align: center;
+      width: 100%;
+      font-size: 1.6rem;
+    }
+
+    .dside_textContainer-logo .logo__service-img_grafiklog {
+        margin-top: 150px;
+    }
 
     .features__cases {
         flex-direction: column;
         align-items: center;
     }
 
+    
+    
+    .logo__service-img_grafiklog img {
+        height: 120px !important ;
+    }
 
     .case-title {
         margin-left: 35px;
@@ -155,14 +178,6 @@
     .case-description {
         margin-left: 35px;
     }
-
-
-
-          .dside_textContainer-logo .logo__service-img {
-              top: 170px;
-              left: 10px;
-          }
-
           .discount__offer-title h2 {
               line-height: 2;
           }
