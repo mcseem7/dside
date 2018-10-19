@@ -9,9 +9,10 @@ import pl from "../../../HOC/ChangeLanguage/svg/006-poland.svg";
 import cz from "../../../HOC/ChangeLanguage/svg/003-czech-republic.svg";
 import ru from "../../../HOC/ChangeLanguage/svg/005-russia.svg";
 import Translate from 'translate-components'
+import withPoppupHOC from '../../../HOC/Poppup';
 
 
-export default class Header extends Component {
+class Header extends Component {
   constructor (props) {
     super(props)
 
@@ -33,19 +34,11 @@ export default class Header extends Component {
     }
   }
 
-
-
-
-
-
-
-    changePoppup = () => {
+  changePoppup = () => {
     this.setState({modalActive: !this.state.modalActive})
   }
 
   render () {
-
-
     return (
         <div className="header__container" style={{display: this.props.style, zIndex: 10}}>
       <header className="basic__header">
@@ -74,7 +67,7 @@ export default class Header extends Component {
             <div className="mid__content-logo">
               <div className="logo__container">
                 <div className="logo">
-                  <NavLink to="/" className="link link--dside"><span>
+                  <NavLink to="/"  className="link link--dside"><span>
 
 
                     <svg className="svg-logo" width="86px" height="26px" viewBox="0 0 209 39" version="1.1"
@@ -146,14 +139,14 @@ export default class Header extends Component {
                 <div className="menu__header-item">
                   <div className="description__menu-title">
 
-                    <NavLink to={`/${this.props.domenErty}/aboutus`}   className="link__menu"><Translate>About Us</Translate></NavLink>
+                    <NavLink onClick={this.showMenu} exact to={`/${this.props.domenErty}/aboutus`}   className="link__menu"><Translate>About Us</Translate></NavLink>
                     {/*<p>Caption text under about us</p>*/}
                   </div>
                 </div>
 
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <Link to={`/${this.props.domenErty}/contactus`}  className="link__menu"><Translate>Contact Us</Translate></Link>
+                    <Link onClick={this.showMenu} exact to={`/${this.props.domenErty}/contactus`}  className="link__menu"><Translate>Contact Us</Translate></Link>
                   </div>
                   {/*<div className="description__menu-title">*/}
                     {/*<p>Caption text under about us</p>*/}
@@ -165,7 +158,7 @@ export default class Header extends Component {
               <div className="menu__header-column">
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <NavLink to={`/${this.props.domenErty}/blog`}  className="link__menu"><Translate>Blog</Translate></NavLink>
+                    <NavLink onClick={this.showMenu} exact to={`/${this.props.domenErty}/blog`}  className="link__menu"><Translate>Blog</Translate></NavLink>
                   </div>
                   {/*<div className="description__menu-title">*/}
                     {/*<p>Caption text under about us</p>*/}
@@ -174,7 +167,7 @@ export default class Header extends Component {
 
                 <div className="menu__header-item">
                   <div className="menu__header-title">
-                    <NavLink to={`/${this.props.domenErty}`}  className="link__menu"><Translate>Home</Translate></NavLink>
+                    <NavLink onClick={this.showMenu} exact to={`/${this.props.domenErty}`}  className="link__menu"><Translate>Home</Translate></NavLink>
                   </div>
                   {/*<div className="description__menu-title">*/}
                     {/*<p>Caption text under about us</p>*/}
@@ -194,3 +187,6 @@ export default class Header extends Component {
     )
   }
 }
+
+
+export default withPoppupHOC(Header, 'null', 'null')
