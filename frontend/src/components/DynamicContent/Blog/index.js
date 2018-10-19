@@ -24,7 +24,9 @@ class Blog extends Component {
 
 
     changePoppup = () => {
-        this.setState({modalActive: !this.state.modalActive})
+        this.setState({modalActive: !this.state.modalActive}, () => {
+          this.forceUpdate()
+        })
     }
 
 
@@ -33,14 +35,20 @@ class Blog extends Component {
       reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
   }
 
+  componentWillMount() {
+    console.log(this.props)
+    
+  }
+
   render () {
     const {history, location} = this.props
     return (
       <section className="blog__container page-centered">
         <div className="blog__content">
           <div className="blog__post-items">
-            {this.props.dataDside.length == 0 ? <div className='progress'>Loading...</div> : this.props.dataDside.map((item, key) => (
-              <div className="blog__item" style={{backgroundImage: `url(${process.env.REACT_APP_DOMAIN}${item.main_image})` }}>
+            {this.props.dataDside.length == 0 ? <div className='progress'>Loading...</div> : this.props.dataDside.map((item, key) => {
+             if (this.props.dataDside.length === key + 1) { 
+              return (  <div className="blog__item" style={{backgroundImage: `url(${process.env.REACT_APP_DOMAIN}${item.main_image})` }}>
               <div onClick={() => {
                   history.push({
                     pathname: `/${location.pathname.substr(1,2)}/blog/${item.base_name}`,
@@ -73,7 +81,8 @@ class Blog extends Component {
                   </div>
                 </div>
               </div>
-            </div>))
+            </div>)
+             }})
             }
           </div>
 
