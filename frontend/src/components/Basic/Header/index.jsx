@@ -33,7 +33,6 @@ class Header extends Component {
       this.setState({opacity: 1, display: 'block'})
     }
   }
-
   changePoppup = () => {
     this.setState({modalActive: !this.state.modalActive})
   }
@@ -189,4 +188,4 @@ class Header extends Component {
 }
 
 
-export default withPoppupHOC(Header, 'null', 'null')
+export default Header;
