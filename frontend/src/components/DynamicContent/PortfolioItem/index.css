@@ -11,6 +11,10 @@
         .project__logo img {
             max-width: 100%;
         }
+
+    .portfolio__carousel {
+        margin-bottom: 50px;
+    }
         .icon-timer .icon__blog {
             background-image: url('timer.svg');
             width: 25px;

@@ -5,7 +5,7 @@ import './index.css'
 import arrow from '../../sources/images/works__logo/arrow.svg'
 import withDsideApi from "../../../HOC/Fetch";
 import Translate, { reactTranslateChangeLanguage } from "translate-components";
-
+import Success from '../../Success/success';
 
 
  class Contact  extends  Component {
@@ -15,17 +15,30 @@ import Translate, { reactTranslateChangeLanguage } from "translate-components";
     this.nameRef = React.createRef()
     this.phoneRef = React.createRef()
 
+    this.state = {
+      postActive: false
+    }
   }
 
   componentDidMount() {
     reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
   }
 
-   handleSubmit = (event) => {
+   handleSubmit = async (event) => {
      event.preventDefault()
-     this.props.postData(this.nameRef, this.phoneRef)
-
+    await this.props.postData(this.nameRef, this.phoneRef)
+    await this.updateAfterPost()  
    }
+
+   updateAfterPost() {
+    this.nameRef.current.value = ''
+    this.phoneRef.current.value = ''
+    this.onSuccess()
+  }
+
+  onSuccess = () => {
+    this.setState({postActive: !this.state.postActive})
+  }
 
 
   render() {
@@ -147,6 +160,7 @@ import Translate, { reactTranslateChangeLanguage } from "translate-components";
             </div>
 
           </section>
+          {this.state.postActive ?  <Success handleSuccess={this.onSuccess} /> : null }
         </div>
     )
   }

@@ -10,7 +10,6 @@
     }
     .question__form p {
     color: #000000;
-    font-family: 'MontLight', sans-serif;
     font-size: 1.4rem;
     line-height: 1.5;
     max-width: 100%;
@@ -34,6 +33,7 @@
     .wrapper__phone {
         width: 280px;
         display: flex;
+        position: relative
     }
     .clients__form{padding: 3rem 0.2rem;}
     #name,
@@ -74,7 +74,8 @@
     color: #000000;
     font-family: 'MontLight', sans-serif;
     font-size: 0.8rem;
-    padding: 1rem 0;
+    margin: 0;
+    padding: 0 0 1rem 0;
 }
     .shining-underline-cf {
     position: relative;
@@ -176,22 +177,24 @@
 .question__form p {
     color: #000000;
     font-family: 'MontLight', sans-serif;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 32px;
     font-weight: 300;
 }
 
-
+.social__icons{display: flex;  align-items: center;}
 .footer__content {
     max-width: 1200px;
     margin: 0 auto;
     padding:1rem 4rem;
 }
 
-.copyright p {
+.copyright > p {
     color: #000000;
     font-family: 'MontLight', sans-serif;
     font-size: 12px;
+    margin: 0;
+    padding: 0;
 }
 
 .copyright__content {
@@ -251,12 +254,12 @@
     }
     #phone {
     width: 480px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     }
 
     #name {
         width: 450px;
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     .dside__send {
     width: 40%;
@@ -279,4 +282,24 @@
     width: 17%;
 }
     .copyright{font-size: .5rem;}
+}
+
+@media screen and (max-width: 768px) {
+    .copyright__content {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .copyright__content p {
+        margin-bottom: 15px;
+    }
+
+    .copyright__content .social__icons {
+        margin-bottom: 10px;
+    }
+
+    .copyright {
+        order: 1;
+    }
 }

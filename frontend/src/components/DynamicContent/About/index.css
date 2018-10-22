@@ -18,6 +18,8 @@
         flex-direction: column;
     }
 
+   
+
     .about__company-dside p {
         color: #6c6c6c;
         font-family: 'MontLight', sans-serif;
@@ -129,7 +131,7 @@
     .meet__team-title h4 {
         color: #000000;
         font-family: 'MontBold', sans-serif;
-        font-size: 18px;
+        font-size: 1.7rem;
         font-weight: 700;
         margin: 0;
         margin-left: 3rem;
