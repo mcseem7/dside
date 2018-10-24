@@ -49,8 +49,6 @@ class Blog extends Component {
           timeout: 500
         });
       }, 500)
-      
- 
       reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
   }
 

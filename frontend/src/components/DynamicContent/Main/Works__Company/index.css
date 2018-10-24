@@ -77,3 +77,11 @@
         margin-bottom: 6px;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .applyyour {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
