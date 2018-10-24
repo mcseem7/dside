@@ -281,7 +281,7 @@ export default class AbotUs extends Component {
 
 
 
-<div  className={`fade__team ${this.state.activeTeam ? 'fadeNo' : ''}`} >
+           <div  className={`fade__team ${this.state.activeTeam ? 'fadeNo' : ''}`} >
                     <div className="dside__team-man"
                          onClick={() => this.showInformation('Max')}>
 
