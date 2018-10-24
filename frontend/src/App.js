@@ -68,20 +68,25 @@ class App extends Component {
         } else {
             this.setState({cook: false})
         }
-      window.addEventListener("orientationchange", function() {
-        self.checkOrient()
+      window.addEventListener("orientationchange", () => {
+      this.checkOrient()
       }, false);
     }
 
     checkOrient = () => {
+        var isMobile = window.orientation > -1;
+if(isMobile) {
       if (window.matchMedia("(orientation: portrait)").matches) {
         this.setState({
           orientation: true
         })
       }
-      if (window.matchMedia("(orientation: landscape)").matches) {
+      else if (window.matchMedia("(orientation: landscape)").matches) {
         this.setState({orientation: false})
       }
+    } else {
+        this.setState({orientation: false})
+    }
     }
 
     confirmCookies = () => {
@@ -233,10 +238,6 @@ class App extends Component {
                             </div>
                         </div> : null
                     }
-
-
-
-
                     {this.state.langPoppup ? <LanguagePoppup/> : null}
                 </div>
             </TranslateProvider>

@@ -4,6 +4,7 @@ import arrow from '../../sources/images/works__logo/arrow.svg'
 import withDsideApi from '../../../HOC/Fetch'
 import Poppup from '../../../HOC/OrderPopup/index';
 import  Translate  from "translate-components";
+import Success from '../../Success/success';
 
 class Footer extends Component {
 
@@ -14,11 +15,25 @@ class Footer extends Component {
     this.nameRef = React.createRef()
     this.phoneRef = React.createRef()
 
+    this.state = {
+      postActive: false
+    }
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault()
-    this.props.postData(this.nameRef, this.phoneRef)
+   await this.props.postData(this.nameRef, this.phoneRef)
+   await this.updateAfterPost()
+  }
+
+  updateAfterPost() {
+    this.nameRef.current.value = ''
+    this.phoneRef.current.value = ''
+    this.onSuccess()
+  }
+
+  onSuccess = () => {
+    this.setState({postActive: !this.state.postActive})
   }
 
   render () {
@@ -37,6 +52,7 @@ class Footer extends Component {
               <div className="question__form">
                 <p><Translate>Ready to talk to the team who can’t wait to</Translate><br/>
                   <Translate>take your company to new, exciting places?</Translate>
+          
                 </p>
               </div>
 
@@ -49,7 +65,7 @@ class Footer extends Component {
                     <div className="shining-underline-cf">
                       <input ref={this.nameRef} type="text" id="name" placeholder="name" /><span></span>
                     </div>
-                  </div>
+                  </div> 
                   <div className="wrapper__phone">
                     <div className="shining-underline-cf">
                       <input ref={this.phoneRef} id="phone" type="phone" placeholder="phone" /><span></span>
@@ -80,6 +96,7 @@ class Footer extends Component {
 
           </div>
         </div>
+        {this.state.postActive ?  <Success handleSuccess={this.onSuccess} /> : null }
       </footer>
     )
   }

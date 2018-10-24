@@ -100,9 +100,9 @@ class Blog extends Component {
             </div>
 
             <div className="latest__post-content">
-              {this.props.dataDside.map((item, key) => (
-
-                <div className="latest-post" onClick={() => {
+              {this.props.dataDside.map((item, key) => {
+             if (this.props.dataDside.length != key + 1) { 
+              return (<div className="latest-post" onClick={() => {
                   history.push({
                     pathname: `/${location.pathname.substr(1,2)}/blog/${item.base_name}`,
                     state: item.description
@@ -142,7 +142,9 @@ class Blog extends Component {
                 </div>
                       </div>
 
-              </div>))
+              </div>)
+              }})
+              
               }
 
             </div>
