@@ -84,7 +84,7 @@ class BrandPage extends Component {
                 this.setState({louisbagtext: false})
             }
         })
-      const idVideo = 'uaGotppPsCs'
+        const idVideo = 'eJ8SOYUkWl0'
         return (
             <div>
                 <div className='video-wrap'>

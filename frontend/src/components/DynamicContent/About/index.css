@@ -18,7 +18,13 @@
         flex-direction: column;
     }
 
-   
+   .logo__process img {
+       max-width: 100%;
+   }
+
+   .logo__process {
+       width: 80px;
+   }
 
     .about__company-dside p {
         color: #6c6c6c;

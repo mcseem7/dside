@@ -26,6 +26,15 @@
     display: flex;
 }
 
+html,body {
+    min-height:100vh;
+  }
+  canvas {
+    width: 680px;
+    height: 360px;
+    display: block;
+  }
+
 .latest-post {
     background-image: url('./latest.png');
     background-repeat: no-repeat;
@@ -53,7 +62,6 @@
     font-size: 17px;
     font-weight: 700;
 }
-
 
 
 .latest-post__data .watching__post {
@@ -170,6 +178,11 @@
         margin-bottom: 10px;
         height: 250px;
     }
+
+   
+
+
+
 
     .icon-watching {
         padding-right: 15px;
@@ -365,17 +378,17 @@
 .post__incoming {
     background: linear-gradient(
             257deg, #000101 0%, #ffffff 100%);
-    background: #A50012;
+    background: url('./sub.png');
     margin-bottom: 30px;
 }
 
 .post__incoming-content {
     display: flex;
+    position: relative;
+    overflow: hidden;
 }
 
-.post__incoming-img {
-    opacity: 0.45;
-}
+
 
 .post__incoming-img {
      display: flex;
@@ -384,9 +397,16 @@
 
 
 
-.post__incoming__titles {
-    display: flex;
+.post__incoming-titles {
+    position: absolute;
     justify-content: center;
+    height: 360px;
+    display: flex;
+    background: #8f0000de;
+    left: 120px;
+    flex-direction: column;
+    width: 656px;
+    padding-left: 30px;
 }
 
 .incoming__title h3 {
@@ -398,7 +418,11 @@
 }
 
 .post__incoming-left {
+    /* background: url("./backgroundRedLeft.png"); */
+    width: 100%;
     display: flex;
+    position: relative;
+    left: 395px;
     align-items: center;
 }
 
@@ -410,11 +434,6 @@
     letter-spacing: 4px;
 }
 
-.post__incoming-left {
-    background: url("./backgroundRedLeft.png");
-    padding-left: 30px;
-    width: 100%;
-}
 
 .incoming__button {
     width: 180px;
@@ -442,6 +461,12 @@
         margin-bottom: 0;
     }
 
+  
+    
+
+
+
+
     .post__incoming-titles {
         display: flex;
         flex-direction: column;
@@ -465,6 +490,7 @@
         align-items: center;
     }
 
+  
     .latest-post {
         margin-bottom: 20px;
     }
@@ -476,4 +502,32 @@
     .incoming__description p {
         text-align: center;
     }
+   
+
+
+
+}
+
+@media screen and (max-width: 1024px) {
+    canvas {
+        display: none;
+    }
+
+    .post__incoming-left {
+        left: 0;
+        
+        justify-content: center
+    }
+
+    .post__incoming {
+        background: none;
+    }
+
+
+.post__incoming-titles {
+    position: relative;
+    left:0;
+    padding-left: 0px;
+    align-items: center;
+}
 }

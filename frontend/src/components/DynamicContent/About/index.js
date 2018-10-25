@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
 import './index.css'
-import auto from './auto.svg'
+import auto from './timer.svg'
 import logoRed from './dsideLogo.svg'
-import shahmat from './shahmat.svg'
+import shahmat from './schahmat.png'
 import horse from './horse.svg'
-import memory from './memoru.svg'
+import memory from './head.svg'
 import {CSSTransition,TransitionGroup} from 'react-transition-group'
-import web from './web.svg'
+import web from './planet.svg'
 import Max from './peopleCompany/Max.png'
 import Vova from './peopleCompany/Volodymyr.png'
 import Ruslan from './peopleCompany/lorem1.png'
@@ -281,7 +281,7 @@ export default class AbotUs extends Component {
 
 
 
-<div  className={`fade__team ${this.state.activeTeam ? 'fadeNo' : ''}`} >
+           <div  className={`fade__team ${this.state.activeTeam ? 'fadeNo' : ''}`} >
                     <div className="dside__team-man"
                          onClick={() => this.showInformation('Max')}>
 

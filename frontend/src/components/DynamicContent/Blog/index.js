@@ -7,12 +7,16 @@ import withDsideApi from "../../../HOC/Fetch";
 import { withRouter } from 'react-router-dom'
 import { compose, branch, renderComponent } from 'recompose'
 import PropTypes from "prop-types";
-import subscribe from './subscribe.png'
+import subscribe from './subscriber.png'
 import Translate from 'translate-components'
 import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
 import SuggestPoppup from "../../../HOC/SuggestPoppup";
+import canvasAnimate from './canvasAnimate'
+
+
 
 class Blog extends Component {
+
   constructor (props) {
     super(props)
 
@@ -31,17 +35,31 @@ class Blog extends Component {
 
 
   componentDidMount () {
-      window.scrollTo(0, 0)
+      setTimeout(() => {
+        window.WebFont.load({
+          google: {
+            families: ['Fredericka the Great']
+          },
+          active: function() {
+            canvasAnimate.init(canvasAnimate.buildTextSprites(this.google.families[0]))
+          },
+          inactive: function() {
+            alert("Failed to load any custom font, app quits");
+          },
+          timeout: 500
+        });
+      }, 500)
       reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
   }
 
   componentWillMount() {
-    console.log(this.props)
-    
+    console.log(this.props)   
   }
 
+  
+
   render () {
-    const {history, location} = this.props
+    const {history, location} = this.props   
     return (
       <section className="blog__container page-centered">
         <div className="blog__content">
@@ -153,14 +171,16 @@ class Blog extends Component {
           <div className="post__incoming">
 
             <div className="post__incoming-content">
-
+   
+          
               <div className="post__incoming-right">
                 <div className="post__incoming-img">
-                  <img src={subscribe} alt="" />
+                  {/* <img src={subscribe} alt="" /> */}
                 </div>
               </div>
 
               <div className="post__incoming-left">
+              <canvas></canvas>
                 <div className="post__incoming-titles">
                   <div className="incoming__title">
                     <h3><Translate>New posts</Translate></h3>
@@ -175,8 +195,8 @@ class Blog extends Component {
                     {this.state.modalActive ? <SuggestPoppup onClose={this.changePoppup} /> :  null}
                 </div>
               </div>
-
-            </div>
+              </div>
+            
           </div>
 
         </div>

@@ -1,7 +1,8 @@
 .find__out-branding {background: #1E1007; color: #fff; font-family: 'MontLight',sans-serif; padding-top: 3rem }
 .cola-item img{padding: 3rem 1rem;}
 .find__out-title{font-family: 'MontBold',sans-serif;}
-.find__button{display: none}
+/* .find__button{display: none} */
+
 .diff__title p{color: #a35727; font-size: 1rem;}
 .number__cola{color: #a35727; font-size: 1rem;}
 .cola__content h2{font-family: 'MontBold',sans-serif;}
@@ -24,7 +25,20 @@
     font-family: "MontBold";
 }
 
-
+.find__button {
+    width: 160px;
+    height: 40px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "MontBold",sans-serif;
+    border-radius: 34px;
+    border: 2px solid #543026;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
@@ -434,21 +448,7 @@ padding-top: 200px;
 }
 
 
-.find__button {
-    width: 160px;
-    height: 40px;
-    font-size: 14px;
-    cursor: pointer;
-    margint-top: 20px;
-    color: #fff;
-    text-transform: uppercase;
-    font-family: "MontBold",sans-serif;
-    border-radius: 34px;
-    border: 2px solid #543026;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 
 .find__button a {
@@ -470,7 +470,6 @@ padding-top: 200px;
     transition: height 0.3s ease-out;
     overflow: hidden;
     background-repeat: no-repeat;
-
 }
 
 .findBrand {
@@ -645,6 +644,31 @@ p.loius__viton_title-description{font-size: 1.4rem;}
 
 
 @media screen and (max-width: 480px){
+    .find__out-branding{
+        height: 225px;
+        transition: height 0.3s ease-out;
+        overflow: hidden;
+        background-repeat: no-repeat;
+    }
+
+    .find__out-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+        margin-right: 30px;
+    }
+
+    .number__cola {
+        font-size: 1.5rem;
+    }
+    
+    .findBrand {
+        background-repeat: no-repeat;
+        transition: height 1s ease-in;
+        height: auto;
+    }
+    
   .dside_textContainer-brand  .logo__service_slogan {
         top: 200px;
       text-align: center;
