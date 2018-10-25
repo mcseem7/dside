@@ -16,7 +16,7 @@ import PortolioPost from "../../../DynamicContent/Header__Post/Portfolio__Post";
 import withDsideApi from "../../../../HOC/Fetch";
 import { HeroVideo } from "react-hero-video";
 import { reactTranslateChangeLanguage } from "translate-components";
-
+import Translate from 'translate-components'
 
  class Automation extends Component {
   constructor () {
@@ -61,18 +61,18 @@ import { reactTranslateChangeLanguage } from "translate-components";
 <div className="developer__left-content">
 
   <div className="contentby__vova">
-  <h3>Quality implemented  website</h3>
-  <p>is the key to a successful and scalable business</p>
+  <h3><Translate>Quality implemented  website</Translate></h3>
+  <p><Translate>is the key to a successful and scalable business</Translate></p>
   </div>
 
   <div className="titles__developer">
-    <p className="name__developer">Volodymyr Piskun</p>
-    <p className="position__developer">Senior backend developer</p>
+    <p className="name__developer"><Translate>Volodymyr Piskun</Translate></p>
+    <p className="position__developer"><Translate>Senior backend developer</Translate></p>
   </div>
 
   <div className="discover__button">
     <a href="#">
-      discover your possibilites
+      <Translate>discover your possibilites</Translate>
     </a>
   </div>
 
@@ -102,12 +102,12 @@ import { reactTranslateChangeLanguage } from "translate-components";
 
               <div className="versus__section-content">
 
-                <h3 className="versus__title">Let's imagine a little</h3>
+                <h3 className="versus__title"><Translate>Let's imagine a little</Translate></h3>
 
 
-                <p className="versus__text">To the left is our Andrew, who made the site with us and successfully sells buns,
+                <p className="versus__text"><Translate>To the left is our Andrew, who made the site with us and successfully sells buns,
                   but to the right - John and Matthew, who got stuck in the 2000s
-                  and do not automate the business,<span> what happens to them? </span></p>
+                  and do not automate the business,</Translate><span><Translate>what happens to them?</Translate></span></p>
 
               </div>
 
@@ -137,23 +137,23 @@ import { reactTranslateChangeLanguage } from "translate-components";
                   </div>
 
                   <div className="baker__titles">
-                    <h3>andrew</h3>
-                    <p>24 YO Baker</p>
+                    <h3><Translate>andrew</Translate></h3>
+                    <p>24 Y.O <Translate>BAKER</Translate></p>
                   </div>
                 </div>
 
                 <div className="about__list-andrew">
                   <ul className="features__bakers">
-                    <li>His customers do not wait in line, because
+                    <li><Translate>His customers do not wait in line, because
                       he has the applications and the bakery can be ordered
-                      before you come to the bakery</li>
+                      before you come to the bakery</Translate></li>
                     <li>
-                      Accounting, what is in his warehouse is automatically maintained
+                     <Translate>Accounting, what is in his warehouse is automatically maintained</Translate>
                     </li>
                     <li>
-                      He always has fresh products,
+                      <Translate>He always has fresh products,
                       because the system itself
-                      warns him about the timing of implementation
+                      warns him about the timing of implementation</Translate>
                     </li>
                   </ul>
                 </div>
@@ -169,19 +169,20 @@ import { reactTranslateChangeLanguage } from "translate-components";
                   </div>
 
                   <div className="baker__titles">
-                    <h3>JOHN & MATTHEW</h3>
-                    <p>24 and 27 Y.O BAKERS</p>
+                    <h3><Translate>JOHN & MATTHEW</Translate></h3>
+                    <p>24, 27 Y.O <Translate>BAKERS</Translate></p>
+  
                   </div>
                 </div>
 
                 <div className="about__list-matthew">
                   <ul className="features__bakers">
-                    <li>Their customers stand in line, thereby closing the influx of new ones that are rushing</li>
+                    <li><Translate>Their customers stand in line, thereby closing the influx of new ones that are rushing</Translate></li>
                     <li>
-                      the guys had to hire a warehouseman, because they need not only to bake buns, but also to develop their business. Even though their two
+                      <Translate>the guys had to hire a warehouseman, because they need not only to bake buns, but also to develop their business. Even though their two</Translate>
                     </li>
                     <li>
-                      the risk increases that spoiled food will fall into food and even regular customers will be lost
+                      <Translate>the risk increases that spoiled food will fall into food and even regular customers will be lost</Translate>
                     </li>
                   </ul>
                 </div>
@@ -196,23 +197,14 @@ import { reactTranslateChangeLanguage } from "translate-components";
 
             <div className="al__time-wrapper">
 
-              <h3>Al time</h3>
+              
+              <h3><Translate>Become powerful</Translate></h3>
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                aspernatur aut odit aut fugit, sed quia consequuntur magni
-                dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
-                dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
-                modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-
+              <p><Translate>Take the first step to the strongest and most profitable sales.</Translate><br/>
+              <Translate>Already doing your business automation?</Translate> 
+              <br/>
+               <Translate>Order an audit of an existing automation campaign, we will point out the weaknesses</Translate>
+                <span className="golden bolder"> <Translate>for free.</Translate></span></p>
 
               <div className="al__time-button">
 
