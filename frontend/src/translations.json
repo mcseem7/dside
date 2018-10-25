@@ -692,6 +692,11 @@
    "pl": "Dziękuję Ci! Aplikacja została pomyślnie przesłana!",
    "cz": "Děkuji! Aplikace byla úspěšně odeslána!"
  },
+ "Thank you! We will call you back in 30 seconds!": {
+  "ru": "Спасибо! Мы перезвоним вам через 30 секунд!",
+  "pl": "Dziękuję Ci! Oddzwonimy do Ciebie za 30 sekund!",
+  "cz": "Děkuji! Zavoláme vám za 30 sekund!"
+ },
   "Leave your phone number": {
     "ru": "Оставь свой номер телефона",
     "pl": "Zostaw swój numer telefonu",
@@ -721,5 +726,110 @@
     "ru": "Мы опубликуем пост по вашей теме в течение трех дней после предложения.",
     "pl": "Publikujemy post na Twój temat w ciągu trzech dni po Twojej aplikacji.",
     "cz": "Publikujeme příspěvek na vaše téma do tří dnů po podání žádosti."
+  },
+  "Take the first step to the strongest and most profitable sales.": {
+    "pl": "Zrób pierwszy krok do najsilniejszej i najbardziej dochodowej sprzedaży.",
+    "cz": "Udělejte první krok k nejsilnějšímu a nejvýnosnějšímu prodeji.",
+    "ru": "Сделай первый шаг к самым сильным и прибыльным продажам."
+  },
+  "Already doing your business automation?": {
+    "ru": "Уже делаешь автоматизацию своего бизнеса?",
+    "pl": "Już robisz automatyzację swojej firmy?",
+    "cz": "Již děláte svou automatizaci?"
+  },
+  "Order an audit of an existing automation campaign, we will point out the weaknesses": {
+    "ru": "Закажите аудит существующей кампании по автоматизации, отметим недостатки",
+    "pl": "Zamów audyt istniejącej kampanii automatyzacji, wskażemy słabości",
+    "cz": "Objednejte si audit stávající automatizační kampaně, upozorníme na slabé stránky"
+  },
+  "Quality implemented  website": {
+    "ru": "Качество реализованного веб-сайта",
+    "pl": "Jakość wdrożona strona internetowa",
+    "cz": "Kvalitní implementovaná webová stránka"
+  },
+  "is the key to a successful and scalable business": {
+    "ru": "является ключом к успешному и масштабируемому бизнесу",
+    "pl": "jest kluczem do sukcesu i skalowalności biznesu",
+    "cz": "je klíčem k úspěšnému a škálovatelnému podnikání"
+  },
+  "Volodymyr Piskun": {
+    "ru": "Володимир Пискун",
+    "pl": "Wołodymyr Piskun",
+    "cz": "Volodymyr Piskun"
+  },
+  "Senior backend developer": {
+    "ru": "Главний бекенд разработчик",
+    "pl": "Starszy programista backendu",
+    "cz": "Hlavní vývojář pro backend"
+  },
+  "discover your possibilites": {
+    "ru": "узнайте о  возможностях",
+    "pl": "odkryj swoje możliwości",
+    "cz": "objevte své možnosti"
+  }, 
+  "Let's imagine a little": {
+    "ru": "Представим себе немного",
+    "pl": "Wyobraźmy sobie trochę",
+    "cz": "Představme si trochu"
+  },
+  "To the left is our Andrew, who made the site with us and successfully sells buns, but to the right - John and Matthew, who got stuck in the 2000s and do not automate the business,": {
+    "ru": "Слева наш Андрей, который сделал сайт с нами и успешно продает булочки, но направо - Джон и Мэтью, которые застряли в 2000-х годах и не могут автоматизировать бизнес,",
+    "pl": "Po lewej stronie znajduje się nasz Andrew, który stworzył naszą witrynę i z powodzeniem sprzedaje bułki, ale po prawej - John i Matthew, którzy utknęli w 2000 roku i nie zautomatyzuj firmy,",
+    "cz": "Vlevo je náš Andrew, který s námi vytvořil stránky a úspěšně prodává buchty, ale napravo - John a Matthew, kteří uvízli v roce 2000 a ne automatizovat podnikání,"
+  }, 
+  "what happens to them?": {
+    "ru": "что с ними происходит?",
+    "pl": "co się z nimi dzieje?",
+    "cz": "co se s nimi stane?"
+  },
+  "andrew": {
+    "ru": "андрей",
+    "pl": "andrew",
+    "cz": "andrew"
+  },
+  "JOHN & MATTHEW": {
+    "ru": "Джон и Метью",
+    "pl": "JOHN & MATTHEW",
+    "cz": "JOHN & MATTHEW"
+  }, 
+  "His customers do not wait in line, because he has the applications and the bakery can be ordered before you come to the bakery": {
+    "ru": "Его клиенты не ждут очереди, потому что у него есть приложения, и хлеб может быть заказан, прежде чем вы попадете в пекарню",
+    "cz": "Jeho zákazníci čekat v řadě, protože má aplikace a pekařství může být objednáno předtím, než přijdete do pekárny",
+    "pl": "Jego klienci nie czekają w kolejce, ponieważ ma on aplikacje, a piekarnia może być zamówiona przed przyjazdem do piekarni"
+  },
+  "BAKER": {
+    "ru": "ПЕКАРЬ",
+    "pl": "piekarz",
+    "cz": "pekař"
+  },
+  "BAKERS": {
+    "ru": "ПЕКАРИ",
+    "pl": "piekarz",
+    "cz": "pekař"
+  },
+  "Accounting, what is in his warehouse is automatically maintained": {
+    "ru": "Учет, что находится на его складе, автоматически поддерживается",
+    "cz": "Účetnictví, co je ve svém skladu, je automaticky udržováno",
+    "pl": "Księgowość, która znajduje się w jego magazynie, jest automatycznie utrzymywana"
+  },
+  "He always has fresh products, because the system itself warns him about the timing of implementation": {
+    "ru": "У него всегда свежие продукты, потому что сама система предупреждает его о сроках реализации",
+    "pl": "Zawsze ma świeże produkty, ponieważ sam system ostrzega go przed terminem wdrożenia",
+    "cz": "Vždy má čerstvé výrobky, protože systém sám o něm varuje před načasováním implementace"
+  },
+  "Their customers stand in line, thereby closing the influx of new ones that are rushing": {
+    "ru": "Их клиенты стоят в очереди, тем самым закрывая приток новых, которые спешат",
+    "pl": "Ich klienci stoją w kolejce, zamykając w ten sposób napływ nowych, pędzących",
+    "cz": "Jejich zákazníci stojí v řadě, čímž uzavírá příliv nových, kteří se ponoří"
+  },
+  "the guys had to hire a warehouseman, because they need not only to bake buns, but also to develop their business. Even though their two": {
+    "ru": "ребятам приходилось нанимать склада, потому что им нужно не только испечь булочки, но и развивать свой бизнес. Хотя их два",
+    "pl": "faceci musieli zatrudnić magazyniera, ponieważ potrzebują nie tylko upiec bułeczki, ale także rozwijać swój biznes. Chociaż ich dwa",
+    "cz": "chlapci museli najmout skladovatele, protože potřebují nejen pečivo, ale také rozvíjet své podnikání. Ačkoli jsou jejich dva"
+  },
+  "the risk increases that spoiled food will fall into food and even regular customers will be lost": {
+    "ru": "риск увеличивается, что испорченная пища попадет в пищу, и даже обычные клиенты будут потеряны",
+    "pl": "ryzyko zwiększa się, że zepsute jedzenie dostanie się do żywności, a nawet stali klienci zostaną utraceni",
+    "cz": "riziko zvyšuje, že zkažené jídlo bude spadat do jídla a dokonce i pravidelní zákazníci budou ztraceni"
   }
 }

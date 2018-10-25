@@ -207,7 +207,7 @@ export default class AbotUs extends Component {
 
                         <li>
                           <div className="logo__process logo__business__automated">
-                            <img src={horse} alt=""/>
+                            <img src={memory} alt=""/>
                           </div>
                           <div className="title__business-process">
                             <div className="number__bus-process">
@@ -226,7 +226,7 @@ export default class AbotUs extends Component {
 
                         <li>
                           <div className="logo__process logo__business__automated">
-                            <img src={memory} alt=""/>
+                          <img src={horse} alt=""/>
                           </div>
                           <div className="title__business-process">
                             <div className="number__bus-process">

@@ -286,10 +286,18 @@
 
 
     .titles__developer {
-        text-align: left;
+        text-align: center;
     }
 
     .discover__button {
         display: none;
+    }
+
+    .contentby__vova {
+        text-align: center;
+    }
+
+    .developer__photo {
+        display: none
     }
 }

@@ -1,8 +1,9 @@
 import React, { Component, Fragment } from 'react'
 import './index.css'
 import Translate from 'translate-components'
+import withPoppupHOC from '../../HOC/Poppup';
 
-export default class Success extends Component {
+class Success extends Component {
     constructor() {
         super()
 
@@ -27,7 +28,7 @@ export default class Success extends Component {
 
             <div class="modal-content">
               <div class="success-wrap">
-                    <h3 id="thanks"><Translate>Thank you! Application successfully submitted!</Translate></h3>
+                    <h3 id="thanks"><Translate>Thank you! We will call you back in 30 seconds!</Translate></h3>
                   
                     <div class="loader">
                     <svg class="circular">
@@ -49,3 +50,6 @@ export default class Success extends Component {
         )
     }
 }
+
+
+export default withPoppupHOC(Success)
