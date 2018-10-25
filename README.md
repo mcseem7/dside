@@ -13,9 +13,7 @@ Frontend start development:
 
 Frontend building application:
 
-npm run cra-build
-
-//result > /dist/client |  /dist/server
+sudo npm run cra-nginx
 
 
 
