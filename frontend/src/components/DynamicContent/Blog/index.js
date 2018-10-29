@@ -61,6 +61,7 @@ class Blog extends Component {
   render () {
     const {history, location} = this.props   
     return (
+      <div className='wrapper__blog-container'>
       <section className="blog__container page-centered">
         <div className="blog__content">
           <div className="blog__post-items">
@@ -201,6 +202,7 @@ class Blog extends Component {
 
         </div>
       </section>
+      </div>
     )
   }
 }

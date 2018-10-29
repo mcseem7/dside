@@ -6,6 +6,10 @@
     font-weight: 700;
 }
 
+.wrapper__blog-container {
+    background: #F2F3F5;
+}
+
 .latest__post-content {
     display: flex;
     margin-bottom: 25px;
@@ -379,7 +383,8 @@ html,body {
     background: linear-gradient(
             257deg, #000101 0%, #ffffff 100%);
     background: url('./sub.png');
-    margin-bottom: 30px;
+    padding-bottom: 30px;
+    background-repeat: no-repeat;
 }
 
 .post__incoming-content {

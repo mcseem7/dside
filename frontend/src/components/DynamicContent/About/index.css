@@ -8,6 +8,10 @@
         margin: 0;
     }
 
+    .aboutus__container {
+        background: #F2F3F5;
+    }
+
     .aboutus__wrapper {
         padding-top: 120px;
     }
@@ -357,9 +361,9 @@ left: 561px;
         font-size: 1rem;
         font-weight: 300;
     }
-       .Max{width: 74%}
-       .Vova{width: 74%}
-       .Ruslan, .Pavel, .Valentyn, .Maksym, .Oleksii{width: 88%}
+       .Max{width: 77%}
+       .Vova{width: 77%}
+       .Ruslan, .Pavel, .Valentyn, .Maksym, .Oleksii{width: 95%}
     .about__developer {
         margin-top: 2rem;
         max-width: 435px;
