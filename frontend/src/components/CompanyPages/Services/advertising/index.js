@@ -97,7 +97,7 @@ import { HeroVideo } from "react-hero-video";
         </div>
         <CaseService {...this.props} name='advertising' />
         <Iter/>
-        <WeCare name="advertising"/>
+        <WeCare name="advertisement"/>
         <Advantages/>
         <Own/>
         <LimitedService/>

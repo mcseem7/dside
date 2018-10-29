@@ -103,9 +103,9 @@ import  { HeroVideo } from 'react-hero-video'
             </div>
           </section>
 
-            <CaseService {...this.props} name='videos' />
+            <CaseService {...this.props} name='video' />
             <Advantages/>
-            <WeCare name="videos"/>
+            <WeCare name="video"/>
           <LimitedService/>
           <Own/>
 

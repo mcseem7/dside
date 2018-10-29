@@ -75,9 +75,10 @@ import Translate, { reactTranslateChangeLanguage } from "translate-components";
 
         </div>
 
-        <CaseService {...this.props} name='websites' />
+        <CaseService {...this.props} name='web sites' />
 
-        <WeCare name="websites"/>
+        <WeCare name="website"/>
+
         <Advantages/>
 
       </Fragment>

@@ -181,6 +181,7 @@
     font-family: Helvetica;
     font-size: 11pt;
     z-index: 1;
+    font-weight: 100;
     }
 
  
@@ -190,7 +191,7 @@
     }
  .holder__poppup-name,
  .holder__poppup-phone {
-    left: 189px;
+    left: 181px;
     }
 
 

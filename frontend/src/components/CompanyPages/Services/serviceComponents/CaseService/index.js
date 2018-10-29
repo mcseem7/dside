@@ -12,7 +12,7 @@ function CaseService(props) {
                       <h3><Translate>Case Studies</Translate></h3>
                     </div>
                     <div className="case-description">
-                        <p><Translate>Evaluate our previous experience in</Translate> {props.name}. <Translate>Each case in our portfolio perfectly shows the way we work.</Translate></p>
+                        <p><Translate>Evaluate our previous experience in</Translate> <Translate>{props.name}</Translate>. <Translate>Each case in our portfolio perfectly shows the way we work.</Translate></p>
                     </div>
                 </div>
                 <div className="case__service">

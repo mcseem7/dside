@@ -53,22 +53,25 @@ class SuggestPoppup extends Component {
                                     </div> :  <div id="form-itself">
                                         <h3><Translate>Add your proposal for the new post!</Translate></h3>
                                         <p><Translate>We publish a post on your topic within three days after your application.</Translate></p>
-                                        <form  onSubmit={(event) => this.props.getSubmitForm(event, this.nameRef, this.emailRef, this.socialRef, this.topicRef)} id="request-form" method="post" autocomplete="off">
+                                        <form  onSubmit={(event) => this.props.getSubmitForm(event, this.nameRef, this.emailRef, this.socialRef, this.topicRef)} id="request-form" className='request-form_blog' method="post" autocomplete="off">
                                             <input type="hidden" name="csrfmiddlewaretoken" value="16en0jPOOddfSpZ8FAdslU61aXFCtePx" />
 
                                             <div>
-                                                <input ref={this.nameRef} id="id_name" maxlength="50" minlength="3" name="name" placeholder="name" required="required" type="text" />
+                                                <div class="holder__poppup holder__poppup-name"><Translate>post name</Translate></div>
+                                                <input ref={this.nameRef} id="id_name" maxlength="50" minlength="3" name="name"  required="required" type="text" />
                                             </div>
                                             <div>
-                                                <input ref={this.emailRef} id="id_email" maxlength="50" minlength="6" name="email" placeholder="email" required="required" type="email" />
+                                                 <div class="holder__poppup holder__poppup-name"><Translate>email</Translate></div>
+                                                <input ref={this.emailRef} id="id_email" maxlength="50" minlength="6" name="email"  required="required" type="email" />
+                                            </div>
+                                            <div>
+                                               <div class="holder__poppup holder__poppup-name"><Translate>social-link</Translate></div>
+                                                <input  ref={this.socialRef} id="id_topic" maxLength="50" minLength="6" name="social-link" required="required" type="text"/>
                                             </div>
 
                                             <div>
-                                                <input  ref={this.socialRef} id="id_topic" maxLength="50" minLength="6" name="social-link" placeholder="social-link" required="required" type="text"/>
-                                            </div>
-
-                                            <div>
-                                                <input ref={this.topicRef} id="id_social" maxLength="50" minLength="6" name="topic name" placeholder="topic name" required="required" type="text"/>
+                                            <div class="holder__poppup holder__poppup-name"><Translate>post theme</Translate></div>
+                                                <input ref={this.topicRef} id="id_social" maxLength="50" minLength="6"  required="required" type="text"/>
                                             </div>
 
                                             <button type="submit" class="button14"  ><Translate>Send</Translate></button>
