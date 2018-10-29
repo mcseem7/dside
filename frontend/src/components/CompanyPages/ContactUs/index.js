@@ -84,6 +84,7 @@ import Success from '../../Success/success';
 
                         <div className="question__form">
                           <p><Translate>Ready to talk to the team who can’t wait to</Translate>
+                          <br/>
                             <Translate>take your company to new, exciting places?</Translate>
                           </p>
                         </div>
@@ -91,10 +92,16 @@ import Success from '../../Success/success';
                       </div>
 
                       <div className="sending__form">
-                        <form onSubmit={this.handleSubmit} id="form__dside">
+                        <form noValidate={true} onSubmit={this.handleSubmit} id="form__dside">
                           <div className="inputs__send">
                             <div className="wrapper__name">
-                              <input ref={this.nameRef} type="text" id="name" placeholder="name" />
+        
+                              <div class="input-placeholder">
+                              <input ref={this.nameRef} type="text" id="name"  />
+        <div class="placeholder">
+            Email <span>*</span>
+        </div>
+    </div>
                             </div>
                             <div className="wrapper__phone">
                               <input ref={this.phoneRef} id="phone" type="phone" placeholder="phone" />
@@ -130,7 +137,7 @@ import Success from '../../Success/success';
                   <div className="right__form_street">
                     <h4><Translate>Find us here</Translate></h4>
                     <div className="right__form_phone">
-                      <h2>Aleja Solidarności 117,  lok 805</h2>
+                      <h2><Translate>Aleja Solidarności</Translate> 117,  <Translate>office</Translate> 805</h2>
                     </div>
                   </div>
 

@@ -138,6 +138,10 @@ img.adv-icon {
     margin:auto;
 }
 
+.own-desc span {
+    text-transform: uppercase;
+}
+
 .own-instance .own-heading {
     font-size: 20px;
     margin-top: 6px;

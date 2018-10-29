@@ -235,11 +235,7 @@ class BrandPage extends Component {
 
                                             <div className="cola__content">
                                               <h2><Translate>Fanta</Translate></h2>
-                                                <p><Translate>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                                    eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua.
-                                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                                  nis</Translate></p>
+                                                <p><Translate>Best Fanta</Translate></p>
                                             </div>
                                         </div>
 
@@ -259,12 +255,8 @@ class BrandPage extends Component {
                                             </div>
 
                                             <div className="cola__content">
-                                                <h2>coca-cola</h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                                    eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua.
-                                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                                    nis</p>
+                                                <h2><Translate>coca-cola</Translate></h2>
+                                                <p><Translate>Best coca-cola</Translate></p>
                                             </div>
                                         </div>
 
@@ -283,12 +275,8 @@ class BrandPage extends Component {
                                             </div>
 
                                             <div className="cola__content">
-                                                <h2>coca-cola</h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                                    eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua.
-                                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                                    nis</p>
+                                                <h2><Translate>sprite</Translate></h2>
+                                                <p><Translate>Best sprite</Translate></p>
                                             </div>
                                         </div>
 

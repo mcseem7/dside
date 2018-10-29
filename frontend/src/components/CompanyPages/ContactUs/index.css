@@ -195,3 +195,27 @@
         text-align: center;
     }
 }
+
+
+.input-placeholder {
+    position: relative;
+  }
+  .input-placeholder input {
+    padding: 10px;
+    font-size: 25px;
+  }
+  .input-placeholder input:valid + .placeholder {
+    display: none;
+  }
+  
+  .placeholder {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    bottom: 0;
+    height: 25px;
+    font-size: 25px;
+    left: 10px;
+    margin: auto;
+    color: #ccc;
+  }

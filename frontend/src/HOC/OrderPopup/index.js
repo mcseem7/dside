@@ -56,12 +56,12 @@ class OrderPoppup extends Component {
                         <div>
                           <label for="id_subject">Имя:</label>
 
-                          <input ref={this.nameRef} id="id_name" maxlength="50" minlength="3" name="name" placeholder="name" required="required" type="text" />
+                          <input ref={this.nameRef} value="Enter the text" id="id_name" maxlength="50" minlength="3" name="name" required="required" type="text" />
                         </div>
                         <div>
                           <label for="id_sender">Телефон:</label>
 
-                          <input   ref={this.phoneRef} id="id_phone" maxlength="50" minlength="6" name="phone" placeholder="phone" required="required" type="tel" />
+                          <input   ref={this.phoneRef} id="id_phone" maxlength="50" minlength="6" name="phone" required="required" type="tel" />
                         </div>
                         <button type="submit" class="button14"  ><Translate>Send</Translate></button>
                       </form>

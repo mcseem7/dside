@@ -41,35 +41,35 @@ export default class Own extends Component {
                                 <div className="own-heading doctor">
                                   <Translate>own</Translate>
                                 </div>
-                                <div className="own-desc ">DOCTOR</div>
+                                <div className="own-desc "><Translate>doctor</Translate></div>
                             </div>
                             <div className="own-instance">
                                 <img src={Barber} />
                                 <div className="own-heading barber">
                                   <Translate>own</Translate>
                                 </div>
-                                <div className="own-desc ">BARBER</div>
+                                <div className="own-desc "><Translate>barber</Translate></div>
                             </div>
                             <div className="own-instance">
                                 <img src={Coach} />
                                 <div className="own-heading coach">
                                   <Translate>own</Translate>
                                 </div>
-                                <div className="own-desc">COACH</div>
+                                <div className="own-desc"><Translate>coach</Translate></div>
                             </div>
                             <div className="own-instance">
                                 <img src={CarMaster} />
                                 <div className="own-heading cms">
                                   <Translate>own</Translate>
                                 </div>
-                                <div className="own-desc">CAR SERVICE MASTER</div>
+                                <div className="own-desc"><Translate>car service master</Translate></div>
                             </div>
                             <div className="own-instance">
                                 <img src={Hero} />
                                 <div className="own-heading hero">
                                   <Translate>own</Translate>
                                 </div>
-                                <div className="own-desc">HERO</div>
+                                <div className="own-desc"><Translate>hero</Translate></div>
                             </div>
                         </div>
 

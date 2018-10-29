@@ -31,7 +31,7 @@ export default class AbotUs extends Component {
           information: {
             name: 'Maksym Vydyborets',
             position: 'Head Designer at Dside',
-            description: 'short bio testimonialsshort bio testimonialsshort bio testimonialsshort bio testimonialsshort bio testimonialsshort bio testimonials',
+            description: 'best designer',
             behance: '#',
             instagram: '#'
           }
@@ -43,7 +43,7 @@ export default class AbotUs extends Component {
           information: {
             name: 'Volodymyr Piskun',
             position: 'Senior Backend Developer at Dside',
-            description: 'short bio testimonialsshort bio testimonialsshort bio testimonialsshort bio testimonialsshort bio testimonialsshort bio testimonials',
+            description: 'best backend developer',
             behance: '#',
             instagram: '#'
           }
@@ -54,8 +54,8 @@ export default class AbotUs extends Component {
           img: Ruslan,
           information: {
             name: 'Ruslan Khlopieckiy',
-            position: 'Designer at Dside',
-            description: 'short bio testimonialsshort bio testimonialsshort bio testimonialsshort bio testimonialsshort bio testimonialsshort bio testimonials',
+            position: 'Legal Adviser',
+            description: 'best legal adviser',
             behance: '#',
             instagram: '#'
           }
@@ -66,8 +66,8 @@ export default class AbotUs extends Component {
           img: Pavel,
           information: {
             name: 'Pavel Litvinau',
-            position: 'Designer at Dside',
-            description: 'short bio testimonialsshort bio testimonialsshort bio testimonialsshort bio testimonialsshort bio testimonialsshort bio testimonials',
+            position: 'Sales Manager',
+            description: 'best sales manager',
             behance: '#',
             instagram: '#'
           }
@@ -78,8 +78,8 @@ export default class AbotUs extends Component {
           img: Valentyn,
           information: {
             name: 'Valentyn Podiias',
-            position: 'Designer at Dside',
-            description: 'short bio testimonialsshort bio testimonialsshort bio testimonialsshort bio testimonialsshort bio testimonialsshort bio testimonials',
+            position: 'Financial Director',
+            description: 'best financial director',
             behance: '#',
             instagram: '#'
           }
@@ -90,8 +90,8 @@ export default class AbotUs extends Component {
           img: Maksym,
           information: {
             name: 'Maksym Parfeniuk',
-            position: 'Designer at Dside',
-            description: 'short bio testimonialsshort bio testimonialsshort bio testimonialsshort bio testimonialsshort bio testimonialsshort bio testimonials',
+            position: 'Video Producer',
+            description: 'best Video Producer',
             behance: '#',
             instagram: '#'
           }
@@ -102,8 +102,8 @@ export default class AbotUs extends Component {
           img: Oleksii,
           information: {
             name: 'Oleksii Taran',
-            position: 'Designer at Dside',
-            description: 'short bio testimonialsshort bio testimonialsshort bio testimonialsshort bio testimonialsshort bio testimonialsshort bio testimonials',
+            position: 'Tourist Manager',
+            description: 'best tourist manager',
             behance: '#',
             instagram: '#'
           }
@@ -348,18 +348,18 @@ export default class AbotUs extends Component {
 
                                 <div className="developer__naming">
                                 <div className="name-developer">
-                                  <h4>{this.state.result.information.name}</h4>
+                                  <h4><Translate>{this.state.result.information.name}</Translate></h4>
                                 </div>
                               
                                 <div className="position-developer">
-                                  <p>{this.state.result.information.position}</p>
+                                  <p><Translate>{this.state.result.information.position}</Translate></p>
                                 </div>
                                 </div>
                               </div>
 
                               <div className="about__developer">
 
-                                <p>{this.state.result.information.description}</p>
+                                <p><Translate>{this.state.result.information.description}</Translate></p>
 
                               </div>
 
