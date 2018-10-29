@@ -1085,7 +1085,19 @@
   "ru": "лучший турист мендежер",
   "cz": "nejlepší Menedżer turystyczny ",
   "pl": "Najlepiej Menedżer turystyczny"
- }
+ },
 
+ "name": {
+  "ru": "Имя",
+  "cz": "jméno",
+  "pl": "Imie"
+ },
+
+
+"phone number in format +": {
+  "ru": "номер телефона в формате +",
+  "cz": "telefonní číslo ve formátu +",
+  "pl": "numer telefonu w formacie +"
+}
 
 }

@@ -53,15 +53,15 @@ class OrderPoppup extends Component {
                       <form  onSubmit={(event) => this.props.getSubmitForm(event, this.nameRef.current.value, this.phoneRef.current.value)} id="request-form" method="post" autocomplete="off">
                         <input type="hidden" name="csrfmiddlewaretoken" value="16en0jPOOddfSpZ8FAdslU61aXFCtePx" />
 
-                        <div>
+                        <div className='holder__wrapper'>
                           <label for="id_subject">Имя:</label>
-
-                          <input ref={this.nameRef} value="Enter the text" id="id_name" maxlength="50" minlength="3" name="name" required="required" type="text" />
+                          <div class="holder__poppup holder__poppup-name"><Translate>name</Translate></div>
+                          <input ref={this.nameRef}  id="id_name" maxlength="50" minlength="3" name="name" required="required" type="text" />
                         </div>
-                        <div>
+                        <div className='holder__wrapper'>
                           <label for="id_sender">Телефон:</label>
-
-                          <input   ref={this.phoneRef} id="id_phone" maxlength="50" minlength="6" name="phone" required="required" type="tel" />
+                          <div class="holder__poppup holder__poppup-phone"><Translate>phone number in format +</Translate></div>
+                          <input   pattern="^\+[1-9]{1}[0-9]{3,14}$"  ref={this.phoneRef} id="id_phone" maxlength="50" minlength="6" name="phone" required="required" type="tel" />
                         </div>
                         <button type="submit" class="button14"  ><Translate>Send</Translate></button>
                       </form>
