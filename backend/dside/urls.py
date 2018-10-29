@@ -23,7 +23,7 @@ from rest_framework.documentation import include_docs_urls
 from dside.settings import MEDIA_ROOT, MEDIA_URL
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admo/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^docs/', include_docs_urls(title='DSide')),
     url(r'^trumbowyg/', include('trumbowyg.urls')),
