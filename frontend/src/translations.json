@@ -1098,6 +1098,79 @@
   "ru": "номер телефона в формате +",
   "cz": "telefonní číslo ve formátu +",
   "pl": "numer telefonu w formacie +"
+},
+
+"post name": {
+  "ru": "имя поста",
+  "cz": "název příspěvku",
+  "pl": "nazwa postu"
+},
+
+"email": {
+  "ru": "eлектронний адрес",
+  "cz": "email",
+  "pl": "email"
+ },
+
+ "social-link": {
+  "ru": "социальний адрес",
+  "cz": "sociální spojení",
+  "pl": "link społecznościowy" 
+ },
+
+ "post theme": {
+  "ru": "тема поста",
+  "cz": "post téma",
+  "pl": "temat postu"
+ },
+
+ "brandes": {
+   "ru": "брендов", 
+   "cz": "značky",
+   "pl": "brandes"
+ },
+
+ "brands": {
+  "ru": "брендах", 
+  "cz": "značek",
+  "pl": "marki"
+},
+
+"advertising": {
+  "cz": "reklamy",
+  "pl": "reklama",
+  "ru": "рекламе"
+},
+
+"advertisement": {
+  "cz": "reklamy",
+  "pl": "reklamy",
+  "ru": "реклами"
+},
+
+"video": {
+  "ru": "видео",
+  "pl": "filmy wideo",
+  "cz": "videa"
+},
+
+"web sites": {
+  "ru": "веб сайтах",
+  "pl": "webových stránek",
+  "cz": "witryny internetowe"
+},
+
+"website": {
+  "ru": "веб сайтов",
+  "pl": "webových stránek",
+  "cz": "witryny internetowe"
+},
+
+"automation": {
+  "ru": "автоматизации",
+  "pl": "automatyzacja",
+  "cz": "automatizace"
 }
+
 
 }

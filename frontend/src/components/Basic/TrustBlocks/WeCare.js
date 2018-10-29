@@ -19,7 +19,9 @@ export default class WeCare extends Component {
             <section className="convupper-block" id="cu-we-care">
                 <div className="page-centered cu-wrapper">
                     <div className="cu-content" id="care">
-                      <h3><Translate>Why do DSIDE's</Translate> {this.props.name} <Translate>sell better</Translate></h3>
+                      <h3><Translate>Why do DSIDE's</Translate> <Translate>{this.props.name}</Translate>
+                      <br/>
+                       <Translate>sell better</Translate></h3>
                         <hr/>
                         {/* TODO: Inject LP name instead of *LP NAME **/}
 

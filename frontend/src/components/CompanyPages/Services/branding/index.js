@@ -308,7 +308,7 @@ class BrandPage extends Component {
 
                 </div>
 
-                <CaseService {...this.props} name='brandes' />
+                <CaseService {...this.props} name='brands' />
                 <WeCare name="brandes"/>
                 <Advantages/>
                 <Own/>

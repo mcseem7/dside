@@ -265,3 +265,12 @@ figure.effect-marley:active p {
 }
 
 
+@media screen and (max-width: 480px) {
+    .block__load__more {
+        display: none
+    }
+
+    .container__what {
+        height: 35px;
+    }
+}
