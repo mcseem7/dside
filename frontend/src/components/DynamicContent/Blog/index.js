@@ -64,7 +64,7 @@ class Blog extends Component {
       <section className="blog__container page-centered">
         <div className="blog__content">
           <div className="blog__post-items">
-            {this.props.dataDside.length == 0 ? <div className='progress'>Loading...</div> : this.props.dataDside.map((item, key) => {
+            {this.props.dataDside.length == 0 ? <div className='progress'> <Translate>Loading</Translate>...</div> : this.props.dataDside.map((item, key) => {
              if (this.props.dataDside.length === key + 1) { 
               return (  <div className="blog__item" style={{backgroundImage: `url(${process.env.REACT_APP_DOMAIN}${item.main_image})` }}>
               <div onClick={() => {

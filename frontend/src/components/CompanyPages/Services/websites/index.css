@@ -21,8 +21,14 @@
 .websites-dev__quality{display: flex; flex-direction: column;}
 .comp-h-left img, .comp-h-right img{width: 68px;}
 .comp-h-left span{font-size: .8rem; font-family: 'MontLight',sans-serif; margin-right: 0.2rem;}
-.comp-h-mid{padding: 0 6rem;}
-.comp-h-right span{margin-left: 1rem; font-size: .88rem;}
+.comp-h-mid{    max-width: 220px;
+    text-align: center;
+    min-width: 205px; width:100%;text-align: center;}
+.comp-h-mid span {
+    width: 100px;
+    display: inline-block;
+}    
+.comp-h-right span{ font-size: .88rem;}
 .headers-websites-comparsion{font-family: 'MontBold',sans-serif;display: flex; flex-direction: row; align-items: center; align-content: center; justify-content: center;}
 .comp-h-right, .comp-h-left{display: flex; align-items: center; align-content: center;}
 .body-websites-comparsion{display: flex; flex-direction: column; justify-content: center; justify-items: center; align-items: center;}
@@ -90,4 +96,23 @@
     .logo__service-img_website {
         top: 70px;
     }
+}
+
+
+.golden_title span { 
+    background-image: linear-gradient(to right, #d99b91 0%, #ad6f59 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+}
+
+.comp-h-left {
+    max-width: 165px;
+    text-align: right;
+}
+
+.comp-h-right {
+    max-width: 200px;
+    text-align: left;
 }

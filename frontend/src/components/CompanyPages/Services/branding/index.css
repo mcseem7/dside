@@ -25,6 +25,10 @@
     font-family: "MontBold";
 }
 
+.cola-item {
+    max-width: 500px;
+}
+
 .find__button {
     width: 160px;
     height: 40px;

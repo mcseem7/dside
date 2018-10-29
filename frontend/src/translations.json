@@ -363,11 +363,19 @@
     "cz": "zjistit",
     "pl": "Dowiedź się"
   },
-  "Evaluate our previous experience . Each case in our portfolio perfectly shows the way we work.": {
-    "ru": "Оцени наш предыдущий опыт. Каждый кейс нашего портфолио прекрасно показывает, как мы работаем.",
-    "cz": "Vyhodnoťte naše předchozí zkušenosti . Každý případ v našem portfoliu dokonale ukazuje způsob, jakým pracujeme.",
-    "pl": "Oceń nasze wcześniejsze doświadczenie . Każdy projekt w naszym portfolio doskonalie pokazuje, w jaki sposób pracujemy."
+  "Each case in our portfolio perfectly shows the way we work.": {
+    "ru": "Каждый кейс нашего портфолио прекрасно показывает, как мы работаем.",
+    "cz": "Každý případ v našem portfoliu dokonale ukazuje způsob, jakým pracujeme.",
+    "pl": "Każdy projekt w naszym portfolio doskonalie pokazuje, w jaki sposób pracujemy."
   },
+
+  "Evaluate our previous experience in": {
+    "ru": "Оцени наш предыдущий опыт в",
+    "cz": "Vyhodnoťte naše předchozí zkušenosti v",
+    "pl": "Oceń nasze wcześniejsze doświadczenie w"
+  },
+
+
   "Case Studies": {
     "cz": "případové studie",
     "pl": "Nasi projekty",
@@ -831,5 +839,253 @@
     "ru": "риск увеличивается, что испорченная пища попадет в пищу, и даже обычные клиенты будут потеряны",
     "pl": "ryzyko zwiększa się, że zepsute jedzenie dostanie się do żywności, a nawet stali klienci zostaną utraceni",
     "cz": "riziko zvyšuje, že zkažené jídlo bude spadat do jídla a dokonce i pravidelní zákazníci budou ztraceni"
-  }
+  },
+  "Loading": {
+    "ru": "Загрузка",
+    "pl": "ładowanie",
+    "cz": "nakládání"
+  },
+  "Aleja Solidarności": {
+    "ru": "Алея Солидарности",
+    "pl": "Aleja Solidarności",
+    "cz": "Aleja Solidarności"
+  },
+  "office": {
+    "ru": "офис",
+    "pl": "lok",
+    "cz": "lok"
+  },
+  "DSIDE to make the best video": {
+    "ru": "DSIDE чтобы сделать лучшее видео",
+    "pl": "DSIDE, aby zrobić najlepszy film",
+    "cz": "DSIDE, aby vytvořil nejlepší video"
+  },
+  "All right reserved.": {
+    "ru": "Все права защищены.",
+    "pl": "Wszystkie prawa zastrzeżone.",
+    "cz": "Všechna práva vyhrazena."
+  },
+
+  "doctor": {
+    "ru": "врач",
+    "pl": "lekarz",
+    "cz": "doktor"
+  },
+
+  "barber": {
+    "ru": "парикмахер",
+    "pl": "fryzjer",
+    "cz": "holič"
+  },
+
+  "coach": {
+    "ru": "тренер",
+    "pl": "trener",
+    "cz": "trenér"
+  },
+
+  "car service master": {
+    "ru": "мастер автосервиса",
+    "pl": "mistrz obsługi samochodów",
+    "cz": "autoservis master"
+  },
+
+  "hero": {
+    "ru": "герой",
+    "pl": "bohater",
+    "cz": "hrdina"
+  },
+
+
+  "hero": {
+    "ru": "герой",
+    "pl": "bohater",
+    "cz": "hrdina"
+  },
+
+  "Simple Website": {
+    "ru": "Простой сайт",
+    "pl": "Prosta strona internetowa",
+    "cz": "Jednoduchý web"
+  },
+
+  "Well-selling": {
+    "ru": "Хорошо продающий",
+    "pl": "Dobrze sprzedająca się",
+    "cz": "Dobře prodejní "
+  },
+
+  "website": {
+    "ru": "сайт",
+    "pl": "stronie ",
+    "cz": "webová stránka"
+  },
+
+  "Fanta": {
+    "ru": "Фанта",
+    "cz": "Fantas",
+    "pl": "Fantos"
+  },
+
+  "Best Fanta": {
+    "ru": "Лучшая Фанта",
+    "cz": "Nejlepší Fanta",
+    "pl": "Najlepsza Fanta"
+  },
+
+  "coca-cola": {
+    "ru": "кока-кола",
+    "cz": "koka-kola",
+    "pl": "koka-kola"
+  },
+
+ "Best coca-cola": {
+  "ru": "Лучшая Кока-кола",
+  "cz": "Nejlepší koka-kola",
+  "pl": "Najlepsza koka-kola"
+ },
+
+ "sprite": {
+  "ru": "спрайт",
+  "cz": "sprites",
+  "pl": "sprites"
+ },
+
+ "Best sprite": {
+  "ru": "Лучший спрайт",
+  "cz": "nejlepší sprite",
+  "pl": "nejlepší sprite"
+ },
+
+"Maksym Vydyborets": {
+  "ru": "Максим Выдыборец",
+  "cz": "Maksym Vydyborets",
+  "pl": "Maksym Vydyborets"
+},
+
+"Head Designer at Dside": {
+  "ru": "Ведущий дизайнер в Dside",
+  "cz": "Vedoucí designéra na Dside",
+  "pl": "Głowica Designer w Dside"
+ },
+
+ "best designer": {
+  "ru": "лучший дизайнер",
+  "cz": "nejlepší designer",
+  "pl": "Najlepiej designer"
+ },
+
+ "Volodymyr Piskun": {
+  "ru": "Владимир Пискун",
+  "cz": "Volodymyr Piskun",
+  "pl": "Wolodymyr Piskun"
+},
+
+"Senior Backend Developer at Dside": {
+  "ru": "Главний Бекенд Разработчик",
+  "cz": "Senior Backend Developer",
+  "pl": "Starszy programista backendu"
+ },
+
+ "best backend developer": {
+  "ru": "лучший бекенд разработчик",
+  "cz": "nejlepší backend developer",
+  "pl": "Najlepiej backendu developer"
+ },
+
+
+ "Ruslan Khlopieckiy": {
+  "ru": "Руслан Хлопецкий",
+  "cz": "Ruslan Khlopieckiy",
+  "pl": "Ruslan Khlopieckiy"
+},
+
+"Legal Adviser": {
+  "ru": "Адвокат",
+  "cz": "Prawnik",
+  "pl": "Prawnik"
+ },
+
+ "best legal adviser": {
+  "ru": "лучший адвокат",
+  "cz": "nejlepší prawnik",
+  "pl": "Najlepiej prawnik"
+ },
+
+ "Pavel Litvinau": {
+  "ru": "Павел Литвинау",
+  "cz": "Pavel Litvinau",
+  "pl": "Pavel Litvinau"
+},
+
+"Sales Manager": {
+  "ru": "Менеджер по продажам",
+  "cz": "Manažer Prodeje",
+  "pl": "Kierownik Sprzedaży"
+ },
+
+ "best sales manager": {
+  "ru": "лучший менеджер по продажам",
+  "cz": "nejlepší Kierownik Sprzedaży ",
+  "pl": "Najlepiej Manažer Prodeje"
+ },
+
+ "Valentyn Podiias": {
+  "ru": "Валентин Подиас",
+  "cz": "Valentyn Podiias",
+  "pl": "Valentyn Podiias"
+},
+
+"Financial Director": {
+  "ru": "Финансовий директор",
+  "pl": "Dyrektor finansowy",
+  "cz": "Finanční ředitel"
+ },
+
+ "best financial director": {
+  "ru": "лучший финансовий директор",
+  "cz": "nejlepší Dyrektor finansowy ",
+  "pl": "Najlepiej Finanční ředitel"
+ },
+
+
+
+
+ "Maksym Parfeniuk": {
+  "ru": "Максим Парфенюк",
+  "cz": "Maksym Parfeniuk",
+  "pl": "Maksym Parfeniuk"
+},
+
+"Video Producer": {
+  "ru": "Видео Продюсер",
+  "pl": "Producent Wideo",
+  "cz": "Producent Video"
+ },
+
+ "best Video Producer": {
+  "ru": "лучший видео продюсер",
+  "cz": "nejlepší video producer",
+  "pl": "Najlepiej video producer"
+ },
+
+ "Oleksii Taran": {
+  "ru": "Алексей Таран",
+  "cz": "Oleksii Taran",
+  "pl": "Oleksii Taran"
+},
+
+"Tourist Manager": {
+  "ru": "Турист менеджер",
+  "pl": "Menedżer turystyczny",
+  "cz": "Menedżer turystyczny"
+ },
+
+ "best tourist manager": {
+  "ru": "лучший турист мендежер",
+  "cz": "nejlepší Menedżer turystyczny ",
+  "pl": "Najlepiej Menedżer turystyczny"
+ }
+
+
 }

@@ -55,8 +55,12 @@ import Translate, { reactTranslateChangeLanguage } from "translate-components";
           <div className="headers-websites-comparsion">
             <div className="comp-h-left greygoose"><span><Translate>Simple Website</Translate></span><img src={SimpleWeb} alt=""/></div>
             <div className="comp-h-mid"><span>vs</span></div>
-            <div className="comp-h-right"><img src={BetterWeb} alt=""/><span><strong className="golden">Well-selling</strong>website</span></div>
+            <div className="comp-h-right"><img src={BetterWeb} alt=""/><span>
+              <div className="golden_title"><span><Translate>Well-selling</Translate></span></div>
+
+              <Translate>website</Translate></span></div>
           </div>
+
           <div className="body-websites-comparsion">
             <div className="roow"><span>100</span><strong><Translate>USERS</Translate></strong><span>100</span></div>
             <div className="roow"><span>$30</span><strong><Translate>PER CUSTOMER</Translate></strong><span>$30</span></div>

@@ -66,7 +66,7 @@ import  { HeroVideo } from 'react-hero-video'
                     <HeaderService
                         imgLogoPosition={'logo__service-img_video'}
                         textContainer={'dside_textContainer-video'}
-                        serviceSlogan={'DSIDE to make the best video'}
+                        serviceSlogan={[<Fragment><Translate>DSIDE to make the best video</Translate></Fragment>]}
                         textHeader={[<p></p>]} />
                 </div>
             </div>

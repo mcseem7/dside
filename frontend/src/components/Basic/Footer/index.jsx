@@ -84,7 +84,7 @@ class Footer extends Component {
 
           <div className="copyright__content">
             <div className="copyright">
-              <p>2018 &copy; Dside Agency &trade;. All right reserved.</p>
+              <p>2018 &copy; Dside Agency &trade;. <Translate>All right reserved.</Translate></p>
             </div>
 
             <div className="social__icons">
