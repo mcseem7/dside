@@ -174,3 +174,26 @@
     cursor:pointer;
 }
 
+.holder__poppup {
+    position: absolute;
+    color: #A3A3A3;
+    cursor: auto;
+    font-family: Helvetica;
+    font-size: 11pt;
+    z-index: 1;
+    }
+
+ 
+   #id_name,
+  #id_phone {
+        font-size:11pt;
+    }
+ .holder__poppup-name,
+ .holder__poppup-phone {
+    left: 189px;
+    }
+
+
+    .holder__wrapper {
+        position: relative;
+    }

@@ -6,7 +6,7 @@ import arrow from '../../sources/images/works__logo/arrow.svg'
 import withDsideApi from "../../../HOC/Fetch";
 import Translate, { reactTranslateChangeLanguage } from "translate-components";
 import Success from '../../Success/success';
-
+import withPoppupHOC from '../../../HOC/Poppup'
 
  class Contact  extends  Component {
   constructor() {
@@ -30,6 +30,8 @@ import Success from '../../Success/success';
     await this.updateAfterPost()  
    }
 
+  
+
    updateAfterPost() {
     this.nameRef.current.value = ''
     this.phoneRef.current.value = ''
@@ -48,7 +50,8 @@ import Success from '../../Success/success';
    //    scaleControl: false,
    // });
    const framegoo = '<iframe src="https://snazzymaps.com/embed/98430" width="100%" height="400px" style="border:none;"></iframe>'
-    return(
+  
+   return(
         <div>
 
 
@@ -92,21 +95,18 @@ import Success from '../../Success/success';
                       </div>
 
                       <div className="sending__form">
-                        <form noValidate={true} onSubmit={this.handleSubmit} id="form__dside">
+                        <form onSubmit={this.handleSubmit} id="form__dside">
                           <div className="inputs__send">
-                            <div className="wrapper__name">
-        
-                              <div class="input-placeholder">
+                            <div className="wrapper-holder__name">
+                             <div class="holder__poppup"><Translate>name</Translate></div>
                               <input ref={this.nameRef} type="text" id="name"  />
-        <div class="placeholder">
-            Email <span>*</span>
-        </div>
-    </div>
                             </div>
-                            <div className="wrapper__phone">
-                              <input ref={this.phoneRef} id="phone" type="phone" placeholder="phone" />
+                            <div className="wrapper-holder__phone">
+                            <div class="holder__poppup"><Translate>phone number in format +</Translate></div>
+                              <input ref={this.phoneRef}  pattern="^\+[1-9]{1}[0-9]{3,14}$" id="phone" type="phone" />
                             </div>
                           </div>
+                         
                           <button className="dside__send">
                             <div className="button__content">
                               <span className='send__title'><Translate>Send</Translate></span> <img src={arrow} alt="" />
@@ -173,4 +173,4 @@ import Success from '../../Success/success';
   }
 }
 
-export default withDsideApi(Contact, '/home/addOrder/')
+export default withPoppupHOC(withDsideApi(Contact, '/home/addOrder/'))

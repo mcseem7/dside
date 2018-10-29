@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import fetch from 'isomorphic-fetch'
 import PropTypes from 'prop-types'
-
+import $ from 'jquery'
 
 export default function withDsideApi(DsideComponent, apiUrl, type) {
 
@@ -36,6 +36,18 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
                this.getDsideApi()
            })
        }
+       $(function() {
+        $(".holder + input").keyup(function() {
+            if($(this).val().length) {
+                $(this).prev('.holder').hide();
+            } else {
+                $(this).prev('.holder').show();
+            }
+        });
+        $(".holder").click(function() {
+            $(this).next().focus();
+        });
+    });
     }
 
 

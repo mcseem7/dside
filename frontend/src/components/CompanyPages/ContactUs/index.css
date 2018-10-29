@@ -112,9 +112,6 @@
     display: block;
 }
 
-.send__title {
-    padding-right: 20px;
-}
 
 #form__dside .dside__send {
     width: 140px;
@@ -197,25 +194,22 @@
 }
 
 
-.input-placeholder {
+
+.wrapper__name .holder__poppup {
+    bottom: 0.8px;
+}
+
+.wrapper-holder__name {
     position: relative;
-  }
-  .input-placeholder input {
-    padding: 10px;
-    font-size: 25px;
-  }
-  .input-placeholder input:valid + .placeholder {
-    display: none;
-  }
-  
-  .placeholder {
-    position: absolute;
-    pointer-events: none;
-    top: 0;
-    bottom: 0;
-    height: 25px;
-    font-size: 25px;
-    left: 10px;
-    margin: auto;
-    color: #ccc;
-  }
+    display: flex;
+    margin-top: 2rem;
+    width: 25%;
+    margin-right: 25px;
+}
+
+.wrapper-holder__phone {
+    position: relative;
+    display: flex;
+    margin-top: 2rem;
+    width: 35%;
+}

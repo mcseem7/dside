@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react'
 import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
-
+import $ from 'jquery'
 
 export default function withPoppupHOC(PoppupHOC, apiUrl, type) {
     return class withPoppupHOC extends Component {
@@ -20,6 +20,18 @@ export default function withPoppupHOC(PoppupHOC, apiUrl, type) {
             this.setState({lang: localStorage.getItem('lang')}, () => {
                 reactTranslateChangeLanguage.bind(this, this.state.lang)()
             })
+            $(function() {
+                $(".holder__poppup + input").keyup(function() {
+                    if($(this).val().length) {
+                        $(this).prev('.holder__poppup').hide();
+                    } else {
+                        $(this).prev('.holder__poppup').show();
+                    }
+                });
+                $(".holder__poppup").click(function() {
+                    $(this).next().focus();
+                });
+            });
         }
 
 
