@@ -13,18 +13,17 @@ Frontend start development:
 
 Frontend building application:
 
+====================
+
 sudo npm run cra-nginx
 
+After building: 
 
+   - Now you can upload dist into your hosting server
+   - After that, you can run npm install --production inside dist/
+   - Finally you can bootup your server using your favorite Node process manager (PM2)
 
-Your result:
-   /dist
-      >/server
-      /client
-
-
-
-To start the application you need to do:
+To start the application:
 
    pm2 start dist/server/bundle.js >> Server creating to port 3001
 
