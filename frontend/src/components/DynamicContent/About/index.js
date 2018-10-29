@@ -125,6 +125,7 @@ export default class AbotUs extends Component {
       this.setState({result: item})
       }
     })
+
   }
 
   hideMeetDeveloper = () => {
@@ -161,7 +162,7 @@ export default class AbotUs extends Component {
 
                 <div className="dside__what-content">
                   <div className="title__what">
-                      <h4><Translate>What dside?</Translate></h4>
+    <h4><Translate>What dside?</Translate></h4>
                   </div>
 
                   <div className="about__company-dside">
@@ -270,14 +271,14 @@ export default class AbotUs extends Component {
                 </div>
 
               </div>
-              <div className="dside__meet_team" style={{height: `${this.state.activeTeam  ? '290px': '370px'}` }}>
+              <div className="dside__meet_team" >
 
                 <div className="meet__team-title">
-                  <h4><Translate>meet our team</Translate></h4>
+    <h4>{this.state.activeTeam ? <Translate>meet our team</Translate> : null}</h4>
                 </div>
 
 
-                  <div className="meet__team__dside" style={{marginTop: `${this.state.activeTeam  ? '0px': '60px'}` }}>
+                  <div className="meet__team__dside" >
 
 
 
