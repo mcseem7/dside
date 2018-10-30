@@ -52,7 +52,9 @@ export default function withPoppupHOC(PoppupHOC, apiUrl, type) {
                             email: postData[1].current.value,
                             social_link: postData[2].current.value,
                             text: postData[3].current.value
-                        } })
+                        } }, () => {
+                            console.log(this.state.postData)
+                        })
                     break;
             }
             await fetch(`${process.env.REACT_APP_API}/${this.state.lang}${apiUrl}`, {
