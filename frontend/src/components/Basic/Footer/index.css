@@ -254,12 +254,12 @@
         transform-origin: 0 0;
     }
     #phone {
-    width: 480px;
+    width: 270px;
     font-size: 0.9rem;
     }
 
     #name {
-        width: 450px;
+        width: 260px;
         font-size: 0.9rem;
     }
     .dside__send {

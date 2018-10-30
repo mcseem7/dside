@@ -15,9 +15,10 @@ import Own from "../../../Basic/TrustBlocks/Own";
 import LogoBrand from "../branding/logo_brand.png";
 import PortolioPost from "../../../DynamicContent/Header__Post/Portfolio__Post";
 import withDsideApi from "../../../../HOC/Fetch";
-import  { HeroVideo } from 'react-hero-video'
+import { HeroVideo } from 'react-hero-video'
+import Iter from "../../../Basic/TrustBlocks/iter";
 
- class VideoPage extends Component {
+class VideoPage extends Component {
   constructor() {
     super()
 
@@ -28,7 +29,7 @@ import  { HeroVideo } from 'react-hero-video'
   }
 
   componentDidMount() {
-    window.scrollTo(0,0)
+    window.scrollTo(0, 0)
     reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
   }
 
@@ -37,9 +38,9 @@ import  { HeroVideo } from 'react-hero-video'
     event.target.playVideo();
   }
 
-   openModal () {
-     this.setState({isOpen: true})
-   }
+  openModal() {
+    this.setState({ isOpen: true })
+  }
 
   render() {
     const opts = {
@@ -54,24 +55,24 @@ import  { HeroVideo } from 'react-hero-video'
       }
     };
     const idVideo = 'eJ8SOYUkWl0'
-      return(
-        <div>
+    return (
+      <div>
 
-            <div className='video-wrap'>
-              <HeroVideo
-                videoSrc={`https://www.youtube.com/embed/${idVideo}?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1&fs=1`}
-              >
-              </HeroVideo>
-                <div id="vidtop-content">
-                    <HeaderService
-                        imgLogoPosition={'logo__service-img_video'}
-                        textContainer={'dside_textContainer-video'}
-                        serviceSlogan={[<Fragment><Translate>DSIDE to make the best video</Translate></Fragment>]}
-                        textHeader={[<p></p>]} />
-                </div>
-            </div>
+        <div className='video-wrap'>
+          <HeroVideo
+            videoSrc={`https://www.youtube.com/embed/${idVideo}?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1&fs=1`}
+          >
+          </HeroVideo>
+          <div id="vidtop-content">
+            <HeaderService
+              imgLogoPosition={'logo__service-img_video'}
+              textContainer={'dside_textContainer-video'}
+              serviceSlogan={[<Fragment><Translate>DSIDE to make the best video</Translate></Fragment>]}
+              textHeader={[<p></p>]} />
+          </div>
+        </div>
 
-          <div className='view__container-wrapper'>
+        <div className='view__container-wrapper'>
           <section className="view__container-videos">
 
             <div className="view__videos-left">
@@ -84,32 +85,51 @@ import  { HeroVideo } from 'react-hero-video'
                 </div>
               </div>
             </div>
-            
-            
+
+
             <div className="view__videos-right">
               <div className="view__videos_img-wrapper">
-                <img src={ProjectVideo} alt=""/>
+                <img src={ProjectVideo} alt="" />
               </div>
             </div>
-
           </section>
-          </div>
-
-          <section className="video__background-dside">
-            <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId='L61p2uyiMSo' onClose={() => this.setState({isOpen: false})} />
-
-            <div className="background-image__videos">
-              <img src={playIcon} alt="" onClick={this.openModal.bind(this)}/>
-            </div>
-          </section>
-
-            <CaseService {...this.props} name='video' />
-            <Advantages/>
-            <WeCare name="video"/>
-          <LimitedService/>
-          <Own/>
-
         </div>
+
+        <section className="video__background-dside">
+          <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId='L61p2uyiMSo' onClose={() => this.setState({ isOpen: false })} />
+
+          <div className="background-image__videos">
+            <img src={playIcon} alt="" onClick={this.openModal.bind(this)} />
+          </div>
+        </section>
+        <CaseService {...this.props} name='video' />
+        <section className="al__time-section">
+
+          <div className="al__time-wrapper">
+
+
+            <h3><Translate>Become powerful</Translate></h3>
+
+            <p><Translate>Take the first step to the strongest and most profitable sales.</Translate><br />
+              <Translate>Already doing your business automation?</Translate>
+              <br />
+              <Translate>Order an audit of an existing automation campaign, we will point out the weaknesses</Translate>
+              <span className="golden bolder"> <Translate>for free.</Translate></span></p>
+
+            <div className="al__time-button">
+
+            </div>
+
+          </div>
+        </section>
+        <Iter />
+        <WeCare name="video" />
+        <Advantages />
+        <Own />
+        <LimitedService />
+
+
+      </div>
     )
   }
 }
