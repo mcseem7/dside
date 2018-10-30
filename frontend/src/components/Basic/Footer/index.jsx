@@ -63,13 +63,13 @@ class Footer extends Component {
                 <div className="inputs__send">
                   <div className="wrapper__name">
                     <div className="shining-underline-cf">
-                    <div class="holder"><Translate>name</Translate></div>
+                    <div class="holder"><Translate>Name</Translate></div>
                       <input ref={this.nameRef} type="text" id="name"  /><span></span>
                     </div>
                   </div> 
                   <div className="wrapper__phone">
                     <div className="shining-underline-cf">
-                      <div class="holder"><Translate>phone number in format +</Translate></div>
+                      <div class="holder"><Translate>Phone number (With country code)</Translate></div>
                       <input  pattern="^\+[1-9]{1}[0-9]{3,14}$"  ref={this.phoneRef} id="phone" type="phone"  /><span></span>
                   </div>
                   </div>
