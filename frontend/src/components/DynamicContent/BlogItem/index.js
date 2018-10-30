@@ -14,7 +14,8 @@ import redirect from './redirect.svg'
 
     this.state = {
       blogItem: [],
-      blogCategory: ''
+      blogCategory: '',
+      notFound: false
     }
   }
 
@@ -29,11 +30,17 @@ import redirect from './redirect.svg'
 
   getData = (postName) => {
     return fetch(`${process.env.REACT_APP_API}/${localStorage.getItem('lang')}/blog/getBlogItemDetails/${postName}/`).then((response) => {
-        return response.json()
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error('Something went wrong');
+        }
     }).then((item) => {
         this.setState({
             blogItem: item
         })
+    }).catch((error) => {
+     this.setState({notFound: true})
     })
   }
 
@@ -47,7 +54,10 @@ import redirect from './redirect.svg'
       console.log(this.props.nextPost)
     return(
         <div>
+        {this.state.notFound ? null : 
           <div className="blog__post-container">
+
+
 
             <div className="blog__item" style={{backgroundImage: `url(${process.env.REACT_APP_DOMAIN}${blogItem.main_image})`}}>
               <div className="blog__item-content">
@@ -131,11 +141,12 @@ import redirect from './redirect.svg'
                   : null}
               </div>
             </div>
+            
             </div>
-
+              
           </div>
-
-
+  
+                                  }
         </div>
     )
   }
