@@ -10,9 +10,9 @@
         "ru": "Что такое DSIDE?"
     },
     "is a value driven, focused and very ambitious digital agency based in Warsaw, providing the best and innovative solutions for your business.": {
-        "pl": "to zorientowana na ważnych rzeczy, skoncentrowana i bardzo ambitna agencja cyfrowa z siedzibą w Warszawie, zapewniająca najlepsze i innowacyjne rozwiązania dla Twojej firmy.",
+        "pl": "- to zorientowana na ważnych rzeczy, skoncentrowana i bardzo ambitna agencja cyfrowa z siedzibą w Warszawie, zapewniająca najlepsze i innowacyjne rozwiązania dla Twojej firmy.",
         "cz": "je hodnotově řízená, zaměřená a velmi ambiciózní digitální agentura se sídlem ve Varšavě, která poskytuje nejlepší a inovativní řešení pro vaše podnikání.",
-        "ru": "ето стоимость, которое ведет, сосредоточенное и очень амбициозное цифровое агентство, базирующееся в Варшаве, предоставляя лучшие и инновационные решения для твоего бизнеса."
+        "ru": "- это ориентированное на ценности и очень амбициозное цифровое агентство, базирующееся в Варшаве. Предоставлющее инновационные решения для твоего бизнеса."
     },
     "More about us": {
         "pl": "Więcej o nas",
@@ -71,13 +71,13 @@
   },
 
   "Identity": {
-    "ru": "Идентичность",
+    "ru": "Айдентика",
     "pl": "Tożsamość",
     "cz": "Identita"
   },
 
   "Naming": {
-    "ru": "Нейминг",
+    "ru": "Нэйминг",
     "pl": "Nazewnictwo",
     "cz": "Pojmenování"
   },
@@ -85,12 +85,12 @@
 
   "Websites": {
     "ru": "Веб-сайты",
-    "pl": "Strony internetowe",
+    "pl": "Strony WWW",
     "cz": "Websites"
   },
 
   "Landing page": {
-    "ru": "Лендинг пейдж",
+    "ru": "Лендинг-пейдж",
     "pl": "Landing page",
     "cz": "Vstupní stránky"
   },
@@ -106,17 +106,17 @@
     "cz": "Korporační"
   },
   "Intranet": {
-    "ru": "Интрасеть",
+    "ru": "Внутренние сайты",
     "pl": "Intranet / Extranet",
     "cz": "Intranet"
   },
   "Advertising": {
-    "ru": "реклама",
+    "ru": "Реклама",
     "pl": "Reklama",
     "cz": "Reklamní"
   },
   "E-mail marketing": {
-    "ru": "Рекламная рассылка",
+    "ru": "E-mail маркетинг",
     "pl": "Marketing e-mailowy",
     "cz": "Emailový marketing"
   },
@@ -126,8 +126,8 @@
     "cz": "Marketing CPA"
   },
   "Social media": {
-    "ru": "Cоциальные медиа",
-    "pl": "Media społecznościowe",
+    "ru": "Cоциальные сети",
+    "pl": "Sieci społecznościowe",
     "cz": "Sociální média"
   },
   "Direct": {
@@ -143,13 +143,13 @@
   },
 
   "Reduction of staff": {
-    "ru": "Сокращение штата",
+    "ru": "Оптимизация штата",
     "pl": "Redukcja personelu",
     "cz": "Snížení počtu zaměstnanců"
   },
 
   "Сost reduction": {
-    "ru": "Уменьшение цены",
+    "ru": "Уменьшение затрат",
     "pl": "Optymalizacja kosztów",
     "cz": "Sost redukce"
   },
@@ -204,8 +204,8 @@
 
 
     "is a modern, fast-growing company, in which the main principles of work are high professionalism,": {
-       "ru": "является современной, быстро развивающейся компанией, в которой основным принципом работы являются высокий профессионализм.",
-        "pl": "jest nowoczesną, szybko rozwijającą się firmą, w której głównymi zasadami pracy są wysoki profesjonalizm,",
+       "ru": "DSIDE является современной, быстро развивающейся компанией, в которой основным принципом работы являются высокий профессионализм.",
+        "pl": "DSIDE jest nowoczesną, szybko rozwijającą się firmą, w której głównymi zasadami pracy są wysoki profesjonalizm,",
         "cz": "je moderní, rychle se rozvíjející společnost, ve které jsou hlavními principy práce vysoká profesionalita,"
     },
     "responsibility to each client and the reliability of the guaranteed result": {
@@ -331,7 +331,7 @@
   "Sample bag": {
     "ru": "Просто сумка",
     "cz": "Jen tašku",
-    "pl": "Zwyczajna torba"
+    "pl": "Zwykła torba"
   },
   "On branding depends": {
     "ru": "От брендинга многое зависит",
@@ -421,7 +421,7 @@
 
   "What's the difference?": {
     "cz": "Jaký je v tom rozdíl?",
-    "pl": "Jaka różnica?",
+    "pl": "Na czym polega róznica?",
     "ru":"Какая разница?"
   },
 
@@ -519,8 +519,8 @@
 
   "Pure advantages of DSIDE": {
     "ru": "Чистые преимущества от DSIDE",
-    "pl": "Čisté výhody DSIDE",
-    "cz": "Prawdziwe zalety DSIDE"
+    "cz": "Čisté výhody DSIDE",
+    "pl": "Prawdziwe zalety DSIDE"
   },
 
 
@@ -623,19 +623,19 @@
   "order now": {
     "cz": "objednat teď",
     "pl": "Zamów teraz",
-    "ru": "Заказажи сейчас"
+    "ru": "Заказать"
   },
 
   "DSIDE to make your business earn more MONEY": {
-    "ru": "DSIDE*, чтобы твой бизнес приносил больше денег",
-    "pl": "DSIDE, aby Twoja firma zarabiała więcej PIENIĄDZE",
+    "ru": "Решись, чтобы твой бизнес приносил больше",
+    "pl": "DSIDE, aby Twoja firma zarabiała więcej",
     "cz": "DSIDE, aby vaše firma vydělala více peněz"
   },
 
   "DSIDE to make your brand work": {
     "cz": "DSIDE, aby vaše značka fungovala",
-    "pl": "DSIDE, aby Twoja marka działała za Ciebie",
-    "ru": "DSIDE*, чтобы твой бренд работал на тебя"
+    "pl": "DSIDE, aby Twoja marka działała",
+    "ru": "Решись, чтобы твой бренд работал"
   },
 
   "BETTER": {
@@ -646,8 +646,8 @@
 
   "DSIDE to make your website SELL BETTER": {
     "cz": "DSIDE, aby vaše webové stránky prodávaly lépe",
-    "pl": "DSIDE, aby Twoja strona internetowa SPRZEDAWAŁA LEPIEJ",
-    "ru": "DSIDE*, чтобы твой сайт ПРОДАВАЛ ЛУЧШЕ"
+    "pl": "DSIDE, aby Twoja strona internetowa sprzedawałą LEPIEJ",
+    "ru": "Решись, чтобы твой сайт продавал ЛУЧШЕ"
   },
 
   "Task": {
@@ -686,12 +686,12 @@
     "cz": "Hodnoťte práci"
   },
   "Developed in": {
-    "ru": "Разработан за",
+    "ru": "Сделано за",
     "pl": "Opracowane w ciągu",
     "cz": "vyvinuté za"
   },
   "days": {
-    "ru": "дня",
+    "ru": "дней",
     "pl": "dni",
     "cz": "dni"
   },
@@ -701,8 +701,8 @@
    "cz": "Děkuji! Aplikace byla úspěšně odeslána!"
  },
  "Thank you! We will call you back in 30 seconds!": {
-  "ru": "Спасибо! Мы перезвоним вам через 30 секунд!",
-  "pl": "Dziękuję Ci! Oddzwonimy do Ciebie za 30 sekund!",
+  "ru": "Спасибо! Мы перезвоним тебе через 30 секунд!",
+  "pl": "Dziękuję! Wkrótce oddzwonimy do Ciebie!",
   "cz": "Děkuji! Zavoláme vám za 30 sekund!"
  },
   "Leave your phone number": {
@@ -716,7 +716,7 @@
     "cz": "A obdržíte bezplatnou konzultaci o otázce, která vás zajímá. Obvykle zavoláme zpátky do 30 sekund."
   },
   "Awaiting Questions": {
-    "ru": "Есть вопросы?",
+    "ru": "Мы ждём твоего вопроса",
     "pl": "Masz pytania?",
     "cz": "Čeká na žádost"
   },
@@ -751,8 +751,8 @@
     "cz": "Objednejte si audit stávající automatizační kampaně, upozorníme na slabé stránky"
   },
   "Quality implemented  website": {
-    "ru": "Качество реализованного веб-сайта",
-    "pl": "Jakość wdrożona strona internetowa",
+    "ru": "Качественно реализованный сайт",
+    "pl": "Jakościowo zaimplementowana strona",
     "cz": "Kvalitní implementovaná webová stránka"
   },
   "is the key to a successful and scalable business": {
@@ -761,28 +761,28 @@
     "cz": "je klíčem k úspěšnému a škálovatelnému podnikání"
   },
   "Volodymyr Piskun": {
-    "ru": "Володимир Пискун",
+    "ru": "Владимир Пискун",
     "pl": "Wołodymyr Piskun",
     "cz": "Volodymyr Piskun"
   },
   "Senior backend developer": {
-    "ru": "Главний бекенд разработчик",
+    "ru": "Старший бэк-енд разработчик",
     "pl": "Starszy programista backendu",
     "cz": "Hlavní vývojář pro backend"
   },
   "discover your possibilites": {
-    "ru": "узнайте о  возможностях",
+    "ru": "узнайте о своих возможностях",
     "pl": "odkryj swoje możliwości",
     "cz": "objevte své možnosti"
   }, 
   "Let's imagine a little": {
-    "ru": "Представим себе немного",
-    "pl": "Wyobraźmy sobie trochę",
+    "ru": "Давай представим",
+    "pl": "Wyobraźmy sobie",
     "cz": "Představme si trochu"
   },
   "To the left is our Andrew, who made the site with us and successfully sells buns, but to the right - John and Matthew, who got stuck in the 2000s and do not automate the business,": {
-    "ru": "Слева наш Андрей, который сделал сайт с нами и успешно продает булочки, но направо - Джон и Мэтью, которые застряли в 2000-х годах и не могут автоматизировать бизнес,",
-    "pl": "Po lewej stronie znajduje się nasz Andrew, który stworzył naszą witrynę i z powodzeniem sprzedaje bułki, ale po prawej - John i Matthew, którzy utknęli w 2000 roku i nie zautomatyzuj firmy,",
+    "ru": "Слева наш Андрей, который сделал сайт в DSIDE и успешно продает булочки, а справа - Кирилл и Коля, которые застряли в 2000-х годах и не могут автоматизировать бизнес,",
+    "pl": "Po lewej stronie znajduje się nasz Andrzej, który stworzył witrynę w DSIDE i z powodzeniem sprzedaje bułki, ale po prawej - Piotr i Maciej, którzy utknęli w 2000 roku i nie automatyzują firmy,",
     "cz": "Vlevo je náš Andrew, který s námi vytvořil stránky a úspěšně prodává buchty, ale napravo - John a Matthew, kteří uvízli v roce 2000 a ne automatizovat podnikání,"
   }, 
   "what happens to them?": {
@@ -791,58 +791,58 @@
     "cz": "co se s nimi stane?"
   },
   "andrew": {
-    "ru": "андрей",
-    "pl": "andrew",
+    "ru": "Андрей",
+    "pl": "Andrzej",
     "cz": "andrew"
   },
   "JOHN & MATTHEW": {
-    "ru": "Джон и Метью",
-    "pl": "JOHN & MATTHEW",
+    "ru": "Кирилл и Коля",
+    "pl": "Piotr & Maciej",
     "cz": "JOHN & MATTHEW"
   }, 
   "His customers do not wait in line, because he has the applications and the bakery can be ordered before you come to the bakery": {
-    "ru": "Его клиенты не ждут очереди, потому что у него есть приложения, и хлеб может быть заказан, прежде чем вы попадете в пекарню",
+    "ru": "Его клиенты не ждут в очереди, потому что у него есть фирменное приложение, и булочки можно заказать выходя из дома",
     "cz": "Jeho zákazníci čekat v řadě, protože má aplikace a pekařství může být objednáno předtím, než přijdete do pekárny",
-    "pl": "Jego klienci nie czekają w kolejce, ponieważ ma on aplikacje, a piekarnia może być zamówiona przed przyjazdem do piekarni"
+    "pl": "Jego klienci nie czekają w kolejce, ponieważ on ma firmową aplikacje, a pieczywo można zamówić w drodze do piekarni "
   },
   "BAKER": {
     "ru": "ПЕКАРЬ",
-    "pl": "piekarz",
+    "pl": "Piekarz",
     "cz": "pekař"
   },
   "BAKERS": {
     "ru": "ПЕКАРИ",
-    "pl": "piekarz",
+    "pl": "Piekarzy",
     "cz": "pekař"
   },
   "Accounting, what is in his warehouse is automatically maintained": {
-    "ru": "Учет, что находится на его складе, автоматически поддерживается",
+    "ru": "Все, что находится на складе - автоматически отслеживается",
     "cz": "Účetnictví, co je ve svém skladu, je automaticky udržováno",
-    "pl": "Księgowość, która znajduje się w jego magazynie, jest automatycznie utrzymywana"
+    "pl": "Stany magazynowe produktów są monitorowane automaticznie"
   },
   "He always has fresh products, because the system itself warns him about the timing of implementation": {
-    "ru": "У него всегда свежие продукты, потому что сама система предупреждает его о сроках реализации",
-    "pl": "Zawsze ma świeże produkty, ponieważ sam system ostrzega go przed terminem wdrożenia",
+    "ru": "У него всегда свежие продукты, потому, что система сама предупреждает его о сроках реализации",
+    "pl": "Zawsze ma świeże produkty, ponieważ sam system ostrzega o okresach przydatności do użycia",
     "cz": "Vždy má čerstvé výrobky, protože systém sám o něm varuje před načasováním implementace"
   },
   "Their customers stand in line, thereby closing the influx of new ones that are rushing": {
-    "ru": "Их клиенты стоят в очереди, тем самым закрывая приток новых, которые спешат",
-    "pl": "Ich klienci stoją w kolejce, zamykając w ten sposób napływ nowych, pędzących",
+    "ru": "Их клиенты стоят в очереди, тем самым, уменьшая приток новых покупателей",
+    "pl": "Ich klienci stoją w kolejce, ograniczając w ten sposób napływ nowych klientów",
     "cz": "Jejich zákazníci stojí v řadě, čímž uzavírá příliv nových, kteří se ponoří"
   },
   "the guys had to hire a warehouseman, because they need not only to bake buns, but also to develop their business. Even though their two": {
-    "ru": "ребятам приходилось нанимать склада, потому что им нужно не только испечь булочки, но и развивать свой бизнес. Хотя их два",
-    "pl": "faceci musieli zatrudnić magazyniera, ponieważ potrzebują nie tylko upiec bułeczki, ale także rozwijać swój biznes. Chociaż ich dwa",
+    "ru": "Ребятам приходится нанимать человека на склад, ведь им нужно не только печь булочки, но и развивать свой бизнес. Им не хватает времени, не смотря на то, что их двое.",
+    "pl": "Faceci muszą zatrudnić osobę do magazynu, ponieważ muszą nie tylko upiec bułeczki, ale także rozwijać swój biznes. Nie mają wystarczająco dużo czasu, mimo że jest ich dwóch.",
     "cz": "chlapci museli najmout skladovatele, protože potřebují nejen pečivo, ale také rozvíjet své podnikání. Ačkoli jsou jejich dva"
   },
   "the risk increases that spoiled food will fall into food and even regular customers will be lost": {
-    "ru": "риск увеличивается, что испорченная пища попадет в пищу, и даже обычные клиенты будут потеряны",
-    "pl": "ryzyko zwiększa się, że zepsute jedzenie dostanie się do żywności, a nawet stali klienci zostaną utraceni",
+    "ru": "Возрастает риск того, что продукты, у которых заканчивается срок годности попадет в готовые изделия. ",
+    "pl": "Zwiększa się ryzyko, że zepsute produkty dostaną się do żywności, a nawet stali klienci zostaną utraceni. ",
     "cz": "riziko zvyšuje, že zkažené jídlo bude spadat do jídla a dokonce i pravidelní zákazníci budou ztraceni"
   },
   "Loading": {
     "ru": "Загрузка",
-    "pl": "ładowanie",
+    "pl": "Ładujemy",
     "cz": "nakládání"
   },
   "Aleja Solidarności": {
@@ -852,11 +852,11 @@
   },
   "office": {
     "ru": "офис",
-    "pl": "lok",
+    "pl": "lokal",
     "cz": "lok"
   },
   "DSIDE to make the best video": {
-    "ru": "DSIDE чтобы сделать лучшее видео",
+    "ru": "Решись сделать лучшее видео",
     "pl": "DSIDE, aby zrobić najlepszy film",
     "cz": "DSIDE, aby vytvořil nejlepší video"
   },
@@ -905,56 +905,56 @@
 
   "Simple Website": {
     "ru": "Простой сайт",
-    "pl": "Prosta strona internetowa",
+    "pl": "Zwykła strona internetowa",
     "cz": "Jednoduchý web"
   },
 
   "Well-selling": {
-    "ru": "Хорошо продающий",
-    "pl": "Dobrze sprzedająca się",
+    "ru": "Продающий",
+    "pl": "Sprzedająca",
     "cz": "Dobře prodejní "
   },
 
   "website": {
     "ru": "сайт",
-    "pl": "stronie ",
+    "pl": "strona ",
     "cz": "webová stránka"
   },
 
-  "Fanta": {
-    "ru": "Фанта",
+  "Coke": {
+    "ru": "Кока-кола",
     "cz": "Fantas",
-    "pl": "Fantos"
+    "pl": "Coca-Cola"
   },
 
-  "Best Fanta": {
-    "ru": "Лучшая Фанта",
+  "No logo or other identity for a global brand. But you would still know this 'simple' style. Red cans and waves are all you need to know a real Coke.": {
+    "ru": "На банке нет лого, но мы уже знаем, что в ней внутри. Этот 'простой' стиль узнает даже ребенок. Красная банка с белой волной - все, что нужно, чтобы ты узнал настоящую колу",
     "cz": "Nejlepší Fanta",
-    "pl": "Najlepsza Fanta"
+    "pl": "Na puszce nie ma loga, ale już wiemy, co jest w środku. Nawet dziecko rozpozna ten 'prosty' styl. Czerwona puszka z białą falą to wszystko, czego potrzebujesz, aby poznać prawdziwą colę."
   },
 
-  "coca-cola": {
-    "ru": "кока-кола",
+  "LelessoMucho": {
+    "ru": "LelessoMucho",
     "cz": "koka-kola",
-    "pl": "koka-kola"
+    "pl": "LelessoMucho"
   },
 
- "Best coca-cola": {
-  "ru": "Лучшая Кока-кола",
+ "First, the consumer is unlikely to remember such a long name. Secondly, the style of this jar is not remembered, it is terrible, but the children might have bought it to try.": {
+  "ru": "Во-первых, потребитель врядли запомнит такое длинное название. Во-вторых дизайн банки ужасен и не запоминается. Возможно ее купят дети, чисто так, попробовать.",
   "cz": "Nejlepší koka-kola",
-  "pl": "Najlepsza koka-kola"
+  "pl": "Po pierwsze, mało prawdopodobne jest, aby konsument pamiętał taką długą nazwę. Po drugie, grafika na puszce jest okropna i nie jest pamiętana. Być może dzieci kupią to, by spróbować."
  },
 
- "sprite": {
-  "ru": "спрайт",
+ "Cola - Kola": {
+  "ru": "Кола - Kola",
   "cz": "sprites",
-  "pl": "sprites"
+  "pl": "Cola - Kola"
  },
 
- "Best sprite": {
-  "ru": "Лучший спрайт",
+ "Black can with a word of 4 letters. This can be remembered by the end user. This idea suggests that there may be something exclusive in the can, but at the same time, it will easily lose the real stake.": {
+  "ru": "Черная банка и 4 буквы. Это уже лушче запомнится потребителю. Может появится впечатление, что внутри что-то эксклюзивное. Но даже этот ход запросто проиграет настоящей коле.",
   "cz": "nejlepší sprite",
-  "pl": "nejlepší sprite"
+  "pl": "Czarna puszka i 4 litery. Jest to już lepiej zapamiętane przez konsumenta. Możesz odnieść wrażenie, że coś ekskluzywnego jest w środku. Ale nawet ten ruch łatwo straci prawdziwą stawkę."
  },
 
 "Maksym Vydyborets": {
@@ -963,16 +963,16 @@
   "pl": "Maksym Vydyborets"
 },
 
-"Head Designer at Dside": {
-  "ru": "Ведущий дизайнер в Dside",
+"Managing Designer at DSIDE, founder": {
+  "ru": "Управляющий Дизайнер в DSIDE, основатель",
   "cz": "Vedoucí designéra na Dside",
-  "pl": "Głowica Designer w Dside"
+  "pl": "Kerownik DSIDE, założyciel"
  },
 
- "best designer": {
-  "ru": "лучший дизайнер",
+ "He has more than 140 projects done, including 5 large state ones. Maksym has been designing for over 8 years and knows perfectly well what your client wants to see. Worked as a teacher in the Kiev Polytechnic Institute in the direction of design. Also, spoke at the largest IT conferences in Ukraine.": {
+  "ru": "За его плечами более 140 проектов, включая 5 государственных заказов. Максим занимается дизайном уже более 8 лет и отлично знает, что хочет видеть твой клиент. Выступал на самых больших IT-конференциях Украины. ",
   "cz": "nejlepší designer",
-  "pl": "Najlepiej designer"
+  "pl": "Ma ponad 140 projektów, w tym 5 zamówień rządowych. Maksym projektuje od ponad 8 lat i doskonale wie, czego chce Twój klient. Przemawiał na największych konferencjach IT."
  },
 
  "Volodymyr Piskun": {
@@ -981,16 +981,16 @@
   "pl": "Wolodymyr Piskun"
 },
 
-"Senior Backend Developer at Dside": {
-  "ru": "Главний Бекенд Разработчик",
+"Managing Developer at DSIDE, co-founder": {
+  "ru": "Управляющий разработчик DSIDE, со-основатель",
   "cz": "Senior Backend Developer",
-  "pl": "Starszy programista backendu"
+  "pl": "Kerownik działu programowania w DSIDE, współzałożyciel"
  },
 
- "best backend developer": {
-  "ru": "лучший бекенд разработчик",
+ "For him, nothing is impossible. He created his own compiler and interpreter. Uses a bunch of programming languages. He also worked on a large number of high-load services and government projects.": {
+  "ru": "Для него нет ничего невозможного. Создатель собственного компилятора и интерпретатора. Использует большое колличество языков программирования. Имеет уйму опыта в разработке высоконагруженных систем и государственных проектов.",
   "cz": "nejlepší backend developer",
-  "pl": "Najlepiej backendu developer"
+  "pl": "Dla niego nic nie jest niemożliwe. Twórca własnego kompilatora i tłumacza. Korzysta z wielu języków programowania. Ma duże doświadczenie w opracowywaniu systemów o dużym obciążeniu i projektów rządowych."
  },
 
 
@@ -1000,52 +1000,52 @@
   "pl": "Ruslan Khlopieckiy"
 },
 
-"Legal Adviser": {
-  "ru": "Адвокат",
+"Сhief executive officer, co-founder": {
+  "ru": "Генеральный директор, со-основатель",
   "cz": "Prawnik",
-  "pl": "Prawnik"
+  "pl": "CEO, współzałożyciel"
  },
 
- "best legal adviser": {
-  "ru": "лучший адвокат",
+ "He graduated from the Institute of Management in Warsaw. Managed student self-government throughout Warsaw. He spoke at many conferences and has a strong business acumen.": {
+  "ru": "Окончил Институт управления в Варшаве. Управлял студенческим самоуправлением всей Варшавы. Он выступал на многих конференциях и имеет сильную деловую хватку.",
   "cz": "nejlepší prawnik",
-  "pl": "Najlepiej prawnik"
+  "pl": "Ukończył Instytut Zarządzania w Warszawie. Był prezesem samorządu studenckiego całej Warszawy. Mówił na wielu konferencjach i ma silną przedsiębiorczość."
  },
 
  "Pavel Litvinau": {
-  "ru": "Павел Литвинау",
+  "ru": "Павел Литвинов",
   "cz": "Pavel Litvinau",
-  "pl": "Pavel Litvinau"
+  "pl": "Paweł Litvinau"
 },
 
-"Sales Manager": {
-  "ru": "Менеджер по продажам",
+"Regional represantative in CZ": {
+  "ru": "Региональный представитель в Республике Чехия",
   "cz": "Manažer Prodeje",
-  "pl": "Kierownik Sprzedaży"
+  "pl": "Przedstawiciel regionalny w Republice Czeskiej"
  },
 
- "best sales manager": {
-  "ru": "лучший менеджер по продажам",
+ "Organizer of mass events with ten years of experience. Regional represantative of DSIDE in Czech Republic.": {
+  "ru": "Имеет десятилетний опыт в организации массовых мероприятий. Региональный представитель DSIDE в Республике Чехия.",
   "cz": "nejlepší Kierownik Sprzedaży ",
-  "pl": "Najlepiej Manažer Prodeje"
+  "pl": "Ma dziesięcioletnie doświadczenie w organizacji imprez masowych. Przedstawiciel regionalny DSIDE w Republice Czeskiej."
  },
 
  "Valentyn Podiias": {
-  "ru": "Валентин Подиас",
+  "ru": "Валентин Подияс",
   "cz": "Valentyn Podiias",
-  "pl": "Valentyn Podiias"
+  "pl": "Walentyn Podiias"
 },
 
-"Financial Director": {
-  "ru": "Финансовий директор",
-  "pl": "Dyrektor finansowy",
+"Sales master": {
+  "ru": "Чемпион продаж",
+  "pl": "Mistrz sprzedaży",
   "cz": "Finanční ředitel"
  },
 
- "best financial director": {
-  "ru": "лучший финансовий директор",
+ "He has a five-year experience in stock trading. Can easily think of a way from an idea to a super-marketable product": {
+  "ru": "Имеет пятилетний опыт торговли. Может с легкостью превратить любую идею в сверх-продаваемый продукт.",
   "cz": "nejlepší Dyrektor finansowy ",
-  "pl": "Najlepiej Finanční ředitel"
+  "pl": "Ma pięć lat doświadczenia w handlu. Potrafi z łatwością przekształcić dowolny pomysł w super-sprzedawany produkt."
  },
 
 
@@ -1063,10 +1063,10 @@
   "cz": "Producent Video"
  },
 
- "best Video Producer": {
-  "ru": "лучший видео продюсер",
+ "Five years of commercial video experience. Can convey any emotion through video. Directing is his strong point.": {
+  "ru": "Имеет пятилетний опыт в создании коммерческих видео. Может передать любую эмоцию через видео. Режиссура - его сильная сторона.",
   "cz": "nejlepší video producer",
-  "pl": "Najlepiej video producer"
+  "pl": "Ma pięcioletnie doświadczenie w tworzeniu komercyjnych filmów. Potrafi przekazywać emocje za pośrednictwem wideo. Kierowanie jest jego mocną stroną."
  },
 
  "Oleksii Taran": {
@@ -1075,65 +1075,65 @@
   "pl": "Oleksii Taran"
 },
 
-"Tourist Manager": {
-  "ru": "Турист менеджер",
-  "pl": "Menedżer turystyczny",
+"Project manager, co-founder": {
+  "ru": "Менеджер проектов, соучредитель",
+  "pl": "Project Manager, współzałożyciel",
   "cz": "Menedżer turystyczny"
  },
 
- "best tourist manager": {
-  "ru": "лучший турист мендежер",
+ "This person can tell you how to improve your business. He will make your work with us convenient and easy. Has a business in 2 countries.": {
+  "ru": "Именно он может подсказать вам, как можно улучшить Твой бизнес. Он сделает работу с DSIDE не только легкой, но и приятной. Имеет большой опыт в управлении бизнесом.",
   "cz": "nejlepší Menedżer turystyczny ",
-  "pl": "Najlepiej Menedżer turystyczny"
+  "pl": "On może ci powiedzieć, jak poprawić Twój biznes. Sprawi, że praca z DSIDE będzie nie tylko łatwa, ale także przyjemna. Ma duże doświadczenie w zarządzaniu przedsiębiorstwem."
  },
 
- "name": {
+ "Name": {
   "ru": "Имя",
   "cz": "jméno",
   "pl": "Imie"
  },
 
 
-"phone number in format +": {
-  "ru": "номер телефона в формате +",
+"Phone number (With country code)": {
+  "ru": "Номер телефона (с кодом страны)",
   "cz": "telefonní číslo ve formátu +",
-  "pl": "numer telefonu w formacie +"
+  "pl": "Numer telefonu (z kodem kraju)"
 },
 
 "post name": {
-  "ru": "имя поста",
+  "ru": "Название публикации",
   "cz": "název příspěvku",
-  "pl": "nazwa postu"
+  "pl": "Nazwa postu"
 },
 
 "email": {
-  "ru": "eлектронний адрес",
+  "ru": "E-mail",
   "cz": "email",
-  "pl": "email"
+  "pl": "E-mail"
  },
 
  "social-link": {
-  "ru": "социальний адрес",
+  "ru": "Ссылка на соцсеть",
   "cz": "sociální spojení",
-  "pl": "link społecznościowy" 
+  "pl": "Link Facebook"
  },
 
  "post theme": {
-  "ru": "тема поста",
+  "ru": "Тема, на которую писать",
   "cz": "post téma",
-  "pl": "temat postu"
+  "pl": "Temat postu"
  },
 
  "brandes": {
    "ru": "брендов", 
    "cz": "značky",
-   "pl": "brandes"
+   "pl": "marek"
  },
 
  "brands": {
   "ru": "брендах", 
   "cz": "značek",
-  "pl": "marki"
+  "pl": "brandingu"
 },
 
 "advertising": {
@@ -1145,7 +1145,7 @@
 "advertisement": {
   "cz": "reklamy",
   "pl": "reklamy",
-  "ru": "реклами"
+  "ru": "рекламы"
 },
 
 "video": {
@@ -1155,20 +1155,20 @@
 },
 
 "web sites": {
-  "ru": "веб сайтах",
-  "pl": "webových stránek",
+  "ru": "разработке веб-сайтов",
+  "pl": "projektowaniu stron internetowych",
   "cz": "witryny internetowe"
 },
 
 "website": {
-  "ru": "веб сайтов",
-  "pl": "webových stránek",
+  "ru": "сайт",
+  "pl": "strona",
   "cz": "witryny internetowe"
 },
 
 "automation": {
   "ru": "автоматизации",
-  "pl": "automatyzacja",
+  "pl": "automatyzacji biznesu",
   "cz": "automatizace"
 }
 

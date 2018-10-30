@@ -30,10 +30,10 @@ export default class AbotUs extends Component {
           img: Max,
           information: {
             name: 'Maksym Vydyborets',
-            position: 'Head Designer at Dside',
-            description: 'best designer',
-            behance: '#',
-            instagram: '#'
+            position: 'Managing Designer at DSIDE, founder',
+            description: 'He has more than 140 projects done, including 5 large state ones. Maksym has been designing for over 8 years and knows perfectly well what your client wants to see. Worked as a teacher in the Kiev Polytechnic Institute in the direction of design. Also, spoke at the largest IT conferences in Ukraine.',
+            behance: 'https://dishots.com/u/DSIDE',
+            instagram: 'https://instagram.com/mcseem7'
           }
         },
         {
@@ -42,10 +42,9 @@ export default class AbotUs extends Component {
           img: Vova,
           information: {
             name: 'Volodymyr Piskun',
-            position: 'Senior Backend Developer at Dside',
-            description: 'best backend developer',
-            behance: '#',
-            instagram: '#'
+            position: 'Managing Developer at DSIDE, co-founder',
+            description: 'For him, nothing is impossible. He created his own compiler and interpreter. Uses a bunch of programming languages. He also worked on a large number of high-load services and government projects.',
+            instagram: 'https://www.instagram.com/root_wizard/'
           }
         },
         {
@@ -54,10 +53,8 @@ export default class AbotUs extends Component {
           img: Ruslan,
           information: {
             name: 'Ruslan Khlopieckiy',
-            position: 'Legal Adviser',
-            description: 'best legal adviser',
-            behance: '#',
-            instagram: '#'
+            position: 'Сhief executive officer, co-founder',
+            description: 'He graduated from the Institute of Management in Warsaw. Managed student self-government throughout Warsaw. He spoke at many conferences and has a strong business acumen.'
           }
         },
         {
@@ -66,10 +63,9 @@ export default class AbotUs extends Component {
           img: Pavel,
           information: {
             name: 'Pavel Litvinau',
-            position: 'Sales Manager',
-            description: 'best sales manager',
-            behance: '#',
-            instagram: '#'
+            position: 'Regional represantative in CZ',
+            description: 'Organizer of mass events with ten years of experience. Regional represantative of DSIDE in Czech Republic.',
+            instagram: 'https://www.instagram.com/pawel_litvinov/'
           }
         },
         {
@@ -78,10 +74,9 @@ export default class AbotUs extends Component {
           img: Valentyn,
           information: {
             name: 'Valentyn Podiias',
-            position: 'Financial Director',
-            description: 'best financial director',
-            behance: '#',
-            instagram: '#'
+            position: 'Sales master',
+            description: 'He has a five-year experience in stock trading. Can easily think of a way from an idea to a super-marketable product',
+            instagram: 'https://www.instagram.com/valentyn/'
           }
         },
         {
@@ -91,9 +86,8 @@ export default class AbotUs extends Component {
           information: {
             name: 'Maksym Parfeniuk',
             position: 'Video Producer',
-            description: 'best Video Producer',
-            behance: '#',
-            instagram: '#'
+            description: 'Five years of commercial video experience. Can convey any emotion through video. Directing is his strong point.',
+            instagram: 'https://www.instagram.com/maksparfilms'
           }
         },
         {
@@ -102,10 +96,8 @@ export default class AbotUs extends Component {
           img: Oleksii,
           information: {
             name: 'Oleksii Taran',
-            position: 'Tourist Manager',
-            description: 'best tourist manager',
-            behance: '#',
-            instagram: '#'
+            position: 'Project manager, co-founder',
+            description: 'This person can tell you how to improve your business. He will make your work with us convenient and easy. Has a business in 2 countries.'
           }
         }
      ],
