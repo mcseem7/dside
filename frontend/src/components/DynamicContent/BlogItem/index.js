@@ -7,6 +7,7 @@ import {withRouter} from 'react-router-dom'
 import {compose} from 'recompose'
 import withDsideApi from "../../../HOC/Fetch";
 import redirect from './redirect.svg'
+import { FacebookProvider, Comments } from 'react-facebook';
 
  class BlogItem extends Component {
   constructor(props) {
@@ -104,13 +105,11 @@ import redirect from './redirect.svg'
               <div className="comment__body-post">
 
                 <div id="comment__container">
-                  <ReactDisqusComments
-                      shortname="example"
-                      identifier="something-unique-12345"
-                      title="Thread"
-                      url="//dside-pl/"
-                      category_id="123456"
-                      onNewComment={this.handleNewComment}/>
+               
+      <FacebookProvider appId="183243812602836">
+
+        <Comments href="https://mydside.com" />
+      </FacebookProvider>
                 </div>
 
               </div>
