@@ -2,6 +2,18 @@
   "name": "dside",
   "version": "0.1.1",
   "private": true,
+  "proxy": {
+    "/api": {
+      "target": "https://mydside.com"
+    },
+    "/admo": {
+      "target": "https://mydside.com"
+    },
+    "/docs": {
+      "target": "https://mydside.com"
+    }  
+  },
+
   "dependencies": {
     "@cra-express/core": "^2.2.5",
     "apeman-react-scroll": "^2.0.10",
@@ -77,4 +89,6 @@
     "react-router-dom": "^4.3.1",
     "regenerator-runtime": "^0.12.1"
   }
+
+
 }
