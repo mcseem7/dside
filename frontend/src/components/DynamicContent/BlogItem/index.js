@@ -7,6 +7,7 @@ import {withRouter} from 'react-router-dom'
 import {compose} from 'recompose'
 import withDsideApi from "../../../HOC/Fetch";
 import redirect from './redirect.svg'
+import { FacebookProvider, Comments } from 'react-facebook';
 
  class BlogItem extends Component {
   constructor(props) {
@@ -14,7 +15,8 @@ import redirect from './redirect.svg'
 
     this.state = {
       blogItem: [],
-      blogCategory: ''
+      blogCategory: '',
+      notFound: false
     }
   }
 
@@ -29,11 +31,17 @@ import redirect from './redirect.svg'
 
   getData = (postName) => {
     return fetch(`${process.env.REACT_APP_API}/${localStorage.getItem('lang')}/blog/getBlogItemDetails/${postName}/`).then((response) => {
-        return response.json()
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error('Something went wrong');
+        }
     }).then((item) => {
         this.setState({
             blogItem: item
         })
+    }).catch((error) => {
+     this.setState({notFound: true})
     })
   }
 
@@ -47,7 +55,10 @@ import redirect from './redirect.svg'
       console.log(this.props.nextPost)
     return(
         <div>
+        {this.state.notFound ? null : 
           <div className="blog__post-container">
+
+
 
             <div className="blog__item" style={{backgroundImage: `url(${process.env.REACT_APP_DOMAIN}${blogItem.main_image})`}}>
               <div className="blog__item-content">
@@ -94,13 +105,11 @@ import redirect from './redirect.svg'
               <div className="comment__body-post">
 
                 <div id="comment__container">
-                  <ReactDisqusComments
-                      shortname="example"
-                      identifier="something-unique-12345"
-                      title="Thread"
-                      url="//dside-pl/"
-                      category_id="123456"
-                      onNewComment={this.handleNewComment}/>
+               
+      <FacebookProvider appId="183243812602836">
+
+        <Comments href="https://mydside.com" />
+      </FacebookProvider>
                 </div>
 
               </div>
@@ -131,11 +140,12 @@ import redirect from './redirect.svg'
                   : null}
               </div>
             </div>
+            
             </div>
-
+              
           </div>
-
-
+  
+                                  }
         </div>
     )
   }

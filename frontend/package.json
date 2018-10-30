@@ -2,6 +2,17 @@
   "name": "dside",
   "version": "0.1.1",
   "private": true,
+  "proxy": {
+    "/api": {
+      "target": "https://mydside.com"
+    },
+    "/admo": {
+      "target": "https://mydside.com"
+    },
+    "/docs": {
+      "target": "https://mydside.com"
+    }
+  },
   "dependencies": {
     "@cra-express/core": "^2.2.5",
     "apeman-react-scroll": "^2.0.10",
@@ -27,6 +38,7 @@
     "react-disqus-comments": "^1.2.0",
     "react-dom": "^16.4.2",
     "react-dribble-button": "^0.2.2",
+    "react-facebook": "^6.0.15",
     "react-fade-in": "^0.1.6",
     "react-fader": "^2.0.3",
     "react-hero-video": "^0.1.1",
