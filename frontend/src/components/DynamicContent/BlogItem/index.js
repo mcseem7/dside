@@ -16,7 +16,8 @@ import { FacebookProvider, Comments } from 'react-facebook';
     this.state = {
       blogItem: [],
       blogCategory: '',
-      notFound: false
+      notFound: false, 
+      lang: ''
     }
   }
 
@@ -26,7 +27,7 @@ import { FacebookProvider, Comments } from 'react-facebook';
   async componentDidMount() {
    window.scrollTo(0, 0)
    await this.getData(this.props.match.params.blogitem)
-   await this.setState({blogCategory: this.state.blogItem.category})
+   await this.setState({blogCategory: this.state.blogItem.category, lang: localStorage.getItem('lang')})
   }
 
   getData = (postName) => {
@@ -106,9 +107,9 @@ import { FacebookProvider, Comments } from 'react-facebook';
 
                 <div id="comment__container">
                
-      <FacebookProvider appId="183243812602836">
+      <FacebookProvider appId="329972810887548">
+        <Comments min-width='320px' width='100%' max-width='700px' mobile='true' href={`${process.env.REACT_APP_DOMAIN}/${this.state.lang}/blog/${this.props.match.params.blogitem}`} />
 
-        <Comments href="https://mydside.com" />
       </FacebookProvider>
                 </div>
 
