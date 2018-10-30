@@ -91,4 +91,4 @@ class SuggestPoppup extends Component {
 
 }
 
-export  default withPoppupHOC(SuggestPoppup, '/blog/addTopicSuggestions/', 'SUGGEST')
+export  default withPoppupHOC(SuggestPoppup, '/blog/addTopicSuggestion/', 'SUGGEST')
