@@ -19,6 +19,10 @@
     max-width: 100%;
 }
 
+.developer__photo {
+    margin-bottom: -3px;
+}
+
 .logo__service-img-auto {
     position: absolute;
     left: 9rem;

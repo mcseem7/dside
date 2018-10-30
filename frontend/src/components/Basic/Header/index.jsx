@@ -10,7 +10,7 @@ import cz from "../../../HOC/ChangeLanguage/svg/003-czech-republic.svg";
 import ru from "../../../HOC/ChangeLanguage/svg/005-russia.svg";
 import Translate from 'translate-components'
 import withPoppupHOC from '../../../HOC/Poppup';
-
+import withLanguage from '../../../HOC/withLanguage'
 
 class Header extends Component {
   constructor (props) {
@@ -66,7 +66,7 @@ class Header extends Component {
             <div className="mid__content-logo">
               <div className="logo__container">
                 <div className="logo">
-                  <NavLink to="/"  className="link link--dside"><span>
+                  <NavLink to={`/${this.props.domenErty}`}  className="link link--dside"><span>
 
 
                     <svg className="svg-logo" width="86px" height="26px" viewBox="0 0 209 39" version="1.1"
@@ -113,8 +113,7 @@ class Header extends Component {
               <div className="social__icons">
                 <a href='http://behance.com' className="social__icon-behance">
                 </a>
-
-                <a href='http://instagram.com' className="social__icon-instagram">
+                <a target='__blank' href={this.props.activeLang[0] == 'ru' ? 'https://www.instagram.com/dside.ru/' : 'https://www.instagram.com/'} className="social__icon-instagram">
                 </a>
               </div>
 
@@ -188,4 +187,4 @@ class Header extends Component {
 }
 
 
-export default Header;
+export default withLanguage(Header);

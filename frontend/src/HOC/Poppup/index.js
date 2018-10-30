@@ -37,7 +37,6 @@ export default function withPoppupHOC(PoppupHOC, apiUrl, type) {
 
 
         handleSubmit = async(event, ...postData) => {
-
             await event.preventDefault()
             switch (type) {
                 case 'ORDER':

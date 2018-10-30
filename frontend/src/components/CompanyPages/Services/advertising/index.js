@@ -19,88 +19,90 @@ import Translate from 'translate-components'
 import { reactTranslateChangeLanguage } from 'translate-components'
 import { HeroVideo } from "react-hero-video";
 
- class Advertising extends Component {
-  constructor () {
+class Advertising extends Component {
+  constructor() {
     super()
   }
   componentDidMount() {
-    window.scrollTo(0,0)
+    window.scrollTo(0, 0)
     reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
   }
 
-  render () {
+  render() {
     const idVideo = 'eJ8SOYUkWl0'
     return (
       <Fragment>
         <div>
-            <div style={{overflow: 'hidden'}} className='video-wrap'>
-              <HeroVideo
-                videoSrc={`https://www.youtube.com/embed/${idVideo}?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1&fs=1`}
-              >
-              </HeroVideo>
-                <div id="vidtop-content">
-                    <HeaderService
-                        logoHeader={LogoBrand}
-                        stylelogotext={'logo__service-text_advertising'}
-                        serviceSlogan={'DSIDE to make your business earn more MONEY'}
-                        imgLogoPosition={'logo__service-img-ads'}
-                        textContainer={'dside_textContainer-advertising'}
-                        // textHeader={[<p>Webstes</p>, <p>That sell</p>, <p>your</p>, <p>goods</p>]}
-                    />
-                </div>
-
+          <div style={{ overflow: 'hidden' }} className='video-wrap'>
+            <HeroVideo
+              videoSrc={`https://www.youtube.com/embed/${idVideo}?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1&fs=1`}
+            >
+            </HeroVideo>
+            <div id="vidtop-content">
+              <HeaderService
+                logoHeader={LogoBrand}
+                stylelogotext={'logo__service-text_advertising'}
+                serviceSlogan={'DSIDE to make your business earn more MONEY'}
+                imgLogoPosition={'logo__service-img-ads'}
+                textContainer={'dside_textContainer-advertising'}
+              // textHeader={[<p>Webstes</p>, <p>That sell</p>, <p>your</p>, <p>goods</p>]}
+              />
             </div>
 
-          <div className="developers__quality-wrapper">
-          <section className="developers__quality">
-
-            <div className="developer__left-content">
-
-              <div className="contentby__ads">
-                <div className="golden superb"><Translate>We are engaged in packaging business and sale of its services</Translate></div>
-                <h3><Translate>You can just come up with an IDEA</Translate></h3>
-                <p><Translate>and get a name for the company (naming), a name for the domain, a logo,</Translate>
-                  <Translate>a corporate identity, a marketing-kit, as well as a good-selling website and a customized advertising campaign.</Translate></p>
-              </div>
-
-
-            </div>
-            <div className="advantages"><span><
-              img src={Shiny} alt="" /><Translate>Brightly.</Translate></span>
-              <span> <img src={Palm} alt="" /><Translate>Easy.</Translate></span> <span>
-                  <img src={Wallet} alt="" /><Translate>Profitable.</Translate></span></div>
-            <div className="developer__right-content">
-
-            </div>
-
-
-          </section>
           </div>
 
-          <section className="al__time-section">
+          <div className="developers__quality-wrapper">
+            <section className="developers__quality">
 
-            <div className="al__time-wrapper">
+              <div className="developer__left-content">
 
-              <h3><Translate>Become powerful</Translate></h3>
+                <div className="contentby__ads">
+                  <div className="golden superb"><Translate>We are engaged in packaging business and sale of its services</Translate></div>
+                  <h3><Translate>You can just come up with an IDEA</Translate></h3>
+                  <p><Translate>and get a name for the company (naming), a name for the domain, a logo,</Translate>
+                    <Translate>a corporate identity, a marketing-kit, as well as a good-selling website and a customized advertising campaign.</Translate></p>
+                </div>
 
-              <p><Translate>Take the first step to the strongest and most profitable sales.
-                Already advertised? Order an audit of an existing advertising campaign, we will point out the weaknesses</Translate>
-                <span className="golden bolder"> <Translate>for free.</Translate></span></p>
 
-
-              <div className="al__time-button">
+              </div>
+              <div className="advantages"><span><
+                img src={Shiny} alt="" /><Translate>Brightly.</Translate></span>
+                <span> <img src={Palm} alt="" /><Translate>Easy.</Translate></span> <span>
+                  <img src={Wallet} alt="" /><Translate>Profitable.</Translate></span></div>
+              <div className="developer__right-content">
 
               </div>
 
-            </div>
-          </section>
+
+            </section>
+          </div>
+
+          <CaseService {...this.props} name='advertising' />
+
         </div>
-        <CaseService {...this.props} name='advertising' />
-        <Iter/>
-        <WeCare name="advertisement"/>
-        <Advantages/>
-        <Own/>
-        <LimitedService/>
+
+        <section className="al__time-section">
+
+          <div className="al__time-wrapper">
+
+            <h3><Translate>Become powerful</Translate></h3>
+
+            <p><Translate>Take the first step to the strongest and most profitable sales.
+    Already advertised? Order an audit of an existing advertising campaign, we will point out the weaknesses</Translate>
+              <span className="golden bolder"> <Translate>for free.</Translate></span></p>
+
+
+            <div className="al__time-button">
+
+            </div>
+
+          </div>
+        </section>
+        <Iter />
+        <WeCare name="advertisement" />
+        <Advantages />
+        <Own />
+        <LimitedService />
       </Fragment>
     )
   }

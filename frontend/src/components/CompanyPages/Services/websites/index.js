@@ -77,7 +77,7 @@ import Translate, { reactTranslateChangeLanguage } from "translate-components";
 
         <CaseService {...this.props} name='web sites' />
 
-        <WeCare name="website"/>
+        <WeCare name="website" />
 
         <Advantages/>
 

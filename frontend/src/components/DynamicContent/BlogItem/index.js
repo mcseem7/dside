@@ -102,15 +102,13 @@ import { FacebookProvider, Comments } from 'react-facebook';
                <p dangerouslySetInnerHTML={{__html: blogItem.description}} />
 
               </div>
-
               <div className="comment__body-post">
 
                 <div id="comment__container">
                
       <FacebookProvider appId="329972810887548">
         <Comments min-width='320px' width='100%' max-width='700px' mobile='true' href={`${process.env.REACT_APP_DOMAIN}/${this.state.lang}/blog/${this.props.match.params.blogitem}`} />
-
-      </FacebookProvider>
+     </FacebookProvider>
                 </div>
 
               </div>
