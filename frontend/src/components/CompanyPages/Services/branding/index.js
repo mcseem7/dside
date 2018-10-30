@@ -234,8 +234,8 @@ class BrandPage extends Component {
                                             </div>
 
                                             <div className="cola__content">
-                                              <h2><Translate>Fanta</Translate></h2>
-                                                <p><Translate>Best Fanta</Translate></p>
+                                              <h2><Translate>Coke</Translate></h2>
+                                                <p><Translate>No logo or other identity for a global brand. But you would still know this 'simple' style. Red cans and waves are all you need to know a real Coke.</Translate></p>
                                             </div>
                                         </div>
 
@@ -255,8 +255,8 @@ class BrandPage extends Component {
                                             </div>
 
                                             <div className="cola__content">
-                                                <h2><Translate>coca-cola</Translate></h2>
-                                                <p><Translate>Best coca-cola</Translate></p>
+                                                <h2><Translate>LelessoMucho</Translate></h2>
+                                                <p><Translate>First, the consumer is unlikely to remember such a long name. Secondly, the style of this jar is not remembered, it is terrible, but the children might have bought it to try.</Translate></p>
                                             </div>
                                         </div>
 
@@ -275,8 +275,8 @@ class BrandPage extends Component {
                                             </div>
 
                                             <div className="cola__content">
-                                                <h2><Translate>sprite</Translate></h2>
-                                                <p><Translate>Best sprite</Translate></p>
+                                                <h2><Translate>Cola - Kola</Translate></h2>
+                                                <p><Translate>Black can with a word of 4 letters. This can be remembered by the end user. This idea suggests that there may be something exclusive in the can, but at the same time, it will easily lose the real stake.</Translate></p>
                                             </div>
                                         </div>
 
