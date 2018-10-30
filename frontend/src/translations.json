@@ -421,7 +421,7 @@
 
   "What's the difference?": {
     "cz": "Jaký je v tom rozdíl?",
-    "pl": "Jaka różnica?",
+    "pl": "Na czym polega róznica?",
     "ru":"Какая разница?"
   },
 
@@ -1161,8 +1161,8 @@
 },
 
 "website": {
-  "ru": "веб сайтов",
-  "pl": "webových stránek",
+  "ru": "сайт",
+  "pl": "strona",
   "cz": "witryny internetowe"
 },
 
