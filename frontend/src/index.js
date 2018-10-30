@@ -10,7 +10,9 @@ import baseStyles from './index'
 import './index.css'
 import 'regenerator-runtime/runtime';
 import history from 'history/createBrowserHistory'
+import { unregister } from './registerServiceWorker';
 
+unregister();
 const initialLanguage = 'en'
 window.localStorage.setItem('lang', window.location.pathname.substr(1, 2) || initialLanguage)
 const getIdentityDomen =  window.location.pathname
