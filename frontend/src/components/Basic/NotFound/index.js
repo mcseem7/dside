@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
+import {withRouter} from 'react-router-dom'
 
-export default class NotFound extends Component {
+ class NotFound extends Component {
   constructor () {
     super()
   }
 
   render () {
+    console.log(this.props)
     return (
       <div>
         <p>Данной страницы не существует зайдите попозже)</p>
@@ -13,3 +15,6 @@ export default class NotFound extends Component {
     )
   }
 }
+
+
+export default withRouter(NotFound)

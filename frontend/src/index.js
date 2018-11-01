@@ -3,7 +3,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import { BrowserRouter, Route,withRouter } from 'react-router-dom'
-
 import styledNormalize from 'styled-normalize'
 import { injectGlobal } from 'styled-components'
 import baseStyles from './index'
@@ -11,20 +10,19 @@ import './index.css'
 import 'regenerator-runtime/runtime';
 import history from 'history/createBrowserHistory'
 import { unregister } from './registerServiceWorker';
-
+import routes from './routes'
 unregister();
 const initialLanguage = 'en'
 window.localStorage.setItem('lang', window.location.pathname.substr(1, 2) || initialLanguage)
 const getIdentityDomen =  window.location.pathname
-
-
+const data = window.__INITIAL_DATA__ ;
 
 
 
 const render = (Component) => {
   return   ReactDOM.hydrate(
     <BrowserRouter >
-      <Component {...this.props} domen={getIdentityDomen}/>
+      <Component {...this.props} domen={getIdentityDomen} initialData={data} routes={routes} />
     </BrowserRouter>
     ,
     document.getElementById('root')

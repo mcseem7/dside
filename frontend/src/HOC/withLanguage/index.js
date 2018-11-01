@@ -12,7 +12,7 @@ function withLanguage(Language) {
             }
         }
 
-        componentDidMount() {
+        componentWillMount() {
             this.setState({lang: localStorage.getItem('lang')})
         }
 

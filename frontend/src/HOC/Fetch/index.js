@@ -67,8 +67,21 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
         case 'HOME':
           await this.getItemApiHome()
           break;
+        case 'GRADE': 
+          await this.getItemGrade()  
       }
       await this.setState({loading: true})
+    }
+
+    getItemGrade = () => {
+      Array.isArray(this.state.dataDside) &&  this.state.dataDside.map((homeItem) => {
+        console.log(homeItem.name)
+          return fetch(`${process.env.REACT_APP_API}/${this.state.langContent}/review/getReviewDetails/${homeItem.id}/`).then((response) => {
+            return response.json()
+          }).then((item) => {
+            this.setState({dataItemHome: this.state.dataItemHome.concat(item)})
+          })
+        })
     }
 
     getItemApiHome = () => {

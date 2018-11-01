@@ -6,13 +6,15 @@ import screenCitron from './layer-105.png'
 import imgsl from './layer-106-copy.png'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import Translate, { reactTranslateChangeLanguage } from "translate-components";
 import arrowImg from './arrow.svg'
 import fetch from 'isomorphic-fetch'
+import withLanguage from '../../../HOC/withLanguage';
+import {compose} from 'recompose'
+import { matchPath } from 'react-router'
 
-
-export default class PortfolioItem extends Component {
+ class PortfolioItem extends Component {
 
 
   constructor(props) {
@@ -32,25 +34,35 @@ export default class PortfolioItem extends Component {
 
 
 
-
-
-
-
-  async componentDidMount() {
-    reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
-    await fetch(`${process.env.REACT_APP_API}/${localStorage.getItem('lang')}/portfolio/getPortfolioItemDetails/${this.props.match.params.portfolioitem}/`).then((response) => {
-      return response.json()
+  async componentDidMount() { 
+    const {language, history} = this.props
+    const match = await matchPath(history.location.pathname, {
+      path: `/${language}/portfolio/:portfolioitem`,
+      exact: true,
+      strict: false
+    })
+    await reactTranslateChangeLanguage.bind(this, language)()
+    await fetch(`${process.env.REACT_APP_API}/${language}/portfolio/getPortfolioItemDetails/${match.params.portfolioitem}/`).then((response) => {
+      if(response.status != 200) {
+        return history.push(`/${language}/notfound`)
+      } else {
+       return response.json()
+      }
     }).then((item) => {
+      if(item) {
       this.setState({
         itemPortfolio: item,
         blocksImg: item.blocks,
         attachImg: item.attachment
       })
+    }
     })
+    if(this.state.itemPortfolio.length != 0) {
     await this.setState({
       category: this.state.itemPortfolio.category.name,
       similarItems: this.state.itemPortfolio.similar_items
     })
+  }
   }
 
 
@@ -252,3 +264,6 @@ export default class PortfolioItem extends Component {
     )
   }
 }
+
+
+export default compose (withLanguage, withRouter)(PortfolioItem)

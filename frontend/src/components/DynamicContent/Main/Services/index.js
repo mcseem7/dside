@@ -1,17 +1,13 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 import './index.css'
 import {reactTranslateChangeLanguage} from "translate-components";
 import Translate from 'translate-components'
 
-export default class  Services extends Component  {
+ class  Services extends Component  {
 
     constructor(props) {
         super(props)
-
-        this.state = {
-            lang: ''
-        }
     }
 
 
@@ -34,7 +30,7 @@ export default class  Services extends Component  {
                                 {/* <h2>Branding</h2> */}
                                 {/* </div> */}
                                 <ul className="list">
-                                    <li><Link to={`${this.props.match.path}/services/brand`}
+                                    <li><Link to={`${this.props.match.url}/services/brand`}
                                               className="shining-underline"><Translate>Branding</Translate><span></span></Link></li>
                                     <li><Translate>Brand legend</Translate></li>
                                     <li><Translate>Brandbook</Translate></li>
@@ -48,7 +44,7 @@ export default class  Services extends Component  {
                                 {/* <h2>Branding</h2> */}
                                 {/* </div> */}
                                 <ul className="list">
-                                    <li><Link to={`${this.props.match.path}/services/website`}
+                                    <li><Link to={`${this.props.match.url}/services/website`}
                                               className="shining-underline"><Translate>Websites</Translate><span></span></Link></li>
                                   <li><Translate>Landing page</Translate></li>
                                   <li><Translate>E-commerce</Translate></li>
@@ -62,7 +58,7 @@ export default class  Services extends Component  {
                                 {/* <h2>Branding</h2> */}
                                 {/* </div> */}
                                 <ul className="list">
-                                    <li><Link to={`${this.props.match.path}/services/advertising`} className="shining-underline"><Translate>
+                                    <li><Link to={`${this.props.match.url}/services/advertising`} className="shining-underline"><Translate>
                                       Advertising</Translate><span></span></Link>
                                     </li>
                                   <li><Translate>E-mail marketing</Translate></li>
@@ -76,7 +72,7 @@ export default class  Services extends Component  {
                                 {/* <h2>Branding</h2> */}
                                 {/* </div> */}
                                 <ul className="list">
-                                    <li><Link to={`${this.props.match.path}/services/automation`} className="shining-underline">
+                                    <li><Link to={`${this.props.match.url}/services/automation`} className="shining-underline">
 
                                       <Translate>Automation</Translate><span></span></Link>
 
@@ -92,7 +88,7 @@ export default class  Services extends Component  {
                                 {/* <h2>Branding</h2> */}
                                 {/* </div> */}
                                 <ul className="list">
-                                    <li><Link to={`${this.props.match.path}/services/videos`}
+                                    <li><Link to={`${this.props.match.url}/services/videos`}
                                               className="shining-underline"><Translate>Videos</Translate><span></span></Link></li>
                                   <li><Translate>Motion graphics</Translate></li>
                                   <li><Translate>3D modelling</Translate></li>
@@ -113,3 +109,6 @@ export default class  Services extends Component  {
         )
     }
 }
+
+
+export default withRouter(Services)

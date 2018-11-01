@@ -8,9 +8,10 @@ import {Link} from 'react-router-dom'
 import Poppup from '../../../../../HOC/OrderPopup/index';
 import Translate from 'translate-components'
 import {reactTranslateChangeLanguage} from "translate-components";
+import {withRouter} from 'react-router-dom'
+import Header from '../../../../Basic/Header'
 
-
-export default class HeaderService extends Component {
+class HeaderService extends Component {
   constructor() {
     super()
 
@@ -20,9 +21,9 @@ export default class HeaderService extends Component {
       modalActive: false,
       lang: ''
     }
-
   }
 
+ 
   componentDidMount() {
     this.setState({
       lang: localStorage.getItem('lang')
@@ -41,7 +42,7 @@ export default class HeaderService extends Component {
 
 
 
-
+ 
 
   changePoppup = () => {
     this.setState({modalActive: !this.state.modalActive})
@@ -49,10 +50,9 @@ export default class HeaderService extends Component {
 
 
   render() {
-
+    console.log(this.props)
     return(
         <Fragment>
-
           <div className="heading__service">
           <header className="header__service">
             <div className="header__navigation">
@@ -176,7 +176,10 @@ export default class HeaderService extends Component {
             <div className="radius__wrapper"></div>
             {this.state.modalActive ? <Poppup onClose={this.changePoppup}/> :  null}
           </div>
+
         </Fragment>
     )
   }
 }
+
+export default  withRouter(HeaderService)
