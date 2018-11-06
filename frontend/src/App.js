@@ -28,6 +28,9 @@ import { reactTranslateChangeLanguage, TranslateProvider } from "translate-compo
 import translations from './translations.json'
 import clock from './clock.svg'
 import routes from './routes'
+import Helmet from 'react-helmet-async'
+import $ from 'jquery'
+
 
 class App extends Component {
 
@@ -37,7 +40,8 @@ class App extends Component {
         this.state = {
             cook: true,
             langPoppup: false,
-            orientation: false
+            orientation: false,
+            preload: false
         }
     }
 
@@ -46,6 +50,7 @@ class App extends Component {
         if (!getIdentityDomen || getIdentityDomen == '') {
             this.setState({ langPoppup: false })
         }
+       
     }
 
     componentDidMount() {
@@ -60,13 +65,13 @@ class App extends Component {
         //         orientation: true
         //     })
         // }
-
+        const spinner = $('#loading');
+        if (spinner && !$(spinner).addClass('final_render loaded')) {
+          $(spinner).addclass('final_render loaded')
+        }
         window.addEventListener("onload", () => {
             this.checkOrient()
         }, false);
-        
-
-        const self = this;
         if (Cookies.get('accept-cookie') == undefined) {
             this.setState({ cook: true })
         } else {
@@ -90,10 +95,17 @@ class App extends Component {
         
     }
 
+    
     confirmCookies = () => {
         this.setState({ cook: false })
         Cookies.set('accept-cookie', true, { expires: 365 });
     }
+
+  
+   
+ 
+  
+    
 
     render() {
         // const itemLang = localStorage.setItem('lang', this.props.domen)
@@ -101,6 +113,7 @@ class App extends Component {
             return str.split(' ').some(function (w) { return w === word })
         }
         const { routes, initialData } = this.props
+      
         return (
             <TranslateProvider translations={translations} defaultLanguage={'en'}>
                 <Fragment>
@@ -117,61 +130,64 @@ class App extends Component {
                         </Fragment> : null
                     }
                 </Fragment>
-                <div className="App">
-                    <Route exact path="/" render={(props) => (<Redirect to={`/en`} />)} />
-                    <Route path={'/:language'} render={(props) => {
-    
-                        return (
-                            <TransitionGroup>
+                { <div className="App">
+             
+             <Route exact path="/" render={(props) => (<Redirect to={`/en`} />)} />
+             <Route path={'/:language'} render={(props) => {
 
-                                {props.location.pathname.match(/services\//gi)  ? <Header domenErty={props.match.params.language} style={'none'} /> : <Header domenErty={props.match.params.language} style={'block'} />}
+                 return (
+                     <TransitionGroup>
 
-                                <CSSTransition key={props.location.key} timeout={1000} classNames="fade">
+                         {props.location.pathname.match(/services\//gi)  ? <Header domenErty={props.match.params.language} style={'none'} /> : <Header domenErty={props.match.params.language} style={'block'} />}
 
-                                    <Switch>
-                                           {routes.map ((route, index) => {
-                                            return (
-                                                <Route
-                                                    key={index}
-                                                    path={route.path}
-                                                    exact={route.exact}
-                                                    render={props =>
-                                                        createElement(route.component, {
-                                                            ...props,
-                                                            routes: route.routes
-                                                        })
-                                                    }
-                                                />
-                                            );
-                                        })}
-                                    </Switch>
-
-
-                                </CSSTransition>
-
-                                {findWord('/contactus', props.location.pathname.substr(3)) || findWord('services', props.location.pathname.substr(4,8))  ? <Footer style={'none'} /> : <Footer style={'block'} />}
-                            </TransitionGroup>)
-                    }} />
+                         <CSSTransition key={props.location.key} timeout={1000} classNames="fade">
+                        
+                             <Switch>
+                                    {Array.prototype.map.call(routes, ((route, index) => {
+                                     return (
+                                         <Route
+                                             key={index}
+                                             path={route.path}
+                                             exact={route.exact}
+                                             render={props =>
+                                                 createElement(route.component, {
+                                                     ...props,
+                                                     routes: route.routes,
+                                                     initialData: initialData || null
+                                                 })
+                                             }
+                                         />
+                                     );
+                                 }))}
+                             </Switch>
 
 
+                         </CSSTransition>
 
-                    {this.state.cook ?
-                        <div className="cookies-container">
+                         {findWord('/contactus', props.location.pathname.substr(3)) || findWord('services', props.location.pathname.substr(4,8))  ? <Footer style={'none'} /> : <Footer style={'block'} />}
+                     </TransitionGroup>)
+             }} />
 
-                            <div className="privacy__warning">
-                                <p className="cook__description">
-                                    Did you know? This website uses cookies to ensure you get the best experience on our website. <span className="shining-underline">Learn more<span></span></span>
-                                </p>
 
-                                <div className="cook__button">
-                                    <p onClick={this.confirmCookies}>Agree</p>
-                                </div>
 
-                            </div>
-                        </div> : null
-                    }
-                    {this.state.langPoppup ? <LanguagePoppup /> : null}
-                </div>
+             {this.state.cook ?
+                 <div className="cookies-container">
+
+                     <div className="privacy__warning">
+                         <p className="cook__description">
+                             Did you know? This website uses cookies to ensure you get the best experience on our website. <span className="shining-underline">Learn more<span></span></span>
+                         </p>
+
+                         <div className="cook__button">
+                             <p onClick={this.confirmCookies}>Agree</p>
+                         </div>
+
+                     </div>
+                 </div> : null
+             }
+             {this.state.langPoppup ? <LanguagePoppup /> : null}
+         </div> }
+             
             </TranslateProvider>
         )
     }

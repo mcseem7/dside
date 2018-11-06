@@ -215,9 +215,9 @@
             margin-left: 10px;
         }
 
-        .carousel__inner-slide {
+        /* .carousel__inner-slide {
             top: 60px !important;
-        }
+        } */
 
         .similarItem figcaption h2{
             line-height: 15px;

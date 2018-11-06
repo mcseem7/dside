@@ -103,6 +103,7 @@ class Advertising extends Component {
         <Advantages />
         <Own />
         <LimitedService />
+        <Footer/>
       </Fragment>
     )
   }

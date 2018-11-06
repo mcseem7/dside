@@ -1,28 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Dside Branding Agency</title>
+<head>
 <meta charset="UTF-8" content="Dside Branding Agency">
 <meta name="description" content="Мета теги в HTML документе. Описание популярных мета тегов, примеры использования на веб странице">
 <meta name="author" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:type" content="homepage">
-<base href="/">
 <meta property="fb:app_id" content="329972810887548" />
 <meta property="fb:admins" content="vasiliy.petrov.1401"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.3.15/slick.css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 <script  src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-<body> 
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+{{HELMET_TITLE}}  
+{{HELMET_META}}
+<style> 
+  .final_render {
+    display: none !important;
+  }
+  #loading {
+      background-color: #191c27;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 99999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      margin: 0;
+      transition: transform 1.6s ease-in-out, opacity .1s ease-in-out; }
+      #loading .loaded {
+        transform: scale(200);
+        opacity: 0;
+    }
+  
+      #loading .loader {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        #loading .loader .loader__row {
+          display: flex; }
+          #loading .loader .loader__row .loader__arrow {
+            width: 0;
+            height: 0;
+            border-radius: 30px;
+            margin: 6px;
+            transform: rotate(45deg);
+            border: 5px solid #CE111F;
+            animation: wink 0.5s infinite; }
+            #loading .loader .loader__row .loader__arrow.inner-1 {
+              animation-delay: -0.0833333333s; }
+            #loading .loader .loader__row .loader__arrow.inner-2 {
+              animation-delay: -0.1666666667s; }
+            #loading .loader .loader__row .loader__arrow.inner-3 {
+              animation-delay: -0.25s; }
+            #loading .loader .loader__row .loader__arrow.inner-4 {
+              animation-delay: -0.3333333333s; }
+            #loading .loader .loader__row .loader__arrow.inner-5 {
+              animation-delay: -0.4166666667s; }
+            #loading .loader .loader__row .loader__arrow.inner-6 {
+              animation-delay: -0.5s; }
+      #loading span {
+        position: absolute;
+        top: calc(50% + 30px);
+        width: 100%;
+        text-align: center;
+        left: 0;
+        color: #FFFFFF;
+        font-weight: 700;
+        text-transform: none; }
     
+   #loading span img {
+    max-width: 100%;
+      width: 130px;
+  }
+   #loading span {
+    width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+    @keyframes wink {
+      0% {
+        opacity: 0.1; }
+      30% {
+        opacity: 1; }
+      100% {
+        opacity: 0.1; } }
+</style>
+</head>
+<body> 
+    <div id="loading">
+        <div class="loader">
+          <div class="loader__row">
+            <div class="loader__arrow up inner inner-6"></div>
+            <div class="loader__arrow down inner inner-5"></div>
+            <div class="loader__arrow up inner inner-4"></div>
+          </div>
+        </div>
+        <span><img src="dsideLogo.svg" class="brand-logo" alt="DSIDE logo" /></span>
+      </div> 
+    <div id="root"></div>
+    {{SCRIPT}}
   </body>
 </html>

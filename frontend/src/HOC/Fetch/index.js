@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import fetch from 'isomorphic-fetch'
 import PropTypes from 'prop-types'
 import $ from 'jquery'
+import withLanguage from '../withLanguage'
 
 export default function withDsideApi(DsideComponent, apiUrl, type) {
 
@@ -12,6 +13,7 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
       this.state = {
         dataDside: [],
         dataItemHome: [],
+        gradeItem: [],
         loading: false,
         blogItem: [],
         nextPost: [],
@@ -19,8 +21,7 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
         postData: {
           name: '',
           email: ''
-        },
-          langContent: ''
+        }
       }
 
     }
@@ -79,7 +80,7 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
           return fetch(`${process.env.REACT_APP_API}/${this.state.langContent}/review/getReviewDetails/${homeItem.id}/`).then((response) => {
             return response.json()
           }).then((item) => {
-            this.setState({dataItemHome: this.state.dataItemHome.concat(item)})
+            this.setState({gradeItem: this.state.gradeItem.concat(item)})
           })
         })
     }
@@ -139,6 +140,7 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
             <DsideComponent
                 {...this.props}
                 nextPost={this.state.nextPost}
+                gradeItem={this.state.gradeItem}
                 dataItem={this.state.dataItemHome}
                 blogItem={this.state.blogItem}
                 postData={this.postFormData}
@@ -151,5 +153,5 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
     }
   }
 
-  return withDsideApi;
+  return withLanguage(withDsideApi)
 }

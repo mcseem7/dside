@@ -7,7 +7,6 @@ import Vova from './images/vova__dside.png'
 import Versus from './images/Layer 123.png'
 import SimpleWeb from './images/simple-web.svg'
 import BetterWeb from './images/better-web.svg'
-import Footer from '../../../Basic/Footer'
 import './index.css'
 import Own from '../../../Basic/TrustBlocks/Own'
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
@@ -18,7 +17,7 @@ import PortolioPost from "../../../DynamicContent/Header__Post/Portfolio__Post";
 import withDsideApi from "../../../../HOC/Fetch";
 import { HeroVideo } from "react-hero-video";
 import Translate, { reactTranslateChangeLanguage } from "translate-components";
-
+import Footer from '../../../Basic/Footer'
 
 class Website extends Component {
   constructor() {
@@ -100,6 +99,7 @@ class Website extends Component {
         <WeCare name="website" />
         <Advantages />
         <Own />
+        <Footer/>
       </Fragment>
     )
   }

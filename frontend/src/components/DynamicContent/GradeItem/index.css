@@ -1,0 +1,169 @@
+.review__container-wrapper {
+    background: #F2F3F5;
+}
+
+.review__container {
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto;  
+    display: flex;
+    padding-bottom: 30px;
+}
+
+.review__title-wrapper,
+.review__grader-wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.review__title,
+.review__grader {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.review__title,
+.review__grader,
+.grader__name p,
+.get-earlier__button,
+.recent__title-grades h3   {
+    color: #000000;
+    font-family: "MontBold";
+}
+
+.review__image-container img {
+    max-width: 100%;
+}
+
+.review__image-container {
+    width: 850px;
+    height: 580px;
+    max-width: 100%;
+}
+
+.review__grader-img img {
+    max-width: 100%;
+    border-radius: 20%;
+}
+
+.review__grader-img {
+    width: 100px;
+}
+
+.review__information-left,
+.review__information-right {
+    flex: 1 1 50%;
+}
+
+.review__right-wrapper  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review__grader-information {
+    display: flex;
+}
+
+.grader__name p {
+    font-size: 14px;
+}
+
+.recent__title-grades h3 {
+    font-size: 21px;
+}
+
+.grader__name {
+    margin-left: 10px;
+}
+
+.grades__recents-review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.recent__grade-img {
+    width: 125px;
+    height: 90px;
+}
+
+.recent__grade-img img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.recent__grade-wrapper {
+ position: relative;
+ cursor: pointer;
+}
+.recent__grade-date {
+position: absolute;
+bottom: 10px;
+left: 12px;
+}
+
+.recent__grade-date span {
+    font-size: 10px;
+    color: #ffffff;
+    font-family: 'MontBold';
+}
+
+.similar__grades {
+    background: url('./arrow.png');
+    background-repeat: no-repeat;
+    height: 350px;
+    background-size: contain;
+    background-position: 50%;
+
+}
+
+
+
+
+.get-earlier__button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    height: 17px;
+    line-height: 2.5;
+}
+
+.get-earlier__button div {
+ font-size: 12px;
+}
+
+.earlier__button {
+    margin-top: 20px;
+    flex-direction: column;
+    display: flex;
+    background: url('./earlier.png');
+    justify-content: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 45px;
+    background-position: 50%;
+    position: relative;
+}
+
+.recent__grade > div  {
+    position: relative;
+}
+
+
+.slider__wrapper-grade {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.similar__grades > div > button {
+    border: none;
+    background: none;
+}

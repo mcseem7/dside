@@ -221,6 +221,7 @@ class Automation extends Component {
         <Advantages />
         <Own />
         <LimitedService />
+        <Footer/>
       </Fragment>
     )
   }

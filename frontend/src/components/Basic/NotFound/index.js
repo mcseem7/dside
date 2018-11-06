@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import {withRouter} from 'react-router-dom'
+import Header from '../Header'
+import Footer from '../Footer'
 
  class NotFound extends Component {
   constructor () {
@@ -7,10 +9,12 @@ import {withRouter} from 'react-router-dom'
   }
 
   render () {
-    console.log(this.props)
+     const {location} = this.props
     return (
       <div>
+        {location.pathname.match(/services\//gi) ? <Header/> : null}
         <p>Данной страницы не существует зайдите попозже)</p>
+        {location.pathname.match(/services\//gi) ? <Footer/> : null}
       </div>
     )
   }

@@ -430,11 +430,20 @@
 
 .head-grade__img {
     width: 86px;
-    height: 86px;
+    height: 75px;
+}
+
+.head-grade__date p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'MontBold';
+    font-size: 14px;
+    color: #fff;
 }
 
 .head-grade__img img {
-    border-radius: 10px;
+    border-radius: 15%;
 }
 
 .grades__head-items {

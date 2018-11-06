@@ -7,6 +7,7 @@ import LimitedService from '../serviceComponents/LimitedService'
 import ProjectVideo from './project__video.png'
 import './index.css'
 import playIcon from './playVideo.svg'
+import Footer from '../../../Basic/Footer'
 import Translate, { reactTranslateChangeLanguage } from "translate-components";
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
 import WeCare from "../../../Basic/TrustBlocks/WeCare";
@@ -127,7 +128,7 @@ class VideoPage extends Component {
         <Advantages />
         <Own />
         <LimitedService />
-
+        <Footer />
 
       </div>
     )

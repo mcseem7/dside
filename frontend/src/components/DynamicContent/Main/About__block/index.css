@@ -70,8 +70,8 @@
         max-width: 1200px;
         min-width: 320px;
         margin: 0 auto;
-        padding-top: 50px;
-        padding-bottom: 90px;
+        padding-top: 0px;
+        padding-bottom: 40px;
     }
 
     .question__wrapper .question {
@@ -141,6 +141,7 @@
     flex: 1 1 30%;
 }
     .question{display: block}
-    .container__about-content{padding: 3em 4em;}
+    .container__about-content{padding-right: 4rem;
+    padding-left: 4rem;}
     .advantages{padding: 1rem 0;}
 }

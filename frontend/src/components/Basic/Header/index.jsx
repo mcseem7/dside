@@ -14,6 +14,7 @@ import withLanguage from "../../../HOC/withLanguage";
 import homeDside from "./homeDside.png";
 import { compose } from "recompose";
 import withDsideApi from "../../../HOC/Fetch";
+import moment from 'moment'
 
 class Header extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class Header extends Component {
 
     this.state = {
       opacity: 0,
-      display: "block",
+      display: "none",
       modalActive: false,
       lang: ""
     };
@@ -40,6 +41,7 @@ class Header extends Component {
 
   render() {
     const {history, location} = this.props   
+    console.log(this.props)
     return (
       <div
         className="header__container"
@@ -72,7 +74,7 @@ class Header extends Component {
                 <div className="logo__container">
                   <div className="logo">
                     <NavLink
-                      to={`/${this.props.domenErty}`}
+                      to={`/${this.props.language}`}
                       className="link link--dside"
                     >
                       <span>
@@ -212,7 +214,7 @@ class Header extends Component {
                       <NavLink
                         onClick={this.showMenu}
                         exact
-                        to={`/${this.props.domenErty}/aboutus`}
+                        to={`/${this.props.language}/aboutus`}
                         className="link__menu"
                       >
                         <Translate>About Us</Translate>
@@ -226,7 +228,7 @@ class Header extends Component {
                       <Link
                         onClick={this.showMenu}
                         exact
-                        to={`/${this.props.domenErty}/contactus`}
+                        to={`/${this.props.language}/contactus`}
                         className="link__menu"
                       >
                         <Translate>Contact Us</Translate>
@@ -260,7 +262,7 @@ class Header extends Component {
                       <NavLink
                         onClick={this.showMenu}
                         exact
-                        to={`/${this.props.domenErty}`}
+                        to={`/${this.props.language}`}
                         className="link__menu"
                       >
                         <Translate>Home</Translate>
@@ -283,14 +285,13 @@ class Header extends Component {
                     <h3>Today in</h3>
                   </div>
                   <div className="grades__head-items">
-                    {this.props.dataItem
+                    {this.props.gradeItem
                       .filter((i, index) => index < 3)
                       .map(grade => {
                         return (
                           <div className={"grade__head-item"} onClick={() => {
                            history.push({
-                             pathname: `/${this.props.domenErty}/${grade.name.toLowerCase()}`,
-                             state: grade.id
+                             pathname: `/${this.props.domenErty}/grade/${grade.id}`
                            })
                           }
                           }>
@@ -303,7 +304,7 @@ class Header extends Component {
                               />
                             </div>
                             <div className="head-grade__date">
-                              <p />
+                              <p>{moment(grade.date).format("D MMM")}</p>
                             </div>
                           </div>
                         );
