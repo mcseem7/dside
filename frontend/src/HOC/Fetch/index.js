@@ -58,7 +58,7 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
       await fetch(`${process.env.REACT_APP_API}/${this.state.langContent}${apiUrl}`)
        .then((response) => response.json())
        .then(data => this.setState({
-           dataDside: data
+           dataDside: this.state.dataDside.concat(data)
        }))
         .catch(error => console.log(error))
       switch (type) {

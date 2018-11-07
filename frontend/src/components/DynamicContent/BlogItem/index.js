@@ -59,6 +59,7 @@ import withLanguage from '../../../HOC/withLanguage';
   render() {
       const {blogItem} = this.state
       const {location, history} = this.props
+      console.log(this.props)
     return(
         <div>
         {this.state.notFound ? null : 
@@ -145,11 +146,10 @@ import withLanguage from '../../../HOC/withLanguage';
             </div>
               
           </div>
-  
-                                  }
+         }
         </div>
     )
   }
 }
 
-export default compose (withRouter,withDsideApi, withLanguage)(BlogItem,'/blog/getBlogItems/', 'BLOG')
+export default compose (withRouter, withLanguage,withDsideApi)(BlogItem,'/blog/getBlogItems/', 'BLOG')

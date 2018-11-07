@@ -11,6 +11,7 @@ import moment from 'moment'
 import arrow from './arrow.png'
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import Carousel from './carousel'
+import ItemModal from "./ItemModal";
 
 class GradeItem extends Component {
   constructor() {
@@ -55,7 +56,23 @@ class GradeItem extends Component {
   render() {
     const { grade } = this.state
     const { gradeItem, history } = this.props
-    console.log(this.props)
+    const items = [
+      {
+        id: 1,
+        name: "Good one",
+        description: 'Lorem ipsum dolor sit amet'
+      },
+      {
+        id: 2,
+        name: "Good two",
+        description: 'Lorem ipsum dolor sit amet'
+      },
+      {
+        id: 3,
+        name: "Good three",
+        description: 'Lorem ipsum dolor sit amet'
+      }
+    ]
     return (
       <Fragment>
         <div className="review__container-wrapper">
@@ -65,7 +82,16 @@ class GradeItem extends Component {
                 <h3 className='review__title'>{`${moment(grade.date).format('dddd Do')}, ${grade.name}`}</h3>
               </div>
               <div className='review__image-container'>
+              <div className="grader__modal-content">
                 <img src={gradeReview}></img>
+               
+                        {
+                          items.map((item) => {
+                            return <ItemModal {...item}/>
+                          })
+                        }
+                     
+              </div>
               </div>
               <div className="grade-comment__body-post">
 
@@ -81,7 +107,7 @@ class GradeItem extends Component {
             </div>
       
           <div className="review__information-right">
-   <div className='review__right-wrapper'>
+          <div className='review__right-wrapper'>
              <div className='review__grader-wrapper'>
              <div className='review__grader-title'>
                 <h3 className='review__grader'>Graded by:</h3>
@@ -89,7 +115,10 @@ class GradeItem extends Component {
                 <br/>
               <div className='review__grader-information'>
                 <div className='review__grader-img'>
-                <img src={`${process.env.REACT_APP_DOMAIN}${this.state.avatar.avatar}`} />
+               
+                   <img src={`${process.env.REACT_APP_DOMAIN}${this.state.avatar.avatar}`} />
+                     
+                    
                 </div>
                 <div className='grader__name'>
                 <p>{this.state.avatar.name}</p>
@@ -103,10 +132,8 @@ class GradeItem extends Component {
                   </div>
 
                   <div className='similar__grades'>
-              <Carousel {...this.props}/>
-                  </div>
-
-              
+                      <Carousel {...this.props}/>
+                  </div>  
                 </div>
               </div>
               </div>
@@ -120,8 +147,9 @@ class GradeItem extends Component {
 }
 
 export default compose( withLanguage, withRouter, withDsideApi)(
- 
   GradeItem,
   "/review/getReviewList/",
   "GRADE",
 );
+
+
