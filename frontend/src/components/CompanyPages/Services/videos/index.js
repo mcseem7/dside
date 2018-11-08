@@ -1,37 +1,37 @@
 import React, { Component, Fragment } from "react";
-import 'react-modal-video/css/modal-video.min.css';
-import ModalVideo from 'react-modal-video';
-import HeaderService from '../serviceComponents/HeaderService/index'
-import CaseService from '../serviceComponents/CaseService/index'
-import LimitedService from '../serviceComponents/LimitedService'
-import ProjectVideo from './project__video.png'
-import './index.css'
-import playIcon from './playVideo.svg'
-import Footer from '../../../Basic/Footer'
+import "react-modal-video/css/modal-video.min.css";
+import ModalVideo from "react-modal-video";
+import HeaderService from "../serviceComponents/HeaderService/index";
+import CaseService from "../serviceComponents/CaseService/index";
+import LimitedService from "../serviceComponents/LimitedService";
+import ProjectVideo from "./project__video.png";
+import "./index.css";
+import playIcon from "./playVideo.svg";
+import Footer from "../../../Basic/Footer";
 import Translate, { reactTranslateChangeLanguage } from "translate-components";
-import HeaderPost from '../../../DynamicContent/Header__Post/index';
+import HeaderPost from "../../../DynamicContent/Header__Post/index";
 import WeCare from "../../../Basic/TrustBlocks/WeCare";
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
 import Own from "../../../Basic/TrustBlocks/Own";
 import LogoBrand from "../branding/logo_brand.png";
 import PortolioPost from "../../../DynamicContent/Header__Post/Portfolio__Post";
 import withDsideApi from "../../../../HOC/Fetch";
-import { HeroVideo } from 'react-hero-video'
+import { HeroVideo } from "react-hero-video";
 import Iter from "../../../Basic/TrustBlocks/iter";
+import Helmet from "react-helmet-async";
 
 class VideoPage extends Component {
   constructor() {
-    super()
+    super();
 
     this.state = {
       isOpen: false
-    }
-
+    };
   }
 
   componentDidMount() {
-    window.scrollTo(0, 0)
-    reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
+    window.scrollTo(0, 0);
+    reactTranslateChangeLanguage.bind(this, localStorage.getItem("lang"))();
   }
 
   _onReady(event) {
@@ -40,53 +40,68 @@ class VideoPage extends Component {
   }
 
   openModal() {
-    this.setState({ isOpen: true })
+    this.setState({ isOpen: true });
   }
 
   render() {
     const opts = {
-      height: '500',
-      width: '100%',
-      playerVars: { // https://developers.google.com/youtube/player_parameters
+      height: "500",
+      width: "100%",
+      playerVars: {
+        // https://developers.google.com/youtube/player_parameters
         autoplay: 0,
         controls: 0,
-        color: 'white',
+        color: "white",
         modestbranding: 1,
         loop: 1
       }
     };
-    const idVideo = 'eJ8SOYUkWl0'
+    const idVideo = "eJ8SOYUkWl0";
     return (
       <div>
-
-        <div className='video-wrap'>
+        <Helmet>
+          <title>Dside Videos</title>
+        </Helmet>
+        <div className="video-wrap">
           <HeroVideo
             videoSrc={`https://www.youtube.com/embed/${idVideo}?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1&fs=1`}
-          >
-          </HeroVideo>
+          />
           <div id="vidtop-content">
             <HeaderService
-              imgLogoPosition={'logo__service-img_video'}
-              textContainer={'dside_textContainer-video'}
-              serviceSlogan={[<Fragment><Translate>DSIDE to make the best video</Translate></Fragment>]}
-              textHeader={[<p></p>]} />
+              imgLogoPosition={"logo__service-img_video"}
+              textContainer={"dside_textContainer-video"}
+              serviceSlogan={[
+                <Fragment>
+                  <Translate>DSIDE to make the best video</Translate>
+                </Fragment>
+              ]}
+              textHeader={[<p />]}
+            />
           </div>
         </div>
 
-        <div className='view__container-wrapper'>
+        <div className="view__container-wrapper">
           <section className="view__container-videos">
-
             <div className="view__videos-left">
               <div className="container__case-studies">
                 <div className="case-title">
-                  <h3><Translate>Case Studies</Translate></h3>
+                  <h3>
+                    <Translate>Case Studies</Translate>
+                  </h3>
                 </div>
                 <div className="case-description">
-                  <p><Translate>It is enough to know what your video will be about and try to convey to the audience its meaning as if you were telling your friends about it. And after that you will definitely notice that your videos began to look much more often.</Translate></p>
+                  <p>
+                    <Translate>
+                      It is enough to know what your video will be about and try
+                      to convey to the audience its meaning as if you were
+                      telling your friends about it. And after that you will
+                      definitely notice that your videos began to look much more
+                      often.
+                    </Translate>
+                  </p>
                 </div>
               </div>
             </div>
-
 
             <div className="view__videos-right">
               <div className="view__videos_img-wrapper">
@@ -97,30 +112,42 @@ class VideoPage extends Component {
         </div>
 
         <section className="video__background-dside">
-          <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId='L61p2uyiMSo' onClose={() => this.setState({ isOpen: false })} />
+          <ModalVideo
+            channel="youtube"
+            isOpen={this.state.isOpen}
+            videoId="L61p2uyiMSo"
+            onClose={() => this.setState({ isOpen: false })}
+          />
 
           <div className="background-image__videos">
             <img src={playIcon} alt="" onClick={this.openModal.bind(this)} />
           </div>
         </section>
-        <CaseService {...this.props} name='video' />
+        <CaseService {...this.props} name="video" />
         <section className="al__time-section">
-
           <div className="al__time-wrapper">
+            <h3>
+              <Translate>Become powerful</Translate>
+            </h3>
 
-
-            <h3><Translate>Become powerful</Translate></h3>
-
-            <p><Translate>Take the first step to the strongest and most profitable sales.</Translate><br />
+            <p>
+              <Translate>
+                Take the first step to the strongest and most profitable sales.
+              </Translate>
+              <br />
               <Translate>Already doing your business automation?</Translate>
               <br />
-              <Translate>Order an audit of an existing automation campaign, we will point out the weaknesses</Translate>
-              <span className="golden bolder"> <Translate>for free.</Translate></span></p>
+              <Translate>
+                Order an audit of an existing automation campaign, we will point
+                out the weaknesses
+              </Translate>
+              <span className="golden bolder">
+                {" "}
+                <Translate>for free.</Translate>
+              </span>
+            </p>
 
-            <div className="al__time-button">
-
-            </div>
-
+            <div className="al__time-button" />
           </div>
         </section>
         <Iter />
@@ -129,10 +156,9 @@ class VideoPage extends Component {
         <Own />
         <LimitedService />
         <Footer />
-
       </div>
-    )
+    );
   }
 }
 
-export default withDsideApi(VideoPage, '/portfolio/getPortfolioItems/Videos/')
+export default withDsideApi(VideoPage, "/portfolio/getPortfolioItems/Videos/");

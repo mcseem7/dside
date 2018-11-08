@@ -127,13 +127,17 @@
 
 #request-form label {display: none;}
 
+ #id_topic,
+   #id_text, 
+   #id_title, 
 #id_phone:focus,
-#id_email:focus,
 #id_social:focus,
 #id_email:focus,
 #id_name:focus {
     border-color: rgba(99, 178, 255, 0.77)
 }
+
+
 
 #request-form label {display: none;}
 #thanks{color: rgba(39, 152, 30, 0.93); font-family: 'MontLight', sans-serif;}
@@ -141,10 +145,10 @@
 
 
 
-#id_name, #id_phone, #id_topic, #id_social, #id_email {
+#id_name, #id_phone, #id_topic, #id_social, #id_email, #id_text, #id_title {
     border: none;
     outline: none;
-    width: 40%;
+    width: 45%;
     text-align: center;
     border-radius: 0;
     margin-bottom: 14px;
@@ -189,12 +193,48 @@
   #id_phone {
         font-size:11pt;
     }
- .holder__poppup-name,
- .holder__poppup-phone {
-    left: 181px;
-    }
 
+   
+    .request-form_blog div .holder__poppup-name,
+    .request-form_blog div .holder__poppup-phone,
+    .request-form_blog div  .holder__poppup-social,
+    .request-form_blog div  .holder__poppup-title,
+    .request-form_blog div  .holder__poppup-text,
+    .request-form_blog div  .holder__poppup-email
+  {
+    left: 165px;
+  }
 
+  
+  .request-form_order div .holder__poppup-name,
+  .request-form_order div .holder__poppup-phone {
+    left: 165px;
+  }
+
+@media screen and (max-width: 600px) {
+    .request-form_blog div   .holder__poppup-name,
+    .request-form_blog div   .holder__poppup-phone,
+    .request-form_blog div .holder__poppup-social,
+    .request-form_blog div .holder__poppup-title,
+    .request-form_blog div .holder__poppup-text,
+    .request-form_blog div  .holder__poppup-email
+     {
+       left: 90px;
+     }
+
+     .request-form_order div .holder__poppup-name,
+     .request-form_order div .holder__poppup-phone {
+       left: 90px;
+     }
+
+     .modal {
+         max-width: 320px;
+     }
+
+     .holder__poppup {
+         font-size: 9pt;
+     }
+}
     .holder__wrapper {
         position: relative;
     }

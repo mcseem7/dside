@@ -19,7 +19,7 @@ export default class ItemModal extends React.Component {
     }
 
     render() {
-        console.log(this.props)
+        
         return (
             <React.Fragment>
                 <div className={`grade-information__item grade__information-position${this.props.id}`}>

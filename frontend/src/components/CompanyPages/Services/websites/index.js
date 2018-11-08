@@ -18,6 +18,7 @@ import withDsideApi from "../../../../HOC/Fetch";
 import { HeroVideo } from "react-hero-video";
 import Translate, { reactTranslateChangeLanguage } from "translate-components";
 import Footer from '../../../Basic/Footer'
+import Helmet from 'react-helmet-async'
 
 class Website extends Component {
   constructor() {
@@ -33,7 +34,9 @@ class Website extends Component {
     return (
       <Fragment>
         <div>
-
+        <Helmet>
+  <title>Dside Website</title>
+</Helmet>
           <div style={{ overflow: 'hidden' }} className='video-wrap'>
             <HeroVideo
               videoSrc={`https://www.youtube.com/embed/${idVideo}?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1&fs=1`}>

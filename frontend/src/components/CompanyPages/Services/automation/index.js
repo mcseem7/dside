@@ -18,6 +18,7 @@ import withDsideApi from "../../../../HOC/Fetch";
 import { HeroVideo } from "react-hero-video";
 import { reactTranslateChangeLanguage } from "translate-components";
 import Translate from 'translate-components'
+import Helmet from 'react-helmet-async'
 
 class Automation extends Component {
   constructor() {
@@ -32,6 +33,9 @@ class Automation extends Component {
     const idVideo = 'eJ8SOYUkWl0'
     return (
       <Fragment>
+        <Helmet>
+  <title>Dside Automation</title>
+</Helmet>
         <div>
 
           <div style={{ overflow: 'hidden' }} className='video-wrap'>

@@ -50,7 +50,7 @@ class OrderPoppup extends Component {
                       <p><Translate>And you will receive a free consultation on the question that interests you. Usually we call back
                         within 30 seconds.
                       </Translate></p>
-                      <form  onSubmit={(event) => this.props.getSubmitForm(event, this.nameRef.current.value, this.phoneRef.current.value)} id="request-form" method="post" autocomplete="off">
+                      <form  onSubmit={(event) => this.props.getSubmitForm(event, this.nameRef.current.value, this.phoneRef.current.value)} id="request-form" className='request-form_order' method="post" autocomplete="off">
                         <input type="hidden" name="csrfmiddlewaretoken" value="16en0jPOOddfSpZ8FAdslU61aXFCtePx" />
 
                         <div className='holder__wrapper'>

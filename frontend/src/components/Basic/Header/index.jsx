@@ -5,6 +5,7 @@ import PlusIcon from "./plus.svg";
 import Logo from "./Logo.svg";
 import { NavLink, Link, withRouter } from "react-router-dom";
 import OrderPoppup from "../../../HOC/OrderPopup/index";
+import GradePoppup from "../../../HOC/GradePopup/index";
 import pl from "../../../HOC/ChangeLanguage/svg/006-poland.svg";
 import cz from "../../../HOC/ChangeLanguage/svg/003-czech-republic.svg";
 import ru from "../../../HOC/ChangeLanguage/svg/005-russia.svg";
@@ -15,6 +16,7 @@ import homeDside from "./homeDside.png";
 import { compose } from "recompose";
 import withDsideApi from "../../../HOC/Fetch";
 import moment from 'moment'
+import HeaderMenu from "./HeaderMenu";
 
 class Header extends Component {
   constructor(props) {
@@ -23,7 +25,8 @@ class Header extends Component {
     this.state = {
       opacity: 0,
       display: "none",
-      modalActive: false,
+      modalActiveOrder: false,
+      modalActiveGrade: false,
       lang: ""
     };
   }
@@ -35,13 +38,18 @@ class Header extends Component {
       this.setState({ opacity: 1, display: "block" });
     }
   };
+
   changePoppup = () => {
-    this.setState({ modalActive: !this.state.modalActive });
+    this.setState({ modalActiveOrder: !this.state.modalActiveOrder });
   };
+
+  changePoppupGrade = () => {
+    this.setState({ modalActiveGrade: !this.state.modalActiveGrade });
+  }
 
   render() {
     const {history, location} = this.props   
-    console.log(this.props)
+   
     return (
       <div
         className="header__container"
@@ -84,8 +92,8 @@ class Header extends Component {
                           height="26px"
                           viewBox="0 0 209 39"
                           version="1.1"
-                          xmlns="http://www.w3.org/2000/svg"
-                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                          xmlns="https://www.w3.org/2000/svg"
+                          xmlnsXlink="https://www.w3.org/1999/xlink"
                         >
                           <pattern
                             id="rollover"
@@ -96,7 +104,7 @@ class Header extends Component {
                           >
                             <image
                               id="rollover-image"
-                              xlinkHref="http://quest.masons.pl/1.gif"
+                              xlinkHref="https://quest.masons.pl/1.gif"
                               width="100"
                               height="100"
                               preserveAspectRatio="none"
@@ -197,137 +205,16 @@ class Header extends Component {
           </div>
         </header>
 
-        <div
-          className="main__header"
-          style={{
-            display: this.state.display,
-            opacity: this.state.opacity,
-            transition: "0.3s"
-          }}
-        >
-          <div className="main__header-content">
-            <div className="main__header-left">
-              <div className="main__left-container">
-                <div className="menu__header-column">
-                  <div className="menu__header-item">
-                    <div className="description__menu-title">
-                      <NavLink
-                        onClick={this.showMenu}
-                        exact
-                        to={`/${this.props.language}/aboutus`}
-                        className="link__menu"
-                      >
-                        <Translate>About Us</Translate>
-                      </NavLink>
-                      {/*<p>Caption text under about us</p>*/}
-                    </div>
-                  </div>
+        {<HeaderMenu
+        {...this.state}
+         handleChangePoppupGrade={this.changePoppupGrade} 
+         {...this.props} />}
 
-                  <div className="menu__header-item">
-                    <div className="menu__header-title">
-                      <Link
-                        onClick={this.showMenu}
-                        exact
-                        to={`/${this.props.language}/contactus`}
-                        className="link__menu"
-                      >
-                        <Translate>Contact Us</Translate>
-                      </Link>
-                    </div>
-                    {/*<div className="description__menu-title">*/}
-                    {/*<p>Caption text under about us</p>*/}
-                    {/*</div>*/}
-                  </div>
-                </div>
-
-                <div className="menu__header-column">
-                  <div className="menu__header-item">
-                    <div className="menu__header-title">
-                      <NavLink
-                        onClick={this.showMenu}
-                        exact
-                        to={`/${this.props.domenErty}/blog`}
-                        className="link__menu"
-                      >
-                        <Translate>Blog</Translate>
-                      </NavLink>
-                    </div>
-                    {/*<div className="description__menu-title">*/}
-                    {/*<p>Caption text under about us</p>*/}
-                    {/*</div>*/}
-                  </div>
-
-                  <div className="menu__header-item">
-                    <div className="menu__header-title">
-                      <NavLink
-                        onClick={this.showMenu}
-                        exact
-                        to={`/${this.props.language}`}
-                        className="link__menu"
-                      >
-                        <Translate>Home</Translate>
-                      </NavLink>
-                    </div>
-                    {/*<div className="description__menu-title">*/}
-                    {/*<p>Caption text under about us</p>*/}
-                    {/*</div>*/}
-                  </div>
-                </div>
-              </div>
-              {/* <div className="menu__header-column"></div> */}
-            </div>
-
-            <div className="main__header-right">
-              <div className="wrapper__main-head">
-                <img src={homeDside} alt="" />
-                <div className="dside__grades-container">
-                  <div className="grades__titles">
-                    <h3>Today in</h3>
-                  </div>
-                  <div className="grades__head-items">
-                    {this.props.gradeItem
-                      .filter((i, index) => index < 3)
-                      .map(grade => {
-                        return (
-                          <div className={"grade__head-item"} onClick={() => {
-                           history.push({
-                             pathname: `/${this.props.domenErty}/grade/${grade.id}`
-                           })
-                          }
-                          }>
-                            <div className="head-grade__img">
-                              <img
-                                src={`${process.env.REACT_APP_DOMAIN}${
-                                  grade.graded_by.avatar
-                                }`}
-                                alt=""
-                              />
-                            </div>
-                            <div className="head-grade__date">
-                              <p>{moment(grade.date).format("D MMM")}</p>
-                            </div>
-                          </div>
-                        );
-                      })}
-                    <div className="add__grade-svg">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 32 32"
-                      >
-                        <path
-                          d="M27.31 4.69a16 16 0 1 0 0 22.63 16 16 0 0 0 0-22.63zm-21.56 21.56a14.5 14.5 0 1 1 20.51 0 14.52 14.52 0 0 1-20.51 0zm17.5-9.5h-6.5v6.5a.75.75 0 1 1-1.5 0v-6.5h-6.5a.75.75 0 0 1 0-1.5h6.5v-6.5a.75.75 0 0 1 1.5 0v6.5h6.5a.75.75 0 1 1 0 1.5z"
-                          id="o_"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {this.state.modalActive ? (
+        {this.state.modalActiveOrder ? (
           <OrderPoppup onClose={this.changePoppup} />
+        ) : null}
+          {this.state.modalActiveGrade ? (
+          <GradePoppup onClose={this.changePoppupGrade} />
         ) : null}
       </div>
     );

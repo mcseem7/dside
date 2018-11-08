@@ -10,6 +10,10 @@ import Translate from 'translate-components'
 import {reactTranslateChangeLanguage} from "translate-components";
 import {withRouter} from 'react-router-dom'
 import Header from '../../../../Basic/Header'
+import HeaderMenu from '../../../../Basic/Header/HeaderMenu';
+import withDsideApi from '../../../../../HOC/Fetch';
+import withLanguage from '../../../../../HOC/withLanguage'
+import GradePoppup from '../../../../../HOC/GradePopup';
 
 class HeaderService extends Component {
   constructor() {
@@ -19,7 +23,8 @@ class HeaderService extends Component {
       opacity: 0,
       display: 'none',
       modalActive: false,
-      lang: ''
+      lang: '',
+      modalActiveGrade: false
     }
   }
 
@@ -48,9 +53,12 @@ class HeaderService extends Component {
     this.setState({modalActive: !this.state.modalActive})
   }
 
+  changePoppupGrade = () => {
+    this.setState({ modalActiveGrade: !this.state.modalActiveGrade });
+  }
+
 
   render() {
-    console.log(this.props)
     return(
         <Fragment>
           <div className="heading__service">
@@ -68,7 +76,7 @@ class HeaderService extends Component {
               <div className="logotype__company">
 
                   <div className="logo__services-white">
-                   <Link to="/"><img src={LogoWhite} alt="" width="90"/></Link>
+                   <Link to={`/${this.props.language}`}><img src={LogoWhite} alt="" width="90"/></Link>
                   </div>
 
               </div>
@@ -125,7 +133,7 @@ class HeaderService extends Component {
                 {/*</div>*/}
 
           </header>
-            <div className="main__header" style={{top: '80px', display: this.state.display, opacity: this.state.opacity, transition: '0.3s'}}>
+            {/* <div className="main__header" style={{top: '80px', display: this.state.display, opacity: this.state.opacity, transition: '0.3s'}}>
               <div className="main__header-content">
                 <div className="main__header-left">
 
@@ -171,15 +179,21 @@ class HeaderService extends Component {
                 <div className="main__header-right">
 
                 </div>
-              </div>
-            </div>
+              </div> */}
+           <HeaderMenu  {...this.state}
+         handleChangePoppupGrade={this.changePoppupGrade} 
+         {...this.props} />
+            
             <div className="radius__wrapper"></div>
             {this.state.modalActive ? <Poppup onClose={this.changePoppup}/> :  null}
           </div>
 
+ {this.state.modalActiveGrade ? (
+          <GradePoppup onClose={this.changePoppupGrade} />
+        ) : null}
         </Fragment>
     )
   }
 }
 
-export default  withRouter(HeaderService)
+export default  withRouter(withDsideApi(HeaderService, `/review/getReviewList/`, "GRADE"))

@@ -52,14 +52,12 @@ import withLanguage from '../../../HOC/withLanguage';
      })
   }
 
-  handleNewComment(comment) {
-    console.log(comment.text);
-  }
+
 
   render() {
       const {blogItem} = this.state
       const {location, history} = this.props
-      console.log(this.props)
+     
     return(
         <div>
         {this.state.notFound ? null : 

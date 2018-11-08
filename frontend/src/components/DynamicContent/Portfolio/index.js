@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import './index.css'
-
+import Helmet from 'react-helmet-async'
 
 export default class Portfolio extends Component {
   constructor() {
@@ -27,7 +27,9 @@ export default class Portfolio extends Component {
     return(
         <div>
           <section className="portfolio__items-container">
-
+<Helmet>
+  <title>Dside Portfolio</title>
+</Helmet>
             <div className="sorting__items-container">
               <div className="sorting__items-left">
 
@@ -51,7 +53,7 @@ export default class Portfolio extends Component {
                   <div className="portfolio-sort__title">Sort by:</div>
 
                   <div className="sorting-portfolio__wrapper">
-                  <div className="portfolio-sorting__date">Date</div>
+                  {/* <div className="portfolio-sorting__date">Date</div> */}
 
                   <div className="portfolio-sorting__date">Category</div>
                   </div>
