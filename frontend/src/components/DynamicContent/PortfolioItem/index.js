@@ -211,6 +211,7 @@ import { matchPath } from 'react-router'
                     naturalSlideHeight={405}
                     totalSlides={4}
                     visibleSlides={3}
+                    className={'slider__wrapper-portfolio'}
                   >
                     <Slider>
 
