@@ -12,7 +12,7 @@ function withLanguage(Language) {
             }
         }
 
-        componentDidMount() {
+        componentWillMount() {
             this.setState({lang: localStorage.getItem('lang')})
         }
 
@@ -21,6 +21,7 @@ function withLanguage(Language) {
             let getActive = ['en', 'pl', 'ru', 'cz'].filter((item) => {
                 return item == this.state.lang
             })
+            
             return(
                 <div>
                     <Language activeLang={getActive} language={this.state.lang} {...this.props} />

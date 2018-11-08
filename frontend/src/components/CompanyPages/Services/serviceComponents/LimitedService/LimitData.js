@@ -23,7 +23,6 @@ componentDidMount() {
 
 
     render() {
-        console.log(this.state.curTime)
         return (
             <Fragment>
                 <div className="timer__back-order">

@@ -1,0 +1,49 @@
+.grader__modal-content {
+    position: relative;
+}
+
+
+.grade-information__item {
+    position: absolute;
+}
+
+.grade__information-position3 {
+    bottom: 30px;
+    right: -20px;
+}
+
+.grade__information-position2 {
+    bottom: 90px;
+    left: 230px;
+}
+
+.grade__information-position1 {
+    top: 80px;
+    right: 115px;
+}
+
+.grade__information-wrapper {
+    width: 266px;
+    box-shadow: 2.5px 4.33px 5px rgba(1,1,1,0.23);
+    background-color: #ffffff;
+    padding-left: 12px;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+.grade__plus-item {
+    width: 25px;
+height: 25px;
+cursor: pointer;
+border-radius: 13px;
+box-shadow: 2.5px 4.33px 5px rgba(1,1,1,0.18);
+font-family: "MontBold";
+font-size: 1.3rem;
+text-align: center;
+}
+
+.grade__plus-item:hover {
+    background: #8DC63F;
+}

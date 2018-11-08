@@ -18,6 +18,7 @@ import withDsideApi from "../../../../HOC/Fetch";
 import Translate from 'translate-components'
 import { reactTranslateChangeLanguage } from 'translate-components'
 import { HeroVideo } from "react-hero-video";
+import Helmet from 'react-helmet-async'
 
 class Advertising extends Component {
   constructor() {
@@ -32,6 +33,9 @@ class Advertising extends Component {
     const idVideo = 'eJ8SOYUkWl0'
     return (
       <Fragment>
+        <Helmet>
+  <title>Dside Advertising</title>
+</Helmet>
         <div>
           <div style={{ overflow: 'hidden' }} className='video-wrap'>
             <HeroVideo
@@ -103,6 +107,7 @@ class Advertising extends Component {
         <Advantages />
         <Own />
         <LimitedService />
+        <Footer/>
       </Fragment>
     )
   }

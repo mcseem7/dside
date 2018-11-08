@@ -12,7 +12,7 @@ import Translate from 'translate-components'
 import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
 import SuggestPoppup from "../../../HOC/SuggestPoppup";
 import canvasAnimate from './canvasAnimate'
-
+import Helmet from 'react-helmet-async'
 
 
 class Blog extends Component {
@@ -52,9 +52,7 @@ class Blog extends Component {
       reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
   }
 
-  componentWillMount() {
-    console.log(this.props)   
-  }
+  
 
   
 
@@ -62,6 +60,9 @@ class Blog extends Component {
     const {history, location} = this.props   
     return (
       <div className='wrapper__blog-container'>
+       <Helmet>
+          <title> Dside Blog </title>
+        </Helmet>
       <section className="blog__container page-centered">
         <div className="blog__content">
           <div className="blog__post-items">

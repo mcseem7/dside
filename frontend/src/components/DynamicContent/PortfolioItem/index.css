@@ -168,7 +168,7 @@
             color: #000000;
             font-family: 'MontBold', sans-serif;
             font-size: 18px;
-            margin-left: 50px;
+            margin-left: 60px;
             font-weight: 700;
             line-height: 29.87px;
             text-transform: uppercase;
@@ -186,7 +186,7 @@
         }
 
         .container__slider-portfolio {
-            padding-bottom: 60px;
+            padding-bottom: 30px;
 
         }
 
@@ -215,9 +215,9 @@
             margin-left: 10px;
         }
 
-        .carousel__inner-slide {
-            top: 60px !important;
-        }
+       .styleCarousellImg .carousel__inner-slide {
+           top: 100px;
+       }
 
         .similarItem figcaption h2{
             line-height: 15px;

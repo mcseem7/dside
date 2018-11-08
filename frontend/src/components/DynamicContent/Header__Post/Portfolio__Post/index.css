@@ -31,8 +31,25 @@
 .content__posts .grid {
     flex: 1 1 30%;
 }
-.block__load__more {
-    padding-top: 41px;
+.more__icon img {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    cursor: pointer;
+    opacity: .3;
+    -webkit-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+   -moz-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+   -o-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+   transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+   will-change: opacity;
+}
+
+.more__icon img:hover {
+    opacity: 1;
+     -webkit-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+    -moz-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+    -o-transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+    transition: 0.35s cubic-bezier(0.62, 0.02, 0.34, 1);
+    will-change: opacity;
 }
 
 .load__more {

@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment, createElement } from "react";
 import Layout from './components'
 import './components/App.css'
 import Footer from './components/Basic/Footer'
@@ -27,6 +27,9 @@ import Automation from "./components/CompanyPages/Services/automation";
 import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
 import translations from './translations.json'
 import clock from './clock.svg'
+import routes from './routes'
+import Helmet from 'react-helmet-async'
+import $ from 'jquery'
 
 
 class App extends Component {
@@ -37,9 +40,9 @@ class App extends Component {
         this.state = {
             cook: true,
             langPoppup: false,
-            orientation: false
+            orientation: false,
+            preload: false
         }
-
     }
 
     componentWillMount() {
@@ -47,6 +50,7 @@ class App extends Component {
         if (!getIdentityDomen || getIdentityDomen == '') {
             this.setState({ langPoppup: false })
         }
+       
     }
 
     componentDidMount() {
@@ -61,13 +65,13 @@ class App extends Component {
         //         orientation: true
         //     })
         // }
-
+        const spinner = $('#loading');
+        if (spinner && !$(spinner).addClass('final_render loaded')) {
+          $(spinner).addclass('final_render loaded')
+        }
         window.addEventListener("onload", () => {
             this.checkOrient()
         }, false);
-        
-
-        const self = this;
         if (Cookies.get('accept-cookie') == undefined) {
             this.setState({ cook: true })
         } else {
@@ -91,17 +95,25 @@ class App extends Component {
         
     }
 
+    
     confirmCookies = () => {
         this.setState({ cook: false })
         Cookies.set('accept-cookie', true, { expires: 365 });
     }
+
+  
+   
+ 
+  
+    
 
     render() {
         // const itemLang = localStorage.setItem('lang', this.props.domen)
         function findWord(word, str) {
             return str.split(' ').some(function (w) { return w === word })
         }
-
+        const { routes, initialData } = this.props
+      
         return (
             <TranslateProvider translations={translations} defaultLanguage={'en'}>
                 <Fragment>
@@ -118,130 +130,64 @@ class App extends Component {
                         </Fragment> : null
                     }
                 </Fragment>
-                <div className="App">
-                    <Route exact path="/" render={(props) => (<Redirect to={`/en`} />)} />
-                    <Route path={'/:language'} render={(props) => {
+                { <div className="App">
+             
+             <Route exact path="/" render={(props) => (<Redirect to={`/en`} />)} />
+             <Route path={'/:language'} render={(props) => {
 
-                        return (
-                            <TransitionGroup>
+                 return (
+                     <TransitionGroup>
 
-                                {props.location.pathname.match(/services\//gi) ? <Header domenErty={props.match.params.language} style={'none'} /> : <Header domenErty={props.match.params.language} style={'block'} />}
+                         {props.location.pathname.match(/services\//gi)  ? <Header domenErty={props.match.params.language} style={'none'} /> : <Header domenErty={props.match.params.language} style={'block'} />}
 
-                                <CSSTransition key={props.location.key} timeout={1000} classNames="fade">
-
-                                    <Switch>
-
-                                        <Route exact path={`/${'en'}`} render={(props) => {
-                                            return <Main {...props} />
-                                        }} />
-                                        <Route exact path={`/${'pl'}`} render={(props) => {
-                                            return <Main {...props} />
-                                        }} />
-                                        <Route exact path={`/${'cz'}`} render={(props) => {
-                                            return <Main {...props} />
-                                        }} />
-                                        <Route exact path={`/${'ru'}`} render={(props) => {
-                                            return <Main {...props} />
-                                        }} />
-
-
-                                        <Route exact path={`/${'en'}/services/logo`} component={LogoPage} />
-                                        <Route exact path={`/${'pl'}/services/logo`} component={LogoPage} />
-                                        <Route exact path={`/${'ru'}/services/logo`} component={LogoPage} />
-                                        <Route exact path={`/${'cz'}/services/logo`} component={LogoPage} />
-
-                                        <Route exact path={`/${'en'}/services/videos`} component={VideoPage} />
-                                        <Route exact path={`/${'pl'}/services/videos`} component={VideoPage} />
-                                        <Route exact path={`/${'ru'}/services/videos`} component={VideoPage} />
-                                        <Route exact path={`/${'cz'}/services/videos`} component={VideoPage} />
+                         <CSSTransition key={props.location.key} timeout={1000} classNames="fade">
+                        
+                             <Switch>
+                                    {Array.prototype.map.call(routes, ((route, index) => {
+                                     return (
+                                         <Route
+                                             key={index}
+                                             path={route.path}
+                                             exact={route.exact}
+                                             render={props =>
+                                                 createElement(route.component, {
+                                                     ...props,
+                                                     routes: route.routes,
+                                                     initialData: initialData || null
+                                                 })
+                                             }
+                                         />
+                                     );
+                                 }))}
+                             </Switch>
 
 
-                                        <Route exact path={`/${'en'}/services/website`} component={Website} />
-                                        <Route exact path={`/${'pl'}/services/website`} component={Website} />
-                                        <Route exact path={`/${'ru'}/services/website`} component={Website} />
-                                        <Route exact path={`/${'cz'}/services/website`} component={Website} />
+                         </CSSTransition>
 
-                                        <Route exact path={`/${'en'}/services/brand`} component={BrandPage} />
-                                        <Route exact path={`/${'ru'}/services/brand`} component={BrandPage} />
-                                        <Route exact path={`/${'cz'}/services/brand`} component={BrandPage} />
-                                        <Route exact path={`/${'pl'}/services/brand`} component={BrandPage} />
-
-
-                                        <Route exact path={`/${'en'}/services/advertising`} component={Advertising} />
-                                        <Route exact path={`/${'pl'}/services/advertising`} component={Advertising} />
-                                        <Route exact path={`/${'ru'}/services/advertising`} component={Advertising} />
-                                        <Route exact path={`/${'cz'}/services/advertising`} component={Advertising} />
-
-                                        <Route exact path={`/${'en'}/services/automation`} component={Automation} />
-                                        <Route exact path={`/${'pl'}/services/automation`} component={Automation} />
-                                        <Route exact path={`/${'ru'}/services/automation`} component={Automation} />
-                                        <Route exact path={`/${'cz'}/services/automation`} component={Automation} />
-
-                                        <Route exact path={`/${'en'}/services/brand`} component={BrandPage} />
-                                        <Route exact path={`/${'pl'}/services/brand`} component={BrandPage} />
-                                        <Route exact path={`/${'ru'}/services/brand`} component={BrandPage} />
-                                        <Route exact path={`/${'cz'}/services/brand`} component={BrandPage} />
-
-                                        <Route exact path={`/${'en'}/aboutus`} component={AboutUs} />
-                                        <Route exact path={`/${'pl'}/aboutus`} component={AboutUs} />
-                                        <Route exact path={`/${'ru'}/aboutus`} component={AboutUs} />
-                                        <Route exact path={`/${'cz'}/aboutus`} component={AboutUs} />
-
-                                        <Route exact path={`/${'en'}/blog`} component={Blog} />
-                                        <Route exact path={`/${'pl'}/blog`} component={Blog} />
-                                        <Route exact path={`/${'ru'}/blog`} component={Blog} />
-                                        <Route exact path={`/${'cz'}/blog`} component={Blog} />
-
-                                        <Route exact path={`/${'en'}/blog/:blogitem`} component={BlogItem} />
-                                        <Route exact path={`/${'pl'}/blog/:blogitem`} component={BlogItem} />
-                                        <Route exact path={`/${'ru'}/blog/:blogitem`} component={BlogItem} />
-                                        <Route exact path={`/${'cz'}/blog/:blogitem`} component={BlogItem} />
-
-                                        <Route exact path={`/${'en'}/portfolio`} component={Portfolio} />
-                                        <Route exact path={`/${'pl'}/portfolio`} component={Portfolio} />
-                                        <Route exact path={`/${'ru'}/portfolio`} component={Portfolio} />
-                                        <Route exact path={`/${'cz'}/portfolio`} component={Portfolio} />
-
-                                        <Route exact path={`/${'en'}/portfolio/:portfolioitem`} component={PortfolioItem} />
-                                        <Route exact path={`/${'pl'}/portfolio/:portfolioitem`} component={PortfolioItem} />
-                                        <Route exact path={`/${'ru'}/portfolio/:portfolioitem`} component={PortfolioItem} />
-                                        <Route exact path={`/${'cz'}/portfolio/:portfolioitem`} component={PortfolioItem} />
-
-                                        <Route exact path={`/${'en'}/contactus`} component={ContactUs} />
-                                        <Route exact path={`/${'pl'}/contactus`} component={ContactUs} />
-                                        <Route exact path={`/${'ru'}/contactus`} component={ContactUs} />
-                                        <Route exact path={`/${'cz'}/contactus`} component={ContactUs} />
-
-                                    </Switch>
-
-
-                                </CSSTransition>
-
-                                {findWord('/contactus', props.location.pathname.substr(3)) ? <Footer style={'none'} /> : <Footer style={'block'} />}
-                            </TransitionGroup>)
-
-
-                    }} />
+                         {findWord('/contactus', props.location.pathname.substr(3)) || findWord('services', props.location.pathname.substr(4,8))  ? <Footer style={'none'} /> : <Footer style={'block'} />}
+                     </TransitionGroup>)
+             }} />
 
 
 
-                    {this.state.cook ?
-                        <div className="cookies-container">
+             {this.state.cook ?
+                 <div className="cookies-container">
 
-                            <div className="privacy__warning">
-                                <p className="cook__description">
-                                    Did you know? This website uses cookies to ensure you get the best experience on our website. <span className="shining-underline">Learn more<span></span></span>
-                                </p>
+                     <div className="privacy__warning">
+                         <p className="cook__description">
+                             Did you know? This website uses cookies to ensure you get the best experience on our website. <span className="shining-underline">Learn more<span></span></span>
+                         </p>
 
-                                <div className="cook__button">
-                                    <p onClick={this.confirmCookies}>Agree</p>
-                                </div>
+                         <div className="cook__button">
+                             <p onClick={this.confirmCookies}>Agree</p>
+                         </div>
 
-                            </div>
-                        </div> : null
-                    }
-                    {this.state.langPoppup ? <LanguagePoppup /> : null}
-                </div>
+                     </div>
+                 </div> : null
+             }
+             {this.state.langPoppup ? <LanguagePoppup /> : null}
+         </div> }
+             
             </TranslateProvider>
         )
     }
