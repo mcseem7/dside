@@ -52,7 +52,7 @@ class HeaderPost extends Component {
               <div className="more__icon" onClick={() => {
         this.props.history.push(`${this.props.language}/portfolio`)
               }}>
-                {/* <img src={iconGrid} alt="" /> */}
+                <img src={iconGrid} alt="" />
               </div>
             </div>
           </div>

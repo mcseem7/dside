@@ -13,7 +13,9 @@ import Footer from '../Footer'
     return (
       <div>
         {location.pathname.match(/services\//gi) ? <Header/> : null}
+
         <p>Данной страницы не существует зайдите попозже)</p>
+        
         {location.pathname.match(/services\//gi) ? <Footer/> : null}
       </div>
     )
