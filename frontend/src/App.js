@@ -132,7 +132,7 @@ class App extends Component {
                 </Fragment>
                 { <div className="App">
              
-             <Route exact path="/" render={(props) => (<Redirect to={`/en`} />)} />
+             <Route exact path="/" render={(props) => (<Redirect to={`/pl`} />)} />
              <Route path={'/:language'} render={(props) => {
 
                  return (

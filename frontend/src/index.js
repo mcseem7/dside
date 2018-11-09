@@ -13,7 +13,7 @@ import { unregister } from './registerServiceWorker';
 import routes from './routes'
 import Helmet, { HelmetProvider } from 'react-helmet-async';
 
-const initialLanguage = 'en'
+const initialLanguage = 'pl'
 window.localStorage.setItem('lang', window.location.pathname.substr(1, 2) || initialLanguage)
 const getIdentityDomen = window.location.pathname
 const data = window.__INITIAL_DATA__;
