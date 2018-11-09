@@ -89,9 +89,7 @@ class BrandPage extends Component {
         const idVideo = 'eJ8SOYUkWl0'
         return (
             <div>
-                 <Helmet>
-          <title>Dside Branding</title>
-        </Helmet>
+                
                 <div className='video-wrap'>
                     <HeroVideo
                         videoSrc={`https://www.youtube.com/embed/${idVideo}?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1&fs=1`}

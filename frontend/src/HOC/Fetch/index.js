@@ -3,6 +3,7 @@ import fetch from 'isomorphic-fetch'
 import PropTypes from 'prop-types'
 import $ from 'jquery'
 import withLanguage from '../withLanguage'
+import { matchPath } from 'react-router'
 
 export default function withDsideApi(DsideComponent, apiUrl, type) {
 
@@ -77,7 +78,7 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
  
 
     getItemGrade = () => {
-      Array.isArray(this.state.dataDside) &&  this.state.dataDside.map((homeItem) => {
+      this.state.dataDside.map((homeItem) => {
         console.log(homeItem.name)
           return fetch(`${process.env.REACT_APP_API}/${this.state.langContent}/review/getReviewDetails/${homeItem.id}/`).then((response) => {
             return response.json()
@@ -111,15 +112,21 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
     }
 
     prevNextPost = () => {
-        const {blogitem} = this.context.router.route.match.params
-        const {dataDside} = this.state
-        const nextPost = dataDside.findIndex(item => {
-           return item.base_name == blogitem
-        })
-        this.setState({nextPost: dataDside[nextPost + 1], lastPost: false})
-        if(typeof this.state.nextPost == "undefined") {
-            this.setState({nextPost: dataDside[nextPost - 1], lastPost: true})
-        }
+      //   const blogitem = this.context.router.route.location.pathname
+      //   const {dataDside} = this.state
+      //   const matchBlog =  matchPath(blogitem, {
+      //     path: `/${this.props.language}/blog/:blogitem`,
+      //     exact: true,
+      //     strict: false
+      //   })
+        
+      //   const nextPost =  dataDside.findIndex(item => {
+      //      return item.base_name == matchBlog.params.blogitem
+      //   })
+      //   this.setState({nextPost: dataDside[nextPost + 1], lastPost: false}) 
+      //   if(typeof this.state.nextPost == "undefined") {
+      //     this.setState({nextPost: dataDside[nextPost - 1], lastPost: true})
+      // } 
     }
 
 
