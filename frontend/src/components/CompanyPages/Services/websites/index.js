@@ -7,7 +7,6 @@ import Vova from './images/vova__dside.png'
 import Versus from './images/Layer 123.png'
 import SimpleWeb from './images/simple-web.svg'
 import BetterWeb from './images/better-web.svg'
-import Footer from '../../../Basic/Footer'
 import './index.css'
 import Own from '../../../Basic/TrustBlocks/Own'
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
@@ -18,7 +17,8 @@ import PortolioPost from "../../../DynamicContent/Header__Post/Portfolio__Post";
 import withDsideApi from "../../../../HOC/Fetch";
 import { HeroVideo } from "react-hero-video";
 import Translate, { reactTranslateChangeLanguage } from "translate-components";
-
+import Footer from '../../../Basic/Footer'
+import Helmet from 'react-helmet-async'
 
 class Website extends Component {
   constructor() {
@@ -34,7 +34,9 @@ class Website extends Component {
     return (
       <Fragment>
         <div>
-
+        <Helmet>
+  <title>Dside Website</title>
+</Helmet>
           <div style={{ overflow: 'hidden' }} className='video-wrap'>
             <HeroVideo
               videoSrc={`https://www.youtube.com/embed/${idVideo}?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1&fs=1`}>
@@ -100,6 +102,7 @@ class Website extends Component {
         <WeCare name="website" />
         <Advantages />
         <Own />
+        <Footer/>
       </Fragment>
     )
   }

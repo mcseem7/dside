@@ -1,69 +1,103 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import './index.css'
+import Helmet from 'react-helmet-async'
+import withDsideApi from "../../../HOC/Fetch";
+import withLanguage from "../../../HOC/withLanguage";
+import CategoryItem from './CategoryItem';
+import PortolioPost from '../Header__Post/Portfolio__Post';
 
 
-export default class Portfolio extends Component {
+
+class Portfolio extends Component {
   constructor() {
     super()
 
     this.state = {
-      dataItems: []
+      dataItems: [],
+      activeFilter: null,
+      category: ''
     }
+  }
 
+  async componentDidMount() {
+    return await fetch(`${process.env.REACT_APP_API}/${this.props.language}/portfolio/getPortfolioItems/`).then((response) => {
+      return response.json()
+    }).then((items) => {
+         this.setState({dataItems: items})
+    })
   }
 
 
-  componentDidMount() {
-      fetch(`//dside.pl/api/en/portfolio/getPortfolioItems`)
-        .then((response) => {
-        return response.json()
-        }).then((data) => {
-          return this.setState({dataItems: data})
-        })
+ setFilteringCategory = async (selectFilterId, category) => {
+      await this.setState({
+        activeFilter: selectFilterId,
+        category: category
+      })
+      await this.getCategoryData()
   }
 
+ isActiveCategory = (id) => {
+   return this.state.activeFilter == id
+ }
 
-  render() {
-    return(
-        <div>
-          <section className="portfolio__items-container">
+ getCategoryData = () => {
+    return fetch(`${process.env.REACT_APP_API}/${this.props.language}/portfolio/getPortfolioItems/${this.state.category.tag}/`).then((response) => {
+       return response.json()
+     }).then((items) => {
+          this.setState({dataItems: items})
+     })
+ }
 
-            <div className="sorting__items-container">
-              <div className="sorting__items-left">
 
-                <div className="sortby__category">
+ render() {
+    return (
+      <div>
+        <section className="portfolio__items-category">
+          <Helmet>
+            <title>Dside Portfolio</title>
+          </Helmet>
+          <div className="sorting__items-container">
+            <div className="sorting__items-left">
 
-                  <ul className="portfolio-category__list">
-                    <li className="portfolio-category__item">
-                      <p>Logos</p>
-                    </li>
+              <div className="sortby__category">
 
-                    <li className="portfolio-category__item">
-                      <p>Websites</p>
-                    </li>
-                  </ul>
-
-                </div>
+                <ul className="portfolio-category__list">
+                {this.props.dataDside.map((category, index) => {
+                    return (
+                  <CategoryItem 
+                  key={index}
+                  {...this.state} 
+                  category={category}
+                  isActiveCategory={this.isActiveCategory(index)}
+                  onActiveFilteringCategory={this.setFilteringCategory.bind(this,index, category)} 
+                  {...this.props}/>
+                  )
+                })}
+                </ul>
 
               </div>
-              <div className="sorting__items-right">
-                <div className="sortby__type">
-                  <div className="portfolio-sort__title">Sort by:</div>
 
-                  <div className="sorting-portfolio__wrapper">
-                  <div className="portfolio-sorting__date">Date</div>
+            </div>
+            <div className="sorting__items-right">
+              <div className="sortby__type">
+                <div className="portfolio-sort__title">Sort by:</div>
+
+                <div className="sorting-portfolio__wrapper">
+                  {/* <div className="portfolio-sorting__date">Date</div> */}
 
                   <div className="portfolio-sorting__date">Category</div>
-                  </div>
                 </div>
               </div>
+            </div>
 
-            </div>
-            <div className="portfolio__items-container">
-            </div>
-          </section>
-        </div>
+          </div>
+          <div className="portfolio__items-container">
+             <PortolioPost dataDside={this.state.dataItems} />
+          </div>
+        </section>
+      </div>
     )
   }
-
 }
+
+export default withLanguage(withDsideApi(Portfolio, '/portfolio/getAllCategories/', null))

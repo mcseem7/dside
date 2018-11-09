@@ -212,7 +212,7 @@ figure.effect-marley p {
     background-size: cover;
     z-index: 5;
     bottom: -3px;
-    height: 85px;
+    height: 90px;
 }
 
 .what__about-content {
@@ -273,4 +273,8 @@ figure.effect-marley:active p {
     .container__what {
         height: 35px;
     }
+}
+
+.more__icon {
+   width: 25px;
 }

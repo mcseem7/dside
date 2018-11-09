@@ -8,6 +8,8 @@ import {compose} from 'recompose'
 import withDsideApi from "../../../HOC/Fetch";
 import redirect from './redirect.svg'
 import { FacebookProvider, Comments } from 'react-facebook';
+import {matchPath} from 'react-router'
+import withLanguage from '../../../HOC/withLanguage';
 
  class BlogItem extends Component {
   constructor(props) {
@@ -25,46 +27,45 @@ import { FacebookProvider, Comments } from 'react-facebook';
 
 
   async componentDidMount() {
+    const match = await matchPath(this.props.history.location.pathname, {
+      path: `/${this.props.language}/blog/:blogitem`,
+      exact: true,
+      strict: false
+    })
    window.scrollTo(0, 0)
-   await this.getData(this.props.match.params.blogitem)
-   await this.setState({blogCategory: this.state.blogItem.category, lang: localStorage.getItem('lang')})
+   await this.getData(match.params.blogitem)
+   if(this.state.blogItem.length != 0) {
+      await this.setState({lang: this.props.language, blogCategory: this.state.blogItem.category})
+   }
   }
 
   getData = (postName) => {
-    return fetch(`${process.env.REACT_APP_API}/${localStorage.getItem('lang')}/blog/getBlogItemDetails/${postName}/`).then((response) => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error('Something went wrong');
-        }
-    }).then((item) => {
-        this.setState({
-            blogItem: item
-        })
-    }).catch((error) => {
-     this.setState({notFound: true})
-    })
+    return fetch(`${process.env.REACT_APP_API}/${this.props.language}/blog/getBlogItemDetails/${postName}/`).then( (response) => {
+      if (!response.ok) {
+          throw Error(response.statusText);
+      } 
+      return response.json()
+  }).then( (response)=> {   
+        this.setState({blogItem: response});
+     }).catch((error) => {
+       console.error('Portfolio dont loading')
+     })
   }
 
-  handleNewComment(comment) {
-    console.log(comment.text);
-  }
+
 
   render() {
       const {blogItem} = this.state
       const {location, history} = this.props
-      console.log(this.props.nextPost)
+     
     return(
         <div>
         {this.state.notFound ? null : 
           <div className="blog__post-container">
-
-
-
             <div className="blog__item" style={{backgroundImage: `url(${process.env.REACT_APP_DOMAIN}${blogItem.main_image})`}}>
               <div className="blog__item-content">
                 <div className="tag-item">
-                  <p>{this.state.blogCategory.name}</p>
+                  <p></p>
                 </div>
                 <div className="title-item">
                   <h4>{blogItem.title}</h4>
@@ -143,11 +144,10 @@ import { FacebookProvider, Comments } from 'react-facebook';
             </div>
               
           </div>
-  
-                                  }
+         }
         </div>
     )
   }
 }
 
-export default compose (withRouter,withDsideApi)(BlogItem,'/blog/getBlogItems/', 'BLOG')
+export default compose (withRouter, withLanguage,withDsideApi)(BlogItem,'/blog/getBlogItems/', 'BLOG')

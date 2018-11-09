@@ -1,0 +1,34 @@
+ label[for='file'] {
+    display: block !important;
+    font-family: 'MontBold';
+    font-size: 0.8rem;
+    padding-bottom: 10px;
+}
+
+.workUpload {
+    padding-bottom: 10px;
+}
+
+.request-form_grade div .holder__poppup-name,
+.request-form_grade div .holder__poppup-phone,
+.request-form_grade div  .holder__poppup-social,
+.request-form_grade div  .holder__poppup-title,
+.request-form_grade div  .holder__poppup-text,
+.request-form_grade div  .holder__poppup-email
+{
+left: 150px;
+}
+
+@media screen and (max-width: 600px) {
+  
+    .request-form_grade div .holder__poppup-name,
+    .request-form_grade div .holder__poppup-phone,
+    .request-form_grade div  .holder__poppup-social,
+    .request-form_grade div  .holder__poppup-title,
+    .request-form_grade div  .holder__poppup-text,
+    .request-form_grade div  .holder__poppup-email
+    {
+    left: 90px;
+    }
+
+}

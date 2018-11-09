@@ -53,7 +53,7 @@
     }
     .wrapper__name,
     .wrapper__phone {
-        width: 100% ;
+        /* width: 100% ; */
         margin-top: 2rem;
     }
 
@@ -231,7 +231,7 @@
 }
 .wrapper__name,
 .wrapper__phone {
-    width: 40%;
+    /* width: 40%; */
     display: flex;
 }
 .wrapper__phone{margin-left: 3rem;}
@@ -337,5 +337,9 @@
 
     .button__content {
         padding: 0 0.4em;
+    }
+    .inputs__send .wrapper__name > div .holder,
+    .inputs__send .wrapper__phone > div .holder {
+        font-size: 9pt;
     }
  }   

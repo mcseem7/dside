@@ -4,6 +4,8 @@ import About from './About__block/index'
 import Works from './Works__Company/index'
 import Services from './Services/index'
 import {Route} from 'react-router-dom'
+import Helmet from 'react-helmet-async'
+
 
 const LangContext = React.createContext({
     value: '10'
@@ -23,20 +25,30 @@ export default class Main extends Component {
 
   componentDidMount() {
     window.scrollTo(0, 0)
+ 
      this.setState({langVars: this.props})
   }
 
 
   render () {
 
-
+  const sectionTitle = 'adasd'
     return (
+      <div> 
+    
+       <Helmet>
+        <title>
+          Dside Home
+        </title>
+      </Helmet>
+      
       <div className="complex__content">
         <HeaderPost lang={this.state.langVars} />
         <Works  {...this.props} />
         <Services {...this.props} />
       </div>
-
+    
+      </div>
     )
   }
 }

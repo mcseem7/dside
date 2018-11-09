@@ -146,9 +146,10 @@
 
     .main__header-left {
         display: flex;
-        padding: 0rem 1rem 5rem 1rem;
+        /* padding: 0rem 1rem 5rem 1rem; */
         flex-direction: column;
         align-items: center;
+        flex: 1 1 50%;
     }
 
     .link__menu {
@@ -156,7 +157,6 @@
         font-family: "MontBold";
         font-size: 24px;
         font-weight: 400;
-        line-height: 9.87px;
         text-decoration: none;
     }
 
@@ -165,18 +165,18 @@
         font-family: "Montserrat";
         font-size: 14px;
         font-weight: 500;
-        line-height: 9.87px;
     }
 
     .main__header-content {
         max-width: 1200px;
         margin: 0 auto;
+        display: flex;
     }
 
     .menu__header-item:first-child {
         margin-bottom: 60px;
     }
-    .menu__header-column{margin-top: 4rem; text-align: center;}
+    .menu__header-column{text-align: center;}
     .menu__header-column div {
 
     }
@@ -304,6 +304,27 @@
 }
 /* Fullscreen */
 @media only screen and (min-width: 1024px) {
+
+    .wrapper__main-head {
+        background: #ac0007;
+        width: 500px;
+        height: 245px;
+        position: relative;
+    }
+    
+    .wrapper__main-head img {
+        max-width: 100%;
+    }
+    
+    .main__left-container {
+        display: flex;
+        width: 100%;
+        max-width: 500px;
+        margin-left: 145px;
+        margin-right: 75px;
+    }
+
+
     .basic__header-content{margin-top: 0;}
 .social__icons{display: block;}
 .right__content-socials .check__work-sockets{display: none;}
@@ -316,6 +337,7 @@
 .menu__header-column{text-align: left;
      flex: 1 1 33%; margin-left: 1rem;}  .main__header-left {flex-direction: row;}
 }
+
 
 .svg-logo {
     cursor: pointer;
@@ -374,15 +396,105 @@
 }
 
 
-@media screen and (max-width: 480px) {
-    .main__header-left {
-        padding-bottom: 50px;
-    }
 
-}
 
 @media screen and (max-width: 1024px) {
     .header__content .right__content-socials .social__icons {
         display: none;
+    }
+}
+
+
+.dside__grades-container {
+    position: absolute;
+    top: 0;
+}
+
+.grades__titles {
+    margin-top: 40px;
+    margin-left: 55px;
+}
+
+.dside__grades-container h3 {
+    font-size: 24px;
+    color: #ffffff;
+    font-family: "MontBold";
+    margin: 0;
+    padding: 0;
+}
+
+.head-grade__img {
+    width: 86px;
+}
+
+.head-grade__date p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'MontBold';
+    font-size: 14px;
+    color: #fff;
+}
+
+.head-grade__img img {
+    border-radius: 15%;
+}
+
+.grades__head-items {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 60px;
+}
+
+.grade__head-item {
+    margin-right: 35px;
+}
+
+.head-grade__img img:hover {
+    border: 4px solid #bd1824;
+    transition: 0.5s;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.add__grade-svg svg {
+    fill: #fff;
+    width: 40px;
+    height: 65px;
+    cursor: pointer;
+}
+
+.heading__service {
+    z-index: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+    .main__header-content {
+        flex-direction: column
+    }
+
+    .menu__header-item:first-child {
+        margin-bottom: 0;
+    }
+
+    .menu__header-column div {
+        margin: 15px;
+    }
+
+    .dside__grades-container {
+        top: 0;
+    }
+
+    .wrapper__main-head {
+            background: #ac0007;
+    }
+
+    .main__header-left {
+        order: 1;
+    }
+
+    .grades__titles {
+        margin-top: 20px;
     }
 }
