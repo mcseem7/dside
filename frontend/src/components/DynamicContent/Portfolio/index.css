@@ -3,16 +3,27 @@
 .portfolio-category__item p {
     color: #000000;
     font-family: 'MontBold', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
 }
 
 
+.portfolio-category__item p sup {
+    color: #000000;
+    font-family: 'MontLight', sans-serif;
+    font-size: 12px;
+    margin-left: 2px;
+}
 
 
 .sorting__items-container {
     display: flex;
     align-items: center;
+}
+
+.portfolio__items-category {
+    background: #F2F3F5;
+    padding-bottom: 20px;
 }
 
 .portfolio-category__list {
@@ -28,9 +39,14 @@
     display: flex;
 }
 
-.portfolio__items-container {
+.portfolio__items-container,
+.sorting__items-container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.portfolio__items-container {
+    display: flex;
 }
 
 .portfolio-category__list {
@@ -76,3 +92,28 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 1024px) {
+    .sorting__items-container {
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+.portfolio-category__item {
+    margin-right: 40px;
+}
+}
+
+
+
+@media screen and (max-width:480px) {
+.portfolio__items-container {
+    flex-direction: column;
+}
+
+.portfolio-category__list {
+    flex-direction: column;
+}
+
+}

@@ -74,6 +74,8 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
       await this.setState({loading: true})
     }
 
+ 
+
     getItemGrade = () => {
       Array.isArray(this.state.dataDside) &&  this.state.dataDside.map((homeItem) => {
         console.log(homeItem.name)
