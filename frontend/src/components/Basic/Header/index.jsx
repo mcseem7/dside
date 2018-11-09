@@ -207,6 +207,7 @@ class Header extends Component {
 
         {<HeaderMenu
         {...this.state}
+        handleShowMenu={this.showMenu}
          handleChangePoppupGrade={this.changePoppupGrade} 
          {...this.props} />}
 

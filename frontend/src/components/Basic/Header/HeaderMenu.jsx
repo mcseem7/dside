@@ -9,7 +9,7 @@ import moment from 'moment';
     constructor(props) {
         super(props);
         this.state = {
-
+               
         };
     }
 
@@ -25,20 +25,21 @@ import moment from 'moment';
               transition: "0.3s"
             }}
           >
+          
             <div className="main__header-content">
               <div className="main__header-left">
                 <div className="main__left-container">
                   <div className="menu__header-column">
                     <div className="menu__header-item">
                       <div className="description__menu-title">
-                        <NavLink
-                          onClick={this.showMenu}
+                        <Link
+                          onClick={() => this.props.handleShowMenu()}
                           exact
                           to={`/${this.props.language}/aboutus`}
                           className="link__menu"
                         >
                           <Translate>About Us</Translate>
-                        </NavLink>
+                        </Link>
                         {/*<p>Caption text under about us</p>*/}
                       </div>
                     </div>
@@ -46,7 +47,7 @@ import moment from 'moment';
                     <div className="menu__header-item">
                       <div className="menu__header-title">
                         <Link
-                          onClick={this.showMenu}
+                         onClick={() => this.props.handleShowMenu()}
                           exact
                           to={`/${this.props.language}/contactus`}
                           className="link__menu"
@@ -63,14 +64,14 @@ import moment from 'moment';
                   <div className="menu__header-column">
                     <div className="menu__header-item">
                       <div className="menu__header-title">
-                        <NavLink
-                          onClick={this.showMenu}
+                        <Link
+                         onClick={() => this.props.handleShowMenu()}
                           exact
                           to={`/${this.props.language}/blog`}
                           className="link__menu"
                         >
                           <Translate>Blog</Translate>
-                        </NavLink>
+                        </Link>
                       </div>
                       {/*<div className="description__menu-title">*/}
                       {/*<p>Caption text under about us</p>*/}
@@ -79,14 +80,14 @@ import moment from 'moment';
   
                     <div className="menu__header-item">
                       <div className="menu__header-title">
-                        <NavLink
-                          onClick={this.showMenu}
+                        <Link
+                       onClick={() => this.props.handleShowMenu()}
                           exact
                           to={`/${this.props.language}`}
                           className="link__menu"
                         >
                           <Translate>Home</Translate>
-                        </NavLink>
+                        </Link>
                       </div>
                       {/*<div className="description__menu-title">*/}
                       {/*<p>Caption text under about us</p>*/}
@@ -110,6 +111,7 @@ import moment from 'moment';
                       .map(grade => {
                         return (
                           <div className={"grade__head-item"} onClick={() => {
+                           this.props.handleShowMenu();
                            history.push({
                              pathname: `/${this.props.language}/grade/${grade.id}`
                            })
