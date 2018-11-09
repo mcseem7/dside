@@ -113,7 +113,7 @@ class App extends Component {
             return str.split(' ').some(function (w) { return w === word })
         }
         const { routes, initialData } = this.props
-        const detectLang = navigator.language || navigator.userLanguage
+       
         return (
             <TranslateProvider translations={translations} defaultLanguage={'en'}>
                 <Fragment>
