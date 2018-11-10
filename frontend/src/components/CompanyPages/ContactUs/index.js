@@ -135,7 +135,7 @@ class Contact extends Component {
                     <Translate>Awaiting Questions</Translate>
                   </h4>
                   <div className="right__form_phone">
-                    <h2>+34234234234</h2>
+                    <h2><Translate>+48 570 670 311</Translate></h2>
                   </div>
                 </div>
 
