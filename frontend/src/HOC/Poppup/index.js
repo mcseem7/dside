@@ -42,8 +42,7 @@ export default function withPoppupHOC(PoppupHOC, apiUrl, type) {
     }
 
     handleSubmit = async (event, ...postData) => {
-        await console.log(this.state.postData)
-    //   await event.preventDefault();
+      await event.preventDefault();
       switch (type) {
         case "ORDER":
           await this.setState({
@@ -59,13 +58,15 @@ export default function withPoppupHOC(PoppupHOC, apiUrl, type) {
             postData: {
               name: postData[0].current.value,
               email: postData[1].current.value,
-              social_link: postData[2].current.value,
+              social_link: 'http://' + postData[2].current.value,
               text: postData[3].current.value
             }
           });
           break;
         case "REVIEW":
-          await this.setState({
+           await postData[6]()
+          if(postData[7] == true) {
+           this.setState({
             postData: {
               name: postData[0].current.value,
               email: postData[1].current.value,
@@ -74,18 +75,23 @@ export default function withPoppupHOC(PoppupHOC, apiUrl, type) {
               title: postData[4].current.value,
               image: postData[5].current.value
             }
-          });
+          })} else {
+            return false;
+          }
           break;
+      default:
+        await null    
       }
-      await fetch(`${process.env.REACT_APP_API}/${this.state.lang}${apiUrl}`, {
+      fetch(`${process.env.REACT_APP_API}/${this.state.lang}${apiUrl}`, {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json"
         },
         method: "POST",
         body: JSON.stringify(this.state.postData)
-      });
-      this.setState({ result: true });
+      }).then(() => {
+        this.setState({ result: true });
+      })
     };
 
     render() {
