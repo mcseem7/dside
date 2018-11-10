@@ -19,13 +19,31 @@ class GradePoppup extends Component {
 
     this.state = {
       modalState: this.props.modalStatus,
-      result: props.result
+      result: props.result,
+      isVerified: false
     }
   }
 
   componentWillReceiveProps(nextProps) {
     if(this.state.result != nextProps.result) {
       this.setState({result: nextProps.result})
+    }
+  }
+
+  handleSubscribe = () => {
+    console.log(this.state.isVerified)
+    if (!this.state.isVerified) {
+     alert('Please verify that you are a human!');
+    } else {
+      return false;  
+    }
+  }
+
+  verifyCallback = (response) => {
+    if (response) {
+      this.setState({
+        isVerified: true
+      })
     }
   }
 
@@ -62,11 +80,13 @@ class GradePoppup extends Component {
                          this.textGradeRef,
                          this.titleRef, 
                          this.imageRef,
+                         this.handleSubscribe,
+                         this.state.isVerified
                          )} id="request-form" className='request-form_grade' method="post"  autocomplete="off">
                         <input type="hidden" name="csrfmiddlewaretoken" value="16en0jPOOddfSpZ8FAdslU61aXFCtePx" />
 
                         <div className='holder__wrapper'>
-                          <div class="holder__poppup holder__poppup-name"><Translate>name</Translate></div>
+                          <div class="holder__poppup holder__poppup-name"><Translate>review name</Translate></div>
                           <input ref={this.nameRef}  id="id_name" maxlength="50" minlength="3" name="name" required="required" type="text" />
                         </div>
                         <div className='holder__wrapper'>
@@ -74,26 +94,28 @@ class GradePoppup extends Component {
                           <input    ref={this.emailRef} id="id_email" maxlength="50" minlength="3" name="email" required="required" type="email" />
                         </div>
                         <div className='holder__wrapper'>
-                          <div class="holder__poppup holder__poppup-social"><Translate>social</Translate></div>
+                          <div class="holder__poppup holder__poppup-social"><Translate>social-link</Translate></div>
                           <input     ref={this.socialRef} id="id_social" maxlength="50" minlength="3" name="social" required="required" type="text" />
                         </div>
                         <div className='holder__wrapper'>
-                          <div class="holder__poppup holder__poppup-text"><Translate>description</Translate></div>
+                          <div class="holder__poppup holder__poppup-text"><Translate>review description</Translate></div>
                           <input   ref={this.textGradeRef} id="id_text" maxlength="50" minlength="3" name="grade" required="required" type="text" />
                         </div>
                         <div className='holder__wrapper'>
-                          <div class="holder__poppup holder__poppup-title"><Translate>title</Translate></div>
+                          <div class="holder__poppup holder__poppup-title"><Translate>review title</Translate></div>
                           <input    ref={this.titleRef} id="id_title" maxlength="50" minlength="2" name="title" required="required" type="text" />
                         </div>
                         <div className='holder__wrapper workUpload'>
             
-                          <label for="file">Choose your work to upload</label>
+                          <label for="file"><Translate>Choose your work to upload</Translate></label>
                           <input  ref={this.imageRef} id="id_image"  name="image" required="required" type="file" />
                         </div>
-                        {/* <ReCAPTCHA
+                        <div id='recaptcha'>
+                        <ReCAPTCHA
     sitekey="6LdzjGEUAAAAAEoMUOiBnROqE0FRL6kQIcVJl08O"
-    onChange={this.onChangeCaptcha}
-  /> */}
+    render="explicit"
+    onChange={this.verifyCallback} />
+    </div>
                         <button type="submit" class="button14"  ><Translate>Send</Translate></button>
                       </form>
                     </div>

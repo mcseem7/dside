@@ -1176,7 +1176,31 @@
   "ru": "автоматизации",
   "pl": "automatyzacji biznesu",
   "cz": "automatizace"
-}
+},
 
+
+"review name": {
+  "ru": "Имя обзора",
+  "pl": "Sprawdź nazwę",
+  "cz": "Název recenze"
+},
+
+"review description": {
+  "ru": "Описание обзора",
+  "pl": "Opis recenzji",
+  "cz": "Popis popisu"
+},
+
+"review title": {
+  "ru": "Заголовок отзыва",
+  "pl": "Sprawdź tytuł",
+  "cz": "title recenze"
+},
+
+"Choose your work to upload": {
+  "ru": "Выбери работу для загрузки",
+  "pl": "Wybierz swoją pracę do przesłania",
+  "cz": "Vyberte svou práci, kterou chcete nahrát"
+}
 
 }

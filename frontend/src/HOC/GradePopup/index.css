@@ -16,7 +16,7 @@
 .request-form_grade div  .holder__poppup-text,
 .request-form_grade div  .holder__poppup-email
 {
-left: 150px;
+left: 165px;
 }
 
 @media screen and (max-width: 600px) {
@@ -31,4 +31,10 @@ left: 150px;
     left: 90px;
     }
 
+}
+
+#recaptcha {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
 }
