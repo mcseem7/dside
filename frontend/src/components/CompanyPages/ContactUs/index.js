@@ -48,8 +48,8 @@ class Contact extends Component {
     //    scaleControl: false,
     // });
     const framegoo =
-      '<iframe src="https://snazzymaps.com/embed/98430" width="100%" height="400px" style="border:none;"></iframe>';
-
+      '<iframe src="https://snazzymaps.com/embed/112254" width="100%" height="400px" style="border:none;"></iframe>'
+      
     return (
       <div>
         <Helmet>
