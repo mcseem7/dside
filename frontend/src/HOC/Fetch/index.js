@@ -111,23 +111,6 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
       })
     }
 
-    prevNextPost = () => {
-      //   const blogitem = this.context.router.route.location.pathname
-      //   const {dataDside} = this.state
-      //   const matchBlog =  matchPath(blogitem, {
-      //     path: `/${this.props.language}/blog/:blogitem`,
-      //     exact: true,
-      //     strict: false
-      //   })
-        
-      //   const nextPost =  dataDside.findIndex(item => {
-      //      return item.base_name == matchBlog.params.blogitem
-      //   })
-      //   this.setState({nextPost: dataDside[nextPost + 1], lastPost: false}) 
-      //   if(typeof this.state.nextPost == "undefined") {
-      //     this.setState({nextPost: dataDside[nextPost - 1], lastPost: true})
-      // } 
-    }
 
 
     postFormData = (name, phone) => {

@@ -14,7 +14,7 @@ import Cookies from 'js-cookie'
 import Header from './components/Basic/Header/index';
 import loadable from 'loadable-components';
 import 'regenerator-runtime/runtime';
-import LanguagePoppup from "./HOC/ChangeLanguage/ChangePup";
+
 import NotFound from "./components/Basic/NotFound";
 import Blog from './components/DynamicContent/Blog'
 import BlogItem from './components/DynamicContent/BlogItem'
@@ -28,6 +28,7 @@ import { reactTranslateChangeLanguage, TranslateProvider } from "translate-compo
 import translations from './translations.json'
 import clock from './clock.svg'
 import routes from './routes'
+import Welcome from './Welcome'
 import Helmet from 'react-helmet-async'
 import $ from 'jquery'
 
@@ -39,11 +40,12 @@ class App extends Component {
 
         this.state = {
             cook: true,
-            langPoppup: false,
+           
             orientation: false,
             preload: false
         }
     }
+
 
     componentWillMount() {
         const getIdentityDomen = this.props.domen
@@ -56,15 +58,6 @@ class App extends Component {
     componentDidMount() {
         window.scrollTo(0, 0)
         reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
-        // function isLandscape() {
-        //     return (window.orientation === 90 || window.orientation === -90);
-        // }
-
-        // if (isLandscape() == true) {
-        //     this.setState({
-        //         orientation: true
-        //     })
-        // }
         const spinner = $('#loading');
         if (spinner && !$(spinner).addClass('final_render loaded')) {
           $(spinner).addclass('final_render loaded')
@@ -95,25 +88,22 @@ class App extends Component {
         
     }
 
+   
+
     
     confirmCookies = () => {
         this.setState({ cook: false })
         Cookies.set('accept-cookie', true, { expires: 365 });
     }
 
-  
    
- 
-  
-    
 
-    render() {
-        // const itemLang = localStorage.setItem('lang', this.props.domen)
+   render()  {
         function findWord(word, str) {
             return str.split(' ').some(function (w) { return w === word })
         }
         const { routes, initialData } = this.props
-       
+       console.log(this.state)
         return (
             <TranslateProvider translations={translations} defaultLanguage={'en'}>
                 <Fragment>
@@ -130,9 +120,10 @@ class App extends Component {
                         </Fragment> : null
                     }
                 </Fragment>
+                
                 { <div className="App">
-             
-             <Route exact path="/" render={(props) => (<Redirect to={`/pl`} />)} />
+             <Route exact path="/" component={Welcome} />
+             {/* <Route exact path="/" render={(props) => (<Redirect to={`/en`} />)} /> */}
              <Route path={'/:language'} render={(props) => {
 
                  return (
@@ -185,7 +176,7 @@ class App extends Component {
                      </div>
                  </div> : null
              }
-             {this.state.langPoppup ? <LanguagePoppup /> : null}
+           
          </div> }
              
             </TranslateProvider>
