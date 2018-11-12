@@ -9,19 +9,25 @@ const {default: App} = require('../src/App');
 const clientBuildPath = path.resolve(__dirname, '../client');
 import routes from '../src/routes'
 import { HelmetProvider } from 'react-helmet-async';
+var satelize = require('satelize');
 import { getLoadableState } from 'loadable-components/server';
 const stringRenderer = require('@cra-express/universal-loader/lib/renderer/string-renderer')
   .default;
+
 let AppClass = App;
 let serverData;
 let helmetCtx;
 let tag = '';
+
+
+
 const app = createReactAppExpress({
   clientBuildPath,
   handleRender: stringRenderer,
   universalRender: handleUniversalRender,
   onFinish(req, res, html) {
     const { helmet } = helmetCtx;
+   
     const helmetTitle = helmet.title.toString();
     const helmetMeta = helmet.meta.toString();
     const newHtml = html

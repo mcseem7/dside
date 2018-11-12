@@ -64,7 +64,7 @@ export default function withPoppupHOC(PoppupHOC, apiUrl, type) {
           });
           break;
         case "REVIEW":
-           await postData[6]()
+          await postData[6]()
           if(postData[7] == true) {
            this.setState({
             postData: {

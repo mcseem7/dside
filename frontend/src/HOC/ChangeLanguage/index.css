@@ -1,7 +1,7 @@
 /* Tablets */
-@media only screen and (min-width: 480px) {
+/* @media only screen and (min-width: 480px) {
     .logopath{fill: #fff;}
-}
+} */
 .modal-language {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -16,8 +16,6 @@
     margin: 0 auto;
     background-color: #fff;
     max-width: 75rem;
-
-
     border-radius: 4px;
     opacity: 0;
     overflow-y: auto;
@@ -57,7 +55,21 @@
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.9s;
 }
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 .modal-language.active .modal-content {
     opacity: 1;
 }
@@ -76,13 +88,12 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 35;
-    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100000;
     opacity: 0;
     visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -107,14 +118,12 @@
 .flag-icon {
     margin-right: 15px;
     width: 50px;
-    cursor: pointer;
     height: 50px;
     opacity: 1;
-}
-
-.flag-icon object {
     cursor: pointer;
 }
+
+
 
 .flag-icon:hover {
     opacity: 0.7;
@@ -126,4 +135,19 @@
 
 .modal__right-lang {
     padding: 3rem;
+}
+
+@media screen and (max-width: 560px) {
+    .modal-language .model-content {
+      flex-direction: column;
+  }
+
+  .modal__left-lang {
+      display: none;
+  }
+
+h4 {
+      font-family: 'MontBold'
+  }
+
 }
