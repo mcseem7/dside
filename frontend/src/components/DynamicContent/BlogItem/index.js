@@ -31,8 +31,8 @@ class BlogItem extends Component {
       exact: true,
       strict: false
     });
-
     await this.getData(match.params.blogitem);
+    console.log(this.state.blogItem)
     if (this.state.blogItem.length != 0) {
       await this.setState({
         lang: this.props.language,
@@ -48,16 +48,18 @@ class BlogItem extends Component {
       }/blog/getBlogItemDetails/${postName}/`
     )
       .then(response => {
-        if (!response.ok) {
-          throw Error(response.statusText);
-        }
-        return response.json();
+        return response.json()
+        
       })
       .then(response => {
-        this.setState({ blogItem: response });
+        if (Object.keys(response).length == 0) {
+          return this.props.history.push(`/${this.props.language}/notfound`)
+        } else {        
+          this.setState({ blogItem: response });
+        }
       })
       .catch(error => {
-        console.error("Portfolio dont loading");
+        console.error("BlogItem dont loading");
       });
   };
 
@@ -74,8 +76,10 @@ class BlogItem extends Component {
     });
     const NextPost = [];
     NextPost.push({
-      nextPost: this.props.blogItem[NextPostFind - 1] || this.props.blogItem[NextPostFind + 1]
-    })
+      nextPost:
+        this.props.blogItem[NextPostFind - 1] ||
+        this.props.blogItem[NextPostFind + 1]
+    });
     return (
       <div>
         {this.state.notFound ? null : (
@@ -95,13 +99,19 @@ class BlogItem extends Component {
                 <div className="title-item">
                   <h4>{blogItem.title}</h4>
                 </div>
-                <div className="description-item">
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: this.props.location.state
-                    }}
-                  />
-                </div>
+
+                {this.props.dataDside.map(item => {
+                  if(item.base_name == match.params.blogitem)
+                  return (
+                    <div className="description-item">
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: item.description
+                        }}
+                      />
+                    </div>
+                  );
+                })}
 
                 <div className="blog__post-data">
                   <div className="watching__post">

@@ -40,12 +40,17 @@ class GradeItem extends Component {
       }/review/getReviewDetails/${match.params.gradeitem}/`
     )
       .then(response => {
+       
         return response.json();
       })
       .then(response => {
-        if (response) {
-          this.setState({ grade: response, avatar: response.graded_by, text: response.text_blocks });
-        }
+       if(Object.keys(response).length == 0) {
+        return this.props.history.push(`/${this.props.language}/notfound`)    
+      } else {
+        this.setState({ grade: response, avatar: response.graded_by, text: response.text_blocks });
+      }
+      }).catch(error => {
+        console.error("GradeItem dont loading");
       });
   }
 

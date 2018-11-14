@@ -130,6 +130,7 @@ export default class AbotUs extends Component {
   }
 
   render() {
+
     return (
       <div>
         <Helmet>
@@ -356,12 +357,16 @@ export default class AbotUs extends Component {
 
                       <div className="contact__links-developer">
 
-                        <a href='#' className="social__icon-behance">
+                        {
+                          this.state.result.information.behance == undefined ? null : <a href={this.state.result.information.behance}  target='_blank' className="social__icon-behance" />
+                        }
 
-                        </a>
-                        <a href='#' className="social__icon-instagram">
 
-                        </a>
+
+
+                        {
+                          this.state.result.information.instagram == undefined ? null : <a href={this.state.result.information.instagram} target='_blank'  className="social__icon-instagram" />
+                        }
 
                       </div>
 
