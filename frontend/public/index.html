@@ -18,8 +18,9 @@
     display: none !important;
   }
   #loading {
-      background-color: #191c27;
+      background: url('./bg-lp-1.jpg');
       position: fixed;
+      background-size: cover;
       top: 0;
       left: 0;
       z-index: 99999;
@@ -63,7 +64,7 @@
               animation-delay: -0.5s; }
       #loading span {
         position: absolute;
-        top: calc(50% + 30px);
+        top: calc(20% - 30px);
         width: 100%;
         text-align: center;
         left: 0;
@@ -73,7 +74,7 @@
     
    #loading span img {
     max-width: 100%;
-      width: 130px;
+      width: 90px;
   }
    #loading span {
     width: 100%;
@@ -93,6 +94,7 @@
 </head>
 <body> 
     <div id="loading">
+        <span><img src="dsideLogo.svg" class="brand-logo" alt="DSIDE logo" /></span>
         <div class="loader">
           <div class="loader__row">
             <div class="loader__arrow up inner inner-6"></div>
@@ -100,7 +102,6 @@
             <div class="loader__arrow up inner inner-4"></div>
           </div>
         </div>
-        <span><img src="dsideLogo.svg" class="brand-logo" alt="DSIDE logo" /></span>
       </div> 
     <div id="root"></div>
     <!-- {{SCRIPT}} -->

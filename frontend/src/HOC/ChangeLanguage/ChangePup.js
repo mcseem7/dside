@@ -37,9 +37,9 @@ export default withRouter(class LanguagePoppup extends Component {
                 </div>
               </div>
               <div className="modal__right-lang">
-                <h4>We International Team!</h4>
+                <h4>We are international</h4>
 
-                <p>Please, select your region language.</p>
+                <p>Let us speak using your native language:</p>
 
                 <div className="international-flags">
 
@@ -48,14 +48,6 @@ export default withRouter(class LanguagePoppup extends Component {
                       this.alreadyUpdate('pl')
                     }} />
                   </div>
-
-                  <div className='flag-icon' >
-                    <img src={cz} onClick={() => {
-                      this.alreadyUpdate('cz')
-                    }} />
-
-                  </div>
-
 
                   <div className='flag-icon'>
                     <img src={ru} onClick={() => {
