@@ -1,0 +1,137 @@
+@keyframes floating {
+  from {
+    transform: translateY(0px);
+  }
+  65% {
+    transform: translateY(15px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.installation {
+  background-image: url('../star.svg'), linear-gradient(to bottom, #1b002c, #4D007D);
+  height: 90vh;
+  margin: 0;
+  background-attachment: fixed;
+  overflow: hidden !important;
+}
+
+.mars {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  height: 31vmin;
+  background: url('../mars.svg') no-repeat bottom center;
+  background-size: cover;
+}
+
+.logo-404 {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 16vmin;
+  width: 30vmin;
+}
+@media (max-width: 480px) and (min-width: 320px) {
+  .logo-404 {
+    top: 45vmin;
+  }
+}
+
+.meteor {
+  position: absolute;
+  right: 42vmin;
+  top: 25vmin;
+  width: 24vmin;
+  opacity: .7;
+}
+
+.title {
+  color: white;
+  font-family: 'MontBold', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 4vmin;
+  margin-top: 31vmin;
+  z-index: 9999;
+}
+
+.subtitle {
+  color: white;
+  font-family: 'MontLight', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 2.5vmin;
+  margin-top: -1vmin;
+  margin-bottom: 9vmin;
+}
+
+.btn-back {
+  border: 1px solid white;
+  color: white;
+  font-size: 2vmin;
+  padding: 12px;
+  font-family: 'MontBold', sans-serif;
+  text-decoration: none;
+  border-radius: 5px;
+  z-index: 2;
+  position: relative;
+}
+.btn-back:hover {
+  background: white;
+  color: #4D007D;
+}
+@media (max-width: 480px) and (min-width: 320px) {
+  .btn-back {
+    font-size: 3.5vmin;
+  }
+}
+
+.astronaut {
+  position: absolute;
+  top: 18vmin;
+  left: 14vmin;
+  height: 66vmin;
+  animation: floating 3s infinite ease-in-out;
+}
+@media (max-width: 425px) and (min-width: 320px) {
+  .title {
+    margin-top: 55vmin;
+  }
+  .astronaut{
+    margin-top: 78vmin;
+    left: 15vmin;
+    width: 35vmin;
+  }
+  .meteor{
+    right: 36vmin;
+  }
+}
+@media (max-width: 480px) and (min-width: 425px) {
+  .astronaut{
+    margin-top: 18vmin;
+    left: -25vmin;
+    width: 55vmin;
+  }
+}
+@media (max-width: 768px) and (min-width: 480px) {
+    .astronaut {
+    top: 20vmin;
+    left: -18vmin;
+  }
+  .meteor{
+    right: 8vmin;
+  }
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+   .astronaut {
+    top: 26vmin;
+    left: 6vmin;
+  }
+}
