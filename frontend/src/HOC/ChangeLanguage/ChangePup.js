@@ -3,8 +3,7 @@ import './index.css'
 import lang from './langImg.png'
 import pl from './svg/006-poland.svg'
 import ru from './svg/005-russia.svg'
-import cz from './svg/003-czech-republic.svg'
-import en from './svg/united-states.svg'
+import en from './svg/united-kingdom.svg'
 import { Link, withRouter } from 'react-router-dom'
 import { reactTranslateChangeLanguage } from "translate-components";
 import Helmet from 'react-helmet-async'
@@ -12,9 +11,7 @@ import Helmet from 'react-helmet-async'
 export default withRouter(class LanguagePoppup extends Component {
   constructor(props) {
     super(props)
-
   }
-
 
   alreadyUpdate = (data) => {
     localStorage.setItem('lang', `${data}`)
@@ -26,8 +23,8 @@ export default withRouter(class LanguagePoppup extends Component {
     return (
       <Fragment>
       <Helmet>
-  <title>Dside  International</title>
-</Helmet>
+          <title>Dside  International</title>
+      </Helmet>
         <div className={`modal-overlay_language active`}>
           <div className={`modal-language  active`}>
             <div className="model-content">

@@ -7,6 +7,18 @@
     height: 50px;
 }
 
+.grade_img-today img {
+    width: 100px;
+}
+
+.grade_img-today {
+    margin-left: 10px;
+}
+
+.grades__titles {
+    display: flex;
+}
+
 .add__work_plus::before,
 .add__work_plus::after,
 .social__icon-instagram::before,
@@ -43,12 +55,11 @@
 .social__icon-behance {
     width: 14px;
     height: 14px;
+    margin-right: 15px;
     position: relative;
 }
 
-.social__icon-instagram {
-    margin-left: 15px;
-}
+
 
 .social__icon-instagram:hover::before,
 .social__icon-behance:hover::before {
@@ -425,6 +436,7 @@
 
 .head-grade__img {
     width: 86px;
+    height: 60px;
 }
 
 .head-grade__date p {

@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react'
 import { CarouselProvider, CarouselInjectedProps, Slider, Slide, ButtonBack, ButtonNext, Image, WithStore } from 'pure-react-carousel';
 import moment from 'moment'
-
+import Review from './grade__review.png'
 
 class Carousel  extends Component {
     constructor() {
@@ -36,7 +36,8 @@ class Carousel  extends Component {
                        })
                       }}>
                   <div className='recent__grade-img'>
-                  <Image alt="" src={`${process.env.REACT_APP_DOMAIN}${item.graded_by.avatar}`} />
+                  {/* <Image alt="" src={`${process.env.REACT_APP_DOMAIN}${item.graded_by.avatar}`} /> */}
+                  <Image alt="" src={Review} />
                   </div> 
                   <div className='recent__grade-date'>
                   <span>{moment(item.date).format("D MMM")}</span>
