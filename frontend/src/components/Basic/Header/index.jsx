@@ -104,7 +104,7 @@ class Header extends Component {
                           >
                             <image
                               id="rollover-image"
-                              xlinkHref="https://quest.masons.pl/1.gif"
+                              xlinkHref="//quest.masons.pl/1.gif"
                               width="100"
                               height="100"
                               preserveAspectRatio="none"

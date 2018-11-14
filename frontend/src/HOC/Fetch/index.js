@@ -104,9 +104,7 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
         return fetch(`${process.env.REACT_APP_API}/${this.state.langContent}/blog/getBlogItemDetails/${blogItem.base_name}/`).then((response) => {
           return response.json()
         }).then((item) => {
-          this.setState({blogItem: this.state.blogItem.concat(item)},() => {
-              this.prevNextPost()
-          })
+          this.setState({blogItem: this.state.blogItem.concat(item)})
         })
       })
     }

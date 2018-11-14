@@ -4,6 +4,8 @@ import { NavLink, Link, withRouter } from "react-router-dom";
 import Translate from "translate-components";
 import homeDside from "./homeDside.png";
 import moment from 'moment';
+import gradeImg from './grade.svg'
+
 
  class HeaderMenu extends React.Component {
     constructor(props) {
@@ -103,7 +105,8 @@ import moment from 'moment';
                 <img src={homeDside} alt="" />
                 <div className="dside__grades-container">
                   <div className="grades__titles">
-                    <h3>Today in <img src="#" alt=""/></h3>  
+                    <h3>Today in </h3>  
+                    <span className='grade_img-today'><img src={gradeImg} alt=""/></span>
                   </div>
                   <div className="grades__head-items">
                     {this.props.gradeItem
@@ -118,10 +121,15 @@ import moment from 'moment';
                           }
                           }>
                             <div className="head-grade__img">
-                              <img
+                              {/* <img
                                 src={`${process.env.REACT_APP_DOMAIN}${
                                   grade.graded_by.avatar
                                 }`}
+                                alt=""
+                              /> */}
+
+                              <img
+                                src={`${homeDside}`}
                                 alt=""
                               />
                             </div>

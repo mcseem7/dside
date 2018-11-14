@@ -50,10 +50,13 @@ class HeaderPost extends Component {
           <div className="block__load__more">
             <div className="load__more">
               <div className="more__icon" onClick={() => {
-        this.props.history.push(`${this.props.language}/portfolio`)
+                 this.props.history.push(`${this.props.language}/portfolio`)
               }}>
                 <img src={iconGrid} alt="" />
               </div>
+                {/* <button className="load">
+                  Load More
+            </button> */}
             </div>
           </div>
 
