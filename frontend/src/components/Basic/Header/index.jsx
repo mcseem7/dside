@@ -17,6 +17,8 @@ import { compose } from "recompose";
 import withDsideApi from "../../../HOC/Fetch";
 import moment from 'moment'
 import HeaderMenu from "./HeaderMenu";
+import fire from './fire.gif'
+
 
 class Header extends Component {
   constructor(props) {
@@ -104,7 +106,7 @@ class Header extends Component {
                           >
                             <image
                               id="rollover-image"
-                              xlinkHref="//quest.masons.pl/1.gif"
+                              xlinkHref={fire}
                               width="100"
                               height="100"
                               preserveAspectRatio="none"
