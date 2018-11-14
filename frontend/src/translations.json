@@ -1206,21 +1206,21 @@
 "Oh no!!": {
   "ru": "Только не это!!",
   "pl": "Coś nie tak!!",
-  "cz": "Vyberte svou práci, kterou chcete nahrát"
+  "cz": "Jen ne to!"
 },
   "You’re either misspelling the URL": {
   "ru": "Ты либо перепутал адрес страницы",
   "pl": "Albo niepoprawnie wpisałeś adres URL",
-  "cz": "Vyberte svou práci, kterou chcete nahrát"
+  "cz": "Jste buď zmatená adresa stránky"
 },
   " or requesting a page that’s no longer here.": {
-  "ru": "либо запрашиваешь страницу, которой больше здесь нет",
+  "ru": "либо запрашиваешь страницу, которой больше здесь нет.",
   "pl": "lub szukasz strony, która nie jest już tutaj.",
-  "cz": "Vyberte svou práci, kterou chcete nahrát"
+  "cz": "nebo požadujete stránku, která již není zde."
 },
   "Back to previous page": {
   "ru": "Вернутся на предыдущую страницу",
   "pl": "Wróć na poprzednią stronę",
-  "cz": "Vyberte svou práci, kterou chcete nahrát"
+  "cz": "Návrat na předchozí stránku"
 }
 }
