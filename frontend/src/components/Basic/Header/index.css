@@ -165,17 +165,37 @@
 
     .link__menu {
         color: #0a0a0a;
-        font-family: "MontBold";
-        font-size: 24px;
+        font-family: 'MontBold',sans-serif;
+        font-size: 20px;
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
         font-weight: 400;
         text-decoration: none;
     }
 
-    .description__menu-title {
-        color: #0a0a0a;
-        font-family: "Montserrat";
-        font-size: 14px;
-        font-weight: 500;
+    .description__menu-title p{
+        color: #2b3033;
+        font-family: 'MontLight',sans-serif;
+        font-size: 13px;
+        margin: 5px 0;
+        transition: all .3s ease-in-out
+    }
+    .link__menu:hover ~ .description__menu-title p{transform: translateY(-5px); color: #000; transition: all .3s ease-in-out}
+    .link__menu:after {
+         content: '';
+         width: 20%;
+         height: 100%;
+         position: absolute;
+         left: auto;
+         top: 0;
+         bottom: 0;
+         right: -20%;
+         background-image: linear-gradient(45deg, rgba(243, 243, 245, 0.4), rgba(243, 243, 245, 0.4), rgba(243, 243, 245, 0));
+        }
+    .link__menu:hover:after {
+        transition: all .46s ease-out;
+        right: 100%;
     }
 
     .main__header-content {
@@ -330,9 +350,7 @@
     .main__left-container {
         display: flex;
         width: 100%;
-        max-width: 500px;
-        margin-left: 145px;
-        margin-right: 75px;
+        margin-left: 15px;
     }
 
 
@@ -427,16 +445,16 @@
 }
 
 .dside__grades-container h3 {
-    font-size: 24px;
+    font-size: 20px;
     color: #ffffff;
-    font-family: "MontBold";
+    font-family: 'MontBold',sans-serif;
     margin: 0;
     padding: 0;
 }
 
 .head-grade__img {
-    width: 86px;
-    height: 60px;
+    width: 76px;
+    height: 56px;
 }
 
 .head-grade__date p {
@@ -470,12 +488,14 @@
 }
 
 .add__grade-svg svg {
-    fill: #fff;
-    width: 40px;
-    height: 65px;
+    fill: #d99b91;
+    width: 22px;
+    height: 22px;
     cursor: pointer;
+    margin-left: 30px;
+    transition: all .3s ease-out;
 }
-
+.add__grade-svg svg:hover {transform: scale(1.06); fill:#fff; transition: all .3s ease-in;}
 .heading__service {
     z-index: 1;
 }
