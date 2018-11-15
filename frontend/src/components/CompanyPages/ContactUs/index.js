@@ -42,11 +42,7 @@ class Contact extends Component {
   };
 
   render() {
-    //  (document.getElementById("map_canvas"), {
-    //    panControl: false,
-    //    zoomControl: false,
-    //    scaleControl: false,
-    // });
+  
     const framegoo =
       '<iframe src="https://snazzymaps.com/embed/112254" width="100%" height="400px" style="border:none;"></iframe>'
       
@@ -98,13 +94,13 @@ class Contact extends Component {
                         <div className="inputs__send">
                           <div className="wrapper-holder__name">
                             <div class="holder__poppup">
-                              <Translate>name</Translate>
+                              <Translate>Name</Translate>
                             </div>
                             <input ref={this.nameRef} type="text" id="name" />
                           </div>
                           <div className="wrapper-holder__phone">
                             <div class="holder__poppup">
-                              <Translate>phone number in format +</Translate>
+                              <Translate>Phone number (With country code)</Translate>
                             </div>
                             <input
                               ref={this.phoneRef}

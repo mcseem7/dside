@@ -5,6 +5,7 @@ import Works from './Works__Company/index'
 import Services from './Services/index'
 import {Route} from 'react-router-dom'
 import Helmet from 'react-helmet-async'
+import Footer from '../../Basic/Footer';
 
 
 const LangContext = React.createContext({
@@ -31,8 +32,6 @@ export default class Main extends Component {
 
 
   render () {
-
-  const sectionTitle = 'adasd'
     return (
       <div> 
     
@@ -47,7 +46,7 @@ export default class Main extends Component {
         <Works  {...this.props} />
         <Services {...this.props} />
       </div>
-    
+      <Footer/>
       </div>
     )
   }

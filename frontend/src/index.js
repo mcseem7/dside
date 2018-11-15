@@ -13,11 +13,13 @@ import { unregister } from './registerServiceWorker';
 import routes from './routes'
 import Helmet, { HelmetProvider } from 'react-helmet-async';
 
-const initialLanguage = 'en'
+const nowLang = localStorage.getItem('lang')
+
 const countryCode = ['ru', 'cz', 'pl', 'en'].filter((code) => {
   return code == window.location.pathname.substr(1,2) 
 })
-localStorage.setItem('lang', countryCode || initialLanguage)
+
+localStorage.setItem('lang',  countryCode || nowLang)
 const getIdentityDomen = window.location.pathname
 const data = window.__INITIAL_DATA__;
 
@@ -25,7 +27,7 @@ const data = window.__INITIAL_DATA__;
 ReactDOM.hydrate(
     <HelmetProvider>
       <BrowserRouter >
-        <App {...this.props} domen={getIdentityDomen} initialData={data} routes={routes} />
+        <App {...this.props} nowLang={nowLang} domen={getIdentityDomen} initialData={data} routes={routes} />
       </BrowserRouter>
     </HelmetProvider>
     ,

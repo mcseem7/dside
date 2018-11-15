@@ -13,6 +13,7 @@ import fetch from 'isomorphic-fetch'
 import withLanguage from '../../../HOC/withLanguage';
 import {compose} from 'recompose'
 import { matchPath } from 'react-router'
+import Footer from '../../Basic/Footer';
 
  class PortfolioItem extends Component {
 
@@ -68,6 +69,7 @@ import { matchPath } from 'react-router'
 
   render() {
     return (
+      <Fragment>
       <div className="container__portfolio-item">
         <div className="portfolio__header_item-wrapper" style={{ backgroundImage: `url(${process.env.REACT_APP_DOMAIN}${this.state.itemPortfolio.main_image})` }}>
           <div className="header__portfolio-content">
@@ -209,7 +211,7 @@ import { matchPath } from 'react-router'
                   <CarouselProvider
                     naturalSlideWidth={400}
                     naturalSlideHeight={405}
-                    totalSlides={4}
+                    totalSlides={this.state.similarItems.length}
                     visibleSlides={3}
                     className={'slider__wrapper-portfolio'}
                   >
@@ -261,7 +263,8 @@ import { matchPath } from 'react-router'
         </div>
 
       </div>
-
+<Footer/>
+</Fragment>
     )
   }
 }

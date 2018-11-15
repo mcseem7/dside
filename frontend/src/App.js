@@ -103,7 +103,7 @@ class App extends Component {
             return str.split(' ').some(function (w) { return w === word })
         }
         const { routes, initialData } = this.props
-       console.log(this.state)
+     
         return (
             <TranslateProvider translations={translations} defaultLanguage={'en'}>
                 <Fragment>
@@ -125,11 +125,11 @@ class App extends Component {
              <Route exact path="/" component={Welcome} />
              {/* <Route exact path="/" render={(props) => (<Redirect to={`/en`} />)} /> */}
              <Route path={'/:language'} render={(props) => {
-
+                console.log(props)
                  return (
                      <TransitionGroup>
 
-                         {props.location.pathname.match(/services\//gi)  ? <Header domenErty={props.match.params.language} style={'none'} /> : <Header domenErty={props.match.params.language} style={'block'} />}
+                         {props.location.pathname.match(/services\//gi) ? <Header domenErty={props.match.params.language} style={'none'} /> : <Header domenErty={props.match.params.language} style={'block'} />}
 
                          <CSSTransition key={props.location.key} timeout={1000} classNames="fade">
                         
@@ -155,7 +155,7 @@ class App extends Component {
 
                          </CSSTransition>
 
-                         {findWord('/contactus', props.location.pathname.substr(3)) || findWord('services', props.location.pathname.substr(4,8))  ? <Footer style={'none'} /> : <Footer style={'block'} />}
+                         {/* {findWord('/contactus', props.location.pathname.substr(3)) || findWord('services', props.location.pathname.substr(4,8))  ? <Footer style={'none'} /> : <Footer style={'block'} />} */}
                      </TransitionGroup>)
              }} />
 

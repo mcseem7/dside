@@ -13,6 +13,7 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 import Carousel from "./carousel";
 import ItemModal from "./ItemModal";
 import Helmet from 'react-helmet-async'
+import Footer from "../../Basic/Footer";
 
 class GradeItem extends Component {
   constructor() {
@@ -160,6 +161,7 @@ class GradeItem extends Component {
             </div>
           </div>
         </div>
+        <Footer/>
       </Fragment>
     );
   }

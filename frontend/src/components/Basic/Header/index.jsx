@@ -6,9 +6,6 @@ import Logo from "./Logo.svg";
 import { NavLink, Link, withRouter } from "react-router-dom";
 import OrderPoppup from "../../../HOC/OrderPopup/index";
 import GradePoppup from "../../../HOC/GradePopup/index";
-import pl from "../../../HOC/ChangeLanguage/svg/006-poland.svg";
-import cz from "../../../HOC/ChangeLanguage/svg/003-czech-republic.svg";
-import ru from "../../../HOC/ChangeLanguage/svg/005-russia.svg";
 import Translate from "translate-components";
 import withPoppupHOC from "../../../HOC/Poppup";
 import withLanguage from "../../../HOC/withLanguage";
@@ -209,13 +206,15 @@ class Header extends Component {
 
         {<HeaderMenu
         {...this.state}
-        handleShowMenu={this.showMenu}
+         handleShowMenu={this.showMenu}
          handleChangePoppupGrade={this.changePoppupGrade} 
          {...this.props} />}
 
         {this.state.modalActiveOrder ? (
           <OrderPoppup onClose={this.changePoppup} />
         ) : null}
+
+        
           {this.state.modalActiveGrade ? (
           <GradePoppup onClose={this.changePoppupGrade} />
         ) : null}

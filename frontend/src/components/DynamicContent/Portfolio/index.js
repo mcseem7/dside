@@ -6,6 +6,7 @@ import withLanguage from "../../../HOC/withLanguage";
 import CategoryItem from './CategoryItem';
 import PortolioPost from '../Header__Post/Portfolio__Post';
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import Footer from '../../Basic/Footer';
 
 
 class Portfolio extends Component {
@@ -95,6 +96,7 @@ class Portfolio extends Component {
              <PortolioPost dataDside={this.state.dataItems} />
           </div>
         </section>
+        <Footer/>
       </div>
     )
   }

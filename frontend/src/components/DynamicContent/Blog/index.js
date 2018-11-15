@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import './index.css'
 import gridIcon from './grid-icon.svg'
 import { Link } from 'react-router-dom'
@@ -13,6 +13,7 @@ import { reactTranslateChangeLanguage, TranslateProvider } from "translate-compo
 import SuggestPoppup from "../../../HOC/SuggestPoppup";
 import canvasAnimate from './canvasAnimate'
 import Helmet from 'react-helmet-async'
+import Footer from '../../Basic/Footer';
 
 
 class Blog extends Component {
@@ -59,6 +60,7 @@ class Blog extends Component {
   render () {
     const {history, location} = this.props   
     return (
+      <Fragment>
       <div className='wrapper__blog-container'>
        <Helmet>
           <title> Dside Blog </title>
@@ -204,6 +206,8 @@ class Blog extends Component {
         </div>
       </section>
       </div>
+     <Footer/>
+     </Fragment>
     )
   }
 }

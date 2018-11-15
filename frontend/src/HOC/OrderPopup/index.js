@@ -30,7 +30,7 @@ class OrderPoppup extends Component {
         <div class={`modal-overlay active`}>
           <div class={`modal  active`}>
 
-            <a class="close-modal" href="#" onClick={() => {
+            <a class="close-modal" onClick={() => {
               return  this.props.onClose()
             }}>
               <svg viewBox="0 0 20 20">
@@ -39,8 +39,6 @@ class OrderPoppup extends Component {
             </a>
 
             <div class="modal-content">
-
-
               <div class="form-wrap">
                 {this.state.result ?
                   <div id="form-result">
@@ -55,12 +53,12 @@ class OrderPoppup extends Component {
 
                         <div className='holder__wrapper'>
                           <label for="id_subject">Имя:</label>
-                          <div class="holder__poppup holder__poppup-name"><Translate>name</Translate></div>
+                          <div class="holder__poppup holder__poppup-name"><Translate>Name</Translate></div>
                           <input ref={this.nameRef}  id="id_name" maxlength="50" minlength="3" name="name" required="required" type="text" />
                         </div>
                         <div className='holder__wrapper'>
                           <label for="id_sender">Телефон:</label>
-                          <div class="holder__poppup holder__poppup-phone"><Translate>phone number in format +</Translate></div>
+                          <div class="holder__poppup holder__poppup-phone"><Translate>Phone number (With country code)</Translate></div>
                           <input   pattern="^\+[1-9]{1}[0-9]{3,14}$"  ref={this.phoneRef} id="id_phone" maxlength="50" minlength="6" name="phone" required="required" type="tel" />
                         </div>
                         <button class="button14" onClick={
