@@ -183,15 +183,16 @@ class Header extends Component {
               <div className="right__content-socials">
                 <div className="social__icons">
                   <a
-                    href="http://behance.com"
+                    href="https://dishots.com/u/DSIDE"
                     className="social__icon-behance"
+                    target="_blank"
                   />
                   <a
-                    target="__blank"
+                    target="_blank"
                     href={
                       this.props.activeLang[0] == "ru"
                         ? "https://www.instagram.com/dside.ru/"
-                        : "https://www.instagram.com/"
+                        : "https://www.instagram.com/dsidepl"
                     }
                     className="social__icon-instagram"
                   />
