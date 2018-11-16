@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import './index.css'
 import Helmet from 'react-helmet-async'
 import withDsideApi from "../../../HOC/Fetch";
@@ -7,6 +7,7 @@ import CategoryItem from './CategoryItem';
 import PortolioPost from '../Header__Post/Portfolio__Post';
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import Footer from '../../Basic/Footer';
+import Header from '../../Basic/Header';
 
 
 class Portfolio extends Component {
@@ -52,6 +53,8 @@ class Portfolio extends Component {
 
  render() {
     return (
+      <Fragment>
+        <Header/>
       <div>
         <section className="portfolio__items-category">
           <Helmet>
@@ -98,6 +101,7 @@ class Portfolio extends Component {
         </section>
         <Footer/>
       </div>
+      </Fragment>
     )
   }
 }

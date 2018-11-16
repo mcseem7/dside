@@ -64,7 +64,6 @@
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
-    border-radius: 55px;
 }
 .modal.active .modal-content {
     opacity: 1;

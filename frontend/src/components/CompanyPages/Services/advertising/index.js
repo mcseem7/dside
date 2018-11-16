@@ -44,7 +44,8 @@ class Advertising extends Component {
             </HeroVideo>
             <div id="vidtop-content">
               <HeaderService
-                logoHeader={LogoBrand}
+activeLanding={'main__header-advertising'}
+logoHeader={LogoBrand}
                 stylelogotext={'logo__service-text_advertising'}
                 serviceSlogan={'DSIDE to make your business earn more MONEY'}
                 imgLogoPosition={'logo__service-img-ads'}

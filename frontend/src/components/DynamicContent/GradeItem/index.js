@@ -14,6 +14,7 @@ import Carousel from "./carousel";
 import ItemModal from "./ItemModal";
 import Helmet from 'react-helmet-async'
 import Footer from "../../Basic/Footer";
+import Header from "../../Basic/Header";
 
 class GradeItem extends Component {
   constructor() {
@@ -83,6 +84,7 @@ class GradeItem extends Component {
     ];
     return (
       <Fragment>
+        <Header/>
         <div className="review__container-wrapper">
         <Helmet>
           <title>Dside Review</title>

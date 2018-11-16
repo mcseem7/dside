@@ -20,7 +20,7 @@ import gradeImg from './grade.svg'
         return (
             <React.Fragment>      
                   <div
-            className="main__header"
+            className={`main__header ${this.props.activeLanding}`}
             style={{
               display: this.props.display,
               opacity: this.props.opacity,

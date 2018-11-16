@@ -19,6 +19,7 @@ import Translate from 'translate-components'
 import { reactTranslateChangeLanguage } from 'translate-components'
 import Helmet from 'react-helmet-async'
 import Footer from '../../Basic/Footer';
+import Header from '../../Basic/Header';
 
 export default class AbotUs extends Component {
   constructor() {
@@ -134,6 +135,7 @@ export default class AbotUs extends Component {
 
     return (
       <Fragment>
+        <Header/>
       <div>
         <Helmet>
           <title> Dside About </title>

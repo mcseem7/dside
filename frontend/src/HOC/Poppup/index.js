@@ -5,7 +5,8 @@ import {
 } from "translate-components";
 import $ from "jquery";
 
-export default function withPoppupHOC(PoppupHOC, apiUrl, type) {
+
+ export default function withPoppupHOC(PoppupHOC, apiUrl, type) {
   return class withPoppupHOC extends Component {
     constructor() {
       super();
@@ -13,7 +14,8 @@ export default function withPoppupHOC(PoppupHOC, apiUrl, type) {
       this.state = {
         result: false,
         lang: "",
-        postData: {}
+        postData: {},
+        errorModal: false
       };
     }
 
@@ -89,8 +91,17 @@ export default function withPoppupHOC(PoppupHOC, apiUrl, type) {
         },
         method: "POST",
         body: JSON.stringify(this.state.postData)
-      }).then(() => {
-        this.setState({ result: true });
+      }).then((response) => {
+        if(response.status >= 400) {
+          throw new Error()
+        } else {
+          this.setState({ result: true });
+        }
+      }).catch((e) => {
+        this.setState({errorModal: true})
+    setTimeout(() => {
+      this.setState({errorModal: false})
+    }, 1000);
       })
     };
 
@@ -101,6 +112,7 @@ export default function withPoppupHOC(PoppupHOC, apiUrl, type) {
             {...this.props}
             result={this.state.result}
             getSubmitForm={this.handleSubmit}
+            statusModal={this.state.errorModal}
           />
         </div>
       );

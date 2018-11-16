@@ -26,9 +26,12 @@ class Header extends Component {
       display: "none",
       modalActiveOrder: false,
       modalActiveGrade: false,
-      lang: ""
+      lang: "",
+      showDefault: 'block'
     };
   }
+
+
 
   showMenu = () => {
     if (this.state.opacity == 1) {
@@ -48,11 +51,11 @@ class Header extends Component {
 
   render() {
     const {history, location} = this.props   
-   
+    
     return (
       <div
         className="header__container"
-        style={{ display: this.props.style, zIndex: 10 }}
+        style={{ display: this.state.showDefault, zIndex: 10 }}
       >
         <header className="basic__header">
           <div className="basic__header-content">

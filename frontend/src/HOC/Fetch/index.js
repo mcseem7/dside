@@ -122,7 +122,7 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
           method: "POST",
           body: JSON.stringify({ name: name.current.value, phone: phone.current.value, data: new Date().toISOString() })
         })
-        if(!postOrderForm.ok) {
+        if(postOrderForm.status >= 400) {
           throw new Error()
         }
       } catch(e) {

@@ -123,14 +123,13 @@ class App extends Component {
                 
                 { <div className="App">
              <Route exact path="/" component={Welcome} />
-             {/* <Route exact path="/" render={(props) => (<Redirect to={`/en`} />)} /> */}
              <Route path={'/:language'} render={(props) => {
-                console.log(props)
+             
                  return (
                      <TransitionGroup>
 
-                         {props.location.pathname.match(/services\//gi) ? <Header domenErty={props.match.params.language} style={'none'} /> : <Header domenErty={props.match.params.language} style={'block'} />}
-
+                         {/* {props.location.pathname.match(/services\//gi) ? <Header domenErty={props.match.params.language} style={'none'} /> : <Header domenErty={props.match.params.language} style={'block'} />} */}
+                        
                          <CSSTransition key={props.location.key} timeout={1000} classNames="fade">
                         
                              <Switch>

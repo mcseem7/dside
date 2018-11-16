@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import HeaderPost from '../Header__Post/index'
 import About from './About__block/index'
 import Works from './Works__Company/index'
@@ -6,6 +6,7 @@ import Services from './Services/index'
 import {Route} from 'react-router-dom'
 import Helmet from 'react-helmet-async'
 import Footer from '../../Basic/Footer';
+import Header from '../../Basic/Header';
 
 
 const LangContext = React.createContext({
@@ -33,8 +34,10 @@ export default class Main extends Component {
 
   render () {
     return (
+      <Fragment>
+        <Header/>
       <div> 
-    
+      
        <Helmet>
         <title>
           Dside Home
@@ -48,6 +51,7 @@ export default class Main extends Component {
       </div>
       <Footer/>
       </div>
+      </Fragment>
     )
   }
 }

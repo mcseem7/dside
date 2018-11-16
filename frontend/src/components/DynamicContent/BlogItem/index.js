@@ -11,6 +11,7 @@ import { FacebookProvider, Comments } from "react-facebook";
 import { matchPath } from "react-router";
 import withLanguage from "../../../HOC/withLanguage";
 import Footer from "../../Basic/Footer";
+import Header from "../../Basic/Header";
 
 class BlogItem extends Component {
   constructor(props) {
@@ -83,6 +84,7 @@ class BlogItem extends Component {
     });
     return (
       <Fragment>
+        <Header/>
       <div>
         {this.state.notFound ? null : (
           <div className="blog__post-container">

@@ -14,6 +14,7 @@ import SuggestPoppup from "../../../HOC/SuggestPoppup";
 import canvasAnimate from './canvasAnimate'
 import Helmet from 'react-helmet-async'
 import Footer from '../../Basic/Footer';
+import Header from '../../Basic/Header';
 
 
 class Blog extends Component {
@@ -61,6 +62,7 @@ class Blog extends Component {
     const {history, location} = this.props   
     return (
       <Fragment>
+        <Header/>
       <div className='wrapper__blog-container'>
        <Helmet>
           <title> Dside Blog </title>

@@ -14,6 +14,7 @@ import withLanguage from '../../../HOC/withLanguage';
 import {compose} from 'recompose'
 import { matchPath } from 'react-router'
 import Footer from '../../Basic/Footer';
+import Header from '../../Basic/Header';
 
  class PortfolioItem extends Component {
 
@@ -70,6 +71,7 @@ import Footer from '../../Basic/Footer';
   render() {
     return (
       <Fragment>
+        <Header/>
       <div className="container__portfolio-item">
         <div className="portfolio__header_item-wrapper" style={{ backgroundImage: `url(${process.env.REACT_APP_DOMAIN}${this.state.itemPortfolio.main_image})` }}>
           <div className="header__portfolio-content">

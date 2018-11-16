@@ -9,7 +9,7 @@ import baseStyles from './index'
 import './index.css'
 import 'regenerator-runtime/runtime';
 import history from 'history/createBrowserHistory'
-import { unregister } from './registerServiceWorker';
+import  registerServiceWorker, { unregister } from './registerServiceWorker';
 import routes from './routes'
 import Helmet, { HelmetProvider } from 'react-helmet-async';
 
@@ -19,19 +19,18 @@ const countryCode = ['ru', 'cz', 'pl', 'en'].filter((code) => {
   return code == window.location.pathname.substr(1,2) 
 })
 
-localStorage.setItem('lang',  countryCode || nowLang)
+localStorage.setItem('lang',  countryCode.length == 0 ?  nowLang : countryCode)
 const getIdentityDomen = window.location.pathname
 const data = window.__INITIAL_DATA__;
-
 
 ReactDOM.hydrate(
     <HelmetProvider>
       <BrowserRouter >
-        <App {...this.props} nowLang={nowLang} domen={getIdentityDomen} initialData={data} routes={routes} />
+        <App {...this.props}  domen={getIdentityDomen} initialData={data} routes={routes} />
       </BrowserRouter>
     </HelmetProvider>
     ,
     document.getElementById('root') 
  )
 
- unregister()
+unregister()

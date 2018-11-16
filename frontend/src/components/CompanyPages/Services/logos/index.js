@@ -47,6 +47,7 @@ class LogoPage extends Component {
           />
           <div id="vidtop-content">
             <HeaderService
+            activeLanding={'main__header-logo'}
               textContainer={"dside_textContainer-logo"}
               stylelogotext={"logo__service-text_grafiklog"}
               logoHeader={logoHeader}

@@ -13,12 +13,13 @@ import Translate from "translate-components";
   }
 
   render () {
-  
+    
      const {location} = this.props
     return (
       <div>
-<div className="installation">
-  <div className="mars"></div>
+        
+    <div className="installation">
+      <div className="mars"></div>
         <img src={four} className="logo-404" />
         <img src={meteor} className='meteor' />
             <p className='title'><Translate>Oh no!!</Translate></p>

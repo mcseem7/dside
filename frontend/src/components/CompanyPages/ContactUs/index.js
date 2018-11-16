@@ -48,6 +48,7 @@ class Contact extends Component {
       
     return (
       <div>
+        <Header />
         <Helmet>
           <title>Dside ContactUs</title>
         </Helmet>

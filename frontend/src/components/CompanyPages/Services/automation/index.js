@@ -45,6 +45,7 @@ class Automation extends Component {
             </HeroVideo>
             <div id="vidtop-content">
               <HeaderService
+                activeLanding={'main__header-automation'}
                 logoHeader={LogoBrand}
                 stylelogotext={'logo__service-text_automation'}
                 serviceSlogan={'DSIDE to make your business earn more MONEY'}

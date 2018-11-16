@@ -68,6 +68,7 @@ class VideoPage extends Component {
           />
           <div id="vidtop-content">
             <HeaderService
+              activeLanding={'main__header-video'}
               imgLogoPosition={"logo__service-img_video"}
               textContainer={"dside_textContainer-video"}
               serviceSlogan={[
