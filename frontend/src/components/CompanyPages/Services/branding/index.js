@@ -96,6 +96,7 @@ class BrandPage extends Component {
                     ></HeroVideo>
                     <div id="vidtop-content">
                         <HeaderService
+                            activeLanding={'main__header-branding'}
                             stylelogotext={'logo__service-text_brand'}
                             logoHeader={LogoBrand}
                             imgLogoPosition={'logo__service-img_brand'}

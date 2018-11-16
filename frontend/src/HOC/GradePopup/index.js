@@ -54,7 +54,7 @@ class GradePoppup extends Component {
         <div class={`modal-overlay active`}>
           <div class={`modal  active`}>
 
-            <a class="close-modal" href="#" onClick={() => {
+            <a class="close-modal"  onClick={() => {
               return  this.props.onClose()
             }}>
               <svg viewBox="0 0 20 20">

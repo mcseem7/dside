@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <base href="/" />
 <meta charset="UTF-8" content="Dside Branding Agency">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="fb:app_id" content="329972810887548" />
@@ -42,12 +43,15 @@
         #loading .loader .loader__row {
           display: flex; }
           #loading .loader .loader__row .loader__arrow {
-            width: 0;
-            height: 0;
+            width: 5px;
+            height: 5px;
             border-radius: 30px;
             margin: 6px;
             transform: rotate(45deg);
-            border: 5px solid #CE111F;
+            border: 2px solid #ec1423;
+            -webkit-box-shadow: 0px 0px 10px 0px rgba(255,0,0,0.58);
+            -moz-box-shadow: 0px 0px 10px 0px rgba(255,0,0,0.58);
+            box-shadow: 0px 0px 10px 0px rgba(255,0,0,0.58);
             animation: wink 0.5s infinite; }
             #loading .loader .loader__row .loader__arrow.inner-1 {
               animation-delay: -0.0833333333s; }
@@ -74,6 +78,9 @@
    #loading span img {
     max-width: 100%;
       width: 90px;
+       -webkit-box-shadow: 0px 0px 10px 0px rgba(255,0,0,0.35);
+            -moz-box-shadow: 0px 0px 10px 0px rgba(255,0,0,0.35);
+            box-shadow: 0px 0px 10px 0px rgba(255,0,0,0.35);
   }
    #loading span {
     width: 100%;

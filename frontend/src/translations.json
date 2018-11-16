@@ -5,7 +5,7 @@
     "ru": "Что?"
     },
     "What dside?": {
-        "pl": "Co to DSIDE?",
+        "pl": "Czym jest DSIDE?",
         "cz": "Co DSIDE?",
         "ru": "Что такое DSIDE?"
     },
@@ -42,7 +42,7 @@
     "What can you get?": {
         "pl": "Co możesz dostać?",
         "cz": "Co můžete získat?",
-        "ru": "Что вы можете получить?"
+        "ru": "Что ты получишь?"
     },
     "You can just come up with an IDEA": {
         "pl": "Możesz po prostu wymyślić IDEA",
@@ -50,7 +50,7 @@
         "ru": "Ты можешь прийти лишь с идеей"
     },
     "and get a name for the company (naming), a name for the domain, a logo, a corporate identity, a marketing-kit, as well as a good-selling website and a customized advertising campaign.": {
-        "ru": "и получить имя для компании (нэйминг), имя домена, логотип, фирменный стиль, маркетинговый комплект, а также продающий веб-сайт и индивидуальную рекламную кампанию.",
+        "ru": "и получить крутые: имя для своей компании (нэйминг), название домена, логотип, фирменный стиль, маркетинг-кит, а также продающий веб-сайт и индивидуальную рекламную кампанию.",
         "cz": "a získat jméno pro společnost (pojmenování), jméno domény, logo, firemní identitu, marketingový kit a dobře prodávaná webová stránka a individuální reklamní kampaň.",
         "pl": "i uzyskaj nazwę firmy (nazewnictwo), nazwę domeny, logo, identyfikację wizualną, zestaw marketingowy i dobrze sprzedającą stronę internetową i pojedynczą kampanię reklamową."
     },
@@ -156,7 +156,7 @@
 
 
   "Increasing efficency": {
-    "ru": "Повышение эффективности",
+    "ru": "Увеличение КПД",
     "pl": "Polepszenie wydajności",
     "cz": "Zvyšování efektivity"
   },
@@ -169,7 +169,7 @@
 
 
   "Videos": {
-    "ru": "Видео",
+    "ru": "Видео-Продакшн",
     "pl": "Filmy wideo",
     "cz": "Videa"
   },
@@ -304,9 +304,9 @@
     "pl": "Strona Główna"
   },
   "Contact Us": {
-    "ru": "Свяжись с нами",
+    "ru": "Наши контакты",
     "cz": "Kontaktujte nás",
-    "pl": "Skontaktuj się z nami"
+    "pl": "Skontaktuj się"
   },
   "New posts": {
     "ru": "Новые посты",
@@ -354,7 +354,7 @@
     "pl": "Statystyki udanego biznesu"
   },
   "What’s the difference?": {
-    "ru": "Какая разница?",
+    "ru": "Брендинг наглядно",
     "cz": "Jaký je v tom rozdíl?",
     "pl": "W czym jest różnica?"
   },
@@ -404,13 +404,13 @@
   "You can just come up with an IDEA": {
     "cz": "Stačí přijít s IDEA",
     "pl": "Możesz przyjść tylko z IDEA",
-    "ru":"Ты можешь прийти только с ИДЕЕЙ"
+    "ru":"Ты можешь прийти всего-лишь с ИДЕЕЙ"
   },
 
   "and get a name for the company (naming), a name for the domain, a logo,": {
     "cz": "a získat jméno pro společnost (pojmenování), název domény, logo,",
     "pl": "i uzyskasz nazwę firmy (nazewnictwo), nazwę domeny, logo,",
-    "ru":"и получить имя для компании (нэйминг), название домена, логотип,"
+    "ru":"и получить крутые имя для компании (нэйминг), название домена, логотип,"
   },
 
   "a corporate identity, a marketing-kit, as well as a good-selling website and a customized advertising campaign.": {
@@ -629,7 +629,7 @@
   "order now": {
     "cz": "objednat teď",
     "pl": "Zamów teraz",
-    "ru": "Заказать"
+    "ru": "Да! заказать"
   },
 
   "DSIDE to make your business earn more MONEY": {
@@ -1222,5 +1222,11 @@
   "ru": "Вернутся на предыдущую страницу",
   "pl": "Wróć na poprzednią stronę",
   "cz": "Návrat na předchozí stránku"
-}
+},
+
+  "Fields are not all filled! Please fill in all fields!": {
+    "ru": "Поля заполнены не все! Заполните пожалуйста все поля!",
+    "pl": "Pola nie są wszystkie wypełnione! Proszę wypełnić wszystkie pola!",
+    "cz": "Vyplňte prosím všechna pole!" 
+  }
 }

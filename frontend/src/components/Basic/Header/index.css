@@ -1,4 +1,29 @@
 #root{width: 100%}
+
+@-webkit-keyframes flash {
+  0% {
+    -webkit-filter: brightness(100%); }
+  33% {
+    -webkit-filter: brightness(135%); }
+  100% {
+    -webkit-filter: brightness(100%); } }
+
+@-moz-keyframes flash {
+  0% {
+    -webkit-filter: brightness(100%); }
+  33% {
+    -webkit-filter: brightness(135%); }
+  100% {
+    -webkit-filter: brightness(100%); } }
+
+@keyframes flash {
+  0% {
+    -webkit-filter: brightness(100%); }
+  33% {
+    -webkit-filter: brightness(135%); }
+  100% {
+    -webkit-filter: brightness(100%); } }
+
 .basic__header {
    -webkit-box-shadow: 2.5px 4px 5px rgba(28, 29, 31, 0.05);
     box-shadow: 2.5px 4px 5px rgba(28, 29, 31, 0.05);
@@ -71,7 +96,7 @@
 }
 
 .social__icon-instagram::before {
-    background-image: url('../../sources/sprites/icons/inst-icon.svg');
+    background-image: url('../../sources/sprites/icons/inst-icon-hover.svg');
 }
 
 .social__icon-instagram::after {
@@ -84,7 +109,7 @@
 }
 
 .social__icon-behance::before {
-    background-image: url('../../sources/sprites/icons/behance.svg');
+    background-image: url('../../sources/sprites/icons/behance-icon-hover.svg');
 }
 
 .social__icon-behance::after {
@@ -103,6 +128,9 @@
     -moz-transition-delay: 0s;
     -o-transition-delay: 0s;
     transition-delay: 0s;
+    -webkit-animation: flash 0.7s forwards linear 0.16s;
+    -moz-animation: flash 0.7s forwards linear 0.16s;
+    animation: flash 0.7s forwards linear 0.16s;
 }
 
 .social__icon-instagram:hover,
@@ -126,6 +154,11 @@
     cursor: pointer;
     margin-top: 3px;
     position: relative;
+}
+.add__work_plus:hover{
+    -webkit-animation: flash 0.7s forwards linear 0.16s;
+    -moz-animation: flash 0.7s forwards linear 0.16s;
+    animation: flash 0.7s forwards linear 0.16s;
 }
 
 .header__content {
@@ -165,18 +198,38 @@
 
     .link__menu {
         color: #0a0a0a;
-        font-family: "MontBold";
-        font-size: 24px;
+        font-family: 'MontBold',sans-serif;
+        font-size: 20px;
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
         font-weight: 400;
-        text-decoration: none;
+        text-decoration: none; transition: color .3s ease-out;
     }
 
-    .description__menu-title {
-        color: #0a0a0a;
-        font-family: "Montserrat";
-        font-size: 14px;
-        font-weight: 500;
+    .link__menu:hover{
+            background-image: -webkit-gradient(linear, left top, right top, from(#d99b91), to(#ad6f59));
+    background-image: -webkit-linear-gradient(left, #d99b91 0%, #ad6f59 100%);
+    background-image: -o-linear-gradient(left, #d99b91 0%, #ad6f59 100%);
+    background-image: linear-gradient(90deg, #d99b91 0%, #ad6f59 100%);
+            background-clip: text;
+    -webkit-background-clip: text;
+        -webkit-animation: flash 0.7s forwards linear 0.16s;
+    -moz-animation: flash 0.7s forwards linear 0.16s;
+    animation: flash 0.7s forwards linear 0.16s;
+    -webkit-text-fill-color: transparent;
+        transition: color .3s ease-out;
     }
+
+    .description__menu-title p{
+        color: #77858d;
+        font-family: 'MontLight',sans-serif;
+        font-size: 13px;
+        margin: 5px 0;
+        transition: all .3s ease-in-out
+    }
+    .link__menu:hover ~ .description__menu-title p{transform: translateY(-4px); color: #000; transition: all .3s ease-out}
+
 
     .main__header-content {
         max-width: 1200px;
@@ -330,9 +383,7 @@
     .main__left-container {
         display: flex;
         width: 100%;
-        max-width: 500px;
-        margin-left: 145px;
-        margin-right: 75px;
+        margin-left: 15px;
     }
 
 
@@ -427,16 +478,16 @@
 }
 
 .dside__grades-container h3 {
-    font-size: 24px;
+    font-size: 20px;
     color: #ffffff;
-    font-family: "MontBold";
+    font-family: 'MontBold',sans-serif;
     margin: 0;
     padding: 0;
 }
 
 .head-grade__img {
-    width: 86px;
-    height: 60px;
+    width: 76px;
+    height: 56px;
 }
 
 .head-grade__date p {
@@ -453,7 +504,7 @@
 }
 
 .grades__head-items {
-    display: flex;
+    display: none;
     margin-top: 50px;
     margin-left: 60px;
 }
@@ -470,16 +521,19 @@
 }
 
 .add__grade-svg svg {
-    fill: #fff;
-    width: 40px;
-    height: 65px;
+    fill: #d99b91;
+    width: 22px;
+    height: 22px;
     cursor: pointer;
+    margin-left: 30px;
+    transition: all .3s ease-out;
 }
-
+.add__grade-svg svg:hover {transform: scale(1.06); -webkit-animation: flash 0.7s forwards linear 0.16s;
+    -moz-animation: flash 0.7s forwards linear 0.16s;
+    animation: flash 0.7s forwards linear 0.16s; }
 .heading__service {
     z-index: 1;
 }
-
 
 @media screen and (max-width: 768px) {
     .main__header-content {

@@ -8,6 +8,7 @@ import Translate, { reactTranslateChangeLanguage } from "translate-components";
 import Success from "../../Success/success";
 import withPoppupHOC from "../../../HOC/Poppup";
 import Helmet from 'react-helmet-async'
+import ErrorValidate from '../../ErrorValidate/index'
 
 class Contact extends Component {
   constructor() {
@@ -17,7 +18,8 @@ class Contact extends Component {
     this.phoneRef = React.createRef();
 
     this.state = {
-      postActive: false
+      postActive: false,
+      errorActive: false
     };
   }
 
@@ -28,8 +30,19 @@ class Contact extends Component {
   handleSubmit = async event => {
     event.preventDefault();
     await this.props.postData(this.nameRef, this.phoneRef);
-    await this.updateAfterPost();
+    await this.checkingValidate();
   };
+
+  checkingValidate = () => {
+    if(!this.props.postOrderActive) {
+      this.setState({errorActive: !this.state.errorActive})
+      setTimeout(() => {
+        this.setState({errorActive: !this.state.errorActive})
+      }, 1000);
+    } else {
+      this.updateAfterPost()
+    }
+  }
 
   updateAfterPost() {
     this.nameRef.current.value = "";
@@ -41,17 +54,18 @@ class Contact extends Component {
     this.setState({ postActive: !this.state.postActive });
   };
 
+  hideError = () => {
+    this.setState({errorActive: !this.state.errorActive})
+  }
+
   render() {
-    //  (document.getElementById("map_canvas"), {
-    //    panControl: false,
-    //    zoomControl: false,
-    //    scaleControl: false,
-    // });
+  
     const framegoo =
       '<iframe src="https://snazzymaps.com/embed/112254" width="100%" height="400px" style="border:none;"></iframe>'
       
     return (
       <div>
+        <Header />
         <Helmet>
           <title>Dside ContactUs</title>
         </Helmet>
@@ -98,13 +112,13 @@ class Contact extends Component {
                         <div className="inputs__send">
                           <div className="wrapper-holder__name">
                             <div class="holder__poppup">
-                              <Translate>name</Translate>
+                              <Translate>Name</Translate>
                             </div>
                             <input ref={this.nameRef} type="text" id="name" />
                           </div>
                           <div className="wrapper-holder__phone">
                             <div class="holder__poppup">
-                              <Translate>phone number in format +</Translate>
+                              <Translate>Phone number (With country code)</Translate>
                             </div>
                             <input
                               ref={this.phoneRef}
@@ -171,9 +185,21 @@ class Contact extends Component {
             </div>
           </div>
         </section>
-        {this.state.postActive ? (
-          <Success handleSuccess={this.onSuccess} />
-        ) : null}
+        {this.state.postActive ?  <Success 
+        textSuccess={<Translate>Thank you! We will call you back in 30 seconds!</Translate>} 
+        iconSuccess={ <div class="loader">
+        <svg class="circular">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-color="#f00" stroke-miterlimit="10" />
+        </svg>
+        <svg class="suc">
+            <path class="checkmark__check" fill="none" d="M10.7,20.4l5.3,5.3l12.4-12.5"></path>
+        </svg>
+    </div>}
+        handleSuccess={this.onSuccess} /> : null }
+
+        {this.state.errorActive ?  <ErrorValidate
+        textError={<Translate>Fields are not all filled! Please fill in all fields!</Translate>} 
+        handleError={this.hideError} /> : null }
       </div>
     );
   }

@@ -109,7 +109,7 @@
     .business__title p {
         color: #000000;
         font-family: 'MontBold', sans-serif;
-        font-size: 17px;
+        font-size: 1rem;
         font-weight: 700;
         letter-spacing: 1px;
         margin-left: 7px;
@@ -260,10 +260,13 @@
     .dside__business_process{justify-content: space-between;  align-items: baseline;    padding-left: 3rem;}
     .dside__business_process li{margin-left: 0;}
     .description__business-process p{width: auto; padding-right: 4rem;}
-    .button__back-team img{width: 10px;}
+    .button__back-team img{width: 28px;}
     .button__back-team {
         cursor: pointer;
     }
+    .button__back-team:hover img{  -webkit-animation: flash 0.7s forwards linear 0.16s;
+    -moz-animation: flash 0.7s forwards linear 0.16s;
+    animation: flash 0.7s forwards linear 0.16s;}
 .dside__team-man:nth-child(1) {
         width: 160px;
     }
@@ -375,4 +378,7 @@ left: 561px;
 @media only screen and (min-width: 1024px) {
     .dside__what-content{padding: 0 3rem;}
     .dside__business_process:nth-child(1){margin-left: 3rem;}
+     .description__business-process p{
+        font-size: .8rem;
+    }
 }

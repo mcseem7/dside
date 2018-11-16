@@ -5,6 +5,7 @@ import withDsideApi from '../../../HOC/Fetch'
 import Poppup from '../../../HOC/OrderPopup/index';
 import  Translate  from "translate-components";
 import Success from '../../Success/success';
+import ErrorValidate from '../../ErrorValidate';
 
 class Footer extends Component {
 
@@ -16,15 +17,30 @@ class Footer extends Component {
     this.phoneRef = React.createRef()
 
     this.state = {
-      postActive: false
+      postActive: false,
+      errorActive: false
     }
   }
 
+  
+
   handleSubmit = async (event) => {
     event.preventDefault()
-   await this.props.postData(this.nameRef, this.phoneRef)
-   await this.updateAfterPost()
+    await this.props.postData(this.nameRef, this.phoneRef)
+    await this.checkingValidate()
   }
+
+checkingValidate = () => {
+  if(!this.props.postOrderActive) {
+    this.setState({errorActive: !this.state.errorActive})
+    setTimeout(() => {
+      this.setState({errorActive: !this.state.errorActive})
+    }, 1000);
+  } else {
+    this.updateAfterPost()
+  }
+}
+
 
   updateAfterPost() {
     this.nameRef.current.value = ''
@@ -34,6 +50,10 @@ class Footer extends Component {
 
   onSuccess = () => {
     this.setState({postActive: !this.state.postActive})
+  }
+
+  hideError = () => {
+    this.setState({errorActive: !this.state.errorActive})
   }
 
   render () {
@@ -90,15 +110,29 @@ class Footer extends Component {
             </div>
 
             <div className="social__icons">
-              <a href='http://behance.com' target="_blank" className="social__icon-behance">
+              <a href='http://dishots.com/u/DSIDE' target="_blank" className="social__icon-behance">
               </a>
-              <a href='http://instagram.com' target="_blank" className="social__icon-instagram">
+              <a href='http://instagram.com/dsidepl' target="_blank" className="social__icon-instagram">
               </a>
             </div>
 
           </div>
         </div>
-        {this.state.postActive ?  <Success handleSuccess={this.onSuccess} /> : null }
+        {this.state.postActive ?  <Success 
+        textSuccess={<Translate>Thank you! We will call you back in 30 seconds!</Translate>} 
+        iconSuccess={ <div class="loader">
+        <svg class="circular">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-color="#f00" stroke-miterlimit="10" />
+        </svg>
+        <svg class="suc">
+            <path class="checkmark__check" fill="none" d="M10.7,20.4l5.3,5.3l12.4-12.5"></path>
+        </svg>
+    </div>}
+        handleSuccess={this.onSuccess} /> : null }
+
+        {this.state.errorActive ?  <ErrorValidate
+        textError={<Translate>Fields are not all filled! Please fill in all fields!</Translate>} 
+        handleError={this.hideError} /> : null }
       </footer>
     )
   }
