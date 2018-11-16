@@ -1,6 +1,7 @@
 /* Mobile-First Footer */
     footer {
-        background-color: #f2f0ef;
+        background: url('footer-bg.jpg') repeat;
+        background-size: 34%;
         width: 100%;
         font-family: 'MontLight', sans-serif;
     }
@@ -20,7 +21,6 @@
         -webkit-text-fill-color: transparent;}
     .title__drop h3 {
         margin: 0;
-        cursor: pointer;
         color: #000000;
         font-family: 'MontBold', sans-serif;
         font-size: 1.6rem;
@@ -29,6 +29,7 @@
         display: flex;
         flex-direction: column;
     }
+    #name::-webkit-input-placeholder {font-family:'MontLight',sans-serif;}
     .wrapper__name,
     .wrapper__phone {
         width: 280px;
@@ -47,10 +48,12 @@
         border-right: none;
         color: #000000;
         flex:1;
+        font-family: 'MontLight',sans-serif;
         background: none;
         font-weight: 300;
         border-bottom: 1px solid black;
     }
+
     .wrapper__name,
     .wrapper__phone {
         /* width: 100% ; */
@@ -62,13 +65,6 @@
         font-size: 50px;
     }
 
-
-    .dside__send {
-        border-image-slice: 20;
-        border-image-width: 20;
-        height:  auto;
-        width: 50%;
-    }
 
     .copyright p {
     color: #000000;
@@ -119,24 +115,23 @@
         -o-transition: transform 0.48s cubic-bezier(0.7, 0.3, 0, 1);
         transition: transform 0.48s cubic-bezier(0.7, 0.3, 0, 1);
         transition: transform 0.48s cubic-bezier(0.7, 0.3, 0, 1), -webkit-transform 0.48s cubic-bezier(0.7, 0.3, 0, 1); }
-    .dside__send {
-        width: 80%;
-        display: flex;
-        height: 38px;
-        border: 1px solid red;
-        margin-top: 50px;
-        border-radius: 40px;
-        cursor: pointer;
-        border-image: url('../../sources/images/works__logo/rounded-rectangle-6.png') ;
-        outline:none;
-        background: none;
-        border-image-slice: 33;
-        border-image-width: 20;
-        border-image-outset: 1;
-        border-image-repeat: round;
-        -webkit-justify-content: space-between;
-        justify-content: space-between;
-    }
+  .dside__send {
+    height: 60px;
+    display: flex;
+    background: transparent;
+    border: none;
+    position: relative;
+      cursor: pointer;
+      margin-top: 2rem;
+}
+    .dside__send::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../../sources/images/works__logo/box-btn.svg') no-repeat center center/100%; }
     .button__content{display: flex; -webkit-flex-direction: row;
         flex-direction: row;
         -webkit-align-items: center;
@@ -146,26 +141,22 @@
         width: 100%;
     padding: 0 1em;}
     .button__content img {
-        width: 40px;
+        width: 16px;
         height: 1rem;
         display: -ms-flexbox;
         display: flex;
+        transition: all .3s ease-out;
     }
     .whitespace {
         flex-grow: 1;
     }
     .dside__send span {
         margin-top: 4px;
-        background-image: linear-gradient(to right, #da8c93 0%, #ae6058 100%);
-        background-clip: text;
         color: #000000;
+        font-family: 'MontBold',sans-serif;
+        text-transform: Uppercase;
         font-size: 1.2rem;
-        font-weight: 300;
-        text-transform: uppercase;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
     }
-
 /* Tablets */
 
 @media only screen and (min-width: 480px) {
@@ -265,13 +256,23 @@
     .dside__send {
     width: 40%;
     }
-    .dside__send span{font-size: 1rem;}
+    .dside__send span{font-size: .7rem;}
 }
 /* Laptop */
 
 @media only screen and (min-width: 1024px) {
     .dside__send{width: 30%;}
     .social__icons{display: flex;  align-items: center;}
+    .dside__send:hover > .button__content img {transform: translateX(3px); transition: all .3s ease-out; -webkit-animation: flash 0.7s forwards linear 0.16s;
+    -moz-animation: flash 0.7s forwards linear 0.16s;
+    animation: flash 0.7s forwards linear 0.16s;}
+.question__form p {
+    color: #000000;
+    font-family: 'MontLight', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7rem;
+    font-weight: 300;
+}
 }
 /* Fullpage */
 
@@ -319,8 +320,8 @@
     margin: 7px 8px;
     color: #A3A3A3;
     cursor: auto;
-    font-family: Helvetica;
-    font-size: 11pt;
+    font-family: 'MontLight',sans-serif;
+    font-size: .92rem;
     z-index: 1;
     }
 
@@ -342,4 +343,8 @@
     .inputs__send .wrapper__phone > div .holder {
         font-size: 9pt;
     }
- }   
+ }
+.dside__send:hover::before {
+    -webkit-animation: flash 0.7s forwards linear 0.16s;
+    -moz-animation: flash 0.7s forwards linear 0.16s;
+    animation: flash 0.7s forwards linear 0.16s; }

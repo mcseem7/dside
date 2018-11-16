@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react'
 import './index.css'
 import lang from './langImg.png'
-import pl from './svg/006-poland.svg'
-import ru from './svg/005-russia.svg'
-import en from './svg/united-kingdom.svg'
+import pl from './svg/poland.svg'
+import ru from './svg/russia.svg'
+import en from './svg/uk.svg'
 import { Link, withRouter } from 'react-router-dom'
 import { reactTranslateChangeLanguage } from "translate-components";
 import Helmet from 'react-helmet-async'

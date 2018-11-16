@@ -110,9 +110,9 @@ checkingValidate = () => {
             </div>
 
             <div className="social__icons">
-              <a href='http://behance.com' target="_blank" className="social__icon-behance">
+              <a href='http://dishots.com/u/DSIDE' target="_blank" className="social__icon-behance">
               </a>
-              <a href='http://instagram.com' target="_blank" className="social__icon-instagram">
+              <a href='http://instagram.com/dsidepl' target="_blank" className="social__icon-instagram">
               </a>
             </div>
 

@@ -113,6 +113,7 @@
 .cook__button p {
     font-family: 'MontBold',sans-serif;
     text-align: center;
+    line-height: 1.1rem;
 }
 /* Laptops */
 @media only screen and (min-width: 1024px) {

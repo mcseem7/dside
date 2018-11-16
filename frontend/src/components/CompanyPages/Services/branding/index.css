@@ -51,17 +51,17 @@
 .button-0-2 {
     background-color: #4c9a15 !important;
     background-image: radial-gradient( ellipse at center, #8fde34 0%, rgba(85, 139, 47, 0) 60%, #407719 100% ) !important;
-    width: 186px !important;
-    height: 45px !important;
+    width: 176px !important;
+    height: 40px !important;
     z-index: 1;
-    font-size: 0.8rem !important;
+    font-size: 0.7rem !important;
 }
 .dsided__order-container button{ background-color: #4c9a15 !important;
     background-image: radial-gradient( ellipse at center, #8fde34 0%, rgba(85, 139, 47, 0) 60%, #407719 100% ) !important;
-    width: 186px !important;
-    height: 45px !important;
+    width: 176px !important;
+    height: 40px !important;
     z-index: 1;
-    font-size: 0.8rem !important;}
+    font-size: 0.7rem !important;}
 .louis_bag-text  {
     background-image: linear-gradient(-252deg, rgba(99, 149, 34, 0.6) 0%, rgb(22, 114, 87) 100%);
     -webkit-background-clip: text;

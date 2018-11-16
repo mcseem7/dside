@@ -127,15 +127,18 @@
 
 
 .flag-icon:hover {
-    opacity: 0.7;
+      -webkit-animation: flash 0.7s forwards linear 0.16s;
+    -moz-animation: flash 0.7s forwards linear 0.16s;
+    animation: flash 0.7s forwards linear 0.16s;
 }
 
 .international-flags {
     display: flex;
+    margin-top: 1.4rem;
 }
 
 .modal__right-lang {
-    padding: 3rem;
+    padding: 2.4rem 3rem;
 }
 
 @media screen and (max-width: 560px) {

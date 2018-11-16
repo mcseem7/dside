@@ -1,5 +1,6 @@
   .brands__company-container {
-        background: #171817;
+        background: url('./bg-sheen.jpg');
+        background-size: cover;
         width: 100%;
         padding: 2rem 0;
     }
@@ -23,7 +24,9 @@
 /* Tablets */
 
 @media only screen and (min-width: 480px) {
-
+    .applyyour:hover img{-webkit-animation: flash 0.7s forwards linear 0.16s;
+    -moz-animation: flash 0.7s forwards linear 0.16s;
+    animation: flash 0.7s forwards linear 0.16s; }
     .brands__company {
         max-width: 1200px;
         min-width: 320px;
