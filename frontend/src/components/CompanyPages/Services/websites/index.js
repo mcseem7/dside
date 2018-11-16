@@ -43,7 +43,8 @@ class Website extends Component {
             </HeroVideo>
             <div id="vidtop-content">
               <HeaderService
-                logoHeader={LogoBrand}
+activeLanding={'main__header-website'}
+logoHeader={LogoBrand}
                 stylelogotext={'logo__service-text_website'}
                 serviceSlogan={'DSIDE to make your website SELL BETTER'}
                 imgLogoPosition={'logo__service-img_website'}

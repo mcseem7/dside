@@ -13,12 +13,13 @@ import Translate from "translate-components";
   }
 
   render () {
+    
      const {location} = this.props
     return (
       <div>
-        {location.pathname.match(/services\//gi) ? <Header/> : null}
-<div className="installation">
-  <div className="mars"></div>
+        
+    <div className="installation">
+      <div className="mars"></div>
         <img src={four} className="logo-404" />
         <img src={meteor} className='meteor' />
             <p className='title'><Translate>Oh no!!</Translate></p>
@@ -26,11 +27,12 @@ import Translate from "translate-components";
 	            <Translate>You’re either misspelling the URL</Translate><br /><Translate> or requesting a page that’s no longer here.</Translate>
             </p>
             <div align='center'>
-            	<a className='btn-back' href="https://mydside.com/"><Translate>Back to previous page</Translate></a>
+            	<a className='btn-back' onClick={
+                () =>  this.props.history.goBack()
+              } ><Translate>Back to previous page</Translate></a>
             </div>
             <img src={astro} className="astronaut" />
-</div>
-
+      </div>
       </div>
     )
   }

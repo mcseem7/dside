@@ -6,9 +6,6 @@ import Logo from "./Logo.svg";
 import { NavLink, Link, withRouter } from "react-router-dom";
 import OrderPoppup from "../../../HOC/OrderPopup/index";
 import GradePoppup from "../../../HOC/GradePopup/index";
-import pl from "../../../HOC/ChangeLanguage/svg/006-poland.svg";
-import cz from "../../../HOC/ChangeLanguage/svg/003-czech-republic.svg";
-import ru from "../../../HOC/ChangeLanguage/svg/005-russia.svg";
 import Translate from "translate-components";
 import withPoppupHOC from "../../../HOC/Poppup";
 import withLanguage from "../../../HOC/withLanguage";
@@ -29,9 +26,12 @@ class Header extends Component {
       display: "none",
       modalActiveOrder: false,
       modalActiveGrade: false,
-      lang: ""
+      lang: "",
+      showDefault: 'block'
     };
   }
+
+
 
   showMenu = () => {
     if (this.state.opacity == 1) {
@@ -51,11 +51,11 @@ class Header extends Component {
 
   render() {
     const {history, location} = this.props   
-   
+    
     return (
       <div
         className="header__container"
-        style={{ display: this.props.style, zIndex: 10 }}
+        style={{ display: this.state.showDefault, zIndex: 10 }}
       >
         <header className="basic__header">
           <div className="basic__header-content">
@@ -210,13 +210,15 @@ class Header extends Component {
 
         {<HeaderMenu
         {...this.state}
-        handleShowMenu={this.showMenu}
+         handleShowMenu={this.showMenu}
          handleChangePoppupGrade={this.changePoppupGrade} 
          {...this.props} />}
 
         {this.state.modalActiveOrder ? (
           <OrderPoppup onClose={this.changePoppup} />
         ) : null}
+
+        
           {this.state.modalActiveGrade ? (
           <GradePoppup onClose={this.changePoppupGrade} />
         ) : null}

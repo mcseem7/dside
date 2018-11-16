@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import './index.css'
 import auto from './timer.svg'
 import logoRed from './dsideLogo.svg'
@@ -18,6 +18,8 @@ import arrow from './arrowMeet.png'
 import Translate from 'translate-components'
 import { reactTranslateChangeLanguage } from 'translate-components'
 import Helmet from 'react-helmet-async'
+import Footer from '../../Basic/Footer';
+import Header from '../../Basic/Header';
 
 export default class AbotUs extends Component {
   constructor() {
@@ -132,6 +134,8 @@ export default class AbotUs extends Component {
   render() {
 
     return (
+      <Fragment>
+        <Header/>
       <div>
         <Helmet>
           <title> Dside About </title>
@@ -389,6 +393,8 @@ export default class AbotUs extends Component {
           </div>
         </div>
       </div>
+      <Footer/>
+      </Fragment>
     )
   }
 }

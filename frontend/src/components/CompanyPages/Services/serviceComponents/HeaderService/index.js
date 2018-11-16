@@ -180,7 +180,7 @@ class HeaderService extends Component {
 
                 </div>
               </div> */}
-           <HeaderMenu  {...this.state}
+           <HeaderMenu {...this.state}
          handleChangePoppupGrade={this.changePoppupGrade} 
          {...this.props} />
             

@@ -471,7 +471,7 @@
 }
 
 .grades__head-items {
-    display: flex;
+    display: none;
     margin-top: 50px;
     margin-left: 60px;
 }

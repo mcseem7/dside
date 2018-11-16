@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import "./index.css";
 import next from "./next_post.png";
 import comm from "./hypercomments.png";
@@ -10,6 +10,8 @@ import redirect from "./redirect.svg";
 import { FacebookProvider, Comments } from "react-facebook";
 import { matchPath } from "react-router";
 import withLanguage from "../../../HOC/withLanguage";
+import Footer from "../../Basic/Footer";
+import Header from "../../Basic/Header";
 
 class BlogItem extends Component {
   constructor(props) {
@@ -81,6 +83,8 @@ class BlogItem extends Component {
         this.props.blogItem[NextPostFind + 1]
     });
     return (
+      <Fragment>
+        <Header/>
       <div>
         {this.state.notFound ? null : (
           <div className="blog__post-container">
@@ -201,6 +205,8 @@ class BlogItem extends Component {
           </div>
         )}
       </div>
+   <Footer/>
+   </Fragment>
     );
   }
 }

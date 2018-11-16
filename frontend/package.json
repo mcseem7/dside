@@ -29,6 +29,7 @@
     "loadable-components": "^2.2.2",
     "localstorage-polyfill": "^1.0.1",
     "moment": "^2.22.2",
+    "pagespeed-cli": "^0.2.2",
     "prop-types": "^15.6.2",
     "pure-react-carousel": "^1.13.2",
     "react": "^16.4.1",
@@ -68,7 +69,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "cra-nginx": "node --max_old_space_size=4000 $(which npx) cra-universal build",
     "build:all": "cra-universal build"

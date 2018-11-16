@@ -140,7 +140,7 @@
 
 
 #request-form label {display: none;}
-#thanks{color: rgba(39, 152, 30, 0.93); font-family: 'MontLight', sans-serif;}
+#thanks{font-size: 1rem; color: rgba(39, 152, 30, 0.93); font-family: 'MontLight', sans-serif;}
 #thanks span{color: rgba(20, 32, 44, 0.83);}
 
 
@@ -232,7 +232,11 @@
      }
 
      .holder__poppup {
-         font-size: 9pt;
+         font-size: 7.8pt;
+     }
+
+     #thanks {
+         text-align: center;
      }
 }
     .holder__wrapper {

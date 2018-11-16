@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom'
 import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
 import Translate from 'translate-components'
 import withPoppupHOC from '../Poppup/index'
+import ErrorValidate from '../../components/ErrorValidate/'
+
 
 class OrderPoppup extends Component {
   constructor(props) {
@@ -25,12 +27,13 @@ class OrderPoppup extends Component {
 
 
   render() {
+   
     return(
       <Fragment>
         <div class={`modal-overlay active`}>
           <div class={`modal  active`}>
 
-            <a class="close-modal" href="#" onClick={() => {
+            <a class="close-modal" onClick={() => {
               return  this.props.onClose()
             }}>
               <svg viewBox="0 0 20 20">
@@ -39,8 +42,6 @@ class OrderPoppup extends Component {
             </a>
 
             <div class="modal-content">
-
-
               <div class="form-wrap">
                 {this.state.result ?
                   <div id="form-result">
@@ -50,32 +51,32 @@ class OrderPoppup extends Component {
                       <p><Translate>And you will receive a free consultation on the question that interests you. Usually we call back
                         within 30 seconds.
                       </Translate></p>
-                      <form   id="request-form" className='request-form_order' method="post" autocomplete="off">
+                      <form  onSubmit={
+                          (event) => this.props.getSubmitForm(event, this.nameRef.current.value, this.phoneRef.current.value)
+                        } id="request-form" className='request-form_order' method="post" autocomplete="off">
                         <input type="hidden" name="csrfmiddlewaretoken" value="16en0jPOOddfSpZ8FAdslU61aXFCtePx" />
 
                         <div className='holder__wrapper'>
                           <label for="id_subject">Имя:</label>
-                          <div class="holder__poppup holder__poppup-name"><Translate>name</Translate></div>
-                          <input ref={this.nameRef}  id="id_name" maxlength="50" minlength="3" name="name" required="required" type="text" />
+                          <div class="holder__poppup holder__poppup-name"><Translate>Name</Translate></div>
+                          <input ref={this.nameRef}  id="id_name" maxlength="50" minlength="1" name="name" required="required" type="text" />
                         </div>
                         <div className='holder__wrapper'>
                           <label for="id_sender">Телефон:</label>
-                          <div class="holder__poppup holder__poppup-phone"><Translate>phone number in format +</Translate></div>
+                          <div class="holder__poppup holder__poppup-phone"><Translate>Phone number (With country code)</Translate></div>
                           <input   pattern="^\+[1-9]{1}[0-9]{3,14}$"  ref={this.phoneRef} id="id_phone" maxlength="50" minlength="6" name="phone" required="required" type="tel" />
                         </div>
-                        <button class="button14" onClick={
-                          (event) => this.props.getSubmitForm(event, this.nameRef.current.value, this.phoneRef.current.value)
-                        } ><Translate>Send</Translate></button>
+                        <button class="button14" type='submit' ><Translate>Send</Translate></button>
                       </form>
                     </div>
                 }
-
               </div>
-
             </div>
-
           </div>
         </div>
+        {this.props.statusModal ? <ErrorValidate
+        textError={<Translate>Fields are not all filled! Please fill in all fields!</Translate>} 
+         />  : null}
       </Fragment>
     )
   }

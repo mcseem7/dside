@@ -1222,5 +1222,11 @@
   "ru": "Вернутся на предыдущую страницу",
   "pl": "Wróć na poprzednią stronę",
   "cz": "Návrat na předchozí stránku"
-}
+},
+
+  "Fields are not all filled! Please fill in all fields!": {
+    "ru": "Поля заполнены не все! Заполните пожалуйста все поля!",
+    "pl": "Pola nie są wszystkie wypełnione! Proszę wypełnić wszystkie pola!",
+    "cz": "Vyplňte prosím všechna pole!" 
+  }
 }
