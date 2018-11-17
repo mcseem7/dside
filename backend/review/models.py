@@ -14,6 +14,9 @@ class ReviewText(models.Model):
     text = models.TextField()
     classes = models.CharField(max_length=100)
     review = models.ForeignKey('ReviewItem', on_delete=models.CASCADE)
+    positive = models.BooleanField(default=False)
+    coordinates_x = models.IntegerField(default=0)
+    coordinates_y = models.IntegerField(default=0)
     lang_code = models.CharField(choices=LANGUAGES, max_length=5)
 
     def __str__(self):
@@ -27,12 +30,12 @@ class Grader(models.Model):
     def __str__(self):
         return self.name
 
-
 class ReviewItem(models.Model):
     name = models.CharField(max_length=100)
     date = models.DateTimeField(default=django.utils.timezone.now)
     grade = models.CharField(max_length=2, choices=(('1', '1'), ('2', '2',), ('3', '3'), ('4', '4'), ('5', '5')))
     sent_by = models.CharField(max_length=100)
+    background = models.ImageField()
     graded_by = models.ForeignKey('Grader', on_delete=models.DO_NOTHING)
     social_link = models.URLField()
     views = models.IntegerField(default=0)

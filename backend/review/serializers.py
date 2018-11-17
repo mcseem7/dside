@@ -13,7 +13,7 @@ class RE(serializers.ModelSerializer):
 class ReviewTextSerializer(serializers.ModelSerializer):
     class Meta:
         model = ReviewText
-        fields = ('text', 'classes')
+        fields = ('text', 'classes', "coordinates_x", "coordinates_y", "positive")
 
 
 class ReviewRequestSerializer(serializers.Serializer):
