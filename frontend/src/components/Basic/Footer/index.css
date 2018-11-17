@@ -279,7 +279,6 @@
 }
 }
 /* Fullpage */
-
 @media only screen and (min-width: 1440px) {
 .wrapper__name, .wrapper__phone {
     width: 22%;
