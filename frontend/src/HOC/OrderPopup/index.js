@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react'
 import './index.css'
 import ReactDOM from 'react-dom'
+import arrow from '../arrow.svg'
 import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
 import Translate from 'translate-components'
 import withPoppupHOC from '../Poppup/index'
@@ -56,17 +57,17 @@ class OrderPoppup extends Component {
                         } id="request-form" className='request-form_order' method="post" autocomplete="off">
                         <input type="hidden" name="csrfmiddlewaretoken" value="16en0jPOOddfSpZ8FAdslU61aXFCtePx" />
 
-                        <div className='holder__wrapper'>
+                        <div className='holder__wrapper' >
                           <label for="id_subject">Имя:</label>
                           <div class="holder__poppup holder__poppup-name"><Translate>Name</Translate></div>
-                          <input ref={this.nameRef}  id="id_name" maxlength="50" minlength="1" name="name" required="required" type="text" />
+                          <input  ref={this.nameRef}  id="id_name" maxlength="50" minlength="2" name="name" required="required" type="text" />
                         </div>
                         <div className='holder__wrapper'>
                           <label for="id_sender">Телефон:</label>
                           <div class="holder__poppup holder__poppup-phone"><Translate>Phone number (With country code)</Translate></div>
                           <input   pattern="^\+[1-9]{1}[0-9]{3,14}$"  ref={this.phoneRef} id="id_phone" maxlength="50" minlength="6" name="phone" required="required" type="tel" />
                         </div>
-                        <button class="button14" type='submit' ><Translate>Send</Translate></button>
+                        <button class="button14" type='submit' ><Translate>Send</Translate><img src={arrow} alt="" /></button>
                       </form>
                     </div>
                 }
