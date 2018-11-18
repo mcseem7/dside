@@ -34,6 +34,7 @@ const routes = [
     },
     {
         exact: false,
+        path: '*',
         component: NotFound
     }
 ]
