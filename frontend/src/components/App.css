@@ -1,6 +1,6 @@
 .progress {
     color: #0a0a0a;
-    font-family: "MontBold";
+    font-family: "MontBold", sans-serif;
     font-size: 24px;
     font-weight: 400;
     display: flex;

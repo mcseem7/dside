@@ -375,6 +375,8 @@
         height: 245px;
         position: relative;
     }
+
+    
     
     .wrapper__main-head img {
         max-width: 100%;
@@ -464,17 +466,23 @@
     .header__content .right__content-socials .social__icons {
         display: none;
     }
+    img {
+        max-width: 100%;
+    }
 }
 
 
 .dside__grades-container {
     position: absolute;
     top: 0;
+    width:100%;
 }
 
 .grades__titles {
+    display: flex;
+    justify-content: center;
     margin-top: 40px;
-    margin-left: 55px;
+    margin-bottom: 20px;
 }
 
 .dside__grades-container h3 {
@@ -494,7 +502,7 @@
     margin: 0;
     padding: 0;
     text-align: center;
-    font-family: 'MontBold';
+    font-family: 'MontBold', sans-serif;
     font-size: 14px;
     color: #fff;
 }
@@ -504,13 +512,15 @@
 }
 
 .grades__head-items {
-    display: none;
-    margin-top: 50px;
-    margin-left: 60px;
+    display: flex;
+    justify-content: flex-end;
+    height: 155px;
+    align-items: center
 }
 
 .grade__head-item {
-    margin-right: 35px;
+    margin-right: 20px;
+    margin-left: 10px;
 }
 
 .head-grade__img img:hover {
@@ -539,6 +549,8 @@
     .main__header-content {
         flex-direction: column
     }
+
+   
 
     .menu__header-item:first-child {
         margin-bottom: 0;

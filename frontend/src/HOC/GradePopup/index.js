@@ -20,13 +20,18 @@ class GradePoppup extends Component {
     this.state = {
       modalState: this.props.modalStatus,
       result: props.result,
-      isVerified: false
+      isVerified: false,
+      imgSrc: null
     }
   }
 
   componentWillReceiveProps(nextProps) {
     if(this.state.result != nextProps.result) {
       this.setState({result: nextProps.result})
+    }
+
+    if(this.state.modalState != nextProps.modalStatus) {
+      this.setState({modalState: nextProps.modalStatus})
     }
   }
 
@@ -47,13 +52,19 @@ class GradePoppup extends Component {
     }
   }
 
+  getImage = (event) => {
+    event.preventDefault();
+   this.setState({imgSrc: event.target.files[0]}) 
+  }
  
   render() {
     return(
       <Fragment>
-        <div class={`modal-overlay active`}>
-          <div class={`modal  active`}>
-
+        <div class={`modal-overlay ${this.state.modalState ? 'active' : ''}`}>
+          <div style={{
+            minHeight: '40rem'
+          }} class={`modal  ${this.state.modalState ? 'active' : ''}`}>
+{this.state.modalState ? <Fragment>
             <a class="close-modal"  onClick={() => {
               return  this.props.onClose()
             }}>
@@ -72,17 +83,18 @@ class GradePoppup extends Component {
                   </div> :  <div id="form-itself">
                   <h3><Translate>Add your proposal for the new post!</Translate></h3>
                                         <p><Translate>We publish a post on your topic within three days after your application.</Translate></p>
-                      <form  onSubmit={(event) => this.props.getSubmitForm(
-                          event,
+                      <form  onSubmit={(event) => {
+                      event.preventDefault();
+                      this.props.getSubmitForm(
                          this.nameRef, 
                          this.emailRef,
                          this.socialRef, 
                          this.textGradeRef,
-                         this.titleRef, 
-                         this.imageRef,
+                         this.titleRef,
+                         this.state.imgSrc, 
                          this.handleSubscribe,
                          this.state.isVerified
-                         )} id="request-form" className='request-form_grade' method="post"  autocomplete="off">
+                         )}} id="request-form" className='request-form_grade' method="post"  autocomplete="off">
                         <input type="hidden" name="csrfmiddlewaretoken" value="16en0jPOOddfSpZ8FAdslU61aXFCtePx" />
 
                         <div className='holder__wrapper'>
@@ -108,7 +120,7 @@ class GradePoppup extends Component {
                         <div className='holder__wrapper workUpload'>
             
                           <label for="file"><Translate>Choose your work to upload</Translate></label>
-                          <input  ref={this.imageRef} id="id_image"  name="image" required="required" type="file" />
+                          <input  onChange={(event) => this.getImage(event)} ref={this.imageRef} id="id_image"  name="image" required="required" type="file" />
                         </div>
                         <div id='recaptcha'>
                         <ReCAPTCHA
@@ -124,7 +136,7 @@ class GradePoppup extends Component {
               </div>
 
             </div>
-
+            </Fragment> : null }
           </div>
         </div>
       </Fragment>

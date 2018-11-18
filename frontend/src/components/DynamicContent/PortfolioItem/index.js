@@ -37,6 +37,7 @@ import Header from '../../Basic/Header';
 
 
   async componentDidMount() { 
+    window.scrollTo(0,0);
     const {language, history} = this.props
     const match = await matchPath(history.location.pathname, {
       path: `/${language}/portfolio/:portfolioitem`,
@@ -71,7 +72,7 @@ import Header from '../../Basic/Header';
   render() {
     return (
       <Fragment>
-        <Header/>
+    
       <div className="container__portfolio-item">
         <div className="portfolio__header_item-wrapper" style={{ backgroundImage: `url(${process.env.REACT_APP_DOMAIN}${this.state.itemPortfolio.main_image})` }}>
           <div className="header__portfolio-content">

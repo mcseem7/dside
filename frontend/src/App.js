@@ -31,6 +31,7 @@ import routes from './routes'
 import Welcome from './Welcome'
 import Helmet from 'react-helmet-async'
 import $ from 'jquery'
+import HeaderService from "./components/CompanyPages/Services/serviceComponents/HeaderService";
 
 
 class App extends Component {
@@ -40,7 +41,7 @@ class App extends Component {
 
         this.state = {
             cook: true,
-           
+            mounted: false,
             orientation: false,
             preload: false
         }
@@ -57,6 +58,7 @@ class App extends Component {
 
     componentDidMount() {
         window.scrollTo(0, 0)
+        this.setState({mounted: true})
         reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
         const spinner = $('#loading');
         if (spinner && !$(spinner).addClass('final_render loaded')) {
@@ -103,7 +105,9 @@ class App extends Component {
             return str.split(' ').some(function (w) { return w === word })
         }
         const { routes, initialData } = this.props
-     
+        
+            
+        
         return (
             <TranslateProvider translations={translations} defaultLanguage={'en'}>
                 <Fragment>
@@ -124,37 +128,46 @@ class App extends Component {
                 { <div className="App">
              <Route exact path="/" component={Welcome} />
              <Route path={'/:language'} render={(props) => {
-             
+                 const matchUrl = ['videos', 'logo',  'website', 'brand', 'automation', 'advertising'].indexOf(props.location.pathname.substr(13));
+                 function getHeader() {
+                 if (matchUrl == -1 ) {
+                    return (<Header domenErty={props.match.params.language} style={'block'} />)
+                 } else {
+                     return (
+                        <Header domenErty={props.match.params.language} style={'none'} /> 
+                     )
+                 }
+                }
                  return (
                      <TransitionGroup>
 
-                         {/* {props.location.pathname.match(/services\//gi) ? <Header domenErty={props.match.params.language} style={'none'} /> : <Header domenErty={props.match.params.language} style={'block'} />} */}
+                         {getHeader()}
                         
-                         <CSSTransition key={props.location.key} timeout={1000} classNames="fade">
+                         <CSSTransition  key={props.location.key} timeout={1000} classNames="fade">
                         
                              <Switch>
-                                    {Array.prototype.map.call(routes, ((route, index) => {
-                                     return (
-                                         <Route
-                                             key={index}
-                                             path={route.path}
-                                             exact={route.exact}
-                                             render={props =>
-                                                 createElement(route.component, {
-                                                     ...props,
-                                                     routes: route.routes,
-                                                     initialData: initialData || null
-                                                 })
-                                             }
-                                         />
-                                     );
-                                 }))}
+                                 
+                            { Array.prototype.map.call(routes, ((route, index) => {
+                return (
+                    <Route
+                        key={index}
+                        path={route.path}
+                        exact={route.exact}
+                        render={props =>
+                            createElement(route.component, {
+                                ...props,
+                                routes: route.routes,
+                                initialData: initialData || null
+                            })
+                        }
+                    />
+                );
+            }))} 
+                                    
                              </Switch>
 
 
                          </CSSTransition>
-
-                         {/* {findWord('/contactus', props.location.pathname.substr(3)) || findWord('services', props.location.pathname.substr(4,8))  ? <Footer style={'none'} /> : <Footer style={'block'} />} */}
                      </TransitionGroup>)
              }} />
 

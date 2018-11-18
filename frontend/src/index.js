@@ -19,7 +19,7 @@ const countryCode = ['ru', 'cz', 'pl', 'en'].filter((code) => {
   return code == window.location.pathname.substr(1,2) 
 })
 
-localStorage.setItem('lang',  countryCode.length == 0 ?  nowLang : countryCode)
+localStorage.setItem('lang',   countryCode)
 const getIdentityDomen = window.location.pathname
 const data = window.__INITIAL_DATA__;
 

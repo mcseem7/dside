@@ -54,7 +54,7 @@ class Portfolio extends Component {
  render() {
     return (
       <Fragment>
-        <Header/>
+        
       <div>
         <section className="portfolio__items-category">
           <Helmet>

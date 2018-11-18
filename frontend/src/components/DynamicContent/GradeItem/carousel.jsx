@@ -37,7 +37,7 @@ class Carousel  extends Component {
                       }}>
                   <div className='recent__grade-img'>
                   {/* <Image alt="" src={`${process.env.REACT_APP_DOMAIN}${item.graded_by.avatar}`} /> */}
-                  <Image alt="" src={Review} />
+                  <Image alt="" src={`${process.env.REACT_APP_DOMAIN}${item.background}`} />
                   </div> 
                   <div className='recent__grade-date'>
                   <span>{moment(item.date).format("D MMM")}</span>
