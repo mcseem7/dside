@@ -43,11 +43,11 @@ import $ from "jquery";
       });
     }
 
-    handleSubmit = async (event, ...postData) => {
-      await event.preventDefault();
+    handleSubmit =  (...postData) => {
+   
       switch (type) {
         case "ORDER":
-          await this.setState({
+           this.setState({
             postData: {
               name: postData[0],
               phone: postData[1],
@@ -56,17 +56,17 @@ import $ from "jquery";
           });
           break;
         case "SUGGEST":
-          await this.setState({
+         this.setState({
             postData: {
               name: postData[0].current.value,
               email: postData[1].current.value,
-              social_link: 'http://' + postData[2].current.value,
+              social_link: postData[2].current.value,
               text: postData[3].current.value
             }
           });
           break;
         case "REVIEW":
-          await postData[6]()
+          postData[6]()
           if(postData[7] == true) {
            this.setState({
             postData: {
@@ -75,14 +75,14 @@ import $ from "jquery";
               social_link: postData[2].current.value,
               text: postData[3].current.value,
               title: postData[4].current.value,
-              image: postData[5].current.value
+              image: postData[5]
             }
           })} else {
             return false;
           }
           break;
       default:
-        await null    
+        return null    
       }
       fetch(`${process.env.REACT_APP_API}/${this.state.lang}${apiUrl}`, {
         headers: {

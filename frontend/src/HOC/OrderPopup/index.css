@@ -116,7 +116,7 @@
 }
 
 #form-itself p {
-    font-family: 'MontLight';
+    font-family: 'MontLight', sans-serif;
     font-weight: normal;
     letter-spacing: 0.02em;
     text-align: center;

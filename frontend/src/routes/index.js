@@ -33,9 +33,8 @@ const routes = [
         component: GradeItem
     },
     {
-        component: NotFound,
         exact: false,
-        path: '*' 
+        component: NotFound
     }
 ]
 

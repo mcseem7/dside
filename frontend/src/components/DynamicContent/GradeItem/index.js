@@ -12,9 +12,10 @@ import arrow from "./arrow.png";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import Carousel from "./carousel";
 import ItemModal from "./ItemModal";
-import Helmet from 'react-helmet-async'
+import Helmet from "react-helmet-async";
 import Footer from "../../Basic/Footer";
 import Header from "../../Basic/Header";
+import Loader from "react-loader-spinner";
 
 class GradeItem extends Component {
   constructor() {
@@ -25,7 +26,8 @@ class GradeItem extends Component {
       gradeItems: [],
       avatar: "",
       text: [],
-      activeSlide: null
+      activeSlide: null,
+      loader: false
     };
   }
 
@@ -35,23 +37,35 @@ class GradeItem extends Component {
       exact: true,
       strict: false
     });
-    
+
     return await fetch(
       `${process.env.REACT_APP_API}/${
         this.props.language
       }/review/getReviewDetails/${match.params.gradeitem}/`
     )
       .then(response => {
-       
+        if(response.status >= 400) {
+          throw new Error()
+        } 
         return response.json();
       })
       .then(response => {
-       if(Object.keys(response).length == 0) {
-        return this.props.history.push(`/${this.props.language}/notfound`)    
-      } else {
-        this.setState({ grade: response, avatar: response.graded_by, text: response.text_blocks });
-      }
-      }).catch(error => {
+        if (Object.keys(response).length == 0) {
+          return this.props.history.push(`/${this.props.language}/notfound`);
+        } else {
+          this.setState({
+            grade: response,
+            avatar: response.graded_by,
+            text: response.text_blocks
+          }, );
+        }
+      }).then(() => {
+        setTimeout(() => {
+        this.setState({loader: true})
+        }, 1300)
+      })
+      .catch(error => {
+       
         console.error("GradeItem dont loading");
       });
   }
@@ -65,30 +79,15 @@ class GradeItem extends Component {
   render() {
     const { grade } = this.state;
     const { gradeItem, history } = this.props;
-    const items = [
-      {
-        id: 1,
-        name: "Good one",
-        description: "Lorem ipsum dolor sit amet"
-      },
-      {
-        id: 2,
-        name: "Good two",
-        description: "Lorem ipsum dolor sit amet"
-      },
-      {
-        id: 3,
-        name: "Good three",
-        description: "Lorem ipsum dolor sit amet"
-      }
-    ];
+ 
+    console.log(this.props);
     return (
       <Fragment>
-        <Header/>
+      
         <div className="review__container-wrapper">
-        <Helmet>
-          <title>Dside Review</title>
-        </Helmet>
+          <Helmet>
+            <title>Dside Review</title>
+          </Helmet>
           <div className="review__container">
             <div className="review__information-left">
               <div className="review__title-wrapper">
@@ -98,20 +97,25 @@ class GradeItem extends Component {
               </div>
               <div className="review__image-container">
                 <div className="grader__modal-content">
-                  <img src={gradeReview} />
-
-                  {items.map(item => {
-                    return <ItemModal {...item} />;
-                  })}
+                  <img
+                    src={`${process.env.REACT_APP_DOMAIN}${grade.background}`}
+                  />
+                  {
+                    Object.keys(this.state.text).map((item, index) => {
+                      return (
+                        <ItemModal id={item} textData={this.state.text[item]} {...item} />
+                      )
+                    })
+                  }
                 </div>
               </div>
-              {this.state.text.map(item => {
+              {/* {this.state.text.map(item => {
                 return (
                   <div className="grade-text__description">
                     <p className={item.classes}>{item.text}</p>
                   </div>
                 );
-              })}
+              })} */}
 
               <div className="grade-comment__body-post">
                 <div id="grade-comment__container">
@@ -119,7 +123,6 @@ class GradeItem extends Component {
                     <Comments
                       width="100%"
                       max-width="700px"
-                      mobile="true"
                       href={`${process.env.REACT_APP_DOMAIN}/${
                         this.state.lang
                       }/grade/${grade.id}`}
@@ -136,34 +139,57 @@ class GradeItem extends Component {
                     <h3 className="review__grader">Graded by:</h3>
                   </div>
                   <br />
-                  <div className="review__grader-information">
-                    <div className="review__grader-img">
-                      <img
-                        src={`${process.env.REACT_APP_DOMAIN}${
-                          this.state.avatar.avatar
-                        }`}
-                      />
+                  {this.state.loader ? (
+                    <div className={`review__grader-information ${this.state.loader ? 'active' : ''}`}
+                    >
+                      <div className="review__grader-img">
+                        <img
+                          src={`${process.env.REACT_APP_DOMAIN}${
+                            this.state.avatar.avatar
+                          }`}
+                        />
+                      </div>
+                      <div className="grader__name">
+                        <p>{this.state.avatar.name}</p>
+                      </div>
                     </div>
-                    <div className="grader__name">
-                      <p>{this.state.avatar.name}</p>
-                    </div>
-                  </div>
+                  ) : (
+                    <p>Loading...</p>
+                  )}
 
                   <div className="grades__recents-review">
                     <div className="recent__title-grades">
                       <h3>Recent</h3>
                     </div>
 
-                    <div className="similar__grades">
-                      <Carousel {...this.props} />
-                    </div>
+                    
+                      
+                       
+                          
+                          {this.state.loader ? (
+                          <div className={`similar__grades ${this.state.loader ? 'active' : ''}`} >
+                          <Carousel {...this.props} />
+                          </div>
+                          ) : (
+                            <Loader
+                              type="Triangle"
+                              color="#00BFFF"
+                              height="100"
+                              width="100"
+                            />
+                          )}
+                         
+                       
+                      
+                     
+                   
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </Fragment>
     );
   }

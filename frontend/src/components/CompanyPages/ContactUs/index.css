@@ -45,7 +45,7 @@
     font-size: 18px;
     line-height: 17px;
     color: rgb(17,17,17);
-    font-family: "MontBold";
+    font-family: "MontBold", sans-serif;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -76,14 +76,14 @@
     font-size: 18px;
     line-height: 17px;
     color: rgb(117,149,241);
-    font-family: "MontBold";
+    font-family: "MontBold", sans-serif;
     font-weight: bold;
 }
 
 .right__form_phone h2 {
     font-size: 22px;
     color: rgb(255,255,255);
-    font-family: "MontBold";
+    font-family: "MontBold", sans-serif;
     font-weight: bold;
 }
 
@@ -91,7 +91,7 @@
     font-size: 18px;
     line-height: 17px;
     color: rgb(117,149,241);
-    font-family: "MontBold";
+    font-family: "MontBold", sans-serif;
     font-weight: bold;
 }
 

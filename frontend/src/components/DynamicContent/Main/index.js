@@ -35,7 +35,7 @@ export default class Main extends Component {
   render () {
     return (
       <Fragment>
-        <Header/>
+       
       <div> 
       
        <Helmet>

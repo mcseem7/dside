@@ -135,7 +135,7 @@ export default class AbotUs extends Component {
 
     return (
       <Fragment>
-        <Header/>
+       
       <div>
         <Helmet>
           <title> Dside About </title>

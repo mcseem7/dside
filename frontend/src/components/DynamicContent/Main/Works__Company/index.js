@@ -79,7 +79,7 @@ export default class Works extends Component {
             </div>
           </div>
         </div>
-        {this.state.modalActive ? <Poppup onClose={this.changePoppup} /> :  null}
+      <Poppup modalStatus={this.state.modalActive} onClose={this.changePoppup} /> 
       </section>
     )
   }
