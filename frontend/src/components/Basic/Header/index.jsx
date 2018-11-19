@@ -26,8 +26,7 @@ class Header extends Component {
       display: "none",
       modalActiveOrder: false,
       modalActiveGrade: false,
-      lang: "",
-      showDefault: 'block'
+      lang: ""
     };
   }
 
@@ -55,7 +54,7 @@ class Header extends Component {
     return (
       <div
         className="header__container"
-        style={{ display: this.state.showDefault, zIndex: 10 }}
+        style={{ display: this.props.style, zIndex: 10 }}
       >
         <header className="basic__header">
           <div className="basic__header-content">
@@ -214,14 +213,12 @@ class Header extends Component {
          handleChangePoppupGrade={this.changePoppupGrade} 
          {...this.props} />}
 
-        {this.state.modalActiveOrder ? (
-          <OrderPoppup onClose={this.changePoppup} />
-        ) : null}
-
         
-          {this.state.modalActiveGrade ? (
-          <GradePoppup onClose={this.changePoppupGrade} />
-        ) : null}
+          <OrderPoppup modalStatus={this.state.modalActiveOrder} onClose={this.changePoppup} />
+        
+       
+          <GradePoppup modalStatus={this.state.modalActiveGrade} onClose={this.changePoppupGrade} />
+       
       </div>
     );
   }

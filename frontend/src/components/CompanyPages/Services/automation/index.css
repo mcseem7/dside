@@ -47,7 +47,7 @@
 
 
 .contentby__vova h3  {
-    font-family: "MontBold";
+    font-family: "MontBold", sans-serif;
     font-size: 24px;
     font-weight: 700;
     line-height: 31.87px;
@@ -55,19 +55,19 @@
 }
 
 .contentby__vova p {
-    font-family: "MontLight";
+    font-family: "MontLight", sans-serif;
     font-weight: 300;
     margin-top: 0;
 }
 
 .name__developer {
-    font-family: "MontBold";
+    font-family: "MontBold", sans-serif;
     font-size: 12px;
     font-weight: 700;
 }
 
 .position__developer {
-    font-family: "MontLight";
+    font-family: "MontLight", , sans-serif;
     font-size: 12px;
     font-weight: 300;
 }

@@ -44,7 +44,7 @@ figure.effect-marley p {
     -webkit-transform: translate3d(0,100%,0);
     transform: translate3d(0,100%,0);
     font-size: 28px;
-    font-family: "MontLight";
+    font-family: "MontLight", sans-serif;
     font-weight: 300;
 }
 
@@ -148,7 +148,7 @@ figure.effect-marley p {
     font-size: 12px;
     line-height: 9px;
     color: #fff;
-    font-family: "MontBold";
+    font-family: "MontBold", 'sans-serif' ;
     display: none;
     text-decoration: none;
     white-space: nowrap;
@@ -169,7 +169,7 @@ figure.effect-marley p {
     word-spacing: -0.15em;
     font-size: 19px;
     color: #fff;
-    font-family: "MontLight";
+    font-family: "MontLight", sans-serif;
 }
 
 .grid figure h2 span {

@@ -45,6 +45,7 @@
     "react-hero-video": "^0.1.1",
     "react-html-document": "^3.1.0",
     "react-loadable": "^5.5.0",
+    "react-loader-spinner": "^2.2.0",
     "react-modal-video": "^1.2.1",
     "react-moment": "^0.8.3",
     "react-screen-orientation": "0.0.3",

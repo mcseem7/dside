@@ -25,15 +25,20 @@ class SuggestPoppup extends Component {
         if(this.state.result != nextProps.result) {
             this.setState({result: nextProps.result})
         }
+        if(this.state.modalState != nextProps.modalStatus) {
+            this.setState({modalState: nextProps.modalStatus})
+       }
     }
 
     render() {
+     
         return(
             <Fragment>
-                <div class={`modal-overlay active`}>
-                    <div class={`modal  active`}>
+                <div class={`modal-overlay ${this.state.modalState ? 'active' : ''}`}>
+          <div class={`modal  ${this.state.modalState ? 'active' : ''}`}>
 
-                        <a class="close-modal"  onClick={() => {
+{this.state.modalState ? <Fragment>
+               <a class="close-modal"  onClick={() => {
                             return  this.props.onClose()
                         }}>
                             <svg viewBox="0 0 20 20">
@@ -62,7 +67,7 @@ class SuggestPoppup extends Component {
                                             </div>
                                             <div>
                                                <div class="holder__poppup holder__poppup-name"><Translate>social-link</Translate></div>
-                                                <input  ref={this.socialRef} id="id_topic" maxLength="50" minLength="2" name="social-link" required="required" type="text"/>
+                                                <input  ref={this.socialRef} id="id_topic" pattern="https://.*" maxLength="50" minLength="2" name="social-link" required="required" type="url"/>
                                             </div>
 
                                             <div>
@@ -78,6 +83,8 @@ class SuggestPoppup extends Component {
                             </div>
 
                         </div>
+</Fragment> : null}
+         
 
                     </div>
                 </div>

@@ -28,6 +28,7 @@ class BlogItem extends Component {
   }
 
   async componentDidMount() {
+    window.scrollTo(0,0);
     const match = await matchPath(this.props.history.location.pathname, {
       path: `/${this.props.language}/blog/:blogitem`,
       exact: true,
@@ -84,7 +85,7 @@ class BlogItem extends Component {
     });
     return (
       <Fragment>
-        <Header/>
+       
       <div>
         {this.state.notFound ? null : (
           <div className="blog__post-container">

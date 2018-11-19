@@ -1,6 +1,6 @@
 /* Mobile-First Footer */
     footer {
-        background: url('footer-bg.jpg') repeat;
+        background: #f0edec;
         background-size: 34%;
         width: 100%;
         font-family: 'MontLight', sans-serif;
@@ -15,6 +15,11 @@
     line-height: 1.5;
     max-width: 100%;
     }
+    .shining-underline-cf input{border-bottom: 1px solid #d0d1d2; line-height: 1.2rem; padding-left: 5px; font-size: .8rem;}
+    .shining-underline-cf input:invalid:not(:focus){border-color: #d0d1d2;}
+    .shining-underline-cf input:focus { border-color: #000000;  transition: all .1s ease-in; background: #f0edec !important; position: relative; z-index: 2; }
+    .shining-underline-cf input:valid{border-color: rgba(0, 0, 0, 0.83);}
+    .shining-underline-cf input:valid{background: #f0edec  url('../../sources/images/works__logo/check.svg') no-repeat scroll 240px 0px !important; transition: all 0s;}
     .golden{ background-image: linear-gradient(to right, #d99b91 0%, #ad6f59 100%);
         background-clip: text;
         -webkit-background-clip: text;
@@ -48,10 +53,10 @@
         border-right: none;
         color: #000000;
         flex:1;
+        background: #f0edec;
         font-family: 'MontLight',sans-serif;
-        background: none;
+        line-height: 1.2rem;
         font-weight: 300;
-        border-bottom: 1px solid black;
     }
 
     .wrapper__name,
@@ -227,8 +232,6 @@
     display: flex;
 }
 .wrapper__phone{margin-left: 3rem;}
-
-
  .inputs__send {
         flex-direction: row;
     }
@@ -276,10 +279,9 @@
 }
 }
 /* Fullpage */
-
 @media only screen and (min-width: 1440px) {
 .wrapper__name, .wrapper__phone {
-    width: 25%;
+    width: 22%;
 }
     .dside__send {
     width: 17%;
@@ -318,11 +320,12 @@
 
 .holder {
     position: absolute;
-    margin: 7px 8px;
+    padding-left: 5px;
     color: #A3A3A3;
     cursor: auto;
+    line-height: 2rem;
     font-family: 'MontLight',sans-serif;
-    font-size: .92rem;
+    font-size: .8rem;
     z-index: 1;
     }
 

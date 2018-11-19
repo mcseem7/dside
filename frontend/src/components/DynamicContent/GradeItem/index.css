@@ -1,3 +1,7 @@
+
+
+
+
 .review__container-wrapper {
     background: #F2F3F5;
 }
@@ -29,7 +33,7 @@
 .get-earlier__button,
 .recent__title-grades h3   {
     color: #000000;
-    font-family: "MontBold";
+    font-family: "MontBold", 'sans-serif' ;
 }
 
 .review__image-container img {
@@ -60,8 +64,38 @@
     align-items: center;
 }
 
+
 .review__grader-information {
     display: flex;
+    opacity: 0;
+}
+
+.review__grader-information.active {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+	animation-timing-function: ease;
+	animation-duration: 0.9s;
+}
+
+.similar__grades {
+    opacity: 0;
+}
+
+.similar__grades.active {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.9s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .grader__name p {
@@ -106,7 +140,7 @@ left: 12px;
 .recent__grade-date span {
     font-size: 12px;
     color: #ffffff;
-    font-family: 'MontBold';
+    font-family: 'MontBold', 'sans-serif' ;
 }
 
 .similar__grades {
