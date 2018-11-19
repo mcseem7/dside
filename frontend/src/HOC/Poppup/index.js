@@ -82,7 +82,7 @@ import $ from "jquery";
       default:
         return null    
       }
-      fetch(`https://mydside.com/api/${this.props.language}${apiUrl}`, {
+      fetch(`${process.env.REACT_APP_API}/${this.props.language}${apiUrl}`, {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json"
