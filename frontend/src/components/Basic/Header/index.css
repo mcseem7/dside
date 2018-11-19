@@ -507,9 +507,9 @@
     color: #fff;
 }
 
-.head-grade__img img {
+/* .head-grade__img img {
     border-radius: 15%;
-}
+} */
 
 .grades__head-items {
     display: flex;

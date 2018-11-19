@@ -110,33 +110,25 @@ class Contact extends Component {
                     <div className="sending__form">
                       <form onSubmit={this.handleSubmit} id="form__dside">
                         <div className="inputs__send">
-                          <div className="wrapper-holder__name">
-                            <div class="holder__poppup">
-                              <Translate>Name</Translate>
-                            </div>
-                            <input ref={this.nameRef} type="text" id="name" />
-                          </div>
-                          <div className="wrapper-holder__phone">
-                            <div class="holder__poppup">
-                              <Translate>Phone number (With country code)</Translate>
-                            </div>
-                            <input
-                              ref={this.phoneRef}
-                              pattern="^\+[1-9]{1}[0-9]{3,14}$"
-                              id="phone"
-                              type="phone"
-                            />
-                          </div>
+                        <div className="wrapper__name contact-input">
+                    <div className="shining-underline-cf ">
+                    <div class="holder service__contact"><Translate>Name</Translate></div>
+                      <input style={{background:'none'}} ref={this.nameRef} maxlength="50" minlength="2" type="text" id="name" required="required" /><span></span>
+                    </div>
+                  </div> 
+                  <div className="wrapper__phone contact-input">
+                    <div className="shining-underline-cf ">
+                      <div class="holder service__contact"><Translate>Phone number (With country code)</Translate></div>
+                      <input style={{background:'none'}} pattern="^\+[1-9]{1}[0-9]{3,14}$"  ref={this.phoneRef} id="phone" maxlength="50" minlength="6" type="tel" required="required" /><span></span>
+                  </div>
+                  </div>
                         </div>
 
                         <button className="dside__send">
-                          <div className="button__content">
-                            <span className="send__title">
-                              <Translate>Send</Translate>
-                            </span>{" "}
-                            <img src={arrow} alt="" />
-                          </div>
-                        </button>
+                  <div className="button__content">
+                    <span><Translate>Send</Translate></span><div class="whitespace"></div><img src={arrow} alt="" />
+                  </div>
+                </button>
                       </form>
                     </div>
                   </div>

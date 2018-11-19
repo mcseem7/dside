@@ -6,6 +6,8 @@ import { reactTranslateChangeLanguage, TranslateProvider } from "translate-compo
 import Translate from 'translate-components'
 import withPoppupHOC from '../Poppup/index'
 import ErrorValidate from '../../components/ErrorValidate/'
+import withLanguage from '../withLanguage/index'
+import {compose} from 'recompose'
 
 
 class OrderPoppup extends Component {
@@ -20,6 +22,8 @@ class OrderPoppup extends Component {
     }
   }
 
+ 
+
   componentWillReceiveProps(nextProps) {
     if(this.state.result != nextProps.result) {
       this.setState({result: nextProps.result})
@@ -30,9 +34,13 @@ class OrderPoppup extends Component {
     }
   }
 
+  componentDidUpdate() {
+    reactTranslateChangeLanguage.bind(this, this.props.language)();
+  }
+
 
   render() {
-    console.log(this.state.modalState)
+   
     return(
       <Fragment>
         <div class={`modal-overlay ${this.state.modalState ? 'active' : ''}`}>
@@ -57,8 +65,10 @@ class OrderPoppup extends Component {
             within 30 seconds.
           </Translate></p>
           <form  onSubmit={
-              (event) => this.props.getSubmitForm(event, this.nameRef.current.value, this.phoneRef.current.value)
-            } id="request-form" className='request-form_order' method="post" autocomplete="off">
+              (event) => {
+              event.preventDefault(); 
+              this.props.getSubmitForm(this.nameRef.current.value, this.phoneRef.current.value)
+            }} id="request-form" className='request-form_order' method="post" autocomplete="off">
             <input type="hidden" name="csrfmiddlewaretoken" value="16en0jPOOddfSpZ8FAdslU61aXFCtePx" />
 
             <div className='holder__wrapper' >
@@ -87,6 +97,10 @@ class OrderPoppup extends Component {
 
 }
 
-export  default withPoppupHOC(OrderPoppup, '/home/addOrder/', 'ORDER')
 
 
+
+export default compose(
+  withLanguage,
+ withPoppupHOC
+)(OrderPoppup, '/home/addOrder/', 'ORDER')
