@@ -69,7 +69,7 @@ class OrderPoppup extends Component {
               event.preventDefault(); 
               this.props.getSubmitForm(this.nameRef.current.value, this.phoneRef.current.value)
             }} id="request-form" className='request-form_order' method="post" autocomplete="off">
-            <input type="hidden" name="csrfmiddlewaretoken" value="16en0jPOOddfSpZ8FAdslU61aXFCtePx" />
+            
 
             <div className='holder__wrapper' >
               <label for="id_subject">Имя:</label>

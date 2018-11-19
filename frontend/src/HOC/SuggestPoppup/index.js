@@ -63,7 +63,7 @@ class SuggestPoppup extends Component {
                                         <p><Translate>We publish a post on your topic within three days after your application.</Translate></p>
                                         <form onSubmit={(event) => { event.preventDefault(); this.props.getSubmitForm(
                                            this.nameRef, this.emailRef, this.socialRef, this.topicRef)}}   id="request-form" className='request-form_blog' method="post" autocomplete="off">
-                                            <input type="hidden" name="csrfmiddlewaretoken" value="16en0jPOOddfSpZ8FAdslU61aXFCtePx" />
+                                         
 
                                             <div className='holder__wrapper'>
                                                 <div class="holder__poppup holder__poppup-name"><Translate>post name</Translate></div>

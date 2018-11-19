@@ -103,7 +103,7 @@ class GradePoppup extends Component {
                          this.handleSubscribe,
                          this.state.isVerified
                          )}} id="request-form" className='request-form_grade' method="post"  autocomplete="off">
-                        <input type="hidden" name="csrfmiddlewaretoken" value="16en0jPOOddfSpZ8FAdslU61aXFCtePx" />
+                       
 
                         <div className='holder__wrapper'>
                           <div class="holder__poppup holder__poppup-name"><Translate>review name</Translate></div>
