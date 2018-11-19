@@ -30,6 +30,7 @@ import logoHeader from "../logos/logo__header-service.png";
 import withDsideApi from "../../../../HOC/Fetch";
 import { HeroVideo } from "react-hero-video";
 import Helmet from 'react-helmet-async'
+import OrderPopup from '../../../../HOC/OrderPopup/index';
 
 class BrandPage extends Component {
     constructor() {
@@ -338,7 +339,7 @@ class BrandPage extends Component {
                 <Own />
                 <LimitedService />
                 <Footer/>
-                {this.state.modalActive ? <Poppup onClose={this.changePoppup} /> : null}
+                <OrderPopup modalStatus={this.state.modalActive} onClose={this.changePoppup} />
             </div>
         )
     }

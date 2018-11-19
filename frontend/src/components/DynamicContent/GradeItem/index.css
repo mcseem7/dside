@@ -48,9 +48,12 @@
 
 .review__grader-img img {
     max-width: 100%;
-    border-radius: 20%;
+    border-radius: 50%;
 }
 
+.review__grader-img {
+    width: 70px;
+}
 
 
 .review__information-left,
@@ -99,16 +102,26 @@
 }
 
 .grader__name p {
-    font-size: 14px;
+    font-size: 12px;
+    margin: 0;
+}
+
+.grader__position p {
+    font-size: 12px;
+    margin: 0;
+    font-family: 'MontLight', 'sans-serif'
 }
 
 .recent__title-grades h3 {
     font-size: 21px;
 }
 
-.grader__name {
-    margin-left: 10px;
+.reviewers__data {
+    display: flex;
+    flex-direction: column
 }
+
+
 
 .grades__recents-review {
     display: flex;
@@ -125,6 +138,12 @@
 .recent__grade-img img {
     max-width: 100%;
     border-radius: 10px;
+}
+.reviewers__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
 }
 
 .recent__grade-wrapper {
@@ -194,6 +213,10 @@ left: 12px;
     align-items: center;
 }
 
+.recent__grade {
+    padding-bottom: 91% !important;
+}
+
 
 .similar__grades > div > button {
     border: none;
@@ -217,6 +240,10 @@ left: 12px;
             width: auto; 
             height: auto;
             overflow: hidden;
+    }
+
+    .grade__head-item:nth-child(3) {
+        display: none;
     }
 
     .grade-information__item {

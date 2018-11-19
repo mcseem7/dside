@@ -19,10 +19,8 @@ import $ from "jquery";
       };
     }
 
-    componentDidMount() {
-      this.setState({ lang: localStorage.getItem("lang") }, () => {
-        reactTranslateChangeLanguage.bind(this, this.state.lang)();
-      });
+    componentDidUpdate() {
+      
       $(function() {
         $(".holder__poppup + input").keyup(function() {
           if ($(this).val().length) {
@@ -43,11 +41,11 @@ import $ from "jquery";
       });
     }
 
-    handleSubmit =  (...postData) => {
+    handleSubmit =  async (...postData) => {
    
       switch (type) {
         case "ORDER":
-           this.setState({
+          await this.setState({
             postData: {
               name: postData[0],
               phone: postData[1],
@@ -56,7 +54,7 @@ import $ from "jquery";
           });
           break;
         case "SUGGEST":
-         this.setState({
+         await this.setState({
             postData: {
               name: postData[0].current.value,
               email: postData[1].current.value,
@@ -66,9 +64,9 @@ import $ from "jquery";
           });
           break;
         case "REVIEW":
-          postData[6]()
-          if(postData[7] == true) {
-           this.setState({
+          postData[7]()
+          if(postData[8] == true) {
+         await  this.setState({
             postData: {
               name: postData[0].current.value,
               email: postData[1].current.value,
@@ -84,7 +82,7 @@ import $ from "jquery";
       default:
         return null    
       }
-      fetch(`${process.env.REACT_APP_API}/${this.state.lang}${apiUrl}`, {
+      fetch(`https://mydside.com/api/${this.props.language}${apiUrl}`, {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json"
@@ -106,6 +104,7 @@ import $ from "jquery";
     };
 
     render() {
+      console.log(this.props)
       return (
         <div>
           <PoppupHOC

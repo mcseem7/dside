@@ -118,16 +118,16 @@ class GradeItem extends Component {
               })} */}
 
               <div className="grade-comment__body-post">
-                <div id="grade-comment__container">
-                  <FacebookProvider appId="329972810887548">
+                <div id="grade-comment__container">{
+                  <FacebookProvider wait={true} appId="329972810887548">
                     <Comments
-                      width="100%"
-                      max-width="700px"
+                      width="770"
                       href={`${process.env.REACT_APP_DOMAIN}/${
                         this.state.lang
                       }/grade/${grade.id}`}
                     />
-                  </FacebookProvider>
+                  </FacebookProvider> 
+                }
                 </div>
               </div>
             </div>
@@ -149,12 +149,17 @@ class GradeItem extends Component {
                           }`}
                         />
                       </div>
+                      <div className="reviewers__data">
                       <div className="grader__name">
                         <p>{this.state.avatar.name}</p>
                       </div>
+                      <div className="grader__position">
+                        <p>DSIDE Graphic designer</p>
+                      </div>
+                      </div>
                     </div>
                   ) : (
-                    <p>Loading...</p>
+                    <p style={{fontFamily: 'MontLight, sans-serif' }}>Loading...</p>
                   )}
 
                   <div className="grades__recents-review">

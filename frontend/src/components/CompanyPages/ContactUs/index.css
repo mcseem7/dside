@@ -95,6 +95,14 @@
     font-weight: bold;
 }
 
+.service__contact input:focus {
+    background: none
+}
+
+.contact-input .shining-underline-cf input:focus {
+    background: none !important;
+}
+
 
 .background__contactus {
     flex-direction: column;
