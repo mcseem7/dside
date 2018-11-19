@@ -1118,10 +1118,10 @@
   "pl": "E-mail"
  },
 
- "social-link": {
-  "ru": "Ссылка на соцсеть",
+ "Social Link (with https://)": {
+  "ru": "Ссылка на cоцсеть с https://",
   "cz": "sociální spojení",
-  "pl": "Link Facebook"
+  "pl": "Link Facebook (dodaj https://)"
  },
 
  "post theme": {
@@ -1228,5 +1228,13 @@
     "ru": "Поля заполнены не все! Заполните пожалуйста все поля!",
     "pl": "Pola nie są wszystkie wypełnione! Proszę wypełnić wszystkie pola!",
     "cz": "Vyplňte prosím všechna pole!" 
+  },
+  "Add your idea for a review!": {
+  "ru": "Добавь свою идею для обзора!",
+  "pl": "Dodaj swój pomysł do recenzji!"
+  },
+  "We will publish a detailed review for your proposal.": {
+    "pl": "Opublikujemy szczegółową recenzję Twojej propozycji.",
+    "ru": "Мы опубликуем детальний обзор для вашего предложения."
   }
 }

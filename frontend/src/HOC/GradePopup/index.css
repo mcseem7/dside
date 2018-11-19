@@ -3,35 +3,24 @@
     font-family: 'MontBold', 'sans-serif';
     font-size: 0.8rem;
     padding-bottom: 10px;
+    color: #000;
 }
 
 .workUpload {
     padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.request-form_grade div .holder__poppup-name,
-.request-form_grade div .holder__poppup-phone,
-.request-form_grade div  .holder__poppup-social,
-.request-form_grade div  .holder__poppup-title,
-.request-form_grade div  .holder__poppup-text,
-.request-form_grade div  .holder__poppup-email
-{
-left: 165px;
+.workUpload input {
+    padding-left: 20px;
 }
 
-@media screen and (max-width: 600px) {
-  
-    .request-form_grade div .holder__poppup-name,
-    .request-form_grade div .holder__poppup-phone,
-    .request-form_grade div  .holder__poppup-social,
-    .request-form_grade div  .holder__poppup-title,
-    .request-form_grade div  .holder__poppup-text,
-    .request-form_grade div  .holder__poppup-email
-    {
-    left: 90px;
-    }
-
+#id_image {
+    color: #000;
 }
+
 
 #recaptcha {
     display: flex;

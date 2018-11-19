@@ -3,6 +3,9 @@ import './index.css'
 import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
 import Translate from 'translate-components'
 import withPoppupHOC from '../Poppup/index'
+import arrow from '../arrow.svg'
+import withLanguage from '../withLanguage/index'
+import {compose} from 'recompose'
 
 class SuggestPoppup extends Component {
     constructor(props) {
@@ -30,6 +33,10 @@ class SuggestPoppup extends Component {
        }
     }
 
+    componentDidUpdate() {
+        reactTranslateChangeLanguage.bind(this, this.props.language)();
+    }
+
     render() {
      
         return(
@@ -54,28 +61,29 @@ class SuggestPoppup extends Component {
                                     </div> :  <div id="form-itself">
                                         <h3><Translate>Add your proposal for the new post!</Translate></h3>
                                         <p><Translate>We publish a post on your topic within three days after your application.</Translate></p>
-                                        <form onSubmit={(event) => this.props.getSubmitForm(event, this.nameRef, this.emailRef, this.socialRef, this.topicRef)}   id="request-form" className='request-form_blog' method="post" autocomplete="off">
+                                        <form onSubmit={(event) => { event.preventDefault(); this.props.getSubmitForm(
+                                           this.nameRef, this.emailRef, this.socialRef, this.topicRef)}}   id="request-form" className='request-form_blog' method="post" autocomplete="off">
                                             <input type="hidden" name="csrfmiddlewaretoken" value="16en0jPOOddfSpZ8FAdslU61aXFCtePx" />
 
-                                            <div>
+                                            <div className='holder__wrapper'>
                                                 <div class="holder__poppup holder__poppup-name"><Translate>post name</Translate></div>
                                                 <input ref={this.nameRef} id="id_name" maxlength="50" minlength="2" name="name"  required="required" type="text" />
                                             </div>
-                                            <div>
-                                                 <div class="holder__poppup holder__poppup-name"><Translate>email</Translate></div>
+                                            <div className='holder__wrapper'>
+                                                 <div class="holder__poppup holder__poppup-email"><Translate>email</Translate></div>
                                                 <input ref={this.emailRef} id="id_email" maxlength="50" minlength="3" name="email"  required="required" type="email" />
                                             </div>
-                                            <div>
-                                               <div class="holder__poppup holder__poppup-name"><Translate>social-link</Translate></div>
+                                            <div className='holder__wrapper'>
+                                               <div class="holder__poppup holder__poppup-social"><Translate>Social Link (with https://)</Translate></div>
                                                 <input  ref={this.socialRef} id="id_topic" pattern="https://.*" maxLength="50" minLength="2" name="social-link" required="required" type="url"/>
                                             </div>
 
-                                            <div>
-                                            <div class="holder__poppup holder__poppup-name"><Translate>post theme</Translate></div>
+                                            <div className='holder__wrapper'>
+                                            <div class="holder__poppup holder__poppup-text"><Translate>post theme</Translate></div>
                                                 <input ref={this.topicRef} id="id_social" maxLength="50" minLength="4"  required="required" type="text"/>
                                             </div>
 
-                                            <button  type='submit' class="button14"   ><Translate>Send</Translate></button>
+                                                  <button class="button14" type='submit' ><Translate>Send</Translate><img src={arrow} alt="" /></button>
                                         </form>
                                     </div>
                                 }
@@ -94,4 +102,7 @@ class SuggestPoppup extends Component {
 
 }
 
-export  default withPoppupHOC(SuggestPoppup, '/blog/addTopicSuggestion/', 'SUGGEST')
+export default compose(
+    withLanguage,
+   withPoppupHOC
+  )(SuggestPoppup, '/blog/addTopicSuggestion/', 'SUGGEST')

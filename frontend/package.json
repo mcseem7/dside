@@ -2,17 +2,8 @@
   "name": "dside",
   "version": "0.1.1",
   "private": true,
-  "proxy": {
-    "/api": {
-      "target": "https://mydside.com"
-    },
-    "/admo": {
-      "target": "https://mydside.com"
-    },
-    "/docs": {
-      "target": "https://mydside.com"
-    }
-  },
+  "proxy": "https://mydside.com/api",
+
   "dependencies": {
     "@cra-express/core": "^2.2.5",
     "@cra-express/router-prefetcher": "^4.0.0",
