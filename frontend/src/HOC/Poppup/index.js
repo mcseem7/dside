@@ -4,7 +4,7 @@ import {
   TranslateProvider
 } from "translate-components";
 import $ from "jquery";
-
+import Cookies from 'js-cookie';
 
  export default function withPoppupHOC(PoppupHOC, apiUrl, type) {
   return class withPoppupHOC extends Component {
@@ -17,6 +17,7 @@ import $ from "jquery";
         postData: {},
         errorModal: false
       };
+      
     }
 
     componentDidUpdate() {
@@ -85,7 +86,8 @@ import $ from "jquery";
       fetch(`${process.env.REACT_APP_API}/${this.props.language}${apiUrl}`, {
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          'X-CSRFToken': Cookies.get('csrftoken')
         },
         method: "POST",
         body: JSON.stringify(this.state.postData)
@@ -104,7 +106,7 @@ import $ from "jquery";
     };
 
     render() {
-      console.log(this.props)
+      
       return (
         <div>
           <PoppupHOC
