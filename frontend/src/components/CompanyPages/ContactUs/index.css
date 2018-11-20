@@ -99,6 +99,10 @@
     background: none
 }
 
+.service__contact span {
+    font-size: 0.6rem
+}
+
 .contact-input .shining-underline-cf input:focus {
     background: none !important;
 }

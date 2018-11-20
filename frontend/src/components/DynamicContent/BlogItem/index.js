@@ -91,7 +91,7 @@ class BlogItem extends Component {
       identifier: this.state.postId,
       title: this.state.title,
     };
-   
+    console.log(disqusConfig)
     return (
       <Fragment>
        
