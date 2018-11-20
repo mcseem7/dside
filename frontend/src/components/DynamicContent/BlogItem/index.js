@@ -23,7 +23,9 @@ class BlogItem extends Component {
       notFound: false,
       lang: "",
       nextPost: [],
-      lastPost: false
+      lastPost: false,
+      postId: null,
+      title: ''
     };
   }
 
@@ -35,7 +37,7 @@ class BlogItem extends Component {
       strict: false
     });
     await this.getData(match.params.blogitem);
-    console.log(this.state.blogItem)
+   
     if (this.state.blogItem.length != 0) {
       await this.setState({
         lang: this.props.language,
@@ -58,7 +60,7 @@ class BlogItem extends Component {
         if (Object.keys(response).length == 0) {
           return this.props.history.push(`/${this.props.language}/notfound`)
         } else {        
-          this.setState({ blogItem: response });
+          this.setState({ blogItem: response, postId: response.id, title: response.title });
         }
       })
       .catch(error => {
@@ -84,13 +86,12 @@ class BlogItem extends Component {
         this.props.blogItem[NextPostFind + 1]
     });
     const disqusShortname = "mydside";
-
     const disqusConfig = {
       url: `https://mydside.com/${this.props.language}/blog/${match.params.blogitem}`,
-      identifier: this.state.blogItem.id,
-      title: this.state.blogItem.title,
+      identifier: this.state.postId,
+      title: this.state.title,
     };
-    console.log(disqusConfig)
+   
     return (
       <Fragment>
        
@@ -165,7 +166,7 @@ class BlogItem extends Component {
                         }/blog/${this.props.match.params.blogitem}`}
                       />
                     </FacebookProvider> */}
-                  
+                    <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
                   </div>
                 </div>
               </div>
@@ -215,7 +216,7 @@ class BlogItem extends Component {
           </div>
         )}
       </div>
-      <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+    
    <Footer/>
    </Fragment>
     );
