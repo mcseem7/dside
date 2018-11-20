@@ -85,7 +85,7 @@ class GradeItem extends Component {
   render() {
     const { grade } = this.state;
     const { gradeItem, history } = this.props;
-    const disqusShortname = "mydside";
+    const disqusShortname = "mydsidegrade";
     const disqusConfig = {
       url: `https://mydside.com/${this.props.language}/grade/${this.state.iDgrade}`,
       identifier: this.state.iDgrade,
