@@ -12,7 +12,6 @@ import { matchPath } from "react-router";
 import withLanguage from "../../../HOC/withLanguage";
 import Footer from "../../Basic/Footer";
 import Header from "../../Basic/Header";
-import ReactDisqusComments from 'react-disqus-comments';
 
 class BlogItem extends Component {
   constructor(props) {
@@ -87,7 +86,7 @@ class BlogItem extends Component {
     const disqusShortname = "mydside";
 
     const disqusConfig = {
-      url: `https://mydside.com/${this.props.language}/blog/${this.state.blogItem.title}`,
+      url: `https://mydside.com/${this.props.language}/blog/${match.params.blogitem}`,
       identifier: this.state.blogItem.id,
       title: this.state.blogItem.title,
     };
@@ -166,7 +165,7 @@ class BlogItem extends Component {
                         }/blog/${this.props.match.params.blogitem}`}
                       />
                     </FacebookProvider> */}
-                    <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+                  
                   </div>
                 </div>
               </div>
@@ -216,7 +215,7 @@ class BlogItem extends Component {
           </div>
         )}
       </div>
-      
+      <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
    <Footer/>
    </Fragment>
     );
