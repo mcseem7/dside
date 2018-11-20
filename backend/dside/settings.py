@@ -44,9 +44,16 @@ INSTALLED_APPS = [
     'drf_openapi',
     'recaptcha',
     'review',
-    'blog'
-
+    'blog',
+    'easy_thumbnails',
 ]
+
+THUMBNAIL_ALIASES = {
+    '': {
+        '200x200': {'size': (200, 200), 'crop': True},
+        '500x500': {'size': (500, 500), 'crop': True},
+    },
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
