@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import $ from 'jquery'
 import withLanguage from '../withLanguage'
 import { matchPath } from 'react-router'
+import Cookies from 'js-cookie'
 
 export default function withDsideApi(DsideComponent, apiUrl, type) {
 
@@ -80,7 +81,7 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
 
     getItemGrade = () => {
       this.state.dataDside.map((homeItem) => {
-        console.log(homeItem.name)
+        
         return fetch(`${process.env.REACT_APP_API}/${this.state.langContent}/review/getReviewDetails/${homeItem.id}/`).then((response) => {
           return response.json()
         }).then((item) => {
@@ -116,6 +117,7 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
       try {
         const postOrderForm = await fetch(`${process.env.REACT_APP_API}/${this.state.langContent}${apiUrl}`, {
           headers: {
+            'X-CSRFToken': Cookies.get('csrftoken'),
             'Accept': 'application/json',
             'Content-Type': 'application/json'
           },
