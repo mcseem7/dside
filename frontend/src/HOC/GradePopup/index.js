@@ -5,11 +5,13 @@ import { reactTranslateChangeLanguage, TranslateProvider } from "translate-compo
 import Translate from 'translate-components'
 import withPoppupHOC from '../Poppup/index'
 import ReCAPTCHA from "react-google-recaptcha";
+import arrow from '../arrow.svg'
+import withLanguage from '../withLanguage'
 
 class GradePoppup extends Component {
   constructor(props) {
     super(props)
-
+    this.recaptchaRef = React.createRef();
     this.nameRef = React.createRef()
     this.emailRef = React.createRef()
     this.socialRef = React.createRef()
@@ -20,13 +22,18 @@ class GradePoppup extends Component {
     this.state = {
       modalState: this.props.modalStatus,
       result: props.result,
-      isVerified: false
+      isVerified: false,
+      imgSrc: null
     }
   }
 
   componentWillReceiveProps(nextProps) {
     if(this.state.result != nextProps.result) {
       this.setState({result: nextProps.result})
+    }
+
+    if(this.state.modalState != nextProps.modalStatus) {
+      this.setState({modalState: nextProps.modalStatus})
     }
   }
 
@@ -44,16 +51,27 @@ class GradePoppup extends Component {
       this.setState({
         isVerified: true
       })
+     
     }
   }
 
+  getImage = (event) => {
+    event.preventDefault();
+   this.setState({imgSrc: event.target.files[0]}) 
+  }
+
+  componentDidUpdate() {
+    reactTranslateChangeLanguage.bind(this, this.props.language)();
+  }
  
   render() {
     return(
       <Fragment>
-        <div class={`modal-overlay active`}>
-          <div class={`modal  active`}>
-
+        <div class={`modal-overlay ${this.state.modalState ? 'active' : ''}`}>
+          <div style={{
+            minHeight: '40rem'
+          }} class={`modal  ${this.state.modalState ? 'active' : ''}`}>
+{this.state.modalState ? <Fragment>
             <a class="close-modal"  onClick={() => {
               return  this.props.onClose()
             }}>
@@ -70,20 +88,22 @@ class GradePoppup extends Component {
                   <div id="form-result">
                     <h3 id="thanks"><Translate>Thank you! Application successfully submitted!</Translate></h3>
                   </div> :  <div id="form-itself">
-                  <h3><Translate>Add your proposal for the new post!</Translate></h3>
-                                        <p><Translate>We publish a post on your topic within three days after your application.</Translate></p>
-                      <form  onSubmit={(event) => this.props.getSubmitForm(
-                          event,
+                  <h3><Translate>Add your idea for a review!</Translate></h3>
+                                        <p><Translate>We will publish a detailed review for your proposal.</Translate></p>
+                      <form  onSubmit={(event) => {
+                      event.preventDefault();
+                      this.props.getSubmitForm(
                          this.nameRef, 
                          this.emailRef,
                          this.socialRef, 
                          this.textGradeRef,
-                         this.titleRef, 
-                         this.imageRef,
+                         this.titleRef,
+                         this.state.imgSrc,
+                         this.recaptchaRef.current.getValue(),
                          this.handleSubscribe,
                          this.state.isVerified
-                         )} id="request-form" className='request-form_grade' method="post"  autocomplete="off">
-                        <input type="hidden" name="csrfmiddlewaretoken" value="16en0jPOOddfSpZ8FAdslU61aXFCtePx" />
+                         )}} id="request-form" className='request-form_grade' method="post"  autocomplete="off">
+                       
 
                         <div className='holder__wrapper'>
                           <div class="holder__poppup holder__poppup-name"><Translate>review name</Translate></div>
@@ -94,7 +114,7 @@ class GradePoppup extends Component {
                           <input    ref={this.emailRef} id="id_email" maxlength="50" minlength="3" name="email" required="required" type="email" />
                         </div>
                         <div className='holder__wrapper'>
-                          <div class="holder__poppup holder__poppup-social"><Translate>social-link</Translate></div>
+                          <div class="holder__poppup holder__poppup-social"><Translate>Social Link (with https://)</Translate></div>
                           <input     ref={this.socialRef} id="id_social" maxlength="50" minlength="3" name="social" required="required" type="text" />
                         </div>
                         <div className='holder__wrapper'>
@@ -105,18 +125,17 @@ class GradePoppup extends Component {
                           <div class="holder__poppup holder__poppup-title"><Translate>review title</Translate></div>
                           <input    ref={this.titleRef} id="id_title" maxlength="50" minlength="2" name="title" required="required" type="text" />
                         </div>
-                        <div className='holder__wrapper workUpload'>
-            
+                        <div className='workUpload'>
                           <label for="file"><Translate>Choose your work to upload</Translate></label>
-                          <input  ref={this.imageRef} id="id_image"  name="image" required="required" type="file" />
+                          <input  onChange={(event) => this.getImage(event)} ref={this.imageRef} id="id_image"  name="image" required="required" type="file" />
                         </div>
                         <div id='recaptcha'>
-                        <ReCAPTCHA
-    sitekey="6LdzjGEUAAAAAEoMUOiBnROqE0FRL6kQIcVJl08O"
+                        <ReCAPTCHA sitekey="6LdzjGEUAAAAAEoMUOiBnROqE0FRL6kQIcVJl08O"
+    ref={this.recaptchaRef}
     render="explicit"
     onChange={this.verifyCallback} />
     </div>
-                        <button type="submit" class="button14"  ><Translate>Send</Translate></button>
+    <button class="button14" type='submit' ><Translate>Send</Translate><img src={arrow} alt="" /></button>
                       </form>
                     </div>
                 }
@@ -124,7 +143,7 @@ class GradePoppup extends Component {
               </div>
 
             </div>
-
+            </Fragment> : null }
           </div>
         </div>
       </Fragment>
@@ -133,6 +152,6 @@ class GradePoppup extends Component {
 
 }
 
-export  default withPoppupHOC(GradePoppup, '/review/createReviewRequest/', 'REVIEW')
+export  default withPoppupHOC(withLanguage(GradePoppup, '/review/createReviewRequest/', 'REVIEW'))
 
 

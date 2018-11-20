@@ -7,6 +7,8 @@ export default function OrderButton(props) {
   return(
       <DribbleButton style={{
           zIndex: 1,
+          width: '175px',
+          height: '40px',
           marginTop: '500px',
           borderRadius: '40px',
           fontFamily: 'MontBold',

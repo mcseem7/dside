@@ -25,7 +25,7 @@ SECRET_KEY = '3@t9mcc(i(g)b%2@2h0ai1g0cy4w6p4i7t_4a%3^z6=$k16z%y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['dside.pl', '127.0.0.1', 'mydside.com', 'mydside.com/admin']
+ALLOWED_HOSTS = ['dside.pl', '127.0.0.1', 'mydside.com', 'mydside.com/admin', 'google.com']
 
 
 # Application definition
@@ -123,8 +123,8 @@ BOT_TOKEN = "612720277:AAEW2AnFKvj957i_6-lO4OsjJt9t7VlXWCo"
 CHAT_ID = -275224828
 ORDERS_CHAT_ID = -261278869
 
-GR_CAPTCHA_PUBLIC_KEY = '6LdzjGEUAAAAAEoMUOiBnROqE0FRL6kQIcVJl08O'
-GR_CAPTCHA_SECRET_KEY = '6LdzjGEUAAAAAPUDqEOjkyrF3TCNqrhOhnfyrphU'
+GR_CAPTCHA_PUBLIC_KEY = '6Lf7lHsUAAAAALag0JquHk3edY8cEs5o9Mxi70ge'
+GR_CAPTCHA_SECRET_KEY = '6Lf7lHsUAAAAAFlVgmhR2WOHnacraMIngA-7dDOg'
 GR_CAPTCHA_URL = "https://www.google.com/recaptcha/api/siteverify"
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/

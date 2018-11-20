@@ -417,7 +417,7 @@ html,body {
 .incoming__title h3 {
     font-size: 1.4rem;
     color: #ffffff;
-    font-family: "MontBold";
+    font-family: "MontBold", 'sans-serif' ;
     letter-spacing: 3px;
     text-transform: uppercase;
 }

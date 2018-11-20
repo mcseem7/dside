@@ -22,7 +22,7 @@
 .dsided__order-container h3 {
     text-transform: uppercase;
     color: rgb(255,255,255);
-    font-family: "MontBold";
+    font-family: "MontBold",  sans-serif;
 }
 
 .cola-item {
@@ -506,13 +506,13 @@ padding-top: 200px;
     padding: 0;
     text-transform: uppercase;
     color: rgb(255,255,255);
-    font-family: "MontBold";
+    font-family: "MontBold",  sans-serif;
 }
 
 .cola__content p {
     font-size: 14px;
     color: rgb(255,255,255);
-    font-family: "MontLight";
+    font-family: "MontLight", 'sans-serif';
     font-weight: 300;
 }
 
@@ -561,7 +561,7 @@ padding-top: 200px;
     padding: 3rem;
     text-transform: uppercase;
     color: rgb(255,255,255);
-    font-family: "MontBold";
+    font-family: "MontBold", sans-serif;
 }
 .dsided__order-container button {
     top: 0;

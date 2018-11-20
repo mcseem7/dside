@@ -1,3 +1,7 @@
+
+
+
+
 .review__container-wrapper {
     background: #F2F3F5;
 }
@@ -29,7 +33,7 @@
 .get-earlier__button,
 .recent__title-grades h3   {
     color: #000000;
-    font-family: "MontBold";
+    font-family: "MontBold", 'sans-serif' ;
 }
 
 .review__image-container img {
@@ -44,9 +48,12 @@
 
 .review__grader-img img {
     max-width: 100%;
-    border-radius: 20%;
+    border-radius: 50%;
 }
 
+.review__grader-img {
+    width: 70px;
+}
 
 
 .review__information-left,
@@ -60,21 +67,61 @@
     align-items: center;
 }
 
+
 .review__grader-information {
     display: flex;
+    opacity: 0;
+}
+
+.review__grader-information.active {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+	animation-timing-function: ease;
+	animation-duration: 0.9s;
+}
+
+.similar__grades {
+    opacity: 0;
+}
+
+.similar__grades.active {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.9s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .grader__name p {
-    font-size: 14px;
+    font-size: 12px;
+    margin: 0;
+}
+
+.grader__position p {
+    font-size: 12px;
+    margin: 0;
+    font-family: 'MontLight', 'sans-serif'
 }
 
 .recent__title-grades h3 {
     font-size: 21px;
 }
 
-.grader__name {
-    margin-left: 10px;
+.reviewers__data {
+    display: flex;
+    flex-direction: column
 }
+
+
 
 .grades__recents-review {
     display: flex;
@@ -92,6 +139,12 @@
     max-width: 100%;
     border-radius: 10px;
 }
+.reviewers__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
 
 .recent__grade-wrapper {
  position: relative;
@@ -106,7 +159,7 @@ left: 12px;
 .recent__grade-date span {
     font-size: 12px;
     color: #ffffff;
-    font-family: 'MontBold';
+    font-family: 'MontBold', 'sans-serif' ;
 }
 
 .similar__grades {
@@ -160,6 +213,10 @@ left: 12px;
     align-items: center;
 }
 
+.recent__grade {
+    padding-bottom: 91% !important;
+}
+
 
 .similar__grades > div > button {
     border: none;
@@ -183,6 +240,10 @@ left: 12px;
             width: auto; 
             height: auto;
             overflow: hidden;
+    }
+
+    .grade__head-item:nth-child(3) {
+        display: none;
     }
 
     .grade-information__item {

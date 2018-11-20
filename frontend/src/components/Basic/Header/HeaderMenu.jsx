@@ -137,15 +137,10 @@ import gradeImg from './grade.svg'
                           }
                           }>
                             <div className="head-grade__img">
-                              {/* <img
-                                src={`${process.env.REACT_APP_DOMAIN}${
-                                  grade.graded_by.avatar
-                                }`}
-                                alt=""
-                              /> */}
-
                               <img
-                                src={`${homeDside}`}
+                                src={`${process.env.REACT_APP_DOMAIN}${
+                                  grade.background
+                                }`}
                                 alt=""
                               />
                             </div>

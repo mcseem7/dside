@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import "./index.css";
 import next from "./next_post.png";
 import comm from "./hypercomments.png";
-import ReactDisqusComments from "react-disqus-comments";
+import { DiscussionEmbed } from "disqus-react";
 import { withRouter } from "react-router-dom";
 import { compose } from "recompose";
 import withDsideApi from "../../../HOC/Fetch";
@@ -23,18 +23,21 @@ class BlogItem extends Component {
       notFound: false,
       lang: "",
       nextPost: [],
-      lastPost: false
+      lastPost: false,
+      postId: null,
+      title: ''
     };
   }
 
   async componentDidMount() {
+    window.scrollTo(0,0);
     const match = await matchPath(this.props.history.location.pathname, {
       path: `/${this.props.language}/blog/:blogitem`,
       exact: true,
       strict: false
     });
     await this.getData(match.params.blogitem);
-    console.log(this.state.blogItem)
+   
     if (this.state.blogItem.length != 0) {
       await this.setState({
         lang: this.props.language,
@@ -57,7 +60,7 @@ class BlogItem extends Component {
         if (Object.keys(response).length == 0) {
           return this.props.history.push(`/${this.props.language}/notfound`)
         } else {        
-          this.setState({ blogItem: response });
+          this.setState({ blogItem: response, postId: response.id, title: response.title });
         }
       })
       .catch(error => {
@@ -82,9 +85,16 @@ class BlogItem extends Component {
         this.props.blogItem[NextPostFind - 1] ||
         this.props.blogItem[NextPostFind + 1]
     });
+    const disqusShortname = "mydside";
+    const disqusConfig = {
+      url: `https://mydside.com/${this.props.language}/blog/${match.params.blogitem}`,
+      identifier: this.state.postId,
+      title: this.state.title,
+    };
+    console.log(disqusConfig)
     return (
       <Fragment>
-        <Header/>
+       
       <div>
         {this.state.notFound ? null : (
           <div className="blog__post-container">
@@ -145,7 +155,7 @@ class BlogItem extends Component {
                 </div>
                 <div className="comment__body-post">
                   <div id="comment__container">
-                    <FacebookProvider appId="329972810887548">
+                    {/* <FacebookProvider appId="329972810887548">
                       <Comments
                         min-width="320px"
                         width="100%"
@@ -155,7 +165,8 @@ class BlogItem extends Component {
                           this.state.lang
                         }/blog/${this.props.match.params.blogitem}`}
                       />
-                    </FacebookProvider>
+                    </FacebookProvider> */}
+                    <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
                   </div>
                 </div>
               </div>
@@ -205,6 +216,7 @@ class BlogItem extends Component {
           </div>
         )}
       </div>
+    
    <Footer/>
    </Fragment>
     );

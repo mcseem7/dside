@@ -4,7 +4,7 @@ import {
   TranslateProvider
 } from "translate-components";
 import $ from "jquery";
-
+import Cookies from 'js-cookie';
 
  export default function withPoppupHOC(PoppupHOC, apiUrl, type) {
   return class withPoppupHOC extends Component {
@@ -17,12 +17,11 @@ import $ from "jquery";
         postData: {},
         errorModal: false
       };
+      
     }
 
-    componentDidMount() {
-      this.setState({ lang: localStorage.getItem("lang") }, () => {
-        reactTranslateChangeLanguage.bind(this, this.state.lang)();
-      });
+    componentDidUpdate() {
+      
       $(function() {
         $(".holder__poppup + input").keyup(function() {
           if ($(this).val().length) {
@@ -43,8 +42,8 @@ import $ from "jquery";
       });
     }
 
-    handleSubmit = async (event, ...postData) => {
-      await event.preventDefault();
+    handleSubmit =  async (...postData) => {
+   
       switch (type) {
         case "ORDER":
           await this.setState({
@@ -56,38 +55,39 @@ import $ from "jquery";
           });
           break;
         case "SUGGEST":
-          await this.setState({
+         await this.setState({
             postData: {
               name: postData[0].current.value,
               email: postData[1].current.value,
-              social_link: 'http://' + postData[2].current.value,
+              social_link: postData[2].current.value,
               text: postData[3].current.value
             }
           });
           break;
         case "REVIEW":
-          await postData[6]()
-          if(postData[7] == true) {
-           this.setState({
+          postData[7]()
+          if(postData[8] == true) {
+         await  this.setState({
             postData: {
               name: postData[0].current.value,
               email: postData[1].current.value,
               social_link: postData[2].current.value,
               text: postData[3].current.value,
               title: postData[4].current.value,
-              image: postData[5].current.value
+              image: postData[5]
             }
           })} else {
             return false;
           }
           break;
       default:
-        await null    
+        return null    
       }
-      fetch(`${process.env.REACT_APP_API}/${this.state.lang}${apiUrl}`, {
+      fetch(`${process.env.REACT_APP_API}/${this.props.language}${apiUrl}`, {
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          'X-CSRFToken': Cookies.get('csrftoken')
         },
         method: "POST",
         body: JSON.stringify(this.state.postData)
@@ -106,6 +106,7 @@ import $ from "jquery";
     };
 
     render() {
+      
       return (
         <div>
           <PoppupHOC

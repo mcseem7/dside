@@ -62,7 +62,7 @@ class Blog extends Component {
     const {history, location} = this.props   
     return (
       <Fragment>
-        <Header/>
+        
       <div className='wrapper__blog-container'>
        <Helmet>
           <title> Dside Blog </title>
@@ -198,7 +198,7 @@ class Blog extends Component {
                   <div className="incoming__button" onClick={this.changePoppup}>
                     <a   ><Translate>Suggest a topic</Translate></a>
                   </div>
-                    {this.state.modalActive ? <SuggestPoppup onClose={this.changePoppup} /> :  null}
+                    {<SuggestPoppup modalStatus={this.state.modalActive} onClose={this.changePoppup} />}
                 </div>
               </div>
               </div>

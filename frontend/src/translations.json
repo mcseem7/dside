@@ -717,7 +717,7 @@
     "cz": "Nechte své telefonní číslo"
   },
   "And you will receive a free consultation on the question that interests you. Usually we call back within 30 seconds.": {
-    "ru": "И ты получишь бесплатную консультацию по интересующему тебя вопросу. Обычно мы перезвоним в течение 30 секунд.",
+    "ru": "И ты получишь бесплатную консультацию по интересующему тебя вопросу. Обычно мы перезваниваем в течение 30 секунд.",
     "pl": "Otrzymasz bezpłatną konsultację na temat, który Cię interesuje. Zazwyczaj oddzwoniamy w ciągu 30 sekund.",
     "cz": "A obdržíte bezplatnou konzultaci o otázce, která vás zajímá. Obvykle zavoláme zpátky do 30 sekund."
   },
@@ -1118,10 +1118,10 @@
   "pl": "E-mail"
  },
 
- "social-link": {
-  "ru": "Ссылка на соцсеть",
+ "Social Link (with https://)": {
+  "ru": "Ссылка на cоцсеть с https://",
   "cz": "sociální spojení",
-  "pl": "Link Facebook"
+  "pl": "Link Facebook (dodaj https://)"
  },
 
  "post theme": {
@@ -1228,5 +1228,13 @@
     "ru": "Поля заполнены не все! Заполните пожалуйста все поля!",
     "pl": "Pola nie są wszystkie wypełnione! Proszę wypełnić wszystkie pola!",
     "cz": "Vyplňte prosím všechna pole!" 
+  },
+  "Add your idea for a review!": {
+  "ru": "Добавь свою идею для обзора!",
+  "pl": "Dodaj swój pomysł do recenzji!"
+  },
+  "We will publish a detailed review for your proposal.": {
+    "pl": "Opublikujemy szczegółową recenzję Twojej propozycji.",
+    "ru": "Мы опубликуем детальний обзор для вашего предложения."
   }
 }

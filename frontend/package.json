@@ -2,23 +2,13 @@
   "name": "dside",
   "version": "0.1.1",
   "private": true,
-  "proxy": {
-    "/api": {
-      "target": "https://mydside.com"
-    },
-    "/admo": {
-      "target": "https://mydside.com"
-    },
-    "/docs": {
-      "target": "https://mydside.com"
-    }
-  },
   "dependencies": {
     "@cra-express/core": "^2.2.5",
     "@cra-express/router-prefetcher": "^4.0.0",
     "apeman-react-scroll": "^2.0.10",
     "better-npm-run": "^0.1.1",
     "browser-util": "^1.2.0",
+    "disqus-react": "^1.0.5",
     "exenv": "^1.2.2",
     "express": "^4.16.3",
     "fsevents": "^1.2.4",
@@ -45,6 +35,7 @@
     "react-hero-video": "^0.1.1",
     "react-html-document": "^3.1.0",
     "react-loadable": "^5.5.0",
+    "react-loader-spinner": "^2.2.0",
     "react-modal-video": "^1.2.1",
     "react-moment": "^0.8.3",
     "react-screen-orientation": "0.0.3",
