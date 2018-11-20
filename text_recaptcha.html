@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+
+</head>
+<body>
+<form enctype="multipart/form-data" method="post" action="https://mydside.com/api/en/review/createReviewRequest/">
+
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-lg-6 request">
+
+
+
+                <div class="form-group">
+                    <label for="name" class="control-label">
+                        Name
+
+                        <span class="text-danger">*</span>
+
+                    </label>
+                    <input name="name" class="form-control" data-empty="" data-type="string" required="">
+
+                </div>
+
+
+                <div class="form-group">
+                    <label for="email" class="control-label">
+                        Email
+
+                        <span class="text-danger">*</span>
+
+                    </label>
+                    <input name="email" class="form-control" data-empty="" data-type="string" required="">
+
+                </div>
+
+
+                <div class="form-group">
+                    <label for="social_link" class="control-label">
+                        Social link
+
+                        <span class="text-danger">*</span>
+
+                    </label>
+                    <input name="social_link" class="form-control" data-empty="" data-type="string" required="">
+
+                </div>
+
+
+                <div class="form-group">
+                    <label for="text" class="control-label">
+                        Text
+
+                        <span class="text-danger">*</span>
+
+                    </label>
+                    <input name="text" class="form-control" data-empty="" data-type="string" required="">
+
+                </div>
+
+
+                <div class="form-group">
+                    <label for="title" class="control-label">
+                        Title
+
+                        <span class="text-danger">*</span>
+
+                    </label>
+                    <input name="title" class="form-control" data-empty="" data-type="string" required="">
+
+                </div>
+
+
+                <div class="form-group">
+                    <label for="image" class="control-label">
+                        Image
+
+                        <span class="text-danger">*</span>
+
+                    </label>
+                    <input name="image" type="file" class="form-control" data-empty="" data-type="string" required="">
+
+                </div>
+
+            </div>
+
+            <hr class="hidden-lg hidden-xl">
+
+            <div class="col-lg-6 response" id="response">
+                <div class="request-awaiting">Awaiting request</div>
+
+                <div class="meta hide">
+                    <span class="label label-primary request-method"></span>
+                    <code class="request-url"></code>
+                    <label class="label label-lg response-status-code pull-right"></label>
+                </div>
+
+                <pre class="well response-data hide"></pre>
+                <pre class="well response-raw hide"><div class="response-raw-request"></div><div
+                        class="response-raw-response"></div></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Send Request</button>
+    </div>
+<div class="g-recaptcha" data-sitekey="6LdzjGEUAAAAAEoMUOiBnROqE0FRL6kQIcVJl08O"></div>
+
+</form>
+<input>
+
+</body>
+</html>

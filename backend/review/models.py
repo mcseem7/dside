@@ -26,6 +26,11 @@ class ReviewText(models.Model):
 class Grader(models.Model):
     name = models.CharField(max_length=100)
     avatar = models.ImageField()
+    position = models.CharField(max_length=100)
+    social_link_1 = models.URLField()
+    social_link_2 = models.URLField(blank=True)
+    social_link_3 = models.URLField(blank=True)
+
 
     def __str__(self):
         return self.name
