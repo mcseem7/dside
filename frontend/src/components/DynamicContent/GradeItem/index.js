@@ -29,7 +29,9 @@ class GradeItem extends Component {
       avatar: "",
       text: [],
       activeSlide: null,
-      loader: false
+      loader: false,
+      iDgrade: 0,
+      titleGrade: ''
     };
   }
 
@@ -58,7 +60,9 @@ class GradeItem extends Component {
           this.setState({
             grade: response,
             avatar: response.graded_by,
-            text: response.text_blocks
+            text: response.text_blocks,
+            iDgrade: response.id,
+            titleGrade: response.name
           }, );
         }
       }).then(() => {
@@ -83,11 +87,11 @@ class GradeItem extends Component {
     const { gradeItem, history } = this.props;
     const disqusShortname = "mydside";
     const disqusConfig = {
-      url: `https://mydside.com/${this.props.language}/grade/${this.state.grade.id}`,
-      identifier: this.state.grade.id,
-      title: this.state.grade.name,
+      url: `https://mydside.com/${this.props.language}/grade/${this.state.iDgrade}`,
+      identifier: this.state.iDgrade,
+      title: this.state.titleGrade,
     };
-
+    console.log(disqusConfig)
     return (
       <Fragment>
       
