@@ -87,7 +87,7 @@ class BlogItem extends Component {
     const disqusShortname = "mydside";
 
     const disqusConfig = {
-      url: 'http://mydside.com',
+      url: `https://mydside.com/${this.props.language}/blog/${this.state.blogItem.title}`,
       identifier: this.state.blogItem.id,
       title: this.state.blogItem.title,
     };
@@ -216,6 +216,7 @@ class BlogItem extends Component {
           </div>
         )}
       </div>
+      
    <Footer/>
    </Fragment>
     );
