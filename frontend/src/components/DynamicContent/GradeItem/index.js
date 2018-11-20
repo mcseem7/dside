@@ -16,6 +16,8 @@ import Helmet from "react-helmet-async";
 import Footer from "../../Basic/Footer";
 import Header from "../../Basic/Header";
 import Loader from "react-loader-spinner";
+import { DiscussionEmbed } from "disqus-react";
+
 
 class GradeItem extends Component {
   constructor() {
@@ -79,8 +81,13 @@ class GradeItem extends Component {
   render() {
     const { grade } = this.state;
     const { gradeItem, history } = this.props;
- 
-    console.log(this.props);
+    const disqusShortname = "mydside";
+    const disqusConfig = {
+      url: `https://mydside.com/${this.props.language}/grade/${this.state.grade.id}`,
+      identifier: this.state.grade.id,
+      title: this.state.grade.name,
+    };
+
     return (
       <Fragment>
       
@@ -116,17 +123,18 @@ class GradeItem extends Component {
                   </div>
                 );
               })} */}
-
               <div className="grade-comment__body-post">
                 <div id="grade-comment__container">{
-                  <FacebookProvider wait={true} appId="329972810887548">
-                    <Comments
-                      width="770"
-                      href={`${process.env.REACT_APP_DOMAIN}/${
-                        this.state.lang
-                      }/grade/${grade.id}`}
-                    />
-                  </FacebookProvider> 
+                  // <FacebookProvider wait={true} appId="329972810887548">
+                  //   <Comments
+                  //     width="770"
+                  //     href={`${process.env.REACT_APP_DOMAIN}/${
+                  //       this.state.lang
+                  //     }/grade/${grade.id}`}
+                  //   />
+                  // </FacebookProvider> 
+                  /* Facebook integrate or Disqus */
+                  <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
                 }
                 </div>
               </div>
