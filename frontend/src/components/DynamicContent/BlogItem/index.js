@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import "./index.css";
 import next from "./next_post.png";
 import comm from "./hypercomments.png";
-import ReactDisqusComments from "react-disqus-comments";
+import { DiscussionEmbed } from "disqus-react";
 import { withRouter } from "react-router-dom";
 import { compose } from "recompose";
 import withDsideApi from "../../../HOC/Fetch";
@@ -12,6 +12,7 @@ import { matchPath } from "react-router";
 import withLanguage from "../../../HOC/withLanguage";
 import Footer from "../../Basic/Footer";
 import Header from "../../Basic/Header";
+import ReactDisqusComments from 'react-disqus-comments';
 
 class BlogItem extends Component {
   constructor(props) {
@@ -83,6 +84,14 @@ class BlogItem extends Component {
         this.props.blogItem[NextPostFind - 1] ||
         this.props.blogItem[NextPostFind + 1]
     });
+    const disqusShortname = "mydside";
+
+    const disqusConfig = {
+      url: 'http://mydside.com',
+      identifier: this.state.blogItem.id,
+      title: this.state.blogItem.title,
+    };
+    console.log(disqusConfig)
     return (
       <Fragment>
        
@@ -146,7 +155,7 @@ class BlogItem extends Component {
                 </div>
                 <div className="comment__body-post">
                   <div id="comment__container">
-                    <FacebookProvider appId="329972810887548">
+                    {/* <FacebookProvider appId="329972810887548">
                       <Comments
                         min-width="320px"
                         width="100%"
@@ -156,7 +165,8 @@ class BlogItem extends Component {
                           this.state.lang
                         }/blog/${this.props.match.params.blogitem}`}
                       />
-                    </FacebookProvider>
+                    </FacebookProvider> */}
+                    <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
                   </div>
                 </div>
               </div>
