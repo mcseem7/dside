@@ -124,7 +124,7 @@ CHAT_ID = -275224828
 ORDERS_CHAT_ID = -261278869
 
 GR_CAPTCHA_PUBLIC_KEY = '6Lf7lHsUAAAAALag0JquHk3edY8cEs5o9Mxi70ge'
-GR_CAPTCHA_SECRET_KEY = '6Lf7lHsUAAAAAFlVgmhR2WOHnacraMIngA-7dDOg'
+GR_CAPTCHA_SECRET_KEY = '6LdzjGEUAAAAAPUDqEOjkyrF3TCNqrhOhnfyrphU'
 GR_CAPTCHA_URL = "https://www.google.com/recaptcha/api/siteverify"
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/

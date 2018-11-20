@@ -23,7 +23,7 @@ class ReviewList(APIView):
         for x in items:
             if x.reviewtext_set.filter(lang_code=lang_code).exists():
                 data = RE(x).data
-                data["thumbnail"] = get_thumbnailer(x.background.file)['200x200'].url
+                data["thumbnail"] = get_thumbnailer(x.background)['200x200'].url
                 response.append(data)
 
         return Response(response)
@@ -39,7 +39,7 @@ class ReviewDetails(APIView):
             return Response({})
 
         response = RE(item).data
-        response["thumbnail"] = get_thumbnailer(item.background.file)['200x200'].url
+        response["thumbnail"] = get_thumbnailer(item.background)['200x200'].url
         response["text_blocks"] = [ReviewTextSerializer(x).data for x in
                                    item.reviewtext_set.filter(lang_code=lang_code)]
         grader = Grader.objects.get(id=response["graded_by"])
