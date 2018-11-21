@@ -3,9 +3,10 @@ import './index.css'
 import LimitData from './LimitData'
 import "babel-polyfill"
 import OrderButton from "../OrderButton";
+import withLanguage from '../../../../../HOC/withLanguage';
 
 
-export default class LimitedService extends Component {
+ class LimitedService extends Component {
   constructor() {
     super()
 
@@ -19,7 +20,10 @@ export default class LimitedService extends Component {
 
 
   async componentDidMount() {
-     let response = await  fetch('//mydside.com/api/en/home/getLimitedOffers/')
+     let response = await  fetch(
+      `${process.env.REACT_APP_API}/${
+        this.props.language
+      }/home/getLimitedOffers/`)
      let limitOfer = await response.json()
      this.setState({offer: limitOfer})
   }
@@ -28,6 +32,7 @@ export default class LimitedService extends Component {
 
 
   render() {
+    console.log(this.state.offer)
     return(
         <Fragment>
             {this.state.offer.map(((item) => {
@@ -68,3 +73,5 @@ export default class LimitedService extends Component {
     )
   }
 }
+
+export default withLanguage(LimitedService)

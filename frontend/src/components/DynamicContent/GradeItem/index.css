@@ -223,6 +223,24 @@ left: 12px;
     background: none;
 }
 
+.social__links-reviewers {
+    display: flex;
+    align-items: center;
+}
+
+.social__links-reviewers a {
+    display: block;
+}
+
+.social__links-reviewers a:nth-child(1) {
+    width: 12px;
+    margin-right: 7px;
+}
+
+.social__links-reviewers a:nth-child(2) {
+    width: 15px;
+}
+
 @media screen and (max-width: 1024px) {
     .review__container {
         flex-direction: column;

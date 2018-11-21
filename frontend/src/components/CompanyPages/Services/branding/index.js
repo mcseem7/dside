@@ -93,7 +93,7 @@ class BrandPage extends Component {
                 
                 <div className='video-wrap'>
                     <HeroVideo
-                        videoSrc={`https://www.youtube.com/embed/${idVideo}?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1&fs=1`}
+                         videoSrc={`https://www.youtube.com/embed/${idVideo}?rel=0&autoplay=1&loop=1&playlist=${idVideo}&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&fs=1`}
                     ></HeroVideo>
                     <div id="vidtop-content">
                         <HeaderService
