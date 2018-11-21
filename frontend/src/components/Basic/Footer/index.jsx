@@ -42,6 +42,7 @@ checkingValidate = () => {
 }
 
 
+
   updateAfterPost() {
     this.nameRef.current.value = ''
     this.phoneRef.current.value = ''
