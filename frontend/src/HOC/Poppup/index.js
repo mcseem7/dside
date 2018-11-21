@@ -65,8 +65,9 @@ import Cookies from 'js-cookie';
           });
           break;
         case "REVIEW":
-          postData[7]()
-          if(postData[8] == true) {
+        console.log(postData)
+          postData[6]()
+          if(postData[7] == true) {
          await  this.setState({
             postData: {
               name: postData[0].current.value,
@@ -86,7 +87,7 @@ import Cookies from 'js-cookie';
       fetch(`${process.env.REACT_APP_API}/${this.props.language}${apiUrl}`, {
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/json",
+          'Content-Type': 'multipart/form-data',
           'X-CSRFToken': Cookies.get('csrftoken')
         },
         method: "POST",
