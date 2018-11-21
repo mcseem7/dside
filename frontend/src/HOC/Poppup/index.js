@@ -64,30 +64,14 @@ import Cookies from 'js-cookie';
             }
           });
           break;
-        case "REVIEW":
-        console.log(postData)
-          postData[6]()
-          if(postData[7] == true) {
-         await  this.setState({
-            postData: {
-              name: postData[0].current.value,
-              email: postData[1].current.value,
-              social_link: postData[2].current.value,
-              text: postData[3].current.value,
-              title: postData[4].current.value,
-              image: postData[5]
-            }
-          })} else {
-            return false;
-          }
-          break;
+        
       default:
         return null    
       }
       fetch(`${process.env.REACT_APP_API}/${this.props.language}${apiUrl}`, {
         headers: {
           Accept: "application/json",
-          'Content-Type': 'multipart/form-data',
+          "Content-Type": "application/json",
           'X-CSRFToken': Cookies.get('csrftoken')
         },
         method: "POST",

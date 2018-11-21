@@ -13,7 +13,7 @@ class Success extends Component {
    
 
     render() {
-        console.log(this.props)
+     
         return (
             <Fragment>
                 <div class={`modal-overlay success-poppup active`}>

@@ -493,9 +493,9 @@
     padding: 0;
 }
 
-.head-grade__img {
-    width: 76px;
-    height: 56px;
+.head-grade__img img{
+    height: 45px;
+    width: 70px;
 }
 
 .head-grade__date p {
@@ -550,7 +550,9 @@
         flex-direction: column
     }
 
-   
+   .grades__head-items {
+       height: 120px;
+   }
 
     .menu__header-item:first-child {
         margin-bottom: 0;
@@ -566,6 +568,10 @@
 
     .wrapper__main-head {
             background: #ac0007;
+    }
+
+    .wrapper__main-head > img {
+        margin-bottom: -3.3px;
     }
 
     .main__header-left {

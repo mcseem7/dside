@@ -28,7 +28,7 @@ export default class CategoryItem extends React.Component {
 
 
     render() {
-        console.log(this.state.categoryLength)
+       
         return (
             <React.Fragment>
                
