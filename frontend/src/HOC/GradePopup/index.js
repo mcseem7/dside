@@ -7,6 +7,8 @@ import withPoppupHOC from '../Poppup/index'
 import ReCAPTCHA from "react-google-recaptcha";
 import arrow from '../arrow.svg'
 import withLanguage from '../withLanguage'
+import {compose} from 'recompose'
+import Cookies from 'js-cookie';
 
 class GradePoppup extends Component {
   constructor(props) {
@@ -21,7 +23,7 @@ class GradePoppup extends Component {
 
     this.state = {
       modalState: this.props.modalStatus,
-      result: props.result,
+      result: false,
       isVerified: false,
       imgSrc: null
     }
@@ -38,7 +40,6 @@ class GradePoppup extends Component {
   }
 
   handleSubscribe = () => {
-    console.log(this.state.isVerified)
     if (!this.state.isVerified) {
      alert('Please verify that you are a human!');
     } else {
@@ -51,17 +52,45 @@ class GradePoppup extends Component {
       this.setState({
         isVerified: true
       })
-     
     }
   }
 
   getImage = (event) => {
     event.preventDefault();
-   this.setState({imgSrc: event.target.files[0]}) 
+   this.setState({imgSrc: event.target.files[0]}, () => {
+     console.log(this.state.imgSrc)
+   }) 
   }
 
   componentDidUpdate() {
     reactTranslateChangeLanguage.bind(this, this.props.language)();
+  }
+
+
+  addGrade = () => {
+    const formData = new FormData();
+    formData.append('image', this.state.imgSrc);
+    formData.append('name', this.nameRef)
+    formData.append('email', this.emailRef)
+    formData.append('social_link', this.socialRef)
+    formData.append('title', this.titleRef)
+    formData.append('text', this.textGradeRef)
+console.log(formData)
+    fetch(`${process.env.REACT_APP_API}/${this.props.language}/review/createReviewRequest/`, {
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        'X-CSRFToken': Cookies.get('csrftoken')
+      },
+      method: "POST",
+      body: formData
+    }).then((response) => {
+      if(response.status >= 400) {
+        throw new Error()
+      } else {
+        this.setState({ result: true });
+      }
+    })
+  
   }
  
   render() {
@@ -91,20 +120,17 @@ class GradePoppup extends Component {
                   <h3><Translate>Add your idea for a review!</Translate></h3>
                                         <p><Translate>We will publish a detailed review for your proposal.</Translate></p>
                       <form  onSubmit={(event) => {
-                      event.preventDefault();
-                      this.props.getSubmitForm(
+                      event.preventDefault(); this.addGrade(
                          this.nameRef, 
                          this.emailRef,
                          this.socialRef, 
                          this.textGradeRef,
                          this.titleRef,
                          this.state.imgSrc,
-                         this.recaptchaRef.current.getValue(),
                          this.handleSubscribe,
                          this.state.isVerified
                          )}} id="request-form" className='request-form_grade' method="post"  autocomplete="off">
-                       
-
+               
                         <div className='holder__wrapper'>
                           <div class="holder__poppup holder__poppup-name"><Translate>review name</Translate></div>
                           <input ref={this.nameRef}  id="id_name" maxlength="50" minlength="3" name="name" required="required" type="text" />
@@ -152,6 +178,7 @@ class GradePoppup extends Component {
 
 }
 
-export  default withPoppupHOC(withLanguage(GradePoppup, '/review/createReviewRequest/', 'REVIEW'))
+export  default  compose(withLanguage,
+  withPoppupHOC)(GradePoppup)
 
 
