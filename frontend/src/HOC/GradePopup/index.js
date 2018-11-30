@@ -25,7 +25,8 @@ class GradePoppup extends Component {
       modalState: this.props.modalStatus,
       result: false,
       isVerified: false,
-      imgSrc: null
+      imgSrc: null,
+      response: null
     }
   }
 
@@ -50,7 +51,8 @@ class GradePoppup extends Component {
   verifyCallback = (response) => {
     if (response) {
       this.setState({
-        isVerified: true
+        isVerified: true,
+        response
       })
     }
   }
@@ -76,12 +78,12 @@ class GradePoppup extends Component {
     formData.append('social_link', this.socialRef.current.value)
     formData.append('title', this.titleRef.current.value)
     formData.append('text', this.textGradeRef.current.value)
-
+    formData.append('g-recaptcha-response', this.state.response)
+    
     await fetch(`${process.env.REACT_APP_API}/${this.props.language}/review/createReviewRequest/`, {
       headers: {
         'X-CSRFToken': Cookies.get('csrftoken'),
         "Content-Type": "application/x-www-form-urlencoded",
-
       },
       method: "POST",
       body: formData
