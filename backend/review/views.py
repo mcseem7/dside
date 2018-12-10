@@ -72,8 +72,8 @@ class ReviewRequestCreate(mixins.CreateModelMixin,
             'secret': GR_CAPTCHA_SECRET_KEY,
             'response': g_recaptcha_response
         })
-        print(r.status_code)
-        print(r.content)
+        # print(r.status_code)
+        # print(r.content)
         if not json.loads(r.content.decode())['success']:
             return Response(status=HTTP_400_BAD_REQUEST)
 
