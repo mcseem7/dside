@@ -70,7 +70,6 @@ class GradePoppup extends Component {
 
 
   addGrade = async () => {
-    await  this.handleSubscribe()
     const formData = await new FormData();
     formData.append('image', this.state.imgSrc);
     formData.append('name', this.nameRef.current.value)
@@ -78,12 +77,12 @@ class GradePoppup extends Component {
     formData.append('social_link', this.socialRef.current.value)
     formData.append('title', this.titleRef.current.value)
     formData.append('text', this.textGradeRef.current.value)
-    formData.append('g-recaptcha-response', this.state.response)
-    
+    formData.append('recaptcha', this.state.response)
+    await  this.handleSubscribe()
     await fetch(`${process.env.REACT_APP_API}/${this.props.language}/review/createReviewRequest/`, {
       headers: {
         'X-CSRFToken': Cookies.get('csrftoken'),
-        "Content-Type": "application/x-www-form-urlencoded",
+        "Content-Type": "multipart/form-data",
       },
       method: "POST",
       body: formData
@@ -123,7 +122,7 @@ class GradePoppup extends Component {
                     </div> : <div id="form-itself">
                       <h3><Translate>Add your idea for a review!</Translate></h3>
                       <p><Translate>We will publish a detailed review for your proposal.</Translate></p>
-                      <form onSubmit={(event) => {
+                      <form  onSubmit={(event) => {
                         event.preventDefault(); this.addGrade(
                           this.nameRef,
                           this.emailRef,
@@ -132,7 +131,7 @@ class GradePoppup extends Component {
                           this.titleRef,
                           this.state.imgSrc
                         )
-                      }} id="request-form" className='request-form_grade' method="post" autocomplete="off">
+                      }} id="request-form" className='request-form_grade' method="post"  autocomplete="off">
 
                         <div className='holder__wrapper'>
                           <div class="holder__poppup holder__poppup-name"><Translate>review name</Translate></div>
