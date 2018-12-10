@@ -80,7 +80,7 @@ class GradePoppup extends Component {
     await  this.handleSubscribe()
     await fetch(`${process.env.REACT_APP_API}/${this.props.language}/review/createReviewRequest/`, {
       headers: {
-        // 'X-CSRFToken': Cookies.get('csrftoken'),
+        'X-CSRFToken': Cookies.get('csrftoken')
         // "Content-Type": "multipart/form-data"
       },
       method: "POST",
