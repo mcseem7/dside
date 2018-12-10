@@ -133,7 +133,7 @@ class GradePoppup extends Component {
                         </div>
                         <div className='holder__wrapper'>
                           <div class="holder__poppup holder__poppup-social"><Translate>Social Link (with https://)</Translate></div>
-                          <input ref={this.socialRef} id="id_social" maxlength="50" minlength="3" name="social__link" required="required" type="text" />
+                          <input ref={this.socialRef} id="id_social" maxlength="50" minlength="3" name="social_link" required="required" type="text" />
                         </div>
                         <div className='holder__wrapper'>
                           <div class="holder__poppup holder__poppup-text"><Translate>review description</Translate></div>
