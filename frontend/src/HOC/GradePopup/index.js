@@ -121,7 +121,7 @@ class GradePoppup extends Component {
                     </div> : <div id="form-itself">
                       <h3><Translate>Add your idea for a review!</Translate></h3>
                       <p><Translate>We will publish a detailed review for your proposal.</Translate></p>
-                      <form  enctype="multipart/form-data" action="https://mydside.com/api/en/review/createReviewRequest/" id="request-form" className='request-form_grade' method="post"  autocomplete="off">
+                      <form  enctype="multipart/form-data" action="/api/en/review/createReviewRequest/" id="request-form" className='request-form_grade' method="post"  autocomplete="off">
 
                         <div className='holder__wrapper'>
                           <div class="holder__poppup holder__poppup-name"><Translate>review name</Translate></div>
