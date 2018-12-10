@@ -38,6 +38,7 @@
     "react-loader-spinner": "^2.2.0",
     "react-modal-video": "^1.2.1",
     "react-moment": "^0.8.3",
+    "react-recaptcha": "^2.3.10",
     "react-screen-orientation": "0.0.3",
     "react-scripts": "^1.1.4",
     "react-scrollreveal": "^1.2.0",
