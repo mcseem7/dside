@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
 import Translate from 'translate-components'
 import withPoppupHOC from '../Poppup/index'
-import ReCAPTCHA from "react-google-recaptcha";
+import Recaptcha from 'react-recaptcha'
 import arrow from '../arrow.svg'
 import withLanguage from '../withLanguage'
 import { compose } from 'recompose'
@@ -80,8 +80,8 @@ class GradePoppup extends Component {
     await  this.handleSubscribe()
     await fetch(`${process.env.REACT_APP_API}/${this.props.language}/review/createReviewRequest/`, {
       headers: {
-        'X-CSRFToken': Cookies.get('csrftoken'),
-        "Content-Type": "application/x-www-form-urlencoded",
+        // 'X-CSRFToken': Cookies.get('csrftoken'),
+        // "Content-Type": "multipart/form-data"
       },
       method: "POST",
       body: formData
@@ -157,10 +157,10 @@ class GradePoppup extends Component {
                           <input onChange={(event) => this.getImage(event)} ref={this.imageRef} id="id_image" name="image" required="required" type="file" />
                         </div>
                         <div id='recaptcha'>
-                          <ReCAPTCHA sitekey="6LdzjGEUAAAAAEoMUOiBnROqE0FRL6kQIcVJl08O"
+                          <Recaptcha sitekey="6LdzjGEUAAAAAEoMUOiBnROqE0FRL6kQIcVJl08O"
                             ref={this.recaptchaRef}
                             render="explicit"
-                            onChange={this.verifyCallback} />
+                            verifyCallback={this.verifyCallback} />
                         </div>
                         <button class="button14" type='submit' ><Translate>Send</Translate><img src={arrow} alt="" /></button>
                       </form>
