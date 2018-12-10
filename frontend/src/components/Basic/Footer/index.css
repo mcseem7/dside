@@ -336,9 +336,9 @@
     }
 
  @media screen and (max-width: 480px) {
-    .button__content > img {
-        display: none;
-    }
+   .dside__send span {
+       font-size: 0.9rem;
+   }
 
     .button__content {
         padding: 0 0.4em;

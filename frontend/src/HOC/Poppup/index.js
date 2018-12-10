@@ -64,22 +64,7 @@ import Cookies from 'js-cookie';
             }
           });
           break;
-        case "REVIEW":
-          postData[7]()
-          if(postData[8] == true) {
-         await  this.setState({
-            postData: {
-              name: postData[0].current.value,
-              email: postData[1].current.value,
-              social_link: postData[2].current.value,
-              text: postData[3].current.value,
-              title: postData[4].current.value,
-              image: postData[5]
-            }
-          })} else {
-            return false;
-          }
-          break;
+        
       default:
         return null    
       }

@@ -166,7 +166,11 @@ class GradeItem extends Component {
                         <p>{this.state.avatar.name}</p>
                       </div>
                       <div className="grader__position">
-                        <p>DSIDE Graphic designer</p>
+                        <p>{this.state.avatar.position}</p>
+                      </div>
+                      <div className="social__links-reviewers">
+                      <a href={this.state.avatar.links[0]}  target='_blank' className="social__icon-behance" />
+                      <a href={this.state.avatar.links[1]} target='_blank'  className="social__icon-instagram" />
                       </div>
                       </div>
                     </div>
