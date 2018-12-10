@@ -121,16 +121,7 @@ class GradePoppup extends Component {
                     </div> : <div id="form-itself">
                       <h3><Translate>Add your idea for a review!</Translate></h3>
                       <p><Translate>We will publish a detailed review for your proposal.</Translate></p>
-                      <form  onSubmit={(event) => {
-                        event.preventDefault(); this.addGrade(
-                          this.nameRef,
-                          this.emailRef,
-                          this.socialRef,
-                          this.textGradeRef,
-                          this.titleRef,
-                          this.state.imgSrc
-                        )
-                      }} id="request-form" className='request-form_grade' method="post"  autocomplete="off">
+                      <form  enctype="multipart/form-data" action="/api/en/review/createReviewRequest/" id="request-form" className='request-form_grade' method="post"  autocomplete="off">
 
                         <div className='holder__wrapper'>
                           <div class="holder__poppup holder__poppup-name"><Translate>review name</Translate></div>
@@ -142,11 +133,11 @@ class GradePoppup extends Component {
                         </div>
                         <div className='holder__wrapper'>
                           <div class="holder__poppup holder__poppup-social"><Translate>Social Link (with https://)</Translate></div>
-                          <input ref={this.socialRef} id="id_social" maxlength="50" minlength="3" name="social" required="required" type="text" />
+                          <input ref={this.socialRef} id="id_social" maxlength="50" minlength="3" name="social__link" required="required" type="text" />
                         </div>
                         <div className='holder__wrapper'>
                           <div class="holder__poppup holder__poppup-text"><Translate>review description</Translate></div>
-                          <input ref={this.textGradeRef} id="id_text" maxlength="50" minlength="3" name="grade" required="required" type="text" />
+                          <input ref={this.textGradeRef} id="id_text" maxlength="50" minlength="3" name="text" required="required" type="text" />
                         </div>
                         <div className='holder__wrapper'>
                           <div class="holder__poppup holder__poppup-title"><Translate>review title</Translate></div>
@@ -154,8 +145,9 @@ class GradePoppup extends Component {
                         </div>
                         <div className='workUpload'>
                           <label for="file"><Translate>Choose your work to upload</Translate></label>
-                          <input onChange={(event) => this.getImage(event)} ref={this.imageRef} id="id_image" name="image" required="required" type="file" />
+                          <input  id="id_image" name="image" required="required" type="file" />
                         </div>
+                        <input type="hidden" name="csrfmiddlewaretoken" value="BlZi1bHsJxKcBUtT1iYkAJoRsSBXYwOBHosvWF2tJFkytdMt7AZCXSaywFFR2Tzx"></input>
                         <div id='recaptcha'>
                           <Recaptcha sitekey="6LdzjGEUAAAAAEoMUOiBnROqE0FRL6kQIcVJl08O"
                             ref={this.recaptchaRef}
