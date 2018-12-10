@@ -77,7 +77,6 @@ class GradePoppup extends Component {
     formData.append('social_link', this.socialRef.current.value)
     formData.append('title', this.titleRef.current.value)
     formData.append('text', this.textGradeRef.current.value)
-    formData.append('recaptcha', this.state.response)
     await  this.handleSubscribe()
     await fetch(`${process.env.REACT_APP_API}/${this.props.language}/review/createReviewRequest/`, {
       headers: {
