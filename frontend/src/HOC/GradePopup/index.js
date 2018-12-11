@@ -77,7 +77,6 @@ class GradePoppup extends Component {
     formData.append('social_link', this.socialRef.current.value)
     formData.append('title', this.titleRef.current.value)
     formData.append('text', this.textGradeRef.current.value)
-    formData.append('g-recaptcha-response', this.state.response)
     await  this.handleSubscribe()
     await fetch(`${process.env.REACT_APP_API}/${this.props.language}/review/createReviewRequest/`, {
       headers: {
@@ -155,7 +154,7 @@ class GradePoppup extends Component {
                         </div>
                         <div className='workUpload'>
                           <label for="file"><Translate>Choose your work to upload</Translate></label>
-                          <input  id="id_image" name="image" required="required" type="file" />
+                          <input  onChange={(event) => this.getImage(event)} ref={this.imageRef} id="id_image" name="image" required="required" type="file" />
                         </div>
                         <input type="hidden" name="csrfmiddlewaretoken" value="BlZi1bHsJxKcBUtT1iYkAJoRsSBXYwOBHosvWF2tJFkytdMt7AZCXSaywFFR2Tzx"></input>
                         <div id='recaptcha'>
