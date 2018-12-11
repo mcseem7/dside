@@ -77,6 +77,7 @@ class GradePoppup extends Component {
     formData.append('social_link', this.socialRef.current.value)
     formData.append('title', this.titleRef.current.value)
     formData.append('text', this.textGradeRef.current.value)
+    formData.append('g-recaptcha-response', this.state.response)
     await  this.handleSubscribe()
     await fetch(`${process.env.REACT_APP_API}/${this.props.language}/review/createReviewRequest/`, {
       headers: {
@@ -121,7 +122,16 @@ class GradePoppup extends Component {
                     </div> : <div id="form-itself">
                       <h3><Translate>Add your idea for a review!</Translate></h3>
                       <p><Translate>We will publish a detailed review for your proposal.</Translate></p>
-                      <form  enctype="multipart/form-data" action="/api/en/review/createReviewRequest/" id="request-form" className='request-form_grade' method="post"  autocomplete="off">
+                      <form  onSubmit={(event) => {
+                        event.preventDefault(); this.addGrade(
+                          this.nameRef,
+                          this.emailRef,
+                          this.socialRef,
+                          this.textGradeRef,
+                          this.titleRef,
+                          this.state.imgSrc
+                        )
+                      }} id="request-form" className='request-form_grade'   autocomplete="off">
 
                         <div className='holder__wrapper'>
                           <div class="holder__poppup holder__poppup-name"><Translate>review name</Translate></div>
