@@ -25,78 +25,61 @@ import Translate from 'translate-components'
                             good-selling website and a customized advertising campaign.</Translate></p>
                         </div>
                         <div className="listwrapper">
-                            <div className="list__services-branding">
+                            <Link to={`${this.props.match.url}/services/brand`} className="listened">
+                            <div className="list__services-branding listed">
                                 {/* <div className="title__list"> */}
                                 {/* <h2>Branding</h2> */}
                                 {/* </div> */}
-                                <ul className="list">
-                                    <li><Link to={`${this.props.match.url}/services/brand`}
-                                              className="shining-underline"><Translate>Branding</Translate><span></span></Link></li>
-                                    <li><Translate>Brand legend</Translate></li>
-                                    <li><Translate>Brandbook</Translate></li>
-                                    <li><Translate>Identity</Translate></li>
-                                    <li><Translate>Naming</Translate></li>
-                                </ul>
+                                <div className="list">
+                                    <h2>Branding</h2>
+                                    <p>Brand legend, Brandbook, Identity</p>
+                                </div>
                             </div>
-
-                            <div className="list__services-websites">
+                            </Link>
+                            <Link to={`${this.props.match.url}/services/website`} className="listened">
+                            <div className="list__services-websites listed">
                                 {/* <div className="title__list"> */}
                                 {/* <h2>Branding</h2> */}
                                 {/* </div> */}
-                                <ul className="list">
-                                    <li><Link to={`${this.props.match.url}/services/website`}
-                                              className="shining-underline"><Translate>Websites</Translate><span></span></Link></li>
-                                  <li><Translate>Landing page</Translate></li>
-                                  <li><Translate>E-commerce</Translate></li>
-                                  <li><Translate>Corporate</Translate></li>
-                                  <li><Translate>Intranet</Translate></li>
-                                </ul>
+                               <div className="list">
+                                    <h2>Websites</h2>
+                                    <p>Landing page, E-commerce</p>
+                                </div>
                             </div>
-
-                            <div className="list__services-advert">
+                            </Link>
+                            <Link to={`${this.props.match.url}/services/advertising`} className="listened">
+                            <div className="list__services-advert listed">
                                 {/* <div className="title__list"> */}
                                 {/* <h2>Branding</h2> */}
                                 {/* </div> */}
-                                <ul className="list">
-                                    <li><Link to={`${this.props.match.url}/services/advertising`} className="shining-underline"><Translate>
-                                      Advertising</Translate><span></span></Link>
-                                    </li>
-                                  <li><Translate>E-mail marketing</Translate></li>
-                                  <li><Translate>CPA marketing</Translate></li>
-                                  <li><Translate>Social media</Translate></li>
-                                  <li><Translate>Direct</Translate></li>
-                                </ul>
+                                <div className="list">
+                                    <h2>Advertising</h2>
+                                    <p>E-mail marketing, CPA marketing, Social media, Direct</p>
+                                </div>
                             </div>
-                            <div className="list__services-automation">
+                            </Link>
+                            <Link to={`${this.props.match.url}/services/automation`} className="listened">
+                            <div className="list__services-automation listed">
                                 {/* <div className="title__list"> */}
                                 {/* <h2>Branding</h2> */}
                                 {/* </div> */}
-                                <ul className="list">
-                                    <li><Link to={`${this.props.match.url}/services/automation`} className="shining-underline">
-
-                                      <Translate>Automation</Translate><span></span></Link>
-
-                                    </li>
-                                  <li><Translate>Increasing efficency</Translate></li>
-                                  <li><Translate>Quality improvement</Translate></li>
-                                  <li><Translate>Reduction of staff</Translate></li>
-                                  <li><Translate>Сost reduction</Translate></li>
-                                </ul>
+                                <div className="list">
+                                    <h2>Automation</h2>
+                                    <p>Increasing efficency of your business</p>
+                                </div>
                             </div>
-                            <div className="list__services-videos">
+                            </Link>
+                            <Link to={`${this.props.match.url}/services/automation`} className="listened">
+                            <div className="list__services-video listed">
                                 {/* <div className="title__list"> */}
                                 {/* <h2>Branding</h2> */}
                                 {/* </div> */}
-                                <ul className="list">
-                                    <li><Link to={`${this.props.match.url}/services/videos`}
-                                              className="shining-underline"><Translate>Videos</Translate><span></span></Link></li>
-                                  <li><Translate>Motion graphics</Translate></li>
-                                  <li><Translate>3D modelling</Translate></li>
-                                  <li><Translate>Commercials</Translate></li>
-                                  <li><Translate>Filming</Translate></li>
-                                </ul>
+                                <div className="list">
+                                    <h2>Videos</h2>
+                                    <p>Motion graphics, Filming</p>
+                                </div>
                             </div>
-
+                            </Link>
                         </div>
                     </div>
 

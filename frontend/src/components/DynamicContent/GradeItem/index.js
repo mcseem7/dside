@@ -193,10 +193,10 @@ class GradeItem extends Component {
                           </div>
                           ) : (
                             <Loader
-                              type="Triangle"
-                              color="#00BFFF"
-                              height="100"
-                              width="100"
+                              type="Rings"
+                              color="#B2BBC4"
+                              height="60"
+                              width="60"
                             />
                           )}
                          

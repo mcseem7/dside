@@ -419,7 +419,7 @@ padding-top: 200px;
     background-color: rgb(28, 10, 8) ;
   padding-bottom: 70px;
 }
-
+.find__out-branding li{list-style: none;}
 .find__out-wrapper {
     max-width: 1200px;
     margin: 0 auto;

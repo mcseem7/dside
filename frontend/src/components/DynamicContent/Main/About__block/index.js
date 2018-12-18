@@ -41,19 +41,8 @@ export default class About extends Component {
             <p className="company__content">
               <div className="logotype">
                 <img src={Logotype} alt="" />
-              </div> <Translate>is a value driven, focused and very ambitious digital agency based in Warsaw,
-                providing the best and innovative solutions for your business.</Translate>
+              </div> <Translate>is an agency who can take your business further.</Translate>
             </p>
-          </div>
-
-          <div className="more__about-button">
-
-            <Link to={`/${this.state.lang}/aboutus`} >
-            <button className="more__about shining-underline">
-              <Translate>More about us</Translate>
-              <span></span>
-            </button>
-            </Link>
           </div>
         </div>
           <div className="advantages"><span><
