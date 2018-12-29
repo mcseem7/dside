@@ -154,11 +154,7 @@ outline: none;
     flex: 1 1 60%;
     margin-left: 3rem;
     }
-     .listed:hover{  -webkit-animation: flash 0.7s forwards linear 0.16s;
-    -moz-animation: flash 0.7s forwards linear 0.16s;
-    animation: flash 0.7s forwards linear 0.16s;}
-       .listed .list p{opacity: 0; font-size: .7rem; transition: all .3s ease-out; transform: translateY(5px);}
-     .listed:hover .list p{opacity: 1;transition: all .3s ease-out;transform: translateY(0px);}
+
 }
 @media only screen and (min-width: 1440px) {
     .listwrapper{flex-direction: row; flex-wrap: wrap;flex: 1 1 70%;}

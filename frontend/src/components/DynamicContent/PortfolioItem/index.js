@@ -76,11 +76,12 @@ import Header from '../../Basic/Header';
       <div className="container__portfolio-item">
         <div className="portfolio__header_item-wrapper" style={{ backgroundImage: `url(${process.env.REACT_APP_DOMAIN}${this.state.itemPortfolio.main_image})` }}>
           <div className="header__portfolio-content">
+            <div className="content__project-portfolio">
             <div className="header__portfolio-content-wrapper">
               <div className="project__titles">
                 <div className="portfolio__title-content">
                   <div className="portfolio__name__content">
-                    <div className="superwrapper">
+
                       <div className="project__names">
                         <div className="project__logo">
                           <img src={`${process.env.REACT_APP_DOMAIN}/${this.state.itemPortfolio.logotype}`} alt="" />
@@ -99,7 +100,7 @@ import Header from '../../Basic/Header';
                           </p>
                         </div>
                       </div>
-                    </div>
+
 
 
 
@@ -125,6 +126,7 @@ import Header from '../../Basic/Header';
               </div>
             </div>
           </div>
+        </div>
         </div>
 
         <div className="content__project-portfolio">
