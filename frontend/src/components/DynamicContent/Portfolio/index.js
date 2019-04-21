@@ -60,7 +60,10 @@ class Portfolio extends Component {
           <Helmet>
             <title>Dside Portfolio</title>
           </Helmet>
+        <div className="wrapper-row">
+        <h2>We'll make it good. They have already tried it.</h2>
           <div className="sorting__items-container">
+
             <div className="sorting__items-left">
 
               <div className="sortby__category">
@@ -93,7 +96,7 @@ class Portfolio extends Component {
                 </div>
               </div>
             </div>
-
+</div>
           </div>
           <div className="portfolio__items-container">
              <PortolioPost dataDside={this.state.dataItems} />

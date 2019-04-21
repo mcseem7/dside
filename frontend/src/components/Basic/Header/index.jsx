@@ -3,6 +3,9 @@ import "./index.css";
 import GridIcon from "./grid_img.svg";
 import PlusIcon from "./plus.svg";
 import Logo from "./Logo.svg";
+import EN from "./uk.svg";
+import PL from "./poland.svg";
+import RU from "./russia.svg";
 import { NavLink, Link, withRouter } from "react-router-dom";
 import OrderPoppup from "../../../HOC/OrderPopup/index";
 import GradePoppup from "../../../HOC/GradePopup/index";
@@ -16,7 +19,6 @@ import moment from 'moment'
 import HeaderMenu from "./HeaderMenu";
 import fire from './fire.gif'
 
-
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -29,8 +31,6 @@ class Header extends Component {
       lang: ""
     };
   }
-
-
 
   showMenu = () => {
     if (this.state.opacity == 1) {
@@ -49,37 +49,21 @@ class Header extends Component {
   }
 
   render() {
-    const {history, location} = this.props   
-    
+    const {history, location} = this.props;
+    const activeClass = (route) => { return location.pathname === route ? "dark" : null }
+    const langClass = (route) => { return location.pathname === route ? "active" : null }
+
     return (
+
       <div
         className="header__container"
         style={{ display: this.props.style, zIndex: 10 }}
       >
+<div className={activeClass(`/${this.props.language}`)} >
         <header className="basic__header">
           <div className="basic__header-content">
             <div className="header__content">
               <div className="left__content-icons">
-                <div className="check__work-sockets">
-                  <div className="check__work" onClick={this.showMenu}>
-                    <img src={GridIcon} width="15" />
-                  </div>
-                </div>
-
-                <div className="add__work_wrapper">
-                  <div className="add__work">
-                    <img
-                      src={PlusIcon}
-                      onClick={this.changePoppup}
-                      className="add__work_plus"
-                      alt=""
-                      width="14"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="mid__content-logo">
                 <div className="logo__container">
                   <div className="logo">
                     <NavLink
@@ -177,7 +161,104 @@ class Header extends Component {
                     </NavLink>
                   </div>
                 </div>
+                  {/*<div className="langcode">
+                  <ul>
+                  <li className={langClass(`/en`)} >
+
+                         <img src={EN} width="20"/>
+                   </li>
+                           <li className={langClass(`/ru`)}>
+                          <img src={RU}  width="20"/>
+                   </li>
+                           <li className={langClass(`/pl`)}>
+                           <img src={PL}  width="20"/>
+
+                   </li>
+                 </ul>
+              </div>*/}
               </div>
+              <div className="mid__content-logo">
+                <nav className="mainnav">
+                 <ul>
+                   <li className="shining-underline">
+                     <NavLink
+                      to={`/${this.props.language}/portfolio`}
+                      className="link">
+                          <Translate>Projects</Translate>
+                       <span className="mainnavshine"></span>
+                        </NavLink>
+                   </li>
+                   <li>
+                          <Translate>Services</Translate>
+                     <ul>
+                         <li className="shining-underline">
+                          <NavLink
+                           to={`/${this.props.language}/services/design`}
+                           className="link">
+                               <Translate>Design</Translate>
+                             <span className="mainnavshine"></span>
+                             </NavLink>
+                         </li>
+                         <li className="shining-underline">
+                          <NavLink
+                           to={`/${this.props.language}/services/website`}
+                           className="link">
+                               <Translate>Websites</Translate>
+                             <span className="mainnavshine"></span>
+                             </NavLink>
+                         </li>
+                         <li className="shining-underline">
+                          <NavLink
+                           to={`/${this.props.language}/services/design`}
+                           className="link">
+                               <Translate>E-commerce</Translate>
+                             <span className="mainnavshine"></span>
+                             </NavLink>
+                         </li>
+                     </ul>
+                   </li>
+                   <li className="shining-underline">
+                     <a
+                      href={`/${this.props.language}/process`}
+                      className="link">
+                          <Translate>Process</Translate>
+                       <span className="mainnavshine"></span>
+                        </a>
+                   </li>
+                  <li className="shining-underline">
+                     <NavLink
+                      to={`/${this.props.language}/aboutus`}
+                      className="link">
+                          <Translate>About</Translate>
+                        <span className="mainnavshine"></span>
+                        </NavLink>
+                   </li>
+                   <li className="shining-underline">
+                     <NavLink
+                      to={`/${this.props.language}/contactus`}
+                      className="link">
+                          <Translate>Contact Us</Translate>
+                       <span className="mainnavshine"></span>
+                        </NavLink>
+                   </li>
+                   <li className="ordernow" onClick={this.changePoppup}>
+                      <div className="shining-underline">
+                          <Translate>Order Now</Translate>
+                            <span className="ordernowshine"></span>
+                          </div>
+                   </li>
+                 </ul>
+                </nav>
+
+               {/*  <div className="check__work-sockets">
+                  <div className="check__work" onClick={this.showMenu}>
+                    <img src={GridIcon} width="15" />
+                  </div>
+                </div>
+                */}
+
+              </div>
+
 
               <div className="right__content-socials">
                 <div className="social__icons">
@@ -206,7 +287,7 @@ class Header extends Component {
             </div>
           </div>
         </header>
-
+</div>
         {<HeaderMenu
         {...this.state}
          handleShowMenu={this.showMenu}

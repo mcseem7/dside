@@ -1,26 +1,35 @@
 @font-face{
-    font-family: 'MontBold';
+    font-family: 'DSIDE-Bold';
+    src: url('components/sources/fonts/Mont-SemiBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face{
+    font-family: 'DSIDE-Light';
+    src: url('components/sources/fonts/Mont-Book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'DSIDE-Black';
     src: url('components/sources/fonts/Mont-Bold.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face{
-    font-family: 'MontLight';
-    src: url('components/sources/fonts/Mont-Light.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face{
     font-family: 'Mont';
-    src: url('components/sources/fonts/Mont-Bold.otf') format('opentype');
+    src: url('components/sources/fonts/Mont-SemiBold.otf') format('opentype');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face{
     font-family: 'Mont';
-    src: url('components/sources/fonts/Mont-Light.otf') format('opentype');
+    src: url('components/sources/fonts/Mont-Book.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
 }
@@ -67,7 +76,7 @@
 }
 
 .cook__description {
-    font-family: 'MontLight',sans-serif;
+    font-family: 'DSIDE-Light',sans-serif;
     font-size: 0.8rem;
     flex: 1 1 60%;
     padding: 1rem;
@@ -111,7 +120,7 @@
 }
 
 .cook__button p {
-    font-family: 'MontBold',sans-serif;
+    font-family: 'DSIDE-Bold',sans-serif;
     text-align: center;
     line-height: 1.1rem;
 }
@@ -130,9 +139,9 @@
     background: #fff;
     margin: 0 auto;
     padding: 0px 1rem;}
-    .cook__description span{font-family: 'MontBold',sans-serif;}
+    .cook__description span{font-family: 'DSIDE-Bold',sans-serif;}
     .cook__description {
-    font-family: 'MontLight',sans-serif;
+    font-family: 'DSIDE-Light',sans-serif;
     font-size: 0.8rem;
     flex: 1 1 75%;
     padding: 1rem 5rem 1rem 1rem;

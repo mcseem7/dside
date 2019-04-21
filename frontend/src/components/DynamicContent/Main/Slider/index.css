@@ -1,0 +1,189 @@
+/* Mobile-First Home Services */
+    .content__services {
+        margin-right: 40px;
+        margin-left: 40px;
+        margin-bottom: 2rem;
+        overflow-x: hidden;
+        font-family: 'DSIDE-Light', sans-serif;
+    }
+
+    .title__service h4 {
+        font-size: 1.6rem;
+    }
+    .title__service h2 {
+        font-size: 1.8rem;
+    }
+    .title__service p {
+        font-size: 1.2rem;
+        padding: 0 0 3rem 0;
+        line-height: 1.8rem;
+    }
+
+    .content__services {
+        display: flex;
+        flex-direction: column;
+    }
+
+      .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content__services .title__service {
+        display: block;
+        margin-bottom: -30px;
+    }
+    #slide-first{
+        background: url('slide.jpg');
+    }
+    .slide{display: block;
+        width: 100%;
+        height: 400px;}
+    .slider-row{
+          max-width: 1200px;
+    margin: 0 auto;
+    }
+    .slick-slider{margin-bottom: 2rem;}
+    .slick-dots{
+    position: absolute !important;
+    top: 300px !important;
+    width: 200px !important;
+    list-style: none;
+    left: 50px !important;
+    }
+    .slide h2{position: absolute; top: 200px;}
+    .slide p{position: absolute; top: 240px;}
+    .listed{
+    display: flex;
+    height: 180px;
+    border-radius: 2px;
+    margin-top: 0.4rem;
+    flex-direction: row;
+    cursor: pointer;
+    text-decoration: none;
+    }
+    .listwrapper a{text-decoration: none}
+    .listed h2{font-family: 'DSIDE-Bold',sans-serif; font-size: 1.3rem; color: #fff; }
+    .listed p{font-family: 'DSIDE-Light',sans-serif; font-size: 0.8rem; color: #fff; width: 120px;}
+    .list{    padding: 1.3rem 2rem;}
+    .list__services-branding{
+        background: url('brandings.jpg');
+         background-size: 100%;
+    }
+    .list__services-advert h2,  .list__services-video h2{color: #1b002c;}
+    .list__services-advert p,  .list__services-video p{color: #1b002c;}
+    .list__services-websites h2{align-self: flex-end;}
+    .list__services-websites h2, .list__services-websites p{text-align: right}
+    .list__services-websites{
+        background: url('websites.jpg');
+         background-size: 100%;
+        flex-direction: row-reverse;
+    }
+    .list__services-advert{
+        background: url('ads.jpg');
+         background-size: 100%;
+    }
+     .list__services-automation{
+        background: url('automation.jpg');
+         background-size: 100%;
+         flex-direction: row-reverse;
+    }
+    .list__services-video{
+        background: url('videos.jpg');
+         background-size: 100%;
+    }
+/* Tablets */
+
+@media only screen and (min-width: 480px) {
+    .listwrapper{    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    margin-left: 3rem;}
+.title__service h4 {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, #da8c93 0%, #ae6058 100%);
+    opacity: .5;
+    color: #000000;
+    font-family: 'DSIDE-Bold', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+p{ font-family: 'DSIDE-Light', sans-serif; font-size: 14px; line-height: 1.6em;}
+h2{ font-family: 'DSIDE-Light', sans-serif; font-size: 1.4em;}
+
+.content__services {
+    max-width: 1200px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding-top: 75px;
+    padding-bottom: 100px;
+}
+
+.services {
+    display: flex;
+    align-items: center;
+    padding: 1rem 4rem;
+}
+
+.title__service {
+    flex: 1;
+}
+
+.button__service {
+    background-image: linear-gradient(to right, #da8c93 0%, #ae6058 100%);
+    opacity: 0.3;
+}
+
+.more__about-service {
+outline: none;
+    border: none;
+    margin-top: 0px;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 6px;
+    color: rgb(12,16,16);
+    font-family: "MontBold", 'sans-serif' ;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.more__about-service:after {
+    opacity: 0;
+}
+
+.more__about-service button {
+    position: relative;
+    margin-left: -7px;
+
+}
+.content__services .title__service{display: flex; flex-direction: column;flex: 1 1 40%; }
+.services{flex-direction: row;    align-items: baseline;}
+.title__service p{font-size: 1em;}
+
+}
+@media only screen and (min-width: 1024px) {
+    .listwrapper{
+    flex-direction: column;
+    flex: 1 1 60%;
+    margin-left: 3rem;
+    }
+
+}
+@media only screen and (min-width: 1440px) {
+    .listwrapper{flex-direction: row; flex-wrap: wrap;flex: 1 1 70%;}
+    .listened{    flex-basis: 49%;
+    margin-left: 1%;}
+     .list{    padding: 1rem 2rem;}
+     .listed:hover{  -webkit-animation: flash 0.7s forwards linear 0.16s;
+    -moz-animation: flash 0.7s forwards linear 0.16s;
+    animation: flash 0.7s forwards linear 0.16s;}
+     .listed .list p{opacity: 0; font-size: .7rem; transition: all .3s ease-out; transform: translateY(5px);}
+     .listed:hover .list p{opacity: 1;transition: all .3s ease-out;transform: translateY(0px);}
+}

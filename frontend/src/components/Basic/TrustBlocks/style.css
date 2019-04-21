@@ -20,7 +20,7 @@ img.adv-icon {
 
 .advantage {
     text-align: center;
-    font-family: 'MontLight',sans-serif;
+    font-family: 'DSIDE-Light',sans-serif;
     font-weight: 400;
     flex: .3 1 40%;
     margin-top: 2rem;
@@ -31,7 +31,7 @@ img.adv-icon {
 }
 
 .cu-we-iter {
-    font-family: 'MontLight', sans-serif;
+    font-family: 'DSIDE-Light', sans-serif;
     font-weight: 400;
     flex: .3 1 40%;
     margin-top: 2rem;
@@ -44,7 +44,7 @@ img.adv-icon {
     max-width: 200px;
     line-height: 1.4rem;
     margin: auto;
-    font-family: 'MontBold',sans-serif;
+    font-family: 'DSIDE-Bold',sans-serif;
 }
 
 .advantage-text {
@@ -66,12 +66,12 @@ img.adv-icon {
 }
 #cu-advantages h3 {
     font-size: 1.8em;
-    font-family: 'MontBold',sans-serif;
+    font-family: 'DSIDE-Bold',sans-serif;
     margin-top: 0;
     padding: 0rem 1rem 1rem 1rem;
 }
 #cu-we-care .text p {
-    font-family: 'MontLight',sans-serif;
+    font-family: 'DSIDE-Light',sans-serif;
     font-size: 1rem;
     line-height: 1.6rem;
     width: initial;
@@ -97,7 +97,7 @@ img.adv-icon {
     margin-left: 2rem;
 }
 .cu-content h3{font-size: 1.8em;
-    font-family: 'MontBold',sans-serif;
+    font-family: 'DSIDE-Bold',sans-serif;
     margin-top: 0;
     padding: 3rem 0rem 0rem 2rem;}
 .text p {
@@ -216,7 +216,7 @@ img.adv-icon {
      display: flex;  flex-direction: column;}
 .iter{padding: 1rem 3rem;}
 #iter{flex-basis: 50%;}
-#iter .text{font-family: 'MontLight',sans-serif; font-size: 1.2rem; flex-basis: 50%;}
+#iter .text{font-family: 'DSIDE-Light',sans-serif; font-size: 1.2rem; flex-basis: 50%;}
 /* Tablets */
 @media only screen and (min-width: 480px) {
     .iter{  flex-direction: row;     flex-wrap: wrap;}
@@ -233,7 +233,7 @@ img.adv-icon {
 .own-container{padding-top: 10rem;}
 .own-instance .own-heading, .own-instance .own-desc{text-align: center}
 .dside-promo .text{
-    font-family: 'MontLight', sans-serif;
+    font-family: 'DSIDE-Light', sans-serif;
     line-height: 31px;
     text-align: center;
     margin: 0 auto;

@@ -35,7 +35,7 @@
      .advantages {
         display: flex;
         flex-direction: row;
-        font-family: 'MontLight', sans-serif;
+        font-family: 'DSIDE-Light', sans-serif;
         font-size: 1.2rem;
          padding: 3rem 0;
     }
@@ -119,7 +119,7 @@
     .advantages {
         display: flex;
         flex-direction: row;
-        font-family: 'MontLight', sans-serif;
+        font-family: 'DSIDE-Light', sans-serif;
         font-size: 14px;
     }
 

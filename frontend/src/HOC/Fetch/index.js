@@ -57,7 +57,7 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
 
 
 
-    getDsideApi = async () => {
+      getDsideApi = async () => {
       await fetch(`${process.env.REACT_APP_API}/${this.state.langContent}${apiUrl}`)
         .then((response) => response.json())
         .then(data => this.setState({

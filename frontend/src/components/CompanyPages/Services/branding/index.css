@@ -1,11 +1,11 @@
-.find__out-branding {background: #1E1007; color: #fff; font-family: 'MontLight',sans-serif; padding-top: 3rem }
+.find__out-branding {background: #1E1007; color: #fff; font-family: 'DSIDE-Light',sans-serif; padding-top: 3rem }
 .cola-item img{padding: 3rem 1rem;}
-.find__out-title{font-family: 'MontBold',sans-serif;}
+.find__out-title{font-family: 'DSIDE-Bold',sans-serif;}
 /* .find__button{display: none} */
 
 .diff__title p{color: #a35727; font-size: 1rem;}
 .number__cola{color: #a35727; font-size: 1rem;}
-.cola__content h2{font-family: 'MontBold',sans-serif;}
+.cola__content h2{font-family: 'DSIDE-Bold',sans-serif;}
 .cola__content p{font-size: 1rem; line-height: 1.4rem;}
 .linear__fade-arrow{display: none;}
 .dsided__order-container{text-align: center; display: flex; justify-content: center; position: relative}
@@ -90,7 +90,7 @@
 }
 
 .price__louis_wrapper {
-    font-family: 'MontBold',sans-serif;
+    font-family: 'DSIDE-Bold',sans-serif;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -101,13 +101,13 @@
     line-height: 1.4rem;
 }
 
-.loius__viton_title-description{font-family: 'MontBold',sans-serif;}
+.loius__viton_title-description{font-family: 'DSIDE-Bold',sans-serif;}
 .header__navigation{padding: 0 2rem;}
 .header__navigation .logotype__company{margin: 0; width: 90px;}
 
 .dside-company__links li{margin: 0;}
-.branding__service-right{ padding: 3rem 2rem; font-family: 'MontLight',sans-serif}
-.price__louis_wrapper{font-family: 'MontBold',sans-serif;}
+.branding__service-right{ padding: 3rem 2rem; font-family: 'DSIDE-Light',sans-serif}
+.price__louis_wrapper{font-family: 'DSIDE-Bold',sans-serif;}
 .arrow__louis-container{display: none;}
 
 .effect_animate-louisicon {
@@ -245,7 +245,7 @@
 
 .title__louis {
     color: #21201f;
-    font-family: 'MontBold', sans-serif;
+    font-family: 'DSIDE-Bold', sans-serif;
     font-size: 25px;
     font-weight: 700;
     text-align: left;
@@ -253,7 +253,7 @@
 
 .loius__viton_title-description {
     color: #101010;
-    font-family: 'MontBold', sans-serif;
+    font-family: 'DSIDE-Bold', sans-serif;
     font-size: 29px;
     font-weight: 700;
     text-align: left;
@@ -264,7 +264,7 @@
 
 .loius__viton_description {
     color: #101010;
-    font-family: 'MontLight', sans-serif;
+    font-family: 'DSIDE-Light', sans-serif;
     text-align: left;
     font-size: 18px;
     font-weight: 300;
@@ -321,7 +321,7 @@
 }
 
 .price__louis {
-    font-family: 'MontBold', sans-serif;
+    font-family: 'DSIDE-Bold', sans-serif;
     font-size: 70px;
     padding-right: 10px;
     font-weight: 700;
@@ -381,7 +381,7 @@ padding-top: 200px;
 .dside_textContainer-brand div:first-child {
     background-image: linear-gradient(to right, #743c18 60%, #1E1007 100%);
     opacity: 0.3;
-    font-family: 'MontBold', sans-serif;
+    font-family: 'DSIDE-Bold', sans-serif;
     font-size: 131px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -397,7 +397,7 @@ padding-top: 200px;
     display: flex;
     flex-direction: column;
     padding: 0rem 2rem 0 7rem;
-    font-family: 'MontLight',sans-serif;
+    font-family: 'DSIDE-Light',sans-serif;
 }
 .branding__service-left {
     z-index: 10;
@@ -432,7 +432,7 @@ padding-top: 200px;
 
 .find__out-title h2 {
     color: #ffffff;
-    font-family: 'MontBold', sans-serif;
+    font-family: 'DSIDE-Bold', sans-serif;
     font-size: 40px;
     font-weight: 700;
     line-height: 20px;
@@ -444,7 +444,7 @@ padding-top: 200px;
     opacity: 0.49;
     color: #695050;
     margin-top: 50px;
-    font-family: 'MontBold', sans-serif;
+    font-family: 'DSIDE-Bold', sans-serif;
     font-size: 22px;
     font-weight: 700;
     line-height: 20px;
@@ -458,7 +458,7 @@ padding-top: 200px;
 .find__button a {
     text-decoration: none;
     color: #ffffff;
-    font-family: 'MontBold', sans-serif;
+    font-family: 'DSIDE-Bold', sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 32px;
@@ -527,7 +527,7 @@ padding-top: 200px;
     font-size: 2rem;
     line-height: 32px;
     color: rgb(65,36,30);
-    font-family: 'MontBold',sans-serif;
+    font-family: 'DSIDE-Bold',sans-serif;
 }
 
 .cola-item_two .cola-item__content {

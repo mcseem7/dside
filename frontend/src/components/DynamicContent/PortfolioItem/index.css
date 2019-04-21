@@ -38,7 +38,7 @@
         }
         .name__project h4 {
             color: #ffffff;
-            font-family: 'MontBold', sans-serif;
+            font-family: 'DSIDE-Bold', sans-serif;
             font-size: 2rem;
             margin: 0;
             padding: 0 2rem;
@@ -64,7 +64,7 @@
         }
 
         .description__project {
-            font-family: 'MontLight', sans-serif;
+            font-family: 'DSIDE-Light', sans-serif;
             font-size: 1rem;
             font-weight: 300;
             color:#ffffff;
@@ -90,7 +90,7 @@
             margin-right: 3rem;
         }
     .container__project-task{padding: 1rem 2rem;}
-    .project__task_portfolio{font-family: 'MontLight', sans-serif; font-size: 1rem; line-height: 1.2rem;}
+    .project__task_portfolio{font-family: 'DSIDE-Light', sans-serif; font-size: 1rem; line-height: 1.2rem;}
     .portfolio__screen-item img{margin-bottom: -5px}
     .portfolio__carousel{display: none;}
 /* Tablets */
@@ -99,7 +99,7 @@
         .portfolio__carousel{display: block;}
         .name__description  {
             color: #ffffff;
-            font-family: 'MontBold', sans-serif;
+            font-family: 'DSIDE-Bold', sans-serif;
             font-size:                  rem;
             font-weight: 700;
             margin: 0;
@@ -121,7 +121,7 @@
         .superwrapper{padding-left: 2rem;}
         .project__task_portfolio p {
             color: #000000;
-            font-family: 'MontLight', sans-serif;
+            font-family: 'DSIDE-Light', sans-serif;
             font-size: 18px;
             font-weight: 300;
             max-width: 797px;
@@ -131,7 +131,7 @@
 
         .name__task h4 {
             color: #000000;
-            font-family: 'MontBold', sans-serif;
+            font-family: 'DSIDE-Bold', sans-serif;
             font-size: 18px;
             margin: 22px 45px 0px 0px;
             font-weight: 700;
@@ -169,7 +169,7 @@
 
         .portfolio__carousel-title h2 {
             color: #000000;
-            font-family: 'MontBold', sans-serif;
+            font-family: 'DSIDE-Bold', sans-serif;
             font-size: 18px;
             margin-left: 60px;
             font-weight: 700;

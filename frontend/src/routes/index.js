@@ -22,6 +22,7 @@ const routes = [
     ...company,
     ...blog,
     ...portfolio,
+    ...process,
     {
         path: [
             '/en/grade/:gradeitem', 

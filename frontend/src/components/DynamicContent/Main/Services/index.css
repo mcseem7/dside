@@ -4,7 +4,7 @@
         margin-left: 40px;
         margin-bottom: 2rem;
         overflow-x: hidden;
-        font-family: 'MontLight', sans-serif;
+        font-family: 'DSIDE-Light', sans-serif;
     }
 
     .title__service h4 {
@@ -43,8 +43,8 @@
     text-decoration: none;
     }
     .listwrapper a{text-decoration: none}
-    .listed h2{font-family: 'MontBold',sans-serif; font-size: 1.3rem; color: #fff; }
-    .listed p{font-family: 'MontLight',sans-serif; font-size: 0.8rem; color: #fff; width: 120px;}
+    .listed h2{font-family: 'DSIDE-Bold',sans-serif; font-size: 1.3rem; color: #fff; }
+    .listed p{font-family: 'DSIDE-Light',sans-serif; font-size: 0.8rem; color: #fff; width: 120px;}
     .list{    padding: 1.3rem 2rem;}
     .list__services-branding{
         background: url('brandings.jpg');
@@ -87,14 +87,14 @@
     background-image: linear-gradient(to right, #da8c93 0%, #ae6058 100%);
     opacity: .5;
     color: #000000;
-    font-family: 'MontBold', sans-serif;
+    font-family: 'DSIDE-Bold', sans-serif;
     font-size: 18px;
     font-weight: 700;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-p{ font-family: 'MontLight', sans-serif; font-size: 14px; line-height: 1.6em;}
-h2{ font-family: 'MontLight', sans-serif; font-size: 1.4em;}
+p{ font-family: 'DSIDE-Light', sans-serif; font-size: 14px; line-height: 1.6em;}
+h2{ font-family: 'DSIDE-Light', sans-serif; font-size: 1.4em;}
 
 .content__services {
     max-width: 1200px;

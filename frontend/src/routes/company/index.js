@@ -1,5 +1,6 @@
 import ContactUs from "../../components/CompanyPages/ContactUs";
 import About from '../../components/DynamicContent/About'
+import Process from '../../components/DynamicContent/Process'
 
 
 export const company = [
@@ -22,6 +23,16 @@ export const company = [
              ],
         exact: true,
         component: About
+    },
+    {
+        path: [
+            `/en/process`,
+            `/ru/process`,
+            `/pl/process`,
+            `/cz/process`
+             ],
+        exact: true,
+        component: Process
     }
 ]
 

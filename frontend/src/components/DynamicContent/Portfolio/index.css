@@ -2,7 +2,7 @@
 
 .portfolio-category__item p {
     color: #000000;
-    font-family: 'MontBold', sans-serif;
+    font-family: 'DSIDE-Bold', sans-serif;
     font-size: 16px;
     font-weight: 700;
 }
@@ -10,7 +10,7 @@
 
 .portfolio-category__item p sup {
     color: #000000;
-    font-family: 'MontLight', sans-serif;
+    font-family: 'DSIDE-Light', sans-serif;
     font-size: 12px;
     margin-left: 2px;
 }
@@ -20,10 +20,13 @@
     display: flex;
     align-items: center;
 }
+.wrapper-row{width: 1200px;
+    margin: 0 auto;}
 
 .portfolio__items-category {
     background: #F2F3F5;
     padding-bottom: 20px;
+    padding-top: 7rem;
 }
 
 .portfolio-category__list {
@@ -41,7 +44,7 @@
 
 .portfolio__items-container,
 .sorting__items-container {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -66,14 +69,14 @@
 
 .sorting-portfolio__wrapper .portfolio-sorting__date {
     color: #000000;
-    font-family: 'MontBold', sans-serif;
+    font-family: 'DSIDE-Bold', sans-serif;
     font-size: 14px;
     font-weight: 700;
 }
 
 .sortby__type div {
     color: #000000;
-    font-family: 'MontLight', sans-serif;
+    font-family: 'DSIDE-Light', sans-serif;
     font-size: 14px;
     font-weight: 300;
 }

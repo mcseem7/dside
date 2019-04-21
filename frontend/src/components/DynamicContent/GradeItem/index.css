@@ -109,7 +109,7 @@
 .grader__position p {
     font-size: 12px;
     margin: 0;
-    font-family: 'MontLight', 'sans-serif'
+    font-family: 'DSIDE-Light', 'sans-serif'
 }
 
 .recent__title-grades h3 {
@@ -159,7 +159,7 @@ left: 12px;
 .recent__grade-date span {
     font-size: 12px;
     color: #ffffff;
-    font-family: 'MontBold', 'sans-serif' ;
+    font-family: 'DSIDE-Bold', 'sans-serif' ;
 }
 
 .similar__grades {
@@ -275,7 +275,7 @@ left: 12px;
 
 .grade-text__description p {
     color: #000000;
-    font-family: 'MontLight', sans-serif;
+    font-family: 'DSIDE-Light', sans-serif;
     font-size: 18px;
     font-weight: 300;
 }

@@ -96,7 +96,7 @@
   },
 
   "E-commerce": {
-    "ru": "Интернет-магазин",
+    "ru": "Интернет-магазины",
     "pl": "Sklepy internetowe",
     "cz": "E-commerce"
   },
@@ -1236,5 +1236,100 @@
   "We will publish a detailed review for your proposal.": {
     "pl": "Opublikujemy szczegółową recenzję Twojej propozycji.",
     "ru": "Мы опубликуем детальний обзор для вашего предложения."
+  },
+  "Analytics": {
+        "pl": "Analityka",
+        "cz": "Analityka",
+        "ru": "Аналитика"
+  },
+  "Design": {
+        "pl": "Projektowanie",
+        "cz": "Design",
+        "ru": "Дизайн"
+  },
+  "Development": {
+        "pl": "Programowanie",
+        "cz": "Programming",
+        "ru": "Программирование"
+  },
+  "Integration": {
+        "pl": "Integracja",
+        "cz": "Integrating",
+        "ru": "Интеграция"
+  },
+  "Testing": {
+        "pl": "Testowanie",
+        "cz": "Testeeng",
+        "ru": "Тестирование"
+  },
+  "Launching": {
+        "pl": "Uruchomienie",
+        "cz": "Lauching",
+        "ru": "Запуск"
+  },
+  "Marketing": {
+        "pl": "Marketing",
+        "cz": "Lauching",
+        "ru": "Маркетинг"
+  },
+  "Support": {
+        "pl": "Wsparcie",
+        "cz": "Lauching",
+        "ru": "Поддержка"
+  },
+  "We Do": {
+        "pl": "Co robimy",
+        "cz": "Lauching",
+        "ru": "Что делаем"
+  },
+  "Team": {
+        "pl": "Zespól",
+        "cz": "Lauching",
+        "ru": "Команда"
+  },
+  "Projects": {
+        "pl": "Projekty",
+        "cz": "Lauching",
+        "ru": "Проекты"
+  },
+  "Services": {
+        "pl": "Usługi",
+        "cz": "Lauching",
+        "ru": "Услуги"
+  },
+  "Process": {
+        "pl": "Proces",
+        "cz": "Lauching",
+        "ru": "Процесс"
+  },
+  "About": {
+        "pl": "O nas",
+        "cz": "Lauching",
+        "ru": "О нас"
+  },
+  "Order Now": {
+        "pl": "Zamów",
+        "cz": "Lauching",
+        "ru": "Заказать"
+  },
+  "The success of any website or mobile application is a clear understanding of user needs, system limitations and business objectives. Detailed business analysis helps us to choose the optimal solution that meets the needs of the target audience.": {
+        "pl": "Sukces każdej strony internetowej lub aplikacji mobilnej polega na zrozumieniu potrzeb użytkowników, ograniczeń systemu i celów biznesowych. Szczegółowa analiza biznesowa pomaga nam wybrać optymalne rozwiązanie, które spełnia potrzeby grupy docelowej.",
+        "cz": "Lauching",
+        "ru": "Успех любого веб-сайта или мобильного приложения - это четкое понимание потребностей пользователей, системных ограничений и бизнес-целей. Детальный бизнес-анализ помогает нам выбрать оптимальное решение, соответствующее потребностям целевой аудитории."
+  },
+  "Spectacular branding will help you to stand out in the market, and an intuitive interface to increase user loyalty and involvement. We also develop infographics, illustrations and other graphic content, which guarantees the uniqueness of your content.": {
+        "pl": "Spektakularne oznakowanie pomoże Ci wyróżnić się na rynku oraz intuicyjny interfejs, który zwiększy lojalność i zaangażowanie użytkowników. Opracowujemy również infografiki, ilustracje i inne treści graficzne, co gwarantuje wyjątkowość treści.",
+        "cz": "Lauching",
+        "ru": "Эффектный брендинг поможет вам выделиться на рынке, а интуитивно понятный интерфейс повысит лояльность и вовлеченность пользователей. Мы также разрабатываем инфографику, иллюстрации и другой графический контент, который гарантирует уникальность вашего контента."
+  },
+  "Designing a system architecture and writing code is a key step in creating any product. We create highly scalable solutions that work reliably under heavy loads. Our team also specializes in creating custom animation effects that are an integral part of a modern promotional website.": {
+        "pl": "Projektowanie architektury systemu i pisanie kodu to kluczowy krok w tworzeniu każdego produktu. Tworzymy wysoce skalowalne rozwiązania, które działają niezawodnie przy dużych obciążeniach. Nasz zespół specjalizuje się również w tworzeniu niestandardowych efektów animacji, które stanowią integralną część nowoczesnej witryny promocyjnej.",
+        "cz": "Lauching",
+        "ru": "Разработка архитектуры системы и написание кода - это ключевой шаг в создании любого продукта. Мы создаем масштабируемые решения, которые надежно работают при больших нагрузках. Наша команда также специализируется на создании пользовательских анимационных эффектов, которые являются неотъемлемой частью современного рекламного сайта."
+  },
+  "Designing a system architecture and writing code is a key step in creating any product. We create highly scalable solutions that work reliably under heavy loads. Our team also specializes in creating custom animation effects that are an integral part of a modern promotional website.": {
+        "pl": "Projektowanie architektury systemu i pisanie kodu to kluczowy krok w tworzeniu każdego produktu. Tworzymy wysoce skalowalne rozwiązania, które działają niezawodnie przy dużych obciążeniach. Nasz zespół specjalizuje się również w tworzeniu niestandardowych efektów animacji, które stanowią integralną część nowoczesnej witryny promocyjnej.",
+        "cz": "Lauching",
+        "ru": "Разработка архитектуры системы и написание кода - это ключевой шаг в создании любого продукта. Мы создаем масштабируемые решения, которые надежно работают при больших нагрузках. Наша команда также специализируется на создании пользовательских анимационных эффектов, которые являются неотъемлемой частью современного рекламного сайта."
   }
 }
