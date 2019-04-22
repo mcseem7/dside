@@ -1,12 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import HeaderService from '../serviceComponents/HeaderService/index'
 import CaseService from '../serviceComponents/CaseService/index'
-import LimitedService from '../serviceComponents/LimitedService'
-import LogoBrand from './images/websites-heading.png'
-import Vova from './images/vova__dside.png'
-import Versus from './images/Layer 123.png'
-import SimpleWeb from './images/simple-web.svg'
-import BetterWeb from './images/better-web.svg'
 import './index.css'
 import Own from '../../../Basic/TrustBlocks/Own'
 import HeaderPost from '../../../DynamicContent/Header__Post/index';
@@ -18,42 +11,54 @@ import withDsideApi from "../../../../HOC/Fetch";
 import { HeroVideo } from "react-hero-video";
 import Translate, { reactTranslateChangeLanguage } from "translate-components";
 import Footer from '../../../Basic/Footer'
+import Header from '../../../Basic/Header'
 import Helmet from 'react-helmet-async'
+import Slider from "react-slick";
 
 class Website extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
   }
 
   componentDidMount() {
     reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
   }
 
+  headerDark = (value) => {
+        this.setState({ name: value })
+    }
+
   render() {
-    const idVideo = 'eJ8SOYUkWl0'
+
+      const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    autoplay: false,
+    autoplaySpeed: 6000,
+    pauseOnHover: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+    }
+
     return (
       <Fragment>
         <div>
         <Helmet>
   <title>Dside Website</title>
 </Helmet>
-          <div style={{ overflow: 'hidden' }} className='video-wrap'>
-            <HeroVideo
-               videoSrc={`https://www.youtube.com/embed/${idVideo}?rel=0&autoplay=1&loop=1&playlist=${idVideo}&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&fs=1`}>
-            </HeroVideo>
-            <div id="vidtop-content">
-              <HeaderService
-activeLanding={'main__header-website'}
-logoHeader={LogoBrand}
-                stylelogotext={'logo__service-text_website'}
-                serviceSlogan={'DSIDE to make your website SELL BETTER'}
-                imgLogoPosition={'logo__service-img_website'}
-                textContainer={'dside_textContainer-website'}
-                textHeader={[<p></p>]}
-              />
+               <Slider {...settings}>
+          <div>
+            <div id='slide-first-website' className="slide">
+            <div className="slider-row-website">
+            <h2>Effective Web Production</h2>
+            <p>“If your business is not on the Internet, then you are not in business!”</p>
+            </div>
             </div>
           </div>
-          <div className='websites__quality-wraoper'>
+        </Slider>
+          {/*<div className='websites__quality-wraoper'>
             <section className="websites-dev__quality" id='website__developer'>
               <h2><Translate>What's the difference?</Translate></h2>
               <div className="headers-websites-comparsion">
@@ -75,39 +80,15 @@ logoHeader={LogoBrand}
                 <div className="roow greater"><span className="greygoose">$150</span><strong><Translate>TOTAL</Translate></strong><span className="greender">$600</span></div>
               </div>
             </section>
-          </div>
+          </div>*/}
 
         </div>
 
         <CaseService {...this.props} name='web sites' />
-        <section className="al__time-section">
-
-          <div className="al__time-wrapper">
-
-
-            <h3><Translate>Become powerful</Translate></h3>
-
-            <p><Translate>Take the first step to the strongest and most profitable sales.</Translate><br />
-              <Translate>Already doing your business automation?</Translate>
-              <br />
-              <Translate>Order an audit of an existing automation campaign, we will point out the weaknesses</Translate>
-              <span className="golden bolder"> <Translate>for free.</Translate></span></p>
-
-            <div className="al__time-button">
-
-            </div>
-
-          </div>
-        </section>
-        <Iter/>
-        <WeCare name="website" />
         <Advantages />
-        <Own />
         <Footer/>
       </Fragment>
     )
   }
 }
-
-
 export default withDsideApi(Website, '/portfolio/getPortfolioItems/Websites/')

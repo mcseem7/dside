@@ -1278,7 +1278,7 @@
         "ru": "Поддержка"
   },
   "We Do": {
-        "pl": "Co robimy",
+        "pl": "Robimy",
         "cz": "Lauching",
         "ru": "Что делаем"
   },
@@ -1327,9 +1327,294 @@
         "cz": "Lauching",
         "ru": "Разработка архитектуры системы и написание кода - это ключевой шаг в создании любого продукта. Мы создаем масштабируемые решения, которые надежно работают при больших нагрузках. Наша команда также специализируется на создании пользовательских анимационных эффектов, которые являются неотъемлемой частью современного рекламного сайта."
   },
-  "Designing a system architecture and writing code is a key step in creating any product. We create highly scalable solutions that work reliably under heavy loads. Our team also specializes in creating custom animation effects that are an integral part of a modern promotional website.": {
-        "pl": "Projektowanie architektury systemu i pisanie kodu to kluczowy krok w tworzeniu każdego produktu. Tworzymy wysoce skalowalne rozwiązania, które działają niezawodnie przy dużych obciążeniach. Nasz zespół specjalizuje się również w tworzeniu niestandardowych efektów animacji, które stanowią integralną część nowoczesnej witryny promocyjnej.",
+  "For successful and timely launch of any system, it is necessary to carry out full synchronization of the site or application with the CRM client. Correct synchronization performed ensures the safety and correctness of data and the speed of its processing by the business.": {
+        "pl": "W celu udanego i terminowego uruchomienia dowolnego systemu konieczne jest przeprowadzenie pełnej synchronizacji witryny lub aplikacji z klientem CRM. Prawidłowa synchronizacja zapewnia bezpieczeństwo i poprawność danych oraz szybkość ich przetwarzania przez firmę.",
         "cz": "Lauching",
-        "ru": "Разработка архитектуры системы и написание кода - это ключевой шаг в создании любого продукта. Мы создаем масштабируемые решения, которые надежно работают при больших нагрузках. Наша команда также специализируется на создании пользовательских анимационных эффектов, которые являются неотъемлемой частью современного рекламного сайта."
+        "ru": "Для успешного и своевременного запуска любой системы необходимо выполнить полную синхронизацию сайта или приложения с клиентом CRM. Правильная синхронизация обеспечивает безопасность и правильность данных, а также скорость их обработки бизнесом."
+  },
+  "We do not like to rewrite the code, so we are testing at the end of each sprint. Risk prevention saves both money and time.": {
+        "pl": "Nie lubimy przepisywać kodu, więc testujemy na końcu każdego sprintu. Zapobieganie ryzyku oszczędza zarówno pieniądze, jak i czas.",
+        "cz": "Lauching",
+        "ru": "Нам не нравится переписывать код, поэтому мы тестируем в конце каждого спринта. Предотвращение риска экономит деньги и время."
+  },
+  "Launch is one of the most important stages in the life of any product. We carry out a full cycle - from selecting and buying a domain to setting up a server update. Full technical support at all stages.": {
+        "pl": "Uruchomienie jest jednym z najważniejszych etapów w życiu każdego produktu. Przeprowadzamy pełny cykl - od wyboru i zakupu domeny po skonfigurowanie aktualizacji serwera. Pełne wsparcie techniczne na wszystkich etapach.",
+        "cz": "Lauching",
+        "ru": "Запуск - один из самых важных этапов в жизни любого продукта. Мы осуществляем полный цикл - от выбора и покупки домена до настройки обновления сервера. Полная техническая поддержка на всех этапах."
+  },
+  "It is not enough to create a product, you still need to competently submit it to users. We help in growth, increase performance, make the product recognizable and loved.": {
+        "pl": "Nie wystarczy stworzyć produkt, nadal musisz kompetentnie przesłać go do użytkowników. Pomagamy w rozwoju, zwiększamy wydajność, sprawiają, że produkt jest rozpoznawalny i kochany.",
+        "cz": "Lauching",
+        "ru": "Недостаточно создать продукт, вам все равно нужно грамотно представить его пользователям. Мы помогаем расти, повышаем производительность, делаем продукт узнаваемым и любимым."
+  },
+  "We ensure the stable operation of the project without failures and crashes, we introduce new functionality and updates, update security patches, keep all databases up to date.": {
+        "pl": "Zapewniamy stabilne działanie projektu bez awarii i awarii, wprowadzamy nową funkcjonalność i aktualizacje, aktualizujemy poprawki zabezpieczeń, aktualizujemy wszystkie bazy danych.",
+        "cz": "Lauching",
+        "ru": "Мы обеспечиваем стабильную работу проекта без сбоев и сбоев, вводим новые функциональные возможности и обновления, обновляем исправления безопасности, поддерживаем все базы в актуальном состоянии."
+  },
+  "Market analysis": {
+        "pl": "Analiza rynku",
+        "cz": "Lauching",
+        "ru": "Анализ рынка"
+  },
+  "Description of the functional": {
+        "pl": "Opis funkcjonalności",
+        "cz": "Lauching",
+        "ru": "Описываем функционал"
+  },
+  "Project specification": {
+        "pl": "Specyfikacja projektu",
+        "cz": "Lauching",
+        "ru": "Спецификация проекта"
+  },
+  "Competitor analysis": {
+        "pl": "Analiza konkurencji",
+        "cz": "Lauching",
+        "ru": "Анализ конкурентов"
+  },
+  "Users analysis": {
+        "pl": "Analiza użytkowników",
+        "cz": "Lauching",
+        "ru": "Анализ аудитории"
+  },
+  "Business analyst": {
+        "pl": "Analityk Biznesowy",
+        "cz": "Lauching",
+        "ru": "Бизнес-аналитик"
+  },
+  "Project manager": {
+        "pl": "Menadżer projektu",
+        "cz": "Lauching",
+        "ru": "Менеджер проекта"
+  },
+  "Site structure and map": {
+        "pl": "Struktura i mapa strony",
+        "cz": "Lauching",
+        "ru": "Структура и карта проекта"
+  },
+  "Logo and corporate identity": {
+        "pl": "Logo i identyfikacja wizualna",
+        "cz": "Lauching",
+        "ru": "Лого и фирменный стиль"
+  },
+  "Responsive Web Design": {
+        "pl": "Responsive Web Design",
+        "cz": "Lauching",
+        "ru": "Адаптивный дизайн"
+  },
+  "Website prototypes": {
+        "pl": "Prototypy witryny",
+        "cz": "Lauching",
+        "ru": "Прототип сайта"
+  },
+  "Printed and promo products": {
+        "pl": "Produkty drukowane i promocyjne",
+        "cz": "Lauching",
+        "ru": "Промо и печатные материалы"
+  },
+  "Art Director": {
+        "pl": "Dyrektor artystyczny",
+        "cz": "Lauching",
+        "ru": "Арт-Директор"
+  },
+  "UX/UI designer": {
+        "pl": "Projektant UX / UI",
+        "cz": "Lauching",
+        "ru": "UX/UI дизайнер"
+  },
+  "Graphic designer": {
+        "pl": "Grafik",
+        "cz": "Lauching",
+        "ru": "Графический дизайнер"
+  },
+  "System architecture design": {
+        "pl": "Projektowanie architektury systemu",
+        "cz": "Lauching",
+        "ru": "Проектируем архитектуру системы"
+  },
+  "Backend on CMS": {
+        "pl": "Backend na CMS",
+        "cz": "Lauching",
+        "ru": "Backend на CMS"
+  },
+  "Custom backend": {
+        "pl": "Niestandardowy Backend",
+        "cz": "Lauching",
+        "ru": "Самописный Backend"
+  },
+  "Layout": {
+        "pl": "Układ",
+        "cz": "Lauching",
+        "ru": "Вёрстка"
+  },
+  "Systems architect": {
+        "pl": "Architekt systemów",
+        "cz": "Lauching",
+        "ru": "Системный архитектор"
+  },
+  "Full-stack dev": {
+        "pl": "Full-stack programista",
+        "cz": "Lauching",
+        "ru": "Full-stack программист"
+  },
+  "Frontend dev": {
+        "pl": "Frontend programista",
+        "cz": "Lauching",
+        "ru": "Frontend программист"
+  },
+  "Backend dev": {
+        "pl": "Backend programista",
+        "cz": "Lauching",
+        "ru": "Backend программист"
+  },
+  "Backend dev": {
+        "pl": "Backend programista",
+        "cz": "Lauching",
+        "ru": "Backend программист"
+  },
+  "Markup": {
+        "pl": "Informatyk",
+        "cz": "Lauching",
+        "ru": "Верстальщик"
+  },
+  "CRM & ERP Systems": {
+        "pl": "Systemy CRM & ERP",
+        "cz": "Lauching",
+        "ru": "Системы CRM & ERP"
+  },
+  "Payment systems": {
+        "pl": "Płatności online",
+        "cz": "Lauching",
+        "ru": "Кассы и оплата"
+  },
+  "Delivery systems": {
+        "pl": "Serwisy dostawy",
+        "cz": "Lauching",
+        "ru": "Системы доставки"
+  },
+  "Accounting systems": {
+        "pl": "Systemy księgowe",
+        "cz": "Lauching",
+        "ru": "Системы учёта"
+  },
+  "Other integrations": {
+        "pl": "Inne integracje",
+        "cz": "Lauching",
+        "ru": "Другие интеграции"
+  },
+  "Manual testing": {
+        "pl": "Testowanie ręczne",
+        "cz": "Lauching",
+        "ru": "Ручное тестирование"
+  },
+  "Automatic testing": {
+        "pl": "Automatyczne testowanie",
+        "cz": "Lauching",
+        "ru": "Автоматизированное тестирование"
+  },
+  "A / B testing": {
+        "pl": "Testy A / B",
+        "cz": "Lauching",
+        "ru": "A / B тестирование"
+  },
+  "Load testing": {
+        "pl": "Testowanie obciążenia",
+        "cz": "Lauching",
+        "ru": "Нагрузочное тестирование"
+  },
+  "Security testing": {
+        "pl": "Testowanie bezpieczeństwa",
+        "cz": "Lauching",
+        "ru": "Тестирование безопасности"
+  },
+  "QA Automation Engineer": {
+        "pl": "Inżynier automatyzacji QA",
+        "cz": "Lauching",
+        "ru": "Инженер автоматизации QA"
+  },
+  "QA Engineer": {
+        "pl": "Inżynier QA",
+        "cz": "Lauching",
+        "ru": "Инженер QA"
+  },
+  "Domain and hosting": {
+        "pl": "Domena i hosting",
+        "cz": "Lauching",
+        "ru": "Домен и хостинг"
+  },
+  "Cloud storage": {
+        "pl": "Magazyn w chmurze",
+        "cz": "Lauching",
+        "ru": "Облачное хранилище"
+  },
+  "Server scaling": {
+        "pl": "Skalowanie serwera",
+        "cz": "Lauching",
+        "ru": "Серверное масштабирование"
+  },
+  "Setting up a version control system": {
+        "pl": "Konfigurowanie systemu kontroli wersji",
+        "cz": "Lauching",
+        "ru": "Настройка системы контроля версий"
+  },
+  "Display advertising": {
+        "pl": "Reklamy displayowe",
+        "cz": "Lauching",
+        "ru": "Медийная реклама"
+  },
+  "Contextual marketing": {
+        "pl": "Marketing kontekstowy",
+        "cz": "Lauching",
+        "ru": "Контекстный маркетинг"
+  },
+  "Email marketing": {
+        "pl": "E-mail marketing",
+        "cz": "Lauching",
+        "ru": "E-main маркетинг"
+  },
+  "User Behavior Analysis (GA)": {
+        "pl": "Analiza zachowania użytkownika (GA)",
+        "cz": "Lauching",
+        "ru": "Анализ поведения пользователя (GA)"
+  },
+  "SEO Specialist": {
+        "pl": "Specjalista SEO",
+        "cz": "Lauching",
+        "ru": "SEO специалист"
+  },
+  "Email Marketing Specialist": {
+        "pl": "Specjalista ds. Marketingu e-mailowego",
+        "cz": "Lauching",
+        "ru": "Специалист по Email-маркетингу"
+  },
+  "Copywriter": {
+        "pl": "Copywriter",
+        "cz": "Lauching",
+        "ru": "Копирайтер"
+  },
+  "Bug fixes": {
+        "pl": "Poprawki błędów",
+        "cz": "Lauching",
+        "ru": "Исправление ошибок"
+  },
+  "Design update": {
+        "pl": "Aktualizacja projektu",
+        "cz": "Lauching",
+        "ru": "Обновление дизайна"
+  },
+  "Layout update": {
+        "pl": "Aktualizacja układu",
+        "cz": "Lauching",
+        "ru": "Актуализация вёрстки"
+  },
+  "Security patches update": {
+        "pl": "Aktualizacja biezpieczeństwa",
+        "cz": "Lauching",
+        "ru": "Обновление патчей безопасности"
+  },
+  "All the above": {
+        "pl": "Wszyscy",
+        "cz": "Lauching",
+        "ru": "Все вышеперечисленные"
   }
 }

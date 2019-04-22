@@ -12,6 +12,7 @@ import GradePoppup from "../../../HOC/GradePopup/index";
 import Translate from "translate-components";
 import withPoppupHOC from "../../../HOC/Poppup";
 import withLanguage from "../../../HOC/withLanguage";
+import ScrollAnimation from 'react-animate-on-scroll';
 import homeDside from "./homeDside.png";
 import { compose } from "recompose";
 import withDsideApi from "../../../HOC/Fetch";
@@ -21,15 +22,16 @@ import fire from './fire.gif'
 
 class Header extends Component {
   constructor(props) {
-    super(props);
-
+    super(props)
     this.state = {
       opacity: 0,
+      headerDark:'',
       display: "none",
       modalActiveOrder: false,
       modalActiveGrade: false,
       lang: ""
     };
+    console.log(this.props)
   }
 
   showMenu = () => {
@@ -52,14 +54,15 @@ class Header extends Component {
     const {history, location} = this.props;
     const activeClass = (route) => { return location.pathname === route ? "dark" : null }
     const langClass = (route) => { return location.pathname === route ? "active" : null }
-
+    const status = this.state.headerDark ? 'Playing' : 'Not playing';
     return (
 
       <div
         className="header__container"
         style={{ display: this.props.style, zIndex: 10 }}
       >
-<div className={activeClass(`/${this.props.language}`)} >
+
+<div className={this.props.name} >
         <header className="basic__header">
           <div className="basic__header-content">
             <div className="header__content">
@@ -218,12 +221,12 @@ class Header extends Component {
                      </ul>
                    </li>
                    <li className="shining-underline">
-                     <a
-                      href={`/${this.props.language}/process`}
+                     <NavLink
+                      to={`/${this.props.language}/process`}
                       className="link">
                           <Translate>Process</Translate>
                        <span className="mainnavshine"></span>
-                        </a>
+                        </NavLink>
                    </li>
                   <li className="shining-underline">
                      <NavLink
@@ -304,7 +307,6 @@ class Header extends Component {
     );
   }
 }
-
 export default compose(
   withLanguage,
   withRouter,

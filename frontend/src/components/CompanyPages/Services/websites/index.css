@@ -1,9 +1,9 @@
 
 
-.websites__quality-wraoper {
+.websites__quality-wrapper {
     background: #ffffff;
 }
-
+.header__container{display: block !important;}
 .dside_textContainer-website .logo__service_slogan{
     max-width: unset;
     font-size: 2.8rem;

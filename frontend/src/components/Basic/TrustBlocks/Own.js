@@ -24,55 +24,6 @@ export default class Own extends Component {
         return (
             <section className="convupper-block" id="cu-own">
                 {/*<hr />*/}
-                <div className="cu-heading">
-                    <hr />
-                    <div className="text">
-                      <Translate>We try to surround ourselves with people who are competent in their business.</Translate>
-                    <br/>
-                      <strong><Translate>Look We all have 'our own' people.</Translate></strong>
-                    </div>
-                </div>
-                <div className="page-centered cu-wrapper">
-                    <div className="cu-content">
-
-                        <div className="own-container">
-                            <div className="own-instance">
-                                <img src={Doctor} />
-                                <div className="own-heading doctor">
-                                  <Translate>own</Translate>
-                                </div>
-                                <div className="own-desc "><Translate>doctor</Translate></div>
-                            </div>
-                            <div className="own-instance">
-                                <img src={Barber} />
-                                <div className="own-heading barber">
-                                  <Translate>own</Translate>
-                                </div>
-                                <div className="own-desc "><Translate>barber</Translate></div>
-                            </div>
-                            <div className="own-instance">
-                                <img src={Coach} />
-                                <div className="own-heading coach">
-                                  <Translate>own</Translate>
-                                </div>
-                                <div className="own-desc"><Translate>coach</Translate></div>
-                            </div>
-                            <div className="own-instance">
-                                <img src={CarMaster} />
-                                <div className="own-heading cms">
-                                  <Translate>own</Translate>
-                                </div>
-                                <div className="own-desc"><Translate>car service master</Translate></div>
-                            </div>
-                            <div className="own-instance">
-                                <img src={Hero} />
-                                <div className="own-heading hero">
-                                  <Translate>own</Translate>
-                                </div>
-                                <div className="own-desc"><Translate>hero</Translate></div>
-                            </div>
-                        </div>
-
 
                         <div className="dside-promo">
                             <img className="dside-logo" src={Dside} />
@@ -83,8 +34,7 @@ export default class Own extends Component {
                                 </div>
 
                         </div>
-                    </div>
-                </div>
+
             </section>
         )
     }

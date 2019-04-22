@@ -128,13 +128,13 @@ class App extends Component {
                 { <div className="App">
              <Route exact path="/" component={Welcome} />
              <Route path={'/:language'} render={(props) => {
-                 const matchUrl = ['videos', 'logo',  'website', 'brand', 'automation', 'advertising'].indexOf(props.location.pathname.substr(13));
+                 const matchUrl = ['aboutus', 'contactus', 'process', 'portfolio'].indexOf(props.location.pathname.substr(4));
                  function getHeader() {
                  if (matchUrl == -1 ) {
-                    return (<Header domenErty={props.match.params.language} style={'block'} />)
+                    return (<Header domenErty={props.match.params.language} style={'block'} name="dark" />)
                  } else {
                      return (
-                        <Header domenErty={props.match.params.language} style={'none'} /> 
+                        <Header domenErty={props.match.params.language} style={'none'} name="light" />
                      )
                  }
                 }

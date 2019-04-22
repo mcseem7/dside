@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import './index.css'
+import ReactFullpage from '@fullpage/react-fullpage';
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import Translate from 'translate-components'
 import ReactDOM from 'react-dom';
@@ -7,7 +8,6 @@ import { reactTranslateChangeLanguage } from 'translate-components'
 import Helmet from 'react-helmet-async'
 import Footer from '../../Basic/Footer';
 import Header from '../../Basic/Header';
-import ReactFullpage from '@fullpage/react-fullpage';
 
 const SEL = 'custom-section';
 const anchors = ['analytics', 'design', 'development', 'integration', 'testing'];
@@ -75,11 +75,10 @@ export default class Process extends Component {
           tooltip: '04',
           maintext: 'For successful and timely launch of any system, it is necessary to carry out full synchronization of the site or application with the CRM client. Correct synchronization performed ensures the safety and correctness of data and the speed of its processing by the business.',
           wedoitem1: 'CRM & ERP Systems',
-          wedoitem2: 'Backend on CMS',
-          wedoitem3: 'Payment systems',
-          wedoitem4: 'Delivery systems',
-          wedoitem5: 'Accounting systems',
-          wedoitem6: 'Other integrations',
+          wedoitem2: 'Payment systems',
+          wedoitem3: 'Delivery systems',
+          wedoitem4: 'Accounting systems',
+          wedoitem5: 'Other integrations',
           teamitem1: 'Full-stack dev',
           teamitem2: 'Backend dev',
         },
@@ -213,7 +212,6 @@ export default class Process extends Component {
     return (
 
       <div className={'name' + firstSlide}>
-        <Menu />
         <ReactFullpage
           debug /* Debug logging */
           navigation
@@ -239,23 +237,23 @@ export default class Process extends Component {
                       <div className="section-left">
                       <h3><Translate>We Do</Translate></h3>
                       <ul className="wedo">
-                        <li>{wedoitem1}</li>
-                        <li>{wedoitem2}</li>
-                        <li>{wedoitem3}</li>
-                        <li>{wedoitem4}</li>
-                        <li>{wedoitem5}</li>
-                        <li>{wedoitem6}</li>
+                        <li><Translate>{wedoitem1}</Translate></li>
+                        <li><Translate>{wedoitem2}</Translate></li>
+                        <li><Translate>{wedoitem3}</Translate></li>
+                        <li><Translate>{wedoitem4}</Translate></li>
+                        <li><Translate>{wedoitem5}</Translate></li>
+                        <li><Translate>{wedoitem6}</Translate></li>
                       </ul>
                       </div>
                       <div className="section-right">
                       <h3><Translate>Team</Translate></h3>
                       <ul className="team">
-                        <li>{teamitem1}</li>
-                        <li>{teamitem2}</li>
-                        <li>{teamitem3}</li>
-                        <li>{teamitem4}</li>
-                        <li>{teamitem5}</li>
-                        <li>{teamitem6}</li>
+                        <li><Translate>{teamitem1}</Translate></li>
+                        <li><Translate>{teamitem2}</Translate></li>
+                        <li><Translate>{teamitem3}</Translate></li>
+                        <li><Translate>{teamitem4}</Translate></li>
+                        <li><Translate>{teamitem5}</Translate></li>
+                        <li><Translate>{teamitem6}</Translate></li>
                       </ul>
                       </div>
                       </div>

@@ -11,10 +11,11 @@ import Header from '../../Basic/Header';
 
 
 class Portfolio extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.state = {
+      headerDark: false,
       dataItems: [],
       activeFilter: null,
       category: ''

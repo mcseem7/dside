@@ -6,7 +6,7 @@
 .name5{background: #d8e5ed url('./bgs/saber-6.svg') no-repeat; background-position: 5% 4%; background-size: 360px 360px; transition: background .3s ease-in-out;}
 .name6{background: #d8e5ed url('./bgs/saber-7.svg') no-repeat; background-position: 5% 4%; background-size: 360px 360px; transition: background .3s ease-in-out;}
 .name7{background: #d8e5ed url('./bgs/saber-8.svg') no-repeat; background-position: 5% 4%; background-size: 360px 360px; transition: background .3s ease-in-out;}
-.name1 .wedo li::before{color: #fff; opacity: .6;}
+.name1 .wedo li span::before{color: #fff; opacity: .6;}
 .name1 .section-bottom h3{color: #fff; opacity: .6;}
 .section-wrapper{width: 800px; margin: 0 auto; display: flex; flex-direction: column; padding-left: 15rem;}
 .section-top{display: flex; flex-direction: column; flex-wrap: wrap;}
@@ -16,12 +16,12 @@
 .section-top span{font-family: 'DSIDE-Light',sans-serif; letter-spacing: .02rem; line-height: 1.6rem; margin-top: 1rem;}
 .section-left{display: flex; flex-basis: 65%; flex-direction: column; }
 .section-right{display: flex; flex-basis: 30%; flex-direction: column; }
-.team li:empty, .wedo li:empty{display: none;}
+.team li:empty, .wedo li span:empty{display: none;}
 .wedo{display: flex; flex-direction: row; flex-wrap: wrap; margin: 0;
     padding: 0; }
 .team{display: flex; flex-direction: column; flex-wrap: wrap; margin: 0;
     padding: 0; }
 .team li, .wedo li{ display: inline-flex; padding-bottom: 1rem; font-size: 0.8rem;  margin-block-start: 0;  width: 50%;  list-style: none; font-family: 'DSIDE-Light',sans-serif;}
 .team li{font-family: 'DSIDE-Bold';  width: 100%; }
-.wedo li::before{ content:'+'; font-family: 'DSIDE-Black'; color: #737174; position: absolute; margin-left:-15px; }
+.wedo li span::before{ content:'+'; font-family: 'DSIDE-Black'; color: #737174; position: absolute; margin-left:-15px; }
 #fp-nav.fp-show-active a.active+.fp-tooltip, #fp-nav ul li:hover .fp-tooltip{color: #000 !important; font-family: 'DSIDE-Light',sans-serif; transform: translateY(1px);}
