@@ -54,7 +54,7 @@
         "cz": "Łącznie z aplikacjami jednostronicowymi i serwisami high-load",
         "pl": "Łącznie z aplikacjami jednostronicowymi i serwisami high-load"
     },
-     "We provide comprehensive solution to business tasks": {
+     "We provide comprehensive solution to business tasks –": {
          "ru": "Мы предоставляем комплексное решение бизнес-задач",
          "pl": "Zapewniamy kompleksowe rozwiązanie zadań biznesowych",
          "cz": "Zapewniamy kompleksowe rozwiązanie zadań biznesowych"
@@ -64,10 +64,10 @@
         "pl": "od opracowania strategii marketingowej do wdrożenia CRM",
         "cz": "od opracowania strategii marketingowej do wdrożenia CRM"
     },
-  "Branding": {
-    "ru": "Брендинг",
-    "pl": "Tworzenie marki",
-    "cz": "Branding"
+  "Drop the line!": {
+    "ru": "Напишите нам!",
+    "pl": "Napisz nam!",
+    "cz": "Napisz nam!"
   },
 
   "Identity": {

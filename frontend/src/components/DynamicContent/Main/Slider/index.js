@@ -47,7 +47,7 @@ import Slider from "react-slick";
             <div  id={'slide-third-' + localStorage.getItem("lang")} className="slide">
             <div className="slider-row">
             <h2><Translate>Ecommerce Solutions</Translate></h2>
-            <p><Translate>We provide comprehensive solution to business tasks–</Translate><br /> <Translate>from developing a marketing strategy to implementing CRM</Translate></p>
+            <p><Translate>We provide comprehensive solution to business tasks –</Translate><br /> <Translate>from developing a marketing strategy to implementing CRM</Translate></p>
             </div>
             </div>
           </div>
