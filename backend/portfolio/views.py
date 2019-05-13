@@ -51,6 +51,8 @@ class PortfolioItemList(APIView):
                     "views": x.views,
                     "thumbnail": x.thumbnail.url,
                     "CURL": x.base_name,
+                    "hovercolor": x.hovercolor,
+                    "projectlink": x.projectlink,
                     "watching_time": x.watching_time,
                     "description": translation.description,
                     "days_developing": x.days_developing,
