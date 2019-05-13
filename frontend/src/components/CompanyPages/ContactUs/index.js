@@ -196,7 +196,7 @@ changePoppup = () => {
             <div className="copyright__content">
               <div className="footer__copyright">
                 <div className="copyright">
-                  <p>2019 &copy; Dside Agency &trade;. All right reserved.</p>
+                  <p>2019 &copy; <Translate>DSIDE Agency</Translate> &trade;. All right reserved.</p>
                 </div>
 
                 <div className="social__icons">
