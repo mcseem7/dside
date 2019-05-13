@@ -62,7 +62,7 @@ class PortfolioItem(models.Model):
     main_image = models.ImageField()
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
     logotype = models.ImageField()
-    hovercolor = models.CharField(max_length=100, blank=True)
+    hovercolor = models.CharField(max_length=7, default="#000000")
     projectlink = models.CharField(max_length=100, blank=True)
     views = models.IntegerField(default=0)
     watching_time = models.IntegerField()
