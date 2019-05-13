@@ -41,7 +41,7 @@ class Footer extends Component {
            <footer>
                 <div className="footer__wrap__head">
                     <div className="footer__head footer__content text-center">
-                        <ScrollAnimation delay="150" animateIn="slideInUp" ><p className="footer__head-write">Drop the line!</p></ScrollAnimation>
+                        <ScrollAnimation delay="150" animateIn="slideInUp" ><p className="footer__head-write"><Translate>Drop the line!</Translate></p></ScrollAnimation>
                         <ScrollAnimation delay="200" animateIn="slideInUp" ><a className="footer__head-mail" href="mailto:info@mydside.com">info@mydside.com</a></ScrollAnimation>
                     </div>
                 </div>
