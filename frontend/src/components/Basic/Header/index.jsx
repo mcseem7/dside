@@ -189,7 +189,7 @@ class Header extends Component {
                        <span className="mainnavshine"></span>
                         </NavLink>
                    </li>
-                   <li>
+                     {/*<li>
                           <Translate>Services</Translate>
                      <ul>
                          <li className="shining-underline">
@@ -217,7 +217,7 @@ class Header extends Component {
                              </NavLink>
                          </li>
                      </ul>
-                   </li>
+                   </li>*/}
                    <li className="shining-underline">
                      <NavLink
                       to={`/${this.props.language}/process`}
