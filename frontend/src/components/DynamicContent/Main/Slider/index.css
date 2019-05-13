@@ -163,7 +163,8 @@
     list-style: none;
     left: 120px !important;
     }
-    .slide h2 span{position: absolute; bottom: 240px; font-family: 'DSIDE-Bold',sans-serif; color: #fff; font-size: 40px; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);}
+    .slide h2 {position: absolute; bottom: 200px;  color: #fff; font-size: 40px; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);}
+    .slide h2 span{font-family: 'DSIDE-Bold',sans-serif;font-size: 40px;}
     .slide p{position: absolute; bottom: 160px; color: #fff;  font-size: 18px; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);}
      #slide-first-website h2, #slide-first-design h2,  #slide-first-ecommerce h2{text-shadow: none; }
      #slide-first-website p, #slide-first-design p,  #slide-first-ecommerce p{text-shadow: none;}
