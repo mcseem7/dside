@@ -6,6 +6,7 @@ import withLanguage from "../../../HOC/withLanguage";
 import CategoryItem from './CategoryItem';
 import PortolioPost from '../Header__Post/Portfolio__Post';
 import ScrollAnimation from 'react-animate-on-scroll'
+import Translate from 'translate-components'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import Footer from '../../Basic/Footer';
 import Header from '../../Basic/Header';
@@ -64,7 +65,7 @@ class Portfolio extends Component {
           </Helmet>
         <div className="wrapper-row">
             <ScrollAnimation animateIn="slideInUp" >
-        <h2>We'll make it best. They have already tried it.</h2>
+        <h2><Translate>We'll make it best. They have already tried it.</Translate></h2>
             </ScrollAnimation>
           <div className="sorting__items-container">
 
@@ -92,12 +93,12 @@ class Portfolio extends Component {
         <ScrollAnimation delay="100" animateIn="slideInUp" >
             <div className="sorting__items-right">
               <div className="sortby__type">
-                <div className="portfolio-sort__title">Sort by:</div>
+                <div className="portfolio-sort__title"><Translate>Sort by:</Translate></div>
 
                 <div className="sorting-portfolio__wrapper">
                   {/* <div className="portfolio-sorting__date">Date</div> */}
 
-                  <div className="portfolio-sorting__date">Category</div>
+                  <div className="portfolio-sorting__date"><Translate>Category</Translate></div>
                 </div>
               </div>
             </div>

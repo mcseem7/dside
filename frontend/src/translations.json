@@ -70,22 +70,22 @@
     "cz": "Napisz nam!"
   },
 
-  "Identity": {
-    "ru": "Айдентика",
-    "pl": "Tożsamość",
-    "cz": "Identita"
+  "We'll make it best. They have already tried it.": {
+    "ru": "Сделаем лучше. Они уже попробовали ",
+    "pl": "Zrobimy to najlepiej. Oni już spróbowali",
+    "cz": "Zrobimy to najlepiej. Próbowali już tego"
   },
 
-  "Naming": {
-    "ru": "Нэйминг",
-    "pl": "Nazewnictwo",
-    "cz": "Pojmenování"
+  "Category": {
+    "ru": "По категориям",
+    "pl": "Kategorie",
+    "cz": "Kategorie"
   },
 
 
-  "Websites": {
-    "ru": "Веб-сайты",
-    "pl": "Strony WWW",
+  "Sort by:": {
+    "ru": "Сортировка:",
+    "pl": "Sortuj:",
     "cz": "Websites"
   },
 
