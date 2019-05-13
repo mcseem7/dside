@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import ScrollAnimation from 'react-animate-on-scroll'
 
 const propTypes = {};
 
@@ -28,16 +28,15 @@ export default class CategoryItem extends React.Component {
 
 
     render() {
-       
         return (
             <React.Fragment>
-               
+               <ScrollAnimation delay="100" animateIn="slideInUp" >
                       <li className="portfolio-category__item" 
                           onClick={this.props.onActiveFilteringCategory}>
 
                         <p className={this.props.isActiveCategory ?  'golden' : ''}>{this.props.category.tag}<sup>({this.state.categoryLength.length})</sup></p>
                       </li>
-                
+                </ScrollAnimation>
             </React.Fragment>
         );
     }

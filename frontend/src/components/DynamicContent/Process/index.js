@@ -44,7 +44,7 @@ export default class Process extends Component {
         {
           h2: 'Design',
           tooltip: '02',
-          maintext: 'Spectacular branding will help you to stand out in the market, and an intuitive interface to increase user loyalty and involvement. We also develop infographics, illustrations and other graphic content, which guarantees the uniqueness of your content.',
+          maintext: 'Spectacular design will help you to stand out in the market, and an intuitive interface to increase user loyalty and involvement. We also develop infographics, illustrations and other graphic content, which guarantees the uniqueness of your content.',
           wedoitem1: 'Site structure and map',
           wedoitem2: 'Logo and corporate identity',
           wedoitem3: 'Responsive Web Design',
@@ -163,6 +163,13 @@ export default class Process extends Component {
       sectionsColor: newColors,
     });
   }
+   componentDidMount() {
+    reactTranslateChangeLanguage.bind(this, localStorage.getItem("lang"))();
+    window.scrollTo(0, 0);
+    }
+   componentDidUpdate() {
+    reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
+    }
 
   handleAddSection() {
     this.setState(state => {
@@ -196,18 +203,6 @@ export default class Process extends Component {
       return null;
     }
 
-    const Menu = () => (
-      <div
-        className="menu"
-        style={{
-          position: 'fixed',
-          top: 0,
-          zIndex: 100,
-        }}
-      >
-
-      </div>
-    );
 
     return (
 

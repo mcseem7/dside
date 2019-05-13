@@ -31,6 +31,7 @@
 
 .portfolio-category__list {
     display: flex;
+    list-style: none;
 }
 
 
@@ -50,8 +51,10 @@
 
 .portfolio__items-container {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-
+.grid { flex-basis: 33.333%;}
 .portfolio-category__list {
     margin: 0;
     padding: 0;
@@ -73,7 +76,7 @@
     font-size: 14px;
     font-weight: 700;
 }
-
+.wrapper-row h2{font-size: 42px; margin-top: 12rem;}
 .sortby__type div {
     color: #000000;
     font-family: 'DSIDE-Light', sans-serif;
@@ -84,8 +87,19 @@
 .portfolio-category__item {
     margin-right: 70px;
     cursor: pointer;
+    transition: .3s all;
 }
-
+.portfolio-category__item:hover{
+    background-image: -webkit-gradient(linear, left top, right top, from(#d99b91), to(#ad6f59));
+    background-image: -webkit-linear-gradient(left, #d99b91 0%, #ad6f59 100%);
+    background-image: -o-linear-gradient(left, #d99b91 0%, #ad6f59 100%);
+    background-image: linear-gradient(to right, #d99b91 0%, #ad6f59 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: flash .7s forwards linear .16s;
+    animation: flash .7s forwards linear .16s
+}
 .portfolio-sort__title {
     margin-right: 15px;
 }

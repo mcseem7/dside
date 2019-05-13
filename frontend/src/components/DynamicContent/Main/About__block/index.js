@@ -4,6 +4,7 @@ import Shiny from '../../../sources/images/works__logo/shiny.svg'
 import Palm from '../../../sources/images/works__logo/palm.svg'
 import Wallet from '../../../sources/images/works__logo/wallet.svg'
 import './index.css'
+import Steve from './steven.jpg'
 import {Link} from 'react-router-dom'
 import Translate from 'translate-components'
 import { reactTranslateChangeLanguage } from 'translate-components'
@@ -31,25 +32,17 @@ export default class About extends Component {
     return (
       <div className="container__about-content">
 
-        <div className="question__wrapper">
-            <p className="question"><Translate>What?</Translate></p>
-        </div>
-
         <div className="about__company-content">
           <div className="about__content">
-
+            <div className="texts-about">
             <p className="company__content">
-              <div className="logotype">
-                <img src={Logotype} alt="" />
-              </div> <Translate>is an agency who can take your business further.</Translate>
-            </p>
+              <Translate>You can't just ask customers what they want and then try to give that to them. By the time you get it built, they'll want something new.</Translate>
+            </p> <Translate>Steven Paul Jobs, Founder at Apple</Translate>
+</div>
           </div>
         </div>
-          <div className="advantages"><span><
-              img src={Shiny} alt="" /><Translate>Brightly.</Translate></span>
-              <span> <img src={Palm} alt="" /><Translate>Easy.</Translate></span> <span>
-                  <img src={Wallet} alt="" /><Translate>Profitable.</Translate></span></div>
       </div>
+
     )
   }
 }

@@ -1,7 +1,8 @@
 .background__contactus {
-    width: 100%;
+    width: 1200px;
+    margin: 0 auto;
     background: #F3F3F5;
-    margin-top: -30px;
+    transform: translateY(-60px);
     display: flex;
     justify-content: center;
 }
@@ -16,8 +17,9 @@
 
 .left__form-container {
     background: white;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 75px;
     width: 800px;
 }
 
@@ -28,45 +30,150 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-
-
-.right__form-container:hover,
-.right__form-container:active {
-    transition: background 1000ms linear;
-    background: url("./alexey.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+#google__maps-container::before{content: ''; display: block;
+    width:100%; height: 150px;/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3f3f5+19,ffffff+99&1+19,0+99 */
+background: -moz-linear-gradient(top, rgba(243,243,245,1) 19%, rgba(255,255,255,0) 99%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(243,243,245,1) 19%,rgba(255,255,255,0) 99%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(243,243,245,1) 19%,rgba(255,255,255,0) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f5', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */position: absolute; z-index: 1;}
 
 
 
 .left__form-container .title__form-contact h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 26px;
     line-height: 17px;
     color: rgb(17,17,17);
-    font-family: "MontBold", sans-serif;
+    font-family: "DSIDE-Bold", sans-serif;
     font-weight: bold;
-    text-transform: uppercase;
 }
 
 
 .left__form-container .title__form-contact {
-    margin-top: 50px;
-    margin-bottom: 175px;
+    margin-top: 20px;
+    margin-bottom: 25px;
     display: flex;
     justify-content: flex-end;
 }
 
-
+.blacked{color: #000;}
 
 .left__form-container .contactus__form_active {
     padding-bottom: 13%;
 }
 
+    .shining-underline-cf input{border-bottom: 1px solid #d0d1d2; line-height: 1.2rem; padding-left: 5px; font-size: .8rem;}
+    .shining-underline-cf input:invalid:not(:focus){border-color: #d0d1d2;}
+    .shining-underline-cf input:focus { border-color: #000000;  transition: all .1s ease-in; background: #f0edec !important; position: relative; z-index: 2; }
+    .shining-underline-cf input:valid{border-color: rgba(0, 0, 0, 0.83);}
+    .shining-underline-cf input:valid{background: #f0edec  url('../../sources/images/works__logo/check.svg') no-repeat scroll 240px 0px !important; transition: all 0s;}
+    .golden{ background-image: linear-gradient(to right, #d99b91 0%, #ad6f59 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;}
+    .title__drop h3 {
+        margin: 0;
+        color: #000000;
+        font-family: 'DSIDE-Bold', sans-serif;
+        font-size: 20px;
+    }
+    .inputs__send {
+        display: flex;
+        flex-direction: column;
+    }
+    #name::-webkit-input-placeholder {font-family:'DSIDE-Light',sans-serif;}
+    .wrapper__name,
+    .wrapper__phone {
+        width: 100%;
+        display: flex;
+        position: relative
+    }
+    .clients__form{transform: translateY(-40px); padding-bottom: 5rem;}
+    #name,
+    #phone {
+        margin-right: 0;
+        font-size: 1.2rem;
+        max-width: 100%;
+        outline: none;
+        border-top:none;
+        border-left: none;
+        border-right: none;
+        color: #000000;
+        flex:1;
+        background: #f0edec;
+        font-family: 'DSIDE-Light',sans-serif;
+        line-height: 1.2rem;
+        font-weight: 300;
+    }
+
+    .wrapper__name,
+    .wrapper__phone {
+        /* width: 100% ; */
+        margin-top: 2rem;
+    }
+
+
+    .button__content p {
+        font-size: 50px;
+    }
+
+    .shining-underline-cf {
+    position: relative;
+    max-width: 100%;
+    }
+
+    .shining-underline-cf span {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      overflow: hidden;
+      will-change: transform; }
+
+    .shining-underline-cf span::before {
+            content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transform: scaleX(0);
+        -moz-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+        -o-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transform-origin: 100% 0;
+        -moz-transform-origin: 100% 0;
+        -ms-transform-origin: 100% 0;
+        -o-transform-origin: 100% 0;
+        transform-origin: 100% 0;
+        background: -webkit-gradient(linear, left top, right top, from(#d99b91), to(#ad6f59));
+        background: -webkit-linear-gradient(left, #d99b91, #ad6f59);
+        background: -o-linear-gradient(left, #d99b91, #ad6f59);
+        background: linear-gradient(90deg, #d99b91, #ad6f59);
+        will-change: transform;
+        -webkit-transition: -webkit-transform 0.48s cubic-bezier(0.7, 0.3, 0, 1);
+        -moz-transition: -moz-transform 0.48s cubic-bezier(0.7, 0.3, 0, 1);
+        transition: -webkit-transform 0.48s cubic-bezier(0.7, 0.3, 0, 1);
+        -o-transition: transform 0.48s cubic-bezier(0.7, 0.3, 0, 1);
+        transition: transform 0.48s cubic-bezier(0.7, 0.3, 0, 1);
+        transition: transform 0.48s cubic-bezier(0.7, 0.3, 0, 1), -webkit-transform 0.48s cubic-bezier(0.7, 0.3, 0, 1); }
+  .dside__send {
+    height: 60px;
+    display: flex;
+    background: transparent;
+    border: none;
+    position: relative;
+      cursor: pointer;
+      margin-top: 2rem;
+      outline: none;
+}
+
 
 .right__form-container {
     padding-left: 60px;
+    padding-right: 60px;
     padding-top: 75px;
 }
 
@@ -76,14 +183,64 @@
     font-size: 18px;
     line-height: 17px;
     color: rgb(117,149,241);
-    font-family: "MontBold", sans-serif;
+    font-family: "DSIDE-Bold", sans-serif;
     font-weight: bold;
 }
 
 .right__form_phone h2 {
-    font-size: 22px;
+    font-size: 40px;
     color: rgb(255,255,255);
-    font-family: "MontBold", sans-serif;
+    font-family: "DSIDE-Bold", sans-serif;
+    font-weight: bold;
+}
+.question__form p{font-size: 18px;}
+
+button.contact__btn-send {
+    margin: 0 auto;
+    outline: none;
+    display: block;
+    margin-top: 55px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #B2725E;
+   padding: 10px 17px 8px 26px;
+    border-radius: 25px;
+    font-size: 1rem;
+    min-width: 215px;
+    font-family: 'DSIDE-Light',sans-serif;
+}
+.contact__btn-send:hover {
+    -webkit-animation: flash .7s forwards linear .16s;
+    animation: flash .7s forwards linear .16s
+}
+
+.contact__btn-send img {
+    margin-top: -3px;
+    width: 14px;
+    height: 1rem;
+    padding-left: 6px;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out
+}
+
+.contact__btn-send:hover > img {
+    -webkit-transform: translateX(6px);
+    -ms-transform: translateX(6px);
+    transform: translateX(6px);
+    -webkit-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    -webkit-animation: flash .7s forwards linear .16s;
+    animation: flash .7s forwards linear .16s;
+}
+.right__form_phone h3 {
+    font-size: 20px;
+    color: rgb(255,255,255);
+    font-family: "DSIDE-Bold", sans-serif;
     font-weight: bold;
 }
 
@@ -91,7 +248,7 @@
     font-size: 18px;
     line-height: 17px;
     color: rgb(117,149,241);
-    font-family: "MontBold", sans-serif;
+    font-family: "DSIDE-Bold", sans-serif;
     font-weight: bold;
 }
 

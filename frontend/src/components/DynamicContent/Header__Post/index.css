@@ -28,14 +28,7 @@ figure.effect-marley figcaption {
     transition: all 0.35s;
 }
 
-figure.effect-marley h2,
-figure.effect-marley p {
-    position: absolute;
-    right: 30px;
-    left: 30px;
-    padding: 10px 0;
-}
-
+.grid
 
 figure.effect-marley p {
     right: 220px;
@@ -44,20 +37,33 @@ figure.effect-marley p {
     -webkit-transform: translate3d(0,100%,0);
     transform: translate3d(0,100%,0);
     font-size: 28px;
-    font-family: "MontLight", sans-serif;
+    font-family: "DSIDE-Light", sans-serif;
     font-weight: 300;
 }
 
 figure.effect-marley h2 {
         color: #fff;
-    top: 50px;
-    left: 50px;
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
     text-align: left;
     line-height: 1;
+    font-family: "DSIDE-Bold", sans-serif;
+    font-size: 26px;
     -webkit-transform: translate3d(0,20px,0);
     transform: translate3d(0,20px,0);
+    opacity: 0;
+}
+figure.effect-marley span {
+    color: #fff;
+    margin-top: 1.7rem;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    text-align: left;
+    line-height: 1;
+    font-family: "DSIDE-Bold", sans-serif;
+    font-size: 20px;
+    -webkit-transform: translate3d(0,10px,0);
+    transform: translate3d(0,10px,0);
     opacity: 0;
 }
 .case-service {
@@ -65,23 +71,11 @@ figure.effect-marley h2 {
 }
 
 
-figure.effect-marley h2::after {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 20%;
-    height: 1px;
-    background: -webkit-gradient(linear,left top,right top,from(#d99b91),to(#ad6f59));
-    background: -webkit-linear-gradient(left,#d99b91,#ad6f59);
-    background: -o-linear-gradient(left,#d99b91,#ad6f59);
-    background: linear-gradient(90deg,#d99b91,#ad6f59);
-    content: '';
-    -webkit-transform: translate3d(0,40px,0);
-    transform: translate3d(0,40px,0);
-}
+
 
 figure.effect-marley h2::after,
-figure.effect-marley p {
+figure.effect-marley p,
+figure.effect-marley span {
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
@@ -93,7 +87,7 @@ figure.effect-marley p {
     position: relative;
     list-style: none;
     text-align: center;
-    /*flex:  1 1 30%;*/
+    flex:  1 1 30%;
 }
 
 
@@ -119,9 +113,8 @@ figure.effect-marley p {
 }
 
 .grid figure figcaption {
-    padding: 0em;
+    padding: 60px 60px 30px;
     color: #fff;
-    font-size: 1.25em;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
@@ -136,8 +129,10 @@ figure.effect-marley p {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: calc(100% - 6rem);
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Anchor will cover the whole item by default */
@@ -166,10 +161,16 @@ figure.effect-marley p {
 
 
 .grid figure h2 {
-    word-spacing: -0.15em;
-    font-size: 19px;
+    font-size: 26px;
     color: #fff;
-    font-family: "MontLight", sans-serif;
+    font-family: "DSIDE-Black", sans-serif;
+    line-height: 1.8rem;
+}
+
+.grid figure span {
+    font-size: 20px;
+    color: #fff;
+    font-family: "DSIDE-Light", sans-serif;
 }
 
 .grid figure h2 span {
@@ -220,12 +221,17 @@ figure.effect-marley p {
 }
 /* Tablets */
 
-
 figure.effect-marley:hover figcaption,
 figure.effect-marley:active figcaption{ background-color: rgba(15, 21, 30, 0.23); transition: all 0.25s;}
 
 figure.effect-marley:hover h2 ,
 figure.effect-marley:active h2 {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    opacity: 1;
+}
+figure.effect-marley:hover span ,
+figure.effect-marley:active span {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
     opacity: 1;
@@ -244,8 +250,10 @@ figure.effect-marley:active img{
 }
 figure.effect-marley:hover h2::after,
 figure.effect-marley:hover p,
+figure.effect-marley:hover span,
 figure.effect-marley:active h2::after,
-figure.effect-marley:active p {
+figure.effect-marley:active p,
+figure.effect-marley:active span {
     opacity: 1;
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);

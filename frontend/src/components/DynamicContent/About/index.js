@@ -8,7 +8,6 @@ import memory from './head.svg'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import web from './planet.svg'
 import Max from './peopleCompany/Max.png'
-import Vova from './peopleCompany/Volodymyr.png'
 import Ruslan from './peopleCompany/lorem1.png'
 import Pavel from './peopleCompany/lorem2.png'
 import Valentyn from './peopleCompany/lorem3.png'
@@ -20,6 +19,7 @@ import { reactTranslateChangeLanguage } from 'translate-components'
 import Helmet from 'react-helmet-async'
 import Footer from '../../Basic/Footer';
 import Header from '../../Basic/Header';
+import ScrollAnimation from 'react-animate-on-scroll'
 
 export default class AbotUs extends Component {
   constructor() {
@@ -37,17 +37,6 @@ export default class AbotUs extends Component {
             description: 'He has more than 140 projects done, including 5 large state ones. Maksym has been designing for over 8 years and knows perfectly well what your client wants to see. Worked as a teacher in the Kiev Polytechnic Institute in the direction of design. Also, spoke at the largest IT conferences in Ukraine.',
             behance: 'https://dishots.com/u/DSIDE',
             instagram: 'https://instagram.com/mcseem7'
-          }
-        },
-        {
-          active: false,
-          checkName: 'Vova',
-          img: Vova,
-          information: {
-            name: 'Volodymyr Piskun',
-            position: 'Managing Developer at DSIDE, co-founder',
-            description: 'For him, nothing is impossible. He created his own compiler and interpreter. Uses a bunch of programming languages. He also worked on a large number of high-load services and government projects.',
-            instagram: 'https://www.instagram.com/root_wizard/'
           }
         },
         {
@@ -145,28 +134,26 @@ export default class AbotUs extends Component {
             <div className="aboutus__title-advantage">
               <h1>advantage</h1>
             </div>
+          <ScrollAnimation delay="0" animateIn="slideInUp" >
             <div className="about__us-content">
               <div className="dside__shahmat-img">
                 <img src={shahmat} alt="" />
               </div>
               <div className="dside__what-about">
-
                 <div className="dside__red-logo">
-                  <img src={logoRed} alt="" />
+                <ScrollAnimation delay="200" animateIn="slideInUp" >
+                  <img src={logoRed} alt=""/>
+                </ScrollAnimation>
                 </div>
-
+                <ScrollAnimation delay="400" animateIn="slideInUp" >
                 <div className="dside__what-content">
-                  <div className="title__what">
-                    <h4><Translate>What dside?</Translate></h4>
-                  </div>
 
                   <div className="about__company-dside">
                     <p><Translate>is a modern, fast-growing company, in which the main principles of work are high professionalism,</Translate>
-                      <br />
                       <Translate>responsibility to each client and the reliability of the guaranteed result</Translate>
                     </p>
                   </div>
-                </div>
+                </div></ScrollAnimation>
               </div>
 
               <div className="dside__about-content">
@@ -181,7 +168,7 @@ export default class AbotUs extends Component {
                   <div className="about__dside-process">
 
                     <ul className="dside__business_process">
-
+                      <ScrollAnimation delay="100" animateIn="slideInUp" >
                       <li>
                         <div className="logo__process logo__business__automated">
                           <img src={auto} alt="" />
@@ -200,7 +187,8 @@ export default class AbotUs extends Component {
                               more important issues</Translate></p>
                         </div>
                       </li>
-
+                      </ScrollAnimation>
+                      <ScrollAnimation delay="200" animateIn="slideInUp" >
                       <li>
                         <div className="logo__process logo__business__automated">
                           <img src={memory} alt="" />
@@ -219,7 +207,8 @@ export default class AbotUs extends Component {
                               what's stopping you?</Translate></p>
                         </div>
                       </li>
-
+                      </ScrollAnimation>
+                      <ScrollAnimation delay="300" animateIn="slideInUp" >
                       <li>
                         <div className="logo__process logo__business__automated">
                           <img src={horse} alt="" />
@@ -237,7 +226,8 @@ export default class AbotUs extends Component {
                               your company</Translate></p>
                         </div>
                       </li>
-
+                      </ScrollAnimation>
+                      <ScrollAnimation delay="400" animateIn="slideInUp" >
                       <li>
                         <div className="logo__process logo__business__automated">
                           <img src={web} alt="" />
@@ -255,7 +245,7 @@ export default class AbotUs extends Component {
                               business tasks</Translate></p>
                         </div>
                       </li>
-
+                      </ScrollAnimation>
                     </ul>
 
                   </div>
@@ -266,6 +256,7 @@ export default class AbotUs extends Component {
               </div>
 
             </div>
+      </ScrollAnimation>
             <div className="dside__meet_team" >
 
               <div className="meet__team-title">
@@ -278,47 +269,40 @@ export default class AbotUs extends Component {
 
 
                 <div className={`fade__team ${this.state.activeTeam ? 'fadeNo' : ''}`} >
+  <ScrollAnimation animateIn="slideInUp" animateOnce animateOut="slideOutDown" >
                   <div className="dside__team-man"
                     onClick={() => this.showInformation('Max')}>
-
+<ScrollAnimation delay="50" animateIn="slideInUp" >
                     <img src={Max} alt="" />
-
-                  </div>
-
-
-                  <div className="dside__team-man"
-                    onClick={() => this.showInformation('Vova')}>
-
-                    <img src={Vova} alt="" />
-
+</ScrollAnimation>
                   </div>
 
                   <div className="dside__team-man">
-
+<ScrollAnimation delay="100" animateIn="slideInUp" >
                     <img src={Ruslan} alt="" onClick={() => this.showInformation('Ruslan')} />
-
+</ScrollAnimation>
                   </div>
 
                   <div className="dside__team-man">
-
+<ScrollAnimation delay="150" animateIn="slideInUp" >
                     <img src={Pavel} alt="" onClick={() => this.showInformation('Pavel')} />
-
+</ScrollAnimation>
                   </div>
                   <div className="dside__team-man">
-
+<ScrollAnimation delay="200" animateIn="slideInUp" >
                     <img src={Valentyn} alt="" onClick={() => this.showInformation('Valentyn')} />
-
+</ScrollAnimation>
                   </div>
                   <div className="dside__team-man">
-
+<ScrollAnimation delay="250" animateIn="slideInUp" >
                     <img src={Maksym} onClick={() => this.showInformation('Maksym')} alt="" />
-
+</ScrollAnimation>
                   </div>
                   <div className="dside__team-man">
-
+<ScrollAnimation delay="300" animateIn="slideInUp" >
                     <img src={Oleksii} onClick={() => this.showInformation('Oleksii')} alt="" />
-
-                  </div>
+</ScrollAnimation>
+                  </div></ScrollAnimation>
                 </div>
 
                 {this.state.activeTeam ? null :
@@ -327,13 +311,13 @@ export default class AbotUs extends Component {
                   <div className="dside__meet-developer">
 
                     <div className="left__data-dev">
-
+<ScrollAnimation delay="300" animateIn="slideInUp" >
                       <div className="photo__image-developer">
                         <img src={this.state.result.img} alt="" className={this.state.result.checkName} />
                       </div>
-
+</ScrollAnimation>
                     </div>
-
+<ScrollAnimation delay="300" animateIn="slideInUp" >
                     <div className="right__data-dev">
 
                       <div className="post_developer">
@@ -375,7 +359,7 @@ export default class AbotUs extends Component {
                       </div>
 
                     </div>
-
+</ScrollAnimation>
                   </div>
 
                 }

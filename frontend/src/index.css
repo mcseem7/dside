@@ -40,12 +40,12 @@
 .fade-enter {
     opacity: 0;
     z-index: 1;
-    transform: translateY(5px) scale(0.97);
+    /*transform: translateY(5px) scale(0.97);*/
 }
 .fade-appear-active,
 .fade-enter.fade-enter-active {
     opacity: 1;
-    transform: translateY(0px) scale(1);
+   /* transform: translateY(0px) scale(1);*/
     transition: opacity 550ms linear, transform 300ms linear;
 }
 
@@ -91,13 +91,13 @@
 .fade-enter {
     opacity: 0;
     z-index: 1;
-    transform: scale(0.98) translate(0px,7px);
+    /*transform: scale(0.98) translate(0px,7px);*/
 }
 .fade-appear-active,
 .fade-enter.fade-enter-active {
     opacity: 1;
-    transform: scale(1) translate(0px,0px);
-    transition: opacity 550ms linear, transform 300ms linear;
+    /*transform: scale(1) translate(0px,0px);
+    transition: opacity 550ms linear, transform 300ms linear;*/
 }
 
 .fade-exit {

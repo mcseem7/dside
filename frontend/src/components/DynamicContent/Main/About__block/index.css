@@ -1,52 +1,15 @@
-.container__about-content{padding: 2rem;}
+.container__about-content{padding: 2rem;  display: flex; flex-direction: row;  background: url('./steven.jpg') no-repeat; background-size: 600px; background-position: right bottom;}
 .company__content {
+        display: flex;
         font-size: 1.2rem;
         line-height: 30px;
         color: rgb(0, 0, 0);
         width: 100%;
-        font-family: "MontLight", sans-serif;
-        font-weight: 300;
-    }
-  .logotype img {
-        max-width: 100%;
-    }
-
-    .logotype {
-        width: 50px;
-        display: inline-block;
-        margin-right: 7px;
-    }
-     .question {
-        display: none;
-    }
-     .more__about {
-        outline: none;
-        border: none;
-        background: none;
-        cursor: pointer;
-        font-size: 1.4rem;
-        line-height: 1;
-        color: rgb(12, 16, 16);
-        font-family: "MontBold", 'sans-serif' ;
-        font-weight: 300;
-        transition: 0.3s;
-        padding: 0;
-    }
-     .advantages {
-        display: flex;
-        flex-direction: row;
         font-family: 'DSIDE-Light', sans-serif;
-        font-size: 1.2rem;
-         padding: 3rem 0;
+        font-weight: 300;
     }
 
-    .advantages img {
-        width: 3rem;
-    }
 
-    .advantages span {
-        text-align: center
-    }
 /* Tablets */
 
 @media only screen and (min-width: 480px) {
@@ -58,89 +21,31 @@
 
     .company__content {
         font-size: 14px;
-        line-height: 30px;
+        line-height: 50px;
         color: rgb(0, 0, 0);
         width: 100%;
-        font-family: "MontLight", sans-serif;
+        font-family: "DSIDE-Light", sans-serif;
         font-weight: 300;
     }
-
-    .container__about-content {
-        display: flex;
-        max-width: 1200px;
-        min-width: 320px;
-        margin: 0 auto;
-        padding-top: 20px;
-        padding-bottom: 40px;
-    }
-
-    .question__wrapper .question {
-        font-size: 16px;
-        line-height: 10px;
-        color: rgb(188, 176, 182);
-        font-family: "MontBold", 'sans-serif' ;
-        font-weight: bold;
-    }
-
-    .about__company-content {
-        flex: 1 1 70%;
-    }
-
-    .more__about {
-        outline: none;
-        border: none;
-        background: none;
-        cursor: pointer;
-        font-size: 16px;
-        line-height: 1;
-        color: rgb(12, 16, 16);
-        font-family: "MontBold", 'sans-serif' ;
-        font-weight: 300;
-        transition: 0.3s;
-        padding: 0;
-    }
-
-    .more__about:after {
-        opacity: 0;
-    }
-
-    .more__about-button {
-        position: relative;
-        margin-left: -7px;
-    }
-
-    .question__wrapper {
-        flex: 1 6 30%;
-    }
-    .about__content p {
-        text-align: center;
-    }
-
-    .advantages {
-        display: flex;
-        flex-direction: row;
+    .about__content{display: flex; flex-direction: row; padding: 5rem 0;}
+    .texts-about{display: flex; width: 70%; flex-direction: column;}
+    .texts-about p span {
+        text-align: left;
         font-family: 'DSIDE-Light', sans-serif;
-        font-size: 14px;
+        font-size: 40px;
+        line-height: 50px;
     }
-
-    .advantages img {
-        width: 36px;
+     .texts-about span {
+        text-align: left;
+        font-family: 'DSIDE-Light', sans-serif;
+        font-size: 20px;
+        line-height: 50px;
     }
-
-    .advantages span {
-        text-align: center
-    }
-
 }
 /* Fullscreen */
 
 @media only screen and (min-width: 1024px) {
-.question__wrapper {
-    -ms-flex: 1 6 22%;
-    flex: 1 1 22%;
-}
-    .question{display: block}
-    .container__about-content{padding-right: 4rem;
-    padding-left: 4rem;}
-    .advantages{padding: 1rem 0;    margin-top: -18px;}
+    .container__about-content{    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;}
 }

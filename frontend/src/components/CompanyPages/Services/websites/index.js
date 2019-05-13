@@ -1,12 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import CaseService from '../serviceComponents/CaseService/index'
 import './index.css'
-import Own from '../../../Basic/TrustBlocks/Own'
-import HeaderPost from '../../../DynamicContent/Header__Post/index';
-import WeCare from "../../../Basic/TrustBlocks/WeCare";
-import Iter from "../../../Basic/TrustBlocks/iter";
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
-import PortolioPost from "../../../DynamicContent/Header__Post/Portfolio__Post";
 import withDsideApi from "../../../../HOC/Fetch";
 import { HeroVideo } from "react-hero-video";
 import Translate, { reactTranslateChangeLanguage } from "translate-components";
@@ -24,9 +19,6 @@ class Website extends Component {
     reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
   }
 
-  headerDark = (value) => {
-        this.setState({ name: value })
-    }
 
   render() {
 

@@ -5,6 +5,7 @@ import withDsideApi from "../../../HOC/Fetch";
 import withLanguage from "../../../HOC/withLanguage";
 import CategoryItem from './CategoryItem';
 import PortolioPost from '../Header__Post/Portfolio__Post';
+import ScrollAnimation from 'react-animate-on-scroll'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import Footer from '../../Basic/Footer';
 import Header from '../../Basic/Header';
@@ -62,7 +63,9 @@ class Portfolio extends Component {
             <title>Dside Portfolio</title>
           </Helmet>
         <div className="wrapper-row">
-        <h2>We'll make it good. They have already tried it.</h2>
+            <ScrollAnimation animateIn="slideInUp" >
+        <h2>We'll make it best. They have already tried it.</h2>
+            </ScrollAnimation>
           <div className="sorting__items-container">
 
             <div className="sorting__items-left">
@@ -86,6 +89,7 @@ class Portfolio extends Component {
               </div>
 
             </div>
+        <ScrollAnimation delay="100" animateIn="slideInUp" >
             <div className="sorting__items-right">
               <div className="sortby__type">
                 <div className="portfolio-sort__title">Sort by:</div>
@@ -97,6 +101,7 @@ class Portfolio extends Component {
                 </div>
               </div>
             </div>
+            </ScrollAnimation>
 </div>
           </div>
           <div className="portfolio__items-container">

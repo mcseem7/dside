@@ -2,8 +2,6 @@ import React, { Component, Fragment } from 'react'
 import HeaderPost from '../Header__Post/index'
 import About from './About__block/index'
 import Slider from './Slider/index'
-import Works from './Works__Company/index'
-import Services from './Services/index'
 import {Route} from 'react-router-dom'
 import Helmet from 'react-helmet-async'
 import Footer from '../../Basic/Footer';
@@ -47,9 +45,8 @@ export default class Main extends Component {
       
       <div className="complex__content">
         <Slider  {...this.props} />
+         <About/>
         <HeaderPost lang={this.state.langVars} />
-        <Works  {...this.props} />
-        <Services {...this.props} />
       </div>
       <Footer/>
       </div>

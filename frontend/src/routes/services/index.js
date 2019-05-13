@@ -1,44 +1,18 @@
-import LogoPage from '../../components/CompanyPages/Services/logos'
-import VideosPage from '../../components/CompanyPages/Services/videos'
 import websites from '../../components/CompanyPages/Services/websites';
-import branding from '../../components/CompanyPages/Services/branding';
-import advertising from '../../components/CompanyPages/Services/advertising';
-import automation from '../../components/CompanyPages/Services/automation';
+import design from '../../components/CompanyPages/Services/design';
+import ecommerce from '../../components/CompanyPages/Services/ecommerce';
 
 
 const typeServices = {
     nameLocation: 'services',
     type: {
-        serviceVideos: 'videos',
-        serviceLogo: 'logo',
         websites: 'website',
-        serviceBrand: 'brand',
-        serviceAutomation: 'automation',
-        serviceAdvertising: 'advertising'
+        design: 'design',
+        ecommerce: 'ecommerce'
     }
 }
 
 export const servicesRoute = [
-    {
-        path: [
-            `/en/${typeServices.nameLocation}/${typeServices.type.serviceVideos}`, 
-            `/ru/${typeServices.nameLocation}/${typeServices.type.serviceVideos}`,
-            `/pl/${typeServices.nameLocation}/${typeServices.type.serviceVideos}`,
-            `/cz/${typeServices.nameLocation}/${typeServices.type.serviceVideos}`
-             ],
-        exact: true,
-        component: VideosPage
-    },
-    {
-        path: [
-            `/en/${typeServices.nameLocation}/${typeServices.type.serviceLogo}`, 
-            `/ru/${typeServices.nameLocation}/${typeServices.type.serviceLogo}`,
-            `/pl/${typeServices.nameLocation}/${typeServices.type.serviceLogo}`,
-            `/cz/${typeServices.nameLocation}/${typeServices.type.serviceLogo}`
-             ],
-        exact: true,
-        component: LogoPage
-    },
     {
         path: [
             `/en/${typeServices.nameLocation}/${typeServices.type.websites}`, 
@@ -51,33 +25,23 @@ export const servicesRoute = [
     },
     {
         path: [
-            `/en/${typeServices.nameLocation}/${typeServices.type.serviceBrand}`, 
-            `/ru/${typeServices.nameLocation}/${typeServices.type.serviceBrand}`,
-            `/pl/${typeServices.nameLocation}/${typeServices.type.serviceBrand}`,
-            `/cz/${typeServices.nameLocation}/${typeServices.type.serviceBrand}`
+            `/en/${typeServices.nameLocation}/${typeServices.type.design}`, 
+            `/ru/${typeServices.nameLocation}/${typeServices.type.design}`,
+            `/pl/${typeServices.nameLocation}/${typeServices.type.design}`,
+            `/cz/${typeServices.nameLocation}/${typeServices.type.design}`
              ],
         exact: true,
-        component: branding
+        component: design
     },
     {
         path: [
-            `/en/${typeServices.nameLocation}/${typeServices.type.serviceAdvertising}`, 
-            `/ru/${typeServices.nameLocation}/${typeServices.type.serviceAdvertising}`,
-            `/pl/${typeServices.nameLocation}/${typeServices.type.serviceAdvertising}`,
-            `/cz/${typeServices.nameLocation}/${typeServices.type.serviceAdvertising}`
+            `/en/${typeServices.nameLocation}/${typeServices.type.eccomerce}`,
+            `/ru/${typeServices.nameLocation}/${typeServices.type.ecommerce}`,
+            `/pl/${typeServices.nameLocation}/${typeServices.type.ecommerce}`,
+            `/cz/${typeServices.nameLocation}/${typeServices.type.ecommerce}`
              ],
         exact: true,
-        component: advertising
-    },
-    {
-        path: [
-            `/en/${typeServices.nameLocation}/${typeServices.type.serviceAutomation}`, 
-            `/ru/${typeServices.nameLocation}/${typeServices.type.serviceAutomation}`,
-            `/pl/${typeServices.nameLocation}/${typeServices.type.serviceAutomation}`,
-            `/cz/${typeServices.nameLocation}/${typeServices.type.serviceAutomation}`
-             ],
-        exact: true,
-        component: automation
+        component: ecommerce
     }
 ]
 

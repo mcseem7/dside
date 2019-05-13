@@ -2,140 +2,174 @@ import React, { Component } from 'react'
 import './index.css'
 import arrow from '../../sources/images/works__logo/arrow.svg'
 import withDsideApi from '../../../HOC/Fetch'
-import Poppup from '../../../HOC/OrderPopup/index';
+
+import OrderPoppup from "../../../HOC/OrderPopup/index";
+import withPoppupHOC from "../../../HOC/Poppup";
 import  Translate  from "translate-components";
-import Success from '../../Success/success';
-import ErrorValidate from '../../ErrorValidate';
+import  LogoRed  from './dsideLogo.svg';
+import  Arrow  from './arrow.svg';
+import { NavLink, Link, withRouter } from "react-router-dom";
+import ScrollAnimation from 'react-animate-on-scroll'
 
 class Footer extends Component {
 
   constructor (props) {
     super(props)
-
-
-    this.nameRef = React.createRef()
-    this.phoneRef = React.createRef()
-
     this.state = {
-      postActive: false,
-      errorActive: false
-    }
+     display: "none",
+      modalActiveOrder: false,
+      modalActiveGrade: false,
+      lang: ""
+    };
   }
 
-  
-
-  handleSubmit = async (event) => {
-    event.preventDefault()
-    await this.props.postData(this.nameRef, this.phoneRef)
-    await this.checkingValidate()
-  }
-
-checkingValidate = () => {
-  if(!this.props.postOrderActive) {
-    this.setState({errorActive: !this.state.errorActive})
-    setTimeout(() => {
-      this.setState({errorActive: !this.state.errorActive})
-    }, 1000);
-  } else {
-    this.updateAfterPost()
-  }
-}
 
 
+  changePoppup = () => {
+    this.setState({ modalActiveOrder: !this.state.modalActiveOrder });
+  };
 
-  updateAfterPost() {
-    this.nameRef.current.value = ''
-    this.phoneRef.current.value = ''
-    this.onSuccess()
-  }
-
-  onSuccess = () => {
-    this.setState({postActive: !this.state.postActive})
-  }
-
-  hideError = () => {
-    this.setState({errorActive: !this.state.errorActive})
+  changePoppupGrade = () => {
+    this.setState({ modalActiveGrade: !this.state.modalActiveGrade });
   }
 
   render () {
+
     return (
-      <footer>
-        <div className="footer__content" style={{display: this.props.style}}>
-
-          <div className="clients__form">
-
-            <div className="form__titles">
-
-              <div className="title__drop">
-                <h3 className="golden"><Translate>Drop the line</Translate></h3>
-              </div>
-
-              <div className="question__form">
-                <p><Translate>Ready to talk to the team who can’t wait to</Translate><br/>
-                  <Translate>take your company to new, exciting places?</Translate>
-          
-                </p>
-              </div>
-
-            </div>
-
-            <div className="sending__form">
-              <form onSubmit={this.handleSubmit} id="form__dside">
-                <div className="inputs__send">
-                  <div className="wrapper__name">
-                    <div className="shining-underline-cf">
-                    <div class="holder"><Translate>Name</Translate></div>
-                      <input ref={this.nameRef} maxlength="50" minlength="2" type="text" id="name" required="required" /><span></span>
+        <div>
+         <ScrollAnimation delay="100" animateIn="slideInUp" >
+           <footer>
+                <div className="footer__wrap__head">
+                    <div className="footer__head footer__content text-center">
+                        <ScrollAnimation delay="150" animateIn="slideInUp" ><p className="footer__head-write">Drop the line!</p></ScrollAnimation>
+                        <ScrollAnimation delay="200" animateIn="slideInUp" ><a className="footer__head-mail" href="mailto:info@mydside.com">info@mydside.com</a></ScrollAnimation>
                     </div>
-                  </div> 
-                  <div className="wrapper__phone">
-                    <div className="shining-underline-cf">
-                      <div class="holder"><Translate>Phone number (With country code)</Translate></div>
-                      <input pattern="^\+[1-9]{1}[0-9]{3,14}$"  ref={this.phoneRef} id="phone" maxlength="50" minlength="6" type="tel" required="required" /><span></span>
-                  </div>
-                  </div>
                 </div>
-                <button className="dside__send">
-                  <div className="button__content">
-                    <span><Translate>Send</Translate></span><div class="whitespace"></div><img src={arrow} alt="" />
-                  </div>
-                </button>
-              </form>
-            </div>
+                <div className="footer__wrap__middle">
+                    <div className="footer__middle footer__content">
+                        <ScrollAnimation delay="300" animateIn="slideInUp" ><div className="footer__content-info">
+                            <a href="/" className="footer__content-logo">
+                              <img src={LogoRed} alt="DSIDE Logo"/>
+                            </a>
+                            <p>
+                                <span>Aleja Solidarnosci 117, 00-140</span><br />
+                                <span>Warszawa, Polska</span>
+                            </p>
+                            <p>+485741557711</p>
+                            <p><a href="mailto:info@mydside.com">info@mydside.com</a></p>
 
-          </div>
+                        </div></ScrollAnimation>
+                        <ScrollAnimation delay="400" animateIn="slideInUp" >
+                        <div className="footer__content-services">
+                            <p><Translate>Services</Translate></p>
+                            <ul>
+                                <li className="shining-underline">
+                                <NavLink
+                                 to={`/${this.props.language}/services/design`}
+                                 className="link">
+                                     <Translate>Design</Translate>
+                                 <span className="mainnavshine"></span>
+                                </NavLink>
+                                 </li>
+                                <li className="shining-underline">
+                                <NavLink
+                                 to={`/${this.props.language}/services/website`}
+                                 className="link">
+                                     <Translate>Websites</Translate>
+                                 <span className="mainnavshine"></span>
+                                </NavLink>
+                                 </li>
+                                <li className="shining-underline">
+                                <NavLink
+                                 to={`/${this.props.language}/services/ecommerce`}
+                                 className="link">
+                                     <Translate>E-commerce</Translate>
+                                 <span className="mainnavshine"></span>
+                                </NavLink>
+                                 </li>
 
-          <div className="copyright__content">
-            <div className="copyright">
-              <p>2018 &copy; Dside Agency &trade;. <Translate>All right reserved.</Translate></p>
-            </div>
+                            </ul>
+                        </div></ScrollAnimation><ScrollAnimation delay="500" animateIn="slideInUp" >
+                        <div className="footer__content-about">
+                            <p><Translate>Details</Translate></p>
+                            <ul>
+                                <li className="shining-underline">
+                                <NavLink
+                                 to={`/${this.props.language}/portfolio`}
+                                 className="link">
+                                     <Translate>Projects</Translate>
+                                 <span className="mainnavshine"></span>
+                                </NavLink>
+                                 </li>
+                                <li className="shining-underline">
+                                <NavLink
+                                 to={`/${this.props.language}/process`}
+                                 className="link">
+                                     <Translate>Process</Translate>
+                                 <span className="mainnavshine"></span>
+                                </NavLink>
+                                 </li>
+                                <li className="shining-underline">
+                                <NavLink
+                                 to={`/${this.props.language}/aboutus`}
+                                 className="link">
+                                     <Translate>About</Translate>
+                                 <span className="mainnavshine"></span>
+                                </NavLink>
+                                 </li>
+                                <li className="shining-underline">
+                                <NavLink
+                                 to={`/${this.props.language}/contactus`}
+                                 className="link">
+                                     <Translate>Contact Us</Translate>
+                                 <span className="mainnavshine"></span>
+                                </NavLink>
+                                 </li>
+                                {/*<li className="shining-underline">
+                                <NavLink
+                                 to={`/${this.props.language}/blog`}
+                                 className="link">
+                                     <Translate>Blog</Translate>
+                                 <span className="mainnavshine"></span>
+                                </NavLink>
+                                 </li>
+                                 */}
+                            </ul>
+                        </div></ScrollAnimation><ScrollAnimation delay="500" animateIn="slideInUp" >
+                        <div className="footer__content-send"  onClick={this.changePoppup}>
+                            <button className="footer__btn-send">
+                                <span>Order now!</span>
+                                <img className="button__content" src={Arrow} alt=""/>
+                            </button>
+                        </div>
+                        </ScrollAnimation>
+                    </div>
+                </div>
 
-            <div className="social__icons">
+                <div className="footer__wrap__down">
+                    <div className="footer__down footer__content">
+                        <p>
+                           2019 © Dside Agency ™. All right reserved.
+                        </p>
+                        <p className="mid-p">
+                          Respublika Sp. z o.o., NIP 522-31-00-244, NIP EU PL5223100244, REGON 368280744.
+                        </p>
+                        <p>
+                          <div className="social__icons">
               <a href='http://dishots.com/u/DSIDE' target="_blank" className="social__icon-behance">
               </a>
               <a href='http://instagram.com/dsidepl' target="_blank" className="social__icon-instagram">
               </a>
             </div>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+           </ScrollAnimation>
 
-          </div>
-        </div>
-        {this.state.postActive ?  <Success 
-        textSuccess={<Translate>Thank you! We will call you back in 30 seconds!</Translate>} 
-        iconSuccess={ <div class="loader">
-        <svg class="circular">
-            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-color="#f00" stroke-miterlimit="10" />
-        </svg>
-        <svg class="suc">
-            <path class="checkmark__check" fill="none" d="M10.7,20.4l5.3,5.3l12.4-12.5"></path>
-        </svg>
-    </div>}
-        handleSuccess={this.onSuccess} /> : null }
-
-        {this.state.errorActive ?  <ErrorValidate
-        textError={<Translate>Fields are not all filled! Please fill in all fields!</Translate>} 
-        handleError={this.hideError} /> : null }
-      </footer>
-    )
+         <OrderPoppup modalStatus={this.state.modalActiveOrder} onClose={this.changePoppup} />
+            </div>
+    );
   }
 }
 

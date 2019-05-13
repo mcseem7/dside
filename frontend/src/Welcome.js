@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import LanguagePoppup from "./HOC/ChangeLanguage/ChangePup";
+import logoRed from './dsideLogo.svg'
 
 const propTypes = {};
 
@@ -30,7 +31,7 @@ export default class Welcome extends React.Component {
             <div class="loader__arrow up inner inner-4"></div>
           </div>
         </div>
-        <span><img src="dsideLogo.svg" class="brand-logo" alt="DSIDE logo" /></span>
+        <span><img src={logoRed} class="brand-logo" alt="DSIDE logo" /></span>
       </div> 
         {this.state.langPoppup ? <LanguagePoppup handleChange={this.hidePoppup} /> : null}
             </React.Fragment>

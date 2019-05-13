@@ -12,13 +12,13 @@ import GradePoppup from "../../../HOC/GradePopup/index";
 import Translate from "translate-components";
 import withPoppupHOC from "../../../HOC/Poppup";
 import withLanguage from "../../../HOC/withLanguage";
-import ScrollAnimation from 'react-animate-on-scroll';
 import homeDside from "./homeDside.png";
 import { compose } from "recompose";
 import withDsideApi from "../../../HOC/Fetch";
 import moment from 'moment'
 import HeaderMenu from "./HeaderMenu";
 import fire from './fire.gif'
+import "./animate.css";
 
 class Header extends Component {
   constructor(props) {
@@ -52,9 +52,7 @@ class Header extends Component {
 
   render() {
     const {history, location} = this.props;
-    const activeClass = (route) => { return location.pathname === route ? "dark" : null }
     const langClass = (route) => { return location.pathname === route ? "active" : null }
-    const status = this.state.headerDark ? 'Playing' : 'Not playing';
     return (
 
       <div
@@ -212,7 +210,7 @@ class Header extends Component {
                          </li>
                          <li className="shining-underline">
                           <NavLink
-                           to={`/${this.props.language}/services/design`}
+                           to={`/${this.props.language}/services/ecommerce`}
                            className="link">
                                <Translate>E-commerce</Translate>
                              <span className="mainnavshine"></span>
@@ -291,11 +289,6 @@ class Header extends Component {
           </div>
         </header>
 </div>
-        {<HeaderMenu
-        {...this.state}
-         handleShowMenu={this.showMenu}
-         handleChangePoppupGrade={this.changePoppupGrade} 
-         {...this.props} />}
 
         
           <OrderPoppup modalStatus={this.state.modalActiveOrder} onClose={this.changePoppup} />

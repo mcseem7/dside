@@ -7,10 +7,8 @@ import FourImage from "./images/thumbs-04.jpg";
 import FiveImage from "./images/thumbs-05.jpg";
 import SixImage from "./images/case_3_d.jpg";
 import "./index.css";
-import iconGrid from "./images/icon__grid.svg";
 import {compose} from 'recompose'
 // import zindex from './images/Header_zIndex.png'
-import About from "./../Main/About__block/index";
 import withDsideApi from "./../../../HOC/Fetch";
 import PortolioPost from "./Portfolio__Post";
 import {withRouter} from 'react-router-dom'
@@ -41,27 +39,8 @@ class HeaderPost extends Component {
                 <PortolioPost lang={this.state.lang} {...this.props} />
               ) : null}
             </div>
-
-            <div className="container__what" />
           </div>
         </section>
-
-        <div className="what__about-content">
-          <div className="block__load__more">
-            <div className="load__more">
-              <div className="more__icon" onClick={() => {
-                 this.props.history.push(`${this.props.language}/portfolio`)
-              }}>
-            <button className="load">
-            <img src={iconGrid} alt="" width="15" />
-                  Load More
-            </button>
-              </div>
-            </div>
-          </div>
-
-          <About />
-        </div>
       </div>
     );
   }

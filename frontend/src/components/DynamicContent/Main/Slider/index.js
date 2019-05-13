@@ -12,7 +12,6 @@ import Slider from "react-slick";
     constructor(props) {
         super(props)
     }
-
     render() {
     const settings = {
       dots: true,
@@ -29,18 +28,26 @@ import Slider from "react-slick";
       <div>
           <Slider {...settings}>
           <div>
-            <div id='slide-first' className="slide">
+            <div  id="slide-second" className="slide">
             <div className="slider-row">
-            <h2>Effective Desgin</h2>
-            <p>Creative Web Dev</p>
+            <h2>Effective Design</h2>
+            <p>We design clear interfaces with bright design<br /> and branding for projects of any complexity</p>
             </div>
             </div>
           </div>
           <div>
-            <div id='slide-first' className="slide">
+            <div id={'slide-first-' + localStorage.getItem("lang")}  className="slide">
             <div className="slider-row">
             <h2>Progressive Web</h2>
-            <p>Creative Scoring</p>
+            <p>Development of all types of web applications.<br /> Single-page applications and high-load services</p>
+            </div>
+            </div>
+          </div>
+          <div>
+            <div  id={'slide-third-' + localStorage.getItem("lang")} className="slide">
+            <div className="slider-row">
+            <h2>Ecommerce Solutions</h2>
+            <p>We provide comprehensive solution to business tasks–<br /> from developing a marketing strategy to implementing CRM</p>
             </div>
             </div>
           </div>

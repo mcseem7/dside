@@ -7,7 +7,10 @@ import withDsideApi from "../../../HOC/Fetch";
 import Translate, { reactTranslateChangeLanguage } from "translate-components";
 import Success from "../../Success/success";
 import withPoppupHOC from "../../../HOC/Poppup";
+import  Arrow  from './arrow.svg';
+import OrderPoppup from "../../../HOC/OrderPopup/index";
 import Helmet from 'react-helmet-async'
+import ScrollAnimation from 'react-animate-on-scroll'
 import ErrorValidate from '../../ErrorValidate/index'
 
 class Contact extends Component {
@@ -15,24 +18,36 @@ class Contact extends Component {
     super();
 
     this.nameRef = React.createRef();
-    this.phoneRef = React.createRef();
+     this.phoneRef = React.createRef();
 
     this.state = {
       postActive: false,
       errorActive: false
     };
+    this.state = {
+     display: "none",
+      modalActiveOrder: false,
+      modalActiveGrade: false,
+      lang: ""
+    };
   }
 
   componentDidMount() {
     reactTranslateChangeLanguage.bind(this, localStorage.getItem("lang"))();
+    window.scrollTo(0, 0);
   }
 
+  componentDidUpdate() {
+    reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
+  }
   handleSubmit = async event => {
     event.preventDefault();
     await this.props.postData(this.nameRef, this.phoneRef);
     await this.checkingValidate();
   };
-
+changePoppup = () => {
+    this.setState({ modalActiveOrder: !this.state.modalActiveOrder });
+  };
   checkingValidate = () => {
     if(!this.props.postOrderActive) {
       this.setState({errorActive: !this.state.errorActive})
@@ -113,20 +128,23 @@ class Contact extends Component {
                         <div className="wrapper__name contact-input">
                     <div className="shining-underline-cf ">
                     <div class="holder service__contact"><Translate>Name</Translate></div>
-                      <input style={{background:'none'}} ref={this.nameRef} maxlength="50" minlength="2" type="text" id="name" required="required" /><span></span>
+                      <input style={{background:'none'}} ref={this.nameRef} placeholder="John Doe"  maxlength="50" minlength="2" type="text" id="name" required="required" /><span></span>
                     </div>
                   </div> 
                   <div className="wrapper__phone contact-input">
                     <div className="shining-underline-cf ">
                       <div class="holder service__contact"><Translate>Phone number (With country code)</Translate></div>
-                      <input style={{background:'none'}} pattern="^\+[1-9]{1}[0-9]{3,14}$"  ref={this.phoneRef} id="phone" maxlength="50" minlength="6" type="tel" required="required" /><span></span>
+                      <input style={{background:'none'}} placeholder="+48 123 456 789"  pattern="^\+[1-9]{1}[0-9]{3,14}$" ref={this.phoneRef} id="phone" maxlength="50" minlength="6" type="text" required="required" /><span></span>
                   </div>
                   </div>
                         </div>
 
                         <button className="dside__send">
-                  <div className="button__content">
-                    <span><Translate>Send</Translate></span><div class="whitespace"></div><img src={arrow} alt="" />
+                  <div className="contact__content-send">
+                    <button className="contact__btn-send">
+                                <span className="blacked">Send</span>
+                                <img className="button__content" src={Arrow} alt=""/>
+                            </button>
                   </div>
                 </button>
                       </form>
@@ -138,10 +156,10 @@ class Contact extends Component {
               <div className="right__form-container">
                 <div className="right__form-question_title">
                   <h4>
-                    <Translate>Awaiting Questions</Translate>
+                    <Translate>Awaiting your questions</Translate>
                   </h4>
                   <div className="right__form_phone">
-                    <h2><Translate>+48 570 670 311</Translate></h2>
+                    <h2><Translate>+48 731 922 322</Translate></h2>
                   </div>
                 </div>
 
@@ -150,18 +168,35 @@ class Contact extends Component {
                     <Translate>Find us here</Translate>
                   </h4>
                   <div className="right__form_phone">
-                    <h2>
+                    <h3>
                       <Translate>Aleja Solidarności</Translate> 117,{" "}
-                      <Translate>office</Translate> 805
-                    </h2>
+                      <Translate>office</Translate> 805,{" "}
+                      <Translate>00-140, Warszawa</Translate>
+                    </h3>
                   </div>
+                </div>
+                <div className="right__form_street">
+                  <h4>
+                    <Translate>E-mail</Translate>
+                  </h4>
+                  <div className="right__form_phone">
+                    <h3>
+                      info@mydside.com
+                    </h3>
+                  </div>
+                </div>
+                <div className="contact__content-send"  onClick={this.changePoppup}>
+                            <button className="contact__btn-send">
+                                <span>Order call</span>
+                                <img className="button__content" src={Arrow} alt=""/>
+                            </button>
                 </div>
               </div>
             </div>
             <div className="copyright__content">
               <div className="footer__copyright">
                 <div className="copyright">
-                  <p>2018 &copy; Dside Agency &trade;. All right reserved.</p>
+                  <p>2019 &copy; Dside Agency &trade;. All right reserved.</p>
                 </div>
 
                 <div className="social__icons">
@@ -192,6 +227,7 @@ class Contact extends Component {
         {this.state.errorActive ?  <ErrorValidate
         textError={<Translate>Fields are not all filled! Please fill in all fields!</Translate>} 
         handleError={this.hideError} /> : null }
+        <OrderPoppup modalStatus={this.state.modalActiveOrder} onClose={this.changePoppup} />
       </div>
     );
   }

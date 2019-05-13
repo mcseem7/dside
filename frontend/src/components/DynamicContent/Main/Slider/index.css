@@ -33,33 +33,140 @@
         display: block;
         margin-bottom: -30px;
     }
-    #slide-first{
-        background: url('slide.jpg');
-    }
     .slide{display: block;
         width: 100%;
         height: 400px;}
+    #slide-first-ru{
+        background: url('mobile-web-slide-ru@x2.jpg');
+        background-size: 1500px 750px;
+        height: 600px;
+    }
+    #slide-third-en{
+        background: url('mobile-ecommece-slide-en@x2.jpg');
+        background-size: 1500px 750px;
+        height: 600px;
+    }
+    #slide-third-ru{
+        background: url('mobile-ecommece-slide-ru@x2.jpg');
+        background-size: 1500px 750px;
+        height: 600px;
+    }
+    #slide-third-pl{
+        background: url('mobile-ecommece-slide-pl@x2.jpg');
+        background-size: 1500px 750px;
+        height: 600px;
+    }
+   #slide-first-pl{
+        background: url('mobile-web-slide-pl@x2.jpg');
+        background-size: 1500px 750px;
+        height: 600px;
+    }
+   #slide-first-en{
+        background: url('mobile-web-slide-en@x2.jpg');
+        background-size: 1500px 750px;
+        height: 600px;
+    }
+    #slide-second{
+        background: url('mobile-design-slide@x2.jpg');
+        background-size: 1500px 750px;
+        height: 600px;
+    }
     #slide-first-website{
         background: url('billy.jpg') no-repeat center center;
         background-size: cover;
         height: 500px;
     }
+
+    #slide-first-webdesign-en{
+        background: url('slide-webdesign-1-en.jpg') no-repeat center center;
+        background-size: cover;
+        height: 400px;
+    }
+    #slide-first-webdesign-pl{
+        background: url('slide-webdesign-1-pl.jpg') no-repeat center center;
+        background-size: cover;
+        height: 400px;
+    }
+    #slide-first-webdesign-ru{
+        background: url('slide-webdesign-1-ru.jpg') no-repeat center center;
+        background-size: cover;
+        height: 400px;
+    }
+    #slide-second-webdesign-en{
+        background: url('slide-webdesign-2-en.jpg') no-repeat center center;
+        background-size: cover;
+        height: 400px;
+    }
+    #slide-second-webdesign-ru{
+        background: url('slide-webdesign-2-ru.jpg') no-repeat center center;
+        background-size: cover;
+        height: 400px;
+    }
+    #slide-second-webdesign-pl{
+        background: url('slide-webdesign-2-pl.jpg') no-repeat center center;
+        background-size: cover;
+        height: 400px;
+    }
+    .slide:active{outline-offset: 0;
+         border: 0;
+        outline: none;}
+
     .slider-row-website{
           max-width: 1000px;
     margin: 0 auto;
     }
-    .slick-slider{margin-bottom: 2rem;}
+    #slide-first-design{
+        background: #c11525 url('jony.jpg') no-repeat center center;
+        background-size: contain;
+        height: 600px;
+        outline: none;
+    }
+    .flexy-content{display: flex; flex-direction: row; position: absolute; bottom: 2rem;  align-items: center; justify-content: space-between; width: 100%;}
+    .flexy-content h2, .flexy-content p{display: inline-flex;}
+    .slide h3{font-size: 40px; font-family: 'DSIDE-Bold', sans-serif;     margin: 1rem 0;}
+    .slide span{font-size: 18px; font-family: 'DSIDE-Light', sans-serif;}
+    .columinslide{ display: flex; flex-direction: column; padding: 0 2rem;}
+    #slide-first-webdesign{
+        background: #c11525 url('jony.jpg') no-repeat center center;
+        background-size: contain;
+        height: 600px;
+        outline: none;
+    }
+    .slider-header{font-size: 30px; padding: 5rem 4rem 0rem 4rem;}
+     #slide-first-webdesign h2,  #slide-first-webdesign p{color: #000; text-shadow: none;}
+    .slider-row-design{
+          max-width: 1000px;
+    margin: 0 auto;
+    }
+    .slider-row{
+    max-width: 1100px;
+    margin: 0 auto;
+    }
+    #slide-first-ecommerce{
+        background: url('jeffy.jpg') no-repeat center center;
+        background-size: cover;
+        height: 500px;
+    }
+    .slider-row-ecommerce{
+          max-width: 1000px;
+    margin: 0 auto;
+    }
+    .slick-slide{height: 600px !important;}
+    .slick-slide, .slick-slide *{ outline: none !important; }
+    .slick-slider{margin-bottom: 2rem; background: #242424;}
+     .descslider{ background: #f2f3f5;}
+    .slick-dots li button:before{color: #fff !important;}
     .slick-dots{
     position: absolute !important;
-    top: 300px !important;
+    bottom: 100px !important;
     width: 200px !important;
     list-style: none;
-    left: 50px !important;
+    left: 120px !important;
     }
-    .slide h2{position: absolute; top: 200px;}
-    .slide p{position: absolute; top: 240px;}
-     #slide-first-website h2{top: 240px; font-size: 2rem; color: #fff;}
-     #slide-first-website p{top: 290px;  font-size: 1rem; color: #fff;}
+    .slide h2{position: absolute; bottom: 200px; color: #fff; font-size: 40px; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);}
+    .slide p{position: absolute; bottom: 160px; color: #fff;  font-size: 18px; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);}
+     #slide-first-website h2, #slide-first-design h2,  #slide-first-ecommerce h2{text-shadow: none; }
+     #slide-first-website p, #slide-first-design p,  #slide-first-ecommerce p{text-shadow: none;}
     .listed{
     display: flex;
     height: 180px;
