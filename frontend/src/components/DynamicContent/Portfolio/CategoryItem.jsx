@@ -34,7 +34,7 @@ export default class CategoryItem extends React.Component {
                       <li className="portfolio-category__item" 
                           onClick={this.props.onActiveFilteringCategory}>
 
-                        <p className={this.props.isActiveCategory ?  'golden' : ''}>{this.props.category.tag}<sup>({this.state.categoryLength.length})</sup></p>
+                        <p className={this.props.isActiveCategory ?  'golden' : ''}>{this.props.category.name}<sup>({this.state.categoryLength.length})</sup></p>
                       </li>
                 </ScrollAnimation>
             </React.Fragment>

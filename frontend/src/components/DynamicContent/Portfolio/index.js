@@ -6,7 +6,7 @@ import withLanguage from "../../../HOC/withLanguage";
 import CategoryItem from './CategoryItem';
 import PortolioPost from '../Header__Post/Portfolio__Post';
 import ScrollAnimation from 'react-animate-on-scroll'
-import Translate from 'translate-components'
+import Translate, { reactTranslateChangeLanguage } from "translate-components";
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import Footer from '../../Basic/Footer';
 import Header from '../../Basic/Header';
@@ -17,10 +17,10 @@ class Portfolio extends Component {
     super(props)
 
     this.state = {
-      headerDark: false,
       dataItems: [],
+      dataItemsStatic: [],
       activeFilter: null,
-      category: ''
+      category: '',
     }
   }
 
@@ -29,22 +29,28 @@ class Portfolio extends Component {
       return response.json()
     }).then((items) => {
          this.setState({dataItems: items})
+         this.setState({dataItemsStatic: items})
     })
   }
 
-
- setFilteringCategory = async (selectFilterId, category) => {
+  setFilteringCategory = async (selectFilterId, category) => {
       await this.setState({
         activeFilter: selectFilterId,
         category: category
       })
-      await this.getCategoryData()
+      await this.getCategoryData();
   }
 
+  setFilteringCategoryNull = async (selectFilterId, category) => {
+      await this.setState({
+        activeFilter: selectFilterId,
+        category: category
+      })
+      await this.getCategoryDataNull();
+  }
  isActiveCategory = (id) => {
    return this.state.activeFilter == id
  }
-
  getCategoryData = () => {
     return fetch(`${process.env.REACT_APP_API}/${this.props.language}/portfolio/getPortfolioItems/${this.state.category.tag}/`).then((response) => {
        return response.json()
@@ -52,6 +58,14 @@ class Portfolio extends Component {
           this.setState({dataItems: items})
      })
  }
+ getCategoryDataNull = () => {
+    return fetch(`${process.env.REACT_APP_API}/${this.props.language}/portfolio/getPortfolioItems/`).then((response) => {
+       return response.json()
+     }).then((items) => {
+          this.setState({dataItems: items})
+     })
+ }
+
 
 
  render() {
@@ -74,15 +88,18 @@ class Portfolio extends Component {
               <div className="sortby__category">
 
                 <ul className="portfolio-category__list">
-                {this.props.dataDside.map((category, index) => {
+
+                <ScrollAnimation delay="50" animateIn="slideInUp" ><li class="portfolio-category__item" onClick={this.setFilteringCategoryNull}><p class=""><Translate>Everything</Translate><sup>({this.state.dataItemsStatic.length})</sup></p></li></ScrollAnimation>
+    {this.props.dataDside.map((category, index) => {
                     return (
-                  <CategoryItem 
+                  <CategoryItem
                   key={index}
                   {...this.state} 
                   category={category}
                   isActiveCategory={this.isActiveCategory(index)}
                   onActiveFilteringCategory={this.setFilteringCategory.bind(this,index, category)} 
                   {...this.props}/>
+
                   )
                 })}
                 </ul>

@@ -23,13 +23,16 @@ import Translate, { reactTranslateChangeLanguage } from "translate-components";
 
 
     render() {
-
-
+console.log('onLeave', this.props.dataDside);
     return (
-
 <Fragment> {
   this.props.dataDside.map((item,key) => {
-  var divStyle = '' + key + '00';
+  var agrePullo = '' + key + '00';
+        if (agrePullo <= 300){
+  var divStyle = agrePullo;
+        } else {
+        var divStyle = '' + key/2 + '00';
+        }
 
   return  <div className="grid" >
       <figure className="effect-marley">
