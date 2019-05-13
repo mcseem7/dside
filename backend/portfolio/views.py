@@ -97,7 +97,6 @@ class PortfolioDetails(APIView):
             "CURL": pi.base_name,
             "logotype": pi.logotype.url,
             "days_developing": pi.days_developing,
-            "hovercolor": pi.hovercolor,
             "attachment":[{"type":x.kind, "content":x.content.url} for x in pi.attachment_set.all()],
             "blocks":[{"type":x.kind, "content":(x.image if x.kind == "image" else x.content).url} for x in pi.attachment2_set.all()],
             "similar_items": [{
