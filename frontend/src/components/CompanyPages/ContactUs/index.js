@@ -142,7 +142,7 @@ changePoppup = () => {
                         <button className="dside__send">
                   <div className="contact__content-send">
                     <button className="contact__btn-send">
-                                <span className="blacked">Send</span>
+                                <span className="blacked"><Translate>Send</Translate></span>
                                 <img className="button__content" src={Arrow} alt=""/>
                             </button>
                   </div>
@@ -187,7 +187,7 @@ changePoppup = () => {
                 </div>
                 <div className="contact__content-send"  onClick={this.changePoppup}>
                             <button className="contact__btn-send">
-                                <span>Order call</span>
+                                <span><Translate>Order call</Translate></span>
                                 <img className="button__content" src={Arrow} alt=""/>
                             </button>
                 </div>

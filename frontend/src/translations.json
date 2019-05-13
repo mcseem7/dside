@@ -89,21 +89,21 @@
     "cz": "Websites"
   },
 
-  "Landing page": {
-    "ru": "Лендинг-пейдж",
-    "pl": "Landing page",
-    "cz": "Vstupní stránky"
+  "Awaiting your questions": {
+    "ru": "Ждем ваших вопросов",
+    "pl": "Czekamy na Twoje pytania",
+    "cz": "Czekam na twoje pytania"
   },
 
-  "E-commerce": {
-    "ru": "Интернет-магазины",
-    "pl": "Sklepy internetowe",
-    "cz": "E-commerce"
+  "Send": {
+    "ru": "Отправить",
+    "pl": "Wyślij",
+    "cz": "Wyślij"
   },
-  "Corporate": {
-    "ru": "Корпоративний сайт",
-    "pl": "Strona korporacyjna",
-    "cz": "Korporační"
+  "Order call": {
+    "ru": "Заказать звонок",
+    "pl": "Zadzwoń do mnie",
+    "cz": "Zadzwoń do mnie"
   },
   "Intranet": {
     "ru": "Внутренние сайты",
