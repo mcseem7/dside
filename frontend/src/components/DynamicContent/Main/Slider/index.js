@@ -30,24 +30,24 @@ import Slider from "react-slick";
           <div>
             <div  id="slide-second" className="slide">
             <div className="slider-row">
-            <h2>Effective Design</h2>
-            <p>We design clear interfaces with bright design<br /> and branding for projects of any complexity</p>
+            <h2><Translate>Effective Design</Translate></h2>
+            <p><Translate>We design clear interfaces with bright design</Translate><br /><Translate> and branding for projects of any complexity</Translate></p>
             </div>
             </div>
           </div>
           <div>
             <div id={'slide-first-' + localStorage.getItem("lang")}  className="slide">
             <div className="slider-row">
-            <h2>Progressive Web</h2>
-            <p>Development of all types of web applications.<br /> Single-page applications and high-load services</p>
+            <h2><Translate>Progressive Web</Translate></h2>
+            <p><Translate>Development of all types of web applications.</Translate><br /> <Translate>Single-page applications and high-load services</Translate></p>
             </div>
             </div>
           </div>
           <div>
             <div  id={'slide-third-' + localStorage.getItem("lang")} className="slide">
             <div className="slider-row">
-            <h2>Ecommerce Solutions</h2>
-            <p>We provide comprehensive solution to business tasks–<br /> from developing a marketing strategy to implementing CRM</p>
+            <h2><Translate>Ecommerce Solutions</Translate></h2>
+            <p><Translate>We provide comprehensive solution to business tasks–</Translate><br /> <Translate>from developing a marketing strategy to implementing CRM</Translate></p>
             </div>
             </div>
           </div>

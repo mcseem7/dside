@@ -1,68 +1,68 @@
 {
-    "What?": {
-    "pl": "Co?",
-    "cz": "Co?",
-    "ru": "Что?"
+    "Order now!": {
+    "pl": "Zamów",
+    "cz": "Zamów",
+    "ru": "Заказать"
     },
     "What dside?": {
         "pl": "Czym jest DSIDE?",
         "cz": "Co DSIDE?",
         "ru": "Что такое DSIDE?"
     },
-    "is a value driven, focused and very ambitious digital agency based in Warsaw, providing the best and innovative solutions for your business.": {
-        "pl": "- to zorientowana na ważnych rzeczy, skoncentrowana i bardzo ambitna agencja cyfrowa z siedzibą w Warszawie, zapewniająca najlepsze i innowacyjne rozwiązania dla Twojej firmy.",
-        "cz": "je hodnotově řízená, zaměřená a velmi ambiciózní digitální agentura se sídlem ve Varšavě, která poskytuje nejlepší a inovativní řešení pro vaše podnikání.",
-        "ru": "- это ориентированное на ценности и очень амбициозное цифровое агентство, базирующееся в Варшаве. Предоставлющее инновационные решения для твоего бизнеса."
+    "You can't just ask customers what they want and then try to give that to them. By the time you get it built, they'll want something new.": {
+        "pl": "Nie możesz po prostu zapytać klientów, czego chcą, a następnie spróbować im to dać. Dopóki to zrobisz, będą chcieli czegoś nowego.",
+        "cz": "Nie możesz po prostu zapytać klientów, czego chcą, a następnie spróbować im to dać. Dopóki to zrobisz, będą chcieli czegoś nowego.",
+        "ru": "Вы не можете просто спросить клиентов, чего они хотят, а затем попытаться дать им это. Пока Вы это сделаете, они захотят что-то новое."
     },
-    "More about us": {
-        "pl": "Więcej o nas",
-        "cz": "Více o nás",
-        "ru": "Подробнее о нас"
+    "Steven Paul Jobs, Founder at Apple": {
+        "pl": "Stephen Paul Jobs, założyciel Apple",
+        "cz": "Stephen Paul Jobs, założyciel Apple",
+        "ru": "Стивен Пол Джобс, основатель Apple"
     },
-    "Brightly.": {
-        "pl": "Jasne.",
-        "cz": "Zářivě.",
-        "ru": "Ярко."
+    "Effective Design": {
+        "pl": "Efektywne projektowanie",
+        "cz": "Efektywne projektowanie",
+        "ru": "Эффектвный дизайн"
     },
-    "Easy.": {
-        "pl": "Łatwo.",
-        "cz": "Snadný.",
-        "ru": "Легко."
+    "Progressive Web": {
+        "pl": "Aplikacji WWW",
+        "cz": "Progresywne oprogramowanie.",
+        "ru": "Веб-приложения"
     },
-    "Profitable.": {
-        "pl": "Intratnie.",
-        "cz": "Ziskové.",
-        "ru": "Выгодно."
+    "Ecommerce Solutions": {
+        "pl": "Rozwiązania e-commerce",
+        "cz": "Rozwiązania e-commerce",
+        "ru": "E-commerce решения"
     },
-    "We work with brands we believe in.": {
-        "pl": "Współpracujemy z markami, w które wierzymy.",
-        "cz": "Spolupracujeme se značkami, které věříme.",
-        "ru": "Мы работаем с брендами, в которые мы верим."
+    "We design clear interfaces with bright design": {
+        "pl": "Projektujemy łatwe interfejsy o jasnym wyglądzie",
+        "cz": "Projektujemy jasne interfejsy o jasnym wyglądzie",
+        "ru": "Проектируем удобные интерфейсы с ярким дизайном"
     },
-    "What can you get?": {
-        "pl": "Co możesz dostać?",
-        "cz": "Co můžete získat?",
-        "ru": "Что ты получишь?"
+    " and branding for projects of any complexity": {
+        "pl": "i branding dla projektów o dowolnej złożoności",
+        "cz": "i branding dla projektów o dowolnej złożoności",
+        "ru": "и брендинг для проектов любой сложности"
     },
-    "You can just come up with an IDEA": {
-        "pl": "Możesz po prostu wymyślić IDEA",
-        "cz": "Můžete prostě přijít s IDEA",
-        "ru": "Ты можешь прийти лишь с идеей"
+    "Development of all types of web applications.": {
+        "pl": "Tworzymy wszystkie rodzaje aplikacji internetowych.",
+        "cz": "Tworzymy wszystkie rodzaje aplikacji internetowych.",
+        "ru": "Создаём все виды веб-приложений."
     },
-    "and get a name for the company (naming), a name for the domain, a logo, a corporate identity, a marketing-kit, as well as a good-selling website and a customized advertising campaign.": {
-        "ru": "и получить крутые: имя для своей компании (нэйминг), название домена, логотип, фирменный стиль, маркетинг-кит, а также продающий веб-сайт и индивидуальную рекламную кампанию.",
-        "cz": "a získat jméno pro společnost (pojmenování), jméno domény, logo, firemní identitu, marketingový kit a dobře prodávaná webová stránka a individuální reklamní kampaň.",
-        "pl": "i uzyskaj nazwę firmy (nazewnictwo), nazwę domeny, logo, identyfikację wizualną, zestaw marketingowy i dobrze sprzedającą stronę internetową i pojedynczą kampanię reklamową."
+    "Single-page applications and high-load services": {
+        "ru": "Включая одностраничные SPA приложения и высоконагруженные сервисы",
+        "cz": "Łącznie z aplikacjami jednostronicowymi i serwisami high-load",
+        "pl": "Łącznie z aplikacjami jednostronicowymi i serwisami high-load"
     },
-     "Brandbook": {
-         "ru": "Брендбук",
-         "pl": "Księga marki",
-         "cz": "Brandbook"
+     "We provide comprehensive solution to business tasks": {
+         "ru": "Мы предоставляем комплексное решение бизнес-задач",
+         "pl": "Zapewniamy kompleksowe rozwiązanie zadań biznesowych",
+         "cz": "Zapewniamy kompleksowe rozwiązanie zadań biznesowych"
      },
-    "Brand legend": {
-        "ru": "Легенда Бренда",
-        "pl": "Historia marki",
-        "cz": "Legenda značky"
+    "from developing a marketing strategy to implementing CRM": {
+        "ru": "от разработки маркетинговой стратегии до внедрения CRM",
+        "pl": "od opracowania strategii marketingowej do wdrożenia CRM",
+        "cz": "od opracowania strategii marketingowej do wdrożenia CRM"
     },
   "Branding": {
     "ru": "Брендинг",

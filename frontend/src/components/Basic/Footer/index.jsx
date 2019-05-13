@@ -138,7 +138,7 @@ class Footer extends Component {
                         </div></ScrollAnimation><ScrollAnimation delay="500" animateIn="slideInUp" >
                         <div className="footer__content-send"  onClick={this.changePoppup}>
                             <button className="footer__btn-send">
-                                <span>Order now!</span>
+                                <Translate>Order now!</Translate>
                                 <img className="button__content" src={Arrow} alt=""/>
                             </button>
                         </div>
