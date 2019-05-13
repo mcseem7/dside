@@ -65,7 +65,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class PortfolioItemAdmin(admin.ModelAdmin):
-    list_display = ('base_name', 'hovercolor', 'category', 'views', 'watching_time', 'date', 'show_on_home')
+    list_display = ('base_name', 'hovercolor','projectlink', 'category', 'views', 'watching_time', 'date', 'show_on_home')
     list_filter = ('date', 'category', 'show_on_home')
     search_fields = ('description', 'name', 'task', 'decision')
     inlines = (AttachmentInLine, Attachment2InLine, PortfolioTranslationInline)
