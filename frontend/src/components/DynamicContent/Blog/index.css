@@ -356,13 +356,10 @@ html,body {
     justify-self: flex-start;
 }
 
-.icon-watching .icon__blog,.icon-timer .icon__blog {
-    width: 6px;
-    height: 16px;
-}
+
 
 .icon-watching p, .icon-timer p {
-    font-size: 11px;
+    font-size: 14px;
 }
 .latest-post .icon__blog{
     padding-left: 3px;

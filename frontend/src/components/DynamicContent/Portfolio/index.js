@@ -89,7 +89,7 @@ class Portfolio extends Component {
 
                 <ul className="portfolio-category__list">
 
-                <ScrollAnimation delay="50" animateIn="slideInUp" ><li class="portfolio-category__item" onClick={this.setFilteringCategoryNull}><p class=""><Translate>Everything</Translate><sup>({this.state.dataItemsStatic.length})</sup></p></li></ScrollAnimation>
+                <ScrollAnimation delay="50" animateIn="slideInUp" ><li class="portfolio-category__item" onClick={this.setFilteringCategoryNull}><p class=""><Translate>Everh</Translate><sup>({this.state.dataItemsStatic.length})</sup></p></li></ScrollAnimation>
     {this.props.dataDside.map((category, index) => {
                     return (
                   <CategoryItem

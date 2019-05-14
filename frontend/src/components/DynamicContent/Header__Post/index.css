@@ -87,7 +87,8 @@ figure.effect-marley span {
     position: relative;
     list-style: none;
     text-align: center;
-    flex:  1 1 30%;
+    flex: 1 0 33.33%;
+    max-width: 33.33%;
 }
 
 
@@ -105,7 +106,6 @@ figure.effect-marley span {
 .grid figure img {
     position: relative;
     display: block;
-    max-height: 360px;
      max-width: 100%;
      min-width: 100%;
     min-height: 264px;
@@ -248,7 +248,7 @@ figure.effect-marley span {
 /* Tablets */
 
 figure.effect-marley:hover figcaption,
-figure.effect-marley:active figcaption{ background-color: var(--tooltip-color); transition: all 0.25s;}
+figure.effect-marley:active figcaption{ background-color: var(--tooltip-color); cursor: pointer; transition: all 0.25s;}
 
 figure.effect-marley:hover h2 ,
 figure.effect-marley:active h2 {
@@ -276,12 +276,12 @@ figure.effect-marley  img {
     transform: scale(1); transition: transform .3s  ease-in-out;}
 figure.effect-marley:hover img,
 figure.effect-marley:active img{
-    -webkit-filter: blur(5px);
-    filter: blur(5px);
-    transform: scale(1.05);
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    transform: scale(1.03);
     background-color: rgba(15, 21, 30, 0.93);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
     transition: .3s filter linear, .3s transform ease-in-out;
 }
 figure.effect-marley:hover h2::after,

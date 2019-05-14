@@ -70,6 +70,7 @@ import Header from '../../Basic/Header';
 
 
   render() {
+    console.log('Similar item data: ', this.state.similarItems);
     return (
       <Fragment>
     
@@ -83,9 +84,9 @@ import Header from '../../Basic/Header';
                   <div className="portfolio__name__content">
 
                       <div className="project__names">
-                        <div className="project__logo">
+        {/*<div className="project__logo">
                           <img src={`${process.env.REACT_APP_DOMAIN}/${this.state.itemPortfolio.logotype}`} alt="" />
-                        </div>
+                        </div>*/}
                         <div className="category__project">
                           <p> {this.state.category}</p>
                         </div>
@@ -132,15 +133,12 @@ import Header from '../../Basic/Header';
         <div className="content__project-portfolio">
 
           <div className="container__project-task">
-
-            <div className="name__task">
-              <h4><Translate>Task</Translate></h4>
-            </div>
-
-
-            <div className="project__task_portfolio" >
+          <div className="project__task_portfolio" >
               <p dangerouslySetInnerHTML={{ __html: this.state.itemPortfolio.task }}>
               </p>
+            </div>
+            <div className="name__task">
+              <noindex><a href={this.state.itemPortfolio.projectlink} rel="nofollow" target="_blank">{this.state.itemPortfolio.projectlink}</a></noindex>
             </div>
 
 
@@ -171,11 +169,6 @@ import Header from '../../Basic/Header';
 
 
           <div className="container__project-task">
-
-            <div className="name__task">
-              <h4><Translate>OUR Decision</Translate></h4>
-            </div>
-
 
             <div className="project__task_portfolio">
               <p dangerouslySetInnerHTML={{ __html: this.state.itemPortfolio.decision }}>
