@@ -28,7 +28,6 @@ figure.effect-marley figcaption {
     transition: all 0.35s;
 }
 
-.grid
 
 figure.effect-marley p {
     right: 220px;
@@ -40,6 +39,7 @@ figure.effect-marley p {
     font-family: "DSIDE-Light", sans-serif;
     font-weight: 300;
 }
+
 
 figure.effect-marley h2 {
         color: #fff;
@@ -140,9 +140,10 @@ figure.effect-marley span {
 .grid figure figcaption > a {
     z-index: 1000;
     text-indent: 0%;
-    font-size: 12px;
+    font-size: 42px;
     line-height: 9px;
     color: #fff;
+    z-index: 50000;
     font-family: "MontBold", 'sans-serif' ;
     display: none;
     text-decoration: none;
@@ -151,9 +152,34 @@ figure.effect-marley span {
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
 }
-
-.grid figure figcaption > a::before {
-    background-image: url("./images/arrow.svg");
+.montelink {z-index: 100000;
+    text-indent: 0%;
+    font-size: 18px;
+    line-height: 9px;
+    color: #fff;
+    position: absolute;
+    z-index: 50000;
+    font-family: "DSIDE-light", sans-serif;
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+    left: 4rem;
+    opacity: 0;
+    bottom: 4rem;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;}
+.montelink:empty{
+    display: none;
+}
+.montelink::after {
+    background-image: url("./arrow.svg");
+    content:'';
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    left: 8px;
+    width: 18px;
+    height: 18px;
 }
 
 
@@ -222,13 +248,23 @@ figure.effect-marley span {
 /* Tablets */
 
 figure.effect-marley:hover figcaption,
-figure.effect-marley:active figcaption{ background-color: rgba(15, 21, 30, 0.23); transition: all 0.25s;}
+figure.effect-marley:active figcaption{ background-color: var(--tooltip-color); transition: all 0.25s;}
 
 figure.effect-marley:hover h2 ,
 figure.effect-marley:active h2 {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
     opacity: 1;
+}
+figure.effect-marley:hover .montelink ,
+figure.effect-marley:active .montelink {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    opacity: .6;
+}
+figure.effect-marley:hover .montelink:hover{
+    opacity: 1;
+    cursor: pointer;
 }
 figure.effect-marley:hover span ,
 figure.effect-marley:active span {
