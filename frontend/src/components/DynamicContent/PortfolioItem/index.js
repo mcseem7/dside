@@ -4,12 +4,14 @@ import logoProject from './rounded-rectangle-10.png'
 import screenPortfolio from './layer-104.png'
 import screenCitron from './layer-105.png'
 import imgsl from './layer-106-copy.png'
+import arrowNext from './arrow-next.svg'
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { Link, withRouter } from "react-router-dom";
 import Translate, { reactTranslateChangeLanguage } from "translate-components";
 import arrowImg from './arrow.svg'
 import fetch from 'isomorphic-fetch'
+import ScrollAnimation from 'react-animate-on-scroll'
 import withLanguage from '../../../HOC/withLanguage';
 import {compose} from 'recompose'
 import { matchPath } from 'react-router'
@@ -70,11 +72,12 @@ import Header from '../../Basic/Header';
 
 
   render() {
-    console.log('Similar item data: ', this.state.similarItems);
+    console.log('Similar item data: ', this.state.similarItems[0]);
     return (
       <Fragment>
     
       <div className="container__portfolio-item">
+        <ScrollAnimation animateIn="slideInUp" animateOnce="True" >
         <div className="portfolio__header_item-wrapper" style={{ backgroundImage: `url(${process.env.REACT_APP_DOMAIN}${this.state.itemPortfolio.main_image})` }}>
           <div className="header__portfolio-content">
             <div className="content__project-portfolio">
@@ -84,42 +87,45 @@ import Header from '../../Basic/Header';
                   <div className="portfolio__name__content">
 
                       <div className="project__names">
-        {/*<div className="project__logo">
+            {/*<div className="project__logo">
                           <img src={`${process.env.REACT_APP_DOMAIN}/${this.state.itemPortfolio.logotype}`} alt="" />
                         </div>*/}
-                        <div className="category__project">
+                        <ScrollAnimation delay="50" animateIn="slideInUp" ><div className="category__project">
                           <p> {this.state.category}</p>
-                        </div>
+                        </div></ScrollAnimation>
+                        <ScrollAnimation delay="250" animateIn="slideInUp" >
                         <div className="name__project">
                           <h4>{this.state.itemPortfolio.name}</h4>
-                        </div>
+                        </div></ScrollAnimation>
 
                       </div>
+          <ScrollAnimation delay="550" animateIn="slideInUp" >
                       <div className="portfolio__description__content">
                         <div className="project_description__content">
                           <p className="description__project" dangerouslySetInnerHTML={{ __html: this.state.itemPortfolio.description }}>
                           </p>
                         </div>
                       </div>
+          </ScrollAnimation>
 
 
 
 
                     <div className="portfolio__datatime__content">
                       <div className="portfolio__post-data">
-                        <div className="watching__post">
+                        <ScrollAnimation delay="750" animateIn="slideInUp" ><div className="watching__post">
                           <div className="icon-watching">
                             <div className="icon__blog" />
                             <p>{
                               this.state.itemPortfolio.views}</p>
                           </div>
-                        </div>
+                        </div></ScrollAnimation><ScrollAnimation delay="950" animateIn="slideInUp" >
                         <div className="time__post">
                           <div className="icon-timer">
                             <div className="icon__blog" />
                             <p><span><Translate>Developed in</Translate>:</span> {this.state.itemPortfolio.watching_time} <span><Translate>days</Translate></span></p>
                           </div>
-                        </div>
+                        </div></ScrollAnimation>
                       </div>
                     </div>
                   </div>
@@ -129,13 +135,13 @@ import Header from '../../Basic/Header';
           </div>
         </div>
         </div>
-
+</ScrollAnimation>
         <div className="content__project-portfolio">
 
           <div className="container__project-task">
           <div className="project__task_portfolio" >
-              <p dangerouslySetInnerHTML={{ __html: this.state.itemPortfolio.task }}>
-              </p>
+             <ScrollAnimation animateIn="slideInUp" > <p dangerouslySetInnerHTML={{ __html: this.state.itemPortfolio.task }}>
+              </p></ScrollAnimation>
             </div>
             <div className="name__task">
               <noindex><a href={this.state.itemPortfolio.projectlink} rel="nofollow" target="_blank">{this.state.itemPortfolio.projectlink}</a></noindex>
@@ -153,10 +159,10 @@ import Header from '../../Basic/Header';
 
 
               {Object.keys(this.state.attachImg).map((item) => {
-                return (
+                return (<ScrollAnimation animateIn="slideInUp" animateOnce="True">
                   <div className="portfolio__screen-item">
                     <img src={`${process.env.REACT_APP_DOMAIN}/${this.state.attachImg[item].content}`} />
-                  </div>
+                  </div></ScrollAnimation>
                 )
               })
               }
@@ -171,8 +177,8 @@ import Header from '../../Basic/Header';
           <div className="container__project-task">
 
             <div className="project__task_portfolio">
-              <p dangerouslySetInnerHTML={{ __html: this.state.itemPortfolio.decision }}>
-              </p>
+              <ScrollAnimation animateIn="slideInUp" ><p dangerouslySetInnerHTML={{ __html: this.state.itemPortfolio.decision }}>
+              </p></ScrollAnimation>
             </div>
 
 
@@ -184,10 +190,10 @@ import Header from '../../Basic/Header';
             <div className="portfolio__screen-wrapper">
 
               {Object.keys(this.state.blocksImg).map((item) => {
-                return (
+                return (<ScrollAnimation animateIn="slideInUp" animateOnce="True">
                   <div className="portfolio__screen-item">
                     <img src={`${process.env.REACT_APP_DOMAIN}/${this.state.blocksImg[item].content}`} alt="" />
-                  </div>
+                  </div></ScrollAnimation>
                 )
               })
               }
@@ -195,20 +201,34 @@ import Header from '../../Basic/Header';
           </div>
 
 
-          <div className="portfolio__carousel">
 
-            <div className="portfolio__carousel-wrapper">
               {this.state.similarItems.length != 0 ?
                 <div className="portfolio__carousel-title">
-                  <h2><Translate>Other cases</Translate></h2>
-                </div> : null
+              <ScrollAnimation animateIn="slideInUp">
+                  <h2><Translate>Did you enjoy</Translate> {this.state.itemPortfolio.name}? <Translate>We have much more fascinationg experience for you</Translate></h2>
+                </ScrollAnimation></div> : null
               }
-              <div className="container__slider-portfolio">
+              <div className="similar">
+              {this.state.similarItems != [] ? Object.values(this.state.similarItems).map((item, key) => {
+      return (
+          <Fragment>
+          <ScrollAnimation animateIn="slideInUp" animateOnce="True">
+        <div className="portfolio__similar_item-wrapper" style={{ backgroundImage: `url(${process.env.REACT_APP_DOMAIN}/${item.thumbnail})` }}>
+<div class="header__portfolio-content"><div class="content__project-portfolio"><div class="header__portfolio-content-wrapper"><div class="project__titles"><div class="portfolio__title-content"><div class="portfolio__name__content"><div class="project__names"><ScrollAnimation animateIn="slideInUp" delay="200"><div class="next__project"><p><Translate>Next project</Translate></p></div></ScrollAnimation><div class="name__next"><h2>{item.name}</h2></div><div className="explore_next shining-underline"><Link to={`/${localStorage.getItem('lang')}/portfolio/${item.CURL}`}><Translate>Explore project</Translate><img class="arrow_next" src={arrowNext} alt=""/><span className="agrepullo"></span></Link></div></div></div></div></div></div></div></div>
+            </div></ScrollAnimation>
+        </Fragment>
+               )
 
-                <div className="sliderContent">
-                  <CarouselProvider
-                    naturalSlideWidth={400}
-                    naturalSlideHeight={405}
+                      }) : null
+
+                      }
+               </div>
+
+             {/*  <div className="container__slider-portfolio">
+ <div className="portfolio__header_item-wrapper" style={{ backgroundImage: `url(${process.env.REACT_APP_DOMAIN}/${this.state.similarItems.thumbnail})` }}>
+                        </div>
+              <div className="sliderContent">
+        <CarouselProvider
                     totalSlides={this.state.similarItems.length}
                     visibleSlides={3}
                     className={'slider__wrapper-portfolio'}
@@ -241,19 +261,12 @@ import Header from '../../Basic/Header';
                       }
 
                     </Slider>
-                    {this.state.similarItems.length != 0 ?
-                      <div className="data__buttons">
-                        <ButtonBack><img src={arrowImg} alt="" /></ButtonBack>
-                        <ButtonNext><img src={arrowImg} alt="" /></ButtonNext>
-                      </div>
-                      : null}
+
                   </CarouselProvider>
                 </div>
-              </div>
+              </div>*/}
 
 
-            </div>
-          </div>
 
 
 

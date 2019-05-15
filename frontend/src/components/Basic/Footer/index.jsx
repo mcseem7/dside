@@ -37,7 +37,6 @@ class Footer extends Component {
 
     return (
         <div>
-         <ScrollAnimation delay="100" animateIn="slideInUp" >
            <footer>
                 <div className="footer__wrap__head">
                     <div className="footer__head footer__content text-center">
@@ -165,7 +164,6 @@ class Footer extends Component {
                     </div>
                 </div>
             </footer>
-           </ScrollAnimation>
 
          <OrderPoppup modalStatus={this.state.modalActiveOrder} onClose={this.changePoppup} />
             </div>
