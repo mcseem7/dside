@@ -1,5 +1,6 @@
-import ContactUs from "../../components/CompanyPages/ContactUs";
+import ContactUs from '../../components/CompanyPages/ContactUs'
 import About from '../../components/DynamicContent/About'
+import Cookies from '../../components/CompanyPages/Cookies'
 import Process from '../../components/DynamicContent/Process'
 
 
@@ -23,6 +24,16 @@ export const company = [
              ],
         exact: true,
         component: About
+    },
+    {
+        path: [
+            `/en/cookies-policy`, 
+            `/ru/cookies-policy`,
+            `/pl/cookies-policy`,
+            `/cz/cookies-policy`
+             ],
+        exact: true,
+        component: Cookies
     },
     {
         path: [

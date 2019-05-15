@@ -78,7 +78,7 @@
 .cook__description {
     font-family: 'DSIDE-Light',sans-serif;
     font-size: 0.8rem;
-    flex: 1 1 60%;
+    flex: 1 1 70%;
     padding: 1rem;
     text-align: left;
 }
@@ -139,12 +139,12 @@
     background: #fff;
     margin: 0 auto;
     padding: 0px 1rem;}
-    .cook__description span{font-family: 'DSIDE-Bold',sans-serif;}
-    .cook__description {
+    .cook__description a{font-family: 'DSIDE-Bold',sans-serif;}
+    .cook__description span{
     font-family: 'DSIDE-Light',sans-serif;
     font-size: 0.8rem;
     flex: 1 1 75%;
-    padding: 1rem 5rem 1rem 1rem;
+    padding: 1rem 0rem 1rem 0rem;
     text-align: left;
 }
 }

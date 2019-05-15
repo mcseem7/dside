@@ -130,21 +130,21 @@
     "pl": "Następny projekt",
     "cz": "Sociální média"
   },
-  "Direct": {
-    "ru": "Прямой маркетинг",
-    "pl": "Bezpośredni marketing",
-    "cz": "Přímo"
+  "Did you know? This website uses cookies to ensure you get the best experience on our website.": {
+    "ru": "Здравствуйте! Наша страница использует файлы cookies.",
+    "pl": "Miło Cię widzieć! Korzystamy z ciasteczek!",
+    "cz": "Czy wiedziałeś? Ta strona korzysta z plików cookie, aby zapewnić najlepszą korzystania stroną."
   },
 
-  "Automation": {
-    "ru": "Автоматизация",
-    "pl": "Automatyzacja",
+  "Learn more": {
+    "ru": "Унать больше",
+    "pl": "Dowiedź się więcej",
     "cz": "Automatizace"
   },
 
-  "Reduction of staff": {
-    "ru": "Оптимизация штата",
-    "pl": "Redukcja personelu",
+  "Agree": {
+    "ru": "Согласен",
+    "pl": "Akceptuj",
     "cz": "Snížení počtu zaměstnanců"
   },
 
@@ -205,7 +205,7 @@
 
     "is a modern, fast-growing company, in which the main principles of work are high professionalism,": {
        "ru": "DSIDE является современной, быстро развивающейся компанией, в которой основным принципом работы являются высокий профессионализм.",
-        "pl": "DSIDE jest nowoczesną, szybko rozwijającą się firmą, w której głównymi zasadami pracy są wysoki profesjonalizm,",
+        "pl": "DSIDE jest nowoczesną agenją brandingową, w której głównymi zasadami pracy są wysoki profesjonalizm,",
         "cz": "je moderní, rychle se rozvíjející společnost, ve které jsou hlavními principy práce vysoká profesionalita,"
     },
     "responsibility to each client and the reliability of the guaranteed result": {
@@ -220,16 +220,16 @@
     },
   "Automated business": {
     "ru": "Автоматизация бизнеса",
-    "pl": "Automatyzacja biznesu",
+    "pl": "Automatyzujemy biznes",
     "cz": "Automatizace podnikání"
   },
   "Do so that your business is working while you are solving more important issues": {
-    "pl": "Zrób tak, aby Twoja firma działała, podczas tego jak rozwiązujesz ważniejsze problemy",
+    "pl": "Zrobimy tak, aby Twoja firma mocno działała, podczas tego jak rozwiązujesz ważniejsze pytania",
     "cz": "Udělejte tak, aby vaše podnikání fungovalo při řešení důležitějších otázek",
     "ru": "Сделаем так, чтобы твой бизнес работал, пока ты решаешь более важные проблемы"
   },
   "Create brand yourself": {
-    "pl": "Stwórz swoją markę",
+    "pl": "Tworzymy marki",
     "cz": "Vytvořte svou značku",
     "ru": "Создай свой бренд"
   },
@@ -239,12 +239,12 @@
     "ru": "Фирменные компании продают свою продукцию намного дороже, а что останавливает тебя?"
   },
   "Memorable logos": {
-    "pl": "Niezapomniane logo",
+    "pl": "Niezapomniane loga",
     "cz": "Památné loga",
     "ru": "Запоминающиеся логотипы"
   },
   "Make your client remember your company": {
-    "pl": "Spraw, aby Twój klient zapamiętał Twoją firmę",
+    "pl": "Sprawiamy, aby Twój klient zapamiętał Twoją firmę",
     "cz": "Vyžádejte svého klienta o zapamatování vaší společnosti",
     "ru": "Заставь клиента запомнить твою компанию"
   },
@@ -1090,7 +1090,7 @@
  "This person can tell you how to improve your business. He will make your work with us convenient and easy. Has a business in 2 countries.": {
   "ru": "Именно он может подсказать вам, как можно улучшить Твой бизнес. Он сделает работу с DSIDE не только легкой, но и приятной. Имеет большой опыт в управлении бизнесом.",
   "cz": "nejlepší Menedżer turystyczny ",
-  "pl": "On może ci powiedzieć, jak poprawić Twój biznes. Sprawi, że praca z DSIDE będzie nie tylko łatwa, ale także przyjemna. Ma duże doświadczenie w zarządzaniu przedsiębiorstwem."
+  "pl": "On może ci doradzić, jak poprawić Twój biznes. Sprawi, że praca z DSIDE będzie nie tylko łatwa, ale także przyjemna. Ma duże doświadczenie w zarządzaniu przedsiębiorstwem."
  },
 
  "Name": {

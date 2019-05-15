@@ -1,0 +1,20 @@
+    .background__cookies{width: 1200px;
+    margin: 0 auto; padding-top: 200px;
+    }
+     .background__cookies ul{list-style: square;}
+     .background__cookies h5{
+         font-size: 40px;
+         font-family: 'DSIDE-Black',sans-serif;
+     }
+     .background__cookies p{
+         font-family: 'DSIDE-Light',sans-serif;
+         font-size: 18px;
+     }
+    .background__cookies strong{
+         font-size: 18px;
+         font-family: 'DSIDE-Bold',sans-serif;
+     }
+     .background__cookies h6{
+         font-size: 22px;
+         font-family: 'DSIDE-Bold',sans-serif;
+     }

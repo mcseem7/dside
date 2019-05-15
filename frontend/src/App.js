@@ -2,7 +2,7 @@ import React, { Component, Fragment, createElement } from "react";
 import Layout from './components'
 import './components/App.css'
 import Footer from './components/Basic/Footer'
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Link, Switch, Route, Redirect } from 'react-router-dom'
 import ContactUs from './components/CompanyPages/ContactUs'
 import MainPages from './components/index'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
@@ -10,7 +10,7 @@ import Cookies from 'js-cookie'
 import Header from './components/Basic/Header/index';
 import loadable from 'loadable-components';
 import 'regenerator-runtime/runtime';
-
+import Translate from "translate-components";
 import NotFound from "./components/Basic/NotFound";
 import Blog from './components/DynamicContent/Blog'
 import BlogItem from './components/DynamicContent/BlogItem'
@@ -52,6 +52,8 @@ class App extends Component {
 
     componentDidMount() {
         window.scrollTo(0, 0)
+
+      this.setState({lang: localStorage.getItem('lang')})
         this.setState({mounted: true})
         reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
         const spinner = $('#loading');
@@ -122,7 +124,7 @@ class App extends Component {
                 { <div className="App">
              <Route exact path="/" component={Welcome} />
              <Route path={'/:language'} render={(props) => {
-                 const matchUrl = ['aboutus', 'contactus', 'process', 'portfolio'].indexOf(props.location.pathname.substr(4));
+                 const matchUrl = ['aboutus', 'contactus', 'process', 'portfolio', 'cookies-policy'].indexOf(props.location.pathname.substr(4));
                  function getHeader() {
                  if (matchUrl == -1 ) {
                     return (<Header domenErty={props.match.params.language} style={'block'} name="dark" />)
@@ -172,11 +174,11 @@ class App extends Component {
 
                      <div className="privacy__warning">
                          <p className="cook__description">
-                             Did you know? This website uses cookies to ensure you get the best experience on our website. <span className="shining-underline">Learn more<span></span></span>
+                            <Translate>Did you know? This website uses cookies to ensure you get the best experience on our website.</Translate> <Link to={`/${this.state.lang}/cookies-policy`}><Translate>Learn more</Translate></Link>
                          </p>
 
                          <div className="cook__button">
-                             <p onClick={this.confirmCookies}>Agree</p>
+                             <p onClick={this.confirmCookies}><Translate>Agree</Translate></p>
                          </div>
 
                      </div>
