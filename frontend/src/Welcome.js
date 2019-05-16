@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, withRouter } from "react-router-dom";
 import PropTypes from 'prop-types';
 import LanguagePoppup from "./HOC/ChangeLanguage/ChangePup";
-import logoRed from './dsideLogo.svg'
 
 const propTypes = {};
 
@@ -32,7 +31,6 @@ export default class Welcome extends React.Component {
             <div class="loader__arrow up inner inner-4"></div>
           </div>
         </div>
-        <span><img src={logoRed} class="brand-logo" alt="DSIDE logo" /></span>
       </div>
             </React.Fragment>
         );
