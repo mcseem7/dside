@@ -2,7 +2,7 @@ import React, { Component, Fragment, createElement } from "react";
 import Layout from './components'
 import './components/App.css'
 import Footer from './components/Basic/Footer'
-import { BrowserRouter as Router, Link, Switch, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Link, withRouter, Switch, Route, Redirect } from 'react-router-dom'
 import ContactUs from './components/CompanyPages/ContactUs'
 import MainPages from './components/index'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
@@ -22,6 +22,7 @@ import { reactTranslateChangeLanguage, TranslateProvider } from "translate-compo
 import translations from './translations.json'
 import clock from './clock.svg'
 import routes from './routes'
+import logoRed from './dsideLogo.svg'
 import Welcome from './Welcome'
 import Helmet from 'react-helmet-async'
 import $ from 'jquery'
@@ -122,7 +123,6 @@ class App extends Component {
                 </Fragment>
                 
                 { <div className="App">
-             <Route exact path="/" component={Welcome} />
              <Route path={'/:language'} render={(props) => {
                  const matchUrl = ['aboutus', 'contactus', 'process', 'portfolio', 'cookies-policy'].indexOf(props.location.pathname.substr(4));
                  function getHeader() {

@@ -37,7 +37,7 @@
     display: none !important;
   }
   #loading {
-      background: url('./bg-lp-1.jpg');
+      background: #fff;
       position: fixed;
       background-size: cover;
       top: 0;
@@ -62,15 +62,15 @@
         #loading .loader .loader__row {
           display: flex; }
           #loading .loader .loader__row .loader__arrow {
-            width: 5px;
-            height: 5px;
+            width: 3px;
+            height: 3px;
             border-radius: 30px;
             margin: 6px;
             transform: rotate(45deg);
-            border: 2px solid #ec1423;
-            -webkit-box-shadow: 0px 0px 10px 0px rgba(255,0,0,0.58);
-            -moz-box-shadow: 0px 0px 10px 0px rgba(255,0,0,0.58);
-            box-shadow: 0px 0px 10px 0px rgba(255,0,0,0.58);
+            border: 2px solid #99979c;
+            -webkit-box-shadow: 0px 0px 10px 0px rgba(234, 242, 255, 0.58);
+            -moz-box-shadow: 0px 0px 10px 0px rgba(219, 227, 255, 0.58);
+            box-shadow: 0px 0px 10px 0px rgba(216, 232, 255, 0.58);
             animation: wink 0.5s infinite; }
             #loading .loader .loader__row .loader__arrow.inner-1 {
               animation-delay: -0.0833333333s; }
@@ -86,7 +86,7 @@
               animation-delay: -0.5s; }
       #loading span {
         position: absolute;
-        top: calc(20% - 30px);
+        top: calc(40% - 20px);
         width: 100%;
         text-align: center;
         left: 0;
@@ -97,9 +97,7 @@
    #loading span img {
     max-width: 100%;
       width: 90px;
-       -webkit-box-shadow: 0px 0px 10px 0px rgba(255,0,0,0.35);
-            -moz-box-shadow: 0px 0px 10px 0px rgba(255,0,0,0.35);
-            box-shadow: 0px 0px 10px 0px rgba(255,0,0,0.35);
+
   }
    #loading span {
     width: 100%;
@@ -119,8 +117,8 @@
 </head>
 <body> 
     <div id="loading">
-        <span><img src="dsideLogo.svg" class="brand-logo" alt="DSIDE logo" /></span>
         <div class="loader">
+            <span><img src="https://mydside.com/dsideLogo.svg" class="brand-logo" alt="DSIDE logo" /></span>
           <div class="loader__row">
             <div class="loader__arrow up inner inner-6"></div>
             <div class="loader__arrow down inner inner-5"></div>

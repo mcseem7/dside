@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, withRouter } from "react-router-dom";
 import PropTypes from 'prop-types';
 import LanguagePoppup from "./HOC/ChangeLanguage/ChangePup";
 import logoRed from './dsideLogo.svg'
@@ -11,7 +12,7 @@ export default class Welcome extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            langPoppup: true
+            langPoppup: false
         };
     }
 
@@ -32,8 +33,7 @@ export default class Welcome extends React.Component {
           </div>
         </div>
         <span><img src={logoRed} class="brand-logo" alt="DSIDE logo" /></span>
-      </div> 
-        {this.state.langPoppup ? <LanguagePoppup handleChange={this.hidePoppup} /> : null}
+      </div>
             </React.Fragment>
         );
     }
