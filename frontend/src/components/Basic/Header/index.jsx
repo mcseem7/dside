@@ -20,20 +20,19 @@ import HeaderMenu from "./HeaderMenu";
 import fire from './fire.gif'
 import "./animate.css";
 
+
 class Header extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      opacity: 0,
-      headerDark:'',
-      display: "none",
       modalActiveOrder: false,
       modalActiveGrade: false,
       lang: ""
     };
-    console.log(this.props)
   }
-
+  componentDidMount() {
+      this.setState({lang: localStorage.getItem('lang')});
+  }
   showMenu = () => {
     if (this.state.opacity == 1) {
       this.setState({ opacity: 0, display: "none" });
@@ -41,18 +40,22 @@ class Header extends Component {
       this.setState({ opacity: 1, display: "block" });
     }
   };
-
+  alreadyUpdate = (data) => {
+    const {location} = this.props
+    localStorage.setItem('lang', `${data}`)
+    this.props.history.push(`/${data + location.pathname.substr(3)}`)
+  }
   changePoppup = () => {
     this.setState({ modalActiveOrder: !this.state.modalActiveOrder });
   };
-
   changePoppupGrade = () => {
     this.setState({ modalActiveGrade: !this.state.modalActiveGrade });
   }
 
   render() {
     const {history, location} = this.props;
-    const langClass = (route) => { return location.pathname === route ? "active" : null }
+    const langClass = (route) => { return ('/' + this.props.language + location.pathname.substr(3)) === (route + location.pathname.substr(3)) ? "active" : null; }
+      {/* console.log('Header tester', langClass); */}
     return (
 
       <div
@@ -162,21 +165,27 @@ class Header extends Component {
                     </NavLink>
                   </div>
                 </div>
-                  {/*<div className="langcode">
+                  <div className="langcode">
                   <ul>
                   <li className={langClass(`/en`)} >
 
-                         <img src={EN} width="20"/>
+                         <img src={EN} onClick={() => {
+                      this.alreadyUpdate('en')
+                    }} width="20"/>
                    </li>
                            <li className={langClass(`/ru`)}>
-                          <img src={RU}  width="20"/>
+                          <img src={RU} onClick={() => {
+                      this.alreadyUpdate('ru')
+                    }}  width="20"/>
                    </li>
                            <li className={langClass(`/pl`)}>
-                           <img src={PL}  width="20"/>
+                           <img src={PL} onClick={() => {
+                      this.alreadyUpdate('pl')
+                    }}  width="20"/>
 
                    </li>
                  </ul>
-              </div>*/}
+              </div>
               </div>
               <div className="mid__content-logo">
                 <nav className="mainnav">

@@ -37,7 +37,7 @@ class Portfolio extends Component {
       await this.setState({
         activeFilter: selectFilterId,
         category: category
-      })
+      });
       await this.getCategoryData();
   }
 
@@ -69,6 +69,7 @@ class Portfolio extends Component {
 
 
  render() {
+    console.log(this.props.dataDside);
     return (
       <Fragment>
         

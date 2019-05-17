@@ -123,6 +123,7 @@ class App extends Component {
                 </Fragment>
                 
                 { <div className="App">
+             <Route exact path='/' component={Welcome} />
              <Route path={'/:language'} render={(props) => {
                  const matchUrl = ['aboutus', 'contactus', 'process', 'portfolio', 'cookies-policy'].indexOf(props.location.pathname.substr(4));
                  function getHeader() {

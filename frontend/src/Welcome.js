@@ -1,41 +1,43 @@
 import React from 'react';
 import { Link, withRouter } from "react-router-dom";
 import PropTypes from 'prop-types';
+import { reactTranslateChangeLanguage } from "translate-components";
 import LanguagePoppup from "./HOC/ChangeLanguage/ChangePup";
 
 const propTypes = {};
 
 const defaultProps = {};
 
-export default class Welcome extends React.Component {
+export default withRouter(class Welcome extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            langPoppup: false
         };
+
     }
 
 
-    hidePoppup = () => {
-        this.setState({langPoppup: !this.state.langPoppup})
-    }
+    componentDidMount() {
+        const detectBrowserLanguage = require('detect-browser-language')
+        this.setState({ userLanguage: detectBrowserLanguage() })
+        const userLanguage = detectBrowserLanguage()
+        if (userLanguage != null) { 
+            var minLang = userLanguage.substr(0,2);
+        }
+        if (minLang != 'en' && minLang != 'ru' && minLang != 'pl'){ 
+            var finalLang = 'en'; 
+        }else{
+            var finalLang = minLang;
+        }
+        localStorage.setItem('lang', `${finalLang}`)
+        this.props.history.push(`/${finalLang}`);
+     }
 
     render() {
         return (
             <React.Fragment>
-    <div id="loading">
-        <div class="loader">
-          <div class="loader__row">
-            <div class="loader__arrow up inner inner-6"></div>
-            <div class="loader__arrow down inner inner-5"></div>
-            <div class="loader__arrow up inner inner-4"></div>
-          </div>
-        </div>
-      </div>
+     <h1>Hello World</h1>
             </React.Fragment>
         );
     }
-}
-
- Welcome.propTypes = propTypes;
- Welcome.defaultProps = defaultProps;
+})
