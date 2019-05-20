@@ -1,45 +1,19 @@
-.background__contactus {
-    width: 1200px;
-    margin: 0 auto;
-    background: #F3F3F5;
-    transform: translateY(-60px);
-    display: flex;
-    justify-content: center;
-}
 
-
-
-
-.contact-us__form_container {
-    display: flex;
-    justify-content: center;
-}
-
-.left__form-container {
-    background: white;
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 75px;
-    width: 800px;
-}
-
-.right__form-container {
-    background: url('./Layer 106.png');
-    transition: background 1000ms linear;
-    width: 400px;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-#google__maps-container::before{content: ''; display: block;
-    width:100%; height: 150px;/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3f3f5+19,ffffff+99&1+19,0+99 */
-background: -moz-linear-gradient(top, rgba(243,243,245,1) 19%, rgba(255,255,255,0) 99%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, rgba(243,243,245,1) 19%,rgba(255,255,255,0) 99%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgba(243,243,245,1) 19%,rgba(255,255,255,0) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f5', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */position: absolute; z-index: 1;}
-
-
-
-.left__form-container .title__form-contact h3 {
+.right__form-question_title h4 {
+    font-size: 18px;
+    line-height: 17px;
+    color: rgb(117,149,241);
+    font-family: "DSIDE-Bold", sans-serif;
+    font-weight: bold;
+}#google__maps-container{position: relative; z-index: -1;}.question__form p{font-family:'DSIDE-Light';font-size: 18px;}
+    .title__drop h3 {
+        margin: 0;
+        color: #000000;
+        font-family: 'DSIDE-Bold', sans-serif;
+        font-size: 20px;
+    }.blacked{color: #000;}
+    .left__form-container .title__form-contact h3 {
+    display: none;
     margin: 0;
     font-size: 26px;
     line-height: 17px;
@@ -47,37 +21,53 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f5', end
     font-family: "DSIDE-Bold", sans-serif;
     font-weight: bold;
 }
+.right__form_phone h2 {
+    font-size: 40px;
+    color: rgb(255,255,255);
+    font-family: "DSIDE-Bold", sans-serif;
+    font-weight: bold;
+}
+.right__form_phone h3 {
+    font-size: 20px;
+    color: rgb(255,255,255);
+    font-family: "DSIDE-Bold", sans-serif;
+    font-weight: bold;
+}
 
-
-.left__form-container .title__form-contact {
-    margin-top: 20px;
-    margin-bottom: 25px;
+.right__form_street h4 {
+    font-size: 18px;
+    line-height: 17px;
+    color: rgb(117,149,241);
+    font-family: "DSIDE-Bold", sans-serif;
+    font-weight: bold;
+}
+.right__form-container {
+    background: url('./Layer 106.png');
+    transition: background 1000ms linear;
+    background-size: cover;
+    padding: 2rem 2.4rem;
+    background-repeat: no-repeat;
+}
+.contact-us__form_container {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
 }
-
-.blacked{color: #000;}
-
-.left__form-container .contactus__form_active {
-    padding-bottom: 13%;
+.background__contactus {
+    margin: 0 auto;
+    width: 100%;
+    background: #F3F3F5;
 }
-
-    .shining-underline-cf input{border-bottom: 1px solid #d0d1d2; line-height: 1.2rem; padding-left: 5px; font-size: .8rem;}
-    .shining-underline-cf input:invalid:not(:focus){border-color: #d0d1d2;}
-    .shining-underline-cf input:focus { border-color: #000000;  transition: all .1s ease-in; background: #f0edec !important; position: relative; z-index: 2; }
-    .shining-underline-cf input:valid{border-color: rgba(0, 0, 0, 0.83);}
-    .shining-underline-cf input:valid{background: #f0edec  url('../../sources/images/works__logo/check.svg') no-repeat scroll 240px 0px !important; transition: all 0s;}
-    .golden{ background-image: linear-gradient(to right, #d99b91 0%, #ad6f59 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;}
-    .title__drop h3 {
-        margin: 0;
-        color: #000000;
-        font-family: 'DSIDE-Bold', sans-serif;
-        font-size: 20px;
-    }
-    .inputs__send {
+.left__form-container {
+    background: white;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+        display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+} .inputs__send {
         display: flex;
         flex-direction: column;
     }
@@ -88,7 +78,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f5', end
         display: flex;
         position: relative
     }
-    .clients__form{transform: translateY(-40px); padding-bottom: 5rem;}
+    .clients__form{ padding-bottom: 5rem;}
     #name,
     #phone {
         margin-right: 0;
@@ -117,6 +107,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f5', end
         font-size: 50px;
     }
 
+    .shining-underline-cf input{border-bottom: 1px solid #d0d1d2; line-height: 1.2rem; padding-left: 5px; font-size: .8rem;}
+    .shining-underline-cf input:invalid:not(:focus){border-color: #d0d1d2;}
+    .shining-underline-cf input:focus { border-color: #000000;  transition: all .1s ease-in; background: #f0edec !important; position: relative; z-index: 2; }
+    .shining-underline-cf input:valid{border-color: rgba(0, 0, 0, 0.83);}
+    .shining-underline-cf input:valid{background: #f0edec  url('../../sources/images/works__logo/check.svg') no-repeat scroll 240px 0px !important; transition: all 0s;}
+    .golden{ background-image: linear-gradient(to right, #d99b91 0%, #ad6f59 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;}
     .shining-underline-cf {
     position: relative;
     max-width: 100%;
@@ -159,41 +158,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f5', end
         -o-transition: transform 0.48s cubic-bezier(0.7, 0.3, 0, 1);
         transition: transform 0.48s cubic-bezier(0.7, 0.3, 0, 1);
         transition: transform 0.48s cubic-bezier(0.7, 0.3, 0, 1), -webkit-transform 0.48s cubic-bezier(0.7, 0.3, 0, 1); }
-  .dside__send {
-    height: 60px;
-    display: flex;
-    background: transparent;
-    border: none;
-    position: relative;
-      cursor: pointer;
-      margin-top: 2rem;
-      outline: none;
-}
 
-
-.right__form-container {
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 75px;
-}
-
-
-
-.right__form-question_title h4 {
-    font-size: 18px;
-    line-height: 17px;
-    color: rgb(117,149,241);
-    font-family: "DSIDE-Bold", sans-serif;
-    font-weight: bold;
-}
-
-.right__form_phone h2 {
-    font-size: 40px;
-    color: rgb(255,255,255);
-    font-family: "DSIDE-Bold", sans-serif;
-    font-weight: bold;
-}
-.question__form p{font-size: 18px;}
 
 button.contact__btn-send {
     margin: 0 auto;
@@ -237,20 +202,83 @@ button.contact__btn-send {
     -webkit-animation: flash .7s forwards linear .16s;
     animation: flash .7s forwards linear .16s;
 }
-.right__form_phone h3 {
-    font-size: 20px;
-    color: rgb(255,255,255);
-    font-family: "DSIDE-Bold", sans-serif;
-    font-weight: bold;
+  .dside__send {
+    height: 30px;
+    display: flex;
+    background: transparent;
+    border: none;
+    position: relative;
+    margin-bottom: 2rem;
+      cursor: pointer;
+      outline: none;
 }
 
-.right__form_street h4 {
-    font-size: 18px;
-    line-height: 17px;
-    color: rgb(117,149,241);
-    font-family: "DSIDE-Bold", sans-serif;
-    font-weight: bold;
+.footer__copyright {
+    display: flex;
+    font-family: 'DSIDE-Light';
+    padding: .4rem 2rem;
+    justify-content: space-between;
 }
+/*Fullscreen*/
+@media screen and (min-width: 1440px) {
+    .background__contactus {
+    width: 1200px;
+    margin: 0 auto;
+    background: #F3F3F5;
+    transform: translateY(-60px);
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.contact-us__form_container {
+    display: flex;
+    justify-content: center;
+}
+
+.left__form-container {
+    background: white;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 75px;
+    width: 800px;
+}
+
+.right__form-container {
+    background: url('./Layer 106.png');
+}
+#google__maps-container::before{content: ''; display: block;
+    width:100%; height: 150px;/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3f3f5+19,ffffff+99&1+19,0+99 */
+background: -moz-linear-gradient(top, rgba(243,243,245,1) 19%, rgba(255,255,255,0) 99%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(243,243,245,1) 19%,rgba(255,255,255,0) 99%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(243,243,245,1) 19%,rgba(255,255,255,0) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f5', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */position: absolute; z-index: 1;}
+
+
+
+
+
+.left__form-container .title__form-contact {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.left__form-container .contactus__form_active {
+    padding-bottom: 13%;
+}
+
+.right__form-container {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 75px;
+}
+
+
 
 .service__contact input:focus {
     background: none
@@ -304,4 +332,5 @@ button.contact__btn-send {
     display: flex;
     margin-top: 2rem;
     width: 35%;
+}
 }

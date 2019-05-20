@@ -94,8 +94,8 @@
     }
 
     .dside__what-content {
-        flex: 1 1 100%;
-        padding: 2rem 3rem;
+        flex: 1 1 auto;
+        padding: 2rem 1.2rem;
     }
 
     .dside__what-about {
@@ -104,7 +104,7 @@
     }
 
     .about__company-dside {
-        max-width: 85%;
+        max-width: 100%;
     }
     .dside__shahmat-img {
         position: absolute;

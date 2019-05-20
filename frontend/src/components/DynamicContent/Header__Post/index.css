@@ -49,7 +49,7 @@ figure.effect-marley h2 {
     font-size: 26px;
     -webkit-transform: translate3d(0,20px,0);
     transform: translate3d(0,20px,0);
-    opacity: 0;
+    opacity: 1;
 }
 figure.effect-marley span {
     color: #fff;
@@ -96,7 +96,7 @@ figure.effect-marley figcaption {
 figure.effect-marley h2::after,
 figure.effect-marley p,
 figure.effect-marley span {
-    opacity: 0;
+    opacity: 1;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
 }
@@ -105,9 +105,8 @@ figure.effect-marley span {
 
 .grid figure figcaption {
     padding: 60px 60px 30px;
-    color: #fff;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
 }
 
 .grid figure figcaption::before,
