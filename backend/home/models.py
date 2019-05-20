@@ -24,9 +24,9 @@ def request_handler(sender, instance, **kwargs):
     bot = telegram.Bot(token=BOT_TOKEN)
 
     text = """
-🔥Новый Заказ!
-Отправил: {name}
-Телефон: {phone}
+🔥Вот это заявочка!
+От: {name}
+Звонить: {phone}
 
 """.format(name=instance.name, phone=instance.phone,
            )
