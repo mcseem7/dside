@@ -9,7 +9,9 @@
         font-weight: 300;
     }
 
-
+.container__about-content{     padding: 2rem 2rem 23rem 2rem;
+    background-size: 450px;
+    font-family: 'DSIDE-Light',sans-serif;}
 /* Tablets */
 
 @media only screen and (min-width: 480px) {

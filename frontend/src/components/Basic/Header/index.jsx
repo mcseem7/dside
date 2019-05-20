@@ -10,6 +10,7 @@ import OrderPoppup from "../../../HOC/OrderPopup/index";
 import Translate from "translate-components";
 import { compose } from "recompose";
 import withDsideApi from "../../../HOC/Fetch";
+import HeaderMenu from "./HeaderMenu";
 import fire from './fire.gif'
 import "./animate.css";
 var LangEN = EN;
@@ -20,16 +21,31 @@ class Header extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      opacity: 0,
+      display: "none",
       modalActiveOrder: false,
-      isToggled: false
+      isToggled: false,
+      isToggledd: false
     };
     this.handleClicker = this.handleClicker.bind(this);
   }
+
   componentDidMount() {
   localStorage.setItem('lang', this.state.lang)
   this.setState({lang: localStorage.getItem('lang')})
   reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
   };
+    showMenu = () => {
+       if (this.state.opacity == 1) {
+           this.change = setTimeout( () => {
+         this.setState({ opacity: 0, display: "none" });
+                  }, 250);
+         this.setState({ isToggledd: true });
+       } else {
+            this.setState({ opacity: 1, display: "block" });
+         this.setState({ isToggledd: false });
+       }
+     }
 
   componentWillMount() {
       this.setState({lang: localStorage.getItem('lang')})
@@ -301,7 +317,17 @@ class Header extends Component {
 
                 <div className="check__work-sockets">
                   <div className="check__work" onClick={this.showMenu}>
-                    <img src={GridIcon} alt="" width="15" />
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+	 viewBox="0 0 492.8 312.7" width="20" height="20">
+<style type="text/css">
+</style>
+<circle id="XMLID_1_" class="st0" cx="59.2" cy="58.2" r="54.2"/>
+<circle id="XMLID_3_" class="st0" cx="243.6" cy="58.2" r="54.2"/>
+<circle id="XMLID_4_" class="st0" cx="59.2" cy="255.1" r="54.2"/>
+<circle id="XMLID_2_" class="st0" cx="243.6" cy="255.1" r="54.2"/>
+<circle id="XMLID_7_" class="st0" cx="433.3" cy="58.4" r="54.2"/>
+<circle id="XMLID_5_" class="st0" cx="433.3" cy="255.3" r="54.2"/>
+</svg>
                   </div>
                 </div>
               </div>
@@ -310,7 +336,12 @@ class Header extends Component {
         </header>
 </div>
 
-        
+         {<HeaderMenu
+        {...this.state}
+         handleShowMenu={this.showMenu}
+         handleChangePoppupGrade={this.changePoppupGrade}
+         {...this.props} />}
+
           <OrderPoppup modalStatus={this.state.modalActiveOrder} onClose={this.changePoppup} />
        
       </div>

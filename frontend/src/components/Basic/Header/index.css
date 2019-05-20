@@ -31,19 +31,9 @@
     top: 30px;
     position: absolute;
 }
-
-.grade_img-today img {
-    width: 100px;
-}
-
-.grade_img-today {
-    margin-left: 10px;
-}
-
-.grades__titles {
-    display: flex;
-}
-
+.mid__content-logo, .langcode{display: none;}
+.dark .mainnav li a, .dark .mainnav li{color: #fff;}
+.dark .st0{fill: #fff;}
 .add__work_plus::before,
 .add__work_plus::after,
 .social__icon-instagram::before,
@@ -142,7 +132,7 @@
 
 .social__icon-behance {
     cursor: pointer;
-} 
+}
 .basic__header-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -165,6 +155,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 2rem;
 }
 
 .header__container {
@@ -178,14 +169,15 @@
 }
 
 
-.main__header {
+    .main__header {
         background-color: #f3f3f5;
         width: 100%;
         position: fixed;
         top: 0;
-        animation: showNav 250ms ease-in-out 0s 1 normal both running;
+        animation: showNav 250ms ease-in-out 150ms 1 normal both running;
         z-index: 1;
     }
+    .toggleout {animation: hideNav 250ms ease-in-out 0ms 1 normal both running;}
 
     .main__header-left {
         display: flex;
@@ -229,15 +221,27 @@
     }
     .link__menu:hover ~ .description__menu-title p{transform: translateY(-4px); color: #000; transition: all .3s ease-out}
 
-
+    .menu__header-item{margin-top: 40px;}
+    .close{position: absolute; right: 1.8rem; top: 2rem;}
+    .menu__header-item-logo{margin-top: 20px;}
+    .menu__header-item ul {display: flex; flex-direction: row; align-items: center;
+    width: 100%;
+    align-content: space-between;
+    justify-content: center;
+    justify-items: center;
+    padding: 0;
+    margin: 0;}
+    .menu__header-item ul li {list-style: none; flex: 1 1 33%;}
+    .menu__header-item ul li img{width: 40px; padding: 0.7rem;}
     .main__header-content {
         max-width: 1200px;
         margin: 0 auto;
+        height:100vh;
         display: flex;
     }
 
-    .menu__header-item:first-child {
-        margin-bottom: 60px;
+    .menu__header-column {
+        margin-top: 30px;
     }
     .menu__header-column{text-align: center;}
     .menu__header-column div {
@@ -246,10 +250,22 @@
 
     @keyframes showNav {
         from {
+            transform: translateY(-5px);
             opacity: 0;
         }
         to {
             opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes hideNav {
+        from {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        to {
+            opacity: 0;
+            transform: translateY(-5px);
         }
     }
 
@@ -274,7 +290,7 @@
 
 /* Tablets */
 @media screen and (min-width: 480px)   {
-   
+
 
 
     .shining-underline {
@@ -292,7 +308,7 @@
     }
 
     .more__about-button a .shining-underline span:nth-child(2) {
-        bottom: -2px;    
+        bottom: -2px;
     }
 
     .shining-underline span:nth-child(2):before {
@@ -364,8 +380,10 @@
     .header__content {
     }
 }
+
 /* Fullscreen */
 @media only screen and (min-width: 1024px) {
+ .mid__content-logo, .langcode{display: flex;}
   .mainnav ul {
     font-family: 'DSIDE-Light',sans-serif;
     list-style: none;
@@ -385,8 +403,6 @@
 .mainnav li a, .mainnav li{
   color: #000;
 }
-.dark .mainnav li a, .dark .mainnav li{color: #fff;}
-.dark .st0{fill: #fff;}
 .mainnav li:hover {
     cursor: pointer;
 }
@@ -422,12 +438,12 @@
         position: relative;
     }
 
-    
-    
+
+
     .wrapper__main-head img {
         max-width: 100%;
     }
-    
+
     .main__left-container {
         display: flex;
         width: 100%;
@@ -497,28 +513,12 @@
     opacity: 0.25;
 }
 
-@media screen and (max-width: 768px){
-  
-    .main__header-left {
-        padding-bottom: 0;
-    }
-
-    .header__content .right__content-socials .social__icons {
-        display: none;
-    }
-}
-
-
-
-
-@media screen and (max-width: 1024px) {
     .header__content .right__content-socials .social__icons {
         display: none;
     }
     img {
         max-width: 100%;
     }
-}
  .langcode ul {
     font-family: 'DSIDE-Light',sans-serif;
     list-style: none;
@@ -569,55 +569,7 @@
     margin: 0.5rem .36rem;
     padding: 0;
 }
-.dside__grades-container {
-    position: absolute;
-    top: 0;
-    width:100%;
-}
 
-.grades__titles {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
-.dside__grades-container h3 {
-    font-size: 20px;
-    color: #ffffff;
-    font-family: 'DSIDE-Bold',sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.head-grade__img img{
-    height: 45px;
-    width: 70px;
-}
-
-.head-grade__date p {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    font-family: 'DSIDE-Bold', sans-serif;
-    font-size: 14px;
-    color: #fff;
-}
-/* .head-grade__img img {
-    border-radius: 15%;
-} */
-
-.grades__head-items {
-    display: flex;
-    justify-content: flex-end;
-    height: 155px;
-    align-items: center
-}
-
-.grade__head-item {
-    margin-right: 20px;
-    margin-left: 10px;
-}
 .ordernow{margin-left:20px;}
 .ordernow::before{    content: '';
     display: inline-block;
@@ -631,62 +583,6 @@
     -moz-animation: flash 0.7s forwards linear 0.16s;
     animation: flash 0.7s forwards linear 0.16s;}
 .ordernowshine{bottom: -2px !important;}
-.head-grade__img img:hover {
-    border: 4px solid #bd1824;
-    transition: 0.5s;
-    cursor: pointer;
-    box-sizing: border-box;
-}
-
-.add__grade-svg svg {
-    fill: #d99b91;
-    width: 22px;
-    height: 22px;
-    cursor: pointer;
-    margin-left: 30px;
-    transition: all .3s ease-out;
-}
-.add__grade-svg svg:hover {transform: scale(1.06); -webkit-animation: flash 0.7s forwards linear 0.16s;
-    -moz-animation: flash 0.7s forwards linear 0.16s;
-    animation: flash 0.7s forwards linear 0.16s; }
 .heading__service {
     z-index: 1;
-}
-
-@media screen and (max-width: 768px) {
-    .main__header-content {
-        flex-direction: column
-    }
-
-   .grades__head-items {
-       height: 120px;
-   }
-
-    .menu__header-item:first-child {
-        margin-bottom: 0;
-    }
-
-    .menu__header-column div {
-        margin: 15px;
-    }
-
-    .dside__grades-container {
-        top: 0;
-    }
-
-    .wrapper__main-head {
-            background: #ac0007;
-    }
-
-    .wrapper__main-head > img {
-        margin-bottom: -3.3px;
-    }
-
-    .main__header-left {
-        order: 1;
-    }
-
-    .grades__titles {
-        margin-top: 20px;
-    }
 }

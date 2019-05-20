@@ -74,45 +74,13 @@
 /* Fullpage */
 
 @media only screen and (min-width: 1440px) {
-.dside_textContainer-website .logo__service_slogan{font-size: 2.6rem; max-width: 100%;}
-    .logo__service-img_website {
-    position: absolute;
-    margin-top: -10px;
-}
-}
-
-@media screen and (max-width: 768px){
-    .logo__service-img_website {
-        margin-top: 135px;
-    }
-
     .dside_textContainer-website .logo__service_slogan {
-        top: 135px;
-        font-size: 1.5rem;
+        font-size: 2.6rem;
+        max-width: 100%;
     }
-}
 
-@media screen and (max-width: 480px){
     .logo__service-img_website {
-        top: 70px;
+        position: absolute;
+        margin-top: -10px;
     }
-}
-
-
-.golden_title span { 
-    background-image: linear-gradient(to right, #d99b91 0%, #ad6f59 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline;
-}
-
-.comp-h-left {
-    max-width: 165px;
-    text-align: right;
-}
-
-.comp-h-right {
-    max-width: 200px;
-    text-align: left;
 }

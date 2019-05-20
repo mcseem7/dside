@@ -80,39 +80,3 @@
     margin-top: -10px;
 }
 }
-
-@media screen and (max-width: 768px){
-    .logo__service-img_ecommerce {
-        margin-top: 135px;
-    }
-
-    .dside_textContainer-ecommerce .logo__service_slogan {
-        top: 135px;
-        font-size: 1.5rem;
-    }
-}
-
-@media screen and (max-width: 480px){
-    .logo__service-img_ecommerce {
-        top: 70px;
-    }
-}
-
-
-.golden_title span { 
-    background-image: linear-gradient(to right, #d99b91 0%, #ad6f59 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline;
-}
-
-.comp-h-left {
-    max-width: 165px;
-    text-align: right;
-}
-
-.comp-h-right {
-    max-width: 200px;
-    text-align: left;
-}

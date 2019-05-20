@@ -108,29 +108,3 @@
     margin-left: 15px;
     cursor: pointer;
 }
-
-@media screen and (max-width: 1024px) {
-    .sorting__items-container {
-        flex-direction: column;
-    }
-}
-
-
-@media screen and (max-width: 768px) {
-.portfolio-category__item {
-    margin-right: 40px;
-}
-}
-
-
-
-@media screen and (max-width:480px) {
-.portfolio__items-container {
-    flex-direction: column;
-}
-
-.portfolio-category__list {
-    flex-direction: column;
-}
-
-}

@@ -19,16 +19,14 @@
     margin: 0;
 }
 
-.portolio__post {
-    margin-bottom: -22px;
+
+.grid {
+    position: relative;
+    list-style: none;
+    text-align: center;
+    flex: 1 0 33.33%;
+    max-width: 33.33%;
 }
-
-figure.effect-marley figcaption {
-    text-align: right;
-    transition: all 0.35s;
-}
-
-
 figure.effect-marley p {
     right: 220px;
     bottom: 150px;
@@ -66,31 +64,6 @@ figure.effect-marley span {
     transform: translate3d(0,10px,0);
     opacity: 0;
 }
-.case-service {
-    flex-wrap: wrap;
-}
-
-
-
-
-figure.effect-marley h2::after,
-figure.effect-marley p,
-figure.effect-marley span {
-    opacity: 0;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s;
-}
-
-
-
-.grid {
-    position: relative;
-    list-style: none;
-    text-align: center;
-    flex: 1 0 33.33%;
-    max-width: 33.33%;
-}
-
 
 .grid figure {
     position: relative;
@@ -111,6 +84,24 @@ figure.effect-marley span {
     min-height: 264px;
     transform: scale(1.1);
 }
+.portolio__post {
+    margin-bottom: -22px;
+}
+
+figure.effect-marley figcaption {
+    text-align: right;
+    transition: all 0.35s;
+}
+
+figure.effect-marley h2::after,
+figure.effect-marley p,
+figure.effect-marley span {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+
 
 .grid figure figcaption {
     padding: 60px 60px 30px;
@@ -135,8 +126,6 @@ figure.effect-marley span {
     flex-direction: column;
 }
 
-/* Anchor will cover the whole item by default */
-/* For some effects it will show as a button */
 .grid figure figcaption > a {
     z-index: 1000;
     text-indent: 0%;
@@ -183,7 +172,9 @@ figure.effect-marley span {
 }
 
 
-
+.case-service {
+    flex-wrap: wrap;
+}
 
 
 .grid figure h2 {
@@ -211,6 +202,12 @@ figure.effect-marley span {
 .grid figure p {
     letter-spacing: 1px;
 }
+.content__posts .grid{    flex: 1 1 100%;}
+.grid{max-width: 100%;}
+
+
+/*Fullscreen*/
+@media screen and (min-width: 1440px) {
 
 
 
@@ -309,12 +306,6 @@ figure.effect-marley:active span {
 }
 
 
-@media screen and (max-width: 480px) {
-    .block__load__more {
-        display: none
-    }
 
-    .container__what {
-        height: 35px;
-    }
+
 }

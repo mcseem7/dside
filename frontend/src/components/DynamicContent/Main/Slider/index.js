@@ -13,6 +13,7 @@ import Slider from "react-slick";
       dots: true,
       infinite: true,
       speed: 500,
+      arrows: false,
       fade: true,
       autoplay: true,
       autoplaySpeed: 6000,
