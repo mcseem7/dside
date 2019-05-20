@@ -1,20 +1,15 @@
 import React, { Component, Fragment } from 'react'
 import './index.css'
-import gridIcon from './grid-icon.svg'
-import { Link } from 'react-router-dom'
-import BlogItem from '../BlogItem'
 import withDsideApi from "../../../HOC/Fetch";
 import { withRouter } from 'react-router-dom'
-import { compose, branch, renderComponent } from 'recompose'
+import { compose } from 'recompose'
 import PropTypes from "prop-types";
-import subscribe from './subscriber.png'
 import Translate from 'translate-components'
-import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
+import { reactTranslateChangeLanguage } from "translate-components";
 import SuggestPoppup from "../../../HOC/SuggestPoppup";
 import canvasAnimate from './canvasAnimate'
 import Helmet from 'react-helmet-async'
 import Footer from '../../Basic/Footer';
-import Header from '../../Basic/Header';
 
 
 class Blog extends Component {
@@ -70,8 +65,8 @@ class Blog extends Component {
       <section className="blog__container page-centered">
         <div className="blog__content">
           <div className="blog__post-items">
-            {this.props.dataDside.length == 0 ? <div className='progress'> <Translate>Loading</Translate>...</div> : this.props.dataDside.map((item, key) => {
-             if (this.props.dataDside.length === key + 1) { 
+            {this.props.dataDside.length === 0 ? <div className='progress'> <Translate>Loading</Translate>...</div> : this.props.dataDside.map((item, key) => {
+             if (this.props.dataDside.length === key + 1) {
               return (  <div className="blog__item" style={{backgroundImage: `url(${process.env.REACT_APP_DOMAIN}${item.main_image})` }}>
               <div onClick={() => {
                   history.push({
@@ -125,7 +120,7 @@ class Blog extends Component {
 
             <div className="latest__post-content">
               {this.props.dataDside.map((item, key) => {
-             if (this.props.dataDside.length != key + 1) { 
+             if (this.props.dataDside.length !== key + 1) {
               return (<div className="latest-post" onClick={() => {
                   history.push({
                     pathname: `/${location.pathname.substr(1,2)}/blog/${item.base_name}`,

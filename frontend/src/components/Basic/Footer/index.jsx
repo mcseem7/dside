@@ -1,14 +1,11 @@
 import React, { Component } from 'react'
 import './index.css'
-import arrow from '../../sources/images/works__logo/arrow.svg'
 import withDsideApi from '../../../HOC/Fetch'
-
 import OrderPoppup from "../../../HOC/OrderPopup/index";
-import withPoppupHOC from "../../../HOC/Poppup";
 import  Translate  from "translate-components";
 import  LogoRed  from './dsideLogo.svg';
 import  Arrow  from './arrow.svg';
-import { NavLink, Link, withRouter } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import ScrollAnimation from 'react-animate-on-scroll'
 
 class Footer extends Component {
@@ -155,9 +152,9 @@ class Footer extends Component {
                         </p>
                         <p>
                           <div className="social__icons">
-              <a href='http://dishots.com/u/DSIDE' target="_blank" className="social__icon-behance">
+              <a href='http://dishots.com/u/DSIDE' target="_blank" rel="noopener noreferrer" className="social__icon-behance">
               </a>
-              <a href='http://instagram.com/dsidepl' target="_blank" className="social__icon-instagram">
+              <a href='http://instagram.com/dsidepl' target="_blank" rel="noopener noreferrer" className="social__icon-instagram">
               </a>
             </div>
                         </p>

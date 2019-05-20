@@ -4,17 +4,13 @@ import { matchPath } from "react-router";
 import withLanguage from "../../../HOC/withLanguage";
 import withDsideApi from "../../../HOC/Fetch/index";
 import { compose } from "recompose";
-import grades from "./index.css";
-import gradeReview from "./grade__review.png";
 import { FacebookProvider, Comments } from "react-facebook";
 import moment from "moment";
-import arrow from "./arrow.png";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import Carousel from "./carousel";
 import ItemModal from "./ItemModal";
 import Helmet from "react-helmet-async";
 import Footer from "../../Basic/Footer";
-import Header from "../../Basic/Header";
 import Loader from "react-loader-spinner";
 import { DiscussionEmbed } from "disqus-react";
 

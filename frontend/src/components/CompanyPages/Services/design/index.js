@@ -1,12 +1,9 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import CaseService from '../serviceComponents/CaseService/index'
 import './index.css'
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
 import withDsideApi from "../../../../HOC/Fetch";
-import { HeroVideo } from "react-hero-video";
-import Translate, { reactTranslateChangeLanguage } from "translate-components";
 import Footer from '../../../Basic/Footer'
-import Header from '../../../Basic/Header'
 import Helmet from 'react-helmet-async'
 import Slider from 'react-slick'
 

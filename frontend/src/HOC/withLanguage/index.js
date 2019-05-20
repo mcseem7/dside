@@ -18,10 +18,10 @@ function withLanguage(Language) {
 
 
         render() {
-            let getActive = ['en', 'pl', 'ru', 'cz'].filter((item) => {
+            let getActive = ['en', 'pl', 'ru'].filter((item) => {
                 return item == this.state.lang
             })
-            
+
             return(
                 <div>
                     <Language activeLang={getActive} language={this.state.lang} {...this.props} />

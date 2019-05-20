@@ -1,7 +1,6 @@
 import React, {Component, Fragment} from 'react'
-import { CarouselProvider, CarouselInjectedProps, Slider, Slide, ButtonBack, ButtonNext, Image, WithStore } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide, Image, WithStore } from 'pure-react-carousel';
 import moment from 'moment'
-import Review from './grade__review.png'
 
 class Carousel  extends Component {
     constructor() {

@@ -6,8 +6,7 @@ export const portfolio = [
     {
         path: [
             `/en/portfolio`, 
-            `/ru/portfolio`, 
-            `/cz/portfolio`, 
+            `/ru/portfolio`,
             `/pl/portfolio` 
              ],
         exact: true,
@@ -16,8 +15,7 @@ export const portfolio = [
     {
         path: [
             '/en/portfolio/:portfolioitem', 
-            `/ru/portfolio/:portfolioitem`, 
-            `/cz/portfolio/:portfolioitem`, 
+            `/ru/portfolio/:portfolioitem`,
             `/pl/portfolio/:portfolioitem` 
              ],
         exact: true,

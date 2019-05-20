@@ -7,11 +7,6 @@ import Nimb from '../../sources/images/works__logo/nimb-saver.svg'
 import Translate from "translate-components";
 
 export default class Advantages extends Component {
-    constructor() {
-        super()
-
-
-    }
 
     componentDidMount() {
         window.scrollTo(0, 0)
@@ -27,7 +22,7 @@ export default class Advantages extends Component {
                       <h3><Translate>Pure advantages of DSIDE</Translate></h3>
                         <div className="advantages-container">
                             <div className="advantage">
-                                <img className="adv-icon" src={Nimb}/>
+                                <img className="adv-icon" src={Nimb} alt=""/>
                                 <div className="advantage-heading">
                                   <Translate>Accurate meeting deadlines</Translate>
                                 </div>
@@ -37,7 +32,7 @@ export default class Advantages extends Component {
                             </div>
 
                             <div className="advantage">
-                                <img className="adv-icon"  src={Eye}/>
+                                <img className="adv-icon"  src={Eye} alt=""/>
                                 <div className="advantage-heading">
                                   <Translate>You can watch the process</Translate>
                                 </div>
@@ -47,7 +42,7 @@ export default class Advantages extends Component {
                             </div>
 
                             <div className="advantage">
-                                <img className="adv-icon"  src={Five} />
+                                <img className="adv-icon"  src={Five} alt=""/>
                                 <div className="advantage-heading">
                                   <Translate>Highest experienced team</Translate>
                                 </div>
@@ -57,7 +52,7 @@ export default class Advantages extends Component {
                             </div>
 
                             <div className="advantage">
-                                <img className="adv-icon"  src={HQ}/>
+                                <img className="adv-icon"  src={HQ} alt=""/>
                               <div className="advantage-heading"><Translate>Highest quality products</Translate>
                                 </div>
                                 <div className="advantage-text">

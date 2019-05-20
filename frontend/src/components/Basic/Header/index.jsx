@@ -1,62 +1,67 @@
 import React, { Component } from "react";
 import "./index.css";
 import GridIcon from "./grid_img.svg";
-import PlusIcon from "./plus.svg";
-import Logo from "./Logo.svg";
 import EN from "./uk.svg";
 import PL from "./poland.svg";
 import RU from "./russia.svg";
-import { NavLink, Link, withRouter } from "react-router-dom";
+import { reactTranslateChangeLanguage } from "translate-components";
+import { NavLink, withRouter } from "react-router-dom";
 import OrderPoppup from "../../../HOC/OrderPopup/index";
-import GradePoppup from "../../../HOC/GradePopup/index";
 import Translate from "translate-components";
-import withPoppupHOC from "../../../HOC/Poppup";
-import withLanguage from "../../../HOC/withLanguage";
-import homeDside from "./homeDside.png";
 import { compose } from "recompose";
 import withDsideApi from "../../../HOC/Fetch";
-import moment from 'moment'
-import HeaderMenu from "./HeaderMenu";
 import fire from './fire.gif'
 import "./animate.css";
-
+var LangEN = EN;
+var LangRU = RU;
+var LangPL = PL;
 
 class Header extends Component {
   constructor(props) {
     super(props)
     this.state = {
       modalActiveOrder: false,
-      modalActiveGrade: false,
-      lang: ""
+      isToggled: false
     };
+    this.handleClicker = this.handleClicker.bind(this);
   }
   componentDidMount() {
-      this.setState({lang: localStorage.getItem('lang')});
-  }
-  showMenu = () => {
-    if (this.state.opacity == 1) {
-      this.setState({ opacity: 0, display: "none" });
-    } else {
-      this.setState({ opacity: 1, display: "block" });
-    }
+  localStorage.setItem('lang', this.state.lang)
+  this.setState({lang: localStorage.getItem('lang')})
+  reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
   };
-  alreadyUpdate = (data) => {
-    const {location} = this.props
-    localStorage.setItem('lang', `${data}`)
-    this.props.history.push(`/${data + location.pathname.substr(3)}`)
+
+  componentWillMount() {
+      this.setState({lang: localStorage.getItem('lang')})
+      reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
   }
+  handleClicker(e) {
+    this.setState({isToggled: !this.state.isToggled});
+  }
+  alreadyUpdate = (data) => {
+      const {location} = this.props;
+      localStorage.setItem('lang', `${data}`);
+      this.props.history.push(`/${data + location.pathname.substr(3)}`);
+      this.setState({lang: localStorage.getItem('lang')});
+          console.log('Setting Lang', `${data}`);
+  };
   changePoppup = () => {
     this.setState({ modalActiveOrder: !this.state.modalActiveOrder });
   };
-  changePoppupGrade = () => {
-    this.setState({ modalActiveGrade: !this.state.modalActiveGrade });
-  }
-
   render() {
-    const {history, location} = this.props;
-    const langClass = (route) => { return ('/' + this.props.language + location.pathname.substr(3)) === (route + location.pathname.substr(3)) ? "active" : null; }
-      {/* console.log('Header tester', langClass); */}
-    return (
+    const {location} = this.props;
+    const langClass = (route) => { return ('/' + this.state.lang + location.pathname.substr(3)) === (route + location.pathname.substr(3)) ? "active" : null }
+      if (this.state.lang === 'en'){
+            var controllerLang = LangEN;
+        } else if (this.state.lang === 'ru'){
+            var controllerLang = LangRU;
+        } else {
+            var controllerLang = LangPL;
+        }
+        console.log(this.state.lang);
+        console.log(this.props.language);
+        console.log('LangStorage', localStorage.getItem('lang'));
+      return (
 
       <div
         className="header__container"
@@ -71,7 +76,7 @@ class Header extends Component {
                 <div className="logo__container">
                   <div className="logo">
                     <NavLink
-                      to={`/${this.props.language}`}
+                      to={`/${this.state.lang}`}
                       className="link link--dside"
                     >
                       <span>
@@ -165,34 +170,40 @@ class Header extends Component {
                     </NavLink>
                   </div>
                 </div>
-                  <div className="langcode">
+                  <div className='langcode'>
                   <ul>
-                  <li className={langClass(`/en`)} >
-
-                         <img src={EN} onClick={() => {
-                      this.alreadyUpdate('en')
-                    }} width="20"/>
+                  <li className={'handleClicker ' + (this.state.isToggled ? 'visible': 'hidden')} onClick={this.handleClicker}><img src={controllerLang} alt=""/>
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+	 viewBox="0 0 1417.3 1417.3" >
+	<g id="XMLID_1_"  >
+		<path className="st0" id="XMLID_22_" d="M1182.6,541.8c13.9,0,27.8,0,41.7,0c46.3,12.7,76.7,42.1,91.7,87.6c0,15.3,0,30.6,0,45.9
+			c-11.5,39.7-39.1,64.9-72.7,87c-147.2,97-293.6,195.2-440.2,293c-63.4,42.3-111.8,42.3-175.1,0c-146.7-97.8-293-196.1-440.2-293.1
+			c-33.6-22.1-61.4-47.1-72.8-86.9c0-15.3,0-30.6,0-45.9c15.1-45.4,45.5-74.8,91.7-87.6c13.9,0,27.8,0,41.7,0
+			c20.4,11.2,41.7,21.1,61,33.8c130.2,86.1,260.1,172.6,389.7,259.6c12.3,8.3,20.4,8.4,32.8,0.1c122-82.1,244.3-163.8,367-244.8
+			C1125.8,572.8,1154.6,558,1182.6,541.8z"/>
+	</g>
+</svg>
+                   <ul className={(this.state.isToggled ? 'visible': 'hidden')}>
+                         <li className={langClass('/en', `${location.pathname.substr(2)}`)} >
+                         <a href={'/en' + `${location.pathname.substr(3)}`}><img alt="" src={EN}/></a>
                    </li>
-                           <li className={langClass(`/ru`)}>
-                          <img src={RU} onClick={() => {
-                      this.alreadyUpdate('ru')
-                    }}  width="20"/>
+                           <li className={langClass('/ru', `${location.pathname.substr(2)}`)}>
+                          <a href={'/ru' + `${location.pathname.substr(3)}`}><img alt="" src={RU}/></a>
                    </li>
-                           <li className={langClass(`/pl`)}>
-                           <img src={PL} onClick={() => {
-                      this.alreadyUpdate('pl')
-                    }}  width="20"/>
-
+                           <li className={langClass('/pl', `${location.pathname.substr(2)}`)}>
+                           <a href={'/pl' + `${location.pathname.substr(3)}`}><img alt="" src={PL}/></a>
                    </li>
+                   </ul></li>
                  </ul>
               </div>
               </div>
               <div className="mid__content-logo">
                 <nav className="mainnav">
                  <ul>
+
                    <li className="shining-underline">
                      <NavLink
-                      to={`/${this.props.language}/portfolio`}
+                      to={`/${this.state.lang}/portfolio`}
                       className="link">
                           <Translate>Projects</Translate>
                        <span className="mainnavshine"></span>
@@ -229,7 +240,7 @@ class Header extends Component {
                    </li>*/}
                    <li className="shining-underline">
                      <NavLink
-                      to={`/${this.props.language}/process`}
+                      to={`/${this.state.lang}/process`}
                       className="link">
                           <Translate>Process</Translate>
                        <span className="mainnavshine"></span>
@@ -237,7 +248,7 @@ class Header extends Component {
                    </li>
                   <li className="shining-underline">
                      <NavLink
-                      to={`/${this.props.language}/aboutus`}
+                      to={`/${this.state.lang}/aboutus`}
                       className="link">
                           <Translate>About</Translate>
                         <span className="mainnavshine"></span>
@@ -245,7 +256,7 @@ class Header extends Component {
                    </li>
                    <li className="shining-underline">
                      <NavLink
-                      to={`/${this.props.language}/contactus`}
+                      to={`/${this.state.lang}/contactus`}
                       className="link">
                           <Translate>Contact Us</Translate>
                        <span className="mainnavshine"></span>
@@ -275,17 +286,17 @@ class Header extends Component {
                   <a
                     href="https://dishots.com/u/DSIDE"
                     className="social__icon-behance"
-                    target="_blank"
-                  />
+                    target="_blank" rel="noopener noreferrer"
+                  > </a>
                   <a
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     href={
-                      this.props.activeLang[0] == "ru"
+                      this.state.lang === "ru"
                         ? "https://www.instagram.com/dside.ru/"
                         : "https://www.instagram.com/dsidepl"
                     }
                     className="social__icon-instagram"
-                  />
+                  > </a>
                 </div>
 
                 <div className="check__work-sockets">
@@ -301,16 +312,12 @@ class Header extends Component {
 
         
           <OrderPoppup modalStatus={this.state.modalActiveOrder} onClose={this.changePoppup} />
-        
-       
-          <GradePoppup modalStatus={this.state.modalActiveGrade} onClose={this.changePoppupGrade} />
        
       </div>
     );
   }
 }
 export default compose(
-  withLanguage,
   withRouter,
   withDsideApi
-)(Header, `/review/getReviewList/`, "GRADE");
+)(Header, `/review/getReviewList/`);

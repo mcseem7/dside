@@ -9,8 +9,7 @@ export const company = [
         path: [
             `/en/contactus`, 
             `/ru/contactus`,
-            `/pl/contactus`,
-            `/cz/contactus`
+            `/pl/contactus`
              ],
         exact: true,
         component: ContactUs
@@ -19,8 +18,7 @@ export const company = [
         path: [
             `/en/aboutus`, 
             `/ru/aboutus`,
-            `/pl/aboutus`,
-            `/cz/aboutus`
+            `/pl/aboutus`
              ],
         exact: true,
         component: About
@@ -29,8 +27,7 @@ export const company = [
         path: [
             `/en/cookies-policy`, 
             `/ru/cookies-policy`,
-            `/pl/cookies-policy`,
-            `/cz/cookies-policy`
+            `/pl/cookies-policy`
              ],
         exact: true,
         component: Cookies
@@ -39,8 +36,7 @@ export const company = [
         path: [
             `/en/process`,
             `/ru/process`,
-            `/pl/process`,
-            `/cz/process`
+            `/pl/process`
              ],
         exact: true,
         component: Process

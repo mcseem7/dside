@@ -1,8 +1,4 @@
-import React, { Component, Fragment } from "react";
-import {
-  reactTranslateChangeLanguage,
-  TranslateProvider
-} from "translate-components";
+import React, { Component } from "react";
 import $ from "jquery";
 import Cookies from 'js-cookie';
 

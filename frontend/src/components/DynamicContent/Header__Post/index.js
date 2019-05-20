@@ -1,18 +1,10 @@
-import React, { Component, Fragment } from "react";
-import PortfolioPost from "./Portfolio__Post";
-import FirstImage from "./images/four__image.png";
-import SecondImage from "./images/thumbs-02.jpg";
-import ThirdImage from "./images/thumbs-03.jpg";
-import FourImage from "./images/thumbs-04.jpg";
-import FiveImage from "./images/thumbs-05.jpg";
-import SixImage from "./images/case_3_d.jpg";
+import React, { Component } from "react";
 import "./index.css";
 import {compose} from 'recompose'
 // import zindex from './images/Header_zIndex.png'
 import withDsideApi from "./../../../HOC/Fetch";
 import PortolioPost from "./Portfolio__Post";
 import {withRouter} from 'react-router-dom'
-import { LangContextConsumer } from "../Main";
 import withLanguage from "../../../HOC/withLanguage";
 
 class HeaderPost extends Component {

@@ -1,17 +1,13 @@
 import React, { Component } from 'react'
-import {Link, withRouter} from 'react-router-dom'
+import { withRouter} from 'react-router-dom'
 import './index.css'
 import './slick/slick.css';
 import './slick/slick-theme.css';
-import {reactTranslateChangeLanguage} from "translate-components";
 import Translate from 'translate-components'
 import Slider from "react-slick";
 
  class SimpleSlider extends Component  {
 
-    constructor(props) {
-        super(props)
-    }
     render() {
     const settings = {
       dots: true,

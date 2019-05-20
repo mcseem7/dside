@@ -1,6 +1,6 @@
-import React, {Component, Fragment} from 'react'
+import React, {Fragment} from 'react'
 import './index.css'
-import Translate, { reactTranslateChangeLanguage } from "translate-components";
+import Translate from "translate-components";
 import PortolioPost from "../../../../DynamicContent/Header__Post/Portfolio__Post";
 
 function CaseService(props) {

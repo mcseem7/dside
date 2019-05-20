@@ -1,22 +1,15 @@
 import React, { Component, Fragment } from 'react'
 import './index.css'
-import logoProject from './rounded-rectangle-10.png'
-import screenPortfolio from './layer-104.png'
-import screenCitron from './layer-105.png'
-import imgsl from './layer-106-copy.png'
 import arrowNext from './arrow-next.svg'
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
 import { Link, withRouter } from "react-router-dom";
 import Translate, { reactTranslateChangeLanguage } from "translate-components";
-import arrowImg from './arrow.svg'
 import fetch from 'isomorphic-fetch'
 import ScrollAnimation from 'react-animate-on-scroll'
 import withLanguage from '../../../HOC/withLanguage';
 import {compose} from 'recompose'
 import { matchPath } from 'react-router'
 import Footer from '../../Basic/Footer';
-import Header from '../../Basic/Header';
+
 
  class PortfolioItem extends Component {
 
@@ -48,7 +41,7 @@ import Header from '../../Basic/Header';
     })
     await reactTranslateChangeLanguage.bind(this, language)()
     await fetch(`${process.env.REACT_APP_API}/${language}/portfolio/getPortfolioItemDetails/${match.params.portfolioitem}/`).then((response) => {
-      if(response.status != 200) {
+      if(response.status !== 200) {
         return history.push(`/${language}/notfound`)
       } else {
        return response.json()
@@ -62,7 +55,7 @@ import Header from '../../Basic/Header';
       })
     }
     })
-    if(this.state.itemPortfolio.length != 0) {
+    if(this.state.itemPortfolio.length !== 0) {
     await this.setState({
       category: this.state.itemPortfolio.category.name,
       similarItems: this.state.itemPortfolio.similar_items
@@ -161,7 +154,7 @@ import Header from '../../Basic/Header';
               {Object.keys(this.state.attachImg).map((item) => {
                 return (<ScrollAnimation animateIn="slideInUp" animateOnce="True">
                   <div className="portfolio__screen-item">
-                    <img src={`${process.env.REACT_APP_DOMAIN}/${this.state.attachImg[item].content}`} />
+                    <img src={`${process.env.REACT_APP_DOMAIN}/${this.state.attachImg[item].content}`} alt="" />
                   </div></ScrollAnimation>
                 )
               })
@@ -202,14 +195,14 @@ import Header from '../../Basic/Header';
 
 
 
-              {this.state.similarItems.length != 0 ?
+              {this.state.similarItems.length !== 0 ?
                 <div className="portfolio__carousel-title">
               <ScrollAnimation animateIn="slideInUp">
                   <h2><Translate>Did you enjoy</Translate> {this.state.itemPortfolio.name}? <Translate>We have much more fascinationg experience for you</Translate></h2>
                 </ScrollAnimation></div> : null
               }
               <div className="similar">
-              {this.state.similarItems != [] ? Object.values(this.state.similarItems).map((item, key) => {
+              {this.state.similarItems !== [] ? Object.values(this.state.similarItems).map((item, key) => {
       return (
           <Fragment>
           <ScrollAnimation animateIn="slideInUp" animateOnce="True">

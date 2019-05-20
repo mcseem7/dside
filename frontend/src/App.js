@@ -1,32 +1,16 @@
 import React, { Component, Fragment, createElement } from "react";
-import Layout from './components'
 import './components/App.css'
-import Footer from './components/Basic/Footer'
-import { BrowserRouter as Router, Link, withRouter, Switch, Route, Redirect } from 'react-router-dom'
-import ContactUs from './components/CompanyPages/ContactUs'
-import MainPages from './components/index'
+import { Link, Switch, Route} from 'react-router-dom'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import Cookies from 'js-cookie'
 import Header from './components/Basic/Header/index';
-import loadable from 'loadable-components';
 import 'regenerator-runtime/runtime';
 import Translate from "translate-components";
-import NotFound from "./components/Basic/NotFound";
-import Blog from './components/DynamicContent/Blog'
-import BlogItem from './components/DynamicContent/BlogItem'
-import PortfolioItem from './components/DynamicContent/PortfolioItem'
-import Portfolio from './components/DynamicContent/Portfolio'
-import AboutUs from './components/DynamicContent/About'
-import Main from "./components/DynamicContent/Main";
 import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
 import translations from './translations.json'
 import clock from './clock.svg'
-import routes from './routes'
-import logoRed from './dsideLogo.svg'
 import Welcome from './Welcome'
-import Helmet from 'react-helmet-async'
 import $ from 'jquery'
-import HeaderService from "./components/CompanyPages/Services/serviceComponents/HeaderService";
 
 
 class App extends Component {
@@ -40,23 +24,19 @@ class App extends Component {
             orientation: false,
             preload: false
         }
-    }
 
+    }
 
     componentWillMount() {
         const getIdentityDomen = this.props.domen
-        if (!getIdentityDomen || getIdentityDomen == '') {
+        if (!getIdentityDomen || getIdentityDomen === '') {
             this.setState({ langPoppup: false })
         }
-       
     }
 
     componentDidMount() {
         window.scrollTo(0, 0)
-
-      this.setState({lang: localStorage.getItem('lang')})
         this.setState({mounted: true})
-        reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
         const spinner = $('#loading');
         if (spinner && !$(spinner).addClass('final_render loaded')) {
           $(spinner).addclass('final_render loaded')
@@ -64,7 +44,7 @@ class App extends Component {
         window.addEventListener("onload", () => {
             this.checkOrient()
         }, false);
-        if (Cookies.get('accept-cookie') == undefined) {
+        if (Cookies.get('accept-cookie') === undefined) {
             this.setState({ cook: true })
         } else {
             this.setState({ cook: false })
@@ -73,7 +53,6 @@ class App extends Component {
             this.checkOrient()
         }, false);
     }
-
     checkOrient = () => {
        
             if (window.matchMedia("(orientation: portrait)").matches) {
@@ -98,22 +77,18 @@ class App extends Component {
    
 
    render()  {
-        function findWord(word, str) {
-            return str.split(' ').some(function (w) { return w === word })
-        }
-        const { routes, initialData } = this.props
-        
-            
-        
+        const { routes, initialData } = this.props;
+        console.log('App Lang', this.state.lang);
+        console.log('App Props', this.props);
         return (
-            <TranslateProvider translations={translations} defaultLanguage={'en'}>
+            <TranslateProvider translations={translations} debugMode={true} defaultLanguage={'en'}>
                 <Fragment>
                     {
                         this.state.orientation ? <Fragment>
                             <div className="stop_rotation">
                                 <div className="stop_rotation_contant_wrapper">
                                     <div className="stop_rotation_content_img_wrapper">
-                                        <img className="stop_rotation_content_img" viewBox="0 0 250 250" src={clock} />
+                                        <img className="stop_rotation_content_img" viewBox="0 0 250 250" src={clock} alt="" />
                                     </div>
                                     <p className="stop_rotation_content_p">Proszę<br />obrócić<br />urządzenie</p>
                                 </div>
@@ -127,7 +102,7 @@ class App extends Component {
              <Route path={'/:language'} render={(props) => {
                  const matchUrl = ['aboutus', 'contactus', 'process', 'portfolio', 'cookies-policy'].indexOf(props.location.pathname.substr(4));
                  function getHeader() {
-                 if (matchUrl == -1 ) {
+                 if (matchUrl === -1 ) {
                     return (<Header domenErty={props.match.params.language} style={'block'} name="dark" />)
                  } else {
                      return (

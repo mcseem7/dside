@@ -1,20 +1,16 @@
 import React, { Component, Fragment } from 'react'
-import Translate from 'translate-components'
 import withPoppupHOC from '../../HOC/Poppup';
 
 class ErrorValidate extends Component {
-    constructor() {
-        super()
 
-    }
 
     render() {
      return (
             <Fragment>
-                <div class={`modal-overlay success-poppup active`}>
-          <div class={`modal  active`}>
+                <div className={`modal-overlay success-poppup active`}>
+          <div className={`modal  active`}>
         
-            {/* <a class="close-modal" onClick={() => {
+            {/* <a className="close-modal" onClick={() => {
               return  this.props.handleError()
             }}>
               <svg viewBox="0 0 20 20">
@@ -22,8 +18,8 @@ class ErrorValidate extends Component {
               </svg>
             </a> */}
 
-            <div class="modal-content">
-              <div class="success-wrap">
+            <div className="modal-content">
+              <div className="success-wrap">
                     <h3 id="thanks">{
                         this.props.textError
                     }</h3>

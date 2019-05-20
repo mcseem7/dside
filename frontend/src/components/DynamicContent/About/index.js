@@ -5,7 +5,6 @@ import logoRed from './dsideLogo.svg'
 import shahmat from './schahmat.png'
 import horse from './horse.svg'
 import memory from './head.svg'
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import web from './planet.svg'
 import Max from './peopleCompany/Max.png'
 import Ruslan from './peopleCompany/lorem1.png'
@@ -18,7 +17,6 @@ import Translate from 'translate-components'
 import { reactTranslateChangeLanguage } from 'translate-components'
 import Helmet from 'react-helmet-async'
 import Footer from '../../Basic/Footer';
-import Header from '../../Basic/Header';
 import ScrollAnimation from 'react-animate-on-scroll'
 
 export default class AbotUs extends Component {
@@ -105,9 +103,9 @@ export default class AbotUs extends Component {
   showInformation = (teamMan) => {
     this.setState({ activeTeam: false })
     this.state.dataTeam.map((item) => {
-      if (teamMan == item.checkName) {
+      if (teamMan === item.checkName) {
         this.setState({ result: item })
-      }
+      } return null;
     })
 
   }
@@ -346,14 +344,14 @@ export default class AbotUs extends Component {
                       <div className="contact__links-developer">
 
                         {
-                          this.state.result.information.behance == undefined ? null : <a href={this.state.result.information.behance}  target='_blank' className="social__icon-behance" />
+                          this.state.result.information.behance === undefined ? null : <a href={this.state.result.information.behance}  target='_blank' className="social__icon-behance" > </a>
                         }
 
 
 
 
                         {
-                          this.state.result.information.instagram == undefined ? null : <a href={this.state.result.information.instagram} target='_blank'  className="social__icon-instagram" />
+                          this.state.result.information.instagram === undefined ? null : <a href={this.state.result.information.instagram} target='_blank'  className="social__icon-instagram" > </a>
                         }
 
                       </div>

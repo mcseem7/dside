@@ -5,8 +5,7 @@ export const blog = [
     {
         path: [
             `/en/blog`, 
-            `/ru/blog`, 
-            `/cz/blog`, 
+            `/ru/blog`,
             `/pl/blog` 
              ],
         exact: true,
@@ -15,8 +14,7 @@ export const blog = [
     {
         path: [
             `/en/blog/:blogitem`, 
-            `/ru/blog/:blogitem`, 
-            `/cz/blog/:blogitem`, 
+            `/ru/blog/:blogitem`,
             `/pl/blog/:blogitem` 
              ],
         exact: true,     

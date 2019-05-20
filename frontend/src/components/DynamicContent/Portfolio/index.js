@@ -9,7 +9,6 @@ import ScrollAnimation from 'react-animate-on-scroll'
 import Translate, { reactTranslateChangeLanguage } from "translate-components";
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import Footer from '../../Basic/Footer';
-import Header from '../../Basic/Header';
 
 
 class Portfolio extends Component {
@@ -69,7 +68,6 @@ class Portfolio extends Component {
 
 
  render() {
-    console.log(this.props.dataDside);
     return (
       <Fragment>
         

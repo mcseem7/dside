@@ -1,17 +1,11 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import './index.css'
 import ReactFullpage from '@fullpage/react-fullpage';
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import Translate from 'translate-components'
-import ReactDOM from 'react-dom';
 import { reactTranslateChangeLanguage } from 'translate-components'
 import Helmet from 'react-helmet-async'
-import Footer from '../../Basic/Footer';
-import Header from '../../Basic/Header';
-
 const SEL = 'custom-section';
 const anchors = ['analytics', 'design', 'development', 'integration', 'testing'];
-const tooltips = ['01 Analize', 'Design', 'Development', 'Integration', 'Testing'];
 const SECTION_SEL = `.${SEL}`;
 const originalColors = ['transparent', 'transparent', 'transparent','transparent'];
 const pluginWrapper = () => {
@@ -205,8 +199,10 @@ export default class Process extends Component {
 
 
     return (
-
       <div className={'name' + firstSlide}>
+             <Helmet>
+            <title>Process</title>
+          </Helmet>
         <ReactFullpage
           debug /* Debug logging */
           navigation

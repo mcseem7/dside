@@ -1,17 +1,13 @@
 import React, { Component, Fragment } from "react";
 import "./index.css";
-import next from "./next_post.png";
-import comm from "./hypercomments.png";
 import { DiscussionEmbed } from "disqus-react";
 import { withRouter } from "react-router-dom";
 import { compose } from "recompose";
 import withDsideApi from "../../../HOC/Fetch";
 import redirect from "./redirect.svg";
-import { FacebookProvider, Comments } from "react-facebook";
 import { matchPath } from "react-router";
 import withLanguage from "../../../HOC/withLanguage";
 import Footer from "../../Basic/Footer";
-import Header from "../../Basic/Header";
 
 class BlogItem extends Component {
   constructor(props) {
@@ -38,7 +34,7 @@ class BlogItem extends Component {
     });
     await this.getData(match.params.blogitem);
    
-    if (this.state.blogItem.length != 0) {
+    if (this.state.blogItem.length !== 0) {
       await this.setState({
         lang: this.props.language,
         blogCategory: this.state.blogItem.category
@@ -57,7 +53,7 @@ class BlogItem extends Component {
         
       })
       .then(response => {
-        if (Object.keys(response).length == 0) {
+        if (Object.keys(response).length === 0) {
           return this.props.history.push(`/${this.props.language}/notfound`)
         } else {        
           this.setState({ blogItem: response, postId: response.id, title: response.title });
@@ -77,7 +73,7 @@ class BlogItem extends Component {
       strict: false
     });
     const NextPostFind = this.props.blogItem.findIndex(item => {
-      return item.base_name == match.params.blogitem;
+      return item.base_name === match.params.blogitem;
     });
     const NextPost = [];
     NextPost.push({
@@ -115,7 +111,7 @@ class BlogItem extends Component {
                 </div>
 
                 {this.props.dataDside.map(item => {
-                  if(item.base_name == match.params.blogitem)
+                  if(item.base_name === match.params.blogitem){
                   return (
                     <div className="description-item">
                       <p
@@ -124,7 +120,7 @@ class BlogItem extends Component {
                         }}
                       />
                     </div>
-                  );
+                  );}return null;
                 })}
 
                 <div className="blog__post-data">
@@ -173,7 +169,7 @@ class BlogItem extends Component {
 
               <div className="left__content-post">
                 <div className="content__body-post_img">
-                  {NextPost[0].nextPost != undefined ? (
+                  {NextPost[0].nextPost !== undefined ? (
                     <div
                       className="left__img"
                       style={{

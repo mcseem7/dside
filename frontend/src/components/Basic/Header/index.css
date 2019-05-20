@@ -519,51 +519,55 @@
         max-width: 100%;
     }
 }
-
-.langcode li{font-family: 'DSIDE-Light',sans-serif; text-transform: uppercase;}
-.langcode ul {
-   display: inline-flex;
-  flex-direction: row;
-  color: #fff;
-  text-transform: uppercase;
-  overflow: hidden;
-  cursor: pointer;
+ .langcode ul {
+    font-family: 'DSIDE-Light',sans-serif;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+     top: -3px;
+    padding-left: 0;
 }
-
+.langcode li img{width: 20px; height: 20px; display: block;}
 .langcode li {
-  text-align: center;
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  opacity: 0.4;
-  justify-content: center;
-  order: 2;
-  padding: 10px;
+    display: flex;
+    float: left;
+    padding: 1.2rem;
+    order: 2;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.3s;
 }
-.langcode li a, .mainnav li{
-  color: #000;
-}
-.langcode li.active{opacity: 1;  }
-.langcode li.active:hover > .langcode li{display: block}
-.dark .langcode li a, .dark .langcode li{color: #fff;}
-.langcode li:hover {
-    cursor: pointer;
-}
-
+.langcode ul li ul.visible{visibility: visible; opacity: 1;transition: all .3s;}
+.handleClicker{opacity: .6; cursor: pointer;}
+.handleClicker:hover{opacity: 1; cursor: pointer;}
+.handleClicker svg{width: 10px;
+    height: 10px;
+    margin-top: 5px;
+    margin-left: 3px; opacity: .5; transition: all .3s;}
+.handleClicker.visible{
+    opacity: 1;}
+.handleClicker.visible svg{transform: rotate(180deg); transition: all .3s;
+    opacity:0.8;}
+.langcode ul li ul.hidden {visibility: hidden; opacity: 0; transition: all .3s;}
+.langcode ul li ul li.active{display: none; opacity: 0;}
 .langcode ul li ul {
-  visibility: hidden;
-  opacity: 0;
+  visibility: visible;
+  opacity: 1;
   min-width: 5rem;
   position: absolute;
   transition: opacity 0.3s ease-in-out;
-  margin-top: 1rem;
-  left: -999rem;
+  margin-top: 3rem;
   transform: translateX(-5px);
 }
+.langcode li img {display: block; width: 20px; height: 20px;}
 
 .langcode ul li ul li {
   clear: both;
     min-width: 15rem;
+    margin: 0.5rem .36rem;
+    padding: 0;
 }
 .dside__grades-container {
     position: absolute;
@@ -598,10 +602,6 @@
     font-family: 'DSIDE-Bold', sans-serif;
     font-size: 14px;
     color: #fff;
-}
-.langcode ul li.active{
-  order: 1;
-  pointer-events: none;
 }
 /* .head-grade__img img {
     border-radius: 15%;

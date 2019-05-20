@@ -1,15 +1,9 @@
 import React, { Component } from "react";
-import Header from "../../Basic/Header";
 import "./index.css";
 import withDsideApi from "../../../HOC/Fetch";
-import Translate, { reactTranslateChangeLanguage } from "translate-components";
-import Success from "../../Success/success";
+import  { reactTranslateChangeLanguage } from "translate-components";
 import withPoppupHOC from "../../../HOC/Poppup";
-import Arrow  from './arrow.svg';
-import OrderPoppup from "../../../HOC/OrderPopup/index";
 import Helmet from 'react-helmet-async'
-import ScrollAnimation from 'react-animate-on-scroll'
-import ErrorValidate from '../../ErrorValidate/index'
 
 class Cookies extends Component {
   constructor() {

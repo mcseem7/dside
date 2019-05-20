@@ -1,12 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from "react-router-dom";
-import PropTypes from 'prop-types';
-import { reactTranslateChangeLanguage } from "translate-components";
-import LanguagePoppup from "./HOC/ChangeLanguage/ChangePup";
-
-const propTypes = {};
-
-const defaultProps = {};
+import { withRouter } from "react-router-dom";
 
 export default withRouter(class Welcome extends React.Component {
     constructor(props) {
@@ -20,17 +13,18 @@ export default withRouter(class Welcome extends React.Component {
     componentDidMount() {
         const detectBrowserLanguage = require('detect-browser-language')
         this.setState({ userLanguage: detectBrowserLanguage() })
+        this.setState({ lang: detectBrowserLanguage() })
         const userLanguage = detectBrowserLanguage()
-        if (userLanguage != null) { 
+        if (userLanguage !== null) { 
             var minLang = userLanguage.substr(0,2);
         }
-        if (minLang != 'en' && minLang != 'ru' && minLang != 'pl'){ 
-            var finalLang = 'en'; 
+        if (minLang !== 'en' && minLang !== 'ru' && minLang !== 'pl'){ 
+            this.props.history.push(`/en`);
+            localStorage.setItem('lang', `en`)
         }else{
-            var finalLang = minLang;
+            this.props.history.push(`/${minLang}`);
+            localStorage.setItem('lang', `${minLang}`);
         }
-        localStorage.setItem('lang', `${finalLang}`)
-        this.props.history.push(`/${finalLang}`);
      }
 
     render() {

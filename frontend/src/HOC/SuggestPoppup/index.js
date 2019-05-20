@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react'
 import './index.css'
-import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
+import { reactTranslateChangeLanguage} from "translate-components";
 import Translate from 'translate-components'
 import withPoppupHOC from '../Poppup/index'
 import arrow from '../arrow.svg'
@@ -25,10 +25,10 @@ class SuggestPoppup extends Component {
   
 
     componentWillReceiveProps(nextProps) {
-        if(this.state.result != nextProps.result) {
+        if(this.state.result !== nextProps.result) {
             this.setState({result: nextProps.result})
         }
-        if(this.state.modalState != nextProps.modalStatus) {
+        if(this.state.modalState !== nextProps.modalStatus) {
             this.setState({modalState: nextProps.modalStatus})
        }
     }

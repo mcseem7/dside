@@ -22,7 +22,7 @@ import withLanguage from '../../../../../HOC/withLanguage';
   async componentDidMount() {
      let response = await  fetch(
       `${process.env.REACT_APP_API}/${
-        this.props.language
+        this.state.lang
       }/home/getLimitedOffers/`)
      let limitOfer = await response.json()
      this.setState({offer: limitOfer})

@@ -1,11 +1,9 @@
 import React, {Component, Fragment} from 'react'
 import './index.css'
-import ReactDOM from 'react-dom'
 import arrow from '../arrow.svg'
-import { reactTranslateChangeLanguage, TranslateProvider } from "translate-components";
+import { reactTranslateChangeLanguage } from "translate-components";
 import Translate from 'translate-components'
 import withPoppupHOC from '../Poppup/index'
-import ErrorValidate from '../../components/ErrorValidate/'
 import withLanguage from '../withLanguage/index'
 import {compose} from 'recompose'
 
@@ -25,11 +23,11 @@ class OrderPoppup extends Component {
  
 
   componentWillReceiveProps(nextProps) {
-    if(this.state.result != nextProps.result) {
+    if(this.state.result !== nextProps.result) {
       this.setState({result: nextProps.result})
     }
 
-    if(this.state.modalState != nextProps.modalStatus) {
+    if(this.state.modalState !== nextProps.modalStatus) {
       this.setState({modalState: nextProps.modalStatus})
     }
   }
@@ -43,9 +41,9 @@ class OrderPoppup extends Component {
    
     return(
       <Fragment>
-        <div class={`modal-overlay ${this.state.modalState ? 'active' : ''}`}>
-          <div class={`modal  ${this.state.modalState ? 'active' : ''}`}>
-{this.state.modalState ?   <Fragment> <a class="close-modal" onClick={() => {
+        <div className={`modal-overlay ${this.state.modalState ? 'active' : ''}`}>
+          <div className={`modal  ${this.state.modalState ? 'active' : ''}`}>
+{this.state.modalState ?   <Fragment> <a className="close-modal" onClick={() => {
   return  this.props.onClose()
 }}>
   <svg viewBox="0 0 20 20">
@@ -53,8 +51,8 @@ class OrderPoppup extends Component {
   </svg>
 </a>
 
-<div class="modal-content">
-  <div class="form-wrap">
+<div className="modal-content">
+  <div className="form-wrap">
     {this.state.result ?
    
       <div id="form-result">
@@ -73,15 +71,15 @@ class OrderPoppup extends Component {
 
             <div className='holder__wrapper' >
               <label for="id_subject">Имя:</label>
-              <div class="holder__poppup holder__poppup-name"><Translate>Name</Translate></div>
+              <div className="holder__poppup holder__poppup-name"><Translate>Name</Translate></div>
               <input  ref={this.nameRef}  id="id_name" maxlength="50" minlength="2" name="name" required="required" type="text" />
             </div>
             <div className='holder__wrapper'>
               <label for="id_sender">Телефон:</label>
-              <div class="holder__poppup holder__poppup-phone"><Translate>Phone number (With country code)</Translate></div>
+              <div className="holder__poppup holder__poppup-phone"><Translate>Phone number (With country code)</Translate></div>
               <input   pattern="^\+[1-9]{1}[0-9]{3,14}$"  ref={this.phoneRef} id="id_phone" maxlength="50" minlength="6" name="phone" required="required" type="tel" />
             </div>
-            <button class="button14" type='submit' ><Translate>Send</Translate><img src={arrow} alt="" /></button>
+            <button className="button14" type='submit' ><Translate>Send</Translate><img src={arrow} alt="" /></button>
           </form>
         </div>
     }

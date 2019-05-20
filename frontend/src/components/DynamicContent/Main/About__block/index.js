@@ -1,14 +1,7 @@
 import React, { Component } from 'react'
-import Logotype from '../../../sources/images/Logo.svg'
-import Shiny from '../../../sources/images/works__logo/shiny.svg'
-import Palm from '../../../sources/images/works__logo/palm.svg'
-import Wallet from '../../../sources/images/works__logo/wallet.svg'
 import './index.css'
-import Steve from './steven.jpg'
-import {Link} from 'react-router-dom'
 import Translate from 'translate-components'
 import ScrollAnimation from 'react-animate-on-scroll'
-import { reactTranslateChangeLanguage } from 'translate-components'
 
 
 export default class About extends Component {
@@ -22,10 +15,6 @@ export default class About extends Component {
 
   }
 
-
-  componentDidMount() {
-      this.setState({lang: localStorage.getItem('lang') })
-  }
 
 
     render () {

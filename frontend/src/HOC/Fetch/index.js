@@ -3,7 +3,6 @@ import fetch from 'isomorphic-fetch'
 import PropTypes from 'prop-types'
 import $ from 'jquery'
 import withLanguage from '../withLanguage'
-import { matchPath } from 'react-router'
 import Cookies from 'js-cookie'
 
 export default function withDsideApi(DsideComponent, apiUrl, type) {
@@ -35,7 +34,7 @@ export default function withDsideApi(DsideComponent, apiUrl, type) {
 
 
     componentDidMount() {
-      if (typeof window != "undefined") {
+      if (typeof window !== "undefined") {
         this.setState({ langContent: localStorage.getItem('lang') }, () => { //callback after get language
           this.getDsideApi()
         })

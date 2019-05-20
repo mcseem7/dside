@@ -1,13 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import './index.css'
-import Translate from 'translate-components'
 import withPoppupHOC from '../../HOC/Poppup';
 
 class Success extends Component {
-    constructor() {
-        super()
-
-    }
 
 
    

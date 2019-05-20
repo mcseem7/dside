@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ScrollAnimation from 'react-animate-on-scroll'
 
 const propTypes = {};
@@ -18,9 +17,9 @@ export default class CategoryItem extends React.Component {
     }
 
     async componentWillReceiveProps () {
-        if(this.state.categoryLength.length == 0) {
+        if(this.state.categoryLength.length === 0) {
        await this.setState({categoryLength: this.props.dataItems.filter(function(event){
-            return event.category.tag == this.props.category.tag
+            return event.category.tag === this.props.category.tag
         }.bind(this))
       })
     }

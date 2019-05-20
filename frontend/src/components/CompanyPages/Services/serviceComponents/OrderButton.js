@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import DribbleButton from 'react-dribble-button';
 import Translate from 'translate-components'
 
