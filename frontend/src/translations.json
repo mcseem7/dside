@@ -182,24 +182,24 @@
   },
 
 
-  "3D modelling": {
-    "ru": "3D-моделирование",
-    "pl": "Modelowanie 3D",
-    "cz": "3D modelování"
+  "is not right": {
+    "ru": "коротковат",
+    "pl": "niepoprawny",
+    "cz": "niepoprawny"
   },
 
-  "Commercials": {
-    "ru": "Рекламные ролики",
-    "pl": "Reklamowe filmiki",
-    "cz": "reklamní šot"
+  "Phone": {
+    "ru": "Телефон",
+    "pl": "Telefon",
+    "cz": "Telefon"
   },
 
  
 
-  "Filming": {
-    "ru": "Съемки",
-    "pl": "Filmowanie",
-    "cz": "Natáčení"
+  "is too short": {
+    "ru": "короткое",
+    "pl": "za krótkie",
+    "cz": "za krótkie"
   },
 
 

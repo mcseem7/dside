@@ -28,8 +28,10 @@ class OrderPoppup extends Component {
   componentWillReceiveProps(nextProps) {
     if(this.state.result !== nextProps.result) {
       this.setState({result: nextProps.result})
+        setTimeout(() => {
+        this.props.onClose()
+        }, 2500);
     }
-
     if(this.state.modalState !== nextProps.modalStatus) {
       this.setState({modalState: nextProps.modalStatus})
     }
@@ -59,46 +61,38 @@ class OrderPoppup extends Component {
  <Formik
       initialValues={{ name: '', phone: '' }}
       onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
           this.props.getSubmitForm(this.nameRef.current.value, this.phoneRef.current.value);
           setSubmitting(false);
-        }, 1);
       }}
       validationSchema={Yup.object().shape({
         phone: Yup.string()
-          .min(15, 'Too short phone number')
-          .required('Required'),
+          .min(15, 'is not right')
+          .required('*'),
         name: Yup.string()
-          .min(2, 'Too short name')
+          .min(2, 'is too short')
           .max(30, 'Too long name')
-          .required('Required'),
+          .required('*'),
       })}
     >
       {props => {
         const {
-          values,
-          touched,
-          errors,
-          dirty,
-          isSubmitting,
-          handleChange,
-          handleBlur,
-          handleSubmit,
-          handleReset,
-        } = props;
+          values, touched, errors, isSubmitting, handleChange, handleBlur, handleSubmit} = props;
         return (
-          <form onSubmit={handleSubmit}>
-                  <div id="form-itself"> <h3><Translate>Leave your phone number</Translate></h3>
+                this.state.result ?
+    <div id="form-result">
+        <h3 id="thanks"><Translate>Thank you! Application successfully submitted!</Translate></h3>
+      </div> :  <div id="form-itself">
+        <h3><Translate>Leave your phone number</Translate></h3>
           <p><Translate>And you will receive a free consultation on the question that interests you. Usually we call back
             within 30 seconds.
-          </Translate></p></div>
-            <label htmlFor="name" style={{ display: 'block' }}>
-              Name
-            </label>
+          </Translate></p>
+              <div className="card">
+          <form onSubmit={handleSubmit}>
+            <div className="input-container">
             <input
               id="name"
-              placeholder="Enter your name"
               type="text"
+              required
               ref={this.nameRef}
               value={values.name}
               onChange={handleChange}
@@ -106,19 +100,19 @@ class OrderPoppup extends Component {
               className={
                 errors.name && touched.name ? 'text-input error' : 'text-input'
               }
-            />{errors.name && touched.name && (
-              <div className="input-feedback">{errors.name}</div>
-            )}
-            <label htmlFor="phone" style={{ display: 'block' }}>
-            Phone
-          </label>
+            /><label htmlFor="name">
+              <Translate useRawText={true}>Name</Translate><div className="input-feedback"><Translate useRawText={true}>{errors.name && touched.name && (
+             errors.name
+            )}</Translate></div>
+            </label><div className="bar"></div></div>
+            <div className="input-container">
              <InputMask
               maskChar={null}
               defaultValue={this.props.language !== "pl" ? "+" : "+48"}
               mask={this.props.language !== "pl" ? "+99 999 999 99 99" : "+48 999-999-999"}
               id="phone"
-              placeholder={this.props.language !== "pl" ? "+" : "+48"}
               type="text"
+              required
               value={values.phone}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -126,24 +120,18 @@ class OrderPoppup extends Component {
               className={
                 errors.phone && touched.phone ? 'text-input error' : 'text-input'
               }
-            />
-            {errors.phone && touched.phone && (
-              <div className="input-feedback">{errors.phone}</div>
-            )}
+            /><label htmlFor="phone">
+            <Translate useRawText={true}>Phone</Translate><div className="input-feedback"><Translate useRawText={true}>{errors.phone && touched.phone && (
+             errors.phone
+            )}</Translate></div>
+          </label><div className="bar"></div></div>
 
-            <button
-              type="button"
-              className="outline"
-              onClick={handleReset}
-              disabled={!dirty || isSubmitting}
-            >
-              Reset
+<div className="button-container">
+            <button type="submit" className="appform-button" disabled={isSubmitting}>
+              <Translate>Send</Translate>
             </button>
-            <button type="submit" disabled={isSubmitting}>
-              Submit
-            </button>
-
-          </form>
+</div>
+          </form>     </div></div>
         );
       }}
     </Formik>
