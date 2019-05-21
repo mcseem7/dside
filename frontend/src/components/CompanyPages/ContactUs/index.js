@@ -13,18 +13,16 @@ import * as Yup from 'yup';
 import InputMask from 'react-input-mask';
 
 class Contact extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
-    this.nameRef = React.createRef();
-     this.phoneRef = React.createRef();
+    this.nameRef = React.createRef()
+     this.phoneRef = React.createRef()
 
     this.state = {
       postActive: false,
       errorActive: false,
-    };
-    this.state = {
-     display: "none",
+      display: "none",
       modalActiveOrder: false,
       modalActiveGrade: false,
       lang: ""
@@ -37,7 +35,7 @@ class Contact extends Component {
   }
 
   componentDidUpdate() {
-    reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
+    reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))();
   }
   handleSubmit = async event => {
     event.preventDefault();
@@ -52,7 +50,7 @@ class Contact extends Component {
       this.setState({errorActive: !this.state.errorActive})
       setTimeout(() => {
         this.setState({errorActive: !this.state.errorActive})
-      }, 1000);
+      }, 5000);
     } else {
       this.updateAfterPost()
     }
@@ -107,6 +105,7 @@ class Contact extends Component {
       onSubmit={(values, { setSubmitting }) => {
           this.props.getSubmitForm(this.nameRef.current.value, this.phoneRef.current.value);
           setSubmitting(false);
+          console.log('WOW');
       }}
       validationSchema={Yup.object().shape({
         phone: Yup.string()

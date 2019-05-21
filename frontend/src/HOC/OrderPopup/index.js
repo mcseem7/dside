@@ -15,8 +15,8 @@ class OrderPoppup extends Component {
   constructor(props) {
     super(props)
 
-    this.nameRef = React.createRef();
-    this.phoneRef = React.createRef();
+    this.nameRef = React.createRef()
+    this.phoneRef = React.createRef()
     this.state = {
       modalState: this.props.modalStatus,
       result: props.result
