@@ -272,13 +272,15 @@ footer .footer__btn-send img {
         width: 27px;
         margin: 0 11px;
     }
-
+    .footer__middle {
+        text-align: left;
+    }
     .footer__btn-send:hover::before {
         -webkit-animation: flash 0.7s forwards linear 0.16s;
         -moz-animation: flash 0.7s forwards linear 0.16s;
         animation: flash 0.7s forwards linear 0.16s;
     }
-
+    .footer__content-services, .footer__content-about {display: flex;}
     .social__icons {
         display: flex;
         align-items: center;

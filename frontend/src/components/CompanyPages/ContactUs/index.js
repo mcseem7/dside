@@ -8,6 +8,9 @@ import  Arrow  from './arrow.svg';
 import OrderPoppup from "../../../HOC/OrderPopup/index";
 import Helmet from 'react-helmet-async'
 import ErrorValidate from '../../ErrorValidate/index'
+import { Formik } from 'formik';
+import * as Yup from 'yup';
+import InputMask from 'react-input-mask';
 
 class Contact extends Component {
   constructor() {
@@ -97,55 +100,86 @@ changePoppup = () => {
                 </div>
 
                 <div className="contactus__form_active">
-                  <div className="clients__form">
-                    <div className="form__titles">
-                      <div className="title__drop">
-                        <h3>
-                          <Translate>Drop the line</Translate>
-                        </h3>
-                      </div>
 
-                      <div className="question__form">
-                        <p>
-                          <Translate>
-                            Ready to talk to the team who can’t wait to
-                          </Translate>
-                          <br />
-                          <Translate>
-                            take your company to new, exciting places?
-                          </Translate>
-                        </p>
-                      </div>
-                    </div>
 
-                    <div className="sending__form">
-                      <form onSubmit={this.handleSubmit} id="form__dside">
-                        <div className="inputs__send">
-                        <div className="wrapper__name contact-input">
-                    <div className="shining-underline-cf ">
-                    <div class="holder service__contact"><Translate>Name</Translate></div>
-                      <input style={{background:'none'}} ref={this.nameRef} placeholder="John Doe"  maxlength="50" minlength="2" type="text" id="name" required="required" /><span></span>
-                    </div>
-                  </div> 
-                  <div className="wrapper__phone contact-input">
-                    <div className="shining-underline-cf ">
-                      <div class="holder service__contact"><Translate>Phone number (With country code)</Translate></div>
-                      <input style={{background:'none'}} placeholder="+48 123 456 789"  pattern="^\+[1-9]{1}[0-9]{3,14}$" ref={this.phoneRef} id="phone" maxlength="50" minlength="6" type="text" required="required" /><span></span>
-                  </div>
-                  </div>
-                        </div>
+                    <Formik
+      initialValues={{ name: '', phone: '' }}
+      onSubmit={(values, { setSubmitting }) => {
+          this.props.getSubmitForm(this.nameRef.current.value, this.phoneRef.current.value);
+          setSubmitting(false);
+      }}
+      validationSchema={Yup.object().shape({
+        phone: Yup.string()
+          .min(15, 'is not right')
+          .required('*'),
+        name: Yup.string()
+          .min(2, 'is too short')
+          .max(30, 'Too long name')
+          .required('*'),
+      })}
+    >
+      {props => {
+        const {
+          values, touched, errors, isSubmitting, handleChange, handleBlur, handleSubmit} = props;
+        return (
+                this.state.result ?
+    <div id="form-result">
+        <h3 id="thanks"><Translate>Thank you! Application successfully submitted!</Translate></h3>
+      </div> :  <div id="form-itself">
+        <h3><Translate>Leave your phone number</Translate></h3>
+          <p><Translate>And you will receive a free consultation on the question that interests you. Usually we call back
+            within 30 seconds.
+          </Translate></p>
+              <div className="card">
+          <form onSubmit={handleSubmit}>
+            <div className="input-container">
+            <input
+              id="name"
+              type="text"
+              required
+              ref={this.nameRef}
+              value={values.name}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className={
+                errors.name && touched.name ? 'text-input error' : 'text-input'
+              }
+            /><label htmlFor="name">
+              <Translate useRawText={true}>Name</Translate><div className="input-feedback"><Translate useRawText={true}>{errors.name && touched.name && (
+             errors.name
+            )}</Translate></div>
+            </label><div className="bar"></div></div>
+            <div className="input-container">
+             <InputMask
+              maskChar={null}
+              defaultValue={this.props.language !== "pl" ? "+" : "+48"}
+              mask={this.props.language !== "pl" ? "+99 999 999 99 99" : "+48 999-999-999"}
+              id="phone"
+              type="text"
+              required
+              value={values.phone}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              ref={this.phoneRef}
+              className={
+                errors.phone && touched.phone ? 'text-input error' : 'text-input'
+              }
+            /><label htmlFor="phone">
+            <Translate useRawText={true}>Phone</Translate><div className="input-feedback"><Translate useRawText={true}>{errors.phone && touched.phone && (
+             errors.phone
+            )}</Translate></div>
+          </label><div className="bar"></div></div>
 
-                        <button className="dside__send">
-                  <div className="contact__content-send">
-                    <button className="contact__btn-send">
-                                <span className="blacked"><Translate>Send</Translate></span>
-                                <img className="button__content" src={Arrow} alt=""/>
-                            </button>
-                  </div>
-                </button>
-                      </form>
-                    </div>
-                  </div>
+<div className="button-container">
+            <button type="submit" className="appform-button" disabled={isSubmitting}>
+              <Translate>Send</Translate>
+            </button>
+</div>
+          </form>     </div></div>
+        );
+      }}
+    </Formik>
+
                 </div>
               </div>
 
@@ -173,7 +207,7 @@ changePoppup = () => {
                 </div>
                 <div className="right__form_street">
                   <h4>
-                    <Translate>E-mail</Translate>
+                    E-mail
                   </h4>
                   <div className="right__form_phone">
                     <h3>

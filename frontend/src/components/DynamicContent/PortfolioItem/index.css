@@ -21,12 +21,10 @@
     background-size: cover;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-align: center;
     align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    text-align: center;
-    padding: 5rem 0 4rem 0;
+    justify-content: flex-start;
+    background-position: right 35% center;
+    padding: 5rem 2rem 4rem 2rem;
     text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
 }
         .icon-timer .icon__blog {
@@ -50,7 +48,7 @@
         .name__project h4 {
             color: #ffffff;
             font-family: 'DSIDE-Black', sans-serif;
-            font-size: 72px;
+            font-size: 40px;
             margin: 0;
             padding: 0 2rem;
             font-weight: 700;
@@ -59,14 +57,17 @@
         .category__project p,
         .name__customer p {
             color: #ffffff;
-            font-family: Mont;
+            font-family: 'DSIDE-Bold',sans-serif;
             font-size: 18px;
             font-weight: 700;
-            margin: 0;
+            opacity: .6;
+            margin-bottom: 20px;
         }
 
         .project_description__content {
             display: flex;
+            align-content: center;
+            justify-content: center;
         }
 
 
@@ -76,10 +77,10 @@
 
         .description__project {
             font-family: 'DSIDE-Light', sans-serif;
-            font-size: 1rem;
+            font-size: 18px;
             font-weight: 300;
             color:#ffffff;
-            padding: 3rem;
+            padding: 3rem 0;
             margin: 0;
         }
          .portfolio__datatime__content {
@@ -99,40 +100,25 @@
         }
 
 
-        .portfolio__post-data .watching__post {
-            margin-right: 3rem;
-        }
+        .portfolio__post-data p{margin-left: 5px; font-family: 'DSIDE-Light', sans-serif;  font-size: 16px;}
     .name__task{justify-self: flex-end;}
-    .project__task_portfolio{font-family: 'DSIDE-Light', sans-serif; font-size: 22px; line-height: 32px; width: 60%;}
+    .project__task_portfolio, .portfolio__carousel-title {font-family: 'DSIDE-Light', sans-serif; font-size: 22px; padding: 1rem 2rem; line-height: 32px; width: 60%;}
+    .portfolio__carousel-title h2{font-size: 18px;}
     .portfolio__screen-item img{margin-bottom: -5px}
     .portfolio__carousel{display: none;}
-/* Tablets */
-@media only screen and (min-width: 480px) {
-    .portfolio__header_item-wrapper{text-align: left;}
-        .portfolio__carousel{display: block;}
-        .name__description  {
-            color: #ffffff;
-            font-family: 'DSIDE-Bold', sans-serif;
-            font-size:  2rem;
-            font-weight: 700;
-            margin: 0;
-            flex: 1 1 74%;}
-        .category__project {margin-top: 0; display: none;}
-        .next__project {margin-top: 0; }
+     .next__project {margin-top: 0; }
         .next__project p{
             font-family: 'DSIDE-Light', sans-serif;
             font-size: 22px;
             color: #fff;
-             padding: 0 2rem;
         }
         .name__next{
             color: #ffffff;
             font-family: 'DSIDE-Black', sans-serif;
             font-size: 40px;
             margin: 0;
-            padding: 0 2rem;
             font-weight: 700;
-        } .explore_next{display: block; width: fit-content; margin: 0 2rem;}
+        } .explore_next{display: block; width: fit-content;}
     .explore_next a{
         font-family: 'DSIDE-Bold', sans-serif;
         color: #ffffff;
@@ -159,6 +145,19 @@
         .name__next h2{    padding: 0;
     font-size: 40px;
     margin: 1rem 0;}
+/* Tablets */
+@media only screen and (min-width: 480px) {
+    .portfolio__header_item-wrapper{text-align: left;}
+        .portfolio__carousel{display: block;}
+        .name__description  {
+            color: #ffffff;
+            font-family: 'DSIDE-Bold', sans-serif;
+            font-size:  2rem;
+            font-weight: 700;
+            margin: 0;
+            flex: 1 1 74%;}
+        .category__project {margin-top: 0; display: none;}
+
         .portfolio__name__content {
             display: flex;
             align-items: center;
@@ -412,4 +411,7 @@
     .description__project{font-size: 40px;}
     .portfolio__carousel-title h2, .name__task h4, .project__task_portfolio p{font-size: 22px; line-height: 32px;}
     .portfolio__carousel-title h2{padding-left: .7rem}
+    .name__project h4 {
+            font-size: 72px;
+        }
 }

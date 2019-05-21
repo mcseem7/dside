@@ -79,7 +79,7 @@ class Footer extends Component {
                                 <NavLink
                                  to={`/${this.props.language}/services/ecommerce`}
                                  className="link">
-                                     <Translate>E-commerce</Translate>
+                                    <span>E-commerce</span>
                                  <span className="mainnavshine"></span>
                                 </NavLink>
                                  </li>

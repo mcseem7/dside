@@ -155,30 +155,30 @@
   },
 
 
-  "Increasing efficency": {
-    "ru": "Увеличение КПД",
-    "pl": "Polepszenie wydajności",
-    "cz": "Zvyšování efektivity"
+  "Websites": {
+    "ru": "Вебсайты",
+    "pl": "Strony internetowe",
+    "cz": "Strony internetowe"
   },
 
-  "Quality improvement": {
-    "ru": "Улучшение качества",
-    "pl": "Optymalizacja jakości",
-    "cz": "Zlepšení kvality"
-  },
-
-
-  "Videos": {
-    "ru": "Видео-Продакшн",
-    "pl": "Filmy wideo",
-    "cz": "Videa"
+  "Details": {
+    "ru": "Подробности",
+    "pl": "Szczegóły",
+    "cz": "Szczegóły"
   },
 
 
-  "Motion graphics": {
-    "ru": "Анимация графики",
-    "pl": "Animacji graficzne",
-    "cz": "pohybová grafika"
+  "00-140, Warszawa": {
+    "ru": "00-140, Варшава",
+    "pl": "00-140, Warszawa",
+    "cz": "00-140, Warszawa"
+  },
+
+
+  "+48 731 922 322": {
+    "ru": "+48 731 922 322",
+    "pl": "+48 731 922 322",
+    "cz": "+48 731 922 322"
   },
 
 
@@ -693,7 +693,7 @@
   },
   "Developed in": {
     "ru": "Сделано за",
-    "pl": "Opracowane w ciągu",
+    "pl": "Czas wdrożenia",
     "cz": "vyvinuté za"
   },
   "days": {

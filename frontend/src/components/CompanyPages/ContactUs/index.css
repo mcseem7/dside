@@ -364,6 +364,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4220a0', end
   -webkit-transform: scale(10);
   transform: scale(10);
 }
+
+.left__form-container .contactus__form_active {
+    padding: 2rem 0;
+}
+
 /*Fullscreen*/
 @media screen and (min-width: 1440px) {
     .background__contactus {
@@ -414,7 +419,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f5', end
 
 
 .left__form-container .contactus__form_active {
-    padding-bottom: 13%;
+    padding:13%;
 }
 
 .right__form-container {
