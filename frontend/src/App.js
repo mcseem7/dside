@@ -37,6 +37,7 @@ class App extends Component {
     componentDidMount() {
         window.scrollTo(0, 0)
         this.setState({mounted: true})
+        this.setState({lang: localStorage.getItem('lang')})
         const spinner = $('#loading');
         if (spinner && !$(spinner).addClass('final_render loaded')) {
           $(spinner).addclass('final_render loaded')
@@ -150,7 +151,7 @@ class App extends Component {
 
                      <div className="privacy__warning">
                          <p className="cook__description">
-                            <Translate>Did you know? This website uses cookies to ensure you get the best experience on our website.</Translate> <Link to={`/${this.props.language}/cookies-policy`}><Translate>Learn more</Translate></Link>
+                            <Translate>Did you know? This website uses cookies to ensure you get the best experience on our website.</Translate> <Link to={`/${this.state.lang}/cookies-policy`}><Translate>Learn more</Translate></Link>
                          </p>
 
                          <div className="cook__button">
