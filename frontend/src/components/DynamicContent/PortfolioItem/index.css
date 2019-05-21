@@ -4,6 +4,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+    background-position: center;
                         text-align: center;
                         padding: 15rem 0 3rem 0;
         text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
@@ -102,8 +103,30 @@
 
         .portfolio__post-data p{margin-left: 5px; font-family: 'DSIDE-Light', sans-serif;  font-size: 16px;}
     .name__task{justify-self: flex-end;}
-    .project__task_portfolio, .portfolio__carousel-title {font-family: 'DSIDE-Light', sans-serif; font-size: 22px; padding: 1rem 2rem; line-height: 32px; width: 60%;}
-    .portfolio__carousel-title h2{font-size: 18px;}
+    .project__task_portfolio, .portfolio__carousel-title, .name__task {font-family: 'DSIDE-Light', sans-serif; font-size: 22px; padding: 1rem 2rem; line-height: 32px; width: 80%;}
+ .name__task{ margin-bottom: 2rem;}
+ .name__task a{
+            color: rgba(69, 75, 107, 0.77);
+            font-size: 22px;
+            line-height: 32px;
+            margin-right: 3rem;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: 'DSIDE-light', sans-serif;
+            transition: all .3s ease-in-out;
+        }.name__task a:empty{display: none;}
+        .name__task a:after {
+    background-image: url("./arrow-up.svg");
+    content:'';
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    left: 8px;
+    width: 18px;
+    height: 18px;
+
+        }
+.portfolio__carousel-title h2{font-size: 22px;}
     .portfolio__screen-item img{margin-bottom: -5px}
     .portfolio__carousel{display: none;}
      .next__project {margin-top: 0; }
