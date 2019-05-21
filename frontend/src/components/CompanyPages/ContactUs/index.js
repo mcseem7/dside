@@ -13,15 +13,15 @@ import * as Yup from 'yup';
 import InputMask from 'react-input-mask';
 
 class Contact extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.nameRef = React.createRef();
      this.phoneRef = React.createRef();
 
     this.state = {
       postActive: false,
-      errorActive: false
+      errorActive: false,
     };
     this.state = {
      display: "none",
@@ -44,7 +44,7 @@ class Contact extends Component {
     await this.props.postData(this.nameRef, this.phoneRef);
     await this.checkingValidate();
   };
-changePoppup = () => {
+  changePoppup = () => {
     this.setState({ modalActiveOrder: !this.state.modalActiveOrder });
   };
   checkingValidate = () => {
@@ -121,17 +121,13 @@ changePoppup = () => {
       {props => {
         const {
           values, touched, errors, isSubmitting, handleChange, handleBlur, handleSubmit} = props;
-        return (
-                this.state.result ?
-    <div id="form-result">
-        <h3 id="thanks"><Translate>Thank you! Application successfully submitted!</Translate></h3>
-      </div> :  <div id="form-itself">
+        return ( <div id="form-itself">
         <h3><Translate>Leave your phone number</Translate></h3>
           <p><Translate>And you will receive a free consultation on the question that interests you. Usually we call back
             within 30 seconds.
           </Translate></p>
               <div className="card">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={this.handleSubmit}>
             <div className="input-container">
             <input
               id="name"

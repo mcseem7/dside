@@ -91,52 +91,52 @@
     .slide h2 span{position: absolute; top: 300px; font-family: 'DSIDE-Bold',sans-serif;  color: #fff; font-size: 40px; padding: 0 2rem;  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);}
     .slide p{position: absolute; padding: 0 2rem; top: 400px; color: #fff;  font-size: 18px; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);}
     #slide-first-ru{
-    background: url(/static/media/mobile-web-slide-ru@x2.179f35be.jpg);
+    background: url('mobile-web-slide-ru@x2.jpg');
     background-size: 1500px 750px;
     height: 600px;
-    padding: 1rem;
+    padding-top: 1rem;
     background-position: bottom center;
     }
      #slide-first-pl{
         background: url('mobile-web-slide-pl@x2.jpg');
         background-size: 1500px 750px;
         height: 600px;
-        padding: 1rem;
+        padding-top: 1rem;
         background-position: bottom center;
     }
      #slide-first-en{
         background: url('mobile-web-slide-en@x2.jpg');
         background-size: 1500px 750px;
         height: 600px;
-        padding: 1rem;
+        padding-top: 1rem;
         background-position: bottom center;
     }
     #slide-third-en{
         background: url('mobile-ecommece-slide-en@x2.jpg');
         background-size: 1500px 750px;
         height: 600px;
-        padding: 1rem;
+        padding-top: 1rem;
         background-position: top center;
     }
     #slide-third-ru{
         background: url('mobile-ecommece-slide-ru@x2.jpg');
         background-size: 1500px 750px;
         height: 600px;
-        padding: 1rem;
+        padding-top: 1rem;
         background-position: top center;
     }
     #slide-third-pl{
         background: url('mobile-ecommece-slide-pl@x2.jpg');
         background-size: 1500px 750px;
         height: 600px;
-        padding: 1rem;
+        padding-top: 1rem;
         background-position: top center;
     }
      #slide-second{
         background: url('mobile-design-slide@x2.jpg');
         background-size: 1500px 750px;
         height: 600px;
-        padding: 1rem;
+        padding-top: 1rem;
         background-position: bottom right;
     }
 /* Tablets */
