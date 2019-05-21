@@ -34,7 +34,7 @@
     font-style: normal;
 }
 
-
+.background__cookies{width: unset; padding: 3rem 2rem}
 
 .fade-appear,
 .fade-enter {
@@ -153,6 +153,9 @@
     cursor: pointer;
     border: 1px solid #000;
 }
+  .background__cookies{width: 1200px;
+    margin: 0 auto; padding-top: 200px;
+    }
 }
 
 body {

@@ -34,19 +34,15 @@
   margin-right: auto;
   left: 0;
   right: 0;
-  top: 16vmin;
+  top: 26vmin;
   width: 30vmin;
 }
-@media (max-width: 480px) and (min-width: 320px) {
-  .logo-404 {
-    top: 45vmin;
-  }
-}
+
 
 .meteor {
   position: absolute;
-  right: 42vmin;
-  top: 25vmin;
+  right: 12vmin;
+  top: 15vmin;
   width: 24vmin;
   opacity: .7;
 }
@@ -57,8 +53,8 @@
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
-  font-size: 4vmin;
-  margin-top: 31vmin;
+  font-size: 30px;
+  margin-top: 51vmin;
   z-index: 9999;
 }
 
@@ -67,15 +63,17 @@
   font-family: 'DSIDE-Light', sans-serif;
   font-weight: 400;
   text-align: center;
-  font-size: 2.5vmin;
+  font-size: 18px;
+  padding: 0 2rem;
   margin-top: -1vmin;
   margin-bottom: 9vmin;
 }
 
 .btn-back {
-  border: 1px solid white;
+  border: 2px solid white;
   color: white;
-  font-size: 2vmin;
+  font-size: 18px;
+  width: fit-content;
   padding: 12px;
   font-family: 'DSIDE-Bold', sans-serif;
   text-decoration: none;
@@ -87,51 +85,11 @@
   background: white;
   color: #4D007D;
 }
-@media (max-width: 480px) and (min-width: 320px) {
-  .btn-back {
-    font-size: 3.5vmin;
-  }
-}
 
 .astronaut {
   position: absolute;
-  top: 18vmin;
-  left: 14vmin;
+  top: 108vmin;
+  left: -14vmin;
   height: 66vmin;
   animation: floating 3s infinite ease-in-out;
-}
-@media (max-width: 425px) and (min-width: 320px) {
-  .title {
-    margin-top: 55vmin;
-  }
-  .astronaut{
-    margin-top: 78vmin;
-    left: 15vmin;
-    width: 35vmin;
-  }
-  .meteor{
-    right: 36vmin;
-  }
-}
-@media (max-width: 480px) and (min-width: 425px) {
-  .astronaut{
-    margin-top: 18vmin;
-    left: -25vmin;
-    width: 55vmin;
-  }
-}
-@media (max-width: 768px) and (min-width: 480px) {
-    .astronaut {
-    top: 20vmin;
-    left: -18vmin;
-  }
-  .meteor{
-    right: 8vmin;
-  }
-}
-@media (max-width: 1024px) and (min-width: 768px) {
-   .astronaut {
-    top: 26vmin;
-    left: 6vmin;
-  }
 }

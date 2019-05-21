@@ -24,7 +24,7 @@ import Translate from "translate-components";
             <div align='center'>
             	<a className='btn-back' onClick={
                 () =>  this.props.history.goBack()
-              } ><Translate>Back to previous page</Translate></a>
+              } ><Translate useRawText={true}>Back to previous page</Translate></a>
             </div>
             <img src={astro} className="astronaut" alt="" />
       </div>
