@@ -206,9 +206,10 @@ import Footer from '../../Basic/Footer';
       return (
           <Fragment>
           <ScrollAnimation animateIn="slideInUp" animateOnce="True">
+              <Link to={`/${localStorage.getItem('lang')}/portfolio/${item.CURL}`}>
         <div className="portfolio__similar_item-wrapper" style={{ backgroundImage: `url(${process.env.REACT_APP_DOMAIN}/${item.thumbnail})` }}>
-<div class="header__portfolio-content"><div class="content__project-portfolio"><div class="header__portfolio-content-wrapper"><div class="project__titles"><div class="portfolio__title-content"><div class="portfolio__name__content"><div class="project__names"><ScrollAnimation animateIn="slideInUp" delay="200"><div class="next__project"><p><Translate>Next project</Translate></p></div></ScrollAnimation><div class="name__next"><h2>{item.name}</h2></div><div className="explore_next shining-underline"><Link to={`/${localStorage.getItem('lang')}/portfolio/${item.CURL}`}><Translate>Explore project</Translate><img class="arrow_next" src={arrowNext} alt=""/><span className="agrepullo"></span></Link></div></div></div></div></div></div></div></div>
-            </div></ScrollAnimation>
+<div class="header__portfolio-content"><div class="content__project-portfolio"><div class="header__portfolio-content-wrapper"><div class="project__titles"><div class="portfolio__title-content"><div class="portfolio__name__content"><div class="project__names"><ScrollAnimation animateIn="slideInUp" delay="200"><div class="next__project"><p><Translate>Next project</Translate></p></div></ScrollAnimation><div class="name__next"><h2>{item.name}</h2></div><div className="explore_next shining-underline"><Translate>Explore project</Translate><img class="arrow_next" src={arrowNext} alt=""/><span className="agrepullo"></span></div></div></div></div></div></div></div></div>
+            </div></Link></ScrollAnimation>
         </Fragment>
                )
 

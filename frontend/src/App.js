@@ -91,6 +91,7 @@ class App extends Component {
                                     <div className="stop_rotation_content_img_wrapper">
                                         <img className="stop_rotation_content_img" viewBox="0 0 250 250" src={clock} alt="" />
                                     </div>
+                                    <h3 className="stop_rotation_content_h3"></h3>
                                     <p className="stop_rotation_content_p">Proszę<br />obrócić<br />urządzenie</p>
                                 </div>
                             </div>
