@@ -27,9 +27,12 @@
 .team li{font-family: 'DSIDE-Bold';  width: 100%; }
 .wedo li span::before{ content:'+'; font-family: 'DSIDE-Black'; color: #737174; position: absolute; margin-left:-15px; }
 #fp-nav.fp-show-active a.active+.fp-tooltip, #fp-nav ul li:hover .fp-tooltip{color: #000 !important; font-family: 'DSIDE-Light',sans-serif; transform: translateY(1px);}
-
-
-
+/* Tablets */
+ @media only screen and (min-width: 480px) {
+     .section-wrapper {
+         padding: 0 6rem 0 7.4rem;
+     }
+ }
 /* Fullscreen */
 @media only screen and (min-width: 1024px) {
 .name0{background: #F2F3F5 url('./bgs/saber-1.svg') no-repeat; background-position: 5% 4%; background-size: 360px 360px; transition: background .3s ease-in-out;}

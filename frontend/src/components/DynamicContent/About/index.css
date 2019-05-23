@@ -55,7 +55,7 @@
    }
 
     .about__company-dside p {
-        color: #6c6c6c;
+        color: #000;
         font-family: 'DSIDE-Light', sans-serif;
         font-size: 18px;
         font-weight: 300;
@@ -63,7 +63,7 @@
     }
 
     .title__what h4 {
-        color: #515151;
+        color: #000;
         font-family: 'DSIDE-Black', sans-serif;
         font-size: 24px;
         font-weight: 700;
@@ -96,6 +96,7 @@
     .dside__what-content {
         flex: 1 1 auto;
         padding: 2rem 1.2rem;
+
     }
 
     .dside__what-about {
@@ -247,6 +248,14 @@
     .fade__team div{display: flex; position: relative;}
 /* Tablets */
 @media only screen and (min-width: 480px) {
+    .dside__what-content {
+        flex: 1 1 auto;
+        padding: 2rem 4rem;
+    }
+    .about__company-dside p {
+    font-size: 18px;
+    line-height: 32px;
+    }
     .description__business-process p{
         font-size: 1rem;
     }
@@ -269,7 +278,6 @@
     }
     .dside__red-logo img{
         width: 50%;
-        margin-left: 4rem;
     }
     .about__company-dside{width: 100%;}
     .title__whyus h5{text-align: left; margin-left: 3rem;}

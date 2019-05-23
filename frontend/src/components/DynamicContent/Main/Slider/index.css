@@ -88,130 +88,125 @@
     cursor: pointer;
     text-decoration: none;
     }
-    .slide h2 span{position: absolute; top: 300px; font-family: 'DSIDE-Bold',sans-serif;  color: #fff; font-size: 40px; padding: 0 2rem;  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);}
-    .slide p{position: absolute; padding: 0 2rem; top: 400px; color: #fff;  font-size: 18px; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);}
+    .slide h2 span{position: absolute; top: 260px; width: 66%; font-family: 'DSIDE-Bold',sans-serif;  color: #fff; font-size: 40px; padding: 0 2rem;  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);}
+    .slide p{position: absolute; padding: 0 2rem; top: 360px; color: #fff; line-height: 32px; font-size: 18px; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);}
     #slide-first-ru{
     background: url('mobile-web-slide-ru@x2.jpg');
-    background-size: 1500px 750px;
+    background-size: 480px 600px;
     height: 600px;
     padding-top: 1rem;
-    background-position: bottom center;
+    background-position: top center;
     }
      #slide-first-pl{
-        background: url('mobile-web-slide-pl@x2.jpg');
-        background-size: 1500px 750px;
-        height: 600px;
-        padding-top: 1rem;
-        background-position: bottom center;
+       background: url('mobile-web-slide-pl@x2.jpg');
+       background-size: 480px 600px;
+       height: 600px;
+       padding-top: 1rem;
+       background-position: top center;
     }
      #slide-first-en{
-        background: url('mobile-web-slide-en@x2.jpg');
-        background-size: 1500px 750px;
-        height: 600px;
-        padding-top: 1rem;
-        background-position: bottom center;
+       background: url('mobile-web-slide-en@x2.jpg');
+       background-size: 480px 600px;
+       height: 600px;
+       padding-top: 1rem;
+       background-position: top center;
     }
     #slide-third-en{
-        background: url('mobile-ecommece-slide-en@x2.jpg');
-        background-size: 1500px 750px;
-        height: 600px;
-        padding-top: 1rem;
-        background-position: top center;
+       background: url('mobile-ecommerce-slide-en@x2.jpg');
+       background-size: 480px 600px;
+       height: 600px;
+       padding-top: 1rem;
+       background-position: top center;
     }
     #slide-third-ru{
-        background: url('mobile-ecommece-slide-ru@x2.jpg');
-        background-size: 1500px 750px;
-        height: 600px;
-        padding-top: 1rem;
-        background-position: top center;
+        background: url('mobile-ecommerce-slide-ru@x2.jpg');
+       background-size: 480px 600px;
+       height: 600px;
+       padding-top: 1rem;
+       background-position: top center;
     }
-    #slide-third-pl{
-        background: url('mobile-ecommece-slide-pl@x2.jpg');
-        background-size: 1500px 750px;
-        height: 600px;
-        padding-top: 1rem;
-        background-position: top center;
+     #slide-third-pl{
+        background: url('mobile-ecommerce-slide-pl@x2.jpg');
+       background-size: 480px 600px;
+       height: 600px;
+       padding-top: 1rem;
+       background-position: top center;
     }
      #slide-second{
-        background: url('mobile-design-slide@x2.jpg');
-        background-size: 1500px 750px;
-        height: 600px;
-        padding-top: 1rem;
-        background-position: bottom right;
+         background: url('mobile-design-slide@x2.jpg');
+       background-size: 480px 600px;
+       height: 600px;
+       padding-top: 1rem;
+       background-position: top center;
     }
 /* Tablets */
 
 @media only screen and (min-width: 480px) {
-     #slide-first-ru{
-        background: url('mobile-web-slide-ru@x2.jpg');
-        background-size: 1500px 750px;
+    .slide h2 span{ padding: 0 3rem; top: 250px; width: 40%;}
+    .slide p{ padding: 0 3rem; top: 350px; width: 40%; line-height: 32px;}
+
+    #slide-first-ru{
+        background: url('tablet-web-slide-ru@x2.jpg');
+    background-size: 768px 600px;
         height: 600px;
+        background-position: top left;
     }
     #slide-third-en{
-        background: url('mobile-ecommece-slide-en@x2.jpg');
-        background-size: 1500px 750px;
+        background: url('tablet-ecommerce-slide-en@x2.jpg');
+     background-size: 768px 600px;
         height: 600px;
+        background-position: top left;
     }
     #slide-third-ru{
-        background: url('mobile-ecommece-slide-ru@x2.jpg');
-        background-size: 1500px 750px;
+        background: url('tablet-ecommerce-slide-ru@x2.jpg');
+     background-size: 768px 600px;
         height: 600px;
+        background-position: top left;
     }
     #slide-third-pl{
-        background: url('mobile-ecommece-slide-pl@x2.jpg');
-        background-size: 1500px 750px;
+        background: url('tablet-ecommerce-slide-pl@x2.jpg');
+     background-size: 768px 600px;
         height: 600px;
+        background-position: top left;
     }
    #slide-first-pl{
-        background: url('mobile-web-slide-pl@x2.jpg');
-        background-size: 1500px 750px;
+        background: url('tablet-web-slide-pl@x2.jpg');
+       background-size: 768px 600px;
         height: 600px;
+        background-position: top left;
     }
    #slide-first-en{
-        background: url('mobile-web-slide-en@x2.jpg');
-        background-size: 1500px 750px;
+        background: url('tablet-web-slide-en@x2.jpg');
+       background-size: 768px 600px;
         height: 600px;
+        background-position: top left;
     }
     #slide-second{
-        background: url('mobile-design-slide@x2.jpg');
-        background-size: 1500px 750px;
+        background: url('tablet-design-slide@x2.jpg');
+        background-size: 768px 600px;
         height: 600px;
+        background-position: top left;
     }
     #slide-first-website{
         background: url('billy.jpg') no-repeat center center;
-        background-size: cover;
-        height: 500px;
     }
-
     #slide-first-webdesign-en{
         background: url('slide-webdesign-1-en.jpg') no-repeat center center;
-        background-size: cover;
-        height: 400px;
     }
     #slide-first-webdesign-pl{
         background: url('slide-webdesign-1-pl.jpg') no-repeat center center;
-        background-size: cover;
-        height: 400px;
     }
     #slide-first-webdesign-ru{
         background: url('slide-webdesign-1-ru.jpg') no-repeat center center;
-        background-size: cover;
-        height: 400px;
     }
     #slide-second-webdesign-en{
         background: url('slide-webdesign-2-en.jpg') no-repeat center center;
-        background-size: cover;
-        height: 400px;
     }
     #slide-second-webdesign-ru{
         background: url('slide-webdesign-2-ru.jpg') no-repeat center center;
-        background-size: cover;
-        height: 400px;
     }
     #slide-second-webdesign-pl{
         background: url('slide-webdesign-2-pl.jpg') no-repeat center center;
-        background-size: cover;
-        height: 400px;
     }
     #slide-first-design{
         background: #c11525 url('jony.jpg') no-repeat center center;

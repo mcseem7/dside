@@ -101,10 +101,8 @@ figure.effect-marley span {
     transition: opacity 0.35s, transform 0.35s;
 }
 
-
-
 .grid figure figcaption {
-    padding: 60px 60px 30px;
+    padding: 2rem 2rem 10px;
     -webkit-backface-visibility: visible;
     backface-visibility: visible;
 }
@@ -204,11 +202,27 @@ figure.effect-marley span {
 .content__posts .grid{    flex: 1 1 100%;}
 .grid{max-width: 100%;}
 
+/* Tablets */
+
+@media only screen and (min-width: 480px) {
+   .content__posts .grid{    flex: 1 1 50%;}
+.grid figure figcaption {
+    padding: 3rem 3rem 3rem;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+}
+}
 
 /*Fullscreen*/
 @media screen and (min-width: 1400px) {
 
 
+
+.grid figure figcaption {
+    padding: 60px 60px 30px;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+}
 
 .relative__content {
     position: relative;

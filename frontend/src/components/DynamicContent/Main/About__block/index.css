@@ -9,14 +9,29 @@
         font-weight: 300;
     }
 
-.container__about-content{     padding: 2rem 2rem 23rem 2rem;
+.container__about-content{       background-position: bottom right 50%;
+    padding: 0rem 2rem 22rem 2rem;
     background-size: 450px;
     font-family: 'DSIDE-Light',sans-serif;}
+ .about__content{display: flex; flex-direction: row; padding: 2rem 0;}
+    .texts-about{display: flex; width: 90%; flex-direction: column;}
+    .texts-about p span {
+        text-align: left;
+        font-family: 'DSIDE-Light', sans-serif;
+        font-size: 30px;
+        line-height: 30px;
+    }
+     .texts-about span {
+        text-align: left;
+        font-family: 'DSIDE-Light', sans-serif;
+        font-size: 18px;
+        line-height: 30px;
+    }
 /* Tablets */
 
 @media only screen and (min-width: 480px) {
-
-
+    .container__about-content{     padding: 2rem 3rem 2rem 3rem; background-position: bottom right -30%;}
+    .texts-about{ width: 60%}
     .question {
         margin-top: 25px;
     }
@@ -28,20 +43,6 @@
         width: 100%;
         font-family: "DSIDE-Light", sans-serif;
         font-weight: 300;
-    }
-    .about__content{display: flex; flex-direction: row; padding: 5rem 0;}
-    .texts-about{display: flex; width: 70%; flex-direction: column;}
-    .texts-about p span {
-        text-align: left;
-        font-family: 'DSIDE-Light', sans-serif;
-        font-size: 40px;
-        line-height: 50px;
-    }
-     .texts-about span {
-        text-align: left;
-        font-family: 'DSIDE-Light', sans-serif;
-        font-size: 20px;
-        line-height: 50px;
     }
 }
 /* Fullscreen */

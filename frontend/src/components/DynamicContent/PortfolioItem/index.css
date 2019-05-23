@@ -142,7 +142,7 @@
             margin: 0;
             font-weight: 700;
         } .explore_next{display: block; width: fit-content;}
-    .explore_next a{
+    .explore_next span{
         font-family: 'DSIDE-Bold', sans-serif;
         color: #ffffff;
         font-size: 18px;
@@ -170,7 +170,17 @@
     margin: 1rem 0;}
 /* Tablets */
 @media only screen and (min-width: 480px) {
+     .portfolio__post-data {
+        padding: 0;
+        }
+    .description__project {
+    padding: 0 2rem 0 0;
+    }
+    .project__names {
+    display: flex; width: 100%;}
     .portfolio__header_item-wrapper{text-align: left;}
+    .project__task_portfolio{    padding: 0 1rem;}
+    .name__task{    width: 40%;}
         .portfolio__carousel{display: block;}
         .name__description  {
             color: #ffffff;
@@ -180,20 +190,19 @@
             margin: 0;
             flex: 1 1 74%;}
         .category__project {margin-top: 0; display: none;}
-
+        .similar a{text-decoration: none;}
+        .portfolio__similar_item-wrapper .portfolio__name__content .project__names{
+              display: inline;
+        }
         .portfolio__name__content {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             flex-wrap: wrap;
+            padding: 0 3rem;
         }
         .project__logo{margin: 0;}
-        .project__names {
-            text-align: left;
-            padding-left: 1rem;
-        }
         .name__project h4{padding: 0}
-        .description__project{padding: 1rem 1rem;}
         .superwrapper{padding-left: 2rem;}
         .project__task_portfolio p {
             color: #000000;

@@ -1,6 +1,6 @@
 
 .right__form-question_title h4 {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 17px;
     color: rgb(117,149,241);
     font-family: "DSIDE-Bold", sans-serif;
@@ -22,7 +22,7 @@
     font-weight: bold;
 }
 .right__form_phone h2 {
-    font-size: 40px;
+    font-size: 30px;
     color: rgb(255,255,255);
     font-family: "DSIDE-Bold", sans-serif;
     font-weight: bold;
@@ -35,7 +35,7 @@
 }
 
 .right__form_street h4 {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 17px;
     color: rgb(117,149,241);
     font-family: "DSIDE-Bold", sans-serif;
@@ -364,10 +364,33 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4220a0', end
   -webkit-transform: scale(10);
   transform: scale(10);
 }
-
 .left__form-container .contactus__form_active {
     padding: 2rem 0;
 }
+/* Tablets */
+ @media only screen and (min-width: 480px) {
+     .left__form-container{background: #fff;}
+.contact-us__form_container {
+     flex-direction: row;
+}
+    .card .input-container {
+    margin: 0 60px 30px;
+}
+    .card .button-container button{
+        padding: 16px 0;
+        width: 210px;
+    }
+    .card .input-container input{
+        font-size: 18px;
+    }
+    .card .input-container label{
+        font-size: 18px;
+    }
+    .card .input-container .input-feedback{
+        font-size: 18px;
+    }
+
+ }
 
 /*Fullscreen*/
 @media screen and (min-width: 1440px) {

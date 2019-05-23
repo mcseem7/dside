@@ -121,6 +121,20 @@
         margin-left: 15px;
         cursor: pointer;
     }
+/* Tablets */
+ @media only screen and (min-width: 480px) {
+ .portfolio-category__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+
+    flex-direction: row;
+}
+     .portfolio-category__item{ margin-right: 40px;}
+     .portfolio-category__item p{font-size: 15px;}
+     .portfolio-category__item p sup{font-size: 12px;}
+ }
 /* Fullscreen */
 @media only screen and (min-width: 1024px) {
     .portfolio-category__item p {
