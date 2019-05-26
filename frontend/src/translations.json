@@ -1243,14 +1243,14 @@
         "ru": "Аналитика"
   },
   "Design": {
-        "pl": "Projektowanie",
+        "pl": "Projekt",
         "cz": "Design",
         "ru": "Дизайн"
   },
   "Development": {
-        "pl": "Programowanie",
+        "pl": "Kodowanie",
         "cz": "Programming",
-        "ru": "Программирование"
+        "ru": "Кодинг"
   },
   "Integration": {
         "pl": "Integracja",
@@ -1258,9 +1258,9 @@
         "ru": "Интеграция"
   },
   "Testing": {
-        "pl": "Testowanie",
+        "pl": "Badania",
         "cz": "Testeeng",
-        "ru": "Тестирование"
+        "ru": "Тесты"
   },
   "Launching": {
         "pl": "Uruchomienie",
@@ -1271,6 +1271,36 @@
         "pl": "Marketing",
         "cz": "Lauching",
         "ru": "Маркетинг"
+  },
+  "SEO": {
+        "pl": "SEO",
+        "cz": "Lauching",
+        "ru": "СЕО"
+  },
+  "CPA marketing": {
+        "pl": "CPA marketing",
+        "cz": "Lauching",
+        "ru": "CPA маректинг"
+  },
+  "Motion graphics": {
+        "pl": "Animacji",
+        "cz": "Lauching",
+        "ru": "Анимации"
+  },
+  "System Administrator": {
+        "pl": "Administrator systemów",
+        "cz": "Lauching",
+        "ru": "Cистемный администратор"
+  },
+  "Devops Engineer": {
+        "pl": "Inżynier Devops",
+        "cz": "Lauching",
+        "ru": "Инженер Devops"
+  },
+  "Frontend": {
+        "pl": "Frontend",
+        "cz": "Lauching",
+        "ru": "Frontend"
   },
   "Support": {
         "pl": "Wsparcie",
@@ -1315,32 +1345,32 @@
   "The success of any website or mobile application is a clear understanding of user needs, system limitations and business objectives. Detailed business analysis helps us to choose the optimal solution that meets the needs of the target audience.": {
         "pl": "Sukces każdej strony internetowej lub aplikacji mobilnej polega na zrozumieniu potrzeb użytkowników, ograniczeń systemu i celów biznesowych. Szczegółowa analiza biznesowa pomaga nam wybrać optymalne rozwiązanie, które spełnia potrzeby grupy docelowej.",
         "cz": "Lauching",
-        "ru": "Успех любого проекта возможен только при понимании потребностей пользователей, системных ограничений и бизнес-целей. Детальный бизнес-анализ помогает нам выбрать оптимальное решение, соответствующее потребностям целевой аудитории."
+        "ru": "Тщательно изучаем задачи бизнеса, желания и потребности пользователей и формируем стратегию оптимальних решений для конкретного проекта."
   },
-  "Spectacular branding will help you to stand out in the market, and an intuitive interface to increase user loyalty and involvement. We also develop infographics, illustrations and other graphic content, which guarantees the uniqueness of your content.": {
+  "Spectacular design will help you to stand out in the market, and an intuitive interface to increase user loyalty and involvement. We also develop infographics, illustrations and other graphic content, which guarantees the uniqueness of your content.": {
         "pl": "Spektakularne oznakowanie pomoże Ci wyróżnić się na rynku oraz intuicyjny interfejs, który zwiększy lojalność i zaangażowanie użytkowników. Opracowujemy również infografiki, ilustracje i inne treści graficzne, co gwarantuje wyjątkowość treści.",
         "cz": "Lauching",
-        "ru": "Эффектный брендинг поможет вам выделиться на рынке, а интуитивно понятный интерфейс повысит лояльность и вовлеченность пользователей. Мы также разрабатываем инфографику, иллюстрации и другой графический контент, который гарантирует уникальность вашего контента."
+        "ru": "Создаём эффектный дизайн, который выполняет конкретные задачи. В каждой форме - опыт, в каждом цвете - посыл для мозга Вашего клиента действовать."
   },
   "Designing a system architecture and writing code is a key step in creating any product. We create highly scalable solutions that work reliably under heavy loads. Our team also specializes in creating custom animation effects that are an integral part of a modern promotional website.": {
         "pl": "Projektowanie architektury systemu i pisanie kodu to kluczowy krok w tworzeniu każdego produktu. Tworzymy wysoce skalowalne rozwiązania, które działają niezawodnie przy dużych obciążeniach. Nasz zespół specjalizuje się również w tworzeniu niestandardowych efektów animacji, które stanowią integralną część nowoczesnej witryny promocyjnej.",
         "cz": "Lauching",
-        "ru": "Разработка архитектуры системы и написание кода - это ключевой шаг в создании любого продукта. Мы создаем масштабируемые решения, которые надежно работают при больших нагрузках. Наша команда также специализируется на создании пользовательских анимационных эффектов, которые являются неотъемлемой частью современного рекламного сайта."
+        "ru": "Согласитесь, скорость - это важно. Особенно когда у Вашего клиента есть, в среднем, три секунды на решение. Именно поэтому наши приложения работают моментально."
   },
   "For successful and timely launch of any system, it is necessary to carry out full synchronization of the site or application with the CRM client. Correct synchronization performed ensures the safety and correctness of data and the speed of its processing by the business.": {
         "pl": "W celu udanego i terminowego uruchomienia dowolnego systemu konieczne jest przeprowadzenie pełnej synchronizacji witryny lub aplikacji z klientem CRM. Prawidłowa synchronizacja zapewnia bezpieczeństwo i poprawność danych oraz szybkość ich przetwarzania przez firmę.",
         "cz": "Lauching",
-        "ru": "Для успешного и своевременного запуска любой системы необходимо выполнить полную синхронизацию сайта или приложения с клиентом CRM. Правильная синхронизация обеспечивает безопасность и правильность данных, а также скорость их обработки бизнесом."
+        "ru": "Подключаем любые существующие сервисы и приложения, которые отправляют или принимают данные из интернета. Обеспечиваем безопасность этих подключений."
   },
   "We do not like to rewrite the code, so we are testing at the end of each sprint. Risk prevention saves both money and time.": {
         "pl": "Nie lubimy przepisywać kodu, więc testujemy na końcu każdego sprintu. Zapobieganie ryzyku oszczędza zarówno pieniądze, jak i czas.",
         "cz": "Lauching",
-        "ru": "Нам не нравится переписывать код, поэтому мы тестируем в конце каждого спринта. Предотвращение риска экономит деньги и время."
+        "ru": "Никто не любит делать работу дважды, поэтому мы тестируем свой код на каждом этапе разработки. Выпуская в свет целостный продукт, в боевой готовности."
   },
   "Launch is one of the most important stages in the life of any product. We carry out a full cycle - from selecting and buying a domain to setting up a server update. Full technical support at all stages.": {
         "pl": "Uruchomienie jest jednym z najważniejszych etapów w życiu każdego produktu. Przeprowadzamy pełny cykl - od wyboru i zakupu domeny po skonfigurowanie aktualizacji serwera. Pełne wsparcie techniczne na wszystkich etapach.",
         "cz": "Lauching",
-        "ru": "Запуск - один из самых важных этапов в жизни любого продукта. Мы осуществляем полный цикл - от выбора и покупки домена до настройки обновления сервера. Полная техническая поддержка на всех этапах."
+        "ru": "Мы не бросаем наших клиентов на произвол судьбы после окончания разработки, а обучаем как эффективно использовать полученные инструменты."
   },
   "It is not enough to create a product, you still need to competently submit it to users. We help in growth, increase performance, make the product recognizable and loved.": {
         "pl": "Nie wystarczy stworzyć produkt, nadal musisz kompetentnie przesłać go do użytkowników. Pomagamy w rozwoju, zwiększamy wydajność, sprawiają, że produkt jest rozpoznawalny i kochany.",
