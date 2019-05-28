@@ -393,7 +393,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4220a0', end
  }
 
 /*Fullscreen*/
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1400px) {
     .background__contactus {
     width: 1200px;
     margin: 0 auto;
@@ -413,10 +413,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4220a0', end
 
 .left__form-container {
     background: white;
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 75px;
-    width: 800px;
 }
 
 .right__form-container {
@@ -434,15 +430,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f5', end
 
 
 .left__form-container .title__form-contact {
-    margin-top: 20px;
-    margin-bottom: 25px;
-    display: flex;
-    justify-content: flex-end;
+    display: none;
 }
 
 
 .left__form-container .contactus__form_active {
-    padding:13%;
+        padding: 4% 10%
 }
 
 .right__form-container {

@@ -99,7 +99,7 @@
 }
 }
    /* Fullpage */
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1400px) {
     .timer__back-order div {
         -ms-flex: 0.1 1 8%;
         flex: 0.1 1 1%;

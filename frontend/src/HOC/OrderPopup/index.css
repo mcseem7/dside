@@ -266,4 +266,12 @@
     }
 
 
+}/* Laptops */
+@media only screen and (min-width: 1024px) {
+  #form-itself p{
+         padding: 0;
+    margin: 0 60px 5px;
+  }
+#form-itself h3{     margin: 20px 60px 30px; padding: 0;}
+
 }

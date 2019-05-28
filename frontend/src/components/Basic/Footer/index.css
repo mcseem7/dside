@@ -120,14 +120,13 @@ footer .footer__btn-send img {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         align-self: center;
-        width: 1200px;
         margin: 0 auto;
         justify-content: space-between;
     }
 
     .footer__down {
         background-color: #11141B;
-        padding: 1.5rem 0 1rem 0;
+        align-items: center;
 
     }
 
@@ -139,6 +138,7 @@ footer .footer__btn-send img {
 
     .mid-p {
         flex-basis: 60%;
+        margin-top: 0;
     }
 
     .footer__content-services,
@@ -289,4 +289,7 @@ footer .footer__btn-send img {
         display: flex;
         align-items: center;
     }
+}
+@media only screen and (min-width: 1400px) {
+.footer__middle, .footer__down{width: 1200px;}
 }

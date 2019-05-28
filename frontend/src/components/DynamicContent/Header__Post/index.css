@@ -214,11 +214,12 @@ figure.effect-marley span {
 }
 
 /*Fullscreen*/
-@media screen and (min-width: 1400px) {
-
-
+@media screen and (min-width: 1024px) {
+ .wrapper-row{ padding: 0 3rem 0 3rem;}
+ .content__posts .grid{    flex: 1 1 33.3%;}
 
 .grid figure figcaption {
+    opacity: 0;
     padding: 60px 60px 30px;
     -webkit-backface-visibility: visible;
     backface-visibility: visible;
@@ -258,7 +259,8 @@ figure.effect-marley span {
 /* Tablets */
 
 figure.effect-marley:hover figcaption,
-figure.effect-marley:active figcaption{ background-color: var(--tooltip-color); cursor: pointer; transition: all 0.25s;}
+figure.effect-marley:active figcaption{ background-color: var(--tooltip-color); cursor: pointer; transition: all 0.25s;
+    opacity:1;}
 
 figure.effect-marley:hover h2 ,
 figure.effect-marley:active h2 {

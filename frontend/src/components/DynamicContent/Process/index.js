@@ -197,14 +197,12 @@ export default class Process extends Component {
       return null;
     }
 
-
     return (
       <div className={'name' + firstSlide}>
              <Helmet>
             <title>Process</title>
           </Helmet>
         <ReactFullpage
-          debug /* Debug logging */
           navigation
           showActiveTooltip
           navigationPosition='left'

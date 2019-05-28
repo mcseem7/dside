@@ -35,17 +35,23 @@
  }
 /* Fullscreen */
 @media only screen and (min-width: 1024px) {
-.name0{background: #F2F3F5 url('./bgs/saber-1.svg') no-repeat; background-position: 5% 4%; background-size: 360px 360px; transition: background .3s ease-in-out;}
-.name1{color: #fff; background: #1b6bea url('./bgs/saber-2.svg') no-repeat; background-position: 5% 4%; background-size: 360px 360px; transition: background .3s ease-in-out;}
-.name2{background: #d8e5ed url('./bgs/saber-3.svg') no-repeat; background-position: 5% 4%; background-size: 360px 360px; transition: background .3s ease-in-out;}
-.name3{background: #d8e5ed url('./bgs/saber-4.svg') no-repeat; background-position: 5% 4%; background-size: 360px 360px; transition: background .3s ease-in-out;}
-.name4{background: #d8e5ed url('./bgs/saber-5.svg') no-repeat; background-position: 5% 4%; background-size: 360px 360px; transition: background .3s ease-in-out;}
-.name5{background: #d8e5ed url('./bgs/saber-6.svg') no-repeat; background-position: 5% 4%; background-size: 360px 360px; transition: background .3s ease-in-out;}
-.name6{background: #d8e5ed url('./bgs/saber-7.svg') no-repeat; background-position: 5% 4%; background-size: 360px 360px; transition: background .3s ease-in-out;}
-.name7{background: #d8e5ed url('./bgs/saber-8.svg') no-repeat; background-position: 5% 4%; background-size: 360px 360px; transition: background .3s ease-in-out;}
+.name0{background: #F2F3F5 url('./bgs/saber-1.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
+.name1{color: #fff; background: #1b6bea url('./bgs/saber-2.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
+.name2{background: #d8e5ed url('./bgs/saber-3.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
+.name3{background: #d8e5ed url('./bgs/saber-4.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
+.name4{background: #d8e5ed url('./bgs/saber-5.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
+.name5{background: #d8e5ed url('./bgs/saber-6.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
+.name6{background: #d8e5ed url('./bgs/saber-7.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
+.name7{background: #d8e5ed url('./bgs/saber-8.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
 .name1 .wedo li span::before{color: #fff; opacity: .6;}
 .name1 .section-bottom h3{color: #fff; opacity: .6;}
-.section-wrapper{width: 800px; margin: 0 auto; display: flex; flex-direction: column; padding-left: 15rem;}
+.section-wrapper{    width: 615px;
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 24rem;}
 .section-top{display: flex; flex-direction: column; flex-wrap: wrap;}
 .section-bottom{display: flex; flex-direction: row; justify-content: space-between; margin-top: 1rem;}
 .section-top h2 span{font-family: 'DSIDE-Black',sans-serif; font-size: 4rem;}

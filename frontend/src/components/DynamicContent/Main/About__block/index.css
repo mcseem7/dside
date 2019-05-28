@@ -48,7 +48,14 @@
 /* Fullscreen */
 
 @media only screen and (min-width: 1024px) {
-    .container__about-content{    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;}
+    .container__about-content{
+    margin: 0 auto;
+        background-position: bottom right;}
+}
+@media only screen and (min-width: 1400px) {
+    .container__about-content{
+            padding: 5rem 0;
+    width: 1200px;
+    }
+    .about__content{padding: 2rem 3rem;}
 }

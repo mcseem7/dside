@@ -156,7 +156,7 @@ outline: none;
     }
 
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1400px) {
     .listwrapper{flex-direction: row; flex-wrap: wrap;flex: 1 1 70%;}
     .listened{    flex-basis: 49%;
     margin-left: 1%;}

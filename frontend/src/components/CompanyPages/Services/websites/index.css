@@ -73,7 +73,7 @@
 }
 /* Fullpage */
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1400px) {
     .dside_textContainer-website .logo__service_slogan {
         font-size: 2.6rem;
         max-width: 100%;

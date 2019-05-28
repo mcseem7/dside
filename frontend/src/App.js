@@ -79,8 +79,6 @@ class App extends Component {
 
    render()  {
         const { routes, initialData } = this.props;
-        console.log('App Lang', this.state.lang);
-        console.log('App Props', this.props);
         return (
             <TranslateProvider translations={translations} debugMode={true} defaultLanguage={'en'}>
                 <Fragment>

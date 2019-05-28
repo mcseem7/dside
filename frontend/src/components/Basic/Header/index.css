@@ -455,7 +455,7 @@
     margin: 0 auto;}
 
 .basic__header-content{margin-top: 0;}
-.social__icons{display: block;}
+ .header__content .right__content-socials .social__icons{display: flex  ;}
 .right__content-socials .check__work-sockets{display: none;}
 .left__content-icons .check__work-sockets{display: flex;}
 .add__work_wrapper {
@@ -513,9 +513,7 @@
     opacity: 0.25;
 }
 
-    .header__content .right__content-socials .social__icons {
-        display: none;
-    }
+
     img {
         max-width: 100%;
     }
