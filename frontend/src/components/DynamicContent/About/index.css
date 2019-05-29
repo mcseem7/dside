@@ -412,4 +412,8 @@
      .description__business-process p{
         font-size: .8rem;
     }
+}/* Fullpage */
+@media only screen and (min-width: 1400px) {
+    .dside__red-logo{padding: 0 1rem 0 5rem;}
+    .dside__red-logo img{width: 60%;}
 }

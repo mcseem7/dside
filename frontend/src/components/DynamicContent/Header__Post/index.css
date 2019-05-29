@@ -215,7 +215,6 @@ figure.effect-marley span {
 
 /*Fullscreen*/
 @media screen and (min-width: 1024px) {
- .wrapper-row{ padding: 0 3rem 0 3rem;}
  .content__posts .grid{    flex: 1 1 33.3%;}
 
 .grid figure figcaption {

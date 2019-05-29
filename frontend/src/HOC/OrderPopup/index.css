@@ -21,7 +21,7 @@
         background-color: #fff;
         width: 600px;
         max-width: 75rem;
-        min-height: 20rem;
+        min-height: 33rem;
         padding: 1rem;
         border-radius: 4px;
         opacity: 0;
@@ -270,6 +270,7 @@
 @media only screen and (min-width: 1024px) {
   #form-itself p{
          padding: 0;
+      text-align: center;
     margin: 0 60px 5px;
   }
 #form-itself h3{     margin: 20px 60px 30px; padding: 0;}

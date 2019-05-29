@@ -191,7 +191,7 @@ class Header extends Component {
                   <li className={'handleClicker ' + (this.state.isToggled ? 'visible': 'hidden')} onClick={this.handleClicker}><img src={controllerLang} alt=""/>
                       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
 	 viewBox="0 0 1417.3 1417.3" >
-	<g id="XMLID_1_"  >
+	<g id="lang"  >
 		<path className="st0" id="XMLID_22_" d="M1182.6,541.8c13.9,0,27.8,0,41.7,0c46.3,12.7,76.7,42.1,91.7,87.6c0,15.3,0,30.6,0,45.9
 			c-11.5,39.7-39.1,64.9-72.7,87c-147.2,97-293.6,195.2-440.2,293c-63.4,42.3-111.8,42.3-175.1,0c-146.7-97.8-293-196.1-440.2-293.1
 			c-33.6-22.1-61.4-47.1-72.8-86.9c0-15.3,0-30.6,0-45.9c15.1-45.4,45.5-74.8,91.7-87.6c13.9,0,27.8,0,41.7,0

@@ -285,6 +285,9 @@ footer .footer__btn-send img {
         animation: flash 0.7s forwards linear 0.16s;
     }
     .footer__content-services, .footer__content-about {display: flex;}
+    .footer__content-services ul li{ pointer-events: none; cursor: no-drop; }
+    .footer__content-services ul li a span{color: rgba(140, 144, 200, 0.53); cursor: no-drop; }
+    .footer__content-services ul li a:hover{ cursor: no-drop; }
     .social__icons {
         display: flex;
         align-items: center;

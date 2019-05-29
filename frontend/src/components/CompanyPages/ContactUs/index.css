@@ -393,6 +393,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4220a0', end
  }
 
 /*Fullscreen*/
+@media screen and (min-width: 1024px) {
+     .card{padding: 40px 40px 30px 40px;}
+    .card .button-container {
+    margin: 60px 60px 0;}
+}
+/*Fullscreen*/
 @media screen and (min-width: 1400px) {
     .background__contactus {
     width: 1200px;

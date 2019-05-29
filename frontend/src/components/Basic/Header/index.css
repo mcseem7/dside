@@ -34,6 +34,8 @@
 .mid__content-logo, .langcode{display: none;}
 .dark .mainnav li a, .dark .mainnav li{color: #fff;}
 .dark .st0{fill: #fff;}
+#main-logo .st0{transition: fill .3s; transition-delay: .6s;}
+#lang .st0{transition: fill .3s; transition-delay: .6s;}
 .add__work_plus::before,
 .add__work_plus::after,
 .social__icon-instagram::before,
@@ -402,6 +404,7 @@
 .mainnavshine{margin-bottom: -5px;}
 .mainnav li a, .mainnav li{
   color: #000;
+    transition: color .3s; transition-delay: .6s;
 }
 .mainnav li:hover {
     cursor: pointer;
@@ -571,7 +574,7 @@
 .ordernow{margin-left:20px;}
 .ordernow::before{    content: '';
     display: inline-block;
-    width: 15px;
+    width: 14px;
     height: 15px;
     margin-left: -21px;
     background: url('plus.svg');

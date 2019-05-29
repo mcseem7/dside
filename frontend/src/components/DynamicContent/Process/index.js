@@ -9,9 +9,6 @@ const anchors = ['analytics', 'design', 'development', 'integration', 'testing']
 const SECTION_SEL = `.${SEL}`;
 const originalColors = ['transparent', 'transparent', 'transparent','transparent'];
 const pluginWrapper = () => {
-  /**
-   * require('fullpage.js/vendors/scrolloverflow'); // Optional. When using scrollOverflow:true
-   */
 };
 export default class Process extends Component {
 
@@ -26,7 +23,7 @@ export default class Process extends Component {
         {
           h2: 'Analytics',
           tooltip: '01',
-          maintext: 'The success of any website or mobile application is a clear understanding of user needs, system limitations and business objectives. Detailed business analysis helps us to choose the optimal solution that meets the needs of the target audience.',
+          maintext: 'We thoroughly study the tasks of the business, the desires and needs of users and formulate the strategy of optimal solutions for every specific project.',
           wedoitem1: 'Market analysis',
           wedoitem2: 'Competitor analysis',
           wedoitem3: 'Description of the functional',
@@ -38,7 +35,7 @@ export default class Process extends Component {
         {
           h2: 'Design',
           tooltip: '02',
-          maintext: 'Spectacular design will help you to stand out in the market, and an intuitive interface to increase user loyalty and involvement. We also develop infographics, illustrations and other graphic content, which guarantees the uniqueness of your content.',
+          maintext: 'We create a spectacular design that performs specific tasks. Experience is in every form, and the message for your client’s brain to act is in every color.',
           wedoitem1: 'Site structure and map',
           wedoitem2: 'Logo and corporate identity',
           wedoitem3: 'Responsive Web Design',
@@ -52,7 +49,7 @@ export default class Process extends Component {
         {
           h2: 'Development',
           tooltip: '03',
-          maintext: 'Designing a system architecture and writing code is a key step in creating any product. We create highly scalable solutions that work reliably under heavy loads. Our team also specializes in creating custom animation effects that are an integral part of a modern promotional website.',
+          maintext: 'Admit it, speed is important. Especially when your client has an average of three seconds to decide. That is why our applications work instantly.',
           wedoitem1: 'System architecture design',
           wedoitem2: 'Backend on CMS',
           wedoitem3: 'Custom backend',
@@ -67,7 +64,7 @@ export default class Process extends Component {
         {
           h2: 'Integration',
           tooltip: '04',
-          maintext: 'For successful and timely launch of any system, it is necessary to carry out full synchronization of the site or application with the CRM client. Correct synchronization performed ensures the safety and correctness of data and the speed of its processing by the business.',
+          maintext: 'We connect existing services and applications that send or receive data from the Internet. We ensure the security of these connections.',
           wedoitem1: 'CRM & ERP Systems',
           wedoitem2: 'Payment systems',
           wedoitem3: 'Delivery systems',
@@ -79,7 +76,7 @@ export default class Process extends Component {
         {
           h2: 'Testing',
           tooltip: '05',
-          maintext: 'We do not like to rewrite the code, so we are testing at the end of each sprint. Risk prevention saves both money and time.',
+          maintext: 'Nobody likes to do the work twice, so we test our code at every stage of development. Launching a holistic product in alert state.',
           wedoitem1: 'Manual testing',
           wedoitem2: 'Automatic testing',
           wedoitem3: 'A / B testing',
@@ -91,7 +88,7 @@ export default class Process extends Component {
         {
           h2: 'Launching',
           tooltip: '06',
-          maintext: 'Launch is one of the most important stages in the life of any product. We carry out a full cycle - from selecting and buying a domain to setting up a server update. Full technical support at all stages.',
+          maintext: 'We do not leave our customers to fend for themselves after the end of the development, and teach how to use the tools effectively.',
           wedoitem1: 'Domain and hosting',
           wedoitem2: 'Cloud storage',
           wedoitem3: 'Server scaling',
@@ -102,7 +99,7 @@ export default class Process extends Component {
         {
           h2: 'Marketing',
           tooltip: '07',
-          maintext: 'It is not enough to create a product, you still need to competently submit it to users. We help in growth, increase performance, make the product recognizable and loved.',
+          maintext: 'After creating and launching a project, we provide a growth strategy, as well as making it recognizable and beloved among your customers.',
           wedoitem1: 'SEO',
           wedoitem2: 'CPA marketing',
           wedoitem3: 'Display advertising',
@@ -116,7 +113,7 @@ export default class Process extends Component {
         {
           h2: 'Support',
           tooltip: '08',
-          maintext: 'We ensure the stable operation of the project without failures and crashes, we introduce new functionality and updates, update security patches, keep all databases up to date.',
+          maintext: 'We ensure the stable operation of the project without failures and errors, as well as update all security patches.',
           wedoitem1: 'Bug fixes',
           wedoitem2: 'Design update',
           wedoitem3: 'Layout update',
@@ -146,7 +143,6 @@ export default class Process extends Component {
                        }
                    );
     }
-    console.log("After load: " + destination.index);
   }
   handleChangeColors() {
     const newColors =
