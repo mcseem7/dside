@@ -200,6 +200,7 @@ figure.effect-marley span {
     letter-spacing: 1px;
 }
 .content__posts .grid{    flex: 1 1 100%;}
+.grid{max-width: 100%;}
 
 /* Tablets */
 
@@ -214,6 +215,7 @@ figure.effect-marley span {
 
 /*Fullscreen*/
 @media screen and (min-width: 1024px) {
+    .grid{max-width: unset;}
  .content__posts .grid{    flex: 1 1 33.3%;}
 
 .grid figure figcaption {
