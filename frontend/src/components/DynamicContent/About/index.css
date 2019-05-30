@@ -22,7 +22,7 @@
   100% {
     -webkit-filter: brightness(100%); } }
 
-.aboutus__title-advantage h1 {
+.aboutus__title-advantage h1{
         font-size: 3rem;
         color: rgb(255, 255, 255);
         font-family: "DSIDE-Black", 'sans-serif' ;
@@ -269,7 +269,7 @@
     width: 302px;
     top: -208px;
 }
-     .aboutus__title-advantage h1 {
+     .aboutus__title-advantage h1{
         font-size: 6rem;
     }
     .dside__what-about{

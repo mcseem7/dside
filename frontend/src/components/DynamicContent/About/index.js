@@ -130,7 +130,7 @@ export default class AbotUs extends Component {
         <div className="aboutus__container">
           <div className="aboutus__wrapper">
             <div className="aboutus__title-advantage">
-              <h1>advantage</h1>
+              <h1><Translate>advantage</Translate></h1>
             </div>
           <ScrollAnimation delay="0" animateIn="slideInUp" >
             <div className="about__us-content">

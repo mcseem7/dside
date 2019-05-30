@@ -439,9 +439,14 @@
 
 /* Highres */
 @media only screen and (min-width: 1400px) {
-    .description__project{font-size: 40px;}
+    .project__names{padding: 0; }
+    .description__project{font-size: 40px; padding: 0;}
+    .portfolio__datatime__content{padding: 2rem 0;}
     .portfolio__carousel-title h2, .name__task h4, .project__task_portfolio p{font-size: 22px; line-height: 32px;}
-    .portfolio__carousel-title h2{padding-left: .7rem}
+    .name__task{text-align: right;}
+    .portfolio__carousel-title h2 {
+    padding: 0;
+    margin: 2rem 2rem;}
     .name__project h4 {
             font-size: 72px;
         }

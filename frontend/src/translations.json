@@ -3,7 +3,10 @@
     "pl": "Zamów",
     "ru": "Заказать"
   },
-  "What dside?": {
+  "advantage": {
+    "pl": "zaleta",
+    "ru": "преимущество"
+  },"What dside?": {
     "pl": "Czym jest DSIDE?",
     "ru": "Что такое DSIDE?"
   },
