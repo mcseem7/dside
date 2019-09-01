@@ -1,5 +1,6 @@
 import ContactUs from '../../components/CompanyPages/ContactUs'
 import About from '../../components/DynamicContent/About'
+import Pricing from '../../components/DynamicContent/Pricing'
 import Cookies from '../../components/CompanyPages/Cookies'
 import Process from '../../components/DynamicContent/Process'
 
@@ -22,6 +23,15 @@ export const company = [
              ],
         exact: true,
         component: About
+    },
+    {
+        path: [
+            `/en/pricing`,
+            `/ru/pricing`,
+            `/pl/pricing`
+             ],
+        exact: true,
+        component: Pricing
     },
     {
         path: [
