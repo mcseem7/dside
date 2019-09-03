@@ -65,7 +65,7 @@ export default class Pricing extends Component {
       </div>
       <ul className='pricing-feature-list'>
         <li className='pricing-feature'>Преимущества <span className="litee">Lite</span></li>
-        <li className='pricing-feature'>5 модулей</li>
+        <li className='pricing-feature'>5 модулей  <span className="trans2">(Lite+2)</span></li>
         <li className='pricing-feature'>Уникальный дизайн</li>
         <li className='pricing-feature'>Заявки в CRM-систему</li>
         <li className='pricing-feature'>Google Analytics</li>
@@ -87,7 +87,7 @@ export default class Pricing extends Component {
       </div>
       <ul className='pricing-feature-list'>
         <li className='pricing-feature'>Преимущества <span className="classice">Classic</span></li>
-          <li className='pricing-feature'>7 модулей</li>
+          <li className='pricing-feature'>7 модулей  <span className="trans2">(Classic+2)</span></li>
         <li className='pricing-feature'>Тексты от копирайтера</li>
          <li className='pricing-feature'>Разработка УТП</li>
          <li className='pricing-feature'>1 Круг правок</li>
@@ -116,7 +116,7 @@ export default class Pricing extends Component {
       </div>
       <ul className='pricing-feature-list'>
          <li className='pricing-feature'>Преимущества <span className="businesse">Business</span></li>
-         <li className='pricing-feature'>9 модулей</li>
+         <li className='pricing-feature'>9 модулей <span className="trans2">(Business+2)</span></li>
          <li className='pricing-feature'>Эксклюзивный дизайн</li>
          <li className='pricing-feature'>2 круга правок</li>
          <li className='pricing-feature'>Оповещение о заявке</li>

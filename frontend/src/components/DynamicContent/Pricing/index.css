@@ -142,6 +142,7 @@
 .pricing-palden .pricing-feature {
   padding: .8em 0;
 }
+
 .pricing-palden .pricing-action {
   font-weight: bold;
   margin: 1rem auto;
@@ -163,7 +164,9 @@
   transition: background-color 0.3s;
 }
 .trans{opacity: .8;}
-.trans:hover{opacity: 1; -webkit-transition: -webkit-all 0.3s;
+.trans2{opacity: .4;}
+.trans:hover{opacity: 1; -webkit-transition: -webkit-all 0.3s;  transition: all 0.3s; }
+.trans2:hover{opacity: 1; -webkit-transition: -webkit-all 0.3s;
   transition: all 0.3s; }
 
 .pricing-palden .pricing-action:hover, .pricing-palden .pricing-action:focus {
@@ -202,6 +205,29 @@ color: #fff !important;
 .elite-title{color: #707592 !important;}
 .businesse, .classice, .litee{font-family: "DSIDE-Black", sans-serif;}
 .businesse{color: #058EEA}
+
+label {
+    width: 100%;
+}
+
+.card-input-element {
+    display: none;
+}
+
+.card-input {
+    margin: 10px;
+    padding: 00px;
+}
+
+.card-input:hover {
+    cursor: pointer;
+}
+
+.card-input-element:checked + .card-input {
+     box-shadow: 0 0 1px 1px #2ecc71;
+ }
+
+
  /* Fullpage */
 @media only screen and (min-width: 1024px) {
     .dside__what-content{padding: 0 3rem;}
