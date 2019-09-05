@@ -4,7 +4,6 @@ import Translate from 'translate-components'
 import { reactTranslateChangeLanguage } from 'translate-components'
 import Helmet from 'react-helmet-async'
 import Footer from '../../Basic/Footer'
-import  First  from './1.svg';
 import ScrollAnimation from 'react-animate-on-scroll'
 
 export default class Pricing extends Component {
