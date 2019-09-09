@@ -31,7 +31,43 @@ export default class Pricing extends Component {
         <Helmet>
           <title> Dside Pricing </title>
         </Helmet>
-<div className="pricing__wrapper">
+<div className="row">
+              <section className="step-first">
+              <div className="pricing__wrapper">
+          <div className="services-pricing-grid">
+              <div className="services-pricing-item">
+                <div className="pricing-item-descr">
+                    <div className="pricing-item-header"><span>01. </span>Logo</div>
+                    <div className="pricing-item-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </div>
+              <div className="pricing-item-controls">
+                <div className="pricing-item-price"><span>от </span>$240</div>
+                <div className="pricing-item-button pricing-palden"><span className="pricing-action">Button</span></div>
+              </div>
+              </div>
+              <div className="services-pricing-item">
+                <div className="pricing-item-descr">
+                    <div className="pricing-item-header"><span>02. </span>Landing</div>
+                    <div className="pricing-item-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </div>
+              <div className="pricing-item-controls">
+                <div className="pricing-item-price"><span>от </span>$240</div>
+                <div className="pricing-item-button pricing-palden"><span className="pricing-action">Button</span></div>
+              </div>
+              </div>
+              <div className="services-pricing-item">
+                <div className="pricing-item-descr">
+                    <div className="pricing-item-header"><span>03. </span>Promotion</div>
+                    <div className="pricing-item-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </div>
+              <div className="pricing-item-controls">
+                <div className="pricing-item-price"><span>от </span>$240</div>
+                <div className="pricing-item-button pricing-palden"><span className="pricing-action">Button</span></div>
+              </div>
+
+              </div>
+          </div>
+
   <div className='pricing pricing-palden'>
     <div className='pricing-item'>
       <div className='pricing-deco'>
@@ -44,11 +80,11 @@ export default class Pricing extends Component {
               <button className='pricing-action trans'>Заказать</button>
       </div>
       <ul className='pricing-feature-list'>
-        <li className='pricing-feature'>3 модуля</li>
-        <li className='pricing-feature'>Шаблонный дизайн</li>
-        <li className='pricing-feature'>Заявки на email</li>
-        <li className='pricing-feature'>Тексты клиента</li>
-        <li className='pricing-feature'>Доп. модуль $69</li>
+        <li className="pricing-feature">3 модуля</li>
+        <li className="pricing-feature">Шаблонный дизайн</li>
+        <li className="pricing-feature">Заявки на email</li>
+        <li className="pricing-feature">Тексты клиента</li>
+        <li className="pricing-feature">Доп. модуль $69</li>
       </ul>
     </div><div className='pricing-item'>
       <div className='pricing-deco'>
@@ -63,13 +99,13 @@ export default class Pricing extends Component {
               <button className='pricing-action trans'>Заказать</button>
       </div>
       <ul className='pricing-feature-list'>
-        <li className='pricing-feature'>Преимущества <span className="litee">Lite</span></li>
-        <li className='pricing-feature'>5 модулей  <span className="trans2">(Lite+2)</span></li>
-        <li className='pricing-feature'>Уникальный дизайн</li>
-        <li className='pricing-feature'>Заявки в CRM-систему</li>
-        <li className='pricing-feature'>Google Analytics</li>
-        <li className='pricing-feature'>Facebook Pixel</li>
-        <li className='pricing-feature'>Доп. модуль $59</li>
+        <li className="pricing-feature">Преимущества <span className="litee">Lite</span></li>
+        <li className="pricing-feature">5 модулей  <span className="trans2">(Lite+2)</span></li>
+        <li className="pricing-feature">Уникальный дизайн</li>
+        <li className="pricing-feature">Заявки в CRM-систему</li>
+        <li className="pricing-feature">Google Analytics</li>
+        <li className="pricing-feature">Facebook Pixel</li>
+        <li className="pricing-feature">Доп. модуль $59</li>
       </ul>
     </div>
     <div className='pricing-item pricing__item--featured'>
@@ -85,14 +121,14 @@ export default class Pricing extends Component {
               <button className='pricing-action'>Заказать</button>
       </div>
       <ul className='pricing-feature-list'>
-        <li className='pricing-feature'>Преимущества <span className="classice">Classic</span></li>
-          <li className='pricing-feature'>7 модулей  <span className="trans2">(Classic+2)</span></li>
-        <li className='pricing-feature'>Тексты от копирайтера</li>
-         <li className='pricing-feature'>Разработка УТП</li>
-         <li className='pricing-feature'>1 Круг правок</li>
-         <li className='pricing-feature'>OG разметка</li>
-         <li className='pricing-feature'>Редактор текста</li>
-         <li className='pricing-feature'>Доп. модуль $49</li>
+        <li className="pricing-feature">Преимущества <span className="classice">Classic</span></li>
+          <li className="pricing-feature">7 модулей  <span className="trans2">(Classic+2)</span></li>
+        <li className="pricing-feature">Тексты от копирайтера</li>
+         <li className="pricing-feature">Разработка УТП</li>
+         <li className="pricing-feature">1 Круг правок</li>
+         <li className="pricing-feature">OG разметка</li>
+         <li className="pricing-feature">Редактор текста</li>
+         <li className="pricing-feature">Доп. модуль $49</li>
       </ul>
     </div>
     <div className='pricing-item elite'>
@@ -114,16 +150,170 @@ export default class Pricing extends Component {
                <button className='elite-btn'>Заказать</button>
       </div>
       <ul className='pricing-feature-list'>
-         <li className='pricing-feature'>Преимущества <span className="businesse">Business</span></li>
-         <li className='pricing-feature'>9 модулей <span className="trans2">(Business+2)</span></li>
-         <li className='pricing-feature'>Эксклюзивный дизайн</li>
-         <li className='pricing-feature'>2 круга правок</li>
-         <li className='pricing-feature'>Оповещение о заявке</li>
-         <li className='pricing-feature'>Перезвоним за 30 секунд</li>
-         <li className='pricing-feature'>Доп. модуль $39</li>
+         <li className="pricing-feature">Преимущества <span className="businesse">Business</span></li>
+         <li className="pricing-feature">9 модулей <span className="trans2">(Business+2)</span></li>
+         <li className="pricing-feature">Эксклюзивный дизайн</li>
+         <li className="pricing-feature">2 круга правок</li>
+         <li className="pricing-feature">Оповещение о заявке</li>
+         <li className="pricing-feature">Перезвоним за 30 секунд</li>
+         <li className="pricing-feature">Доп. модуль $39</li>
       </ul>
     </div>
   </div>
+</div>
+          </section>
+      <section className="step-second">
+              <div className="steptwo-container">
+                <div className="leftone">
+                    <div className="stepper">Шаг 2/3</div>
+                    <div className="step2-header">Ваш выбор:</div>
+       <div className="planitem">
+              <div className="itemshort">
+          <div className="planname"><div className="pricing-item-header">Landing</div>Пакет <span>Elite</span></div>
+              <div className="planprice">от $231 <button>Less</button></div>
+          </div>
+          <div className="item-details">
+              <ul className='pricing-feature-list'>
+                 <li className="pricing-feature">Преимущества <span className="businesse">Business</span></li>
+                 <li className="pricing-feature">9 модулей <span className="trans2">(Business+2)</span></li>
+                 <li className="pricing-feature">Эксклюзивный дизайн</li>
+                 <li className="pricing-feature">2 круга правок</li>
+                 <li className="pricing-feature">Оповещение о заявке</li>
+                 <li className="pricing-feature">Перезвоним за 30 секунд</li>
+                 <li className="pricing-feature">Доп. модуль $39</li>
+              </ul>
+           <div className="modules"><h3>Модули</h3><span>-</span>9<span></span>+</div>
+          </div>
+          </div>
+          <div className="planitem collapsed">
+              <div className="itemshort">
+          <div className="planname"><div className="pricing-item-header">Logo</div>Пакет <span>Elite</span></div>
+              <div className="planprice">от $431 <button>More</button></div>
+          </div>
+          <div className="item-details">
+              <ul className='pricing-feature-list'>
+                 <li className="pricing-feature">Преимущества <span className="businesse">Business</span></li>
+                 <li className="pricing-feature">9 модулей <span className="trans2">(Business+2)</span></li>
+                 <li className="pricing-feature">Эксклюзивный дизайн</li>
+                 <li className="pricing-feature">2 круга правок</li>
+                 <li className="pricing-feature">Оповещение о заявке</li>
+                 <li className="pricing-feature">Перезвоним за 30 секунд</li>
+                 <li className="pricing-feature">Доп. модуль $39</li>
+              </ul>
+           <div className="modules"><h3>Модули</h3><span>-</span>7<span></span>+</div>
+          </div>
+          </div>
+          <div className="bottom-step2">
+              <div className="total">Всего: $111</div>
+               <div className="pricing-item-button pricing-palden"><span className="pricing-action">Button</span></div>
+          </div>
+                </div>
+              <div className="rightone">
+                        <div className="services-pricing-item">
+                <div className="pricing-item-descr">
+                <div className="pricing-discount-header">
+                    <div className="pricing-item-header"><span>01. </span>Logo</div>
+                    <div className="discount">-35%</div>
+                </div>
+                    <div className="pricing-item-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </div>
+              <div className="pricing-item-controls">
+                <div className="pricing-item-price"><div className="oldprice">$530</div><span>от </span>$240</div>
+                <div className="pricing-item-button pricing-palden"><span className="pricing-action">Button</span></div>
+              </div>
+              </div>
+              <div className="services-pricing-item">
+                <div className="pricing-item-descr">
+                    <div className="pricing-item-header"><span>01. </span>Logo</div>
+                    <div className="pricing-item-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                </div>
+              <div className="pricing-item-controls">
+                <div className="pricing-item-price"><span>от </span>$240</div>
+                <div className="pricing-item-button pricing-palden"><span className="pricing-action">Button</span></div>
+          </div>
+          </div>
+
+
+              </div>
+              </div>
+      </section>
+              <section className="step-third">
+              <div className="stepthree-container">
+                <div className="leftone-3">
+                    <div className="stepper">Шаг 3/3</div>
+                    <div className="step3-header">Почти готово!</div>
+                    <div className="step3-subheder">Осталось выбрать метод оплаты</div>
+                    <div className="s3-payment-items">
+                        <div className="s3-payment-item">
+                            <div className="s3-payment-item-name">Покупка</div>
+                            <div className="s3-payment-item-price">$384</div>
+                            <div className="s3-payment-item-descr">Единоразово</div>
+                        </div>
+                        <div className="s3-payment-item activated">
+                            <div className="s3-payment-item-name">Подписка</div>
+                                <input type="radio" value="male"/> 12 мес <br />
+                                <input type="radio" value="female"/> 24 мес<br />
+                                <input type="radio" value="other"/> 36 мес<br />
+                            <div className="s3-payment-item-price">$384</div>
+                            <div className="s3-payment-item-descr">В месяц</div>
+                        </div>
+                        <div className="s3-payment-item">
+                            <div className="s3-payment-item-name">Партнерка</div>
+                                <input type=""  placeholder="Чеков"/>
+                            <div className="s3-payment-item-price">$384</div>
+                            <div className="s3-payment-item-descr">За чек</div>
+                        </div>
+                    </div>
+                        <div className="s3-final">
+                             <input type=""  placeholder="Имя"/>
+                             <input type=""  placeholder="Телефон"/>
+                             <div className="pricing-item-button pricing-palden"><span className="pricing-action">Button</span></div>
+                        </div>
+                </div>
+              <div className="rightone-3">
+              <div className="s3-total-header">Ваша корзина:</div>
+              <div className="s3-cart-item">
+                 <div className="s3-cart-item-header">
+                    <div className="s3-cart-item-name">Logo</div>
+                    <div className="s3-cart-item-price">$199<button>Less</button><button>Remove</button></div>
+                 </div>
+              <div className="item-details">
+              <ul className='pricing-feature-list'>
+                 <li className="pricing-feature">Преимущества <span className="businesse">Business</span></li>
+                 <li className="pricing-feature">9 модулей <span className="trans2">(Business+2)</span></li>
+                 <li className="pricing-feature">Эксклюзивный дизайн</li>
+                 <li className="pricing-feature">2 круга правок</li>
+                 <li className="pricing-feature">Оповещение о заявке</li>
+                 <li className="pricing-feature">Перезвоним за 30 секунд</li>
+                 <li className="pricing-feature">Доп. модуль $39</li>
+              </ul>
+           <div className="modules"><h3>Модули</h3><span>-</span>9<span></span>+</div>
+          </div>
+              </div>
+              <div className="s3-cart-item collapsed">
+                 <div className="s3-cart-item-header">
+                    <div className="s3-cart-item-name">Logo</div>
+                    <div className="s3-cart-item-price">$199<button>More</button><button>Remove</button></div>
+                 </div>
+              <div className="item-details">
+              <ul className='pricing-feature-list'>
+                 <li className="pricing-feature">Преимущества <span className="businesse">Business</span></li>
+                 <li className="pricing-feature">9 модулей <span className="trans2">(Business+2)</span></li>
+                 <li className="pricing-feature">Эксклюзивный дизайн</li>
+                 <li className="pricing-feature">2 круга правок</li>
+                 <li className="pricing-feature">Оповещение о заявке</li>
+                 <li className="pricing-feature">Перезвоним за 30 секунд</li>
+                 <li className="pricing-feature">Доп. модуль $39</li>
+              </ul>
+           <div className="modules"><h3>Модули</h3><span>-</span>9<span></span>+</div>
+          </div>
+                <div className="s3-cart-bottom">
+                Total : $398
+                </div>
+              </div>
+              </div>
+              </div>
+      </section>
 </div>
       <Footer/>
       </Fragment>
