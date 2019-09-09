@@ -257,6 +257,7 @@ label {
 .activated{border: 1px solid #dcb300;}
 .s3-payment-item-name{font-family: 'DSIDE-Bold', sans-serif; font-size: 18px;}
 .step-third{margin-top: 50px;}
+
 .s3-cart-item-header{font-family: 'DSIDE-Bold',sans-serif; display: flex; flex-direction: row; justify-content: space-between;}
 .s3-final{display: flex; flex-direction: column; justify-content: center; flex: 1 20%;}
 .s3-final input{margin-top: 1em;}
