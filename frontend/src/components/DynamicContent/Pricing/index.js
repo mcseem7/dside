@@ -252,8 +252,8 @@ export default class Pricing extends Component {
                         <div className="s3-payment-item activated">
                             <div className="s3-payment-item-name">Подписка</div>
                                 <input type="radio" value="male"/> 12 мес <br />
-                                <input type="radio" value="female"/> 24 мес<br />
-                                <input type="radio" value="other"/> 36 мес<br />
+                                <input type="radio" value="female"/> 24 мес <span>-13%</span><br />
+                                <input type="radio" value="other"/> 36 мес  <span>-23%</span><br />
                             <div className="s3-payment-item-price">$384</div>
                             <div className="s3-payment-item-descr">В месяц</div>
                         </div>
