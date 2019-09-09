@@ -170,7 +170,7 @@ export default class Pricing extends Component {
        <div className="planitem">
               <div className="itemshort">
           <div className="planname"><div className="pricing-item-header">Landing</div>Пакет <span>Elite</span></div>
-              <div className="planprice">от $231 <button>Less</button></div>
+              <div className="planprice">от $231 <button>Less</button><button>Remove</button></div>
           </div>
           <div className="item-details">
               <ul className='pricing-feature-list'>
@@ -188,7 +188,7 @@ export default class Pricing extends Component {
           <div className="planitem collapsed">
               <div className="itemshort">
           <div className="planname"><div className="pricing-item-header">Logo</div>Пакет <span>Elite</span></div>
-              <div className="planprice">от $431 <button>More</button></div>
+              <div className="planprice">от $431 <button>More</button><button>Remove</button></div>
           </div>
           <div className="item-details">
               <ul className='pricing-feature-list'>
