@@ -1,15 +1,14 @@
 .pricing__wrapper {
         padding-top: 140px;
     }
-
 .pricing {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   -webkit-justify-content: center;
   justify-content: center;
-  width: 100%;
+  width: 90%;
   margin: 0 auto 3em;
 }
 .pricing-item {
@@ -226,8 +225,43 @@ label {
 .card-input-element:checked + .card-input {
      box-shadow: 0 0 1px 1px #2ecc71;
  }
+.services-pricing-grid{display: flex; flex-direction: row; justify-content: space-between; width: 100%; flex-grow: 1;}
+.services-pricing-item{display: flex; flex-direction: column;  height: 180px; background: #fff; flex: 1; border-radius: 3px; padding: 2rem; margin: 0.2em;}
+.pricing-item-descr{display: flex; flex-direction: column; flex-wrap: wrap; margin: 1rem;}
+.pricing-item-controls{display: flex; flex-direction: row; flex-wrap: wrap; margin: 1rem; justify-content: space-between; align-content: center; align-items: center;}
+.pricing-discount-header{display: flex; font-family: 'DSIDE-Bold',sans-serif; font-size: 24px; flex-direction: row; justify-content: space-between;}
+.discount{font-family: 'DSIDE-Bold',sans-serif; font-size: 12px; background: #dc6c1c; color: #fff; padding: 0.6em 1em; border-radius: 3px;}
+.pricing-item-header span{font-family: 'DSIDE-Black',sans-serif; color: #959595; font-size: 14px;}
+.pricing-item-header {font-family: 'DSIDE-Black',sans-serif; font-size: 24px;}
+.pricing-item-price{font-family: 'DSIDE-Bold',sans-serif; font-size: 24px;}
+.pricing-item-price span{font-family: 'DSIDE-Light',sans-serif; font-size: 14px;}
+.pricing-item-button{font-family: 'DSIDE-Bold',sans-serif; font-size: 12px;}
+.pricing-item-content{font-family: 'DSIDE-Light',sans-serif; font-size: 18px;}
+.oldprice{ font-size: 12px; text-decoration: line-through; color: #a2a2a2;}
+.steptwo-container{display: flex;font-family: 'DSIDE-Light',sans-serif; flex-direction: row;}
+.stepthree-container{display: flex;font-family: 'DSIDE-Light',sans-serif; flex-direction: row;}
+.planname{display: flex; flex-direction: row; align-items: center;}
+.itemshort{display: flex; flex-direction: row; justify-content: space-between;}
+.leftone{background: #fff; border-radius: 3px; padding: 2em; flex: 1 60%; flex-direction: column;}
+.leftone-3{background: transparent; border-radius: 3px; padding: 2em; flex: 1 60%; flex-direction: column;}
+.rightone-3{background: #fff; border-radius: 3px; padding: 2em; flex: 1 40%; flex-direction: column;}
+.rightone{flex: 1 40%; flex-direction: column;}
+.stepper{font-family: 'DSIDE-Bold', sans-serif; font-size: 18px;}
+.bottom-step2{display: flex; flex-direction: row; justify-content: space-between;}
+.step2-header{font-family: 'DSIDE-Bold',sans-serif; font-size: 24px;}
+.collapsed .item-details{display: none;}
+.planitem {margin: 1em 0 ;}
+.s3-cart-item{ display: flex; flex-direction: column; padding: 1em 0;}
+.s3-payment-items{ display: flex; flex-direction: row;}
+.s3-payment-item{ display: flex; flex-direction: column; padding: 1em; border: 1px solid #dcdadb; flex: 1 20%;}
+.activated{border: 1px solid #dcb300;}
+.s3-payment-item-name{font-family: 'DSIDE-Bold', sans-serif; font-size: 18px;}
+.step-third{margin-top: 50px;}
 
-
+.s3-cart-item-header{font-family: 'DSIDE-Bold',sans-serif; display: flex; flex-direction: row; justify-content: space-between;}
+.s3-final{display: flex; flex-direction: column; justify-content: center; flex: 1 20%;}
+.s3-final input{margin-top: 1em;}
+.s3-final .pricing-palden{margin-top: 2em;}
  /* Fullpage */
 @media only screen and (min-width: 1024px) {
     .dside__what-content{padding: 0 3rem;}
