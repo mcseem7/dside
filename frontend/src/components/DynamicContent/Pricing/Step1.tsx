@@ -2,7 +2,7 @@ import React from 'react'
 import {createMarkup, Lang, Pack, PricesConfig, Service} from './config'
 import useLang from '../../../hooks/useLang'
 
-export const startsFrom: Lang = {
+export const startsFromLang: Lang = {
     ru: 'от',
     pl: 'от',
     en: 'from',
@@ -14,13 +14,37 @@ export const orderLang: Lang = {
     en: 'Order',
 }
 
-type Step1Props = {
-    config: PricesConfig
-    onSubmit: (options: {
-        serviceIndex: number,
-        packIndex: number
-    }) => any
+export const moreLang: Lang = {
+    ru: 'Больше',
+    pl: 'Больше',
+    en: 'More',
 }
+
+export const lessLang: Lang = {
+    ru: 'Меньше',
+    pl: 'Меньше',
+    en: 'Less',
+}
+
+
+export const removeLang: Lang = {
+    ru: 'Удалить',
+    pl: 'Удалить',
+    en: 'Remove',
+}
+
+export const modulesLang: Lang = {
+    ru: 'Модули',
+    pl: 'Модули',
+    en: 'Modules',
+}
+
+export const packageLang: Lang = {
+    ru: 'Пакет',
+    pl: 'Пакет',
+    en: 'Package',
+}
+
 
 const packSvgs = [
     <svg className='pricing-deco-img' enable-background='new -558 659.3  300 100' height='100px' id='Layer_1' preserveAspectRatio='none' version='1.1' viewBox='-558 659.3  300 100' width='300px' x='0px' y='0px'>
@@ -49,6 +73,15 @@ const packSvgs = [
     </svg>
 ]
 
+type Step1Props = {
+    config: PricesConfig
+    onSubmit: (options: {
+        serviceIndex: number,
+        packIndex: number
+    }) => any
+}
+
+
 export default ({config, onSubmit}: Step1Props) => {
 
     const [index, setIndex] = React.useState(0)
@@ -66,10 +99,10 @@ export default ({config, onSubmit}: Step1Props) => {
                             </div>
                             <div className="pricing-item-controls">
                                 <div className="pricing-item-price">
-                                    <span>{useLang(startsFrom)} </span>${service.packs[0].price}
+                                    <span>{useLang(startsFromLang)} </span>${service.packs[0].price}
                                 </div>
                                 <div className="pricing-item-button pricing-palden"><span
-                                    className="pricing-action">Button</span></div>
+                                    className="pricing-action">{useLang('Купить', 'Buy', 'Buy')}</span></div>
                             </div>
                         </div>
                     )
@@ -81,7 +114,7 @@ export default ({config, onSubmit}: Step1Props) => {
                         <div className={'pricing-item ' + (packIndex === 3) ? 'elite' : ''}>
                             <div className={'pricing-deco' + (packIndex === 3) ? 'elite' : ''}>
                                 {packSvgs[index]}
-                                <div className='pricing-price'><span className='pricing-period'>{useLang(startsFrom)}</span><span
+                                <div className='pricing-price'><span className='pricing-period'>{useLang(startsFromLang)}</span><span
                                     className='pricing-currency'>$</span>{pack.price}
                                 </div>
                                 <h3 className='pricing-title lite'>{useLang(pack.name)}</h3>

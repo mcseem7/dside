@@ -1,4 +1,5 @@
-export default (lang) => {
+export default (langOrRu, en = langOrRu, pl = en) => {
+    const lang = typeof langOrRu === 'string' ? { ru: langOrRu, en, pl } : langOrRu;
     let id = 'ru';
     if (window.location.pathname.startsWith('/pl'))
         id = 'pl';

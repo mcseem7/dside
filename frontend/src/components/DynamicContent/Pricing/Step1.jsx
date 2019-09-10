@@ -1,19 +1,42 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var react_1 = require("react");
-var config_1 = require("./config");
-var useLang_1 = require("../../../hooks/useLang");
-var startsFrom = {
+import React from 'react';
+import { createMarkup } from './config';
+import useLang from '../../../hooks/useLang';
+export const startsFromLang = {
     ru: 'от',
     pl: 'от',
     en: 'from',
 };
-var orderLang = {
+export const orderLang = {
     ru: 'Заказать',
     pl: 'Заказать',
     en: 'Order',
 };
-var packSvgs = [
+export const moreLang = {
+    ru: 'Больше',
+    pl: 'Больше',
+    en: 'More',
+};
+export const lessLang = {
+    ru: 'Меньше',
+    pl: 'Меньше',
+    en: 'Less',
+};
+export const removeLang = {
+    ru: 'Удалить',
+    pl: 'Удалить',
+    en: 'Remove',
+};
+export const modulesLang = {
+    ru: 'Модули',
+    pl: 'Модули',
+    en: 'Modules',
+};
+export const packageLang = {
+    ru: 'Пакет',
+    pl: 'Пакет',
+    en: 'Package',
+};
+const packSvgs = [
     <svg className='pricing-deco-img' enable-background='new -558 659.3  300 100' height='100px' id='Layer_1' preserveAspectRatio='none' version='1.1' viewBox='-558 659.3  300 100' width='300px' x='0px' y='0px'>
         <path className='deco-layer deco-layer--4' d='M-585.3,700.6c0,0,218.4,52.6,370.4-16v84.3h-369.9L-585.3,700.6z' fill='#FFF'></path>
     </svg>,
@@ -39,46 +62,39 @@ var packSvgs = [
         <path className='deco-layer deco-layer--4 wow' d='M-585.3,700.6c0,0,218.4,52.6,370.4-16v84.3h-369.9L-585.3,700.6z' fill='#2E2950'></path>
     </svg>
 ];
-exports.default = (function (_a) {
-    var config = _a.config, onSubmit = _a.onSubmit;
-    var _b = react_1.default.useState(0), index = _b[0], setIndex = _b[1];
-    var selectedSevice = config.services[index];
+export default ({ config, onSubmit }) => {
+    const [index, setIndex] = React.useState(0);
+    const selectedSevice = config.services[index];
     return <section className="step-first">
         <div className="pricing__wrapper">
             <div className="services-pricing-grid">
-                {config.services.map(function (service, index) {
-        return <div className="services-pricing-item" onClick={function () { return setIndex(index); }}>
+                {config.services.map((service, index) => <div className="services-pricing-item" onClick={() => setIndex(index)}>
                             <div className="pricing-item-descr">
-                                <div className="pricing-item-header"><span>{Number(index + 1)}. </span>{useLang_1.default(service.name)}</div>
-                                <div className="pricing-item-content">{useLang_1.default(service.description)}
+                                <div className="pricing-item-header"><span>{Number(index + 1)}. </span>{useLang(service.name)}</div>
+                                <div className="pricing-item-content">{useLang(service.description)}
                                 </div>
                             </div>
                             <div className="pricing-item-controls">
                                 <div className="pricing-item-price">
-                                    <span>{useLang_1.default(startsFrom)} </span>${service.packs[0].price}
+                                    <span>{useLang(startsFromLang)} </span>${service.packs[0].price}
                                 </div>
-                                <div className="pricing-item-button pricing-palden"><span className="pricing-action">Button</span></div>
+                                <div className="pricing-item-button pricing-palden"><span className="pricing-action">{useLang('Купить', 'Buy', 'Buy')}</span></div>
                             </div>
-                        </div>;
-    })}
+                        </div>)}
             </div>
             <div className='pricing pricing-palden'>
-                {selectedSevice.packs.map(function (pack, packIndex) {
-        return <div className={'pricing-item ' + (packIndex === 3) ? 'elite' : ''}>
+                {selectedSevice.packs.map((pack, packIndex) => <div className={'pricing-item ' + (packIndex === 3) ? 'elite' : ''}>
                             <div className={'pricing-deco' + (packIndex === 3) ? 'elite' : ''}>
                                 {packSvgs[index]}
-                                <div className='pricing-price'><span className='pricing-period'>{useLang_1.default(startsFrom)}</span><span className='pricing-currency'>$</span>{pack.price}
+                                <div className='pricing-price'><span className='pricing-period'>{useLang(startsFromLang)}</span><span className='pricing-currency'>$</span>{pack.price}
                                 </div>
-                                <h3 className='pricing-title lite'>{useLang_1.default(pack.name)}</h3>
-                                <button className='pricing-action trans' onClick={function () {
-            return onSubmit({ packIndex: packIndex, serviceIndex: index });
-        }}>{useLang_1.default(orderLang)}</button>
+                                <h3 className='pricing-title lite'>{useLang(pack.name)}</h3>
+                                <button className='pricing-action trans' onClick={() => onSubmit({ packIndex, serviceIndex: index })}>{useLang(orderLang)}</button>
                             </div>
-                            <ul className='pricing-feature-list' dangerouslySetInnerHTML={config_1.createMarkup(useLang_1.default(pack.featureDescriptions))}>
+                            <ul className='pricing-feature-list' dangerouslySetInnerHTML={createMarkup(useLang(pack.featureDescriptions))}>
                             </ul>
-                        </div>;
-    })}
+                        </div>)}
             </div>
         </div>
     </section>;
-});
+};

@@ -1,13 +1,15 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-function createMarkup(value) { return { __html: value }; }
-exports.createMarkup = createMarkup;
+export function createMarkup(value) { return { __html: value }; }
 ;
-exports.service = {
+export const service = {
     name: {
         ru: "Logo",
         en: "Logo",
         pl: "Logo",
+    },
+    moduleLang: {
+        ru: 'Эскиз',
+        en: 'Draft',
+        pl: 'Набросок'
     },
     description: {
         ru: 'RU Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -21,8 +23,9 @@ exports.service = {
                 en: "Lite",
                 pl: "Lite",
             },
-            price: 400,
+            price: 299,
             modules: 3,
+            modulePrice: 59,
             featureDescriptions: {
                 ru: '<li className="pricing-feature">3 модуля</li>\n' +
                     '<li className="pricing-feature">Шаблонный дизайн</li>\n' +
@@ -49,6 +52,7 @@ exports.service = {
             },
             price: 400,
             modules: 3,
+            modulePrice: 49,
             featureDescriptions: {
                 ru: '<li className="pricing-feature">3 модуля</li>\n' +
                     '<li className="pricing-feature">Шаблонный дизайн</li>\n' +
@@ -73,8 +77,36 @@ exports.service = {
                 en: "Business",
                 pl: "Business",
             },
-            price: 400,
+            price: 600,
             modules: 3,
+            modulePrice: 39,
+            featureDescriptions: {
+                ru: '<li className="pricing-feature">3 модуля</li>\n' +
+                    '<li className="pricing-feature">Шаблонный дизайн</li>\n' +
+                    '<li className="pricing-feature">Заявки на email</li>\n' +
+                    '<li className="pricing-feature">Тексты клиента</li>\n' +
+                    '<li className="pricing-feature">Доп. модуль $69</li>',
+                en: '<li className="pricing-feature">3 модуля</li>\n' +
+                    '<li className="pricing-feature">Шаблонный дизайн</li>\n' +
+                    '<li className="pricing-feature">Заявки на email</li>\n' +
+                    '<li className="pricing-feature">Тексты клиента</li>\n' +
+                    '<li className="pricing-feature">Доп. модуль $69</li>',
+                pl: '<li className="pricing-feature">3 модуля</li>\n' +
+                    '<li className="pricing-feature">Шаблонный дизайн</li>\n' +
+                    '<li className="pricing-feature">Заявки на email</li>\n' +
+                    '<li className="pricing-feature">Тексты клиента</li>\n' +
+                    '<li className="pricing-feature">Доп. модуль $69</li>',
+            }
+        },
+        {
+            name: {
+                ru: "Elite",
+                en: "Elite",
+                pl: "Elite",
+            },
+            price: 800,
+            modules: 3,
+            modulePrice: 29,
             featureDescriptions: {
                 ru: '<li className="pricing-feature">3 модуля</li>\n' +
                     '<li className="pricing-feature">Шаблонный дизайн</li>\n' +
@@ -95,11 +127,11 @@ exports.service = {
         }
     ]
 };
-var pricesConfig = {
+const pricesConfig = {
     services: [
-        exports.service,
-        exports.service,
-        exports.service,
+        service,
+        service,
+        service,
     ]
 };
-exports.default = pricesConfig;
+export default pricesConfig;

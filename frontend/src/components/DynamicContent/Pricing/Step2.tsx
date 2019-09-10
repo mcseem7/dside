@@ -1,12 +1,10 @@
 import React from 'react'
-import {createMarkup, Lang, Pack, PricesConfig, Service} from './config'
+import {createMarkup, Lang, Order, Pack, PricesConfig, Service} from './config'
 import useLang from '../../../hooks/useLang'
-import {startsFrom} from './Step1'
+import {modulesLang, moreLang, packageLang, removeLang, startsFromLang} from './Step1'
 
 export type Step2Props = {
-    onSubmit: (options: {
-
-    }) => any
+    onSubmit: (options: Partial<Order>) => any
     serviceIndex: number
     packIndex: number
     config: PricesConfig
@@ -24,10 +22,17 @@ export const choiceLang: Lang = {
     en: 'You choice',
 }
 
+export const nextLang: Lang = {
+    ru: 'Далее',
+    pl: 'Далее',
+    en: 'Next',
+}
 
-export default ({onSubmit, packIndex, serviceIndex, config}: Step2Props) => {
+export default ({onSubmit, packIndex = 0, serviceIndex = 0, config}: Step2Props) => {
+    const service = config.services[serviceIndex]
+    const pack = service.packs[packIndex]
 
-    const pack = config.services[serviceIndex].packs[packIndex]
+    const otherServices = config.services.filter( (value, index) => index !==packIndex)
     return        <section className="step-second">
         <div className="steptwo-container">
             <div className="leftone">
@@ -36,14 +41,14 @@ export default ({onSubmit, packIndex, serviceIndex, config}: Step2Props) => {
                 <div className="planitem">
                     <div className="itemshort">
                         <div className="planname"><div className="pricing-item-header">Landing</div>Пакет <span>Elite</span></div>
-                        <div className="planprice">{useLang(startsFrom)} $231 <button>Less</button><button>Remove</button></div>
+                        <div className="planprice">{useLang(startsFromLang)} $231 <button>Less</button><button>Remove</button></div>
                     </div>
                     <div className="item-details">
                         <ul className='pricing-feature-list' dangerouslySetInnertHTML={createMarkup(useLang(pack.featureDescriptions))}>
 
                         </ul>
                         <div className="modules">
-                            <h3>Модули</h3>
+                            <h3>{useLang(service.moduleLang)}</h3>
                             <span>-</span>
                                 9
                             <span>+</span>
@@ -52,18 +57,25 @@ export default ({onSubmit, packIndex, serviceIndex, config}: Step2Props) => {
                 </div>
                 <div className="planitem collapsed">
                     <div className="itemshort">
-                        <div className="planname"><div className="pricing-item-header">Logo</div>Пакет <span>Elite</span></div>
-                        <div className="planprice">от $431 <button>More</button><button>Remove</button></div>
+                        <div className="planname"><div className="pricing-item-header">Logo</div>{useLang(packageLang)} <span>Elite</span></div>
+                        <div className="planprice">от $431 <button>{useLang(moreLang)}</button><button>{useLang(removeLang)}</button></div>
                     </div>
                     <div className="item-details">
                         <ul className='pricing-feature-list' >
                         </ul>
-                        <div className="modules"><h3>Модули</h3><span>-</span>7<span></span>+</div>
+                        <div className="modules"><h3>{useLang(modulesLang)}</h3><span>-</span>7<span></span>+</div>
                     </div>
                 </div>
                 <div className="bottom-step2">
-                    <div className="total">Всего: $111</div>
-                    <div className="pricing-item-button pricing-palden"><span className="pricing-action">Button</span></div>
+                    <div className="total">{useLang('Итого', 'Total', 'Итого')}: $111</div>
+                    <div className="pricing-item-button pricing-palden" onClick={
+                        () =>
+                            onSubmit({})
+                    }>
+                        <span className="pricing-action" >
+                            {useLang(nextLang)}
+                        </span>
+                    </div>
                 </div>
             </div>
             <div className="rightone">
@@ -77,7 +89,7 @@ export default ({onSubmit, packIndex, serviceIndex, config}: Step2Props) => {
                     </div>
                     <div className="pricing-item-controls">
                         <div className="pricing-item-price"><div className="oldprice">$530</div><span>от </span>$240</div>
-                        <div className="pricing-item-button pricing-palden"><span className="pricing-action">Button</span></div>
+                        <div className="pricing-item-button pricing-palden"><span className="pricing-action">{useLang('Добавить', 'Add', 'Add')}</span></div>
                     </div>
                 </div>
                 <div className="services-pricing-item">
@@ -86,7 +98,7 @@ export default ({onSubmit, packIndex, serviceIndex, config}: Step2Props) => {
                         <div className="pricing-item-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
                     </div>
                     <div className="pricing-item-controls">
-                        <div className="pricing-item-price"><span>от </span>$240</div>
+                        <div className="pricing-item-price"><span>{useLang(startsFromLang)} </span>$240</div>
                         <div className="pricing-item-button pricing-palden"><span className="pricing-action">Button</span></div>
                     </div>
                 </div>
