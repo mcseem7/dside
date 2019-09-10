@@ -31,13 +31,11 @@ export type Order = {
     addons: []
     phone: string
     name: string
-    totalPrice
-} & Bill
-
-export type Bill =
-    { bill: 'once'} |
-    { bill: 'periodic', term: 12 | 24 | 36} |
-    { bill: 'check', count: number}
+    totalPrice: number
+    bill: 'once' | 'periodic' | 'check'
+    term: 12 | 24 | 36
+    count: number
+}
 
 export function createMarkup(value: string) { return {__html: value}; };
 

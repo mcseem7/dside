@@ -41,7 +41,7 @@ export default ({onSubmit, packIndex = 0, serviceIndex = 0, config}: Step2Props)
                 <div className="planitem">
                     <div className="itemshort">
                         <div className="planname"><div className="pricing-item-header">Landing</div>Пакет <span>Elite</span></div>
-                        <div className="planprice">{useLang(startsFromLang)} $231 <button>Less</button><button>Remove</button></div>
+                        <div className="planprice">{useLang(startsFromLang)} ${pack.price} <button>Less</button><button>Remove</button></div>
                     </div>
                     <div className="item-details">
                         <ul className='pricing-feature-list' dangerouslySetInnertHTML={createMarkup(useLang(pack.featureDescriptions))}>
@@ -58,7 +58,7 @@ export default ({onSubmit, packIndex = 0, serviceIndex = 0, config}: Step2Props)
                 <div className="planitem collapsed">
                     <div className="itemshort">
                         <div className="planname"><div className="pricing-item-header">Logo</div>{useLang(packageLang)} <span>Elite</span></div>
-                        <div className="planprice">от $431 <button>{useLang(moreLang)}</button><button>{useLang(removeLang)}</button></div>
+                        <div className="planprice">от ${pack.price} <button>{useLang(moreLang)}</button><button>{useLang(removeLang)}</button></div>
                     </div>
                     <div className="item-details">
                         <ul className='pricing-feature-list' >

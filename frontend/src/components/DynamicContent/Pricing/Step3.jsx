@@ -13,9 +13,16 @@ export const modulesLang = {
     ru: 'модули',
 };
 export default ({ config, onSubmit, value }) => {
-    const [order, setOrder] = React.useState({});
+    const [order, setOrder] = React.useState({ bill: 'once', term: 12, count: 100 });
+    const price = config.services[value.serviceIndex].packs[value.packIndex].price;
     const patchOrder = (patch) => setOrder(Object.assign({}, order, patch));
     const isOrderDisabled = order.phone && order.name;
+    const checkPrice = price * 1.4;
+    let monthPrice = price / 12;
+    if (order.term === 24)
+        monthPrice = price * 1.4 * 0.87 / 24;
+    if (order.term === 36)
+        monthPrice = price * 1.4 * 0.77 / 36;
     return (<section className="step-third">
             <div className="stepthree-container">
                 <div className="leftone-3">
@@ -32,39 +39,48 @@ export default ({ config, onSubmit, value }) => {
     })}
                     </div>
                     <div className="s3-payment-items">
-                        <div className="s3-payment-item">
+                        <div className={"s3-payment-item " + (order.bill === 'once' ? ' activated' : '')} onClick={() => patchOrder({ bill: 'once' })}>
                             <div className="s3-payment-item-name">{useLang({
         en: 'Покупка',
         ru: 'Покупка',
         pl: 'Покупка',
     })}</div>
-                            <div className="s3-payment-item-price">$384</div>
+                            <div className="s3-payment-item-price">${price}</div>
                             <div className="s3-payment-item-descr">{useLang({
         en: 'Единоразово',
         ru: 'Единоразово',
         pl: 'Единоразово',
     })}</div>
                         </div>
-                        <div className="s3-payment-item activated">
+                        <div className={"s3-payment-item " + (order.bill === 'periodic' ? ' activated' : '')} onClick={() => patchOrder({ bill: 'periodic' })}>
                             <div className="s3-payment-item-name">{useLang({
         en: 'Подписка',
         ru: 'Подписка',
         pl: 'Подписка',
     })}</div>
-                            <input type="radio" value="male"/> 12 {useLang(monthShortLang)} <br />
-                            <input type="radio" value="female"/> 24 {useLang(monthShortLang)} <span>-13%</span><br />
-                            <input type="radio" value="other"/> 36 {useLang(monthShortLang)}  <span>-23%</span><br />
-                            <div className="s3-payment-item-price">$384</div>
+                            <input type="radio" value="male" checked={order.term === 12} onChange={(e) => {
+        if (e.target.checked)
+            patchOrder({ term: 12 });
+    }}/> 12 {useLang(monthShortLang)} <br />
+                            <input type="radio" value="female" checked={order.term === 24} onChange={(e) => {
+        if (e.target.checked)
+            patchOrder({ term: 24 });
+    }}/> 24 {useLang(monthShortLang)} <span>-13%</span><br />
+                            <input type="radio" value="other" checked={order.term === 36} onChange={(e) => {
+        if (e.target.checked)
+            patchOrder({ term: 36 });
+    }}/> 36 {useLang(monthShortLang)}  <span>-23%</span><br />
+                            <div className="s3-payment-item-price">${monthPrice}</div>
                             <div className="s3-payment-item-descr">{useLang({
         ru: 'В месяц',
         pl: 'В месяц',
         en: 'В месяц',
     })}</div>
                         </div>
-                        <div className="s3-payment-item">
+                        <div className={"s3-payment-item " + (order.bill === 'check' ? ' activated' : '')} onClick={() => patchOrder({ bill: 'check' })}>
                             <div className="s3-payment-item-name">{useLang('Партнёрка', 'Patnership', 'Pshe....')}</div>
-                            <input type="" placeholder="Чеков"/>
-                            <div className="s3-payment-item-price">$384</div>
+                            <input type="" placeholder="Чеков" value={order.count} onChange={(e) => patchOrder({ count: Number(e.target.value) || 1 })}/>
+                            <div className="s3-payment-item-price">${Math.ceil(checkPrice / order.count * 100) / 100}</div>
                             <div className="s3-payment-item-descr">{useLang('за чек', 'per one check')}</div>
                         </div>
                     </div>

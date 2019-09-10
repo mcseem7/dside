@@ -83,8 +83,8 @@ export default ({ config, onSubmit }) => {
                         </div>)}
             </div>
             <div className='pricing pricing-palden'>
-                {selectedSevice.packs.map((pack, packIndex) => <div className={'pricing-item ' + (packIndex === 3) ? 'elite' : ''}>
-                            <div className={'pricing-deco' + (packIndex === 3) ? 'elite' : ''}>
+                {selectedSevice.packs.map((pack, packIndex) => <div className={'pricing-item ' + ((packIndex === 3) ? 'elite' : '')}>
+                            <div className={'pricing-deco' + ((packIndex === 3) ? 'elite' : '')}>
                                 {packSvgs[index]}
                                 <div className='pricing-price'><span className='pricing-period'>{useLang(startsFromLang)}</span><span className='pricing-currency'>$</span>{pack.price}
                                 </div>
