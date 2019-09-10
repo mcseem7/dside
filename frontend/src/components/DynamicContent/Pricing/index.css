@@ -1,6 +1,6 @@
 .pricing__wrapper {
-        padding-top: 140px;
-    }
+  padding-top: 140px;
+}
 .pricing {
   display: -webkit-flex;
   display: flex;
@@ -85,12 +85,12 @@
 .pricing-palden .pricing-item:hover .deco-layer--1 {
   -webkit-transform: translate3d(15px, 0, 0);
   transform: translate3d(15px, 0, 0);
-     -webkit-animation: flash .7s forwards linear .16s;
+  -webkit-animation: flash .7s forwards linear .16s;
   animation: flash .7s forwards linear .16s;
 }
 .pricing-palden .pricing-item:hover .golden{ -webkit-animation: flash 0.7s forwards linear 0.16s;
-    -moz-animation: flash 0.7s forwards linear 0.16s;
-    animation: flash 0.7s forwards linear 0.16s;}
+  -moz-animation: flash 0.7s forwards linear 0.16s;
+  animation: flash 0.7s forwards linear 0.16s;}
 .pricing-palden .pricing-item:hover .deco-layer--2 {
   -webkit-transform: translate3d(-15px, 0, 0);
   transform: translate3d(-15px, 0, 0);
@@ -119,13 +119,13 @@
   vertical-align: middle;
 }
 .pricing-palden .pricing-period {
-      font-size: 0.2em;
-    color: #889ac8;
-    padding: 0 1em 0em 0em;
-    font-style: normal;
+  font-size: 0.2em;
+  color: #889ac8;
+  padding: 0 1em 0em 0em;
+  font-style: normal;
   vertical-align: middle;
   opacity: .5;
-    margin-left: -2.25em;
+  margin-left: -2.25em;
 }
 .pricing-palden .pricing__sentence {
   font-weight: bold;
@@ -151,13 +151,13 @@
   color: #FFF;
   font-family: 'DSIDE-Bold',sans-serif;
   -webkit-box-shadow: 0 2px 5px rgba(0,130,229,.1), 0 2px 5px rgba(66,32,160,.1);
-    box-shadow: 0 2px 5px rgba(0,130,229,.1), 0 2px 5px rgba(66,32,160,.1);
-    background: rgb(66,32,160);
-    background: -webkit-linear-gradient(-45deg, rgba(66,32,160,1) 0%,rgba(0,130,229,1) 100%);
-    background: -webkit-linear-gradient(315deg, rgba(66,32,160,1) 0%,rgba(0,130,229,1) 100%);
-    background: -o-linear-gradient(315deg, rgba(66,32,160,1) 0%,rgba(0,130,229,1) 100%);
-    background: linear-gradient(135deg, rgba(66,32,160,1) 0%,rgba(0,130,229,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4220a0', endColorstr='#0082e5',GradientType=1 );
+  box-shadow: 0 2px 5px rgba(0,130,229,.1), 0 2px 5px rgba(66,32,160,.1);
+  background: rgb(66,32,160);
+  background: -webkit-linear-gradient(-45deg, rgba(66,32,160,1) 0%,rgba(0,130,229,1) 100%);
+  background: -webkit-linear-gradient(315deg, rgba(66,32,160,1) 0%,rgba(0,130,229,1) 100%);
+  background: -o-linear-gradient(315deg, rgba(66,32,160,1) 0%,rgba(0,130,229,1) 100%);
+  background: linear-gradient(135deg, rgba(66,32,160,1) 0%,rgba(0,130,229,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4220a0', endColorstr='#0082e5',GradientType=1 );
   border-radius: 30px;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
@@ -178,12 +178,12 @@
 .wow {fill:url(#MyGradient); }
 .elite {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2b2456+0,2e2950+100 */
- background-image: radial-gradient( circle at 50% 0,#3a416f,#21243d ) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-color: #fff !important;
+  background-image: radial-gradient( circle at 50% 0,#3a416f,#21243d ) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  color: #fff !important;
 }
 .elite .pricing-price{color: #fff;}
 .elite-btn {
-   font-weight: bold;
+  font-weight: bold;
   margin: 1rem auto;
   padding: 1em 2em;
   z-index: 15;
@@ -191,10 +191,10 @@ color: #fff !important;
   color: #FFF;
   font-family: 'DSIDE-Bold',sans-serif;
   -webkit-box-shadow: 0 2px 5px rgba(0,130,229,.1), 0 2px 5px rgba(66,32,160,.1);
-    box-shadow: 0 2px 5px rgba(0,130,229,.1), 0 2px 5px rgba(66,32,160,.1);
-    background: transparent;
+  box-shadow: 0 2px 5px rgba(0,130,229,.1), 0 2px 5px rgba(66,32,160,.1);
+  background: transparent;
 
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4220a0', endColorstr='#0082e5',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4220a0', endColorstr='#0082e5',GradientType=1 );
   border-radius: 30px;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
@@ -206,25 +206,25 @@ color: #fff !important;
 .businesse{color: #058EEA}
 
 label {
-    width: 100%;
+  width: 100%;
 }
 
 .card-input-element {
-    display: none;
+  display: none;
 }
 
 .card-input {
-    margin: 10px;
-    padding: 00px;
+  margin: 10px;
+  padding: 00px;
 }
 
 .card-input:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .card-input-element:checked + .card-input {
-     box-shadow: 0 0 1px 1px #2ecc71;
- }
+  box-shadow: 0 0 1px 1px #2ecc71;
+}
 .services-pricing-grid{display: flex; flex-direction: row; justify-content: space-between; width: 100%; flex-grow: 1;}
 .services-pricing-item{display: flex; flex-direction: column;  height: 180px; background: #fff; flex: 1; border-radius: 3px; padding: 2rem; margin: 0.2em;}
 .pricing-item-descr{display: flex; flex-direction: column; flex-wrap: wrap; margin: 1rem;}
@@ -262,15 +262,15 @@ label {
 .s3-final{display: flex; flex-direction: column; justify-content: center; flex: 1 20%;}
 .s3-final input{margin-top: 1em;}
 .s3-final .pricing-palden{margin-top: 2em;}
- /* Fullpage */
+/* Fullpage */
 @media only screen and (min-width: 1024px) {
-    .dside__what-content{padding: 0 3rem;}
-    .dside__business_process:nth-child(1){margin-left: 3rem;}
-     .description__business-process p{
-        font-size: .8rem;
-    }
+  .dside__what-content{padding: 0 3rem;}
+  .dside__business_process:nth-child(1){margin-left: 3rem;}
+  .description__business-process p{
+    font-size: .8rem;
+  }
 }/* Fullpage */
 @media only screen and (min-width: 1400px) {
-    .dside__red-logo{padding: 0 1rem 0 5rem;}
-    .dside__red-logo img{width: 60%;}
+  .dside__red-logo{padding: 0 1rem 0 5rem;}
+  .dside__red-logo img{width: 60%;}
 }

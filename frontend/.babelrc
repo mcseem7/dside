@@ -1,4 +1,9 @@
 {
   "presets": ["env"],
-  "plugins": ["transform-object-rest-spread","loadable-components/babel","babel-plugin-dynamic-import-node","babel-plugin-dynamic-import-node"]
+  "plugins": [
+    "transform-object-rest-spread",
+    "loadable-components/babel",
+    "babel-plugin-dynamic-import-node",
+    "babel-plugin-dynamic-import-node"
+  ]
 }

@@ -2,7 +2,7 @@ import ContactUs from '../../components/CompanyPages/ContactUs'
 import About from '../../components/DynamicContent/About'
 import Pricing from '../../components/DynamicContent/Pricing'
 import Cookies from '../../components/CompanyPages/Cookies'
-import Process from '../../components/DynamicContent/Process'
+import Process from '../../components/DynamicContent/Process/'
 
 
 export const company = [
