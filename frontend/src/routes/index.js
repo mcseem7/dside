@@ -3,7 +3,7 @@ import {company} from './company'
 import { blog } from "./blog";
 import { portfolio } from "./portfolio";
 import NotFound from '../components/Basic/NotFound'
-
+import Calculator from '../components/CompanyPages/calculator/'
 
 import Main from '../components/DynamicContent/Main'
 
@@ -23,6 +23,11 @@ const routes = [
     ...blog,
     ...portfolio,
     ...process,
+    {
+        exact: true,
+        path: '/ru/calculator',
+        component: Calculator,
+    },
     {
         exact: false,
         path: '*',
