@@ -13,7 +13,7 @@ export const modulesLang = {
     ru: 'модули',
 };
 export default ({ config, onSubmit, value }) => {
-    const [order, setOrder] = React.useState({ bill: 'once', term: 12, count: 100 });
+    const [order, setOrder] = React.useState(Object.assign({ bill: 'once', term: 12, count: 100 }, value));
     const price = config.services[value.serviceIndex].packs[value.packIndex].price;
     const service = config.services[value.serviceIndex];
     const pack = service.packs[value.packIndex];
@@ -62,15 +62,16 @@ export default ({ config, onSubmit, value }) => {
     })}</div>
                             <input type="radio" value="male" checked={order.term === 12} onChange={(e) => {
         if (e.target.checked)
-            patchOrder({ term: 12 });
+            patchOrder({ term: 12, bill: 'periodic' });
     }}/> 12 {useLang(monthShortLang)} <br />
                             <input type="radio" value="female" checked={order.term === 24} onChange={(e) => {
-        if (e.target.checked)
-            patchOrder({ term: 24 });
+        if (e.target.checked) {
+            patchOrder({ term: 24, bill: 'periodic' });
+        }
     }}/> 24 {useLang(monthShortLang)} <span>-13%</span><br />
                             <input type="radio" value="other" checked={order.term === 36} onChange={(e) => {
         if (e.target.checked)
-            patchOrder({ term: 36 });
+            patchOrder({ term: 36, bill: 'periodic' });
     }}/> 36 {useLang(monthShortLang)}  <span>-23%</span><br />
                             <div className="s3-payment-item-price">${monthPrice}</div>
                             <div className="s3-payment-item-descr">{useLang({
@@ -97,7 +98,7 @@ export default ({ config, onSubmit, value }) => {
         en: 'Phone',
         pl: 'Телефон',
     })}/>
-                        <div className="pricing-item-button pricing-palden" onClick={() => (!isOrderDisabled) &&
+                        <div className="pricing-item-button pricing-palden" style={(!isOrderDisabled) ? { opacity: 0.3 } : {}} onClick={() => (!isOrderDisabled) &&
         onSubmit(order)}><span className="pricing-action">{useLang('Заказать')}</span></div>
                     </div>
                 </div>

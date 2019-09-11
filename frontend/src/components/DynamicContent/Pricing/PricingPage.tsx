@@ -21,13 +21,13 @@ export default () => {
         setStep(1)
     }
     const onStep2 = (updatedOrder: Partial<Order>) => {
-        setOrder({...order, updatedOrder})
+        setOrder({...order, ...updatedOrder})
         setStep(2)
 
     }
 
     const onStep3 = (updatedOrder: Partial<Order>) => {
-        setOrder({...order, updatedOrder})
+        setOrder({...order, ...updatedOrder})
         setStep(0)
         alert(useLang('Ваш заказ успешно отправлен на обработку', 'Your order is on a way'))
     }

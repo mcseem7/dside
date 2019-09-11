@@ -14,11 +14,11 @@ export default () => {
         setStep(1);
     };
     const onStep2 = (updatedOrder) => {
-        setOrder(Object.assign({}, order, { updatedOrder }));
+        setOrder(Object.assign({}, order, updatedOrder));
         setStep(2);
     };
     const onStep3 = (updatedOrder) => {
-        setOrder(Object.assign({}, order, { updatedOrder }));
+        setOrder(Object.assign({}, order, updatedOrder));
         setStep(0);
         alert(useLang('Ваш заказ успешно отправлен на обработку', 'Your order is on a way'));
     };

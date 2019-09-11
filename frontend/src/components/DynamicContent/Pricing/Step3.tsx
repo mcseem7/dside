@@ -25,7 +25,7 @@ export const modulesLang: Lang = {
 
 
 export default ({config, onSubmit, value}: Step3Props) => {
-    const [order, setOrder] = React.useState({bill: 'once', term: 12, count: 100} as Partial<Order>)
+    const [order, setOrder] = React.useState({bill: 'once', term: 12, count: 100, ...value} as Partial<Order>)
     const price = config.services[value.serviceIndex].packs[value.packIndex].price
     const service = config.services[value.serviceIndex]
     const pack = service.packs[value.packIndex]
@@ -84,13 +84,14 @@ export default ({config, onSubmit, value}: Step3Props) => {
                             <input type="radio" value="male" checked={order.term === 12}
                                    onChange={(e) => {
                                        if (e.target.checked)
-                                           patchOrder({term: 12})
+                                           patchOrder({term: 12, bill: 'periodic'})
                                    }
                                    }
                             /> 12 {useLang(monthShortLang)} <br />
                             <input type="radio" value="female" checked={order.term === 24}   onChange={(e) => {
-                                if (e.target.checked)
-                                    patchOrder({term: 24})
+                                if (e.target.checked) {
+                                    patchOrder({term: 24, bill: 'periodic'})
+                                }
                             }
                             }
                             /> 24 {useLang(monthShortLang)} <span>-13%</span><br />
@@ -100,7 +101,7 @@ export default ({config, onSubmit, value}: Step3Props) => {
                                     checked={order.term === 36}
                                    onChange={(e) => {
                                            if (e.target.checked)
-                                               patchOrder({term: 36})
+                                               patchOrder({term: 36, bill: 'periodic'})
                                    }}
                             /> 36 {useLang(monthShortLang)}  <span>-23%</span><br />
                             <div className="s3-payment-item-price">${monthPrice}</div>
@@ -136,7 +137,7 @@ export default ({config, onSubmit, value}: Step3Props) => {
                             en: 'Phone',
                             pl: 'Телефон',
                         })}/>
-                        <div className="pricing-item-button pricing-palden" onClick={
+                        <div className="pricing-item-button pricing-palden" style={ (!isOrderDisabled) ? {opacity: 0.3} : {}} onClick={
                             () =>
                                 (!isOrderDisabled) &&
                                 onSubmit(order)
