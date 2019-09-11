@@ -27,21 +27,21 @@ export const service = {
             modules: 3,
             modulePrice: 59,
             featureDescriptions: {
-                ru: '<li className="pricing-feature">3 модуля</li>\n' +
-                    '<li className="pricing-feature">Шаблонный дизайн</li>\n' +
-                    '<li className="pricing-feature">Заявки на email</li>\n' +
-                    '<li className="pricing-feature">Тексты клиента</li>\n' +
-                    '<li className="pricing-feature">Доп. модуль $69</li>',
-                en: '<li className="pricing-feature">3 модуля</li>\n' +
-                    '<li className="pricing-feature">Шаблонный дизайн</li>\n' +
-                    '<li className="pricing-feature">Заявки на email</li>\n' +
-                    '<li className="pricing-feature">Тексты клиента</li>\n' +
-                    '<li className="pricing-feature">Доп. модуль $69</li>',
-                pl: '<li className="pricing-feature">3 модуля</li>\n' +
-                    '<li className="pricing-feature">Шаблонный дизайн</li>\n' +
-                    '<li className="pricing-feature">Заявки на email</li>\n' +
-                    '<li className="pricing-feature">Тексты клиента</li>\n' +
-                    '<li className="pricing-feature">Доп. модуль $69</li>',
+                ru: '<li class="pricing-feature">3 модуля</li>\n' +
+                    '<li class="pricing-feature">Шаблонный дизайн</li>\n' +
+                    '<li class="pricing-feature">Заявки на email</li>\n' +
+                    '<li class="pricing-feature">Тексты клиента</li>\n' +
+                    '<li class="pricing-feature">Доп. модуль $69</li>',
+                en: '<li class="pricing-feature">3 модуля</li>\n' +
+                    '<li class="pricing-feature">Шаблонный дизайн</li>\n' +
+                    '<li class="pricing-feature">Заявки на email</li>\n' +
+                    '<li class="pricing-feature">Тексты клиента</li>\n' +
+                    '<li class="pricing-feature">Доп. модуль $69</li>',
+                pl: '<li class="pricing-feature">3 модуля</li>\n' +
+                    '<li class="pricing-feature">Шаблонный дизайн</li>\n' +
+                    '<li class="pricing-feature">Заявки на email</li>\n' +
+                    '<li class="pricing-feature">Тексты клиента</li>\n' +
+                    '<li class="pricing-feature">Доп. модуль $69</li>',
             }
         },
         {
@@ -54,21 +54,21 @@ export const service = {
             modules: 3,
             modulePrice: 49,
             featureDescriptions: {
-                ru: '<li className="pricing-feature">3 модуля</li>\n' +
-                    '<li className="pricing-feature">Шаблонный дизайн</li>\n' +
-                    '<li className="pricing-feature">Заявки на email</li>\n' +
-                    '<li className="pricing-feature">Тексты клиента</li>\n' +
-                    '<li className="pricing-feature">Доп. модуль $69</li>',
-                en: '<li className="pricing-feature">3 модуля</li>\n' +
-                    '<li className="pricing-feature">Шаблонный дизайн</li>\n' +
-                    '<li className="pricing-feature">Заявки на email</li>\n' +
-                    '<li className="pricing-feature">Тексты клиента</li>\n' +
-                    '<li className="pricing-feature">Доп. модуль $69</li>',
-                pl: '<li className="pricing-feature">3 модуля</li>\n' +
-                    '<li className="pricing-feature">Шаблонный дизайн</li>\n' +
-                    '<li className="pricing-feature">Заявки на email</li>\n' +
-                    '<li className="pricing-feature">Тексты клиента</li>\n' +
-                    '<li className="pricing-feature">Доп. модуль $69</li>',
+                ru: '<li class="pricing-feature">3 модуля</li>\n' +
+                    '<li class="pricing-feature">Шаблонный дизайн</li>\n' +
+                    '<li class="pricing-feature">Заявки на email</li>\n' +
+                    '<li class="pricing-feature">Тексты клиента</li>\n' +
+                    '<li class="pricing-feature">Доп. модуль $69</li>',
+                en: '<li class="pricing-feature">3 модуля</li>\n' +
+                    '<li class="pricing-feature">Шаблонный дизайн</li>\n' +
+                    '<li class="pricing-feature">Заявки на email</li>\n' +
+                    '<li class="pricing-feature">Тексты клиента</li>\n' +
+                    '<li class="pricing-feature">Доп. модуль $69</li>',
+                pl: '<li class="pricing-feature">3 модуля</li>\n' +
+                    '<li class="pricing-feature">Шаблонный дизайн</li>\n' +
+                    '<li class="pricing-feature">Заявки на email</li>\n' +
+                    '<li class="pricing-feature">Тексты клиента</li>\n' +
+                    '<li class="pricing-feature">Доп. модуль $69</li>',
             }
         },
         {
@@ -81,21 +81,21 @@ export const service = {
             modules: 3,
             modulePrice: 39,
             featureDescriptions: {
-                ru: '<li className="pricing-feature">3 модуля</li>\n' +
-                    '<li className="pricing-feature">Шаблонный дизайн</li>\n' +
-                    '<li className="pricing-feature">Заявки на email</li>\n' +
-                    '<li className="pricing-feature">Тексты клиента</li>\n' +
-                    '<li className="pricing-feature">Доп. модуль $69</li>',
-                en: '<li className="pricing-feature">3 модуля</li>\n' +
-                    '<li className="pricing-feature">Шаблонный дизайн</li>\n' +
-                    '<li className="pricing-feature">Заявки на email</li>\n' +
-                    '<li className="pricing-feature">Тексты клиента</li>\n' +
-                    '<li className="pricing-feature">Доп. модуль $69</li>',
-                pl: '<li className="pricing-feature">3 модуля</li>\n' +
-                    '<li className="pricing-feature">Шаблонный дизайн</li>\n' +
-                    '<li className="pricing-feature">Заявки на email</li>\n' +
-                    '<li className="pricing-feature">Тексты клиента</li>\n' +
-                    '<li className="pricing-feature">Доп. модуль $69</li>',
+                ru: '<li class="pricing-feature">3 модуля</li>\n' +
+                    '<li class="pricing-feature">Шаблонный дизайн</li>\n' +
+                    '<li class="pricing-feature">Заявки на email</li>\n' +
+                    '<li class="pricing-feature">Тексты клиента</li>\n' +
+                    '<li class="pricing-feature">Доп. модуль $69</li>',
+                en: '<li class="pricing-feature">3 модуля</li>\n' +
+                    '<li class="pricing-feature">Шаблонный дизайн</li>\n' +
+                    '<li class="pricing-feature">Заявки на email</li>\n' +
+                    '<li class="pricing-feature">Тексты клиента</li>\n' +
+                    '<li class="pricing-feature">Доп. модуль $69</li>',
+                pl: '<li class="pricing-feature">3 модуля</li>\n' +
+                    '<li class="pricing-feature">Шаблонный дизайн</li>\n' +
+                    '<li class="pricing-feature">Заявки на email</li>\n' +
+                    '<li class="pricing-feature">Тексты клиента</li>\n' +
+                    '<li class="pricing-feature">Доп. модуль $69</li>',
             }
         },
         {
@@ -108,21 +108,21 @@ export const service = {
             modules: 3,
             modulePrice: 29,
             featureDescriptions: {
-                ru: '<li className="pricing-feature">3 модуля</li>\n' +
-                    '<li className="pricing-feature">Шаблонный дизайн</li>\n' +
-                    '<li className="pricing-feature">Заявки на email</li>\n' +
-                    '<li className="pricing-feature">Тексты клиента</li>\n' +
-                    '<li className="pricing-feature">Доп. модуль $69</li>',
-                en: '<li className="pricing-feature">3 модуля</li>\n' +
-                    '<li className="pricing-feature">Шаблонный дизайн</li>\n' +
-                    '<li className="pricing-feature">Заявки на email</li>\n' +
-                    '<li className="pricing-feature">Тексты клиента</li>\n' +
-                    '<li className="pricing-feature">Доп. модуль $69</li>',
-                pl: '<li className="pricing-feature">3 модуля</li>\n' +
-                    '<li className="pricing-feature">Шаблонный дизайн</li>\n' +
-                    '<li className="pricing-feature">Заявки на email</li>\n' +
-                    '<li className="pricing-feature">Тексты клиента</li>\n' +
-                    '<li className="pricing-feature">Доп. модуль $69</li>',
+                ru: '<li class="pricing-feature">3 модуля</li>\n' +
+                    '<li class="pricing-feature">Шаблонный дизайн</li>\n' +
+                    '<li class="pricing-feature">Заявки на email</li>\n' +
+                    '<li class="pricing-feature">Тексты клиента</li>\n' +
+                    '<li class="pricing-feature">Доп. модуль $69</li>',
+                en: '<li class="pricing-feature">3 модуля</li>\n' +
+                    '<li class="pricing-feature">Шаблонный дизайн</li>\n' +
+                    '<li class="pricing-feature">Заявки на email</li>\n' +
+                    '<li class="pricing-feature">Тексты клиента</li>\n' +
+                    '<li class="pricing-feature">Доп. модуль $69</li>',
+                pl: '<li class="pricing-feature">3 модуля</li>\n' +
+                    '<li class="pricing-feature">Шаблонный дизайн</li>\n' +
+                    '<li class="pricing-feature">Заявки на email</li>\n' +
+                    '<li class="pricing-feature">Тексты клиента</li>\n' +
+                    '<li class="pricing-feature">Доп. модуль $69</li>',
             }
         }
     ]

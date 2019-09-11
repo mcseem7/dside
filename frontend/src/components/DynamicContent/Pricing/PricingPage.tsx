@@ -1,9 +1,12 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import pricesConfig, {Order} from './config'
 import ViewStack from './ViewStack'
 import Step1 from './Step1'
 import Step2 from './Step2'
 import Step3 from './Step3'
+import Footer from '../../Basic/Footer'
+import useLang from '../../../hooks/useLang'
+
 
 
 export default () => {
@@ -26,21 +29,32 @@ export default () => {
     const onStep3 = (updatedOrder: Partial<Order>) => {
         setOrder({...order, updatedOrder})
         setStep(0)
+        alert(useLang('Ваш заказ успешно отправлен на обработку', 'Your order is on a way'))
     }
-    return <ViewStack
-        value={step}
-        data={[
 
-            () =>
-                  <Step1 onSubmit={onStep1} config={pricesConfig} />,
-            () =>
-                  <Step2 onSubmit={onStep2} config={pricesConfig} packIndex={order.packIndex} serviceIndex={order.serviceIndex}  />,
-            () =>
-                  <Step3
-                      onSubmit={onStep3}
-                      config={pricesConfig}
-                      value={order}
-                  />,
-        ]}
-    />
+    return <Fragment>
+            <ViewStack
+                value={step}
+                data={[
+
+                    () =>
+                          <Step1 onSubmit={onStep1}
+                                 config={pricesConfig}
+                          />,
+                    () =>
+                          <Step2 onSubmit={onStep2}
+                                 config={pricesConfig}
+                                 packIndex={order.packIndex}
+                                 serviceIndex={order.serviceIndex}
+                          />,
+                    () =>
+                          <Step3
+                              onSubmit={onStep3}
+                              config={pricesConfig}
+                              value={order}
+                          />,
+                ]}
+            />
+            <Footer/>
+    </Fragment>
 }

@@ -40,7 +40,7 @@ export default ({config, onSubmit, value}: Step3Props) => {
     if(order.term === 36)
         monthPrice = price * 1.4 * 0.77 / 36
     return         (
-        <section className="step-third">
+        <section className="step-third step-container">
             <div className="stepthree-container">
                 <div className="leftone-3">
                     <div className="stepper">{useLang(stepLang)} 3/3</div>
@@ -76,7 +76,7 @@ export default ({config, onSubmit, value}: Step3Props) => {
                              onClick={() => patchOrder({bill: 'periodic'})}
                         >
                             <div className="s3-payment-item-name">{useLang({
-                                en: 'Подписка',
+                                en: 'Subscribtion',
                                 ru: 'Подписка',
                                 pl: 'Подписка',
                             })}</div>
@@ -93,13 +93,14 @@ export default ({config, onSubmit, value}: Step3Props) => {
                             }
                             }
                             /> 24 {useLang(monthShortLang)} <span>-13%</span><br />
-                            <input type="radio" value="other" checked={order.term === 36}
+                            <input
+                                    type="radio"
+                                    value="other"
+                                    checked={order.term === 36}
                                    onChange={(e) => {
-                                       if (e.target.checked)
-                                           patchOrder({term: 36})
-                                   }
-                                   }
-
+                                           if (e.target.checked)
+                                               patchOrder({term: 36})
+                                   }}
                             /> 36 {useLang(monthShortLang)}  <span>-23%</span><br />
                             <div className="s3-payment-item-price">${monthPrice}</div>
                             <div className="s3-payment-item-descr">{useLang({
@@ -113,7 +114,7 @@ export default ({config, onSubmit, value}: Step3Props) => {
                         >
                             <div className="s3-payment-item-name">{useLang('Партнёрка', 'Patnership', 'Pshe....')}</div>
                             <input type=""
-                                   placeholder="Чеков"
+                                   placeholder={useLang('Чеков', 'Bills')}
                                    value={order.count}
                                    onChange={(e) => patchOrder({count: Number(e.target.value) || 1})}
                             />

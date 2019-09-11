@@ -100,7 +100,7 @@ class App extends Component {
                 { <div className="App">
              <Route exact path='/' component={Welcome} />
              <Route path={'/:language'} render={(props) => {
-                 const matchUrl = ['aboutus', 'contactus', 'process', 'pricing', 'portfolio', 'cookies-policy'].indexOf(props.location.pathname.substr(4));
+                 const matchUrl = ['aboutus', 'contactus', 'process', 'pricing', 'pricing2', 'portfolio', 'cookies-policy'].indexOf(props.location.pathname.substr(4));
                  function getHeader() {
                  if (matchUrl === -1 ) {
                     return (<Header domenErty={props.match.params.language} style={'block'} name="dark" />)

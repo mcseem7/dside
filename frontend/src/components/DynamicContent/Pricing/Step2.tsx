@@ -1,7 +1,7 @@
 import React from 'react'
 import {createMarkup, Lang, Order, Pack, PricesConfig, Service} from './config'
 import useLang from '../../../hooks/useLang'
-import {modulesLang, moreLang, packageLang, removeLang, startsFromLang} from './Step1'
+import {lessLang, modulesLang, moreLang, packageLang, removeLang, startsFromLang} from './Step1'
 
 export type Step2Props = {
     onSubmit: (options: Partial<Order>) => any
@@ -33,15 +33,20 @@ export default ({onSubmit, packIndex = 0, serviceIndex = 0, config}: Step2Props)
     const pack = service.packs[packIndex]
 
     const otherServices = config.services.filter( (value, index) => index !==packIndex)
-    return        <section className="step-second">
+    return        <section className="step-second step-container">
         <div className="steptwo-container">
             <div className="leftone">
                 <div className="stepper">{useLang(stepLang)} 2/3</div>
                 <div className="step2-header">{useLang(choiceLang)}:</div>
                 <div className="planitem">
                     <div className="itemshort">
-                        <div className="planname"><div className="pricing-item-header">Landing</div>Пакет <span>Elite</span></div>
-                        <div className="planprice">{useLang(startsFromLang)} ${pack.price} <button>Less</button><button>Remove</button></div>
+                        <div className="planname">
+                            <div className="pricing-item-header">{useLang(service.name)}</div>
+                            {useLang(packageLang)}
+                            <span>{useLang(pack.name)}</span>
+                        </div>
+                        <div className="planprice">{useLang(startsFromLang)} ${pack.price}
+                        <button>{useLang(lessLang)}</button><button>{useLang(removeLang)}</button></div>
                     </div>
                     <div className="item-details">
                         <ul className='pricing-feature-list' dangerouslySetInnertHTML={createMarkup(useLang(pack.featureDescriptions))}>

@@ -1,7 +1,7 @@
 import ContactUs from '../../components/CompanyPages/ContactUs'
 import About from '../../components/DynamicContent/About'
-import Pricing from '../../components/DynamicContent/Pricing/index'
-import Pricing2 from  '../../components/DynamicContent/Pricing/PricingPage'
+import Pricing2 from '../../components/DynamicContent/Pricing/index'
+import Pricing from  '../../components/DynamicContent/Pricing/PricingPage'
 import Cookies from '../../components/CompanyPages/Cookies'
 import Process from '../../components/DynamicContent/Process/'
 
@@ -41,7 +41,7 @@ export const company = [
             `/pl/pricing`
         ],
         exact: true,
-        component: Pricing2
+        component: Pricing
     },
     {
         path: [

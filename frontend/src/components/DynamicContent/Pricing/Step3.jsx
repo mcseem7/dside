@@ -23,7 +23,7 @@ export default ({ config, onSubmit, value }) => {
         monthPrice = price * 1.4 * 0.87 / 24;
     if (order.term === 36)
         monthPrice = price * 1.4 * 0.77 / 36;
-    return (<section className="step-third">
+    return (<section className="step-third step-container">
             <div className="stepthree-container">
                 <div className="leftone-3">
                     <div className="stepper">{useLang(stepLang)} 3/3</div>
@@ -54,7 +54,7 @@ export default ({ config, onSubmit, value }) => {
                         </div>
                         <div className={"s3-payment-item " + (order.bill === 'periodic' ? ' activated' : '')} onClick={() => patchOrder({ bill: 'periodic' })}>
                             <div className="s3-payment-item-name">{useLang({
-        en: 'Подписка',
+        en: 'Subscribtion',
         ru: 'Подписка',
         pl: 'Подписка',
     })}</div>
@@ -79,7 +79,7 @@ export default ({ config, onSubmit, value }) => {
                         </div>
                         <div className={"s3-payment-item " + (order.bill === 'check' ? ' activated' : '')} onClick={() => patchOrder({ bill: 'check' })}>
                             <div className="s3-payment-item-name">{useLang('Партнёрка', 'Patnership', 'Pshe....')}</div>
-                            <input type="" placeholder="Чеков" value={order.count} onChange={(e) => patchOrder({ count: Number(e.target.value) || 1 })}/>
+                            <input type="" placeholder={useLang('Чеков', 'Bills')} value={order.count} onChange={(e) => patchOrder({ count: Number(e.target.value) || 1 })}/>
                             <div className="s3-payment-item-price">${Math.ceil(checkPrice / order.count * 100) / 100}</div>
                             <div className="s3-payment-item-descr">{useLang('за чек', 'per one check')}</div>
                         </div>
