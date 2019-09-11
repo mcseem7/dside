@@ -28,6 +28,7 @@ export type PricesConfig = {
 export type Order = {
     packIndex: number
     serviceIndex: number
+    extraModules: number
     addons: []
     phone: string
     name: string

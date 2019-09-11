@@ -27,7 +27,8 @@ export const modulesLang: Lang = {
 export default ({config, onSubmit, value}: Step3Props) => {
     const [order, setOrder] = React.useState({bill: 'once', term: 12, count: 100} as Partial<Order>)
     const price = config.services[value.serviceIndex].packs[value.packIndex].price
-
+    const service = config.services[value.serviceIndex]
+    const pack = service.packs[value.packIndex]
     const patchOrder = (patch: Partial<Order>) =>
         setOrder({...order, ...patch})
 
@@ -148,49 +149,58 @@ export default ({config, onSubmit, value}: Step3Props) => {
                     <div className="s3-total-header">{useLang('Ваша корзина', 'Your order', 'Ваш заказ')}:</div>
                     <div className="s3-cart-item">
                         <div className="s3-cart-item-header">
-                            <div className="s3-cart-item-name">Logo</div>
-                            <div className="s3-cart-item-price">$199<button>{useLang('Меньше')}</button><button>{useLang('Удалить')}</button></div>
+                            <div className="s3-cart-item-name">{useLang(service.name)}</div>
+                            <div className="s3-cart-item-price">${pack.price}<button>{useLang('Меньше')}</button><button>{useLang('Удалить')}</button></div>
                         </div>
                         <div className="item-details">
-                            <ul className='pricing-feature-list' >
-                                <li className="pricing-feature">Преимущества <span className="businesse">Business</span></li>
-                                <li className="pricing-feature">9 модулей <span className="trans2">(Business+2)</span></li>
-                                <li className="pricing-feature">Эксклюзивный дизайн</li>
-                                <li className="pricing-feature">2 круга правок</li>
-                                <li className="pricing-feature">Оповещение о заявке</li>
-                                <li className="pricing-feature">Перезвоним за 30 секунд</li>
-                                <li className="pricing-feature">Доп. модуль $39</li>
+                            <ul className='pricing-feature-list' dangerouslySetInnerHTML={createMarkup(useLang(pack.featureDescriptions))}>
+
                             </ul>
                             <div className="modules">
                                 <h3>
                                     {useLang(modulesLang)}
                                 </h3>
-                                <span>-</span>9<span>+</span>
+                                <span
+                                    onClick={() => order.extraModules > 0 && patchOrder({extraModules: order.extraModules - 1}) }
+                                >-</span>{order.extraModules + pack.modules}<span onClick={() => patchOrder({extraModules: order.extraModules + 1}) }>+
+
+                            </span></div>
                             </div>
                         </div>
-                    </div>
-                    <div className="s3-cart-item collapsed">
-                        <div className="s3-cart-item-header">
-                            <div className="s3-cart-item-name">Logo</div>
-                            <div className="s3-cart-item-price">$199<button>{useLang(moreLang)}</button><button>{useLang(removeLang)}</button></div>
-                        </div>
-                        <div className="item-details">
-                            <ul className='pricing-feature-list'>
-                                <li className="pricing-feature">Преимущества <span className="businesse">Business</span></li>
-                                <li className="pricing-feature">9 модулей <span className="trans2">(Business+2)</span></li>
-                                <li className="pricing-feature">Эксклюзивный дизайн</li>
-                                <li className="pricing-feature">2 круга правок</li>
-                                <li className="pricing-feature">Оповещение о заявке</li>
-                                <li className="pricing-feature">Перезвоним за 30 секунд</li>
-                                <li className="pricing-feature">Доп. модуль $39</li>
-                            </ul>
-                            <div className="modules"><h3>Модули</h3><span>-</span>9<span></span>+</div>
-                        </div>
                         <div className="s3-cart-bottom">
-                            {useLang('Итого', 'Total', 'Итого')} : $398
+                            {useLang('Итого', 'Total', 'Итого')} : ${order.extraModules * pack.modulePrice + pack.price}
                         </div>
                     </div>
-                </div>
+                    {
+                        /*
+                        <div className="s3-cart-item collapsed">
+                            <div className="s3-cart-item-header">
+                                <div className="s3-cart-item-name">Logo</div>
+                                <div className="s3-cart-item-price">$199
+                                    <button>{useLang(moreLang)}</button>
+                                    <button>{useLang(removeLang)}</button>
+                                </div>
+                            </div>
+                            <div className="item-details">
+                                <ul className='pricing-feature-list'>
+                                    <li className="pricing-feature">Преимущества <span
+                                        className="businesse">Business</span></li>
+                                    <li className="pricing-feature">9 модулей <span
+                                        className="trans2">(Business+2)</span></li>
+                                    <li className="pricing-feature">Эксклюзивный дизайн</li>
+                                    <li className="pricing-feature">2 круга правок</li>
+                                    <li className="pricing-feature">Оповещение о заявке</li>
+                                    <li className="pricing-feature">Перезвоним за 30 секунд</li>
+                                    <li className="pricing-feature">Доп. модуль $39</li>
+                                </ul>
+                                <div className="modules"><h3>Модули</h3><span>-</span>9<span></span>+</div>
+                            </div>
+
+                        </div>
+                        */
+
+                    }
+
             </div>
         </section>
     )

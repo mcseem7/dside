@@ -29,6 +29,10 @@ export const nextLang: Lang = {
 }
 
 export default ({onSubmit, packIndex = 0, serviceIndex = 0, config}: Step2Props) => {
+    const [order, setOrder] = React.useState({serviceIndex, packIndex, extraModules: 0} as Order)
+    const patchOrder = (patch: Partial<Order>) =>
+        setOrder({...order, ...patch})
+
     const service = config.services[serviceIndex]
     const pack = service.packs[packIndex]
 
@@ -49,33 +53,40 @@ export default ({onSubmit, packIndex = 0, serviceIndex = 0, config}: Step2Props)
                         <button>{useLang(lessLang)}</button><button>{useLang(removeLang)}</button></div>
                     </div>
                     <div className="item-details">
-                        <ul className='pricing-feature-list' dangerouslySetInnertHTML={createMarkup(useLang(pack.featureDescriptions))}>
+                        <ul className='pricing-feature-list' dangerouslySetInnerHTML={createMarkup(useLang(pack.featureDescriptions))}>
 
                         </ul>
                         <div className="modules">
                             <h3>{useLang(service.moduleLang)}</h3>
-                            <span>-</span>
-                                9
-                            <span>+</span>
+                            <span
+                                onClick={() => order.extraModules > 0 && patchOrder({extraModules: order.extraModules - 1}) }
+                            >-</span>{order.extraModules + pack.modules}<span onClick={() =>patchOrder({extraModules: order.extraModules + 1}) }>+
+
+                            </span>
                         </div>
                     </div>
                 </div>
-                <div className="planitem collapsed">
+                <div className="planitem collapsed" style={{display: 'none'}}>
                     <div className="itemshort">
-                        <div className="planname"><div className="pricing-item-header">Logo</div>{useLang(packageLang)} <span>Elite</span></div>
+                        <div className="planname"><div className="pricing-item-header">{useLang(service.name)}</div>{useLang(packageLang)} <span>{useLang(pack.name)}</span></div>
                         <div className="planprice">от ${pack.price} <button>{useLang(moreLang)}</button><button>{useLang(removeLang)}</button></div>
                     </div>
                     <div className="item-details">
                         <ul className='pricing-feature-list' >
                         </ul>
-                        <div className="modules"><h3>{useLang(modulesLang)}</h3><span>-</span>7<span></span>+</div>
+                        <div className="modules"><h3>{useLang(modulesLang)}</h3>
+                            <span
+                                onClick={() => order.extraModules > 0 && patchOrder({extraModules: order.extraModules - 1}) }
+                            >-</span>{order.extraModules + pack.modules}<span onClick={() => patchOrder({extraModules: order.extraModules + 1}) }>+
+
+                            </span></div>
                     </div>
                 </div>
                 <div className="bottom-step2">
-                    <div className="total">{useLang('Итого', 'Total', 'Итого')}: $111</div>
+                    <div className="total">{useLang('Итого', 'Total', 'Итого')}: ${order.extraModules * pack.modulePrice + pack.price}</div>
                     <div className="pricing-item-button pricing-palden" onClick={
                         () =>
-                            onSubmit({})
+                            onSubmit(order)
                     }>
                         <span className="pricing-action" >
                             {useLang(nextLang)}
@@ -107,8 +118,6 @@ export default ({onSubmit, packIndex = 0, serviceIndex = 0, config}: Step2Props)
                         <div className="pricing-item-button pricing-palden"><span className="pricing-action">Button</span></div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>
