@@ -1,15 +1,15 @@
 import * as React from 'react'
-import {createMarkup, Lang, Pack, PricesConfig, Service, Order} from './config'
+import {clone} from 'ramda'
+import {createMarkup, Lang, Pack, PricesConfig, Service, Order, Product, getProductInfo} from './config'
 import useLang from '../../../hooks/useLang'
 import {stepLang} from './Step2'
-import {moreLang, removeLang} from './Step1'
+import {moreLang, removeLang, StepProps} from './Step1'
+import {remove} from 'ramda'
+import useMergeState from '../../../hooks/useMergeState'
+import PlanItem from './PlanItem'
 
 
-export type Step3Props = {
-    onSubmit: (order: Partial<Order>) => any
-    value: Partial<Order>
-    config: PricesConfig
-}
+
 
 export const monthShortLang: Lang = {
     en: 'mon',
@@ -24,22 +24,41 @@ export const modulesLang: Lang = {
 }
 
 
-export default ({config, onSubmit, value}: Step3Props) => {
-    const [order, setOrder] = React.useState({bill: 'once', term: 12, count: 100, ...value} as Partial<Order>)
-    const price = config.services[value.serviceIndex].packs[value.packIndex].price
-    const service = config.services[value.serviceIndex]
-    const pack = service.packs[value.packIndex]
-    const patchOrder = (patch: Partial<Order>) =>
-        setOrder({...order, ...patch})
+export default (props: StepProps) => {
+    const {onSubmit, config} = props
+    const [order, setOrder] = useMergeState({bill: 'once', term: 12, count: 100, ...props.order} as Order)
+    const productInfo = getProductInfo(config)
+    const product0 = order.products[0]
+    const totalPrice = order.products.reduce( (sum, product) =>
+        productInfo.getBasePrice(product) + sum,
+        0
+    )
+    const service0 = config.services[product0.serviceIndex]
+    const pack0 = service0.packs[product0.packIndex]
+
 
     const isOrderDisabled = order.phone && order.name
 
-    const checkPrice = price * 1.4
-    let monthPrice = price / 12
+    const checkPrice = totalPrice * 1.4
+    let monthPrice = totalPrice / 12
     if(order.term === 24)
-        monthPrice = price * 1.4 * 0.87 / 24
+        monthPrice = totalPrice * 1.4 * 0.87 / 24
     if(order.term === 36)
-        monthPrice = price * 1.4 * 0.77 / 36
+        monthPrice = totalPrice * 1.4 * 0.77 / 36
+
+    const patchProduct = (index: number) => (product: Partial<Product>) => {
+        const newOrder = clone(order)
+        newOrder.products[index] = {...newOrder.products[index], ...product}
+        debugger
+        setOrder(newOrder)
+    }
+
+    const onDelete = (index: number) => {
+        setOrder({...order, products: remove(index, 1, order.products)})
+        if(order.products.length === 0)
+            props.onBack()
+    }
+
     return         (
         <section className="step-third step-container">
             <div className="stepthree-container">
@@ -59,14 +78,14 @@ export default ({config, onSubmit, value}: Step3Props) => {
                     <div className="s3-payment-items">
                         <div
                             className={"s3-payment-item " + (order.bill === 'once' ? ' activated' : '')}
-                            onClick={() => patchOrder({bill: 'once'})}
+                            onClick={() => setOrder({bill: 'once'})}
                         >
                             <div className="s3-payment-item-name">{useLang({
                                 en: 'Покупка',
                                 ru: 'Покупка',
                                 pl: 'Покупка',
                             })}</div>
-                            <div className="s3-payment-item-price">${price}</div>
+                            <div className="s3-payment-item-price">${totalPrice}</div>
                             <div className="s3-payment-item-descr">{useLang({
                                 en: 'Единоразово',
                                 ru: 'Единоразово',
@@ -74,7 +93,7 @@ export default ({config, onSubmit, value}: Step3Props) => {
                             })}</div>
                         </div>
                         <div className={"s3-payment-item " + (order.bill === 'periodic' ? ' activated' : '')}
-                             onClick={() => patchOrder({bill: 'periodic'})}
+                             onClick={() => setOrder({bill: 'periodic'})}
                         >
                             <div className="s3-payment-item-name">{useLang({
                                 en: 'Subscribtion',
@@ -84,13 +103,13 @@ export default ({config, onSubmit, value}: Step3Props) => {
                             <input type="radio" value="male" checked={order.term === 12}
                                    onChange={(e) => {
                                        if (e.target.checked)
-                                           patchOrder({term: 12, bill: 'periodic'})
+                                           setOrder({term: 12, bill: 'periodic'})
                                    }
                                    }
                             /> 12 {useLang(monthShortLang)} <br />
                             <input type="radio" value="female" checked={order.term === 24}   onChange={(e) => {
                                 if (e.target.checked) {
-                                    patchOrder({term: 24, bill: 'periodic'})
+                                    setOrder({term: 24, bill: 'periodic'})
                                 }
                             }
                             }
@@ -101,7 +120,7 @@ export default ({config, onSubmit, value}: Step3Props) => {
                                     checked={order.term === 36}
                                    onChange={(e) => {
                                            if (e.target.checked)
-                                               patchOrder({term: 36, bill: 'periodic'})
+                                               setOrder({term: 36, bill: 'periodic'})
                                    }}
                             /> 36 {useLang(monthShortLang)}  <span>-23%</span><br />
                             <div className="s3-payment-item-price">${monthPrice}</div>
@@ -112,13 +131,13 @@ export default ({config, onSubmit, value}: Step3Props) => {
                             })}</div>
                         </div>
                         <div className={"s3-payment-item " + (order.bill === 'check' ? ' activated' : '')}
-                             onClick={() => patchOrder({bill: 'check'})}
+                             onClick={() => setOrder({bill: 'check'})}
                         >
                             <div className="s3-payment-item-name">{useLang('Партнёрка', 'Patnership', 'Pshe....')}</div>
                             <input type=""
                                    placeholder={useLang('Чеков', 'Bills')}
                                    value={order.count}
-                                   onChange={(e) => patchOrder({count: Number(e.target.value) || 1})}
+                                   onChange={(e) => setOrder({count: Number(e.target.value) || 1})}
                             />
                             <div className="s3-payment-item-price">${Math.ceil(checkPrice / order.count * 100) / 100}</div>
                             <div className="s3-payment-item-descr">{
@@ -127,12 +146,12 @@ export default ({config, onSubmit, value}: Step3Props) => {
                         </div>
                     </div>
                     <div className="s3-final">
-                        <input type="" onChange={ e => patchOrder({name: e.target.value})}  placeholder={useLang({
+                        <input type="" onChange={ e => setOrder({name: e.target.value})}  placeholder={useLang({
                             ru: 'Имя',
                             en: 'Имя',
                             pl: 'Имя',
                         })}/>
-                        <input type="" onChange={ e => patchOrder({phone: e.target.value})}   placeholder={useLang({
+                        <input type="" onChange={ e => setOrder({phone: e.target.value})}   placeholder={useLang({
                             ru: 'Телефон',
                             en: 'Phone',
                             pl: 'Телефон',
@@ -148,28 +167,13 @@ export default ({config, onSubmit, value}: Step3Props) => {
                 </div>
                 <div className="rightone-3">
                     <div className="s3-total-header">{useLang('Ваша корзина', 'Your order', 'Ваш заказ')}:</div>
-                    <div className="s3-cart-item">
-                        <div className="s3-cart-item-header">
-                            <div className="s3-cart-item-name">{useLang(service.name)}</div>
-                            <div className="s3-cart-item-price">${pack.price}<button>{useLang('Меньше')}</button><button>{useLang('Удалить')}</button></div>
-                        </div>
-                        <div className="item-details">
-                            <ul className='pricing-feature-list' dangerouslySetInnerHTML={createMarkup(useLang(pack.featureDescriptions))}>
-
-                            </ul>
-                            <div className="modules">
-                                <h3>
-                                    {useLang(modulesLang)}
-                                </h3>
-                                <span
-                                    onClick={() => order.extraModules > 0 && patchOrder({extraModules: order.extraModules - 1}) }
-                                >-</span>{order.extraModules + pack.modules}<span onClick={() => patchOrder({extraModules: order.extraModules + 1}) }>+
-
-                            </span></div>
-                            </div>
-                        </div>
+                        {
+                            order.products.map( (p, index) =>
+                                <CartItem config={config} onChange={patchProduct(index)} product={p} onDelete={() => onDelete(index)} />
+                            )
+                        }
                         <div className="s3-cart-bottom">
-                            {useLang('Итого', 'Total', 'Итого')} : ${order.extraModules * pack.modulePrice + pack.price}
+                            {useLang('Итого', 'Total', 'Итого')} : ${totalPrice}
                         </div>
                     </div>
                     {
@@ -204,5 +208,42 @@ export default ({config, onSubmit, value}: Step3Props) => {
 
             </div>
         </section>
+    )
+}
+
+const CartItem = ({config, product, onDelete, onChange}: {config: PricesConfig, product: Product, onDelete, onChange}) => {
+    const [collapsed, setCollapsed] = React.useState(true)
+    const service = config.services[product.serviceIndex]
+    const pack =  service.packs[product.packIndex]
+    return (
+        <div className={"s3-cart-item "+ (collapsed ?  'collapsed' : '')}>
+            <div className="s3-cart-item-header">
+                <div className="s3-cart-item-name">{useLang(service.name)}</div>
+                <div className="s3-cart-item-price">${pack.price}
+                <button onClick={() => setCollapsed(!collapsed)}>
+                    {useLang('Меньше')}</button>
+                    <button onClick={onDelete}>{useLang('Удалить')}</button></div>
+            </div>
+            <div className="item-details">
+                <ul className='pricing-feature-list' dangerouslySetInnerHTML={createMarkup(useLang(pack.featureDescriptions))}>
+
+                </ul>
+                <div className="modules">
+                    <h3>
+                        {useLang(modulesLang)}
+                    </h3>
+                    <span
+                        onClick={() =>
+                            product.extraModules > 0 &&
+                            onChange({extraModules: product.extraModules - 1})
+                        }
+                    >-</span>{product.extraModules + pack.modules}
+                    <span onClick={() =>
+                        onChange({extraModules: product.extraModules + 1})
+                    }>+
+
+                            </span></div>
+            </div>
+        </div>
     )
 }

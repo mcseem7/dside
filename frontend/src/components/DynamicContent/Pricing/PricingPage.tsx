@@ -6,28 +6,42 @@ import Step2 from './Step2'
 import Step3 from './Step3'
 import Footer from '../../Basic/Footer'
 import useLang from '../../../hooks/useLang'
+import useMergeState from '../../../hooks/useMergeState'
 
 
+
+const getDefaultOrder = (): Order => ({
+    products: [
+        {
+            extraModules: 0,
+            packIndex: 0,
+            serviceIndex: 0,
+        }
+    ]
+})
 
 export default () => {
-    const [order, setOrder] = React.useState({serviceIndex: 0, packIndex: 0, addons: []} as Partial<Order>)
+    const [order, setOrder] = useMergeState(getDefaultOrder())
     const [step, setStep] = React.useState(0)
 
-    const onStep1 = (order: {
-        serviceIndex: number,
-        packIndex: number
-    }) => {
-        setOrder(order)
+    const updateOrder = (value: Order) => {
+        console.log('updateOrder', value)
+        setOrder(value)
+    }
+
+    const onStep1 = (updatedOrder: Order) => {
+        updateOrder(updatedOrder)
+        console.log('updateOrder step 1')
         setStep(1)
     }
-    const onStep2 = (updatedOrder: Partial<Order>) => {
-        setOrder({...order, ...updatedOrder})
+    const onStep2 = (updatedOrder: Order) => {
+        updateOrder(updatedOrder)
         setStep(2)
 
     }
 
-    const onStep3 = (updatedOrder: Partial<Order>) => {
-        setOrder({...order, ...updatedOrder})
+    const onStep3 = (updatedOrder: Order) => {
+        updateOrder(updatedOrder)
         setStep(0)
         alert(useLang('Ваш заказ успешно отправлен на обработку', 'Your order is on a way'))
     }
@@ -38,20 +52,23 @@ export default () => {
                 data={[
 
                     () =>
-                          <Step1 onSubmit={onStep1}
-                                 config={pricesConfig}
+                          <Step1
+                              onSubmit={onStep1}
+                              config={pricesConfig}
+                              order={order}
                           />,
                     () =>
                           <Step2 onSubmit={onStep2}
                                  config={pricesConfig}
-                                 packIndex={order.packIndex}
-                                 serviceIndex={order.serviceIndex}
+                                 order={order}
+                                 onBack={() => setStep(0)}
                           />,
                     () =>
                           <Step3
                               onSubmit={onStep3}
                               config={pricesConfig}
-                              value={order}
+                              order={order}
+                              onBack={() => setStep(0)}
                           />,
                 ]}
             />

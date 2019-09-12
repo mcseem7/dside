@@ -1,14 +1,10 @@
 import React from 'react'
-import {createMarkup, Lang, Order, Pack, PricesConfig, Service} from './config'
+import {createMarkup, getProductInfo, Lang, Order, Pack, PricesConfig, Product, Service} from './config'
 import useLang from '../../../hooks/useLang'
-import {lessLang, modulesLang, moreLang, packageLang, removeLang, startsFromLang} from './Step1'
-
-export type Step2Props = {
-    onSubmit: (options: Partial<Order>) => any
-    serviceIndex: number
-    packIndex: number
-    config: PricesConfig
-}
+import {lessLang, modulesLang, moreLang, packageLang, removeLang, startsFromLang, StepProps} from './Step1'
+import {clone, remove} from 'ramda'
+import PlanItem from './PlanItem'
+import PacksList from './PacksList'
 
 export const stepLang: Lang = {
     ru: 'Шаг',
@@ -28,62 +24,55 @@ export const nextLang: Lang = {
     en: 'Next',
 }
 
-export default ({onSubmit, packIndex = 0, serviceIndex = 0, config}: Step2Props) => {
-    const [order, setOrder] = React.useState({serviceIndex, packIndex, extraModules: 0} as Order)
-    const patchOrder = (patch: Partial<Order>) =>
+export default (props: StepProps) => {
+    const config = props.config
+    const onSubmit = props.onSubmit
+    const [modalServiceList, setModalServiceList] = React.useState(undefined as number | undefined)
+    const [order, setOrder] = React.useState(props.order)
+    console.log('step two order', order)
+    const patchOrder = (patch: Order) =>
         setOrder({...order, ...patch})
 
-    const service = config.services[serviceIndex]
-    const pack = service.packs[packIndex]
+    const patchProduct = (index: number) => (product: Partial<Product>) => {
+        const newOrder = clone(order)
+        newOrder.products[index] = {...newOrder.products[index], ...product}
+        setOrder(newOrder)
+    }
+    const productInfo = getProductInfo(config)
+    const totalPrice = order.products.reduce( (sum, product) =>
+        productInfo.getBasePrice(product) + sum,
+        0
+    )
 
-    const otherServices = config.services.filter( (value, index) => index !==packIndex)
+    const addProduct = (packIndex) => {
+        const newOrder = clone(order)
+        newOrder.products = [...order.products, {extraModules: 0, serviceIndex: modalServiceList, packIndex}]
+        setOrder(newOrder)
+        setModalServiceList(undefined)
+    }
+
+
+
     return        <section className="step-second step-container">
         <div className="steptwo-container">
             <div className="leftone">
                 <div className="stepper">{useLang(stepLang)} 2/3</div>
                 <div className="step2-header">{useLang(choiceLang)}:</div>
-                <div className="planitem">
-                    <div className="itemshort">
-                        <div className="planname">
-                            <div className="pricing-item-header">{useLang(service.name)}</div>
-                            {useLang(packageLang)}
-                            <span>{useLang(pack.name)}</span>
-                        </div>
-                        <div className="planprice">{useLang(startsFromLang)} ${pack.price}
-                        <button>{useLang(lessLang)}</button><button>{useLang(removeLang)}</button></div>
-                    </div>
-                    <div className="item-details">
-                        <ul className='pricing-feature-list' dangerouslySetInnerHTML={createMarkup(useLang(pack.featureDescriptions))}>
+                {
+                    order.products.map((product, index) =>
+                        <PlanItem config={config} product={product} index={index}
+                                  onChange={patchProduct(0)}
+                                  onDelete={() => {
+                                    setOrder({...order, products: remove(index, 1, order.products)})
+                                      if(order.products.length === 0)
+                                          props.onBack()
+                                  }}
+                        />
+                    )
+                }
 
-                        </ul>
-                        <div className="modules">
-                            <h3>{useLang(service.moduleLang)}</h3>
-                            <span
-                                onClick={() => order.extraModules > 0 && patchOrder({extraModules: order.extraModules - 1}) }
-                            >-</span>{order.extraModules + pack.modules}<span onClick={() =>patchOrder({extraModules: order.extraModules + 1}) }>+
-
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div className="planitem collapsed" style={{display: 'none'}}>
-                    <div className="itemshort">
-                        <div className="planname"><div className="pricing-item-header">{useLang(service.name)}</div>{useLang(packageLang)} <span>{useLang(pack.name)}</span></div>
-                        <div className="planprice">от ${pack.price} <button>{useLang(moreLang)}</button><button>{useLang(removeLang)}</button></div>
-                    </div>
-                    <div className="item-details">
-                        <ul className='pricing-feature-list' >
-                        </ul>
-                        <div className="modules"><h3>{useLang(modulesLang)}</h3>
-                            <span
-                                onClick={() => order.extraModules > 0 && patchOrder({extraModules: order.extraModules - 1}) }
-                            >-</span>{order.extraModules + pack.modules}<span onClick={() => patchOrder({extraModules: order.extraModules + 1}) }>+
-
-                            </span></div>
-                    </div>
-                </div>
                 <div className="bottom-step2">
-                    <div className="total">{useLang('Итого', 'Total', 'Итого')}: ${order.extraModules * pack.modulePrice + pack.price}</div>
+                    <div className="total">{useLang('Итого', 'Total', 'Итого')}: ${totalPrice}</div>
                     <div className="pricing-item-button pricing-palden" onClick={
                         () =>
                             onSubmit(order)
@@ -95,30 +84,41 @@ export default ({onSubmit, packIndex = 0, serviceIndex = 0, config}: Step2Props)
                 </div>
             </div>
             <div className="rightone">
-                <div className="services-pricing-item">
-                    <div className="pricing-item-descr">
-                        <div className="pricing-discount-header">
-                            <div className="pricing-item-header"><span>01. </span>Logo</div>
-                            <div className="discount">-35%</div>
+                {
+                    config.services.filter( (s, index) => !order.products.find(p => p.serviceIndex === s.serviceIndex)).map( (service, index) =>
+                        <div className="services-pricing-item">
+                            <div className="pricing-item-descr">
+                                <div className="pricing-discount-header">
+                                    <div className="pricing-item-header"><span>{index + 1}. </span>{useLang(service.name)}</div>
+                                    {//<div className="discount">-35%</div>
+                                    }
+                                </div>
+                                <div className="pricing-item-content">{useLang(service.description)}</div>
+                            </div>
+                            <div className="pricing-item-controls">
+                                <div className="pricing-item-price">
+                                    {/*<div className="oldprice">$530</div>*/}
+                                    <span>{useLang(startsFromLang)} </span>${service.packs[0].price}
+                                </div>
+                                <div className="pricing-item-button pricing-palden" onClick={() => setModalServiceList(service.serviceIndex)}>
+                                    <span className="pricing-action">{useLang('Добавить', 'Add', 'Add')}</span></div>
+                            </div>
                         </div>
-                        <div className="pricing-item-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                    </div>
-                    <div className="pricing-item-controls">
-                        <div className="pricing-item-price"><div className="oldprice">$530</div><span>от </span>$240</div>
-                        <div className="pricing-item-button pricing-palden"><span className="pricing-action">{useLang('Добавить', 'Add', 'Add')}</span></div>
-                    </div>
-                </div>
-                <div className="services-pricing-item">
-                    <div className="pricing-item-descr">
-                        <div className="pricing-item-header"><span>01. </span>Logo</div>
-                        <div className="pricing-item-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                    </div>
-                    <div className="pricing-item-controls">
-                        <div className="pricing-item-price"><span>{useLang(startsFromLang)} </span>$240</div>
-                        <div className="pricing-item-button pricing-palden"><span className="pricing-action">Button</span></div>
-                    </div>
-                </div>
+                    )
+                }
+
             </div>
+            {
+                modalServiceList !== undefined &&
+                <PacksList
+                    config={config}
+                    serviceIndex={modalServiceList}
+                    onSelect={addProduct}
+                    isPopUp
+                />
+            }
         </div>
     </section>
 }
+
+
