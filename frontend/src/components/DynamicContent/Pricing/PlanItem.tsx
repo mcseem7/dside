@@ -22,7 +22,7 @@ export default ({config, product, onDelete, index, onChange}: Props) => {
                 {useLang(packageLang)}
                 <span>{useLang(pack.name)}</span>
             </div>
-            <div className="planprice">{useLang(startsFromLang)} ${pack.price}
+            <div className="planprice">{useLang(startsFromLang)} ${service.packs[0].price}
                 <button onClick={() => setCollapsed(!collapsed)}>{useLang((collapsed ? moreLang : lessLang)}</button>
                 <button onClick={onDelete}>{useLang(removeLang)}</button>
             </div>

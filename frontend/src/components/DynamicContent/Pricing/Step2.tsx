@@ -5,6 +5,7 @@ import {lessLang, modulesLang, moreLang, packageLang, removeLang, startsFromLang
 import {clone, remove} from 'ramda'
 import PlanItem from './PlanItem'
 import PacksList from './PacksList'
+import PopUp from './PopUp'
 
 export const stepLang: Lang = {
     ru: 'Шаг',
@@ -39,8 +40,10 @@ export default (props: StepProps) => {
         setOrder(newOrder)
     }
     const productInfo = getProductInfo(config)
-    const totalPrice = order.products.reduce( (sum, product) =>
-        productInfo.getBasePrice(product) + sum,
+    const totalPrice = order.products.reduce( (sum, product) => {
+                console.log(product, productInfo.getBasePrice(product), config)
+            return productInfo.getBasePrice(product) + sum
+        },
         0
     )
 
@@ -61,7 +64,7 @@ export default (props: StepProps) => {
                 {
                     order.products.map((product, index) =>
                         <PlanItem config={config} product={product} index={index}
-                                  onChange={patchProduct(0)}
+                                  onChange={patchProduct(index)}
                                   onDelete={() => {
                                     setOrder({...order, products: remove(index, 1, order.products)})
                                       if(order.products.length === 0)
@@ -108,15 +111,19 @@ export default (props: StepProps) => {
                 }
 
             </div>
-            {
-                modalServiceList !== undefined &&
-                <PacksList
-                    config={config}
-                    serviceIndex={modalServiceList}
-                    onSelect={addProduct}
-                    isPopUp
-                />
-            }
+
+                <PopUp modalState={modalServiceList !== undefined} onClose={() => setModalServiceList(undefined)}>
+                    {
+                        modalServiceList !== undefined &&   <PacksList
+                            config={config}
+                            serviceIndex={modalServiceList}
+                            onSelect={addProduct}
+                            isPopUp
+                        />
+                    }
+
+                </PopUp>
+
         </div>
     </section>
 }

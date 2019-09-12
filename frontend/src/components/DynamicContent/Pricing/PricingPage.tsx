@@ -5,7 +5,7 @@ import Step1 from './Step1'
 import Step2 from './Step2'
 import Step3 from './Step3'
 import Footer from '../../Basic/Footer'
-import useLang from '../../../hooks/useLang'
+import useLang, {getLang} from '../../../hooks/useLang'
 import useMergeState from '../../../hooks/useMergeState'
 
 
@@ -43,6 +43,9 @@ export default () => {
     const onStep3 = (updatedOrder: Order) => {
         updateOrder(updatedOrder)
         setStep(0)
+
+        fetch({url: '/api/' + getLang() + '/home/addOrder',  method: 'post',
+            body: JSON.stringify(updatedOrder) })
         alert(useLang('Ваш заказ успешно отправлен на обработку', 'Your order is on a way'))
     }
 

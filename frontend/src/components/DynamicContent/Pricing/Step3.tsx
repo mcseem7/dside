@@ -39,8 +39,8 @@ export default (props: StepProps) => {
 
     const isOrderDisabled = order.phone && order.name
 
-    const checkPrice = totalPrice * 1.4
-    let monthPrice = totalPrice / 12
+    const checkPrice = totalPrice * 2
+    let monthPrice = totalPrice / 12 * 1.4
     if(order.term === 24)
         monthPrice = totalPrice * 1.4 * 0.87 / 24
     if(order.term === 36)
