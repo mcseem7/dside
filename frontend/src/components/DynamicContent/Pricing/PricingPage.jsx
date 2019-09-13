@@ -35,8 +35,14 @@ export default () => {
     const onStep3 = (updatedOrder) => {
         updateOrder(updatedOrder);
         setStep(0);
-        fetch({ url: '/api/' + getLang() + '/home/addOrder', method: 'post',
-            body: JSON.stringify(updatedOrder) });
+        fetch('https://mydside.com/api/' + getLang() + '/home/addOrder/', {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            method: 'POST',
+            body: JSON.stringify(updatedOrder),
+        }).then((s) => console.log('success', s)).catch((e) => console.log(e));
         alert(useLang('Ваш заказ успешно отправлен на обработку', 'Your order is on a way'));
     };
     return <Fragment>

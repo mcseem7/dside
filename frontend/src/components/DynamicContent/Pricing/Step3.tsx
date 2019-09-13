@@ -158,7 +158,7 @@ export default (props: StepProps) => {
                         })}/>
                         <div className="pricing-item-button pricing-palden" style={ (!isOrderDisabled) ? {opacity: 0.3} : {}} onClick={
                             () =>
-                                (!isOrderDisabled) &&
+                                (isOrderDisabled) &&
                                 onSubmit(order)
                         }><span className="pricing-action">{
                             useLang('Заказать')
@@ -222,7 +222,7 @@ const CartItem = ({config, product, onDelete, onChange}: {config: PricesConfig, 
                 <div className="s3-cart-item-name">{useLang(service.name)}</div>
                 <div className="s3-cart-item-price">${info.getBasePrice(product)}
                 <button onClick={() => setCollapsed(!collapsed)}>
-                    {useLang('Меньше')}</button>
+                    {collapsed ? useLang('Больше') : useLang('Меньше')}</button>
                     <button onClick={onDelete}>{useLang('Удалить')}</button></div>
             </div>
             <div className="item-details">
