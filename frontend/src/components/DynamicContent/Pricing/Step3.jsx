@@ -134,10 +134,11 @@ const CartItem = ({ config, product, onDelete, onChange }) => {
     const [collapsed, setCollapsed] = React.useState(true);
     const service = config.services[product.serviceIndex];
     const pack = service.packs[product.packIndex];
+    const info = getProductInfo(config);
     return (<div className={"s3-cart-item " + (collapsed ? 'collapsed' : '')}>
             <div className="s3-cart-item-header">
                 <div className="s3-cart-item-name">{useLang(service.name)}</div>
-                <div className="s3-cart-item-price">${pack.price}
+                <div className="s3-cart-item-price">${info.getBasePrice(product)}
                 <button onClick={() => setCollapsed(!collapsed)}>
                     {useLang('Меньше')}</button>
                     <button onClick={onDelete}>{useLang('Удалить')}</button></div>
