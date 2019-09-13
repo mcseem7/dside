@@ -21,6 +21,7 @@ class Order(models.Model):
     term =  models.CharField(max_length=30)
     pack =  models.CharField(max_length=30)
     addons =  models.CharField(max_length=30)
+    paymenttype =  models.CharField(max_length=30)
     date = models.DateTimeField(default=django.utils.timezone.now)
 
 
@@ -32,13 +33,14 @@ def request_handler(sender, instance, **kwargs):
 🔥Вот это заявочка!
 От: {name}
 Общий ценник: {totalprice}
+Способ оплаты: {paymenttype}
 Чеков в месяц: {bill}
 Срок подписки: {term}
 Услуга, пакет: {pack}
 Доп. услуги: {addons}
 Звонить: {phone}
 
-""".format(name=instance.name, phone=instance.phone, pack=instance.pack, bill=instance.bill, term=instance.term, addons=instance.addons, totalprice=instance.totalprice,
+""".format(name=instance.name, phone=instance.phone, pack=instance.pack, bill=instance.bill, term=instance.term, addons=instance.addons, totalprice=instance.totalprice, paymenttype=instance.paymenttype,
            )
 
     bot.send_message(chat_id=ORDERS_CHAT_ID,
