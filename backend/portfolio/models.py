@@ -64,6 +64,7 @@ class PortfolioItem(models.Model):
     logotype = models.ImageField()
     hovercolor = models.CharField(max_length=12, default="#000000")
     projectlink = models.CharField(max_length=100, blank=True)
+    link_towebsite = models.CharField(max_length=100, blank=True)
     views = models.IntegerField(default=0)
     watching_time = models.IntegerField()
     days_developing = models.IntegerField(default=7)
