@@ -279,6 +279,7 @@ export const service3 = {
         en: "Promotion",
         pl: "Promotion",
     },
+    addonIndicies: [],
     moduleLang: {
         ru: 'Кампании',
         en: 'Кампании',
