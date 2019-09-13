@@ -19,8 +19,8 @@ class Order(models.Model):
     totalprice =  models.CharField(max_length=30)
     bill =  models.CharField(max_length=30)
     term =  models.CharField(max_length=30)
-    pack =  models.CharField(max_length=30)
-    addons =  models.CharField(max_length=30)
+    pack =  models.CharField(max_length=100)
+    addons =  models.CharField(max_length=256)
     paymenttype =  models.CharField(max_length=30)
     date = models.DateTimeField(default=django.utils.timezone.now)
 
