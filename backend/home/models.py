@@ -26,7 +26,7 @@ class Order(models.Model):
 
 @receiver(pre_save, sender=Order)
 def request_handler(sender, instance, **kwargs):
-    bot = telegram.Bot(token=BOT_TOKEN)
+    bot = telegram.Bot(token=BOT_TOKEN)пш
     text = """
 🔥Вот это заявочка!
 От: {name}
