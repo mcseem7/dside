@@ -34,7 +34,7 @@ def request_handler(sender, instance, **kwargs):
 Общий ценник: {totalprice}
 Чеков в месяц: {bill}
 Срок подписки: {term}
-Услуга и пакет: {pack}
+Услуга, пакет: {pack}
 Доп. услуги: {addons}
 Звонить: {phone}
 
