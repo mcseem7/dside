@@ -1,5 +1,5 @@
 import React from 'react';
-import { getProductInfo } from './config';
+import { getProductInfo, useDiscount } from './config';
 import useLang from '../../../hooks/useLang';
 import { startsFromLang } from './Step1';
 import { clone, remove } from 'ramda';
@@ -36,8 +36,9 @@ export default (props) => {
     };
     const productInfo = getProductInfo(config);
     const totalPrice = order.products.reduce((sum, product) => {
-        console.log(product, productInfo.getBasePrice(product), config);
-        return productInfo.getBasePrice(product) + sum;
+        console.log(product, productInfo.getBasePrice(product), mainService.addonDiscounts[product.serviceIndex], config);
+        const productPrice = productInfo.getBasePrice(product, mainService.addonDiscounts[product.serviceIndex] || 0);
+        return productPrice + sum;
     }, 0);
     const addProduct = (packIndex) => {
         const newOrder = clone(order);
@@ -47,47 +48,58 @@ export default (props) => {
     };
     return <section className="step-second step-container">
         <div className="steptwo-container">
-            <div className="leftone">
-                <div className="stepper">{useLang(stepLang)} 2/3</div>
-                <div className="step2-header">{useLang(choiceLang)}:</div>
-                {order.products.map((product, index) => <PlanItem config={config} product={product} index={index} onChange={patchProduct(index)} onDelete={() => {
+                <div className="leftone">
+                    <div className="stepper">{useLang(stepLang)} 2/3</div>
+                    <div className="step2-header">{useLang(choiceLang)}:</div>
+                    {order.products.map((product, index) => <PlanItem config={config} product={product} index={index} discount={mainService.addonDiscounts[product.serviceIndex] || 0} onChange={patchProduct(index)} onDelete={(index !== 0) ? (() => {
         setOrder(Object.assign({}, order, { products: remove(index, 1, order.products) }));
-        if (order.products.length === 0)
-            props.onBack();
-    }}/>)}
+    }) : null}/>)}
 
-                <div className="bottom-step2">
-                    <div className="total">{useLang('Итого', 'Total', 'Итого')}: ${totalPrice}</div>
-                    <div className="pricing-item-button pricing-palden" onClick={() => onSubmit(order)}>
-                        <span className="pricing-action">
-                            {useLang(nextLang)}
-                        </span>
+                    <div className="bottom-step2">
+                        <div className="total">{useLang('Итого', 'Total', 'Итого')}: ${totalPrice}</div>
+                        <div className="pricing-item-button pricing-palden" onClick={() => onSubmit(order)}>
+                            <span className="pricing-action">
+                                {useLang(nextLang)}
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
             <div className="rightone">
-                {mainService.addonIndicies.map(index => config.services[index]).map((service, index) => <div className="services-pricing-item" style={order.products.find(p => p.serviceIndex === service.serviceIndex) ? { opacity: 0.5 } : {}}>
-                            <div className="pricing-item-descr">
-                                <div className="pricing-discount-header">
-                                    <div className="pricing-item-header"><span>{index + 1}. </span>{useLang(service.name)}</div>
-                                    
+                {mainService.addonIndicies.map(index => config.services[index]).map((service, index) => {
+        const discount = mainService.addonDiscounts[service.serviceIndex];
+        return <div className="services-pricing-item" style={order.products.find(p => p.serviceIndex === service.serviceIndex) ? { opacity: 0.5 } : {}}>
+                                <div className="pricing-item-descr">
+                                    <div className="pricing-discount-header">
+                                        <div className="pricing-item-header">
+                                            <span>{index + 1}. </span>{useLang(service.name)}</div>
+                                        {discount && <div className="discount">-{mainService.addonDiscounts[service.serviceIndex]}%</div>}
+                                    </div>
+                                    <div className="pricing-item-content">{useLang(service.description)}</div>
                                 </div>
-                                <div className="pricing-item-content">{useLang(service.description)}</div>
-                            </div>
-                            <div className="pricing-item-controls">
-                                <div className="pricing-item-price">
-                                    
-                                    <span>{useLang(startsFromLang)} </span>${service.packs[0].price}
+                                <div className="pricing-item-controls">
+                                    <div className="pricing-item-price">
+                                        {discount
+            ? [
+                <div className="oldprice">${service.packs[0].price}</div>,
+                <span>{useLang(startsFromLang)} </span>,
+                <span>{useDiscount(discount, service.packs[0].price)}</span>, ,
+            ]
+            : [<span>{useLang(startsFromLang)} </span>, <span>{service.packs[0].price}</span>]}
+                                        
+
+                                    </div>
+                                    <div className="pricing-item-button pricing-palden" onClick={order.products.find(p => p.serviceIndex === service.serviceIndex)
+            ? null
+            : (() => setModalServiceList(service.serviceIndex))}>
+                                        <span className="pricing-action">{useLang('Добавить', 'Add', 'Add')}</span>
+                                    </div>
                                 </div>
-                                <div className="pricing-item-button pricing-palden" onClick={() => setModalServiceList(service.serviceIndex)}>
-                                    <span className="pricing-action">{useLang('Добавить', 'Add', 'Add')}</span></div>
-                            </div>
-                        </div>)}
+                            </div>;
+    })}
 
             </div>
-
                 <PopUp modalState={modalServiceList !== undefined} onClose={() => setModalServiceList(undefined)}>
-                    {modalServiceList !== undefined && <PacksList config={config} serviceIndex={modalServiceList} onSelect={addProduct} isPopUp/>}
+                    {modalServiceList !== undefined && <PacksList config={config} serviceIndex={modalServiceList} onSelect={addProduct} isPopUp discount={mainService.addonDiscounts[modalServiceList] || 0}/>}
 
                 </PopUp>
 
