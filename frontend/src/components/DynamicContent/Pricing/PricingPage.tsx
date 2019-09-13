@@ -63,12 +63,17 @@ export default () => {
             body: JSON.stringify({
                 name: updatedOrder.name,
                 phone: updatedOrder.phone,
-                totalprice: String(updatedOrder.totalPrice || ''),
-                bill: updatedOrder.bill === 'check' ? String(updatedOrder.count || '') : '',
-                term: updatedOrder.bill === 'periodic' ? String(updatedOrder.term || '') : '',
+                totalprice: '$' + String(updatedOrder.totalPrice || '0') +
+                    (updatedOrder.bill === 'periodic'
+                        ? '($' + (updatedOrder.totalPrice/updatedOrder.term) +' per month)'
+                        : updatedOrder.bill === 'check'
+                            ? '($' + (updatedOrder.totalPrice/updatedOrder.count) +' per check)'
+                                : ''),
+                bill: (updatedOrder.bill === 'check' ? String(updatedOrder.count || '0') : '0') + ' ',
+                term: (updatedOrder.bill === 'periodic' ? String(updatedOrder.term || '0') : '0' ) + ' mon',
                 pack: info.getText(updatedOrder.products[0]),
                 addons: tail(updatedOrder.products).map (p => info.getText(p)).join(' , ') || 'No addons ',
-                paymenttype: updatedOrder.bill,
+                paymenttype: updatedOrder.bill === 'once' ? 'One time payment' : ( updatedOrder.bill === 'periodic' ? 'Subscribtion' : 'Partnership'),
 
             }),
         }).then((s) => console.log('success', s)).catch((e) => console.log(e))
