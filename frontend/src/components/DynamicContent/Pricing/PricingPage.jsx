@@ -60,6 +60,7 @@ export default () => {
             }),
         }).then((s) => console.log('success', s)).catch((e) => console.log(e));
         alert(useLang('Ваш заказ успешно отправлен на обработку', 'Your order is on a way'));
+        setOrder(getDefaultOrder());
     };
     return <Fragment>
             <ViewStack value={step} data={[

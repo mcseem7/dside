@@ -31,6 +31,7 @@ export const service1 = {
         en: ' EN Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         pl: 'PL Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     },
+    addonIndicies: [1, 2],
     packs: [
         {
             name: {
@@ -159,6 +160,7 @@ export const service2 = {
         en: ' EN Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         pl: 'PL Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     },
+    addonIndicies: [2],
     packs: [
         {
             name: {

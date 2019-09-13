@@ -12,6 +12,7 @@ export type Service = {
     description: Lang
     moduleLang: Lang
     packs: Pack[]
+    addonIndicies: number[]
 }
 
 export type Pack = {
@@ -84,7 +85,7 @@ export const service1: Service = {
         en: ' EN Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         pl: 'PL Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     },
-
+    addonIndicies: [1,2],
     packs: [
         {
             name: {
@@ -215,7 +216,7 @@ export const service2: Service = {
         en: ' EN Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         pl: 'PL Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     },
-
+    addonIndicies: [2],
     packs: [
         {
             name: {

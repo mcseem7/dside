@@ -28,6 +28,7 @@ export default (props) => {
     const [order, setOrder] = React.useState(props.order);
     console.log('step two order', order);
     const patchOrder = (patch) => setOrder(Object.assign({}, order, patch));
+    const mainService = config.services[props.order.products[0].serviceIndex];
     const patchProduct = (index) => (product) => {
         const newOrder = clone(order);
         newOrder.products[index] = Object.assign({}, newOrder.products[index], product);
@@ -65,7 +66,7 @@ export default (props) => {
                 </div>
             </div>
             <div className="rightone">
-                {config.services.filter((s, index) => index !== order.products[0].serviceIndex).map((service, index) => <div className="services-pricing-item" style={order.products.find(p => p.serviceIndex === service.serviceIndex) ? { opacity: 0.5 } : {}}>
+                {mainService.addonIndicies.map(index => config.services[index]).map((service, index) => <div className="services-pricing-item" style={order.products.find(p => p.serviceIndex === service.serviceIndex) ? { opacity: 0.5 } : {}}>
                             <div className="pricing-item-descr">
                                 <div className="pricing-discount-header">
                                     <div className="pricing-item-header"><span>{index + 1}. </span>{useLang(service.name)}</div>
