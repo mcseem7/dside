@@ -1,5 +1,5 @@
 import React from 'react'
-import {createMarkup, Pack, PricesConfig} from './config'
+import {createMarkup, Pack, PricesConfig, useDiscount} from './config'
 import useLang from '../../../hooks/useLang'
 import {orderLang, startsFromLang} from './Step1'
 import {take} from 'ramda'
@@ -8,6 +8,7 @@ type PacksListProps = {
     config: PricesConfig
     serviceIndex: number
     isPopUp?: boolean
+    discount?: number
 }
 const packSvgs = [
     <svg className='pricing-deco-img' enable-background='new -558 659.3  300 100' height='100px' id='Layer_1' preserveAspectRatio='none' version='1.1' viewBox='-558 659.3  300 100' width='300px' x='0px' y='0px'>
@@ -36,7 +37,7 @@ const packSvgs = [
     </svg>
 ]
 
-export default ({onSelect, config, serviceIndex, isPopUp}: PacksListProps) => {
+export default ({onSelect, config, serviceIndex, isPopUp, discount = 0}: PacksListProps) => {
     const selectedService = config.services[serviceIndex]
     const packs = selectedService.packs
     return (
@@ -47,7 +48,7 @@ export default ({onSelect, config, serviceIndex, isPopUp}: PacksListProps) => {
                         <div className={'pricing-deco' + ((packIndex === 3) ? 'elite' : '')}>
                             {packSvgs[packIndex]}
                             <div className='pricing-price'><span className='pricing-period'>{useLang(startsFromLang)}</span><span
-                                className='pricing-currency'>$</span>{pack.price}
+                                className='pricing-currency'>$</span>{useDiscount(discount, pack.price)}
                             </div>
                             <h3 className='pricing-title lite'>{useLang(pack.name)}</h3>
                             <button className='pricing-action trans'
@@ -89,7 +90,7 @@ export default ({onSelect, config, serviceIndex, isPopUp}: PacksListProps) => {
                         </svg>
                         <div className='pricing-price'><span
                             className='pricing-period'>{useLang(startsFromLang)}</span><span
-                            className='pricing-currency'>$</span>{packs[3].price}
+                            className='pricing-currency'>$</span>{useDiscount(discount, packs[3].price)}
                         </div>
                         <h3 className='pricing-title golden'>{useLang(packs[3].name)}</h3>
                         <button className='elite-btn'

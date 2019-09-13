@@ -1,5 +1,5 @@
 import React from 'react';
-import { createMarkup } from './config';
+import { createMarkup, useDiscount } from './config';
 import useLang from '../../../hooks/useLang';
 import { orderLang, startsFromLang } from './Step1';
 import { take } from 'ramda';
@@ -29,14 +29,14 @@ const packSvgs = [
         <path className='deco-layer deco-layer--4 wow' d='M-585.3,700.6c0,0,218.4,52.6,370.4-16v84.3h-369.9L-585.3,700.6z' fill='#2E2950'></path>
     </svg>
 ];
-export default ({ onSelect, config, serviceIndex, isPopUp }) => {
+export default ({ onSelect, config, serviceIndex, isPopUp, discount = 0 }) => {
     const selectedService = config.services[serviceIndex];
     const packs = selectedService.packs;
     return (<div className='pricing pricing-palden' style={isPopUp ? { position: 'absolute', background: 'white' } : {}}>
             {take(3, selectedService.packs).map((pack, packIndex) => <div className={'pricing-item ' + ((packIndex === 2) ? 'pricing__item--featured' : '')}>
                         <div className={'pricing-deco' + ((packIndex === 3) ? 'elite' : '')}>
                             {packSvgs[packIndex]}
-                            <div className='pricing-price'><span className='pricing-period'>{useLang(startsFromLang)}</span><span className='pricing-currency'>$</span>{pack.price}
+                            <div className='pricing-price'><span className='pricing-period'>{useLang(startsFromLang)}</span><span className='pricing-currency'>$</span>{useDiscount(discount, pack.price)}
                             </div>
                             <h3 className='pricing-title lite'>{useLang(pack.name)}</h3>
                             <button className='pricing-action trans' onClick={() => onSelect(packIndex)}>{useLang(orderLang)}</button>
@@ -59,7 +59,7 @@ export default ({ onSelect, config, serviceIndex, isPopUp }) => {
                             <path className="deco-layer deco-layer--2" d="M-584.7,698.6c0,0,227.7,52.6,379.8-16v84.3h-379.9L-584.7,698.6z" fill="#C57762"></path>
                             <path className="deco-layer deco-layer--4 wow" d="M-585.3,700.6c0,0,218.4,52.6,370.4-16v84.3h-369.9L-585.3,700.6z" fill="#2E2950"></path>
                         </svg>
-                        <div className='pricing-price'><span className='pricing-period'>{useLang(startsFromLang)}</span><span className='pricing-currency'>$</span>{packs[3].price}
+                        <div className='pricing-price'><span className='pricing-period'>{useLang(startsFromLang)}</span><span className='pricing-currency'>$</span>{useDiscount(discount, packs[3].price)}
                         </div>
                         <h3 className='pricing-title golden'>{useLang(packs[3].name)}</h3>
                         <button className='elite-btn' onClick={() => onSelect(3)}>{useLang(orderLang)}</button>
