@@ -34,6 +34,8 @@ export default (props: StepProps) => {
     const patchOrder = (patch: Order) =>
         setOrder({...order, ...patch})
 
+    const mainService = config.services[props.order.products[0].serviceIndex]
+
     const patchProduct = (index: number) => (product: Partial<Product>) => {
         const newOrder = clone(order)
         newOrder.products[index] = {...newOrder.products[index], ...product}
@@ -88,7 +90,7 @@ export default (props: StepProps) => {
             </div>
             <div className="rightone">
                 {
-                    config.services.filter( (s, index) => index !== order.products[0].serviceIndex).map( (service, index) =>
+                    mainService.addonIndicies.map ( index => config.services[index]).map( (service, index) =>
                         <div className="services-pricing-item" style={
                             order.products.find( p => p.serviceIndex === service.serviceIndex) ? {opacity: 0.5} : {}
                         }>

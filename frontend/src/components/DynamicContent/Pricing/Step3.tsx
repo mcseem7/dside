@@ -28,7 +28,7 @@ export default (props: StepProps) => {
     const {onSubmit, config} = props
     const [order, setOrder] = useMergeState({bill: 'once', term: 12, count: 100, ...props.order} as Order)
     const productInfo = getProductInfo(config)
-    const product0 = order.products[0]
+    const product0 = order.products[0] || {serviceIndex: 0, packIndex: 0}
     const totalPrice = order.products.reduce( (sum, product) =>
         productInfo.getBasePrice(product) + sum,
         0
@@ -54,8 +54,9 @@ export default (props: StepProps) => {
     }
 
     const onDelete = (index: number) => {
-        setOrder({...order, products: remove(index, 1, order.products)})
-        if(order.products.length === 0)
+        const newOrder = {...order, products: remove(index, 1, order.products)}
+        setOrder(newOrder)
+        if(newOrder.products.length === 0)
             props.onBack()
     }
 

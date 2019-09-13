@@ -19,7 +19,7 @@ export default (props) => {
     const { onSubmit, config } = props;
     const [order, setOrder] = useMergeState(Object.assign({ bill: 'once', term: 12, count: 100 }, props.order));
     const productInfo = getProductInfo(config);
-    const product0 = order.products[0];
+    const product0 = order.products[0] || { serviceIndex: 0, packIndex: 0 };
     const totalPrice = order.products.reduce((sum, product) => productInfo.getBasePrice(product) + sum, 0);
     const service0 = config.services[product0.serviceIndex];
     const pack0 = service0.packs[product0.packIndex];
@@ -37,8 +37,9 @@ export default (props) => {
         setOrder(newOrder);
     };
     const onDelete = (index) => {
-        setOrder(Object.assign({}, order, { products: remove(index, 1, order.products) }));
-        if (order.products.length === 0)
+        const newOrder = Object.assign({}, order, { products: remove(index, 1, order.products) });
+        setOrder(newOrder);
+        if (newOrder.products.length === 0)
             props.onBack();
     };
     return (<section className="step-third step-container">

@@ -10,7 +10,6 @@ import useMergeState from '../../../hooks/useMergeState'
 import {tail} from 'ramda'
 
 
-
 const getDefaultOrder = (): Order => ({
     products: [
         {
@@ -78,6 +77,7 @@ export default () => {
             }),
         }).then((s) => console.log('success', s)).catch((e) => console.log(e))
         alert(useLang('Ваш заказ успешно отправлен на обработку', 'Your order is on a way'))
+        setOrder(getDefaultOrder())
     }
 
     return <Fragment>
