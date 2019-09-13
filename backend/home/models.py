@@ -31,9 +31,14 @@ def request_handler(sender, instance, **kwargs):
     text = """
 🔥Вот это заявочка!
 От: {name}
+Общий ценник: {totalprice}
+Чеков в месяц: {bill}
+Срок подписки: {term}
+Услуга и пакет: {pack}
+Доп. услуги: {addons}
 Звонить: {phone}
 
-""".format(name=instance.name, phone=instance.phone,
+""".format(name=instance.name, phone=instance.phone, pack=instance.pack, bill=instance.bill, term=instance.term, addons=instance.addons, totalprice=instance.totalprice,
            )
 
     bot.send_message(chat_id=ORDERS_CHAT_ID,
