@@ -16,7 +16,7 @@ from dside.settings import BOT_TOKEN, CHAT_ID, ORDERS_CHAT_ID
 class Order(models.Model):
     phone = models.CharField(max_length=30)
     name = models.CharField(max_length=100)
-    totalprice =  models.CharField(max_length=30)
+    totalprice =  models.CharField(max_length=256)
     bill =  models.CharField(max_length=30)
     term =  models.CharField(max_length=30)
     pack =  models.CharField(max_length=100)
