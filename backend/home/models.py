@@ -24,7 +24,6 @@ class Order(models.Model):
     paymenttype =  models.CharField(max_length=30)
     date = models.DateTimeField(default=django.utils.timezone.now)
 
-
 @receiver(pre_save, sender=Order)
 def request_handler(sender, instance, **kwargs):
     bot = telegram.Bot(token=BOT_TOKEN)
