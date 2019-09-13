@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react'
-import pricesConfig, {getProductInfo, Order} from './config'
+import pricesConfig, {getProductInfo, normalizePrice, Order} from './config'
 import ViewStack from './ViewStack'
 import Step1 from './Step1'
 import Step2 from './Step2'
@@ -8,7 +8,6 @@ import Footer from '../../Basic/Footer'
 import useLang, {getLang} from '../../../hooks/useLang'
 import useMergeState from '../../../hooks/useMergeState'
 import {tail} from 'ramda'
-
 
 
 const getDefaultOrder = (): Order => ({
@@ -65,9 +64,9 @@ export default () => {
                 phone: updatedOrder.phone,
                 totalprice: '$' + String(updatedOrder.totalPrice || '0') +
                     (updatedOrder.bill === 'periodic'
-                        ? '($' + (updatedOrder.totalPrice/updatedOrder.term) +' per month)'
+                        ? '($' + normalizePrice((updatedOrder.totalPrice/updatedOrder.term)) +' per month)'
                         : updatedOrder.bill === 'check'
-                            ? '($' + (updatedOrder.totalPrice/updatedOrder.count) +' per check)'
+                            ? '($' + normalizePrice(updatedOrder.totalPrice/updatedOrder.count) +' per check)'
                                 : ''),
                 bill: (updatedOrder.bill === 'check' ? String(updatedOrder.count || '0') : '0') + ' ',
                 term: (updatedOrder.bill === 'periodic' ? String(updatedOrder.term || '0') : '0' ) + ' mon',
@@ -78,6 +77,7 @@ export default () => {
             }),
         }).then((s) => console.log('success', s)).catch((e) => console.log(e))
         alert(useLang('Ваш заказ успешно отправлен на обработку', 'Your order is on a way'))
+        setOrder(getDefaultOrder())
     }
 
     return <Fragment>

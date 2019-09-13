@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {clone} from 'ramda'
-import {createMarkup, Lang, Pack, PricesConfig, Service, Order, Product, getProductInfo} from './config'
+import {createMarkup, Lang, Pack, PricesConfig, Service, Order, Product, getProductInfo, normalizePrice} from './config'
 import useLang from '../../../hooks/useLang'
 import {stepLang} from './Step2'
 import {moreLang, removeLang, StepProps} from './Step1'
@@ -28,13 +28,15 @@ export default (props: StepProps) => {
     const {onSubmit, config} = props
     const [order, setOrder] = useMergeState({bill: 'once', term: 12, count: 100, ...props.order} as Order)
     const productInfo = getProductInfo(config)
-    const product0 = order.products[0]
-    const totalPrice = order.products.reduce( (sum, product) =>
-        productInfo.getBasePrice(product) + sum,
-        0
-    )
+    const product0 = order.products[0] || {serviceIndex: 0, packIndex: 0}
     const service0 = config.services[product0.serviceIndex]
     const pack0 = service0.packs[product0.packIndex]
+
+    const totalPrice = normalizePrice(order.products.reduce( (sum, product) =>
+        productInfo.getBasePrice(product, service0.addonDiscounts[product.serviceIndex] || 0) + sum,
+        0
+    ))
+
 
 
     const isOrderDisabled = order.phone && order.name
@@ -46,6 +48,8 @@ export default (props: StepProps) => {
     if(order.term === 36)
         monthPrice = totalPrice * 1.4 * 0.77 / 36
 
+    monthPrice = normalizePrice(monthPrice)
+
     const patchProduct = (index: number) => (product: Partial<Product>) => {
         const newOrder = clone(order)
         newOrder.products[index] = {...newOrder.products[index], ...product}
@@ -54,8 +58,9 @@ export default (props: StepProps) => {
     }
 
     const onDelete = (index: number) => {
-        setOrder({...order, products: remove(index, 1, order.products)})
-        if(order.products.length === 0)
+        const newOrder = {...order, products: remove(index, 1, order.products)}
+        setOrder(newOrder)
+        if(newOrder.products.length === 0)
             props.onBack()
     }
 
@@ -169,7 +174,12 @@ export default (props: StepProps) => {
                     <div className="s3-total-header">{useLang('Ваша корзина', 'Your order', 'Ваш заказ')}:</div>
                         {
                             order.products.map( (p, index) =>
-                                <CartItem config={config} onChange={patchProduct(index)} product={p} onDelete={() => onDelete(index)} />
+                                <CartItem
+                                    config={config}
+                                    discount={service0.addonDiscounts[p.serviceIndex]}
+                                    onChange={patchProduct(index)}
+                                    product={p} onDelete={index !== 0 && (() => onDelete(index))}
+                                />
                             )
                         }
                         <div className="s3-cart-bottom">
@@ -211,7 +221,7 @@ export default (props: StepProps) => {
     )
 }
 
-const CartItem = ({config, product, onDelete, onChange}: {config: PricesConfig, product: Product, onDelete, onChange}) => {
+const CartItem = ({config, product, onDelete, onChange, discount = 0}: {discount?: number, config: PricesConfig, product: Product, onDelete, onChange}) => {
     const [collapsed, setCollapsed] = React.useState(true)
     const service = config.services[product.serviceIndex]
     const pack =  service.packs[product.packIndex]
@@ -220,10 +230,11 @@ const CartItem = ({config, product, onDelete, onChange}: {config: PricesConfig, 
         <div className={"s3-cart-item "+ (collapsed ?  'collapsed' : '')}>
             <div className="s3-cart-item-header">
                 <div className="s3-cart-item-name">{useLang(service.name)}</div>
-                <div className="s3-cart-item-price">${info.getBasePrice(product)}
+                <div className="s3-cart-item-price">${info.getBasePrice(product, discount)}
                 <button onClick={() => setCollapsed(!collapsed)}>
                     {collapsed ? useLang('Больше') : useLang('Меньше')}</button>
-                    <button onClick={onDelete}>{useLang('Удалить')}</button></div>
+                    {onDelete && <button onClick={onDelete}>{useLang('Удалить')}</button>}
+                </div>
             </div>
             <div className="item-details">
                 <ul className='pricing-feature-list' dangerouslySetInnerHTML={createMarkup(useLang(pack.featureDescriptions))}>

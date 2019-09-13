@@ -1,9 +1,11 @@
 export function createMarkup(value) { return { __html: value }; }
 ;
+export const useDiscount = (discount, amount) => Math.ceil(amount / 1000 * (1000 - discount * 10));
+export const normalizePrice = (value) => Math.ceil(value * 100) / 100;
 export const getProductInfo = (config) => {
     const getService = (product) => config.services[product.serviceIndex];
-    const getPack = (product) => getService(product).packs[product.serviceIndex];
-    const getBasePrice = (product) => getPack(product).price + getPack(product).modulePrice * (product.extraModules || 0);
+    const getPack = (product) => getService(product).packs[product.packIndex];
+    const getBasePrice = (product, discount = 0) => useDiscount(discount, getPack(product).price) + getPack(product).modulePrice * (product.extraModules || 0);
     const getText = (product) => {
         return getService(product).name.ru + ' ' + getPack(product).name.ru + ' extra modules ' + product.extraModules;
     };
@@ -30,6 +32,10 @@ export const service1 = {
         ru: 'RU Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         en: ' EN Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         pl: 'PL Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    addonIndicies: [1, 2],
+    addonDiscounts: {
+        1: 20,
     },
     packs: [
         {
@@ -159,6 +165,10 @@ export const service2 = {
         en: ' EN Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         pl: 'PL Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     },
+    addonIndicies: [2],
+    addonDiscounts: {
+        2: 15,
+    },
     packs: [
         {
             name: {
@@ -277,6 +287,8 @@ export const service3 = {
         en: "Promotion",
         pl: "Promotion",
     },
+    addonIndicies: [],
+    addonDiscounts: {},
     moduleLang: {
         ru: 'Кампании',
         en: 'Кампании',

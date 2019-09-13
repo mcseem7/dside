@@ -60,9 +60,9 @@ export type StepProps = {
 
 export default ({config, onSubmit}: StepProps) => {
 
-    const [index, setIndex] = React.useState(0)
+    const [index, setIndex] = React.useState(undefined)
     const selectedSevice = config.services[index]
-    const packs = selectedSevice.packs
+    const packs = selectedSevice ? selectedSevice.packs : []
     return <section className="step-first step-container" >
         <div className="pricing__wrapper">
             <div className="services-pricing-grid">
@@ -86,14 +86,18 @@ export default ({config, onSubmit}: StepProps) => {
                     )
                 }
             </div>
+            {index !== undefined &&
             <PacksList serviceIndex={index} config={config} onSelect={(packIndex) =>
-                onSubmit({products: [{
+                onSubmit({
+                    products: [{
                         packIndex,
                         serviceIndex: index,
                         extraModules: 0,
-                    }]})
+                    }]
+                })
             }
             />
+            }
         </div>
     </section>
 }

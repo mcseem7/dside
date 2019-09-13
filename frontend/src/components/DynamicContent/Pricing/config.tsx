@@ -12,6 +12,8 @@ export type Service = {
     description: Lang
     moduleLang: Lang
     packs: Pack[]
+    addonDiscounts: {}
+    addonIndicies: number[]
 }
 
 export type Pack = {
@@ -45,16 +47,19 @@ export type Product = {
 
 export function createMarkup(value: string) { return {__html: value}; };
 
-
+export const useDiscount = (discount, amount) =>
+    Math.ceil(amount/ 1000 * (1000 - discount * 10))
+export const normalizePrice = (value: number) =>
+    Math.ceil(value * 100) /100
 export const getProductInfo = (config: PricesConfig) => {
     const getService = (product: Product) =>
         config.services[product.serviceIndex]
 
     const getPack = (product: Product) =>
-        getService(product).packs[product.serviceIndex]
+        getService(product).packs[product.packIndex]
 
-    const getBasePrice = (product: Product) =>
-        getPack(product).price + getPack(product).modulePrice * (product.extraModules || 0)
+    const getBasePrice = (product: Product, discount = 0) =>
+        useDiscount(discount, getPack(product).price) + getPack(product).modulePrice * (product.extraModules || 0)
 
     const getText = (product: Product) => {
         return getService(product).name.ru + ' '+ getPack(product).name.ru + ' extra modules ' + product.extraModules
@@ -84,7 +89,10 @@ export const service1: Service = {
         en: ' EN Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         pl: 'PL Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     },
-
+    addonIndicies: [1,2],
+    addonDiscounts: {
+        1: 20,
+    },
     packs: [
         {
             name: {
@@ -215,7 +223,10 @@ export const service2: Service = {
         en: ' EN Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         pl: 'PL Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     },
-
+    addonIndicies: [2],
+    addonDiscounts: {
+        2: 15,
+    },
     packs: [
         {
             name: {
@@ -335,6 +346,8 @@ export const service3: Service = {
         en: "Promotion",
         pl: "Promotion",
     },
+    addonIndicies: [],
+    addonDiscounts: {},
     moduleLang: {
         ru: 'Кампании',
         en: 'Кампании',
