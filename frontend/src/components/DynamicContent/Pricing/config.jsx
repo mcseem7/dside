@@ -5,7 +5,7 @@ export const getProductInfo = (config) => {
     const getPack = (product) => getService(product).packs[product.serviceIndex];
     const getBasePrice = (product) => getPack(product).price + getPack(product).modulePrice * (product.extraModules || 0);
     const getText = (product) => {
-        return getService(product).name.ru + ': ' + getPack(product).name.ru + ' extraModules ' + product.extraModules;
+        return getService(product).name.ru + ' ' + getPack(product).name.ru + ' extra modules ' + product.extraModules;
     };
     return {
         getPack,
