@@ -159,7 +159,7 @@ export default (props: StepProps) => {
                         <div className="pricing-item-button pricing-palden" style={ (!isOrderDisabled) ? {opacity: 0.3} : {}} onClick={
                             () =>
                                 (isOrderDisabled) &&
-                                onSubmit(order)
+                                onSubmit({...order, totalPrice})
                         }><span className="pricing-action">{
                             useLang('Заказать')
                         }</span></div>

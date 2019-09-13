@@ -56,10 +56,14 @@ export const getProductInfo = (config: PricesConfig) => {
     const getBasePrice = (product: Product) =>
         getPack(product).price + getPack(product).modulePrice * (product.extraModules || 0)
 
+    const getText = (product: Product) => {
+        return getService(product).name.ru + ': '+ getPack(product).name.ru + ' extraModules ' + product.extraModules
+    }
     return {
         getPack,
         getService,
         getBasePrice,
+        getText
     }
 }
 

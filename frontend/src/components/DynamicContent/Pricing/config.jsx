@@ -4,10 +4,14 @@ export const getProductInfo = (config) => {
     const getService = (product) => config.services[product.serviceIndex];
     const getPack = (product) => getService(product).packs[product.serviceIndex];
     const getBasePrice = (product) => getPack(product).price + getPack(product).modulePrice * (product.extraModules || 0);
+    const getText = (product) => {
+        return getService(product).name.ru + ': ' + getPack(product).name.ru + ' extraModules ' + product.extraModules;
+    };
     return {
         getPack,
         getService,
         getBasePrice,
+        getText
     };
 };
 export const service1 = {

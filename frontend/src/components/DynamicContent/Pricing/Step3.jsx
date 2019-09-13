@@ -115,7 +115,7 @@ export default (props) => {
         pl: 'Телефон',
     })}/>
                         <div className="pricing-item-button pricing-palden" style={(!isOrderDisabled) ? { opacity: 0.3 } : {}} onClick={() => (isOrderDisabled) &&
-        onSubmit(order)}><span className="pricing-action">{useLang('Заказать')}</span></div>
+        onSubmit(Object.assign({}, order, { totalPrice }))}><span className="pricing-action">{useLang('Заказать')}</span></div>
                     </div>
                 </div>
                 <div className="rightone-3">
