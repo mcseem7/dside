@@ -1,12 +1,12 @@
 
-.name0{background: #F2F3F5  no-repeat; transition: background .3s ease-in-out;}
+.name0{background-image: linear-gradient( to right,#f5f5fa,#fff,#f5f5fa ); transition: background .3s ease-in-out;}
 .name1{color: #fff; background: #5f8eea; transition: background .3s ease-in-out;}
-.name2{background: #F2F3F5;  transition: background .3s ease-in-out;}
-.name3{background: #F2F3F5;  transition: background .3s ease-in-out;}
-.name4{background: #F2F3F5;  transition: background .3s ease-in-out;}
-.name5{background: #F2F3F5;  transition: background .3s ease-in-out;}
-.name6{background: #F2F3F5;  transition: background .3s ease-in-out;}
-.name7{background: #F2F3F5;  transition: background .3s ease-in-out;}
+.name2{background-image: linear-gradient( to right,#f5f5fa,#fff,#f5f5fa ); transition: background .3s ease-in-out;}
+.name3{background-image: linear-gradient( to right,#f5f5fa,#fff,#f5f5fa ); transition: background .3s ease-in-out;}
+.name4{background-image: linear-gradient( to right,#f5f5fa,#fff,#f5f5fa ); transition: background .3s ease-in-out;}
+.name5{background-image: linear-gradient( to right,#f5f5fa,#fff,#f5f5fa ); transition: background .3s ease-in-out;}
+.name6{background-image: linear-gradient( to right,#f5f5fa,#fff,#f5f5fa ); transition: background .3s ease-in-out;}
+.name7{background-image: linear-gradient( to right,#f5f5fa,#fff,#f5f5fa ); transition: background .3s ease-in-out;}
 .name1 .wedo li span::before{color: #fff; opacity: .6;}
 .name1 .section-bottom h3{color: #fff; opacity: .6;}
 .fp-viewing-design .mainnav li a, .fp-viewing-design .mainnav li{color: #fff; transition: color .3s; transition-delay: .6s;}
@@ -45,14 +45,14 @@
     opacity:1;display: block}
 /* Fullscreen */
 @media only screen and (min-width: 1024px) {
-.name0{background: #F2F3F5 url('./bgs/saber-1.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
+.name0{background-image: linear-gradient( to right,#f5f5fa,#fff,#f5f5fa ); background: url('./bgs/saber-1.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
 .name1{color: #fff; background: #3a2aad url('./bgs/saber-2.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
-.name2{background: #F2F3F5 url('./bgs/saber-3.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
-.name3{background: #F2F3F5 url('./bgs/saber-4.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
-.name4{background: #F2F3F5 url('./bgs/saber-5.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
-.name5{background: #F2F3F5 url('./bgs/saber-6.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
-.name6{background: #F2F3F5 url('./bgs/saber-7.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
-.name7{background: #F2F3F5 url('./bgs/saber-8.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
+.name2{background-image: linear-gradient( to right,#f5f5fa,#fff,#f5f5fa ); background: url('./bgs/saber-3.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
+.name3{background-image: linear-gradient( to right,#f5f5fa,#fff,#f5f5fa ); background: url('./bgs/saber-4.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
+.name4{background-image: linear-gradient( to right,#f5f5fa,#fff,#f5f5fa ); background: url('./bgs/saber-5.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
+.name5{background-image: linear-gradient( to right,#f5f5fa,#fff,#f5f5fa ); background: url('./bgs/saber-6.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
+.name6{background-image: linear-gradient( to right,#f5f5fa,#fff,#f5f5fa ); background: url('./bgs/saber-7.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
+.name7{background-image: linear-gradient( to right,#f5f5fa,#fff,#f5f5fa ); background: url('./bgs/saber-8.svg') no-repeat; background-position: 5% 3%; background-size: 360px 360px; transition: background .3s ease-in-out;}
 .name1 .wedo li span::before{color: #fff; opacity: .6;}
 .name1 .section-bottom h3{color: #6892ff;}
 .section-wrapper{    width: 615px;

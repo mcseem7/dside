@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="127 350.3 1671 717" style="enable-background:new 127 350.3 1671 717;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.3;fill:none;stroke:#C5C9E0;stroke-linecap:square;enable-background:new    ;}
+	.st1{fill:none;stroke:url(#SVGID_1_);stroke-miterlimit:10;}
+	.st2{fill:none;stroke:url(#SVGID_2_);stroke-miterlimit:10;}
+</style>
+<g>
+	<path vector-effect="non-scaling-stroke" class="st0" d="M127.5,1066.8l1670-289.4"/>
+	<radialGradient id="SVGID_1_" cx="962.5" cy="892.6813" r="603.2787" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#EFAE9A"/>
+		<stop  offset="1" style="stop-color:#B5624C"/>
+	</radialGradient>
+	<path vector-effect="non-scaling-stroke" class="st1" d="M127.5,1066.8l1670-348.3"/>
+	<path vector-effect="non-scaling-stroke" class="st0" d="M127.5,1066.8l1670-411 M127.5,1066.8l1670-485.5 M127.5,1066.8
+		l1670-594.1 M127.5,1066.8l1670-716.5"/>
+	<path vector-effect="non-scaling-stroke" class="st0" d="M1797.5,1066.8l-1670-289.4"/>
+	<radialGradient id="SVGID_2_" cx="962.5" cy="892.6813" r="603.2787" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#EFAE9A"/>
+		<stop  offset="1" style="stop-color:#B5624C"/>
+	</radialGradient>
+	<path vector-effect="non-scaling-stroke" class="st2" d="M1797.5,1066.8l-1670-348.3"/>
+	<path vector-effect="non-scaling-stroke" class="st0" d="M1797.5,1066.8l-1670-411 M1797.5,1066.8l-1670-485.5 M1797.5,1066.8
+		l-1670-592.7 M1797.5,1066.8l-1670-714.3"/>
+</g>
+</svg>

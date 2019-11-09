@@ -1,13 +1,15 @@
 import React from 'react';
 import useLang from '../../../hooks/useLang';
 import PacksList from './PacksList';
+import ScrollAnimation from 'react-animate-on-scroll'
+import scrollToComponent from 'react-scroll-to-component';
 export const startsFromLang = {
     ru: 'от',
     pl: 'от',
     en: 'from',
 };
 export const orderLang = {
-    ru: 'Заказать',
+    ru: 'Выбрать',
     pl: 'Заказать',
     en: 'Order',
 };
@@ -41,9 +43,8 @@ export default ({ config, onSubmit }) => {
     const selectedSevice = config.services[index];
     const packs = selectedSevice ? selectedSevice.packs : [];
     return <section className="step-first step-container">
-        <div className="pricing__wrapper">
             <div className="services-pricing-grid">
-                {config.services.map((service, curIndex) => <div className={"services-pricing-item " + (index === curIndex ? 'activated' : '')} onClick={() => setIndex(curIndex)}>
+                {config.services.map((service, curIndex) => <div className={"services-pricing-item " + (index === curIndex ? 'activated' : '')}>
                             <div className="pricing-item-descr">
                                 <div className="pricing-item-header"><span>{Number(curIndex + 1)}. </span>{useLang(service.name)}</div>
                                 <div className="pricing-item-content">{useLang(service.description)}
@@ -53,18 +54,18 @@ export default ({ config, onSubmit }) => {
                                 <div className="pricing-item-price">
                                     <span>{useLang(startsFromLang)} </span>${service.packs[0].price}
                                 </div>
-                                <div className="pricing-item-button pricing-palden"><span className="pricing-action">{useLang('Купить', 'Buy', 'Buy')}</span></div>
+                                <div onClick={() =>  {setIndex(curIndex); scrollToComponent(this.Prices, { offset: 0, align: 'top', duration: 1900})}} className="pricing-item-button pricing-palden"><span className="pricing-action">{useLang('Рассчитать', 'Buy', 'Buy')}</span></div>
                             </div>
                         </div>)}
-            </div>
+            </div><section className='prices' ref={(section) => { this.Prices = section; }}>
             {index !== undefined &&
-        <PacksList serviceIndex={index} config={config} onSelect={(packIndex) => onSubmit({
+         <section> <ScrollAnimation animateIn="slideInUp" delay="300"><h3 className="">Выберите пакет</h3><PacksList serviceIndex={index} config={config} onSelect={(packIndex) => onSubmit({
             products: [{
                     packIndex,
                     serviceIndex: index,
                     extraModules: 0,
                 }]
-        })}/>}
-        </div>
+        })}/></ScrollAnimation></section>}</section>
+
     </section>;
 };

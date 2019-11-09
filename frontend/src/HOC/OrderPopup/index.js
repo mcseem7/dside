@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react'
 import './index.css'
-import arrow from '../arrow.svg'
+import Arrow from '../../components/Basic/Footer/arrow.svg'
 import { reactTranslateChangeLanguage } from "translate-components";
 import Translate from 'translate-components'
 import InputMask from 'react-input-mask';
@@ -127,9 +127,10 @@ class OrderPoppup extends Component {
           </label><div className="bar"></div></div>
 
 <div className="button-container">
-            <button type="submit" className="appform-button" disabled={isSubmitting}>
-              <Translate>Send</Translate>
-            </button>
+<button type="submit" className="btn-send" disabled={isSubmitting}>
+                                <Translate>Order now!</Translate>
+                                <img className="button__content" src={Arrow} alt=""/>
+                            </button>
 </div>
           </form>     </div></div>
         );

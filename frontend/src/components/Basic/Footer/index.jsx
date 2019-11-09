@@ -6,7 +6,6 @@ import  Translate  from "translate-components";
 import  LogoRed  from './dsideLogo.svg';
 import  Arrow  from './arrow.svg';
 import { NavLink } from "react-router-dom";
-import ScrollAnimation from 'react-animate-on-scroll'
 
 class Footer extends Component {
 
@@ -37,16 +36,18 @@ class Footer extends Component {
            <footer>
                 <div className="footer__wrap__head">
                     <div className="footer__head footer__content text-center">
-                        <ScrollAnimation delay="150" animateIn="slideInUp" ><p className="footer__head-write"><Translate>Drop the line!</Translate></p></ScrollAnimation>
-                        <ScrollAnimation delay="200" animateIn="slideInUp" ><a className="footer__head-mail" href="mailto:info@mydside.com">info@mydside.com</a></ScrollAnimation>
+                        <p className="footer__head-write"><Translate>Drop the line!</Translate></p>
+                        <a className="footer__head-mail" href="mailto:info@mydside.com">info@mydside.com</a>
                     </div>
                 </div>
                 <div className="footer__wrap__middle">
+                    <div className="lines"></div>
                     <div className="footer__middle footer__content">
-                        <ScrollAnimation delay="300" animateIn="slideInUp" ><div className="footer__content-info">
+                      <div className="footer__content-info">
                             <a href="/" className="footer__content-logo">
                               <img src={LogoRed} alt="DSIDE Logo"/>
                             </a>
+                            <p className="welcome"><Translate>We welcome you</Translate></p>
                             <p>
                                 <span>Aleja Solidarnosci 117, 00-140</span><br />
                                 <span>Warszawa, Polska</span>
@@ -54,10 +55,10 @@ class Footer extends Component {
                             <p>+485741557711</p>
                             <p><a href="mailto:info@mydside.com">info@mydside.com</a></p>
 
-                        </div></ScrollAnimation>
-                        <ScrollAnimation delay="400" animateIn="slideInUp" >
+                        </div>
+                       
                         <div className="footer__content-services">
-                            <p><Translate>Services</Translate></p>
+                            <p className="heading-list"><Translate>Services</Translate></p>
                             <ul>
                                 <li className="shining-underline">
                                 <NavLink
@@ -85,9 +86,9 @@ class Footer extends Component {
                                  </li>
 
                             </ul>
-                        </div></ScrollAnimation><ScrollAnimation delay="500" animateIn="slideInUp" >
+                        </div>
                         <div className="footer__content-about">
-                            <p><Translate>Details</Translate></p>
+                            <p className="heading-list"><Translate>Details</Translate></p>
                             <ul>
                                 <li className="shining-underline">
                                 <NavLink
@@ -131,14 +132,13 @@ class Footer extends Component {
                                  </li>
                                  */}
                             </ul>
-                        </div></ScrollAnimation><ScrollAnimation delay="500" animateIn="slideInUp" >
+                        </div>
                         <div className="footer__content-send"  onClick={this.changePoppup}>
-                            <button className="footer__btn-send">
+                            <button className="btn-send">
                                 <Translate>Order now!</Translate>
                                 <img className="button__content" src={Arrow} alt=""/>
                             </button>
                         </div>
-                        </ScrollAnimation>
                     </div>
                 </div>
 

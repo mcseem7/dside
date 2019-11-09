@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="91 331.3 1600 756" style="enable-background:new 91 331.3 1600 756;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.5;fill:none;stroke:#C5C9E0;enable-background:new    ;}
+	.st1{opacity:0.5;fill:none;stroke:#C5C9E0;stroke-dasharray:10;enable-background:new    ;}
+	.st2{fill:none;stroke:url(#SVGID_1_);stroke-miterlimit:10;}
+</style>
+<g>
+	<path vector-effect="non-scaling-stroke" class="st0" d="M5.5,62.3c196.4,380.8,503.8,626,849.3,626c345.5,0,652.9-245.2,849.4-626
+		"/>
+	<path vector-effect="non-scaling-stroke" class="st1" d="M83.1,64.3c178.5,346.2,457.8,569,771.8,569c314,0,593.3-222.8,771.8-569"
+		/>
+	<path class="st0" d="M860.9,928.1c17.2-0.8,34.1-4.6,50.1-11.4c0,0,0,0,0.1,0c35.7-15,64-43.3,79-79c7.7-18.4,11.6-38,11.6-57.6
+		s-3.9-39.1-11.6-57.6c0,0,0,0,0,0c-7.6-17.6-18.3-33.5-31.9-47.1c-13.6-13.6-29.5-24.3-47.1-31.9c0,0,0,0,0,0
+		c-9-3.9-18.5-6.8-28.2-8.8c-9.7-1.9-19.5-2.9-29.4-2.9H730.8v296.4h122.8C856,928.3,858.5,928.3,860.9,928.1z"/>
+	<path vector-effect="non-scaling-stroke" class="st0" d="M376.5,1629.7c380.8-196.4,626-503.8,626-849.3
+		c0-345.5-245.2-652.9-626-849.3"/>
+	<circle class="st1" cx="853.4" cy="780" r="148.3"/>
+	<path vector-effect="non-scaling-stroke" class="st0" d="M-115.3,925.7c388.4,180.9,781.6,186.6,1054.8-24.9
+		c273.2-211.5,366.2-593.5,288.4-1014.9"/>
+	<path vector-effect="non-scaling-stroke" class="st0" d="M1510.5,1483.3c-74.9-421.9-296-747.1-626-849.3
+		c-330-102.3-696.2,40.9-996.6,346.6"/>
+	<path vector-effect="non-scaling-stroke" class="st0" d="M-6,705.6c231.3,41.4,593.2,68,1000,68s768.7-26.6,1000-68 M-6,820.6
+		c231.3-26.8,593.2-44,1000-44s768.7,17.2,1000,44"/>
+</g>
+<radialGradient id="SVGID_1_" cx="1080.3809" cy="721.4264" r="721.5599" gradientTransform="matrix(0.9679 -0.2512 -0.2512 -0.9679 186.5124 1660.3894)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#EFAE9A"/>
+	<stop  offset="1" style="stop-color:#B5624C"/>
+</radialGradient>
+<path vector-effect="non-scaling-stroke" class="st2" d="M32.6,747.3c285.3,178.7,675.2,240.1,1068.9,137.9s704.5-345.5,866.9-640.3
+	"/>
+</svg>

@@ -24,7 +24,7 @@
 
 .aboutus__title-advantage h1{
         font-size: 3rem;
-        color: rgb(255, 255, 255);
+           color: rgb(243, 243, 249);
         font-family: "DSIDE-Black", 'sans-serif' ;
         font-weight: bold;
         text-align: center;
@@ -33,7 +33,7 @@
     }
 
     .aboutus__container {
-        background: #F2F3F5;
+         background-image: linear-gradient( to right,#f5f5fa,#fff,#f5f5fa );
     }
 
     .aboutus__wrapper {
@@ -55,7 +55,7 @@
    }
 
     .about__company-dside p {
-        color: #000;
+        color: #3a416f;
         font-family: 'DSIDE-Light', sans-serif;
         font-size: 18px;
         font-weight: 300;
@@ -63,7 +63,7 @@
     }
 
     .title__what h4 {
-        color: #000;
+        color: #21243d;
         font-family: 'DSIDE-Black', sans-serif;
         font-size: 24px;
         font-weight: 700;
@@ -72,9 +72,9 @@
     }
 
     .title__whyus h5 {
-        color: #000000;
+        color: #21243d;
         font-family: 'DSIDE-Bold', sans-serif;
-        font-size: 26px;
+        font-size: 36px;
         line-height: 16.87px;
         text-align: center;
         text-transform: uppercase;
@@ -115,14 +115,14 @@
     }
 
     .dside__business_process li {
-        flex: 1 1 25%;
+        flex: 1 1 50%;
         margin-left: 3rem;
         margin-top: 2rem;
         list-style: none;
     }
 
     .description__business-process p {
-        color: #000000;
+        color: #3a416f;
         font-family: 'DSIDE-Light', sans-serif;
         font-size: 17px;
         font-weight: 300;
@@ -132,9 +132,9 @@
     }
 
     .business__title p {
-        color: #000000;
+        color:#21243d;
         font-family: 'DSIDE-Bold', sans-serif;
-        font-size: 1rem;
+        font-size: 20px;
         font-weight: 700;
         margin-left: 7px;
     }
@@ -142,7 +142,7 @@
     .number__bus-process {
         color: #777677;
         font-family: 'DSIDE-Light', sans-serif;
-        font-size: 17px;
+        font-size: 14px;
         font-weight: 700;
     }
 
@@ -163,7 +163,7 @@
     }
 
     .meet__team-title h4 {
-        color: #000000;
+        color:#21243d;
         font-family: 'DSIDE-Bold', sans-serif;
         font-size: 1.7rem;
         font-weight: 700;
@@ -254,13 +254,15 @@
     }
     .about__company-dside p {
     font-size: 18px;
-    line-height: 32px;
+
+    line-height: 1.78;
     }
     .description__business-process p{
-        font-size: 1rem;
+        font-size: 18px;
     }
     .dside__business_process .animated {
-        flex: 1 1 25%;
+        flex: 1 1 50%;
+            margin-bottom: 2em;
     }
     .dside__shahmat-img {
     position: relative;
@@ -375,25 +377,26 @@
 }
     .meet__team-title h4 {text-align: center; margin-left: 0;}
     .name-developer h4 {
-        color: #000000;
+        color:#21243d;
         font-family: 'DSIDE-Bold', sans-serif;
-        font-size: 1.2rem;
+        font-size: 24px;
         margin: 0;
         margin-bottom: 0.2rem;
         text-transform: uppercase;
     }
      .position-developer p {
-        color: #000000;
+        color: #21243d;
         margin: 0;
         font-family: 'DSIDE-Light', sans-serif;
-        font-size: 0.8rem;
+        font-size: 18px;
         font-weight: 300;
     }
        .about__developer p {
-        color: #000000;
+        color: #21243d;
         font-family: 'DSIDE-Light', sans-serif;
         margin: 0;
-        font-size: 0.8rem;
+        font-size: 14px;
+        line-height: 1.78;
         font-weight: 300;
     }
        .Max{width: 72%;     margin-top: 30px;}
@@ -410,7 +413,8 @@
     .dside__what-content{padding: 0 3rem;}
     .dside__business_process:nth-child(1){margin-left: 3rem;}
      .description__business-process p{
-        font-size: .8rem;
+        font-size: 18px;
+         line-height: 1.78;
     }
 }/* Fullpage */
 @media only screen and (min-width: 1400px) {

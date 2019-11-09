@@ -225,7 +225,15 @@ class Header extends Component {
                        <span className="mainnavshine"></span>
                         </NavLink>
                    </li>
-                     {/*<li>
+                   <li className="shining-underline">
+                     <NavLink
+                      to={`/${this.state.lang}/pricing`}
+                      className="link">
+                          <Translate>Prices</Translate>
+                       <span className="mainnavshine"></span>
+                        </NavLink>
+                   </li>
+                     <li>
                           <Translate>Services</Translate>
                      <ul>
                          <li className="shining-underline">
@@ -253,7 +261,7 @@ class Header extends Component {
                              </NavLink>
                          </li>
                      </ul>
-                   </li>*/}
+                   </li>
                    <li className="shining-underline">
                      <NavLink
                       to={`/${this.state.lang}/process`}

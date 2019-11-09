@@ -42,7 +42,7 @@ export default class Main extends Component {
       </Helmet>
       
       <div className="complex__content">
-        <Slider  {...this.props} />
+        <Slider/>
          <About/>
         <HeaderPost lang={this.state.langVars} />
       </div>

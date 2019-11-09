@@ -1,12 +1,8 @@
-.loader {
-    position: relative;
-    margin: 0px auto;
-    zoom: $zoom;
-  }
+
   .circular{animation:rotate 2s linear forwards ;width:100px;height:100px;position:relative}
   .path{stroke:#007aff; stroke-dasharray: 1,200;
     stroke-dashoffset: 0;
-    animation: 
+    animation:
      dash 1.5s ease-in-out forwards,
      color 6s ease-in-out infinite
     ;
@@ -16,12 +12,12 @@
     stroke-dasharray: 1,200;
     stroke-dashoffset: 0;
    }
-  
+
    100%{
     stroke-dasharray: 150,200;
     stroke-dashoffset: 10;
    }
-  
+
   }
   @keyframes color{
     100%, 0%{
@@ -40,12 +36,12 @@
   @keyframes rotate{
       100%{transform:rotate(360deg)}
       }
-      
+
   .checkmark__check {
       transform-origin: 50% 50%;
       stroke-dasharray: 48;
       stroke-dashoffset: 48;
-      
+
        animation: stroke 0.5s  cubic-bezier(0.65, 0, 0.45, 1) 1.5s forwards, color 6s linear infinite;}
       @keyframes stroke {
     100% {
@@ -61,7 +57,7 @@
  .success-wrap {
      display: flex;
      align-items: center;
- }     
+ }
 
  .success-poppup .modal {
      min-height: 0rem;

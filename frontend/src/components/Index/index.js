@@ -13,7 +13,6 @@ export default class MainContent extends Component {
     return (
         <Header/>
         <div className="wrapper___layout">
-
           <RootContent />
           <Footer/>
         </div>

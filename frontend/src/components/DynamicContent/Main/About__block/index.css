@@ -5,10 +5,11 @@
         line-height: 30px;
         color: rgb(0, 0, 0);
         width: 100%;
+
         font-family: 'DSIDE-Light', sans-serif;
         font-weight: 300;
     }
-
+.anim, .anim2{opacity: 0.3}
 .container__about-content{       background-position: bottom right 50%;
     padding: 0rem 2rem 22rem 2rem;
     background-size: 450px;

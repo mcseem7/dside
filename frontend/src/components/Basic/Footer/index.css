@@ -2,17 +2,16 @@
 footer {
     font-family: 'DSIDE-Light', sans-serif;
     width: 100%;
-    font-size: 1rem;
+    font-size: 14px;
 }
-
 footer a,
 footer p,
 footer span {
     text-decoration: none;
-    color: #EBEDED;
+    color: #656986;
     margin: 0;
 }
-
+.heading-list span, .welcome span{font-size: 12px; font-family: 'DSIDE-Black',sans-serif; letter-spacing: 2px; color:#21243d;}
 footer ul {
     padding: 0;
     margin: 0;
@@ -37,17 +36,26 @@ footer button {
 .text-center {
     text-align: center;
 }
-
-.footer__wrap__head {
-    background-color: #11141D;
+.lines {
+    padding-bottom: 385px;
+    bottom: calc(100% - 2px);
+    background-image: url('./footer-img.svg');
+    background-size: 100% 100%;
+    position: absolute;
+    right:0;
+    left:0;
+    z-index: -1;
 }
-
+.welcome span{    text-transform: uppercase;
+    color: #21243d;
+    font-size: 12px;}
 .footer__wrap__middle {
-    background-color: #151821;
+    position: relative;
+    padding-top: 2em;
+    background-color: #fff;
 }
-
 .footer__wrap__down {
-    background-color: #11141C;
+    background-color: #fff;
 
 }
 
@@ -58,12 +66,11 @@ footer button {
 }
 
 .footer__head {
-    background-color: #11141D;
         padding: 1.6rem 0;
+
 }
 
 .footer__middle {
-    background-color: #151821;
     padding: 4.7rem .2rem 1rem;
 
 }
@@ -72,39 +79,18 @@ footer button {
         max-height: 100%;
     }
  .footer__head-mail{font-size: 28px;}
- .footer__content-info{font-size: 18px; padding-bottom: 2rem;}
+ .footer__content-info{font-size: 14px; padding-bottom: 2rem;}
  .footer__middle{padding: 2rem; text-align: center;  }
  .footer__content-services, .footer__content-about {display: none;}
-  footer .footer__btn-send {
-        cursor: pointer;
-        background-color: transparent;
-        color: #fff;
-        border: 1px solid #B2725E;
-        padding: 10px 17px 8px 26px;
-        border-radius: 25px;
-        font-size: 1rem;
-        min-width: 215px;
-        font-family: 'DSIDE-Light', sans-serif;
-    }
-footer .footer__btn-send img {
-        margin-top: -3px;
-        width: 14px;
-        height: 1rem;
-        padding-left: 6px;
-        display: inline-block;
-        vertical-align: middle;
-        -webkit-transition: all .3s ease-out;
-        -o-transition: all .3s ease-out;
-        transition: all .3s ease-out;
-    }
+
  .footer__down {
-        background-color: #11141B;
-        color: #607198;
+        background-color: #fff;
+        color: #81859c;
         padding: 1rem 2rem;
         font-size: 14px;
         text-align: center;
     }
- .mid-p{color: #607198; margin-top: 0.8rem;}
+ .mid-p{color: #21243d; margin-top: 0.8rem;}
  .social__icons{display: none;}
 /* Tablets */
  @media only screen and (min-width: 480px) {
@@ -125,14 +111,14 @@ footer .footer__btn-send img {
     }
 
     .footer__down {
-        background-color: #11141B;
+        background-color: #fff;
         align-items: center;
 
     }
 
     .footer__down p {
-        font-size: .8rem;
-        color: #5a6b75;
+        font-size: 12px;
+        color: #81859c;
         justify-items: center;
     }
 
@@ -185,8 +171,8 @@ footer .footer__btn-send img {
     }
 
     .footer__content-info > p {
-        font-size: 1rem;
-        margin-bottom: 5px;
+        font-size: 14px;
+        margin-bottom: 10px;
         color: #EBEDED;
 
     }
@@ -202,14 +188,16 @@ footer .footer__btn-send img {
     .footer__content-info a,
     .footer__content-info span,
     .footer__content-info p {
-        color: #9093A1;
+        color: #4e4d85;
     }
-
+.welcome span{    text-transform: uppercase;
+    color: #21243d;
+    font-size: 12px;}
     .footer__head-mail,
     .footer__content-about p,
     .footer__content-services p {
         font-family: 'DSIDE-Bold', sans-serif;
-        font-size: 1rem;
+        font-size: 14px;
     }
 
     .footer__head-mail:hover {
@@ -286,7 +274,7 @@ footer .footer__btn-send img {
     }
     .footer__content-services, .footer__content-about {display: flex;}
     .footer__content-services ul li{ pointer-events: none; cursor: no-drop; }
-    .footer__content-services ul li a span{color: rgba(140, 144, 200, 0.53); cursor: no-drop; }
+    .footer__content-services ul li a span{color: #21243d; cursor: no-drop; }
     .footer__content-services ul li a:hover{ cursor: no-drop; }
     .social__icons {
         display: flex;

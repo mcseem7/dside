@@ -6,7 +6,6 @@ import withDsideApi from "../../../../HOC/Fetch";
 import { reactTranslateChangeLanguage } from "translate-components";
 import Footer from '../../../Basic/Footer'
 import Helmet from 'react-helmet-async'
-import Slider from "react-slick";
 
 class Website extends Component {
 
@@ -35,16 +34,7 @@ class Website extends Component {
         <Helmet>
   <title>Dside Website</title>
 </Helmet>
-               <Slider {...settings}>
-          <div>
-            <div id='slide-first-website' className="slide">
-            <div className="slider-row-website">
-            <h2>Effective Web Production</h2>
-            <p>“If your business is not on the Internet, then you are not in business!”</p>
-            </div>
-            </div>
-          </div>
-        </Slider>
+
           {/*<div className='websites__quality-wraoper'>
             <section className="websites-dev__quality" id='website__developer'>
               <h2><Translate>What's the difference?</Translate></h2>

@@ -5,7 +5,6 @@ import Advantages from "../../../Basic/TrustBlocks/Advantages";
 import withDsideApi from "../../../../HOC/Fetch";
 import Footer from '../../../Basic/Footer'
 import Helmet from 'react-helmet-async'
-import Slider from 'react-slick'
 
 class Design extends Component {
   constructor(props) {
@@ -61,16 +60,7 @@ nextgraph() {
         <Helmet>
   <title>Dside design</title>
 </Helmet>
-            <Slider {...settings}>
-          <div>
-            <div  id="slide-first-design" className="slide design">
-            <div className="slider-row">
-            <h2>Effective Design</h2>
-            <p>We design clear interfaces with bright design<br /> and branding for projects of any complexity</p>
-            </div>
-            </div>
-          </div>
-        </Slider>
+
           {/*<div className='designs__quality-wraoper'>
             <section className="designs-dev__quality" id='design__developer'>
               <h2><Translate>What's the difference?</Translate></h2>
@@ -97,74 +87,12 @@ nextgraph() {
 
         <div className="row">
                <h2 className="slider-header">Web Design</h2>
-          <Slider className="descslider" ref={c => (this.slider = c)} {...settingswebdesign}>
-          <div>
-            <div  id={'slide-first-webdesign-' + localStorage.getItem("lang")} className="slide design">
-           <div className="flexy-content">
-           <div className="button-on-slide" onClick={this.previous}></div>
-          <div className="columinslide">
-            <h3><span>01</span> Project</h3>
-            <span>We design clear interfaces with bright design and branding for projects of any complexity
-             </span>
-          </div>
-          <div className="button-on-slide next" onClick={this.next}>
-            </div>
-          </div>
-            </div>
-          </div>
 
-         <div>
-            <div  id={'slide-second-webdesign-' + localStorage.getItem("lang")} className="slide design">
-           <div className="flexy-content">
-           <div className="button-on-slide" onClick={this.previous}></div>
-          <div className="columinslide">
-            <h3><span>02</span> Intefaces</h3>
-            <span>We design clear interfaces with bright design and branding for projects of any complexity
-             </span>
-          </div>
-          <div className="button-on-slide next" onClick={this.next}>
-            </div>
-          </div>
-            </div>
-          </div>
-
-        </Slider>
 
           </div>
           <div className="row">
                <h2 className="slider-header">Graphic Design</h2>
-          <Slider className="descslider" ref={c => (this.slidergraph = c)} {...settingswebdesign}>
-          <div>
-            <div  id={'slide-first-webdesign-' + localStorage.getItem("lang")} className="slide design">
-           <div className="flexy-content">
-           <div className="button-on-slide" onClick={this.previousgraph}></div>
-          <div className="columinslide">
-            <h3><span>01</span> Project</h3>
-            <span>We design clear interfaces with bright design and branding for projects of any complexity
-             </span>
-          </div>
-          <div className="button-on-slide next" onClick={this.nextgraph}>
-            </div>
-          </div>
-            </div>
-          </div>
 
-         <div>
-            <div  id={'slide-second-webdesign-' + localStorage.getItem("lang")} className="slide design">
-           <div className="flexy-content">
-           <div className="button-on-slide" onClick={this.previousgraph}></div>
-          <div className="columinslide">
-            <h3><span>02</span> Intefaces</h3>
-            <span>We design clear interfaces with bright design and branding for projects of any complexity
-             </span>
-          </div>
-          <div className="button-on-slide next" onClick={this.nextgraph}>
-            </div>
-          </div>
-            </div>
-          </div>
-
-        </Slider>
 
           </div>
         <CaseService {...this.props} name='design' />

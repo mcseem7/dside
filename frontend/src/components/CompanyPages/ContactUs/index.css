@@ -1,4 +1,3 @@
-
 .right__form-question_title h4 {
     font-size: 16px;
     line-height: 17px;
@@ -56,7 +55,7 @@
 .background__contactus {
     margin: 0 auto;
     width: 100%;
-    background: #F3F3F5;
+    background-image: linear-gradient( to right,#f5f5fa,#fff,#f5f5fa );
 }
     .button__content p {
         font-size: 50px;
@@ -301,69 +300,7 @@ button.contact__btn-send {
   margin: 0 60px;
   text-align: center;
 }
-.card .button-container button {
-  outline: 0;
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  box-shadow: 0 2px 5px rgba(0,130,229,.1), 0 2px 5px rgba(66,32,160,.1);
-  background: rgb(66,32,160); /* Old browsers */
-  background: -moz-linear-gradient(-45deg,  rgba(66,32,160,1) 0%, rgba(0,130,229,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg,  rgba(66,32,160,1) 0%,rgba(0,130,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg,  rgba(66,32,160,1) 0%,rgba(0,130,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4220a0', endColorstr='#0082e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  border-radius: 50px;
-  width: 260px;
-  border: none;
-  padding: 20px 0;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: all .3s ease;
-}
-.card .button-container button span {
-  position: relative;
-  z-index: 1;
-  color: #e6f5ff;
-   font-family: 'DSIDE-Black',sans-serif;
-  transition: .3s ease;
-}
-.card .button-container button:before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  background: #6399ed;
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  margin: -15px 0 0 -15px;
-  opacity: 0;
-  transition: all .3s ease;
-}
-.card .button-container button:hover, .card .button-container button:active, .card .button-container button:focus {
-box-shadow: 0 2px 5px rgba(0,130,229,.1), 0 2px 5px rgba(66,32,160,.1);
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4220a0+0,0091f2+100 */
-background: rgb(66,32,160); /* Old browsers */
-background: -moz-linear-gradient(-45deg,  rgba(66,32,160,1) 0%, rgba(0,145,242,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg,  rgba(66,32,160,1) 0%,rgba(0,145,242,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(135deg,  rgba(66,32,160,1) 0%,rgba(0,145,242,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4220a0', endColorstr='#0091f2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
-.card .button-container button:hover span, .card .button-container button:active span, .card .button-container button:focus span {
-  color: #ffffff;
-}
-.card .button-container button:active span, .card .button-container button:focus span {
-  color: #ffffff;
-}
-.card .button-container button:active:before, .card .button-container button:focus:before {
-  opacity: 1;
-  -webkit-transform: scale(10);
-  transform: scale(10);
-}
+
 .left__form-container .contactus__form_active {
     padding: 2rem 0;
 }
@@ -377,7 +314,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4220a0', end
     margin: 0 60px 30px;
 }
     .card .button-container button{
-        padding: 16px 0;
         width: 210px;
     }
     .card .input-container input{
@@ -403,7 +339,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4220a0', end
     .background__contactus {
     width: 1200px;
     margin: 0 auto;
-    background: #F3F3F5;
+     background-image: linear-gradient( to right,#f5f5fa,#fff,#f5f5fa );
     transform: translateY(-60px);
     display: flex;
     justify-content: center;

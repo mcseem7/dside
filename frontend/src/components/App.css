@@ -24,10 +24,56 @@
     width: 100%;
      background-color: #F3F3F5;
 }
-
+.btn-send {
+        cursor: pointer;
+        background-color: transparent;
+        color: #fff;
+        font-family: 'DSIDE-Light', sans-serif;
+        border:none;
+        padding: 10px 18px 9px 26px;
+        border-radius: 25px;
+        font-size: 14px;
+        min-width: 185px;
+      height: 42px;
+    -webkit-transition: box-shadow 0.15s ease,transform 0.15s ease;
+    transition: box-shadow 0.15s ease,transform 0.15s ease;
+    will-change: box-shadow,transform;
+    text-shadow: 0 1px 0 rgb(69, 49, 160);
+    background: linear-gradient(13deg, rgb(69, 49, 160) 0%, rgb(57, 149, 229) 100%);
+    box-shadow: 0 7px 13px -3px rgba(89, 69, 130, 0.3), 0 2px 4px 0 rgba(95, 74, 140, 0.4), inset 0 -2px 0 0 rgb(50, 60, 138);
+    }
+.btn-send span {color:#fff;}
+.btn-send img {
+        margin-top: -1px;
+        width: 14px;
+        height: 1rem;
+        padding-left: 6px;
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transition: all .3s ease-out;
+        -o-transition: all .3s ease-out;
+        transition: all .3s ease-out;
+    }
 /*body {*/
     /*display: flex;*/
 /*}*/
+
+    .btn-send:hover {
+        -webkit-animation: flash .7s forwards linear .16s;
+        animation: flash .7s forwards linear .16s
+    }
+
+    .btn-send:hover > img {
+        -webkit-transform: translateX(6px);
+        -ms-transform: translateX(6px);
+        transform: translateX(6px);
+        -webkit-transition: all .3s ease-out;
+        -o-transition: all .3s ease-out;
+        transition: all .3s ease-out;
+        -webkit-animation: flash .7s forwards linear .16s;
+        animation: flash .7s forwards linear .16s;
+    }
+
 
 .applyyour img {
     min-width: 13% !important;
@@ -43,7 +89,8 @@
 
 body {
     min-width: 320px;
-    background:  #F2F3F5;
+    background-image: linear-gradient( to right,#f5f5fa,#fff,#f5f5fa );
+    font-size: 14px;
 }
 
 

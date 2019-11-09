@@ -6,7 +6,6 @@ import withDsideApi from "../../../../HOC/Fetch";
 import { reactTranslateChangeLanguage } from "translate-components";
 import Footer from '../../../Basic/Footer'
 import Helmet from 'react-helmet-async'
-import Slider from "react-slick";
 
 class Ecommerce extends Component {
 
@@ -38,16 +37,7 @@ class Ecommerce extends Component {
         <Helmet>
   <title>Dside ecommerce</title>
 </Helmet>
-               <Slider {...settings}>
-          <div>
-            <div id='slide-first-ecommerce' className="slide">
-            <div className="slider-row-ecommerce">
-            <h2>Effective Web Production</h2>
-            <p>“If your business is not on the Internet, then you are not in business!”</p>
-            </div>
-            </div>
-          </div>
-        </Slider>
+
           {/*<div className='ecommerces__quality-wraoper'>
             <section className="ecommerces-dev__quality" id='ecommerce__developer'>
               <h2><Translate>What's the difference?</Translate></h2>

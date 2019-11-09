@@ -166,9 +166,10 @@ class Contact extends Component {
           </label><div className="bar"></div></div>
 
 <div className="button-container">
-            <button type="submit" className="appform-button" disabled={isSubmitting}>
-              <Translate>Send</Translate>
-            </button>
+                  <button type="submit" className="btn-send" disabled={isSubmitting}>
+                                <Translate>Order now!</Translate>
+                                <img className="button__content" src={Arrow} alt=""/>
+                            </button>
 </div>
           </form>     </div></div>
         );

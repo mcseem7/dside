@@ -19,7 +19,7 @@ import Helmet from 'react-helmet-async'
 import Footer from '../../Basic/Footer';
 import ScrollAnimation from 'react-animate-on-scroll'
 
-export default class AbotUs extends Component {
+export default class AboutUs extends Component {
   constructor() {
     super()
 
@@ -122,7 +122,7 @@ export default class AbotUs extends Component {
 
     return (
       <Fragment>
-       
+
       <div>
         <Helmet>
           <title> Dside About </title>

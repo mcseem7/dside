@@ -1,12 +1,12 @@
 .portfolio-category__item p {
-        color: #000000;
-        font-family: 'DSIDE-Bold', sans-serif;
+        color: #21243d;
+        font-family: 'DSIDE-Light', sans-serif;
         font-size: 22px;
         font-weight: 700;
     }
 
     .portfolio-category__item p sup {
-        color: #000000;
+        color:  #21243d;
         font-family: 'DSIDE-Light', sans-serif;
         font-size: 18px;
         margin-left: 2px;
@@ -24,7 +24,6 @@
     }
 
     .portfolio__items-category {
-        background: #F2F3F5;
         padding-bottom: 20px;
         padding-top: 7rem;
     }
@@ -76,7 +75,7 @@
     }
 
     .sorting-portfolio__wrapper .portfolio-sorting__date {
-        color: #000000;
+        color:  #21243d;
         font-family: 'DSIDE-Bold', sans-serif;
         font-size: 14px;
         font-weight: 700;
@@ -89,7 +88,7 @@
     }
 
     .sortby__type div {
-        color: #000000;
+        color: #21243d;
         font-family: 'DSIDE-Light', sans-serif;
         font-size: 14px;
         font-weight: 300;
@@ -102,10 +101,9 @@
     }
 
     .portfolio-category__item:hover {
-        background-image: -webkit-gradient(linear, left top, right top, from(#d99b91), to(#ad6f59));
-        background-image: -webkit-linear-gradient(left, #d99b91 0%, #ad6f59 100%);
-        background-image: -o-linear-gradient(left, #d99b91 0%, #ad6f59 100%);
-        background-image: linear-gradient(to right, #d99b91 0%, #ad6f59 100%);
+        background-image: -moz-linear-gradient(left,  #21243d 0%, #182470 100%);
+        background-image: -webkit-linear-gradient(left,  #21243d 0%,#182470 100%);
+        background-image: linear-gradient(to right,  #21243d 0%,#182470 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -138,14 +136,14 @@
 /* Fullscreen */
 @media only screen and (min-width: 1024px) {
     .portfolio-category__item p {
-        color: #000000;
-        font-family: 'DSIDE-Bold', sans-serif;
-        font-size: 16px;
+        color: #656986;
+        font-family: 'DSIDE-Light', sans-serif;
+        font-size: 14px;
         font-weight: 700;
     }
         .portfolio-category__list {display: flex;}
     .portfolio-category__item p sup {
-        color: #000000;
+        color: #656986;
         font-family: 'DSIDE-Light', sans-serif;
         font-size: 12px;
         margin-left: 2px;
@@ -159,7 +157,6 @@
   .wrapper-row{ padding: 0 3rem 0 3rem;}
 
     .portfolio__items-category {
-        background: #F2F3F5;
         padding-bottom: 20px;
         padding-top: 7rem;
     }
@@ -209,7 +206,7 @@
 
     .sorting-portfolio__wrapper .portfolio-sorting__date {
         color: #000000;
-        font-family: 'DSIDE-Bold', sans-serif;
+        font-family: 'DSIDE-light', sans-serif;
         font-size: 14px;
         font-weight: 700;
     }
@@ -233,10 +230,9 @@
     }
 
     .portfolio-category__item:hover {
-        background-image: -webkit-gradient(linear, left top, right top, from(#d99b91), to(#ad6f59));
-        background-image: -webkit-linear-gradient(left, #d99b91 0%, #ad6f59 100%);
-        background-image: -o-linear-gradient(left, #d99b91 0%, #ad6f59 100%);
-        background-image: linear-gradient(to right, #d99b91 0%, #ad6f59 100%);
+        background-image: -moz-linear-gradient(left,  #21243d 0%, #182470 100%);
+        background-image: -webkit-linear-gradient(left,  #21243d 0%,#182470 100%);
+        background-image: linear-gradient(to right,  #21243d 0%,#182470 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

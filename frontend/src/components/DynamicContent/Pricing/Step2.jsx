@@ -5,6 +5,7 @@ import { startsFromLang } from './Step1';
 import { clone, remove } from 'ramda';
 import PlanItem from './PlanItem';
 import PacksList from './PacksList';
+import ScrollAnimation from 'react-animate-on-scroll'
 import PopUp from './PopUp';
 export const stepLang = {
     ru: 'Шаг',
@@ -46,7 +47,7 @@ export default (props) => {
         setOrder(newOrder);
         setModalServiceList(undefined);
     };
-    return <section className="step-second step-container">
+    return  <ScrollAnimation animateIn="fadeInRight" animateOut="fadeOutLeft"><section className="step-second step-container" >
         <div className="steptwo-container">
                 <div className="leftone">
                     <div className="stepper">{useLang(stepLang)} 2/3</div>
@@ -104,5 +105,5 @@ export default (props) => {
                 </PopUp>
 
         </div>
-    </section>;
+    </section></ScrollAnimation>;
 };

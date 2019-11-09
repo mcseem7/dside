@@ -6,6 +6,10 @@
   "advantage": {
     "pl": "zaleta",
     "ru": "козырь"
+  },
+  "We welcome you": {
+    "pl": "Zapraszamy",
+    "ru": "Ждём в гости"
   },"What dside?": {
     "pl": "Czym jest DSIDE?",
     "ru": "Что такое DSIDE?"
@@ -155,7 +159,7 @@
     "pl": "Dlaczego my?"
   },
   "Automated business": {
-    "ru": "Автоматизация бизнеса",
+    "ru": "Автоматизируем бизнес",
     "pl": "Automatyzujemy biznes"
   },
   "Do so that your business is working while you are solving more important issues": {
@@ -164,15 +168,18 @@
   },
   "Create brand yourself": {
     "pl": "Tworzymy marki",
-    "ru": "Создай свой бренд"
+    "ru": "Создаем марки"
   },
   "Branded companies sell their products much more expensive, what's stopping you?": {
     "pl": "Markowe firmy sprzedają swoje produkty znacznie droższe, co Cię powstrzymuje?",
     "ru": "Фирменные компании продают свою продукцию намного дороже, а что останавливает тебя?"
+  }, "Prices": {
+    "pl": "Cennik",
+    "ru": "Цены"
   },
   "Memorable logos": {
     "pl": "Niezapomniane loga",
-    "ru": "Запоминающиеся логотипы"
+    "ru": "Незабываемые логотипы"
   },
   "Make your client remember your company": {
     "pl": "Sprawiamy, aby Twój klient zapamiętał Twoją firmę",
@@ -180,7 +187,7 @@
   },
   "Expirienced websites": {
     "pl": "Mądrę strony internetowe",
-    "ru": "Сайты, полные опыта"
+    "ru": "Умные сайты"
   },
   "Which perform specific business tasks": {
     "pl": "Które wykonują określone zadania biznesowe",
