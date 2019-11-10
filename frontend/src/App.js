@@ -17,13 +17,7 @@ import $ from 'jquery'
 class App extends Component {
 
     constructor() {
-        super()
-    this.loaderWrap = '.loader';
-    this.loaderTween = null;
-    this.appTween = null;
-    this.cottonWrap = '#cotton';
-    this.appWrap = '.App';
-    this.toggleLoaderHandler = this.toggleLoaderHandler.bind(this);
+        super();
         this.state = {
             cook: true,
             mounted: false,
@@ -31,11 +25,16 @@ class App extends Component {
             loaderExists: true,
             appLoaded: true
         }
-
+        this.loaderWrap = '.loader';
+        this.loaderTween = null;
+        this.appTween = null;
+        this.cottonWrap = '#cotton';
+        this.appWrap = '.App';
+        this.toggleLoaderHandler = this.toggleLoaderHandler.bind(this);
     }
 
     componentWillMount() {
-        const getIdentityDomen = this.props.domen
+        const getIdentityDomen = this.props.domen;
         if (!getIdentityDomen || getIdentityDomen === '') {
             this.setState({ langPoppup: false })
         }
@@ -46,6 +45,7 @@ class App extends Component {
 			y: "-100%", ease: 'Expo.easeInOut', delay: 2.8,
 			onComplete: () => {
 				this.setState({ loaderExists: false });
+                document.body.classList.add('loaded');
 			}
 		});
         TweenLite.from(this.cottonWrap, 1, {
@@ -67,9 +67,6 @@ class App extends Component {
         });
             window.scrollTo(0, 0);
          }.bind(this), 2800);
-        setTimeout(function() {
-             document.body.classList.add('loaded');
-            }.bind(this), 3000);
         this.setState({mounted: true});
         this.setState({lang: localStorage.getItem('lang')});
         window.addEventListener("onload", () => {
@@ -90,7 +87,7 @@ class App extends Component {
     }
 
     checkOrient = () => {
-       
+
             if (window.matchMedia("(orientation: portrait)").matches) {
                 this.setState({
                     orientation: true
@@ -99,11 +96,11 @@ class App extends Component {
             else if (window.matchMedia("(orientation: landscape)").matches) {
                 this.setState({ orientation: false })
             }
-        
+
     }
 
 
-    
+
     confirmCookies = () => {
         this.setState({ cook: false })
         Cookies.set('accept-cookie', true, { expires: 365 });
@@ -112,6 +109,7 @@ class App extends Component {
 
 
    render()  {
+        console.log('updateapp', this);
         const { routes, initialData } = this.props;
         return (
             <TranslateProvider translations={translations} debugMode={true} defaultLanguage={'en'}>
@@ -178,36 +176,33 @@ class App extends Component {
                  }
                 }
                  return (
-                     <TransitionGroup>
-
+<div>
                          {getHeader()}
 
-                         <CSSTransition  key={props.location.key} timeout={1000} classNames="fade">
 
                              <Switch>
 
                             { Array.prototype.map.call(routes, ((route, index) => {
                 return (
+
                     <Route
                         key={index}
                         path={route.path}
                         exact={route.exact}
-                        render={props =>
-                            createElement(route.component, {
-                                ...props,
-                                routes: route.routes,
-                                initialData: initialData || null
-                            })
-                        }
+                        render={props => (
+            <Content
+                {...props}
+                component={route.component}
+                initialData={initialData || null}
+            />
+        )}
+
                     />
                 );
             }))}
 
                              </Switch>
-
-
-                         </CSSTransition>
-                     </TransitionGroup>)
+                             </div>)
              }} />
 
 
@@ -234,5 +229,24 @@ class App extends Component {
         )
     }
 }
+
+class Content extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        const Component = this.props.component;
+
+        return (
+            this.props.component &&
+            (
+                <CSSTransition timeout={1000} classNames="fade">
+                    <Component />
+                </CSSTransition>
+            )
+        )
+    }
+};
 
 export default App

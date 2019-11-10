@@ -37,78 +37,91 @@ class Slider extends Component  {
   constructor(props){
 		super(props);
 	 	this.state = {
+		loaderExists: true
         }
 	}
 	morphSVG = MorphSVGPlugin;
-	componentDidMount(){
-	const orSplit = new SplitText(nicesplit, {type: "words, chars", wordsClass:  "wow++"});
-    let littleChars = orSplit.chars; // array of DOM elements (<div> tags)
-	let homeTl = new TimelineLite();
-    homeTl
-	.from('.c-1', 1, { y: '-600', delay: 3.6, ease: 'Bounce.easeOut'})
-	.to("#gradientmyballs .stop1", 0, { stopColor: "#21243d" },"-=1")
-	.to("#gradientmyballs .stop2", 0, { stopColor: "#21243d" },"-=1")
-	.from('.c-2', .1, { opacity: '0'})
-	.to('.c-1', .4, { x: '-200', ease: 'Power3.easeOut'})
-	.to('.c-2', .4, { x: '200', ease: 'Power3.easeOut'}, "-=.4")
-	.staggerFrom(littleChars, .5, {x: 100, autoAlpha: 0}, .1, "-=.4")
-	.to('.c-1', 1, { x: '-250', ease: 'Power3.easeOut'},"-=1.4")
-	.to('.c-2', 1, { x: '250', ease: 'Power3.easeOut'},"-=1.4")
-	.to('.c-1', .4, { x: '0', ease: 'Power4.easeIn'},"-=0")
-	.to('.c-2', .4, { x: '0', ease: 'Power4.easeIn'},"-=0.4")
-	.to('.c-2, .c-1',0, { opacity: 0},"-=0")
-	.to('.sc', 0, { opacity: 1},"-=0")
-	.to(typer, 0, { text: plang[0], fontFamily:'DSIDE-Bold'})
-	.to('.c-3', .6, { x: 40,  y:120, ease: 'Power4.easeOut'},"-=0")
-	.to('.c-4', .6, { x: -80, y:-90, ease: 'Power4.easeOut'},"-=0.6")
-	.to('.c-5', .6, { x: 200, y:40, ease: 'Power4.easeOut'},"-=0.6")
-	.to('.c-6', .6, { x: 100, y:-180, ease: 'Power4.easeOut'},"-=0.6")
-	.to('.c-7', .6, { x: -200,y:110, ease: 'Power4.easeOut'},"-=0.6")
-	.to('.c-8', .6, { x: -70, y:-310, ease: 'Power4.easeOut'},"-=0.6")
-	.to('.c-9', .6, { x: 230, y:150, ease: 'Power4.easeOut'},"-=0.6")
-	.to("#gradientmyballs .stop1", 0, { stopColor: "#EFAE9A" },"-=0.5")
-	.to("#gradientmyballs .stop2", 0, { stopColor: "#B5624C" },"-=0.5")
-	.to('.c-3,.c-4,.c-5,.c-6,.c-7,.c-8,.c-9', .6, { y: 330, transformOrigin: "100% 100%", ease: 'Bounce.easeOut', delay: .4},"-=0.2")
-	.to("#gradientmyballs .stop1", .3, { stopColor: "#21243d" },"-=1")
-	.to("#gradientmyballs .stop2", .3, { stopColor: "#21243d" },"-=1")
-	.to(typer, .4, { text:plang[1], ease: 'Power3.EaseIn',delay: 1},"-=1")
-	.from("#c-10", .4, {scale:0, transformOrigin: "center center",ease: 'Bounce.easeOut', autoAlpha: 0},"+=0.4")
-	.to(typer, .4, { text:plang[2], ease: 'Power3.EaseIn',delay: 1},"-=.2")
-	.to("#c-10", .2, {morphSVG:"#m-1", ease: 'Power3.EaseIn',delay: 1},"-=.6")
-	.to("#c-10", 3, {rotation: -20, ease: 'Power4.EaseIn'},"-=.1")
-	.to(typer, .4, { text:plang[3], ease: 'Power4.EaseIn'},"-=0")
-	.to("#c-10", 1,{y: 600, transformOrigin: "100% 100%", ease: 'Circ.easeInOut'})
-	.to('.c-3,.c-4,.c-5,.c-6,.c-7,.c-8,.c-9', 1, { y: 600, transformOrigin: "100% 100%", ease: 'Circ.easeInOut'},"-=1")
-	.from(".cb", 1,{y: -500, rotation: -20, scale: 1.4, transformOrigin: "100% 100%", ease: 'Circ.easeInOut'},"-=1")
-	.to("#blur", .4,{attr: { stdDeviation: 2 },delay: .2 } ,"+=0")
-	.to("#blur-1", .4,{attr: { stdDeviation: 8 }} ,"-=.4")
-	.to("#blur-2", .4,{attr: { stdDeviation: 3 }} ,"-=.4")
-	.to("#blur", .3,{attr: { stdDeviation: 6 },delay: .2} ,"-=0")
-	.to("#blur-1", .3,{attr: { stdDeviation: 2 }} ,"-=.3")
-	.to("#blur-2", .3,{attr: { stdDeviation: 4 }} ,"-=.3")
-	.to("#blur", .5,{attr: { stdDeviation: 3 },delay: .2 } ,"+=0")
-	.to("#blur-1", .5,{attr: { stdDeviation: 3 }} ,"-=.5")
-	.to("#blur-2", .5,{attr: { stdDeviation: 0 }} ,"-=.5")
-	.to(typer, .4, { text:plang[4], ease: 'Power4.EaseIn',delay: 1.5},"-=0")
-	.to("#blur-1, #blur", .3,{attr: { stdDeviation: 0 }} ,"-=0")
-	.to(".brand", .3,{autoAlpha: 0} ,"-=.3")
-	.to("#blur-2", .3,{attr: { stdDeviation: 5 }} ,"-=.3")
-	.from(".l", .3,{autoAlpha: 0} ,"-=.3")
-	.to(".l", .3,{autoAlpha: 0, delay: 5} ,"-=.3")
-	.to(".cb", .3,{scale: 0, ease: 'Bounce.easeOut', transformOrigin: "50% 50%"},"-=.1")
-    .to(typer, 1, { text:plang[5], ease: 'Power4.EaseIn',delay: .4},"-=0")
-		alert('mount');
-	}
-    componentDidUpdate() {
-		console.log('update', this);
-    }
-
-    componentWillUnmount(){
-		alert('unmount');
+	componentDidMount() {
+		const orSplit = new SplitText(nicesplit, {type: "words, chars", wordsClass: "wow++"});
+		let littleChars = orSplit.chars; // array of DOM elements (<div> tags)
+		let homeTl = new TimelineLite({paused: true});
+		homeTl
+			.from('.c-1', 1, {y: '-600', delay: .2, ease: 'Bounce.easeOut'})
+			.to("#gradientmyballs .stop1", 0, {stopColor: "#21243d"}, "-=1")
+			.to("#gradientmyballs .stop2", 0, {stopColor: "#21243d"}, "-=1")
+			.from('.c-2', .1, {opacity: '0'})
+			.to('.c-1', .4, {x: '-200', ease: 'Power3.easeOut'})
+			.to('.c-2', .4, {x: '200', ease: 'Power3.easeOut'}, "-=.4")
+			.staggerFrom(littleChars, .5, {x: 100, autoAlpha: 0}, .1, "-=.4")
+			.to('.c-1', 1, {x: '-250', ease: 'Power3.easeOut'}, "-=1.4")
+			.to('.c-2', 1, {x: '250', ease: 'Power3.easeOut'}, "-=1.4")
+			.to('.c-1', .4, {x: '0', ease: 'Power4.easeIn'}, "-=0")
+			.to('.c-2', .4, {x: '0', ease: 'Power4.easeIn'}, "-=0.4")
+			.to('.c-2, .c-1', 0, {opacity: 0}, "-=0")
+			.to('.sc', 0, {opacity: 1}, "-=0")
+			.to(typer, 0, {text: plang[0], fontFamily: 'DSIDE-Bold'})
+			.to('.c-3', .6, {x: 40, y: 120, ease: 'Power4.easeOut'}, "-=0")
+			.to('.c-4', .6, {x: -80, y: -90, ease: 'Power4.easeOut'}, "-=0.6")
+			.to('.c-5', .6, {x: 200, y: 40, ease: 'Power4.easeOut'}, "-=0.6")
+			.to('.c-6', .6, {x: 100, y: -180, ease: 'Power4.easeOut'}, "-=0.6")
+			.to('.c-7', .6, {x: -200, y: 110, ease: 'Power4.easeOut'}, "-=0.6")
+			.to('.c-8', .6, {x: -70, y: -310, ease: 'Power4.easeOut'}, "-=0.6")
+			.to('.c-9', .6, {x: 230, y: 150, ease: 'Power4.easeOut'}, "-=0.6")
+			.to("#gradientmyballs .stop1", 0, {stopColor: "#EFAE9A"}, "-=0.5")
+			.to("#gradientmyballs .stop2", 0, {stopColor: "#B5624C"}, "-=0.5")
+			.to('.c-3,.c-4,.c-5,.c-6,.c-7,.c-8,.c-9', .6, {
+				y: 330,
+				transformOrigin: "100% 100%",
+				ease: 'Bounce.easeOut',
+				delay: .4
+			}, "-=0.2")
+			.to("#gradientmyballs .stop1", .3, {stopColor: "#21243d"}, "-=1")
+			.to("#gradientmyballs .stop2", .3, {stopColor: "#21243d"}, "-=1")
+			.to(typer, .4, {text: plang[1], ease: 'Power3.EaseIn', delay: 1}, "-=1")
+			.from("#c-10", .4, {
+				scale: 0,
+				transformOrigin: "center center",
+				ease: 'Bounce.easeOut',
+				autoAlpha: 0
+			}, "+=0.4")
+			.to(typer, .4, {text: plang[2], ease: 'Power3.EaseIn', delay: 1}, "-=.2")
+			.to("#c-10", .2, {morphSVG: "#m-1", ease: 'Power3.EaseIn', delay: 1}, "-=.6")
+			.to("#c-10", 3, {rotation: -20, ease: 'Power4.EaseIn'}, "-=.1")
+			.to(typer, .4, {text: plang[3], ease: 'Power4.EaseIn'}, "-=0")
+			.to("#c-10", 1, {y: 600, transformOrigin: "100% 100%", ease: 'Circ.easeInOut'})
+			.to('.c-3,.c-4,.c-5,.c-6,.c-7,.c-8,.c-9', 1, {
+				y: 600,
+				transformOrigin: "100% 100%",
+				ease: 'Circ.easeInOut'
+			}, "-=1")
+			.from(".cb", 1, {
+				y: -500,
+				rotation: -20,
+				scale: 1.4,
+				transformOrigin: "100% 100%",
+				ease: 'Circ.easeInOut'
+			}, "-=1")
+			.to("#blur", .4, {attr: {stdDeviation: 2}, delay: .2}, "+=0")
+			.to("#blur-1", .4, {attr: {stdDeviation: 8}}, "-=.4")
+			.to("#blur-2", .4, {attr: {stdDeviation: 3}}, "-=.4")
+			.to("#blur", .3, {attr: {stdDeviation: 6}, delay: .2}, "-=0")
+			.to("#blur-1", .3, {attr: {stdDeviation: 2}}, "-=.3")
+			.to("#blur-2", .3, {attr: {stdDeviation: 4}}, "-=.3")
+			.to("#blur", .5, {attr: {stdDeviation: 3}, delay: .2}, "+=0")
+			.to("#blur-1", .5, {attr: {stdDeviation: 3}}, "-=.5")
+			.to("#blur-2", .5, {attr: {stdDeviation: 0}}, "-=.5")
+			.to(typer, .4, {text: plang[4], ease: 'Power4.EaseIn', delay: 1.5}, "-=0")
+			.to("#blur-1, #blur", .3, {attr: {stdDeviation: 0}}, "-=0")
+			.to(".brand", .3, {autoAlpha: 0}, "-=.3")
+			.to("#blur-2", .3, {attr: {stdDeviation: 5}}, "-=.3")
+			.from(".l", .3, {autoAlpha: 0}, "-=.3")
+			.to(".l", .3, {autoAlpha: 0, delay: 5}, "-=.3")
+			.to(".cb", .3, {scale: 0, ease: 'Bounce.easeOut', transformOrigin: "50% 50%"}, "-=.1")
+			.to(typer, 1, {text: plang[5], ease: 'Power4.EaseIn', delay: .4}, "-=0")
 	}
 
     render() {
-
+console.log('update', this);
 		return <div className="container">
 			<div className="row">
 			<div className="textEffect">
