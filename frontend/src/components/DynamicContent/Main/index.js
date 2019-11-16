@@ -42,9 +42,9 @@ export default class Main extends Component {
       </Helmet>
       
       <div className="complex__content">
-        <Slider/>
-         <About/>
+        <Slider pageLoader={this.props.pageLoader} />
         <HeaderPost lang={this.state.langVars} />
+        <About/>
       </div>
       <Footer/>
       </div>

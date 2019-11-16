@@ -5,7 +5,6 @@ import withDsideApi from "../../../HOC/Fetch";
 import withLanguage from "../../../HOC/withLanguage";
 import CategoryItem from './CategoryItem';
 import PortolioPost from '../Header__Post/Portfolio__Post';
-import ScrollAnimation from 'react-animate-on-scroll'
 import Translate, { reactTranslateChangeLanguage } from "translate-components";
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import Footer from '../../Basic/Footer';
@@ -77,9 +76,7 @@ class Portfolio extends Component {
             <title>Dside Portfolio</title>
           </Helmet>
         <div className="wrapper-row">
-            <ScrollAnimation animateIn="slideInUp" >
         <h2><Translate>We'll make it best. They have already tried it.</Translate></h2>
-            </ScrollAnimation>
           <div className="sorting__items-container">
 
             <div className="sorting__items-left">
@@ -88,7 +85,7 @@ class Portfolio extends Component {
 
                 <ul className="portfolio-category__list">
 
-                <ScrollAnimation delay="50" animateIn="slideInUp" ><li class="portfolio-category__item" onClick={this.setFilteringCategoryNull}><p class=""><Translate>Everything</Translate><sup>({this.state.dataItemsStatic.length})</sup></p></li></ScrollAnimation>
+               <li class="portfolio-category__item" onClick={this.setFilteringCategoryNull}><p class=""><Translate>Everything</Translate><sup>({this.state.dataItemsStatic.length})</sup></p></li>
     {this.props.dataDside.map((category, index) => {
                     return (
                   <CategoryItem
@@ -106,7 +103,6 @@ class Portfolio extends Component {
               </div>
 
             </div>
-        <ScrollAnimation delay="100" animateIn="slideInUp" >
             <div className="sorting__items-right">
               <div className="sortby__type">
                 <div className="portfolio-sort__title"><Translate>Sort by:</Translate></div>
@@ -118,7 +114,6 @@ class Portfolio extends Component {
                 </div>
               </div>
             </div>
-            </ScrollAnimation>
 </div>
           </div>
           <div className="portfolio__items-container">

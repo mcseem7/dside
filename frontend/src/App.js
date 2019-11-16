@@ -1,7 +1,7 @@
 import React, { Component, Fragment, createElement } from "react";
 import './components/App.css'
 import { Link, Switch, Route} from 'react-router-dom'
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import { CSSTransition, Transition, TransitionGroup } from 'react-transition-group'
 import Cookies from 'js-cookie'
 import Header from './components/Basic/Header/index';
 import 'regenerator-runtime/runtime';
@@ -10,7 +10,7 @@ import { reactTranslateChangeLanguage, TranslateProvider } from "translate-compo
 import translations from './translations.json'
 import clock from './clock.svg'
 import Welcome from './Welcome'
-import TweenLite, { TweenMax, TimelineLite } from 'gsap'
+import TweenLite from 'gsap'
 import $ from 'jquery'
 
 
@@ -19,6 +19,7 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
+            show: false,
             cook: true,
             mounted: false,
             orientation: false,
@@ -29,7 +30,8 @@ class App extends Component {
         this.loaderTween = null;
         this.appTween = null;
         this.cottonWrap = '#cotton';
-        this.appWrap = '.App';
+        this.appWrap = '.app';
+        this.toggleComponent = this.toggleComponent.bind(this);
         this.toggleLoaderHandler = this.toggleLoaderHandler.bind(this);
     }
 
@@ -42,17 +44,18 @@ class App extends Component {
 
     componentDidMount() {
         this.loaderTween = TweenLite.to(this.loaderWrap, 1, {
-			y: "-100%", ease: 'Expo.easeInOut', delay: 2.8,
+			scale: "1.3", opacity: 0, ease: 'Expo.easeInOut', delay: 2.8,
 			onComplete: () => {
 				this.setState({ loaderExists: false });
                 document.body.classList.add('loaded');
 			}
 		});
+        this.appTween = TweenLite.from(this.appWrap, 1, {y: "55%", ease: 'Expo.easeInOut', delay: 3.8});
         TweenLite.from(this.cottonWrap, 1, {
 			y: "100%", ease: 'Back.easeInOut', delay: 0.4,
 		});
 
-        TweenMax.staggerFrom('.animlogo-preloader-path', 1, {
+        TweenLite.staggerFrom('.animlogo-preloader-path', 1, {
 			y:"200%", grid:'auto', opacity:.3, delay: 0.7, each: 0.1, from: 1, ease: 'Back.easeInOut',
 		}, 0.2);
         TweenLite.from('.dot', 1, {
@@ -61,12 +64,7 @@ class App extends Component {
         TweenLite.from('.loading-text', 1, {
 			y: '-200', opacity: 0, transformOrigin:"50% 50%", ease: 'Back.easeInOut',
 		});
-        setTimeout(function() {
-        this.appTween = TweenLite.from(this.appWrap, 1, {
-			y: "50%", ease: 'Expo.easeInOut',
-        });
-            window.scrollTo(0, 0);
-         }.bind(this), 2800);
+
         this.setState({mounted: true});
         this.setState({lang: localStorage.getItem('lang')});
         window.addEventListener("onload", () => {
@@ -84,6 +82,10 @@ class App extends Component {
 
     toggleLoaderHandler() {
       this.loaderTween.reversed(!this.loaderTween.reversed());
+    }
+
+    toggleComponent() {
+      this.setState({ show: !this.state.show });
     }
 
     checkOrient = () => {
@@ -128,7 +130,7 @@ class App extends Component {
                         </Fragment> : null
                     }
                 </Fragment>
-                {this.state.loaderExists && (<div className="loader" id="loader"><span className="loading-text">That's your chance.</span>
+                {this.state.loaderExists && (<div className="loader" id="loader"><span className="loading-text"><Translate>That's your chance.</Translate></span>
 <svg id="preloaderlogo" version="1.1" x="0px" y="0px"
 	 viewBox="-347 578.5 722.3 260.8" style={{ 'enable-background':'new -347 578.5 722.3 260.8'}}>
 <title>dsideLogo</title>
@@ -162,7 +164,7 @@ class App extends Component {
 </g>
 </svg>
                 </div>)}
-                { <div className={ this.state.appLoaded === true ? "App loading" : "App loaded" } >
+                { <div>
              <Route exact path='/' component={Welcome} />
              <Route path={'/:language'} render={(props) => {
                  const matchUrl = ['aboutus', 'contactus', 'process', 'pricing', 'pricing2', 'portfolio', 'cookies-policy', ''].indexOf(props.location.pathname.substr(4));
@@ -194,6 +196,7 @@ class App extends Component {
                 {...props}
                 component={route.component}
                 initialData={initialData || null}
+                pageLoader={this.state.loaderExists}
             />
         )}
 
@@ -241,9 +244,10 @@ class Content extends React.Component {
         return (
             this.props.component &&
             (
-                <CSSTransition timeout={1000} classNames="fade">
-                    <Component />
-                </CSSTransition>
+
+                    <Component pageLoader={this.props.pageLoader} />
+
+
             )
         )
     }

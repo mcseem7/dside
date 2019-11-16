@@ -27,20 +27,48 @@
   align-items: center;
   position: absolute;
 }
-.l{stroke: #c5c9e0; fill:none;stroke-width:0.5;stroke-miterlimit:10;}
-.l1{stroke: #c5c9e0; z-index: 1; stroke-dasharray:10; fill:none;stroke-width:0.5;stroke-miterlimit:10;}
-.cb{z-index: 2; position: relative;}
+.l{stroke: #c5c9e0; z-index: 1; position: relative; fill:none;stroke-width:1;stroke-miterlimit:10;}
+.l1{stroke: #c5c9e0; stroke-dasharray:10; fill:none;stroke-width:1;stroke-miterlimit:10;}
+.cb{z-index: 10; position: relative;}
+.cf1, .cf2{z-index: 0; fill: url(#gradientmystars)}
 .r{fill:#c5c9e0;}
+.r1{font-family: 'DSIDE-Bold',sans-serif;}
 .rects{overflow: hidden;}
-.we{
-    display: inline;
-}
+.nicesplit{color: #21243d;}
 
 #m-1, #m-2, #m-3{visibility:hidden;}
+.controllers{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left:0;
+    right: 0;
+    align-content: center;
+    justify-content: center;
+    bottom: 10%;
+    font-size: 18px;
+    font-family: 'DSIDE-Light',sans-serif;
+}
+.replay{
+    width: 100px;
+    color: #656986;
+    align-items: center;
+    cursor: pointer;
+     display: flex;
+    transition: color .3s;
+}
+.replay svg{fill: #656986; margin-right: 5px;transition: fill .3s;}
+.replay:hover{color: #3a416f; transition: color .3s;}
+.replay:hover svg{fill: #3a416f; transition: fill .3s;}
+.scrollDown{ align-items: center; display: flex;  color: #3a416f; cursor: pointer;}
+.scrollDown svg{fill: #3a416f; margin-right: 5px;}
+.scrollDown:hover{color: #21243d; transition: color .3s;}
+.scrollDown:hover svg{fill: #21243d; transition: fill .3s;}
 .create{
     transform: translatex(200px);
 }
 .c{fill: url(#gradientmyballs)}
+.brand{fill: url(#gradientmystars)}
 .sc{opacity:0;}
 .create, .revealer{
   overflow:hidden;

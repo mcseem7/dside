@@ -17,7 +17,7 @@ export default class About extends Component {
  componentDidMount()
     {
         var tl = new TimelineMax();
-        var trigger = "container__about-content";
+        var trigger = ".container__about-content";
         var item = ".anim";
         var item2 = ".anim2";
         tl.to(item, 0.5, { y: -50, opacity: 1, ease: 'Power3.easeNone' });
