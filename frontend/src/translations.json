@@ -7,6 +7,18 @@
     "pl": "Zamów",
     "ru": "Заказать"
   },
+  "design": {
+    "pl": "projektowaniu",
+    "ru": "дизайне"
+  },
+  "Highest quality": {
+    "pl": "Najwyższa jakość",
+    "ru": "Высочайшее качество"
+  },
+  "Our customers receive more than they expected!": {
+    "pl": "Nasi klienci otrzymują więcej, niż się spodziewali!",
+    "ru": "Наши клиенты получают больше, чем они ожидали!"
+  },
   "advantage": {
     "pl": "zaleta",
     "ru": "козырь"
@@ -17,50 +29,6 @@
   },"What dside?": {
     "pl": "Czym jest DSIDE?",
     "ru": "Что такое DSIDE?"
-  },
-  "You can't just ask customers what they want and then try to give that to them. By the time you get it built, they'll want something new.": {
-    "pl": "Nie możesz po prostu zapytać klientów, czego chcą, a następnie spróbować im to dać. Dopóki to zrobisz, będą chcieli czegoś nowego.",
-    "ru": "Вы не можете просто спросить клиентов, чего они хотят, а затем попытаться дать им это. Пока Вы это сделаете, они захотят что-то новое."
-  },
-  "Steven Paul Jobs, Founder at Apple": {
-    "pl": "Stephen Paul Jobs, założyciel Apple",
-    "ru": "Стивен Пол Джобс, основатель Apple"
-  },
-  "Effective Design": {
-    "pl": "Efektywne projektowanie",
-    "ru": "Эффектвный дизайн"
-  },
-  "Progressive Web": {
-    "pl": "Aplikacji WWW",
-    "ru": "Веб-приложения"
-  },
-  "Ecommerce Solutions": {
-    "pl": "Rozwiązania e-commerce",
-    "ru": "E-commerce решения"
-  },
-  "We design clear interfaces with bright design": {
-    "pl": "Projektujemy łatwe interfejsy o jasnym wyglądzie",
-    "ru": "Проектируем удобные интерфейсы с ярким дизайном"
-  },
-  " and branding for projects of any complexity": {
-    "pl": "i branding dla projektów o dowolnej złożoności",
-    "ru": "и брендинг для проектов любой сложности"
-  },
-  "Development of all types of web applications.": {
-    "pl": "Tworzymy wszystkie rodzaje aplikacji internetowych.",
-    "ru": "Создаём все виды веб-приложений."
-  },
-  "Single-page applications and high-load services": {
-    "ru": "Включая одностраничные SPA приложения и высоконагруженные сервисы",
-    "pl": "Łącznie z aplikacjami jednostronicowymi i serwisami high-load"
-  },
-  "We provide comprehensive solution to business tasks –": {
-    "ru": "Мы предоставляем комплексное решение бизнес-задач",
-    "pl": "Zapewniamy kompleksowe rozwiązanie zadań biznesowych"
-  },
-  "from developing a marketing strategy to implementing CRM": {
-    "ru": "от разработки маркетинговой стратегии до внедрения CRM",
-    "pl": "od opracowania strategii marketingowej do wdrożenia CRM"
   },
   "Drop the line!": {
     "ru": "Напишите нам!",
@@ -150,13 +118,9 @@
     "ru": "короткое",
     "pl": "za krótkie"
   },
-  "is a modern, fast-growing company, in which the main principles of work are high professionalism,": {
-    "ru": "DSIDE является современной, быстро развивающейся компанией, в которой основным принципом работы являются высокий профессионализм.",
+  "DSIDE - Not another digital agency. DSIDE is a digital agency that is advised. It was founded in 2017 in Warsaw.": {
+    "ru": "DSIDE - Не очередное digital-агентство. DSIDE - это digital-агентство, которое советуют. Основано в 2017 году в Варшаве.",
     "pl": "DSIDE jest nowoczesną agenją brandingową, w której głównymi zasadami pracy są wysoki profesjonalizm,"
-  },
-  "responsibility to each client and the reliability of the guaranteed result": {
-    "ru": "ответственность перед каждым клиентом и надежность гарантированного результата.",
-    "pl": "odpowiedzialność wobec każdego klienta i wiarygodność gwarantowanego wyniku."
   },
   "why us?": {
     "ru": "Почему мы?",
@@ -233,29 +197,29 @@
     "ru": "Чистые преимущества от DSIDE",
     "pl": "Prawdziwe zalety DSIDE"
   },
-  "Accurate meeting deadlines": {
+  "Accurate deadlines": {
     "ru": "Точные сроки выполнения",
-    "pl": "Dokładne terminy realizacji"
+    "pl": "Dokładne terminy"
   },
-  "We can not miss deadlines because each employee is financially responsible": {
-    "ru": "Мы просто не можем пропустить сроки, поскольку каждый сотрудник несет финансовую ответственность.",
+  "We simply can't miss deadlines, cause each employee is financially responsible": {
+    "ru": "Мы просто не можем затянуть сроки, потому что каждый сотрудник несет финансовую ответственность",
     "pl": "Poprostu nie możemy przegapić terminów, ponieważ każdy pracownik ponosi odpowiedzialność finansową"
   },
-  "You can watch the process": {
-    "ru": "Ты можешь следить за процессом.",
-    "pl": "Możesz obejrzeć proces."
+  "You can watch": {
+    "ru": "Проект на ладони",
+    "pl": "Widzisz cały proces"
   },
-  "You can see the progress of your project in our innovative Nimb system in detail. 24/7": {
-    "ru": "Ознакомься с прогрессом разработки твоего проекта в нашей инновационной системе Nimb. 24/7",
-    "pl": "Możesz zobaczyć postęp swojego projektu w naszym innowacyjnym systemie Nimb w szczegółach. 24/7"
+  "You can watch the progress of your project in our innovative Forge system in detail. 24/7": {
+    "ru": "Вы можете детально наблюдать за ходом вашего проекта в нашей инновационной системе Forge. 24/7",
+    "pl": "Możesz szczegółowo śledzić postęp swojego projektu w naszym innowacyjnym systemie Forge. 24/7"
   },
-  "Highest experienced team": {
+  "Experienced team": {
     "ru": "Опытная команда",
     "pl": "Doświadczony zespół"
   },
-  "Five years - is minimum experience of experts who work in our team": {
+  "Five years - is minimum experience of experts working in our team": {
     "ru": "Пять лет - это минимальный опыт экспертов, которые работают в нашей команде",
-    "pl": "Pięć lat - to minimalne doświadczenie ekspertów, którzy pracują w naszym zespole "
+    "pl": "Pięć lat - to minimalne doświadczenie ekspertów pracujących w naszym zespole"
   },
   "*": {
     "ru": "*",

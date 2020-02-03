@@ -1,13 +1,12 @@
 .portfolio-category__item p {
         color: #21243d;
-        font-family: 'DSIDE-Light', sans-serif;
+        font-weight: 300;
         font-size: 22px;
         font-weight: 700;
     }
-
     .portfolio-category__item p sup {
         color:  #21243d;
-        font-family: 'DSIDE-Light', sans-serif;
+        font-weight: 300;
         font-size: 18px;
         margin-left: 2px;
     }
@@ -76,7 +75,7 @@
 
     .sorting-portfolio__wrapper .portfolio-sorting__date {
         color:  #21243d;
-        font-family: 'DSIDE-Bold', sans-serif;
+        font-weight: 600;
         font-size: 14px;
         font-weight: 700;
     }
@@ -84,12 +83,12 @@
     .wrapper-row h2 {
         font-size: 28px;
         margin-top: 12rem;
-        font-family: 'DSIDE-Bold', sans-serif;
+        font-weight: 600;
     }
 
     .sortby__type div {
         color: #21243d;
-        font-family: 'DSIDE-Light', sans-serif;
+        font-weight: 300;
         font-size: 14px;
         font-weight: 300;
     }
@@ -137,14 +136,14 @@
 @media only screen and (min-width: 1024px) {
     .portfolio-category__item p {
         color: #656986;
-        font-family: 'DSIDE-Light', sans-serif;
+        font-weight: 300;
         font-size: 14px;
         font-weight: 700;
     }
         .portfolio-category__list {display: flex;}
     .portfolio-category__item p sup {
         color: #656986;
-        font-family: 'DSIDE-Light', sans-serif;
+        font-weight: 300;
         font-size: 12px;
         margin-left: 2px;
     }
@@ -206,7 +205,7 @@
 
     .sorting-portfolio__wrapper .portfolio-sorting__date {
         color: #000000;
-        font-family: 'DSIDE-light', sans-serif;
+        font-weight: 300;
         font-size: 14px;
         font-weight: 700;
     }
@@ -218,7 +217,7 @@
 
     .sortby__type div {
         color: #000000;
-        font-family: 'DSIDE-Light', sans-serif;
+        font-weight: 300;
         font-size: 14px;
         font-weight: 300;
     }
@@ -255,4 +254,7 @@
     margin: 0 auto;
     padding: 0 11rem;
 }
+}
+.a2{
+    font-weight: 300;
 }

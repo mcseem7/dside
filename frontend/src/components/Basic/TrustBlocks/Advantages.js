@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import './style.css'
 import Eye from '../../sources/images/works__logo/eye.svg'
-import Five from '../../sources/images/works__logo/five.svg'
-import HQ from '../../sources/images/works__logo/high-quality.svg'
-import Nimb from '../../sources/images/works__logo/nimb-saver.svg'
+import Five from '../../sources/images/works__logo/gusto.svg'
+import HQ from '../../sources/images/works__logo/gem.svg'
+import Nimb from '../../sources/images/works__logo/timer.svg'
 import Translate from "translate-components";
 
 export default class Advantages extends Component {
@@ -23,37 +23,37 @@ export default class Advantages extends Component {
                         <div className="advantages-container">
                             <div className="advantage">
                                 <img className="adv-icon" src={Nimb} alt=""/>
-                                <div className="advantage-heading">
-                                  <Translate>Accurate meeting deadlines</Translate>
+                                <div className="advantage-heading arctic">
+                                  <Translate>Accurate deadlines</Translate>
                                 </div>
                                 <div className="advantage-text">
-                                  <Translate>We can not miss deadlines because each employee is financially responsible</Translate>
+                                  <Translate>We simply can't miss deadlines, cause each employee is financially responsible</Translate>
                                 </div>
                             </div>
 
                             <div className="advantage">
                                 <img className="adv-icon"  src={Eye} alt=""/>
                                 <div className="advantage-heading">
-                                  <Translate>You can watch the process</Translate>
+                                  <Translate>You can watch</Translate>
                                 </div>
                                 <div className="advantage-text">
-                                  <Translate>You can see the progress of your project in our innovative Nimb system in detail. 24/7</Translate>
+                                  <Translate>You can watch the progress of your project in our innovative Forge system in detail. 24/7</Translate>
                                 </div>
                             </div>
 
                             <div className="advantage">
                                 <img className="adv-icon"  src={Five} alt=""/>
                                 <div className="advantage-heading">
-                                  <Translate>Highest experienced team</Translate>
+                                  <Translate>Experienced team</Translate>
                                 </div>
                                 <div className="advantage-text">
-                                  <Translate>Five years - is minimum experience of experts who work in our team</Translate>
+                                  <Translate>Five years - is minimum experience of experts working in our team</Translate>
                                 </div>
                             </div>
 
                             <div className="advantage">
                                 <img className="adv-icon"  src={HQ} alt=""/>
-                              <div className="advantage-heading"><Translate>Highest quality products</Translate>
+                              <div className="advantage-heading"><Translate>Highest quality</Translate>
                                 </div>
                                 <div className="advantage-text">
                                   <Translate>Our customers receive more than they expected!</Translate>

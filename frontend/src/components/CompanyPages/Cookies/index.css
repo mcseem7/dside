@@ -2,17 +2,17 @@
      .background__cookies ul{list-style: square;}
      .background__cookies h5{
          font-size: 40px;
-         font-family: 'DSIDE-Black',sans-serif;
+         font-weight: 800;
      }
      .background__cookies p{
-         font-family: 'DSIDE-Light',sans-serif;
+         font-weight: 300;
          font-size: 18px;
      }
     .background__cookies strong{
          font-size: 18px;
-         font-family: 'DSIDE-Bold',sans-serif;
+         font-weight: 600;
      }
      .background__cookies h6{
          font-size: 22px;
-         font-family: 'DSIDE-Bold',sans-serif;
+         font-weight: 600;
      }

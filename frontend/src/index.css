@@ -1,39 +1,29 @@
 @font-face{
-    font-family: 'DSIDE-Bold';
-    src: url('components/sources/fonts/Mont-SemiBold.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-@font-face{
-    font-family: 'DSIDE-Light';
-    src: url('components/sources/fonts/Mont-Book.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: 'DSIDE-Black';
-    src: url('components/sources/fonts/Mont-Bold.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: 'Mont';
+    font-family: 'DSIDE';
     src: url('components/sources/fonts/Mont-SemiBold.otf') format('opentype');
     font-weight: 600;
     font-style: normal;
 }
 
+
 @font-face{
-    font-family: 'Mont';
+    font-family: 'DSIDE';
     src: url('components/sources/fonts/Mont-Book.otf') format('opentype');
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
 }
 
+@font-face{
+    font-family: 'DSIDE';
+    src: url('components/sources/fonts/Mont-Bold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+body{font-family: 'DSIDE',sans-serif;}
+.arctic{color:#21243d}
+.arctic-f{fill:#21243d}
+.midnight{color: #3a416f}
+.midnight-f{fill: #3a416f}
 .background__cookies{width: unset; padding: 3rem 2rem}
 
 .fade-appear,
@@ -52,7 +42,6 @@
  top: 50%;
  left: 50%;
  transform: translate(-50%, -50%);
-
  stroke: black;
  stroke-width: 2;
  fill: black;
@@ -93,7 +82,7 @@
 }
 
 .cook__description {
-    font-family: 'DSIDE-Light',sans-serif;
+    font-weight: 300;
     font-size: 0.8rem;
     flex: 1 1 70%;
     padding: 1rem;
@@ -147,7 +136,7 @@
     overflow: hidden;
 }
 .animlogo-preloader-path, .dot{fill: #fff;}
-.loader span{color: #21243d; font-family: 'DSIDE-Bold',sans-serif; font-size: 14px; text-align: center;}
+.loader span{color: #21243d; font-weight: 600; font-size: 14px; text-align: center;}
 .loaded{overflow-y: visible;}
 .cotton-bg-logo{fill:#F21E27;}
 #preloaderlogo, .loading-text {
@@ -158,7 +147,7 @@
   position: relative;
 }
 .cook__button p {
-    font-family: 'DSIDE-Bold',sans-serif;
+    font-weight: 600;
     text-align: center;
     line-height: 1.1rem;
 }
@@ -177,9 +166,9 @@
     background: #fff;
     margin: 0 auto;
     padding: 0px 1rem;}
-    .cook__description a{font-family: 'DSIDE-Bold',sans-serif;}
+    .cook__description a{font-weight: 600;}
     .cook__description span{
-    font-family: 'DSIDE-Light',sans-serif;
+    font-weight: 300;
     font-size: 0.8rem;
     flex: 1 1 75%;
     padding: 1rem 0rem 1rem 0rem;

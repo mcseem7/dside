@@ -4,8 +4,21 @@
     width: 100%;
     margin: 0 auto;
 }
-.hp-head{font-family: "DSIDE-Light", sans-serif; font-size: 36px; }
-.hp-head::before{content: ''; display: block; width: 200px; height: 3px; top: 17px; background: #ac0007; position: absolute; left: -220px;}
+.hp-trig{display: flex; flex-direction: row; justify-content: space-between; align-items: center;}
+.allworks{font-weight: 300; font-size: 24px; color: #21243d;}
+.allworks a{color: #21243d;}
+.hp-head{font-weight: 300; font-size: 42px; color: #21243d;}
+#second{fill: #dbdff9;}
+#first{fill: #dadef8;}
+/*#first{fill: #c5c9e0;}*/
+.button_allworks{margin-left: 10px; transition: transform .3s ease-in-out;}
+.allworks:hover .button_allworks{transform: matrix(1, 0, 0, 1, 10, 0) !important;}
+
+.portline{
+    width: 40%;
+    height: 40px;
+    overflow: hidden;
+}
 .itemimg{
     max-width: 100%;
     min-width: 100%;
@@ -37,7 +50,7 @@ figure.postitem p {
     -webkit-transform: translate3d(0,100%,0);
     transform: translate3d(0,100%,0);
     font-size: 28px;
-    font-family: "DSIDE-Light", sans-serif;
+    font-weight: 300;
     font-weight: 300;
 }
 
@@ -48,7 +61,7 @@ figure.postitem h2 {
     transition: transform 0.35s;
     text-align: left;
     line-height: 1;
-    font-family: "DSIDE-Bold", sans-serif;
+    font-weight: 600;
     font-size: 26px;
 }
 figure.postitem span {
@@ -58,7 +71,7 @@ figure.postitem span {
     transition: transform 0.35s;
     text-align: left;
     line-height: 1;
-    font-family: "DSIDE-Bold", sans-serif;
+    font-weight: 600;
     font-size: 20px;
 }
 
@@ -133,7 +146,7 @@ figure.postitem figcaption {
     color: #fff;
     position: absolute;
     z-index: 50000;
-    font-family: "DSIDE-light", sans-serif;
+    font-weight: 300;
     display: block;
     text-decoration: none;
     white-space: nowrap;
@@ -163,14 +176,14 @@ figure.postitem figcaption {
 .grid figure h2 {
     font-size: 26px;
     color: #fff;
-    font-family: "DSIDE-Black", sans-serif;
+    font-weight: 800;
     line-height: 1.8rem;
 }
 
 .grid figure span {
     font-size: 20px;
     color: #fff;
-    font-family: "DSIDE-Light", sans-serif;
+    font-weight: 300;
 }
 
 .grid figure h2 span {

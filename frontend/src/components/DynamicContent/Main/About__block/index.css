@@ -1,4 +1,42 @@
-.container__about-content{padding: 2rem;  display: flex; flex-direction: row;  background: url('./steven.jpg') no-repeat; background-size: 600px; background-position: right bottom;}
+.container__about-content{ }
+.mb0{fill:#21243D;}
+.mb1{fill:#FFFFFF;}
+.mb2{fill:#136DF6;}
+.mb3{fill:#22B65D;}
+.mb4{fill:none;stroke:#136DF6;stroke-width:0.5;stroke-miterlimit:10;}
+.mb5{fill:none;stroke:#C1CCDA;stroke-width:0.5;stroke-miterlimit:10;}
+.mb6{fill:none;stroke:#FEC02F;stroke-width:0.5;stroke-miterlimit:10;}
+.mb7{fill:none;stroke:#E2E5ED;stroke-width:0.5;stroke-miterlimit:10;}
+.mb8{fill:#F21E27;}
+.mb9{fill:none;}
+#pf1{visibility: hidden;}
+.mb10{fill:#CCCCCC;}
+.mb11{fill:none;stroke:#136DF6;stroke-miterlimit:10;}
+.mb12{fill:#3C4962;}
+.mb13{font-weight: 300;}
+.mb14{font-size:7px;}
+.mb15{font-size:8px;}
+.mb16{font-weight: 600;}
+.mb17{font-size:7px;}
+.mb18{font-size:6px;}
+.mb19{fill:#9EACBA;}
+.mb20{fill:#9EACBA;}
+.mb21{font-size:7px;}
+.mb22{font-size:5px;}
+.mb23{font-size:5px;}
+.mb24{font-size:9px;}
+.mb25{font-size:7px;}
+.mb26{fill:none;stroke:#9EACBA;stroke-miterlimit:10;}
+.mb27{font-size:4px;}
+.mb28{font-size:10px;}
+.mb29{fill:none;stroke:#22B65D;stroke-width:3;stroke-miterlimit:10;}
+.mb30{font-size:10px;}
+.mb31{fill:#FEC02F;}
+#mandingoo{
+    width: 500px;
+    left: 0;
+    position: absolute;}
+.pe0{fill: #fff;}
 .company__content {
         display: flex;
         font-size: 1.2rem;
@@ -6,32 +44,42 @@
         color: rgb(0, 0, 0);
         width: 100%;
 
-        font-family: 'DSIDE-Light', sans-serif;
+        font-weight: 300;
         font-weight: 300;
     }
 .anim, .anim2{opacity: 0.3}
-.container__about-content{       background-position: bottom right 50%;
-    padding: 0rem 2rem 22rem 2rem;
-    background-size: 450px;
-    font-family: 'DSIDE-Light',sans-serif;}
+.advantages{display: flex; flex-direction: column;}
+.advantage-item{display: flex; flex-direction: row;  margin-top:50px; align-items: center;}
+.advantage-item.right{display: flex; flex-direction: row-reverse; margin-bottom: 100px; margin-top:50px; align-items: center;}
+.advitem-image-holder.small{flex: 0 1 36%;}
+.advitem-image-holder{flex: 0 1 54%;}
+.advitem-image-holder svg{width: 100%;}
+.advitem-inner{display: flex; flex-direction: column; flex:0 1 37%;}
+.advitem-inner.right{display: flex; flex-direction: column; flex:0 1 56%;}
+.adv-heading{font-size: 36px; padding: 20px 0; color: #21243d;}
+.adv-heading span{font-weight: 600;}
+.adv-text{font-size: 18px; color: #4e4d85; line-height: 28px;}
+.adv-btn{display: flex; width: fit-content; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.4px; line-height: 20px; margin-top: 34px; background: linear-gradient(13deg, rgb(69, 49, 160) 0%, rgb(57, 149, 229) 100%);  -webkit-background-clip: text;  -webkit-text-fill-color: transparent;}
+.adv-btn img{margin-top:-3px; margin-left: 5px;}
+.container__about-content{
+    font-weight: 300;}
  .about__content{display: flex; flex-direction: row; padding: 2rem 0;}
     .texts-about{display: flex; width: 90%; flex-direction: column;}
     .texts-about p span {
         text-align: left;
-        font-family: 'DSIDE-Light', sans-serif;
+        font-weight: 300;
         font-size: 30px;
         line-height: 30px;
     }
      .texts-about span {
         text-align: left;
-        font-family: 'DSIDE-Light', sans-serif;
+        font-weight: 300;
         font-size: 18px;
         line-height: 30px;
     }
 /* Tablets */
 
 @media only screen and (min-width: 480px) {
-    .container__about-content{     padding: 2rem 3rem 2rem 3rem; background-position: bottom right -30%;}
     .texts-about{ width: 60%}
     .question {
         margin-top: 25px;
@@ -42,21 +90,13 @@
         line-height: 50px;
         color: rgb(0, 0, 0);
         width: 100%;
-        font-family: "DSIDE-Light", sans-serif;
         font-weight: 300;
     }
 }
 /* Fullscreen */
 
 @media only screen and (min-width: 1024px) {
-    .container__about-content{
-    margin: 0 auto;
-        background-position: bottom right;}
 }
 @media only screen and (min-width: 1400px) {
-    .container__about-content{
-            padding: 5rem 0;
-    width: 1200px;
-    }
     .about__content{padding: 2rem 3rem;}
 }

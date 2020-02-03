@@ -2,7 +2,6 @@ import React from 'react';
 import { createMarkup, useDiscount } from './config';
 import useLang from '../../../hooks/useLang';
 import { orderLang, startsFromLang } from './Step1';
-import ScrollAnimation from 'react-animate-on-scroll'
 import { take } from 'ramda';
 const packSvgs = [
     <svg className='pricing-deco-img' enable-background='new -558 659.3  300 100' height='100px' id='Layer_1' preserveAspectRatio='none' version='1.1' viewBox='-558 659.3  300 100' width='300px' x='0px' y='0px'>
@@ -40,7 +39,7 @@ export default ({ onSelect, config, serviceIndex, isPopUp, discount = 0 }) => {
                             <div className='pricing-price'><span className='pricing-period'>{useLang(startsFromLang)}</span><span className='pricing-currency'>$</span>{useDiscount(discount, pack.price)}
                             </div>
                             <h3 className='pricing-title lite'>{useLang(pack.name)}</h3>
-                            <ScrollAnimation animateIn="slideInUp" delay="400"><button className='pricing-action trans' onClick={() => onSelect(packIndex)}>{useLang(orderLang)}</button></ScrollAnimation>
+                            <button className='btn-send btn-calc btn-inn-calc' onClick={() => onSelect(packIndex)}>{useLang(orderLang)}</button>
                         </div>
                         <ul className='pricing-feature-list' dangerouslySetInnerHTML={createMarkup(useLang(pack.featureDescriptions))}>
                         </ul>
@@ -63,9 +62,9 @@ export default ({ onSelect, config, serviceIndex, isPopUp, discount = 0 }) => {
                         <div className='pricing-price'><span className='pricing-period'>{useLang(startsFromLang)}</span><span className='pricing-currency'>$</span>{useDiscount(discount, packs[3].price)}
                         </div>
                         <h3 className='pricing-title golden'>{useLang(packs[3].name)}</h3>
-                        <ScrollAnimation animateIn="slideInUp" delay="600"><button className='elite-btn' onClick={() => onSelect(3)}>{useLang(orderLang)}</button></ScrollAnimation>
+                        <button className='elite-btn' onClick={() => onSelect(3)}>{useLang(orderLang)}</button>
                     </div>
-                    <ul className='pricing-feature-list' dangerouslySetInnerHTML={createMarkup(useLang(packs[3].featureDescriptions))}>
+                    <ul className='pricing-feature-list elite' dangerouslySetInnerHTML={createMarkup(useLang(packs[3].featureDescriptions))}>
                     </ul>
                 </div>}
         </div>);

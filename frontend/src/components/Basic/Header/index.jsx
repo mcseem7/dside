@@ -74,9 +74,7 @@ class Header extends Component {
         } else {
             var controllerLang = LangPL;
         }
-        console.log(this.state.lang);
-        console.log(this.props.language);
-        console.log('LangStorage', localStorage.getItem('lang'));
+
       return (
 
       <div
@@ -101,9 +99,6 @@ class Header extends Component {
                           width="86px"
                           height="26px"
                           viewBox="0 0 209 39"
-                          version="1.1"
-                          xmlns="https://www.w3.org/2000/svg"
-                          xmlnsXlink="https://www.w3.org/1999/xlink"
                         >
                           <pattern
                             id="rollover"

@@ -4,7 +4,6 @@ import ViewStack from './ViewStack';
 import Step1 from './Step1';
 import Step2 from './Step2';
 import Step3 from './Step3';
-import ScrollAnimation from 'react-animate-on-scroll'
 import Footer from '../../Basic/Footer';
 import useLang, { getLang } from '../../../hooks/useLang';
 import useMergeState from '../../../hooks/useMergeState';
@@ -34,6 +33,7 @@ export default () => {
     };
     const onStep2 = (updatedOrder) => {
         updateOrder(updatedOrder);
+        window.scrollTo(0,0);
         setStep(2);
     };
     const onStep3 = (updatedOrder) => {
@@ -67,11 +67,10 @@ export default () => {
     return <Fragment>
         <div className="row">
             <div className="pricing__wrapper">
-                <h2 className="">Шаг {step + 1}/3</h2>
-            <h3 className=""></h3>
+                <h2 className="">{useLang('Шаг', 'Step', 'Krok')} {step + 1}/3</h2>
             <ViewStack value={step} data={[
-        () => <ScrollAnimation animateIn="slideInUp" animateOnce="true" animateOut="fadeOutLeft"><Step1 onSubmit={onStep1} config={pricesConfig} order={order}/></ScrollAnimation>,
-        () => <ScrollAnimation animateIn="fadeInLeft" animateOnce="true" animateOut="fadeOutLeft"><Step2 onSubmit={onStep2} config={pricesConfig} order={order} onBack={() => setStep(0)}/></ScrollAnimation>,
+        () => <Step1 onSubmit={onStep1} config={pricesConfig} order={order}/>,
+        () => <Step2 onSubmit={onStep2} config={pricesConfig} order={order} onBack={() => setStep(0)}/>,
         () => <Step3 onSubmit={onStep3} config={pricesConfig} order={order} onBack={() => setStep(0)}/>,
     ]}/>
             </div>

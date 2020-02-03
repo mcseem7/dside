@@ -10,7 +10,7 @@ import { reactTranslateChangeLanguage, TranslateProvider } from "translate-compo
 import translations from './translations.json'
 import clock from './clock.svg'
 import Welcome from './Welcome'
-import TweenLite from 'gsap'
+import gsap from 'gsap'
 import $ from 'jquery'
 
 
@@ -43,26 +43,26 @@ class App extends Component {
     }
 
     componentDidMount() {
-        this.loaderTween = TweenLite.to(this.loaderWrap, 1, {
-			scale: "1.3", opacity: 0, ease: 'Expo.easeInOut', delay: 2.8,
+        this.loaderTween = gsap.to(this.loaderWrap, 1, {
+			scale: "1.3", opacity: 0, ease: 'expo.inOut', delay: 2.8,
 			onComplete: () => {
 				this.setState({ loaderExists: false });
                 document.body.classList.add('loaded');
 			}
 		});
-        this.appTween = TweenLite.from(this.appWrap, 1, {y: "55%", ease: 'Expo.easeInOut', delay: 3.8});
-        TweenLite.from(this.cottonWrap, 1, {
-			y: "100%", ease: 'Back.easeInOut', delay: 0.4,
+        this.appTween = gsap.from(this.appWrap, 1, {y: "55%", ease: 'expo.inOut', delay: 3.8});
+        gsap.from(this.cottonWrap, 1, {
+			y: "100%", ease: 'back.inOut', delay: 0.4,
 		});
 
-        TweenLite.staggerFrom('.animlogo-preloader-path', 1, {
-			y:"200%", grid:'auto', opacity:.3, delay: 0.7, each: 0.1, from: 1, ease: 'Back.easeInOut',
-		}, 0.2);
-        TweenLite.from('.dot', 1, {
-			scale: '3', opacity: 0, transformOrigin:"50% 50%", ease: 'Back.easeInOut', delay: 2.2,
+        gsap.from('.animlogo-preloader-path', {
+          duration:1, yPercent:200, grid:'auto', opacity:.3, delay: 0.7, from: 1, ease: 'back.inOut', stagger: 0.1
 		});
-        TweenLite.from('.loading-text', 1, {
-			y: '-200', opacity: 0, transformOrigin:"50% 50%", ease: 'Back.easeInOut',
+        gsap.from('.dot', 1, {
+			scale: '3', opacity: 0, transformOrigin:"50% 50%", ease: 'back.inOut', delay: 1.8,
+		});
+        gsap.from('.loading-text', {
+			duration: 1, yPercent: -2000, opacity: 0, transformOrigin:"50% 50%", ease: 'back.inOut',
 		});
 
         this.setState({mounted: true});
@@ -167,7 +167,7 @@ class App extends Component {
                 { <div>
              <Route exact path='/' component={Welcome} />
              <Route path={'/:language'} render={(props) => {
-                 const matchUrl = ['aboutus', 'contactus', 'process', 'pricing', 'pricing2', 'portfolio', 'cookies-policy', ''].indexOf(props.location.pathname.substr(4));
+                 const matchUrl = ['aboutus', 'contactus', 'process', 'pricing', 'pricing2','services/design', 'portfolio', 'cookies-policy', ''].indexOf(props.location.pathname.substr(4));
                  function getHeader() {
                  if (matchUrl === -1 ) {
                     return (<Header domenErty={props.match.params.language} style={'block'} name="dark" />)
@@ -181,30 +181,33 @@ class App extends Component {
 <div>
                          {getHeader()}
 
-
-                             <Switch>
+                         <TransitionGroup component={null}>
+                             <Switch location={props.location}>
 
                             { Array.prototype.map.call(routes, ((route, index) => {
                 return (
 
                     <Route
-                        key={index}
-                        path={route.path}
-                        exact={route.exact}
-                        render={props => (
-            <Content
-                {...props}
-                component={route.component}
-                initialData={initialData || null}
-                pageLoader={this.state.loaderExists}
-            />
-        )}
-
-                    />
+                            key={index}
+                            path={route.path}
+                            exact={route.exact}
+                            render={props => (
+                                <Content
+                                    {...props}
+                                    component={route.component}
+                                    initialData={initialData || null}
+                                    pageLoader={this.state.loaderExists}
+                                    show={props.match !== null}
+                                />
+                            )}
+                            exact
+                        />
                 );
             }))}
 
                              </Switch>
+                             </TransitionGroup>
+
                              </div>)
              }} />
 
@@ -245,7 +248,27 @@ class Content extends React.Component {
             this.props.component &&
             (
 
-                    <Component pageLoader={this.props.pageLoader} />
+<Transition
+	unmountOnExit
+	in={this.props.show}
+	timeout={1000}
+	onEnter={ node => gsap.set(node, { autoAlpha: 0, y: -30 }) }
+	addEndListener={ (node, done) => {
+		gsap.to(node, 0.35, {
+			autoAlpha: this.props.show ? 1 : 0,
+			y: this.props.show ? 1 : -30,
+            transformOrigin: "50% 500px",
+			onComplete: done
+		});
+	}}>
+    <div className="xabsolute">
+                    <Component
+                        pageLoader={this.props.pageLoader}
+                        show={this.props.show}
+                        initialData={this.props.initialData}
+                    />
+    </div>
+                    </Transition>
 
 
             )

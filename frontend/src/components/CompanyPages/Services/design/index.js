@@ -1,58 +1,25 @@
 import React, { Component } from 'react'
 import CaseService from '../serviceComponents/CaseService/index'
 import './index.css'
+import Translate from "translate-components";
+import  Arrow  from '../../../Basic/Footer/arrow.svg';
+import LogoRed from '../../../DynamicContent/About/dsideLogo.svg';
 import Advantages from "../../../Basic/TrustBlocks/Advantages";
 import withDsideApi from "../../../../HOC/Fetch";
 import Footer from '../../../Basic/Footer'
+import { reactTranslateChangeLanguage } from "translate-components";
+import { NavLink, withRouter } from "react-router-dom";
 import Helmet from 'react-helmet-async'
 
 class Design extends Component {
   constructor(props) {
     super(props)
-      this.next = this.next.bind(this);
-    this.previous = this.previous.bind(this);
-    this.nextgraph = this.nextgraph.bind(this);
-    this.previousgraph = this.previousgraph.bind(this);
-  }
 
-next() {
-    this.slider.slickNext();
   }
-  previous() {
-    this.slider.slickPrev();
-  }
-nextgraph() {
-    this.slidergraph.slickNext();
-  }
-  previousgraph() {
-    this.slidergraph.slickPrev();
-  }
+componentWillMount() {
+  this.setState({lang: localStorage.getItem('lang')})
+  };
   render(){
-
-    const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    fade: false,
-    autoplay: false,
-    autoplaySpeed: 1000,
-    pauseOnHover: true,
-    slidesToShow: 1,
-    slidesToScroll: 1
-    };
-
-    const settingswebdesign = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    arrows: false,
-    fade: true,
-    autoplay: false,
-    autoplaySpeed: 1000,
-    pauseOnHover: true,
-    slidesToShow: 1,
-    slidesToScroll: 1
-    };
 
     return (
 
@@ -60,41 +27,26 @@ nextgraph() {
         <Helmet>
   <title>Dside design</title>
 </Helmet>
-
-          {/*<div className='designs__quality-wraoper'>
-            <section className="designs-dev__quality" id='design__developer'>
-              <h2><Translate>What's the difference?</Translate></h2>
-              <div className="headers-designs-comparsion">
-                <div className="comp-h-left greygoose"><span><Translate>Simple design</Translate></span><img src={SimpleWeb} alt="" /></div>
-                <div className="comp-h-mid"><span>vs</span></div>
-                <div className="comp-h-right"><img src={BetterWeb} alt="" /><span>
-                  <div className="golden_title"><span><Translate>Well-selling</Translate></span></div>
-
-                  <Translate>design</Translate></span></div>
-              </div>
-
-              <div className="body-designs-comparsion">
-                <div className="roow"><span>100</span><strong><Translate>USERS</Translate></strong><span>100</span></div>
-                <div className="roow"><span>$30</span><strong><Translate>PER CUSTOMER</Translate></strong><span>$30</span></div>
-                <div className="roow"><span>5</span><strong><Translate>SALES</Translate></strong><span className="golden">10</span></div>
-                <div className="roow"><span className="greygoose">-</span><strong><Translate>RESALES</Translate></strong><span className="golden">5</span></div>
-                <div className="roow"><span className="greygoose">-</span><strong><Translate>FRIENDS INVITED</Translate></strong><span className="golden">3</span></div>
-                <div className="roow"><span className="greygoose">-</span><strong><Translate>RETURNED</Translate></strong><span className="golden">2</span></div>
-                <div className="roow greater"><span className="greygoose">$150</span><strong><Translate>TOTAL</Translate></strong><span className="greender">$600</span></div>
-              </div>
-            </section>
-          </div>*/}
-
-        <div className="row">
-               <h2 className="slider-header">Web Design</h2>
-
-
-          </div>
           <div className="row">
-               <h2 className="slider-header">Graphic Design</h2>
-
-
+            <div className="s-intro-txts">
+                 <div className="heading-s-intro"> <h2 className="s-intro-txt">Designed by</h2><img className="logo-s-intro" src={LogoRed} width={110}/></div>
+                 <h4 className="s-intro-txt ">Do not be a copy. Be the standard for others.</h4>
+            </div>
           </div>
+          <div className="design-content">
+                <div className="lines-intro-design"></div>
+             <div className="row">
+               <div className="d-c-main">
+                   <div className="d-c-head">
+                  <div className="heading-design"><h2>Design</h2> <span>from $ 199</span></div>
+                  <div className="calclink"><NavLink
+                      to={`/${this.state.lang}/pricing`}
+                      className="link adv-btn a1">
+                      <Translate>Prices</Translate><img src={Arrow} width={16} alt=""/>  </NavLink></div></div>
+                  <p>The main tool that shows your customer who is who in the market. A good design will leave no chance to competitors, because your company will look more professional than analogues with a mediocre design.</p>
+               </div>
+             </div>
+            </div>
         <CaseService {...this.props} name='design' />
         <Advantages />
         <Footer/> </div>

@@ -11,7 +11,7 @@ export default function OrderButton(props) {
           height: '40px',
           marginTop: '500px',
           borderRadius: '40px',
-          fontFamily: 'DSIDE-Bold',
+          fontWeight: '600',
           fontSize: '0.8rem !important',
           backgroundColor: '#4c9a15 !important',
           backgroundImage: 'radial-gradient( ellipse at center, #8fde34 0%, rgba(85, 139, 47, 0) 60%, #407719 100% ) !important'

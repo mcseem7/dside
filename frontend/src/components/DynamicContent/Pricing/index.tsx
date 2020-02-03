@@ -4,7 +4,7 @@ import Translate from 'translate-components'
 import { reactTranslateChangeLanguage } from 'translate-components'
 import Helmet from 'react-helmet-async'
 import Footer from '../../Basic/Footer'
-import ScrollAnimation from 'react-animate-on-scroll'
+
 
 
 
@@ -19,10 +19,10 @@ export default class Pricing extends Component {
     }
 
     componentDidMount() {
-        window.scrollTo(0, 0)
+       // window.scrollTo(0, 0)
     }
     componentDidUpdate() {
-        reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
+       // reactTranslateChangeLanguage.bind(this, localStorage.getItem('lang'))()
     }
 
     render() {

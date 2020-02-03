@@ -5,6 +5,9 @@ import withDsideApi from "../../../HOC/Fetch";
 import withLanguage from "../../../HOC/withLanguage";
 import CategoryItem from './CategoryItem';
 import PortolioPost from '../Header__Post/Portfolio__Post';
+import gsap from 'gsap'
+import Arrow  from '../../Basic/Footer/arrow.svg';
+import Ad  from '../Main/About__block/chess.png';
 import Translate, { reactTranslateChangeLanguage } from "translate-components";
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import Footer from '../../Basic/Footer';
@@ -18,15 +21,16 @@ class Portfolio extends Component {
       dataItems: [],
       dataItemsStatic: [],
       activeFilter: null,
-      category: '',
+      category: null,
     }
   }
 
   async componentDidMount() {
-    return await fetch(`${process.env.REACT_APP_API}/${this.props.language}/portfolio/getPortfolioItems/`).then((response) => {
+   window.scrollTo(0, 0);
+      return await fetch(`${process.env.REACT_APP_API}/${this.props.language}/portfolio/getPortfolioItems/`).then((response) => {
       return response.json()
     }).then((items) => {
-         this.setState({dataItems: items})
+         this.setState({dataItems: items});
          this.setState({dataItemsStatic: items})
     })
   }
@@ -43,7 +47,7 @@ class Portfolio extends Component {
       await this.setState({
         activeFilter: selectFilterId,
         category: category
-      })
+      });
       await this.getCategoryDataNull();
   }
  isActiveCategory = (id) => {
@@ -64,9 +68,13 @@ class Portfolio extends Component {
      })
  }
 
+componentDidUpdate(){
 
+   console.log('LOL', this.state);
+ }
 
  render() {
+
     return (
       <Fragment>
         
@@ -117,8 +125,23 @@ class Portfolio extends Component {
 </div>
           </div>
           <div className="portfolio__items-container">
-             <PortolioPost dataDside={this.state.dataItems} />
+              {this.props.loading ? (
+                <PortolioPost {...this.props} dataDside={this.state.dataItems} />
+              ) : null}
           </div>
+           <div className="advantages">
+             <div className="advantage-item right">
+                        <div className="advitem-image-holder small rodrigo">
+                            <img src={Ad} width={460} className="a2"/>
+
+                        </div>
+                        <div className="advitem-inner right">
+                            <div className="adv-heading a2">Понравились наши работы?</div>
+                            <div className="adv-text a2">Самое время рассчитать приблизительную стоимость Вашего проекта. Для рассчета точной стоимости, пожалуйста, оставьте заявку через форму "Заказать", либо при помощи калькулятора цен.</div>
+                            <div className="adv-btn a2">Рассчитать<img src={Arrow} width={16} alt=""/></div>
+                        </div>
+                    </div>
+           </div>
         </section>
         <Footer/>
       </div>

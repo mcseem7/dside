@@ -2,13 +2,13 @@
     font-size: 16px;
     line-height: 17px;
     color: rgb(117,149,241);
-    font-family: "DSIDE-Bold", sans-serif;
+    font-weight: 600;
     font-weight: bold;
-}#google__maps-container{position: relative; z-index: -1;}.question__form p{font-family:'DSIDE-Light';font-size: 18px;}
+}#google__maps-container{position: relative; z-index: -1;}.question__form p{font-weight: 300;font-size: 18px;}
     .title__drop h3 {
         margin: 0;
         color: #000000;
-        font-family: 'DSIDE-Bold', sans-serif;
+        font-weight: 600;
         font-size: 20px;
     }.blacked{color: #000;}
     .left__form-container .title__form-contact h3 {
@@ -17,19 +17,19 @@
     font-size: 26px;
     line-height: 17px;
     color: rgb(17,17,17);
-    font-family: "DSIDE-Bold", sans-serif;
+    font-weight: 600;
     font-weight: bold;
 }
 .right__form_phone h2 {
     font-size: 30px;
     color: rgb(255,255,255);
-    font-family: "DSIDE-Bold", sans-serif;
+    font-weight: 600;
     font-weight: bold;
 }
 .right__form_phone h3 {
     font-size: 20px;
     color: rgb(255,255,255);
-    font-family: "DSIDE-Bold", sans-serif;
+    font-weight: 600;
     font-weight: bold;
 }
 
@@ -37,7 +37,7 @@
     font-size: 16px;
     line-height: 17px;
     color: rgb(117,149,241);
-    font-family: "DSIDE-Bold", sans-serif;
+    font-weight: 600;
     font-weight: bold;
 }
 .right__form-container {
@@ -127,7 +127,7 @@ button.contact__btn-send {
     border-radius: 25px;
     font-size: 1rem;
     min-width: 215px;
-    font-family: 'DSIDE-Light',sans-serif;
+    font-weight: 300;
 }
 .contact__btn-send:hover {
     -webkit-animation: flash .7s forwards linear .16s;
@@ -169,7 +169,7 @@ button.contact__btn-send {
 
 .footer__copyright {
     display: flex;
-    font-family: 'DSIDE-Light',sans-serif;
+    font-weight: 300;
     padding: .4rem 2rem;
     justify-content: space-between;
 }
@@ -182,7 +182,7 @@ button.contact__btn-send {
   padding: 40px 0 30px 0;
   box-sizing: border-box;
   transition: .3s ease;
-  font-family: 'DSIDE-Light',sans-serif;
+  font-weight: 300;
   /* Title */
   /* Inputs */
   /* Button */

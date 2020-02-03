@@ -121,7 +121,7 @@
     }
 
     #form-itself h3 {
-        font-family: 'DSIDE-Bold', sans-serif;
+        font-weight: 600;
         font-weight: normal;
         font-size: 30px;
         margin-bottom: 1em;
@@ -131,7 +131,7 @@
     }
 
     #form-itself p {
-        font-family: 'DSIDE-Light', sans-serif;
+        font-weight: 300;
         font-weight: normal;
         text-align: left;
         font-size: 18px;
@@ -167,7 +167,7 @@
     #thanks {
         font-size: 1rem;
         color: rgba(39, 152, 30, 0.93);
-        font-family: 'DSIDE-Light', sans-serif;
+        font-weight: 300;
     }
 
     #thanks span {
@@ -184,7 +184,7 @@
         font-weight: 400;
         transform: translateY(-8px);
         padding-bottom: 5px;
-        font-family: 'DSIDE-Light', sans-serif;
+        font-weight: 300;
         border-bottom: 1px #ccc solid;
     }
 
@@ -199,7 +199,7 @@
         padding: 2.4rem 4rem;
         outline: none;
         min-width: 9rem;
-        font-family: 'DSIDE-Bold', sans-serif;
+        font-weight: 600;
         text-transform: uppercase;
         line-height: 4rem;
         margin: 0 auto;
@@ -253,7 +253,7 @@
         position: absolute;
         color: #A3A3A3;
         cursor: auto;
-        font-family: 'DSIDE-Light', sans-serif;
+        font-weight: 300;
         font-size: 22px;
         z-index: 1;
         font-weight: 100;

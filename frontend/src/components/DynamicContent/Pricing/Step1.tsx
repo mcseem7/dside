@@ -79,8 +79,8 @@ export default ({config, onSubmit}: StepProps) => {
                                 <div className="pricing-item-price">
                                     <span>{useLang(startsFromLang)} </span>${service.packs[0].price}
                                 </div>
-                                <div className="pricing-item-button pricing-palden"><span
-                                    className="pricing-action">{useLang('Купить', 'Buy', 'Buy')}</span></div>
+                                <div className="pricing-item-button pricing-palden b"><span
+                                    className="pricing-action">{useLang('Рассчитать', 'Calculate', 'Rachuj')}</span></div>
                             </div>
                         </div>
                     )

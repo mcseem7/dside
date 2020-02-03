@@ -191,7 +191,7 @@
 
     .link__menu {
         color: #0a0a0a;
-        font-family: 'DSIDE-Bold',sans-serif;
+        font-weight: 600;
         font-size: 20px;
         position: relative;
         overflow: hidden;
@@ -216,7 +216,7 @@
 
     .description__menu-title p{
         color: #77858d;
-        font-family: 'DSIDE-Light',sans-serif;
+        font-weight: 300;
         font-size: 13px;
         margin: 5px 0;
         transition: all .3s ease-in-out
@@ -301,7 +301,7 @@
 
     .shining-underline span:nth-child(2) {
         position: absolute;
-        bottom: -7px;
+        bottom: -2px;
         left: 0;
         width: 100%;
         height: 1px;
@@ -361,7 +361,6 @@
         outline: none;
         text-decoration: none;
         position: relative;
-        line-height: 0;
         color: #9e9ba4;
         display: inline-block;
     }
@@ -386,7 +385,7 @@
 @media only screen and (min-width: 1024px) {
  .mid__content-logo, .langcode{display: flex;}
   .mainnav ul {
-    font-family: 'DSIDE-Bold',sans-serif;
+    font-weight: 600;
     list-style: none;
     margin: 0;
     text-transform: uppercase;
@@ -401,11 +400,11 @@
     text-decoration: none;
     transition: all 0.3s;
 }
-.mainnavshine{margin-bottom: -5px;}
 .mainnav li a, .mainnav li{
   color: #3a416f;
   font-size: 12px;
-  letter-spacing: .5px;
+  letter-spacing: 0.6px;
+  width: fit-content;
   transition: color .3s; transition-delay: .6s;
 
 }
@@ -525,7 +524,7 @@
         max-width: 100%;
     }
  .langcode ul {
-    font-family: 'DSIDE-Light',sans-serif;
+    font-weight: 300;
     list-style: none;
     margin: 0;
     display: flex;

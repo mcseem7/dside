@@ -7,7 +7,7 @@ export default class PortolioPost extends Component {
   }
 
   render () {
-    const { imgPost, altImg } = this.props
+    const { imgPost, altImg } = this.props;
     return (
       <div className="portolio__post">
         <div className="portfolio__post-wrapper">

@@ -23,7 +23,7 @@
 .logo__service_slogan {
     z-index: 3;
     position: relative ;
-    font-family: 'DSIDE-Bold',sans-serif;
+    font-weight: 600;
 }
 
 .video-background {
@@ -196,7 +196,7 @@ overflow: hidden;
     text-transform: uppercase;
     position: relative;
     cursor: pointer;
-    font-family: 'DSIDE-Bold',sans-serif;
+    font-weight: 600;
     color: #fff;
     padding: 3px 13px;
     text-decoration: none;
@@ -270,7 +270,7 @@ overflow: hidden;
 .service_button{
     position: absolute;
     top: 66%;
-    font-family: 'DSIDE-Bold',sans-serif;
+    font-weight: 600;
     color: #fff;
     left: 43%;
     font-size: 14px;
@@ -315,7 +315,7 @@ box-shadow: 0px 0px 12px -1px rgba(176,255,102,0.8);
 .service_button_down{
     margin-top: 30px;
     position: relative;
-    font-family: 'DSIDE-Bold',sans-serif;
+    font-weight: 600;
     color: #fff;
     font-size: 14px;
     display: block;

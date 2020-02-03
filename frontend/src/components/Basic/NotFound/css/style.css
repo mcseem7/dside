@@ -49,7 +49,7 @@
 
 .title {
   color: white;
-  font-family: 'DSIDE-Bold', sans-serif;
+  font-weight: 600;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
@@ -60,7 +60,7 @@
 
 .subtitle {
   color: white;
-  font-family: 'DSIDE-Light', sans-serif;
+  font-weight: 300;
   font-weight: 400;
   text-align: center;
   font-size: 18px;
@@ -75,7 +75,7 @@
   font-size: 18px;
   width: fit-content;
   padding: 12px;
-  font-family: 'DSIDE-Bold', sans-serif;
+  font-weight: 600;
   text-decoration: none;
   border-radius: 5px;
   z-index: 2;

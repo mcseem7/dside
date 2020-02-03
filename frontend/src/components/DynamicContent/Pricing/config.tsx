@@ -75,14 +75,14 @@ export const getProductInfo = (config: PricesConfig) => {
 export const service1: Service = {
     serviceIndex: 0,
     name: {
-        ru: "Logo",
+        ru: "Логтип",
         en: "Logo",
         pl: "Logo",
     },
     moduleLang: {
-        ru: 'Эскиз',
-        en: 'Draft',
-        pl: 'Набросок'
+        ru: 'Эскизов',
+        en: 'Sketches',
+        pl: 'Szkiców'
     },
     description: {
         ru: 'RU Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -101,21 +101,21 @@ export const service1: Service = {
                 pl: "Lite",
             },
 
-            price: 199,
+            price: 399,
             modules: 3,
             modulePrice: 69,
             featureDescriptions: {
-                ru: '<li class="pricing-feature">3 модуля</li>\n' +
+                ru: '<li class="pricing-feature">3 эскиза</li>\n' +
                     '<li class="pricing-feature">Шаблонный дизайн</li>\n' +
                     '<li class="pricing-feature">Заявки на email</li>\n' +
                     '<li class="pricing-feature">Тексты клиента</li>\n' +
                     '<li class="pricing-feature">Доп. модуль $69</li>',
-                en: '<li class="pricing-feature">3 модуля</li>\n' +
+                en: '<li class="pricing-feature">3 sketches</li>\n' +
                     '<li class="pricing-feature">Шаблонный дизайн</li>\n' +
                     '<li class="pricing-feature">Заявки на email</li>\n' +
                     '<li class="pricing-feature">Тексты клиента</li>\n' +
                     '<li class="pricing-feature">Доп. модуль $69</li>',
-                pl: '<li class="pricing-feature">3 модуля</li>\n' +
+                pl: '<li class="pricing-feature">3 szkiców</li>\n' +
                     '<li class="pricing-feature">Шаблонный дизайн</li>\n' +
                     '<li class="pricing-feature">Заявки на email</li>\n' +
                     '<li class="pricing-feature">Тексты клиента</li>\n' +
@@ -132,7 +132,7 @@ export const service1: Service = {
             modules: 4,
             modulePrice: 49,
             featureDescriptions: {
-                ru: '<li class="pricing-feature">3 модуля</li>\n' +
+                ru: '<li class="pricing-feature">5 эскзов</li>\n' +
                     '<li class="pricing-feature">Шаблонный дизайн</li>\n' +
                     '<li class="pricing-feature">Заявки на email</li>\n' +
                     '<li class="pricing-feature">Тексты клиента</li>\n' +
@@ -159,7 +159,7 @@ export const service1: Service = {
             modules: 5,
             modulePrice: 39,
             featureDescriptions: {
-                ru: '<li class="pricing-feature">3 модуля</li>\n' +
+                ru: '<li class="pricing-feature">7 эскизов</li>\n' +
                     '<li class="pricing-feature">Шаблонный дизайн</li>\n' +
                     '<li class="pricing-feature">Заявки на email</li>\n' +
                     '<li class="pricing-feature">Тексты клиента</li>\n' +
@@ -186,7 +186,7 @@ export const service1: Service = {
             modules: 6,
             modulePrice: 29,
             featureDescriptions: {
-                ru: '<li class="pricing-feature">6 модулей</li>\n' +
+                ru: '<li class="pricing-feature">20 эскизов</li>\n' +
                     '<li class="pricing-feature">Шаблонный дизайн</li>\n' +
                     '<li class="pricing-feature">Заявки на email</li>\n' +
                     '<li class="pricing-feature">Тексты клиента</li>\n' +

@@ -7,13 +7,9 @@ import Calculator from '../components/CompanyPages/calculator/'
 
 import Main from '../components/DynamicContent/Main'
 
-
-
-
-
-
 const routes = [
     {
+        homepage: true,
         path: ["/en", "/ru", '/pl'] ,
         exact: true,
         component: Main,

@@ -4,7 +4,7 @@
         margin-left: 40px;
         margin-bottom: 2rem;
         overflow-x: hidden;
-        font-family: 'DSIDE-Light', sans-serif;
+        font-weight: 300;
     }
 .animeholder{
    display: flex;
@@ -21,7 +21,7 @@
   width: 100%;
   display: flex;
   font-size:36px;
-  font-family: 'DSIDE-Light',sans-serif;
+  font-weight: 300;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -32,7 +32,7 @@
 .cb{z-index: 10; position: relative;}
 .cf1, .cf2{z-index: 0; fill: url(#gradientmystars)}
 .r{fill:#c5c9e0;}
-.r1{font-family: 'DSIDE-Bold',sans-serif;}
+.r1{font-weight: 600;}
 .rects{overflow: hidden;}
 .nicesplit{color: #21243d;}
 
@@ -47,7 +47,7 @@
     justify-content: center;
     bottom: 10%;
     font-size: 18px;
-    font-family: 'DSIDE-Light',sans-serif;
+    font-weight: 300;
 }
 .replay{
     width: 100px;
@@ -75,14 +75,7 @@
   opacity: 0;
   display:none;
 }
-h1 {
-  font-size:50px;
-  line-height:100px;
-  width:600px;
-  height:100px;
-  bottom: 0;
-  overflow:hidden;
-}
+
 
 .media-body {
 	color: #333;
@@ -388,7 +381,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
     .slick-next:hover{transform: translate(2px, -50%); transition: all .3s ease-in-out; opacity: 1;}
     .slick-prev:hover{transform: translate(-2px, -50%); transition: all .3s ease-in-out; opacity: 1;}
     .slider-row{display: flex; color: #21243d;align-items: center; text-align: center; top: 56%;  flex-direction: column; justify-content: center; align-content: center; position: absolute; left: 0; right: 0;}
-    .slide h2 {font-size: 40px; font-family: 'DSIDE-Bold',sans-serif;  }
-    .slide p{font-size: 18px; font-family: 'DSIDE-Light',sans-serif; color: #656986; margin: 0;}
+    .slide h2 {font-size: 40px; font-weight: 600;  }
+    .slide p{font-size: 18px; font-weight: 300; color: #656986; margin: 0;}
 
 }

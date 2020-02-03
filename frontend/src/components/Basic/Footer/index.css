@@ -1,6 +1,6 @@
 
 footer {
-    font-family: 'DSIDE-Light', sans-serif;
+    font-weight: 300;
     width: 100%;
     font-size: 14px;
 }
@@ -11,7 +11,7 @@ footer span {
     color: #656986;
     margin: 0;
 }
-.heading-list span, .welcome span{font-size: 12px; font-family: 'DSIDE-Black',sans-serif; letter-spacing: 2px; color:#21243d;}
+.heading-list span, .welcome span{font-size: 12px; font-weight: 800; letter-spacing: 2px; color:#21243d;}
 footer ul {
     padding: 0;
     margin: 0;
@@ -196,7 +196,7 @@ footer button {
     .footer__head-mail,
     .footer__content-about p,
     .footer__content-services p {
-        font-family: 'DSIDE-Bold', sans-serif;
+        font-weight: 600;
         font-size: 14px;
     }
 

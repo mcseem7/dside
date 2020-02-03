@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { withRouter} from 'react-router-dom'
 import {reactTranslateChangeLanguage} from 'translate-components'
-import {TweenLite, TimelineLite, TextPlugin } from 'gsap/all'
-import MorphSVGPlugin from '../../../../greensock/MorphSVGPlugin'
-import SplitText from '../../../../greensock/SplitText'
-import ScrollToPlugin from '../../../../greensock/ScrollToPlugin'
+import gsap from 'gsap'
+import SplitText from 'gsap/SplitText'
+import MorphSVGPlugin from 'gsap/MorphSVGPlugin'
+import TextPlugin from 'gsap/TextPlugin'
+import ScrollToPlugin from 'gsap/ScrollToPlugin'
 import useLang from '../../../../hooks/useLang'
-import AttrPlugin from '../../../../greensock/AttrPlugin'
 import './index.css'
 
 
@@ -43,67 +43,67 @@ class Slider extends Component  {
         this.rerunAnim = this.rerunAnim.bind(this);
         this.scrollNow = this.scrollNow.bind(this);
 	}
-	morphSVG = MorphSVGPlugin;
 	componentDidMount() {
+		gsap.registerPlugin(MorphSVGPlugin, SplitText, ScrollToPlugin, TextPlugin);
 		const orSplit = new SplitText(nicesplit, {type: "words, chars", wordsClass: "wow++"});
 		let littleChars = orSplit.chars; // array of DOM elements (<div> tags)
 		let path = '.ld';
 		let l = this.path.getTotalLength();
-		this.homeTl = new TimelineLite({paused: true});
+		this.homeTl = new gsap.timeline({paused: true});
 		this.homeTl
-			.from('.c-1', 1, {y: '-600', delay: .1, ease: 'Bounce.easeOut'})
+			.from('.c-1', 1, {y: -600, delay: .1, ease: 'bounce.out'})
 			.to("#gradientmyballs .stop1", 0, {stopColor: "#21243d"}, "-=1")
 			.to("#gradientmyballs .stop2", 0, {stopColor: "#21243d"}, "-=1")
 			.from('.c-2', .1, {opacity: '0'})
-			.to('.c-1', .4, {x: '-250', ease: 'Power3.easeOut'})
-			.to('.c-2', .4, {x: '250', ease: 'Power3.easeOut'}, "-=.4")
-			.staggerFrom([littleChars, typer], .5, {x: 100, autoAlpha: 0}, .1, "-=.4")
-			.to('.c-1', .4, {x: '0', ease: 'Power4.easeIn'}, "-=0")
-			.to('.c-2', .4, {x: '0', ease: 'Power4.easeIn'}, "-=0.4")
+			.to('.c-1', .4, {x: -250, ease: 'power3.out'})
+			.to('.c-2', .4, {x: 250, ease: 'power3.out'}, "-=.4")
+			.from([littleChars, typer], .5, {x: 20, autoAlpha: 0, stagger: 0.1}, "-=0")
+			.to('.c-1', .4, {x: 0, ease: 'power4.in'}, "-=0.3")
+			.to('.c-2', .4, {x: 0, ease: 'power4.in'}, "-=0.4")
 			.to('.c-2, .c-1', 0, {opacity: 0}, "-=0")
 			.to('.sc', 0, {opacity: 1}, "-=0")
-			.to(typer, 0, {text: plang[0], fontFamily: 'DSIDE-Bold'})
-			.to('.c-3', .6, {x: 40, y: 120, ease: 'Power4.easeOut'}, "-=0")
-			.to('.c-4', .6, {x: -80, y: -90, ease: 'Power4.easeOut'}, "-=0.6")
-			.to('.c-5', .6, {x: 200, y: 40, ease: 'Power4.easeOut'}, "-=0.6")
-			.to('.c-6', .6, {x: 100, y: -180, ease: 'Power4.easeOut'}, "-=0.6")
-			.to('.c-7', .6, {x: -200, y: 110, ease: 'Power4.easeOut'}, "-=0.6")
-			.to('.c-8', .6, {x: -70, y: -310, ease: 'Power4.easeOut'}, "-=0.6")
-			.to('.c-9', .6, {x: 230, y: 150, ease: 'Power4.easeOut'}, "-=0.6")
+			.to(typer, 0, {text: plang[0], fontWeight: '600'})
+			.to('.c-3', .6, {x: 40, y: 120, ease: 'power4.out'}, "-=0")
+			.to('.c-4', .6, {x: -80, y: -90, ease: 'power4.out'}, "-=0.6")
+			.to('.c-5', .6, {x: 200, y: 40, ease: 'power4.out'}, "-=0.6")
+			.to('.c-6', .6, {x: 100, y: -180, ease: 'power4.out'}, "-=0.6")
+			.to('.c-7', .6, {x: -200, y: 110, ease: 'power4.out'}, "-=0.6")
+			.to('.c-8', .6, {x: -70, y: -310, ease: 'power4.out'}, "-=0.6")
+			.to('.c-9', .6, {x: 230, y: 150, ease: 'power4.out'}, "-=0.6")
 			.to("#gradientmyballs .stop1", 0, {stopColor: "#EFAE9A"}, "-=0.6")
 			.to("#gradientmyballs .stop2", 0, {stopColor: "#B5624C"}, "-=0.6")
 			.to('.c-3,.c-4,.c-5,.c-6,.c-7,.c-8,.c-9', .6, {
 				y: 330,
 				transformOrigin: "100% 100%",
-				ease: 'Bounce.easeOut',
+				ease: 'bounce.out',
 				delay: .4
 			}, "-=0.2")
 			.to("#gradientmyballs .stop1", .3, {stopColor: "#21243d"}, "-=.8")
 			.to("#gradientmyballs .stop2", .3, {stopColor: "#21243d"}, "-=1.2")
-			.to(typer, .7, {text: plang[1], ease: 'Power3.EaseIn', delay: 1}, "-=1")
+			.to(typer, {duration: 1,text: plang[1], ease: 'power3.in', delay: 1}, "-=1")
 			.from("#c-10", .4, {
 				scale: 0,
 				transformOrigin: "center center",
-				ease: 'Bounce.easeOut',
+				ease: 'bounce.out',
 				autoAlpha: 0
 			}, "+=0.4")
-			.to(typer, .4, {text: plang[2], ease: 'Power3.EaseIn', delay: 1}, "-=.2")
-			.to("#c-10", .2, {morphSVG: "#m-1", ease: 'Power3.EaseIn', delay: 1}, "-=.6")
-			.to("#c-10", 3, {rotation: -20, ease: 'Power4.EaseIn'}, "-=.1")
-			.to(typer, .7, {text: plang[3], ease: 'Power4.EaseIn'}, "-=0.4")
-			.to("#c-10", 1, {y: 1200, opacity: 0, transformOrigin: "100% 100%", ease: 'Circ.easeInOut'},"-=1.5")
+			.to(typer, {duration: 1,text: plang[2], ease: 'power3.in', delay: 1}, "-=.2")
+			.to("#c-10", {duration: .2, morphSVG: "#m-1", ease: 'power3.in', delay: 1}, "-=.6")
+			.to("#c-10", 3, {rotation: -20, ease: 'power4.in'}, "-=.1")
+			.to(typer, .7, {text: plang[3], ease: 'power4.in'}, "-=0.4")
+			.to("#c-10", 1, {y: 1200, opacity: 0, transformOrigin: "100% 100%", ease: 'Circ.inOut'},"-=1.5")
 			.to('.c-3,.c-4,.c-5,.c-6,.c-7,.c-8,.c-9', 1, {
 				y: 1200,
 				opacity: 0,
 				transformOrigin: "100% 100%",
-				ease: 'Circ.easeInOut'
+				ease: 'circ.inOut'
 			}, "-=1.5")
 			.from(".cb", 1, {
 				y: -1000,
 				rotation: -20,
 				scale: 1.4,
 				transformOrigin: "100% 100%",
-				ease: 'Circ.easeInOut'
+				ease: 'circ.inOut'
 			}, "-=1.5")
 			.to("#blur", .4, {attr: {stdDeviation: 2}, delay: .2}, "+=0")
 			.to("#blur-1", .4, {attr: {stdDeviation: 8}}, "-=.4")
@@ -114,28 +114,27 @@ class Slider extends Component  {
 			.to("#blur", .5, {attr: {stdDeviation: 3}, delay: .2}, "+=0")
 			.to("#blur-1", .5, {attr: {stdDeviation: 3}}, "-=.5")
 			.to("#blur-2", .5, {attr: {stdDeviation: 0}}, "-=.5")
-			.to(typer, .8, {text: plang[4], ease: 'Power4.EaseIn'}, "-=0")
+			.to(typer, .8, {text: plang[4], ease: 'power4.in'}, "-=0")
 			.to("#blur-1, #blur", .3, {attr: {stdDeviation: 0},delay: .3}, "-=0")
 			.to(".brand", .3, {autoAlpha: 0}, "-=.3")
 			.to("#gradientmystars .stop1", 0, {stopColor: "#EFAE9A"}, "-=0.3")
 			.to("#gradientmystars .stop2", 0, {stopColor: "#B5624C"}, "-=0.3")
 			.to("#blur-2", .3, {attr: {stdDeviation: 5}}, "-=.3")
 			.from(".l, .cf1, .cf2", .6, {autoAlpha: 0}, "-=.3")
-			.to(".w1", .3, {scale: 1.4, delay: .5, ease: 'Bounce.EaseIn', transformOrigin: "50% 50%", yoyo: true, repeat: -1, repeatDelay: .5}, "-=0")
 			.to(".cf1", .3, {x:108, y:44}, "-=.3")
 			.to(".cf2", .3, {x:108, y:44}, "-=.1")
-			.to(".w2", .3, {scale: 1.4, delay: .5, ease: 'Bounce.EaseIn', transformOrigin: "50% 50%", yoyo: true, repeat: -1, repeatDelay: .5}, "-=0")
-			.to(".cf1", .6, {x:425, y:-35, delay: .3, ease: 'Power3.EaseInOut'}, "-=.3")
-			.to(".cf2", .7, {x:425, y:-35, ease: 'Power3.EaseInOut'}, "-=.1")
-			.fromTo(path, 3, {strokeDashoffset: l, ease: 'Linear.easeNone'}, {strokeDashoffset:0, repeat: -1, ease: 'Linear.easeNone'},"-=3")
+			.to(".w2", .3, {scale: 1.4, delay: .5, ease: 'bounce.in', transformOrigin: "50% 50%", yoyo: true, repeat: -1, repeatDelay: .5}, "-=0")
+			.to(".cf1", .6, {x:425, y:-35, delay: .3, ease: 'power3.inOut'}, "-=.3")
+			.to(".cf2", .7, {x:425, y:-35, ease: 'power3.inOut'}, "-=.1")
+			.fromTo(path, 3, {strokeDashoffset: l, ease: 'power0.in'}, {strokeDashoffset:0, repeat: -1, ease: 'power0.in'},"-=3")
 			.to(".l", .3, {autoAlpha: 0, delay: .4}, "-=0")
-			.to(".cb, .cf1, .cf2", .3, {scale: 0, ease: 'Bounce.easeOut', transformOrigin: "50% 50%"}, "-=0")
-			.to(typer, 1.5, {text: plang[5], ease: 'Power4.EaseIn', delay: .4}, "-=0")
-			.from(".r1", .5, {autoAlpha: 0, ease: 'Power4.EaseIn', delay: .6}, "-=0")
-			.from(".controllers", 1, {autoAlpha: 0, y: 50, ease: 'Power4.EaseIn', delay: .3}, "-=0");
-		let sdtl = new TimelineLite();
+			.to(".cb, .cf1, .cf2", .3, {scale: 0, ease: 'bounce.out', transformOrigin: "50% 50%"}, "-=0")
+			.to(typer, 1.5, {text: plang[5], ease: 'power4.in', delay: .4}, "-=0")
+			.from(".r1", .5, {autoAlpha: 0, ease: 'power4.in', delay: .6}, "-=0")
+			.from(".controllers", 1, {autoAlpha: 0, y: 50, ease: 'power4.in', delay: .3}, "-=0");
+		let sdtl = new gsap.timeline();
 		sdtl
-			.fromTo('.csd', 1, {y: '-10', autoAlpha: 0, ease: 'Bounce.easeOut', repeat: -1, repeatDelay:.5},{y: '30', delay: 5,autoAlpha: 1,  ease: 'Bounce.easeOut', repeat: -1, repeatDelay:.5});
+			.fromTo('.csd', 1, {y: '-10', autoAlpha: 0, ease: 'bounce.out', repeat: -1, repeatDelay:.5},{y: '30', delay: 5,autoAlpha: 1,  ease: 'bounce.out', repeat: -1, repeatDelay:.5});
 	}
 
 	componentDidUpdate() {
@@ -148,7 +147,7 @@ class Slider extends Component  {
 	 }
 	 scrollTo = ScrollToPlugin;
 	 scrollNow() {
-             TweenLite.to(window, 2, {scrollTo: 500});
+             gsap.to(window, 1, {scrollTo: 500});
 		     console.log('Clicked');
 	 }
     render() {

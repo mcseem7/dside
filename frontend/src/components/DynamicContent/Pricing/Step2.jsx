@@ -5,7 +5,6 @@ import { startsFromLang } from './Step1';
 import { clone, remove } from 'ramda';
 import PlanItem from './PlanItem';
 import PacksList from './PacksList';
-import ScrollAnimation from 'react-animate-on-scroll'
 import PopUp from './PopUp';
 export const stepLang = {
     ru: 'Шаг',
@@ -17,17 +16,22 @@ export const choiceLang = {
     pl: 'Ваш выбор',
     en: 'You choice',
 };
+export const additionsLang = {
+    ru: 'Также рекомендуем',
+    pl: 'Polecamy również',
+    en: 'We also recommend',
+};
 export const nextLang = {
     ru: 'Далее',
-    pl: 'Далее',
+    pl: 'Dalej',
     en: 'Next',
 };
 export default (props) => {
+    window.scrollTo(0, 0);
     const config = props.config;
     const onSubmit = props.onSubmit;
     const [modalServiceList, setModalServiceList] = React.useState(undefined);
     const [order, setOrder] = React.useState(props.order);
-    console.log('step two order', order);
     const patchOrder = (patch) => setOrder(Object.assign({}, order, patch));
     const mainService = config.services[props.order.products[0].serviceIndex];
     const patchProduct = (index) => (product) => {
@@ -37,7 +41,6 @@ export default (props) => {
     };
     const productInfo = getProductInfo(config);
     const totalPrice = order.products.reduce((sum, product) => {
-        console.log(product, productInfo.getBasePrice(product), mainService.addonDiscounts[product.serviceIndex], config);
         const productPrice = productInfo.getBasePrice(product, mainService.addonDiscounts[product.serviceIndex] || 0);
         return productPrice + sum;
     }, 0);
@@ -47,28 +50,30 @@ export default (props) => {
         setOrder(newOrder);
         setModalServiceList(undefined);
     };
-    return  <ScrollAnimation animateIn="fadeInRight" animateOut="fadeOutLeft"><section className="step-second step-container" >
+    return  <section className="step-second step-container" >
         <div className="steptwo-container">
                 <div className="leftone">
-                    <div className="stepper">{useLang(stepLang)} 2/3</div>
                     <div className="step2-header">{useLang(choiceLang)}:</div>
+                    <div className="leftoneblock shady">
                     {order.products.map((product, index) => <PlanItem config={config} product={product} index={index} discount={mainService.addonDiscounts[product.serviceIndex] || 0} onChange={patchProduct(index)} onDelete={(index !== 0) ? (() => {
         setOrder(Object.assign({}, order, { products: remove(index, 1, order.products) }));
     }) : null}/>)}
 
                     <div className="bottom-step2">
-                        <div className="total">{useLang('Итого', 'Total', 'Итого')}: ${totalPrice}</div>
-                        <div className="pricing-item-button pricing-palden" onClick={() => onSubmit(order)}>
+                        <div className="total">{useLang('Итого', 'Total', 'Razem')}: ${totalPrice}</div>
+                        <div className="btn-send btn-calc" onClick={() => onSubmit(order)}>
                             <span className="pricing-action">
                                 {useLang(nextLang)}
                             </span>
                         </div>
                     </div>
+                    </div>
                 </div>
             <div className="rightone">
+                <div className="step2-header">{useLang(additionsLang)}:</div>
                 {mainService.addonIndicies.map(index => config.services[index]).map((service, index) => {
         const discount = mainService.addonDiscounts[service.serviceIndex];
-        return <div className="services-pricing-item" style={order.products.find(p => p.serviceIndex === service.serviceIndex) ? { opacity: 0.5 } : {}}>
+        return <div className="services-pricing-item-s2 shady" style={order.products.find(p => p.serviceIndex === service.serviceIndex) ? { opacity: 0.5 } : {}}>
                                 <div className="pricing-item-descr">
                                     <div className="pricing-discount-header">
                                         <div className="pricing-item-header">
@@ -83,16 +88,16 @@ export default (props) => {
             ? [
                 <div className="oldprice">${service.packs[0].price}</div>,
                 <span>{useLang(startsFromLang)} </span>,
-                <span>{useDiscount(discount, service.packs[0].price)}</span>, ,
+                <span className="newprice">${useDiscount(discount, service.packs[0].price)}</span>, ,
             ]
             : [<span>{useLang(startsFromLang)} </span>, <span>{service.packs[0].price}</span>]}
                                         
 
                                     </div>
-                                    <div className="pricing-item-button pricing-palden" onClick={order.products.find(p => p.serviceIndex === service.serviceIndex)
+                                    <div className="btn-send btn-calc" onClick={order.products.find(p => p.serviceIndex === service.serviceIndex)
             ? null
             : (() => setModalServiceList(service.serviceIndex))}>
-                                        <span className="pricing-action">{useLang('Добавить', 'Add', 'Add')}</span>
+                                        <span className="pricing-action">{useLang('Добавить', 'Add', 'Dodaj')}</span>
                                     </div>
                                 </div>
                             </div>;
@@ -105,5 +110,5 @@ export default (props) => {
                 </PopUp>
 
         </div>
-    </section></ScrollAnimation>;
+    </section>;
 };

@@ -1,5 +1,28 @@
-
-
+.s-intro-txts{ color: #21243d; display: flex; height: 90vh; flex-direction: column; align-items: center; justify-content: center;}
+.s-intro-txt{  display: inline-flex; width: fit-content; font-weight: 600;}
+.heading-s-intro{align-items: center; display: flex;}
+.design-content {
+    position: relative;
+    padding: 2em 0;
+    background-color: #fff;
+}
+.d-c-main{    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;}
+.d-c-main p{font-size: 18px; font-weight: 300; width: 100%;}
+.d-c-head{display: flex; flex-wrap: wrap; justify-content: space-between;}
+.heading-design span{margin-left: 30px; font-size: 18px;}
+.a1 {font-size: 14px;}
+.heading-design{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-weight: 300;
+    align-items: center;
+}
+.heading-design h2{font-size: 36px;}
+.logo-s-intro{margin-left: 8px; margin-top: -5px;}
 .designs__quality-wrapper {
     background: #ffffff;
 }
@@ -11,16 +34,25 @@
     top: 118px;
     -webkit-text-fill-color: white;
     text-shadow: 0 5px 5px rgba(95, 51, 20, 0.61);
-    font-family: 'DSIDE-Bold', sans-serif;
+    font-weight: 600;
     width: 100%;
     font-weight: 700;
 }
-
+.lines-intro-design {
+    padding-bottom: 385px;
+    bottom: calc(100% - 2px);
+    background-image: url('./intro-img-design.svg');
+    background-size: 100% 100%;
+    position: absolute;
+    right:0;
+    left:0;
+    z-index: -1;
+}
 .comp-h-right span, .comp-h-left span{ display: none;}
-.designs-dev__quality h2{text-align: center; padding-bottom: 1rem; font-family: 'DSIDE-Bold',sans-serif;}
+.designs-dev__quality h2{text-align: center; padding-bottom: 1rem; font-weight: 600;}
 .designs-dev__quality{display: flex; flex-direction: column;}
 .comp-h-left img, .comp-h-right img{width: 68px;}
-.comp-h-left span{font-size: .8rem; font-family: 'DSIDE-Light',sans-serif; margin-right: 0.2rem;}
+.comp-h-left span{font-size: .8rem; font-weight: 300; margin-right: 0.2rem;}
 .comp-h-mid{    max-width: 220px;
     text-align: center;
     min-width: 205px; width:100%;text-align: center;}
@@ -35,12 +67,12 @@
     animation: flash 0.7s forwards linear 0.16s;}
 .next{transform: rotate(180deg);}
 .comp-h-right span{ font-size: .88rem;}
-.headers-designs-comparsion{font-family: 'DSIDE-Bold',sans-serif;display: flex; flex-direction: row; align-items: center; align-content: center; justify-content: center;}
+.headers-designs-comparsion{font-weight: 600;display: flex; flex-direction: row; align-items: center; align-content: center; justify-content: center;}
 .comp-h-right, .comp-h-left{display: flex; align-items: center; align-content: center;}
 .body-designs-comparsion{display: flex; flex-direction: column; justify-content: center; justify-items: center; align-items: center;}
-.roow{display: flex; font-family: 'DSIDE-Light',sans-serif; width: 375px; line-height: 2rem;}
-.roow span{font-family: 'DSIDE-Bold',sans-serif; flex-basis: 28%; text-align: center; text-transform: uppercase}
-.roow strong{ flex-basis: 43%; font-family: 'DSIDE-Light',sans-serif; text-align: center; font-size: .8rem;}
+.roow{display: flex; font-weight: 300; width: 375px; line-height: 2rem;}
+.roow span{font-weight: 600; flex-basis: 28%; text-align: center; text-transform: uppercase}
+.roow strong{ flex-basis: 43%; font-weight: 300; text-align: center; font-size: .8rem;}
 .greygoose{opacity: .4;}
 .greater{font-size: 1.4rem;}
 .greender{background-image: linear-gradient(to right, #54d917 0%, #134812 100%);
@@ -62,7 +94,7 @@
     .logo__service-text_design {
     background-image: linear-gradient(to right, #743c18 60%, #1E1007 100%);
     opacity: 0.3;
-    font-family: 'DSIDE-Bold', sans-serif;
+    font-weight: 600;
     font-size: 161px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

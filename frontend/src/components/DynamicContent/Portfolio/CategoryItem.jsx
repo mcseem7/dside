@@ -28,10 +28,8 @@ export default class CategoryItem extends React.Component {
     render() {
         return (
             <React.Fragment>
-                      <li className="portfolio-category__item" 
-                          onClick={this.props.onActiveFilteringCategory}>
-
-                        <p className={this.props.isActiveCategory ?  'golden' : ''}>{this.props.category.name}<sup>({this.state.categoryLength.length})</sup></p>
+                      <li className="portfolio-category__item">
+                        <p  onClick={this.props.onActiveFilteringCategory} className={this.props.isActiveCategory ?  'golden' : ''}>{this.props.category.name}<sup>({this.state.categoryLength.length})</sup></p>
                       </li>
             </React.Fragment>
         );

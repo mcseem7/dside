@@ -2,7 +2,7 @@
 .watching__post,
 .time__post {
     color: #ffffff;
-    font-family: 'DSIDE-Bold', sans-serif;
+    font-weight: 600;
     font-weight: 700;
 }
 
@@ -53,7 +53,7 @@ html,body {
 
 .latest-post__tag {
     color: #ffffff;
-    font-family: 'DSIDE-Bold', sans-serif;
+    font-weight: 600;
     font-size: 14px;
     flex: 1;
     font-weight: 700;
@@ -62,7 +62,7 @@ html,body {
 .latest-post__description p {
     color: #ffffff;
     margin: 0;
-    font-family: 'DSIDE-Bold', sans-serif;
+    font-weight: 600;
     font-size: 17px;
     font-weight: 700;
 }
@@ -88,7 +88,7 @@ html,body {
 
 .description-item p {
     color: #ffffff;
-    font-family: 'DSIDE-Light', sans-serif;
+    font-weight: 300;
     font-weight: 300;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -108,13 +108,13 @@ html,body {
 }
 .title-item h4 {
     color: #ffffff;
-    font-family: 'DSIDE-Bold', sans-serif;
+    font-weight: 600;
     font-weight: 700;
 }
 
 .tag-item p {
     color: #ffffff;
-    font-family: 'DSIDE-Bold', sans-serif;
+    font-weight: 600;
     font-weight: 700;
 }
 
@@ -140,7 +140,7 @@ html,body {
 
 .latest__post-title h4 {
     color: #000000;
-    font-family: 'DSIDE-Bold', sans-serif;
+    font-weight: 600;
     font-weight: 700;
     margin: 0;
 }
@@ -283,7 +283,7 @@ html,body {
 
     .latest__post-title h4 {
         color: #000000;
-        font-family: 'DSIDE-Bold', sans-serif;
+        font-weight: 600;
         font-weight: 700;
         margin: 0;
         font-size: 1.4rem;
@@ -448,7 +448,7 @@ html,body {
     cursor: pointer;
     border: 2px solid #d79888;
     color: #000000;
-    font-family: 'DSIDE-Bold', sans-serif;
+    font-weight: 600;
     background-image: linear-gradient(90deg, #d79888 0%, #b2725e 100%);
 }
 

@@ -1,8 +1,7 @@
 .progress {
     color: #0a0a0a;
-    font-family: "MontBold", sans-serif;
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 600;
     display: flex;
     justify-content: center;
     height: 300px;
@@ -28,7 +27,7 @@
         cursor: pointer;
         background-color: transparent;
         color: #fff;
-        font-family: 'DSIDE-Light', sans-serif;
+        font-weight: 300;
         border:none;
         padding: 10px 18px 9px 26px;
         border-radius: 25px;
@@ -108,7 +107,6 @@ body {
     display: inline-block;
     background: linear-gradient(right, #7ec622, #72b519);
     color: #fff;
-    font-family: Mont;
     font-weight: 600;
     text-transform: uppercase;
     padding: 21px 71px;
@@ -116,8 +114,11 @@ body {
     text-align: center;
 }
 
-.container__case-studies {
-    margin-top: 110px;
+
+.xabsolute {
+    position: absolute;
+    left: 0;
+    width: 100%;
 }
 
 @media  (max-width: 820px) {

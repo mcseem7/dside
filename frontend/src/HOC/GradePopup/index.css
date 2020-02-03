@@ -1,6 +1,6 @@
  label[for='file'] {
     display: block !important;
-    font-family: 'DSIDE-Bold', 'sans-serif';
+    font-weight: 600;
     font-size: 0.8rem;
     padding-bottom: 10px;
     color: #000;
